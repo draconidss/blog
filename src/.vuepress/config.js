@@ -4,7 +4,7 @@ module.exports = config({
   title: "Theme Demo",
   description: "A demo for vuepress-theme-hope",
 
-  base: "/vuepress-theme-hope-template/",
+  base: "/static-blog/",
 
   dest: "./dist",
 
