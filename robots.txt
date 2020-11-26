@@ -1,0 +1,5 @@
+
+User-agent:*
+Disallow:
+
+Sitemap: https://vuepress-theme-demo.mrhope.sitesitemap.xml
