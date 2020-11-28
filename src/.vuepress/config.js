@@ -35,9 +35,37 @@ module.exports = config({
     },
   },
 
+  // 用于jsdeliver CDN加速
+  configureWebpack: () => {
+    const NODE_ENV = process.env.NODE_ENV
+    //判断是否是生产环境
+    if(NODE_ENV === 'production'){
+      return {
+        output: {
+          publicPath: 'https://cdn.jsdelivr.net/gh/lifealsoisgg/static-blog@gh-pages/'
+        },
+        resolve: {
+          //配置路径别名
+          alias: {
+            'public': './public'
+          }
+        }
+      }
+    }else{
+      return {
+        resolve: {
+          //配置路径别名
+          alias: {
+            'public': './public'
+          }
+        }
+      }
+    }
+  },
+
+
   themeConfig: {
     logo: "/logo.svg",
-    hostname: "https://vuepress-theme-demo.mrhope.site/",
 
     nav: [
       { text: "Blog Home", link: "/", icon: "home" },
