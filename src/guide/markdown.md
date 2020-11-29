@@ -1,16 +1,17 @@
 ---
 icon: markdown
-title: Markdown Enhance
-category: Guide
+title: Markdown 增强
+time: 2019-10-22
+category: 使用指南
 tag:
   - markdown
 ---
 
-`vuepress-theme-hope` enables more syntax in Markdown via the built-in [md-enhance](https://vuepress-md-enhance.mrhope.site) plugin.
+`vuepress-theme-hope` 通过内置 [md-enhance](https://vuepress-md-enhance.mrhope.site)，在 Markdown 中启用了更多的语法与新功能。
 
-## Enable all
+## 一键启用
 
-You can set `themeconfig.mdEnhance.enableAll` to enable all features of the [md-enhance](https://vuepress-md-enhance.mrhope.site) plugin.
+你可以设置 `themeconfig.mdEnhance.enableAll` 启用 [md-enhance](https://vuepress-md-enhance.mrhope.site) 插件的所有功能。
 
 ```js {3-5}
 module.exports = {
@@ -22,41 +23,41 @@ module.exports = {
 };
 ```
 
-## New Feature
+## 新增的更多语法
 
-### Superscript and Subscript
-
-19^th^ H~2~O
-
-- [View Detail](https://vuepress-theme.mrhope.site/guide/feature/markdown/sup-sub/)
-
-### Align
+### 自定义对齐
 
 ::: center
-I am center
+我是居中的
 :::
 
 ::: right
-I am right align
+我在右对齐
 :::
 
-- [View Detail](https://vuepress-theme.mrhope.site/guide/feature/markdown/align/)
+- [点击查看](https://vuepress-theme.mrhope.site/zh/guide/feature/markdown/align/)
 
-### Footnote
+### 上下角标
 
-This text has footnote[^first].
+19^th^ H~2~O
 
-[^first]: This is footnote content
+- [点击查看](https://vuepress-theme.mrhope.site/zh/guide/feature/markdown/sup-sub/)
 
-- [View Detail](https://vuepress-theme.mrhope.site/guide/feature/markdown/footnote/)
+### 脚注
 
-### Mark
+此文字有脚注[^first].
 
-You can mark ==important words== .
+[^first]: 这是脚注内容
 
-- [View Detail](https://vuepress-theme.mrhope.site/guide/feature/markdown/mark/)
+- [点击查看](https://vuepress-theme.mrhope.site/zh/guide/feature/markdown/footnote/)
 
-### Flowchart
+### 标记
+
+你可以标记 ==重要的内容== 。
+
+- [点击查看](https://vuepress-theme.mrhope.site/zh/guide/feature/markdown/mark/)
+
+### 流程图
 
 @flowstart
 cond=>condition: Process?
@@ -67,29 +68,29 @@ cond(yes)->process->e
 cond(no)->e
 @flowend
 
-- [View Detail](https://vuepress-theme.mrhope.site/guide/feature/markdown/flowchart/)
+- [点击查看](https://vuepress-theme.mrhope.site/zh/guide/feature/markdown/flowchart/)
 
-### Tex
+### Tex 语法
 
 $$
 \frac {\partial^r} {\partial \omega^r} \left(\frac {y^{\omega}} {\omega}\right)
 = \left(\frac {y^{\omega}} {\omega}\right) \left\{(\log y)^r + \sum_{i=1}^r \frac {(-1)^i r \cdots (r-i+1) (\log y)^{r-i}} {\omega^i} \right\}
 $$
 
-- [View Detail](https://vuepress-theme.mrhope.site/guide/feature/markdown/tex/)
+- [点击查看](https://vuepress-theme.mrhope.site/zh/guide/feature/markdown/tex/)
 
-### Demo
+### 代码案例
 
-::: demo A normal demo
+::: demo 一个普通 Demo
 
 ```html
 <h1>Mr.Hope</h1>
-<p>Is <span id="very">very</span> handsome</p>
+<p><span id="very">十分</span> 帅</p>
 ```
 
 ```js
 document.querySelector("#very").addEventListener("click", () => {
-  alert("Very handsome!");
+  alert("十分帅");
 });
 ```
 
@@ -101,18 +102,18 @@ span {
 
 :::
 
-::: demo [react] A react demo
+::: demo [react] 一个 React Demo
 
 ```js
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { message: "very handsome" };
+    this.state = { message: "十分帅" };
   }
   render() {
     return (
       <div className="box-react">
-        Mr.Hope is <span>{this.state.message}</span>
+        Mr.Hope <span>{this.state.message}</span>
       </div>
     );
   }
@@ -127,17 +128,17 @@ export default class App extends React.Component {
 
 :::
 
-::: demo [vue] A vue demo
+::: demo [vue] 一个 Vue Demo
 
 ```vue
 <template>
   <div class="box-vue">
-    Mr.Hope is <span>{{ message }}</span>
+    Mr.Hope <span>{{ message }}</span>
   </div>
 </template>
 <script>
 export default {
-  data: () => ({ message: "very handsome" }),
+  data: () => ({ message: "十分帅" }),
 };
 </script>
 <style>
@@ -149,12 +150,12 @@ export default {
 
 :::
 
-::: demo A normal demo
+::: demo 一个普通 Demo
 
 ```md
-# Title
+# 标题
 
-is very handsome.
+十分帅
 ```
 
 ```ts
@@ -175,26 +176,26 @@ h1 {
 
 :::
 
-- [View Detail](https://vuepress-theme.mrhope.site/guide/feature/markdown/demo/)
+- [点击查看](https://vuepress-theme.mrhope.site/zh/guide/feature/markdown/demo/)
 
-### Presentation
+### 幻灯片
 
 @slidestart
 
-## Slide 1
+## 幻灯片 1
 
-A paragraph with some text and a [link](https://mrhope.site)
-
----
-
-## Slide 2
-
-- Item 1
-- Item 2
+一个有文字和 [链接](https://mrhope.site) 的段落
 
 ---
 
-## Slide 3.1
+## 幻灯片 2
+
+- 列表 1
+- 列表 2
+
+---
+
+## 幻灯片 3.1
 
 ```js
 const a = 1;
@@ -202,7 +203,7 @@ const a = 1;
 
 --
 
-## Slide 3.2
+## 幻灯片 3.2
 
 $$
 J(\theta_0,\theta_1) = \sum_{i=0}
@@ -210,26 +211,4 @@ $$
 
 @slideend
 
-- [View Detail](https://vuepress-theme.mrhope.site/guide/feature/markdown/presentation/)
-
-## Other Syntax
-
-::: info custom title
-A custom information container
-:::
-
-::: tip custom title
-A custom tip container
-:::
-
-::: warning custom title
-A custom warning container
-:::
-
-::: danger custom Title
-A custom danger container
-:::
-
-::: details custom title
-A custom details container
-:::
+- [点击查看](https://vuepress-theme.mrhope.site/zh/guide/feature/markdown/presentation/)

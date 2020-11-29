@@ -1,39 +1,10 @@
 const { config } = require("vuepress-theme-hope");
 
 module.exports = config({
-  title: "Static-Blog",
-  description: "A demo for vuepress-theme-hope",
-
-  base: "/static-blog/",
-
+  title: "LifeAlsoIsGG's Blog",
+  description: "",
+  base: "/Blog-Vuepress/",
   dest: "./dist",
-
-  // remove this if you are not using Vue and React in "markdownEnhance: code demo"
-  head: [
-    [
-      "script",
-      { src: "https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js" },
-    ],
-    [
-      "script",
-      {
-        src:
-          "https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js",
-      },
-    ],
-    ["script", { src: "https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js" }],
-    [
-      "script",
-      { src: "https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js" },
-    ],
-  ],
-
-  locales: {
-    "/zh/": {
-      title: "Theme Demo",
-      description: "vuepress-theme-hope 的 demo",
-    },
-  },
 
   // 用于jsdeliver CDN加速
   configureWebpack: () => {
@@ -63,87 +34,105 @@ module.exports = config({
     }
   },
 
+  // remove this if you are not using Vue and React in "markdownEnhance: code demo"
+  head: [
+    [
+      "script",
+      { src: "https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js" },
+    ],
+    [
+      "script",
+      {
+        src:
+            "https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js",
+      },
+    ],
+    ["script", { src: "https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js" }],
+    [
+      "script",
+      { src: "https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js" },
+    ],
+  ],
+
+
 
   themeConfig: {
-    logo: "/logo.svg",
-
+    logo: "/logo.png",
+    hostname: "https://blog.lifeisgg.online",
+    baseLang: "zh-CN",
+    author: "LifeAlsoIsGG",
     nav: [
-      { text: "Blog Home", link: "/", icon: "home" },
-      { text: "Project Home", link: "/home/", icon: "home" },
       {
-        text: "Guide",
-        icon: "creative",
-        link: "/guide/",
-      },
-      {
-        text: "Docs",
-        link: "https://vuepress-theme.mrhope.site/",
+        text: "分类",
+        link: "/category/",
         icon: "note",
       },
+      {
+        text: "时间线",
+        link: "/timeline/",
+        icon: "time",
+      },
+      {
+        text: "关于",
+        link: "/about/",
+        icon: "info",
+      },
+      {
+        text: "相册",
+        link: "https://photos.lifeisgg.online/",
+        icon: "emoji",
+      }
+
     ],
 
     sidebar: {
       "/": [
-        "",
-        "home",
-        "slides",
+        {
+          title: "Java学习",
+          icon: "code",
+          prefix: "Java/",
+          children: ["","Java-BasicNotes", "Java-Interview", "Java-Methods",
+            "Java-Collections", "Java-Multithreading", "Java-JVM", "Java-DesignPatterns",
+            "Java-reflection", "Java-IO", "Java-Date", "Java-JDK8"]
+        },
         {
           title: "Guide",
           icon: "creative",
           prefix: "guide/",
           children: ["", "page", "markdown", "disable", "encrypt"],
         },
+        "about"
+
       ],
+
     },
 
-    locales: {
-      "/zh/": {
-        nav: [
-          { text: "博客主页", link: "/zh/", icon: "home" },
-          { text: "项目主页", link: "/zh/home/", icon: "home" },
-          {
-            text: "如何使用",
-            icon: "creative",
-            link: "/zh/guide/",
-          },
-          {
-            text: "主题文档",
-            icon: "note",
-            link: "https://vuepress-theme.mrhope.site/zh/",
-          },
-        ],
-        sidebar: {
-          "/zh/": [
-            "",
-            "home",
-            "slides",
-            {
-              title: "如何使用",
-              icon: "creative",
-              prefix: "guide/",
-              children: ["", "page", "markdown", "disable", "encrypt"],
-            },
-          ],
-        },
-      },
-    },
-
-    author: "Mr.Hope",
+    /*algolia搜索*/
+    /*    algolia: {
+          apiKey: "fdd673871dc964a147e99faca665946a",
+          indexName: "blog-search",
+        },*/
 
     blog: {
-      intro: "/intro/",
+      intro: "/about/",
       sidebarDisplay: "mobile",
+      sidebar: "auto",
+      sidebarDepth: 3,
       links: {
-        Zhihu: "https://zhihu.com",
-        Baidu: "https://baidu.com",
-        Github: "https://github.com",
+        Github: "https://github.com/LifeAlsoIsGG",
+        Twitter: "https://twitter.com/LifeAlsoIsGG",
+        QQ: "http://localhost:8083/blog-vuepress/tencent:/AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1138312802.html",
+        Photos: "https://photos.lifeisgg.online/",
       },
     },
 
     comment: {
       type: "valine",
-      appId: "msnseO76haIVIGvfJ10BKnpv-gzGzoHsz",
-      appKey: "9QMulKhu7EDp1va0TYXR2PrI",
+      appId: "UhjxD2LPBH9vMPURVoIv0EGJ-gzGzoHsz",
+      appKey: "xlubLmY4NeX73i1NivxCO0jA",
+      visitor: "true",
+      recordIP: "true",
+      placeholder: "还请不吝赐教"
     },
 
     copyright: {
@@ -152,7 +141,7 @@ module.exports = config({
 
     footer: {
       display: true,
-      content: "默认页脚",
+      content: "粤ICP备19126168号",
     },
 
     mdEnhance: {
@@ -232,7 +221,7 @@ module.exports = config({
       },
     },
 
-    repo: "https://github.com/mister-hope/vuepress-theme-hope",
+    repo: "https://github.com/LifeAlsoIsGG",
     repoLabel: "Github",
   },
 });

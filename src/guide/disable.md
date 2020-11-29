@@ -1,6 +1,7 @@
 ---
 icon: set
-category: Guide
+category: 使用指南
+time: 2019-10-22
 backtotop: false
 breadcrumb: false
 footer: false
@@ -8,14 +9,14 @@ pageInfo: false
 comment: false
 ---
 
-# Component disabled
+# 组件禁用
 
-You can disable some functions on the page by setting the Frontmatter of the page.
+你可以通过设置页面的 Frontmatter，在页面禁用一些功能。
 
-These should be disabled on this page:
+本页面应当禁用了:
 
-- Back to top button
-- Route navigation
-- Page information
-- Comment component
-- Footer
+- 返回顶部按钮
+- 路径导航
+- 页面信息
+- 评论组件
+- 页脚

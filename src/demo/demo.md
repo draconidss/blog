@@ -6,4 +6,4 @@ tag:
   - demo
 ---
 
-![](./images/logo.jpg)
+![](./images/demo.jpg)

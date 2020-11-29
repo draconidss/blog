@@ -1,14 +1,15 @@
 ---
 icon: creative
-category: Guide
+time: 2019-10-22
+title: 主要功能与配置演示
+category: 使用指南
 ---
 
-# Guides
 
-- [Page Config](page.md)
+- [页面展示](page.md)
 
-- [Markdown Enhance](markdown.md)
+- [Markdown 展示](markdown.md)
 
-- [Function Disable](disable.md)
+- [禁用展示](disable.md)
 
-- [Encryption Demo](encrypt.md)
+- [加密展示](encrypt.md)

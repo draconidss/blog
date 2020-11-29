@@ -1,11 +1,14 @@
 ---
 blog: true
-home: true
+home : true
 icon: home
-title: Mr.Hope
-heroImage: /logo.svg
-heroText: the name of your blog
-tagline: You can put your slogan here
+heroImage: /heroImage.png
+heroText: We found hope in hopeless place
+#tagline: We found hope in hopeless place
+bgImage: /bgImage.jpg
+bgImageStyle: {
+  height: '450px'
+}
 project:
   - type: project
     name: project name
@@ -27,7 +30,6 @@ project:
     desc: Detailed description of the article
     link: link to your article
 
-footer: customize your footer text
+footer: 粤ICP备19126168号
 ---
 
-For related configuration documents, please see [blog homepage](https://vuepress-theme.mrhope.site/guide/layout/blog/)
