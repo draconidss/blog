@@ -12,4 +12,4 @@ comment: false
 
 
 
-![about](/static-blog/about.jpg)
+![about](/about.jpg)
