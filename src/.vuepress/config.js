@@ -59,7 +59,6 @@ module.exports = config({
   themeConfig: {
     logo: "https://cdn.jsdelivr.net/gh/lifealsoisgg/static-blog@gh-pages/logo.png",
     hostname: "https://blog.lifeisgg.online",
-    baseLang: "zh-CN",
     author: "LifeAlsoIsGG",
     nav: [
       {
@@ -117,7 +116,7 @@ module.exports = config({
       intro: "/about/",
       sidebarDisplay: "mobile",
       sidebar: "auto",
-      sidebarDepth: 3,
+      sidebarDepth: 5,
       links: {
         Github: "https://github.com/LifeAlsoIsGG",
         Twitter: "https://twitter.com/LifeAlsoIsGG",
