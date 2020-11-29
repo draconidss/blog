@@ -12,4 +12,4 @@ comment: false
 
 
 
-![about](/Blog-vuepress/about.jpg)
+![about](/static-blog/about.jpg)

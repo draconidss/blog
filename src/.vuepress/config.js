@@ -3,7 +3,7 @@ const { config } = require("vuepress-theme-hope");
 module.exports = config({
   title: "LifeAlsoIsGG's Blog",
   description: "",
-  base: "/Blog-Vuepress/",
+  base: "/static-blog/",
   dest: "./dist",
 
   // 用于jsdeliver CDN加速
