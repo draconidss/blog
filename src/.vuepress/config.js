@@ -60,6 +60,8 @@ module.exports = config({
     logo: "https://cdn.jsdelivr.net/gh/lifealsoisgg/static-blog@gh-pages/logo.png",
     hostname: "https://blog.lifeisgg.online",
     author: "LifeAlsoIsGG",
+    sidebar: "auto",
+    sidebarDepth: 3,
     nav: [
       {
         text: "分类",
@@ -115,8 +117,6 @@ module.exports = config({
     blog: {
       intro: "/about/",
       sidebarDisplay: "mobile",
-      sidebar: "auto",
-      sidebarDepth: 5,
       links: {
         Github: "https://github.com/LifeAlsoIsGG",
         Twitter: "https://twitter.com/LifeAlsoIsGG",
