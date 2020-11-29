@@ -12,4 +12,4 @@ comment: false
 
 
 
-![about](/about.jpg)
+![about](https://cdn.jsdelivr.net/gh/lifealsoisgg/static-blog@gh-pages/about.jpg)
