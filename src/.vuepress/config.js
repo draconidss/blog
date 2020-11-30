@@ -3,10 +3,13 @@ const { config } = require("vuepress-theme-hope");
 module.exports = config({
   title: "LifeAlsoIsGG's Blog",
   description: "",
+  sidebarDisplay: "mobile",
+  sidebar: "auto",
+  sidebarDepth: 3,
   base: "/static-blog/",
+
   dest: "./dist",
 
-  // 用于jsdeliver CDN加速
   configureWebpack: () => {
     const NODE_ENV = process.env.NODE_ENV
     //判断是否是生产环境
@@ -59,9 +62,8 @@ module.exports = config({
   themeConfig: {
     logo: "https://cdn.jsdelivr.net/gh/lifealsoisgg/static-blog@gh-pages/logo.png",
     hostname: "https://blog.lifeisgg.online",
+    baseLang: "zh-CN",
     author: "LifeAlsoIsGG",
-    sidebar: "auto",
-    sidebarDepth: 3,
     nav: [
       {
         text: "分类",
@@ -93,8 +95,7 @@ module.exports = config({
           icon: "code",
           prefix: "Java/",
           children: ["","Java-BasicNotes"]
-
-/*          children: ["","Java-BasicNotes", "Java-Interview", "Java-Methods",
+          /*children: ["","Java-BasicNotes", "Java-Interview", "Java-Methods",
             "Java-Collections", "Java-Multithreading", "Java-JVM", "Java-DesignPatterns",
             "Java-reflection", "Java-IO", "Java-Date", "Java-JDK8"]*/
         },
@@ -118,7 +119,7 @@ module.exports = config({
 
     blog: {
       intro: "/about/",
-      sidebarDisplay: "mobile",
+
       links: {
         Github: "https://github.com/LifeAlsoIsGG",
         Twitter: "https://twitter.com/LifeAlsoIsGG",
