@@ -53,7 +53,7 @@ Java的数据类型分为两大类：
 
 ### 注意
 
-int类型声明为L时会报错，需要向下转型。long类型声明时可以加或不加`L或l`
+int类型声明为L时会报错，需要向下转型。long类型声明时可以加或不加
 
 ```java
 int a = 10L;//报错
@@ -80,7 +80,7 @@ long d = 10;//正确,相当于向上转型
 
 ### 注意
 
-声明`float`时必须要加`F或f`，但是如果是整数则不用
+，但是如果是整数则不用
 
 ```java
 float a = 10;//正确
@@ -88,7 +88,7 @@ float b = 10.5F;//正确
 float c = 10.5;//报错
 ```
 
-`double`类型可加可不加D或d，因为声明为小数时，小数默认是double类型
+类型可加可不加D或d，因为声明为小数时，小数默认是double类型
 
 ```java
 double a = 10;//正确
@@ -106,7 +106,7 @@ double c = 10.5D;//正确,D可加可不加
 
 
 
-![特殊字符的转义序列](./images/Java-BasicNotes/Escape_sequence_for_special_characters.jpg)
+![特殊字符的转义序列](images/Java-BasicNotes/Escape_sequence_for_special_characters.jpg)
 
 
 
