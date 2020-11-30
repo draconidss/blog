@@ -48,3 +48,33 @@ Java的数据类型分为两大类：
 
 
 ![xx](./images/Java-BasicNotes/Java_Integer.jpg)
+
+
+
+### 注意
+
+int类型声明为L时会报错，需要向下转型。long类型声明时可以加或不加`L或l`
+
+```java
+int a = 10L;//报错
+int b = (int)10L;//正确
+long c = 10L;//正确
+long d = 10;//正确,相当于向上转型
+```
+
+
+
+
+
+
+
+## 1.2 浮点类型
+
+浮点类型用于表示有小数部分的数值。在 Java 中有两种浮点类型
+
+
+
+![](./images/Java-BasicNotes/float.jpg)
+
+
+
