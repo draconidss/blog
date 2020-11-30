@@ -3,15 +3,13 @@ const { config } = require("vuepress-theme-hope");
 module.exports = config({
   title: "LifeAlsoIsGG's Blog",
   description: "",
-  sidebarDisplay: "mobile",
-  sidebar: "auto",
-  sidebarDepth: 3,
+
   base: "/static-blog/",
 
   dest: "./dist",
 
   configureWebpack: () => {
-    const NODE_ENV = process.env.NODE_ENV
+    const NODE_ENV = process.env.NODE_ENV;
     //判断是否是生产环境
     if(NODE_ENV === 'production'){
       return {
@@ -63,6 +61,9 @@ module.exports = config({
     logo: "https://cdn.jsdelivr.net/gh/lifealsoisgg/static-blog@gh-pages/logo.png",
     hostname: "https://blog.lifeisgg.online",
     baseLang: "zh-CN",
+    sidebarDisplay: "mobile",
+    sidebar: "auto",
+    sidebarDepth: 3,
     author: "LifeAlsoIsGG",
     nav: [
       {
