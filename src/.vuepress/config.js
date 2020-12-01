@@ -95,7 +95,9 @@ module.exports = config({
           title: "Java学习",
           icon: "code",
           prefix: "Java/",
-          children: ["","Java-BasicNotes", "Java-Collections"]
+          children: ["","Java-BasicNotes", "Java-Interview", "Java-Methods",
+            "Java-Collections", "Java-Multithreading", "Java-JVM", "Java-DesignPatterns",
+            "Java-reflection", "Java-IO", "Java-Date", "Java-JDK8"]
           /*children: ["","Java-BasicNotes", "Java-Interview", "Java-Methods",
             "Java-Collections", "Java-Multithreading", "Java-JVM", "Java-DesignPatterns",
             "Java-reflection", "Java-IO", "Java-Date", "Java-JDK8"]*/
