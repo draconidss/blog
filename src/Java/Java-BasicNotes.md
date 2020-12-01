@@ -128,33 +128,7 @@ boolean (布尔）类型有两个值：false 和 true, 用来判定逻辑条件 
 
 
 
-![](./images/Java-BasicNotes/arithmetic_operator_1.jpg)
 
-
-
-Java中，整数使用以上运算符，无论怎么计算，也不会得到小数。
-
-
-
-![](./images/Java-BasicNotes/arithmetic_operator_2.jpg)
-
-
-
-
-
-![](./images/Java-BasicNotes/++Calculation_1.jpg)
-
-
-
-![](./images/Java-BasicNotes/++Calculation_2.jpg)
-
-
-
-
-
-
-
-## 2.2 赋值运算符
 
 
 
