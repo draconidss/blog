@@ -166,18 +166,4 @@ Java中，整数使用以上运算符，无论怎么计算，也不会得到小�
 
 
 
-## 2.3 比较运算符
 
-![](./images/Java-BasicNotes/Comparison_operator_1.jpg)
-
-
-
-![](./images/Java-BasicNotes/Comparison_operator_2.jpg)
-
-
-
-### instanceof：比较一个对象是否为一个类的实例/或某个接口的实现类
-
-参考
-
-> - https://www.cnblogs.com/ysocean/p/8486500.html
