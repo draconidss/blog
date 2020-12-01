@@ -158,11 +158,7 @@ Java中，整数使用以上运算符，无论怎么计算，也不会得到小�
 
 
 
-![](./images/Java-BasicNotes/assignment_operator_1.jpg)
 
-
-
-![](./images/Java-BasicNotes/assignment_operator_2.jpg)
 
 
 
