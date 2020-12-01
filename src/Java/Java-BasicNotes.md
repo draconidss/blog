@@ -15,13 +15,13 @@ tags:
 
 
 
-# 参考
+## 参考
 
 > - [JavaSchool](http://www.51gjie.com/)
 
 
 
-# 1 数据类型
+## 1 数据类型
 
 Java的数据类型分为两大类： 
 
@@ -41,7 +41,7 @@ Java的数据类型分为两大类：
 
 
 
-## 1.1 整型
+### 1.1 整型
 
 整型用于表示没有小数部分的数值， 它允许是负数。Java 提供了 4 种整型，具体内容如下
 
@@ -51,7 +51,7 @@ Java的数据类型分为两大类：
 
 
 
-### 注意
+#### 注意
 
 int类型声明为L时会报错，需要向下转型。long类型声明时可以加或不加`L或l`
 
@@ -68,7 +68,7 @@ long d = 10;//正确,相当于向上转型
 
 
 
-## 1.2 浮点类型
+### 1.2 浮点类型
 
 浮点类型用于表示有小数部分的数值。在 Java 中有两种浮点类型
 
@@ -82,7 +82,7 @@ long d = 10;//正确,相当于向上转型
 
 
 
-### 注意
+#### 注意
 
 声明`float`时必须要加`F或f`，但是如果是整数则不用
 
@@ -104,7 +104,7 @@ double c = 10.5D;//正确,D可加可不加
 
 
 
-## 1.3 char类型
+### 1.3 char类型
 
 ​		char 类型原本用于表示单个字符。不过，现在情况已经有所变化。 如今，有些 Unicode 字符可以用一个 chai•值描述，另外一些 Unicode 字符则需要两个 char 值。有关的详细信息请 阅读下一节。 char 类型的字面量值要用单引号括起来。例如：W 是编码值为 65 所对应的字符常量。 它与 "A" 不同，"A" 是包含一个字符 A 的字符串, char 类型的值可以表示为十六进制值，其 范围从 \u0000 到 \Uffff。例如：W2122 表示注册符号 ( ), \u03C0 表示希腊字母 it。 除了转义序列 \u 之外， 还有一些用于表示特殊字符的转义序列， 请参看表 3-3。所有这 些转义序列都可以出现在加引号的字符字面量或字符串中。例如，’ \02丨22' 或 "1 110\11”。转 义序列 \u还可以出现在加引号的字符常量或字符串之外（而其他所有转义序列不可以）。例 如： public static void main(String\u005B\ u00SD args) 就完全符合语法规则， \u005B 和 \u005D 是 [ 和 ] 的编码
 
@@ -114,17 +114,17 @@ double c = 10.5D;//正确,D可加可不加
 
 
 
-## 1.4 boolean类型
+### 1.4 boolean类型
 
 boolean (布尔）类型有两个值：false 和 true, 用来判定逻辑条件 整型值和布尔值之间 不能进行相互转换。
 
 
 
-# 2 运算符
+## 2 运算符
 
 
 
-## 2.1 算术运算符
+### 2.1 算术运算符
 
 
 
@@ -164,7 +164,7 @@ Java中，整数使用以上运算符，无论怎么计算，也不会得到小�
 
 
 
-## 2.2 赋值运算符
+### 2.2 赋值运算符
 
 
 
@@ -176,7 +176,7 @@ Java中，整数使用以上运算符，无论怎么计算，也不会得到小�
 
 
 
-## 2.3 比较运算符
+### 2.3 比较运算符
 
 ![](./images/Java-BasicNotes/Comparison_operator_1.jpg)
 
@@ -186,7 +186,7 @@ Java中，整数使用以上运算符，无论怎么计算，也不会得到小�
 
 
 
-### instanceof：比较一个对象是否为一个类的实例/或某个接口的实现类
+#### instanceof：比较一个对象是否为一个类的实例/或某个接口的实现类
 
 参考
 
@@ -210,7 +210,7 @@ boolean result = obj instanceof Class
 
 
 
-#### 其他情况
+##### 其他情况
 
 - obj 必须为引用类型，不能是基本类型
 
@@ -271,7 +271,7 @@ boolean result = obj instanceof Class
 
 
 
-#### 原理
+##### 原理
 
 参考
 
@@ -324,7 +324,7 @@ System.out.println(p1 instanceof List<Person>);//编译报错
 
 
 
-## 2.4 逻辑运算符
+### 2.4 逻辑运算符
 
 ![](./images/Java-BasicNotes/logical_operators_1.jpg)
 
@@ -334,7 +334,7 @@ System.out.println(p1 instanceof List<Person>);//编译报错
 
 
 
-## 2.5 三元运算符
+### 2.5 三元运算符
 
 **三元运算符格式：**
 
@@ -357,7 +357,7 @@ System.out.println(p1 instanceof List<Person>);//编译报错
 
 
 
-## 2.6 位运算符
+### 2.6 位运算符
 
 
 
@@ -385,7 +385,7 @@ System.out.println(p1 instanceof List<Person>);//编译报错
 
 
 
-## 2.7 数学函数与常量Math
+### 2.7 数学函数与常量Math
 
 在 Math类中，包含了各种各样的数学函数。在编写不同类别的程序时，可能需要的函数也不同。
 
@@ -476,7 +476,7 @@ System.out.println(p1 instanceof List<Person>);//编译报错
 
 
 
-# 3 数据类型转换
+## 3 数据类型转换
 
 Java程序中要求参与的计算的数据，必须要保证数据类型的一致性，如果数据类型不一致将发生类型的转换。
 
@@ -485,7 +485,7 @@ Java程序中要求参与的计算的数据，必须要保证数据类型的一�
 
 
 
-## 3.1 自动（隐式）转换
+### 3.1 自动（隐式）转换
 
 **从小类型到大类型，不需要强制转换符**
 
@@ -507,7 +507,7 @@ Java程序中要求参与的计算的数据，必须要保证数据类型的一�
 
 
 
-## 3.2 强制（显示）转换
+### 3.2 强制（显示）转换
 
 ![强制转换](./images/Java-BasicNotes/forced_conversion.jpg)
 
@@ -540,7 +540,7 @@ public static void main(String[] args){
 
 
 
-### 关于常量变量的计算
+#### 关于常量变量的计算
 
 
 
@@ -581,7 +581,7 @@ public classMain {
 
 
 
-## 3.3 ASCII编码表
+### 3.3 ASCII编码表
 
 ```java
 public static void main(String[] args) {
@@ -599,11 +599,11 @@ public static void main(String[] args) {
 
 
 
-# 4 方法
+## 4 方法
 
 
 
-## JShell工具
+### JShell工具
 
 ​		什么时候会用到 JShell 工具呢，当我们编写的代码非常少的时候，而又不愿意编写类，main方法，也不愿意去编译和运 行，这个时候可以使用JShell工具。 启动JShell工具，在DOS命令行直接输入JShell命令。
 
@@ -615,21 +615,21 @@ public static void main(String[] args) {
 
 
 
-# 5 流程控制语句
+## 5 流程控制语句
 
 
 
-## 5.1 判断语句
+### 5.1 判断语句
 
 ![多重if-else](./images/Java-BasicNotes/multiple_if-else.jpg)
 
 
 
-## 5.2 循环语句
+### 5.2 循环语句
 
 
 
-### 5.2.1 for循环
+#### 5.2.1 for循环
 
 ```java
 for(初始化表达式①; 布尔表达式②; 步进表达式④){
@@ -651,7 +651,7 @@ for(初始化表达式①; 布尔表达式②; 步进表达式④){
 
 
 
-### 5.2.2 while循环
+#### 5.2.2 while循环
 
 ```java
 初始化表达式①
@@ -672,7 +672,7 @@ while(布尔表达式②){
 
 
 
-### 5.2.3 其它循环
+#### 5.2.3 其它循环
 
 ```java
 for(Object x : ArrayList){
@@ -684,11 +684,11 @@ for(Object x : ArrayList){
 
 
 
-## 5.3 选择语句
+### 5.3 选择语句
 
 
 
-### switch语句
+#### switch语句
 
 ```java
 switch(表达式) {
@@ -744,11 +744,11 @@ System.out.println("执行default");
 
 
 
-## 5.4 跳出语句
+### 5.4 跳出语句
 
 
 
-### break：终止switch或者循环
+#### break：终止switch或者循环
 
 - 在选择结构switch语句中 
 - 在循环语句中 
@@ -756,5 +756,5 @@ System.out.println("执行default");
 
 
 
-### continue：结束本次循环，继续下一次的循环
+#### continue：结束本次循环，继续下一次的循环
 
