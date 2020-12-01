@@ -35,9 +35,9 @@ tags:
 
 
 
-![Java集合图](./images/Java-Collections/Java_Collections_diagram.jpg)
+![Java集合图](./images/Java-Collections/Java_Collections_diagram_1.jpg)
 
-![Java集合图](./images/Java-Collections/Java_Collections_diagram.webp)
+![Java集合图](./images/Java-Collections/Java_Collections_diagram_2.jpg)
 
 
 
