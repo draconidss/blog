@@ -104,6 +104,28 @@ double c = 10.5D;//正确,D可加可不加
 
 
 
+## 1.3 char类型
+
+​		
+
+
+
+![](./images/Java-BasicNotes/Escape_sequence_for_special_characters.jpg)
+
+
+
+## 1.4 boolean类型
+
+boolean (布尔）类型有两个值：false 和 true, 用来判定逻辑条件 整型值和布尔值之间 不能进行相互转换。
+
+
+
+# 2 运算符
+
+
+
+## 2.1 算术运算符
+
 
 
 
