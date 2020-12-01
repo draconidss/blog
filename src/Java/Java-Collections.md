@@ -33,24 +33,23 @@ tags:
 > - 长虚线：抽象类
 > - 实现：实现类
 
-![测试](./images/Java-Collections/demo.jpg)
 
 
-![Java集合图](./images/Java-Collections/Java Collections diagram.jpg)
+![Java集合图](./images/Java-Collections/Java_Collections_diagram.jpg)
 
-![Java集合图](./images/Java-Collections/Java Collections diagram.webp)
-
-
+![Java集合图](./images/Java-Collections/Java_Collections_diagram.webp)
 
 
 
-![Java集合框架体系](./images/Java-Collections/Java Collections Framework System.png)
-
-![集合底层数据结构](./images/Java-Collections/summary of data structure of the Collections.png)
 
 
+![Java集合框架体系](./images/Java-Collections/Java_Collections_Framework_System.png)
 
-![List,Set,Map三者的区别](./images/Java-Collections/difference between List Set and Map.png)
+![集合底层数据结构](./images/Java-Collections/summary_of_data_structure_of_the_Collections.png)
+
+
+
+![List,Set,Map三者的区别](./images/Java-Collections/difference_between_List_Set_and_Map.png)
 
 
 
@@ -450,7 +449,7 @@ private static final Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {};
 
 **模拟添加数据(lierabbit)到index=4过程如下：**
 
-![ArrayList根据索引模拟添加数据](./images/Java-Collections/ArrayList simulates adding data based on index.jpg)
+![ArrayList根据索引模拟添加数据](./images/Java-Collections/ArrayList_simulates_adding_data_based_on_index.jpg)
 
 
 
@@ -681,7 +680,7 @@ ArrayList中可以存放null元素，indexof是返回elementData数组中值相�
 
 模拟删除index=4（值为lierabbit）过程如下
 
-![ArrayList根据索引删除元素](./images/Java-Collections/ArrayList deletes elements based on index.jpg)
+![ArrayList根据索引删除元素](./images/Java-Collections/ArrayList_deletes_elements_based_on_index.jpg)
 
 ```java
 /**
@@ -847,13 +846,13 @@ List list = new ArrayList();//正确
 
 ### Arraylist 与 LinkedList 区别?
 
-![ArrayList与LinkedList区别](./images/Java-Collections/difference between Arraylist and LinkedList.png)
+![ArrayList与LinkedList区别](./images/Java-Collections/difference_between_Arraylist_and_LinkedList.png)
 
 
 
 ### ArrayList 与 Vector 区别呢?为什么要⽤Arraylist取代Vector呢？
 
-![ArrayList与Vector区别](images/Java-Collections/difference between ArrayList and Vector.png)
+![ArrayList与Vector区别](./images/Java-Collections/difference_between_ArrayList_and_Vector.png)
 
 
 
@@ -871,7 +870,7 @@ List list = new ArrayList();//正确
 
 ### HashSet与HashMap区别
 
-![HashMap 和 HashSet区别](./images/Java-Collections/difference between HashMap and HashSet.png)
+![HashMap 和 HashSet区别](./images/Java-Collections/difference_between_HashMap_and_HashSet.png)
 
 
 
@@ -1126,7 +1125,7 @@ public class HashSet<E>
 
 
 
-![Map集合图](./images/Java-Collections/Map Collections diagram.png)
+![Map集合图](./images/Java-Collections/Map_Collections_diagram.png)
 
 ### 参考
 
@@ -1147,7 +1146,7 @@ public class HashSet<E>
 
 其中，这个函数f一般称为**哈希函数**，这个函数的设计好坏会直接影响到哈希表的优劣。举个例子，比如我们要在哈希表中执行插入操作：
 
-![哈希表图解](./images/Java-Collections/Hash table diagram.jpg)
+![哈希表图解](./images/Java-Collections/Hash_table_diagram.jpg)
 
 查找操作同理，先通过哈希函数计算出实际存储地址，然后从数组中对应地址取出即可。
 
@@ -1187,9 +1186,9 @@ transient Entry<K,V>[] table = (Entry<K,V>[]) EMPTY_TABLE;
 - **如果定位到的数组位置不含链表（当前entry的next指向null）：那么对于查找，添加等操作很快，仅需一次寻址即可；**
 - **如果定位到的数组包含链表：对于添加操作，其时间复杂度为O(n)，首先遍历链表，存在即覆盖，否则新增；对于查找操作来讲，仍需遍历链表，然后通过key对象的equals方法逐一比对查找。**
 
-![HashMap数据结构](./images/Java-Collections/HashMap data structure 1.png)
+![HashMap数据结构](./images/Java-Collections/HashMap_data_structure_1.png)
 
-![HashMap数据结构2](./images/Java-Collections/HashMap data structure 2.png)
+![HashMap数据结构2](./images/Java-Collections/HashMap_data_structure_2.png)
 
 
 
@@ -1369,7 +1368,7 @@ public HashMap(Map<? extends K, ? extends V> m) {
 
 向map中添加值(返回这个key以前的值,如果没有返回null)
 
-![HashMap的put原理图](./images/Java-Collections/principle diagram of HashMap put.png)
+![HashMap的put原理图](./images/Java-Collections/principle_diagram_of_HashMap_put.png)
 
 
 
@@ -1712,7 +1711,7 @@ HashTable性能差主要是由于所有操作需要竞争同一把锁，而如�
 
 
 
-![ConcurrentHashMap分段锁](./images/Java-Collections/ConcurrentHashMap segment lock.png)
+![ConcurrentHashMap分段锁](./images/Java-Collections/ConcurrentHashMap_segment_lock.png)
 
 
 
@@ -1720,7 +1719,7 @@ HashTable性能差主要是由于所有操作需要竞争同一把锁，而如�
 
 如何实现线程安全
 
-![ConcurrentHashMap线程安全的原理](./images/Java-Collections/The principle of ConcurrentHashMap thread safety.png)
+![ConcurrentHashMap线程安全的原理](./images/Java-Collections/The_principle_of_ConcurrentHashMap_thread_safety.png)
 
 
 
