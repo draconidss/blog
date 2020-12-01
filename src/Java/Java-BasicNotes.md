@@ -110,7 +110,7 @@ double c = 10.5D;//正确,D可加可不加
 
 
 
-![特殊字符的转义序列](./images/Java-BasicNotes/Escape_sequence_for_special_characters.jpg)
+![](./images/Java-BasicNotes/Escape_sequence_for_special_characters.jpg)
 
 
 
