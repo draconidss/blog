@@ -140,23 +140,13 @@ Java中，整数使用以上运算符，无论怎么计算，也不会得到小�
 
 
 
-++ 运算，变量自己增长1。反之， -- 运算，变量自己减少1，用法与 ++ 一致。 
 
-- 独立运算： 
 
-  - 变量在独立运算时， 前++ 和 后++ 没有区别 。 
-  - 变量 前++ ：例如 ++i 。 
-  - 变量 后++ ：例如 i++ 。
+![](./images/Java-BasicNotes/++Calculation_1.jpg)
 
-- 混合运算： 
 
-  - 和其他变量放在一起， 前++ 和 后++ 就产生了不同。 
 
-    ![](./images/Java-BasicNotes/++Calculation_1.jpg)
-
-  - 变量 前++ ：变量a自己加1，将加1后的结果赋值给b，也就是说a先计算。a和b的结果都是2。
-
-    ![](./images/Java-BasicNotes/++Calculation_2.jpg)
+![](./images/Java-BasicNotes/++Calculation_2.jpg)
 
 
 
