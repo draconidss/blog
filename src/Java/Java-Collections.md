@@ -64,13 +64,13 @@ tags:
 
 
 
-## 1. List
 
 
 
 
 
-### 1.1 ArrayList
+
+## 1. List | ArrayList
 
 参考
 
@@ -80,7 +80,7 @@ tags:
 
 
 
-#### 构造方法
+### 构造方法
 
 - 无参构造方法
 - 有参构造方法
@@ -185,7 +185,7 @@ private static final Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {};
 
 
 
-#### E get(int index) ：获取index位置的元素
+### E get(int index) ：获取index位置的元素
 
 首先判断index是否越界，这里并没有判断是否小于0，因为下标小于0时数组会抛出异常。越界则抛出IndexOutOfBoundsException异常，反之返回数组对应index位置的元素
 
@@ -236,7 +236,7 @@ private static final Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {};
 
 
 
-#### E set(int index, E element)  ：设置（覆盖）index位置的元素
+### E set(int index, E element)  ：设置（覆盖）index位置的元素
 
 和get一样先判断index（下标）是否越界，不越界则先获取原来index位置上的元素，接着设置（覆盖）index位置上的元素，然后返回原来的元素，反之抛出IndexOutOfBoundsException异常
 
@@ -261,7 +261,7 @@ private static final Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {};
 
 
 
-#### boolean add(E e)  ：添加一个元素到列表尾/扩容机制
+### boolean add(E e)  ：添加一个元素到列表尾/扩容机制
 
 **参考**
 
@@ -279,7 +279,7 @@ private static final Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {};
 
 
 
-##### 流程
+#### 流程
 
 
 
@@ -294,7 +294,7 @@ private static final Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {};
 
 
 
-##### 第一步：调用`ensureCapacityInternal(size + 1)`方法
+#### 第一步：调用`ensureCapacityInternal(size + 1)`方法
 
 `minCapacity = size + 1`即为所需最小容量，调用此方法时会先调用`calculateCapacity(elementData, minCapacity)`去计算所需最小容量，之后作为参数去调用`ensureExplicitCapacity`去与当前elementdata数组的长度`elementdata.length`比较看是否需要调用`grow()`去扩容。
 
@@ -330,7 +330,7 @@ private static final Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {};
 
 
 
-##### 第二步：调用 `calculateCapacity(elementData, minCapacity)` 方法
+#### 第二步：调用 `calculateCapacity(elementData, minCapacity)` 方法
 
 
 
@@ -367,7 +367,7 @@ private static final Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {};
 
 
 
-##### 第三步：调用`ensureExplicitCapacity()`方法看是否需要扩容
+#### 第三步：调用`ensureExplicitCapacity()`方法看是否需要扩容
 
 
 
@@ -392,7 +392,7 @@ private static final Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {};
 
 
 
-##### 第四步：调用`grow()`方法进行扩容
+#### 第四步：调用`grow()`方法进行扩容
 
 
 
@@ -444,7 +444,7 @@ private static final Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {};
 
 
 
-#### void add(int index, E element) ：在index处放置元素
+### void add(int index, E element) ：在index处放置元素
 
 将elementData数组从index开始后面的元素往后移一位，接着在index处放置元素
 
@@ -496,7 +496,7 @@ private static final Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {};
 
 
 
-#### ensureCapacity(int minCapacity)：自主扩增容量
+### ensureCapacity(int minCapacity)：自主扩增容量
 
 在使用add()方法增加新的元素时，如果要增加的数据量很大，应该使用`ensureCapacity()`方法，该方法的作用是预先设置Arraylist的大小，这样可以大大提高初始化速度。 
 
@@ -576,11 +576,11 @@ public class EnsureCapacityTest {
 
 
 
-#### 数组复制/扩容的两个方法
+### 数组复制/扩容的两个方法
 
 
 
-##### System.arraycopy(Object src, int srcPos, Object dest, int destPos, int length)
+#### System.arraycopy(Object src, int srcPos, Object dest, int destPos, int length)
 
 将数组`src`从`srcPos`后的元素复制到目标数组`dest`的`destPos`起点开始，复制`length`个
 
@@ -594,7 +594,7 @@ public class EnsureCapacityTest {
 
 
 
-##### Arrays.copyOf()
+#### Arrays.copyOf()
 
 ```java
 elementData = Arrays.copyOf(elementData, newCapacity);
@@ -602,7 +602,7 @@ elementData = Arrays.copyOf(elementData, newCapacity);
 
 
 
-##### 区别
+#### 区别
 
 看两者源代码可以发现 copyOf() 内部实际调用了 `System.arraycopy()` 方法
 
@@ -614,7 +614,7 @@ elementData = Arrays.copyOf(elementData, newCapacity);
 
 
 
-#### boolean addAll(Collection<? extends E> c) : 添加一个集合里的所有元素到列表尾
+### boolean addAll(Collection<? extends E> c) : 添加一个集合里的所有元素到列表尾
 
 将要添加的集合变为数组，然后将其复制到elementData数组末尾 
 
@@ -647,7 +647,7 @@ elementData = Arrays.copyOf(elementData, newCapacity);
 
 
 
-#### int indexOf(Object o)  ：查找o元素在列表第一次出现的位置
+### int indexOf(Object o)  ：查找o元素在列表第一次出现的位置
 
 ArrayList中可以存放null元素，indexof是返回elementData数组中值相同的首个元素的下标，indexof中比较方法是equals而equals是比较元素的值，如果使用**null.equals(Object o)**会报错空指针，因此必须对null单独查找。如果未找到该元素则返回-1
 
@@ -677,7 +677,7 @@ ArrayList中可以存放null元素，indexof是返回elementData数组中值相�
 
 
 
-#### E remove(int index)  ：删除index位置上的元素
+### E remove(int index)  ：删除index位置上的元素
 
 模拟删除index=4（值为lierabbit）过程如下
 
@@ -714,7 +714,7 @@ ArrayList中可以存放null元素，indexof是返回elementData数组中值相�
 
 
 
-#### boolean remove(Object o)  ：删除o元素
+### boolean remove(Object o)  ：删除o元素
 
 通过寻找o元素，可以获得其下标，再根据下标删除o元素
 
@@ -768,7 +768,7 @@ ArrayList中可以存放null元素，indexof是返回elementData数组中值相�
 
 
 
-#### forEach(Consumer<? super E> action) ：遍历列表 
+### forEach(Consumer<? super E> action) ：遍历列表 
 
 这里可以看到**modCount**的用处，当**modCount**发生改变后，立刻抛出**ConcurrentModificationException**异常。通过之前的分析可以知道当列表内容被修改时**modCount**会增加。也就是说如果在遍历**ArrayList**的过程中有其他线程修改了**ArrayList**，那么将抛出**ConcurrentModificationException**异常
 
@@ -802,19 +802,19 @@ ArrayList中可以存放null元素，indexof是返回elementData数组中值相�
 
 
 
-### LinkedList
+## 2. List | LinkedList
 
 
 
 
 
-### 区别
+## List | 区别
 
 
 
 
 
-#### ArrayList与List的区别
+### ArrayList与List的区别
 
 参考
 
@@ -845,13 +845,13 @@ List list = new ArrayList();//正确
 
 
 
-#### Arraylist 与 LinkedList 区别?
+### Arraylist 与 LinkedList 区别?
 
 ![ArrayList与LinkedList区别](./images/Java-Collections/difference between Arraylist and LinkedList.png)
 
 
 
-#### ArrayList 与 Vector 区别呢?为什么要⽤Arraylist取代Vector呢？
+### ArrayList 与 Vector 区别呢?为什么要⽤Arraylist取代Vector呢？
 
 ![ArrayList与Vector区别](images/Java-Collections/difference between ArrayList and Vector.png)
 
@@ -859,23 +859,23 @@ List list = new ArrayList();//正确
 
 
 
-## 2. Set
 
 
 
-### 2.1 HashSet
+
+## 3. Set | HashSet
 
 **HashSet**实现**Set**接口，由哈希表（实际上是一个**HashMap**实例）支持。它不保证set 的迭代顺序；特别是它不保证该顺序恒久不变。此类允许使用null元素。对于**HashSet**而言，它是基于**HashMap**实现的，HashSet底层使用**HashMap**来保存所有元素，因此**HashSet** 的实现比较简单，相关**HashSet**的操作，基本上都是直接调用底层**HashMap**的相关方法来完成， **HashSet**的源代码如下：
 
 
 
-#### HashSet与HashMap区别
+### HashSet与HashMap区别
 
 ![HashMap 和 HashSet区别](./images/Java-Collections/difference between HashMap and HashSet.png)
 
 
 
-#### 构造器
+### 构造器
 
 ```java
 public class HashSet<E>  
@@ -966,7 +966,7 @@ public class HashSet<E>
 
 
 
-#### 调用add方法/如何去重
+### 调用add方法/如何去重
 
 
 
@@ -1002,15 +1002,7 @@ public class HashSet<E>
 
 
 
-
-
-
-
-
-
-
-
-#### 调用remove方法
+### 调用remove方法
 
 ```java
  /** 
@@ -1030,7 +1022,7 @@ public class HashSet<E>
 
 
 
-#### 调用clear方法
+### 调用clear方法
 
 ```java
     /** 
@@ -1045,7 +1037,7 @@ public class HashSet<E>
 
 
 
-#### 迭代器遍历
+### 迭代器遍历
 
 底层实际调用底层**HashMap**的**keySet**来返回所有的key。
 
@@ -1070,7 +1062,7 @@ public class HashSet<E>
 
 
 
-#### size大小
+### size大小
 
 底层实际调用**HashMap**的**size()**方法返回Entry的数量，就得到该Set中元素的个数
 
@@ -1088,7 +1080,7 @@ public class HashSet<E>
 
 
 
-#### 判断空
+### 判断空
 
 ```java
     /** 
@@ -1104,7 +1096,7 @@ public class HashSet<E>
 
 
 
-#### 判断是否存在某个对象
+### 判断是否存在某个对象
 
 ```java
 
@@ -1126,17 +1118,17 @@ public class HashSet<E>
 
 
 
-## 3. Map
 
 
 
-### 3.1 HashMap
+
+## 4. Map | HashMap
 
 
 
 ![Map集合图](./images/Java-Collections/Map Collections diagram.png)
 
-#### 参考
+### 参考
 
 > - https://www.cnblogs.com/chentang/p/12670462.html
 > - https://www.cnblogs.com/wytiger/p/10731082.html
@@ -1145,7 +1137,7 @@ public class HashSet<E>
 
 
 
-#### 哈希表&哈希冲突
+### 哈希表&哈希冲突
 
 ​	在数组中根据下标查找某个元素，一次定位就可以达到，哈希表利用了这种特性，**哈希表的主干就是数组**。比如我们要新增或查找某个元素，我们通过把当前元素的关键字 通过某个函数映射到数组中的某个位置，通过数组下标一次定位就可完成操作。
 
@@ -1169,7 +1161,7 @@ public class HashSet<E>
 
 
 
-#### HashMap数据结构
+### HashMap数据结构
 
 **HashMap**的主干是一个变量名为**table**的**Entry/Node数组**。**Entry/Node**是**HashMap**的基本组成单元，每一个**Entry/Node**包含一个**key-value**键值对。
 
@@ -1201,7 +1193,7 @@ transient Entry<K,V>[] table = (Entry<K,V>[]) EMPTY_TABLE;
 
 
 
-#### HashMap属性
+### HashMap属性
 
 - **initialCapacity：**初始容量。指的是 HashMap 集合初始化的时候自身的容量。可以在构造方法中指定；如果不指定的话，总容量默认值是 **16** 。需要注意的是初始容量必须是 2 的幂次方。
 - **size：**当前 HashMap 中已经存储着的键值对数量，即 HashMap.size()
@@ -1241,7 +1233,7 @@ implements Map<K,V>, Cloneable, Serializable {
 
 
 
-#### HashMap常用内部类
+### HashMap常用内部类
 
 **红黑树结构**
 
@@ -1280,7 +1272,7 @@ static class Node<K,V> implements Map.Entry<K,V> {
 
 
 
-#### 构造方法
+### 构造方法
 
 - 无参构造方法，默认容量**16**，默认的加载因子**0.75**
 - 设置初始容量，并使用默认的加载因子**0.75**，调用的方法是第三个构造方法，将默认**DEFAULT_LOAD_FACTOR**作为形参传入第三个构造函数
@@ -1371,7 +1363,7 @@ public HashMap(Map<? extends K, ? extends V> m) {
 
 
 
-#### put()：添加一个键值对/扩容机制
+### put()：添加一个键值对/扩容机制
 
 
 
@@ -1466,7 +1458,7 @@ public V put(K key, V value) {
 
 
 
-**resize()扩容操作**
+### resize()扩容操作
 
 参考
 
@@ -1591,7 +1583,7 @@ public V put(K key, V value) {
 
 
 
-#### HashMap 的⻓度为什么是2的幂次⽅
+### HashMap 的⻓度为什么是2的幂次⽅
 
 为了能让 HashMap 存取⾼效，尽量减少碰撞，也就是要尽量把数据分配均匀。我们上⾯也讲到了过 了，Hash 值的范围值-2147483648到2147483647，前后加起来⼤概40亿的映射空间，只要哈希函数映射 得⽐较均匀松散，⼀般应⽤是很难出现碰撞的。但问题是⼀个40亿⻓度的数组，内存是放不下的。所以 这个散列值是不能直接拿来⽤的。⽤之前还要先做对数组的⻓度取模运算，得到的余数才能⽤来要存放 的位置也就是对应的数组下标。这个数组下标的计算⽅法是“ `(n - 1) & hash` ”。（n代表数组⻓ 度）。这也就解释了 HashMap 的⻓度为什么是2的幂次⽅。 
 
@@ -1603,7 +1595,7 @@ public V put(K key, V value) {
 
 
 
-#### JDK1.8中HashMap如何应对hash冲突？
+### JDK1.8中HashMap如何应对hash冲突？
 
 
 
@@ -1617,7 +1609,7 @@ public V put(K key, V value) {
 
 
 
-#### 为什么HashMap线程不安全
+### 为什么HashMap线程不安全
 
 
 
@@ -1637,7 +1629,7 @@ public V put(K key, V value) {
 
 
 
-#### 为什么用红黑树不用AVL树
+### 为什么用红黑树不用AVL树
 
 参考
 
@@ -1682,7 +1674,7 @@ AVL树和红黑树有几点比较和区别：
 
 
 
-### 3.2 LinkedHashMap
+## 5. Map | LinkedHashMap
 
 参考
 
@@ -1694,7 +1686,7 @@ AVL树和红黑树有几点比较和区别：
 
 
 
-### 3.3 ConcurrentHashMap
+## 6. Map | ConcurrentHashMap
 
 参考
 
@@ -1740,21 +1732,13 @@ HashTable性能差主要是由于所有操作需要竞争同一把锁，而如�
 
 
 
+## Map | 区别
 
 
 
 
 
-
-
-
-### 区别
-
-
-
-
-
-#### HashMap与Hashtable区别
+### HashMap与Hashtable区别
 
 
 
@@ -1766,7 +1750,7 @@ HashTable性能差主要是由于所有操作需要竞争同一把锁，而如�
 
 
 
-#### ConcurrentHashMap 和 Hashtable 的区别
+### ConcurrentHashMap 和 Hashtable 的区别
 
 ConcurrentHashMap 和 Hashtable 的区别主要体现在实现线程安全的⽅式上不同。 
 
