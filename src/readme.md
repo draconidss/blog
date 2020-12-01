@@ -7,7 +7,7 @@ heroText: We found hope in hopeless place
 #tagline: We found hope in hopeless place
 bgImage: https://cdn.jsdelivr.net/gh/lifealsoisgg/static-blog@gh-pages/bgImage.jpg
 bgImageStyle: {
-  height: '450px'
+  height: '600px'
 }
 project:
   - type: project

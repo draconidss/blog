@@ -33,7 +33,7 @@ tags:
 > - 长虚线：抽象类
 > - 实现：实现类
 
-![测试](./images/Java-Collections/测试.jpg)
+![测试](./images/Java-Collections/demo.jpg)
 
 
 ![Java集合图](./images/Java-Collections/Java Collections diagram.jpg)
