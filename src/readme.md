@@ -3,8 +3,8 @@ blog: true
 home : true
 icon: home
 heroImage: https://cdn.jsdelivr.net/gh/lifealsoisgg/static-blog@gh-pages/heroImage.png
-heroText: We found hope in hopeless place
-#tagline: We found hope in hopeless place
+heroText: LifeAlsoIsGG's Blog
+tagline: We found hope in hopeless place
 bgImage: https://cdn.jsdelivr.net/gh/lifealsoisgg/static-blog@gh-pages/bgImage.jpg
 bgImageStyle: {
   height: '600px'
