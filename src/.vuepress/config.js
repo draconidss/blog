@@ -111,6 +111,43 @@ module.exports = config({
         },
 
         {
+          title: "数据库",
+          icon: "creative",
+          prefix: "database/",
+          children: [
+            {
+              title: "Mysql",
+              icon: "creative",
+              prefix: "Mysql/",
+              children: ["Hadoop_pseudo-distributed_configuration"]
+            },
+
+            {
+              title: "Redis",
+              icon: "creative",
+              prefix: "redis/",
+              children: ["Redis_theory_note", "Redis_deployment&use",
+                "Redis_single_signin", "Redis_High_concurrency_spike_system"]
+            },
+
+            {
+              title: "Hadoop",
+              icon: "creative",
+              prefix: "Hadoop/",
+              children: ["Hadoop_pseudo-distributed_configuration"]
+            }
+
+          ],
+        },
+
+        {
+          title: "数据结构&算法",
+          icon: "creative",
+          prefix: "dataStructure&algorithm/",
+          children: ["DataStructure&algorithm_note", "DataStructure&algorithm_question"],
+        },
+
+        {
           title: "Linux",
           icon: "creative",
           prefix: "Linux/",
@@ -123,6 +160,14 @@ module.exports = config({
           prefix: "Docker/",
           children: ["Docker-deployment", "Docker-Install-software"],
         },
+
+        {
+          title: "前端",
+          icon: "creative",
+          prefix: "front-end/",
+          children: ["JavaScript-Interview", "Promise_Asynchronous_call"],
+        },
+
         {
           title: "Guide",
           icon: "creative",
