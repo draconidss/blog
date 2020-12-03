@@ -92,6 +92,13 @@ module.exports = config({
     sidebar: {
       "/": [
         {
+          title: "My-Project",
+          icon: "creative",
+          prefix: "My-Project/",
+          children: ["", "MyProject-AttendanceMiniprogram", "MyProject-JavaWeb-ActivitySystem",
+            "MyProject-SupermarketSystem"],
+        },
+        {
           title: "Java学习",
           icon: "code",
           prefix: "Java/",
@@ -101,6 +108,20 @@ module.exports = config({
           /*children: ["","Java-BasicNotes", "Java-Interview", "Java-Methods",
             "Java-Collections", "Java-Multithreading", "Java-JVM", "Java-DesignPatterns",
             "Java-reflection", "Java-IO", "Java-Date", "Java-JDK8"]*/
+        },
+
+        {
+          title: "Linux",
+          icon: "creative",
+          prefix: "Linux/",
+          children: ["Linux-commands", "Use-xshell-to-connect-Centos7-in-VM"],
+        },
+
+        {
+          title: "Docker",
+          icon: "creative",
+          prefix: "Docker/",
+          children: ["Docker-deployment", "Docker-Install-software"],
         },
         {
           title: "Guide",
