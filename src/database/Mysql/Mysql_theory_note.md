@@ -1,11 +1,8 @@
 ---
-icon: 
 title: Mysql理论学习笔记
 author: LifeAlsoIsGG
 time: 2020-09-16 18:10:26
-description: Mysql理论学习笔记
 original: true
-image: 
 categories: 
   - 数据库
 tags: 

@@ -96,10 +96,16 @@ module.exports = config({
           icon: "creative",
           prefix: "My-Project/",
           children: ["", "MyProject-AttendanceMiniprogram", "MyProject-JavaWeb-ActivitySystem",
-            "MyProject-SupermarketSystem"],
+            "MyProject-SupermarketSystem"]
         },
         {
-          title: "Java学习",
+          title: "Java面试整理",
+          icon: "creative",
+          prefix: "Interview/",
+          children: ["Java-Interview", "Computer_other_interview_questions", "tencent-cloud-note"]
+        },
+        {
+          title: "Java",
           icon: "code",
           prefix: "Java/",
           children: ["","Java-BasicNotes", "Java-Interview", "Java-Methods",
@@ -115,11 +121,12 @@ module.exports = config({
           icon: "creative",
           prefix: "database/",
           children: [
+              "",
             {
               title: "Mysql",
               icon: "creative",
               prefix: "Mysql/",
-              children: ["Hadoop_pseudo-distributed_configuration"]
+              children: ["Mysql_theory_note", "SQL_note"]
             },
 
             {
@@ -144,28 +151,28 @@ module.exports = config({
           title: "数据结构&算法",
           icon: "creative",
           prefix: "dataStructure&algorithm/",
-          children: ["DataStructure&algorithm_note", "DataStructure&algorithm_question"],
+          children: ["", "DataStructure&algorithm_note", "DataStructure&algorithm_question"],
         },
 
         {
           title: "Linux",
           icon: "creative",
           prefix: "Linux/",
-          children: ["Linux-commands", "Use-xshell-to-connect-Centos7-in-VM"],
+          children: ["", "Linux-commands", "Use-xshell-to-connect-Centos7-in-VM"],
         },
 
         {
           title: "Docker",
           icon: "creative",
           prefix: "Docker/",
-          children: ["Docker-deployment", "Docker-Install-software"],
+          children: ["", "Docker-deployment", "Docker-Install-software"],
         },
 
         {
           title: "前端",
           icon: "creative",
           prefix: "front-end/",
-          children: ["JavaScript-Interview", "Promise_Asynchronous_call"],
+          children: ["", "JavaScript-Interview", "Promise_Asynchronous_call"],
         },
 
         {

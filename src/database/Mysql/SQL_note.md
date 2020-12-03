@@ -1,11 +1,8 @@
 ---
-icon: 
 title: SQL学习笔记
 author: LifeAlsoIsGG
 time: 2020-10-12 20:47:17
-description: SQL学习笔记
 original: true
-image: 
 categories: 
   - 数据库
 tags: 
