@@ -59,7 +59,6 @@ module.exports = config({
 
   themeConfig: {
     logo: "https://cdn.jsdelivr.net/gh/lifealsoisgg/static-blog@gh-pages/logo.png",
-    hostname: "https://blog.lifeisgg.online",
     baseLang: "zh-CN",
     sidebarDisplay: "mobile",
     sidebar: "auto",
