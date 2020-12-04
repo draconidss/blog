@@ -33,7 +33,7 @@ tags:
 mysql> show engines;
 ```
 
-![](./images/Mysql_theory_note/mysql_engine.jpg)
+![mysql存储引擎](./images/Mysql_theory_note/mysql_engine.jpg)
 
 从上图我们可以查看出 MySQL 当前默认的存储引擎是`InnoDB`,并且在5.7版本所有的存储引擎中只有 `InnoDB` 是事务性存储引擎，也就是说只有 InnoDB ⽀持事务。
 
@@ -206,7 +206,7 @@ MySQL索引使⽤的数据结构主要有`BTree索引` 和 `哈希索引` 。对
 
 
 
-![](./images/Mysql_theory_note/B-tree.png)
+![B-tree](./images/Mysql_theory_note/B-tree.png)
 
 一个节点大小限制在`16k`
 
@@ -214,7 +214,7 @@ MySQL索引使⽤的数据结构主要有`BTree索引` 和 `哈希索引` 。对
 
 ### 3.7 B+树
 
-![](./images/Mysql_theory_note/B+tree.png)
+![B+tree](./images/Mysql_theory_note/B+tree.png)
 
 
 
@@ -483,7 +483,7 @@ SELECT @@tx_isolation
 
 比如要设计一个订单信息表，因为订单中可能会有多种商品，所以要将订单编号和商品编号作为数据库表的联合主键，如下表所示。
 
-![](./images/Mysql_theory_note/第二范式_1.png)
+![第二范式1](./images/Mysql_theory_note/Second_normal_form_1.png)
 
 
 
@@ -493,7 +493,7 @@ SELECT @@tx_isolation
 
 
 
-![](./images/Mysql_theory_note/第二范式_2.png)
+![第二范式2](./images/Mysql_theory_note/Second_normal_form_2.png)
 
 
 
@@ -505,7 +505,7 @@ SELECT @@tx_isolation
 
 
 
-![](./images/Mysql_theory_note/Thied_normal_form.png)
+![第三范式](./images/Mysql_theory_note/Thied_normal_form.png)
 
 
 
@@ -538,7 +538,7 @@ SELECT @@tx_isolation
 
 一个保存了8个键的trie结构，"A", "to", "tea", "ted", "ten", "i", "in", and "inn".
 
-![](./images/Mysql_theory_note/Dictionary_tree.jpg)
+![字典树](./images/Mysql_theory_note/Dictionary_tree.jpg)
 
 
 
