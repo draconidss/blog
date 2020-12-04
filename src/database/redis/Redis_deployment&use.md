@@ -124,7 +124,7 @@ docker exec -it containerName/containerid redis-benchmark -h 127.0.0.1 -p 6379 -
 
 
 
-### 数据库
+### 3.1 数据库
 
 
 
@@ -158,7 +158,7 @@ flushall
 
 
 
-### 键Key
+### 3.2 键Key
 
 参考
 
@@ -275,7 +275,7 @@ decrby [key] [number]
 
 
 
-### List
+### 3.3 List
 
 参考
 
@@ -285,7 +285,7 @@ decrby [key] [number]
 
 
 
-### Set
+### 3.4 Set
 
 参考
 
@@ -293,7 +293,7 @@ decrby [key] [number]
 
 
 
-### Hash
+### 3.5 Hash
 
 参考
 
@@ -301,7 +301,7 @@ decrby [key] [number]
 
 
 
-### ZSet
+### 3.6 ZSet
 
 参考
 
@@ -309,19 +309,19 @@ decrby [key] [number]
 
 
 
-### Geospatial
+### 3.7 Geospatial
 
 地图经纬度，底层是用ZSet，可以使用ZSet的命令
 
 
 
-### Hyperloglog
+### 3.8 Hyperloglog
 
 基数
 
 
 
-### Bitmap
+### 3.9 Bitmap
 
 二进制，可用于打卡等状态变化
 
@@ -483,7 +483,7 @@ watch相当于实现了`乐观锁`
 
 
 
-### 测试连接
+### 6.1 测试连接
 
 ```java
 public class pingTest {
@@ -499,7 +499,7 @@ public class pingTest {
 
 
 
-### HashTest
+### 6.2 HashTest
 
 ```java
 public class TestHash {
@@ -549,7 +549,7 @@ public class TestHash {
 
 
 
-### 导入依赖
+### 7.1 导入依赖
 
 `pom.xml`
 
@@ -562,7 +562,7 @@ public class TestHash {
 
 
 
-### `application.yml`配置
+### 7.2 `application.yml`配置
 
 ```yaml
 spring:
@@ -595,7 +595,7 @@ spring:
 
 
 
-### 简单使用示例
+### 7.3 简单使用示例
 
 `SpringbootDemoApplicationTests.java`
 
@@ -619,7 +619,7 @@ spring:
 
 
 
-### 序列化配置
+### 7.4 序列化配置
 
 `RedisAutoConfiguration.java`
 
@@ -711,7 +711,7 @@ void redisTest_2() throws JsonProcessingException {
 
 
 
-### 配置redisConfig类
+### 7.5 配置redisConfig类
 
 `redisConfig.java`
 
@@ -778,11 +778,11 @@ void redisTest_2() throws JsonProcessingException {
 
 
 
-### 封装常用API到`RedisUtil`
+### 7.6 封装常用API到`RedisUtil`
 
 
 
-::: demo RedisUtil.java
+::: details RedisUtil.java
 
 ```java
 package com.lifeisgg.springboot_demo.util;
