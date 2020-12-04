@@ -92,13 +92,13 @@ tags:
 
 ### 线程的状态/⽣命周期和状态
 
-![线程生命周期](./images/计算机其它面试题/Thread_life-cycle.jpg)
+![线程生命周期](./images/Computer_other_interview_questions/Thread_life-cycle.jpg)
 
 
 
 线程在⽣命周期中并不是固定处于某⼀个状态⽽是随着代码的执⾏在不同状态之间切换。Java 线程状 态变迁如下图所示（图源《Java 并发编程艺术》4.1.4 节）：
 
-![线程生命周期2](./images/计算机其它面试题/Thread_life-cycle_2.jpg)
+![线程生命周期2](./images/Computer_other_interview_questions/Thread_life-cycle_2.jpg)
 
 由上图可以看出：线程创建之后它将处于 NEW（新建） 状态，调⽤ start() ⽅法后开始运⾏，线程 这时候处于 READY（可运⾏） 状态。可运⾏状态的线程获得了 CPU 时间⽚（timeslice）后就处于 RUNNING（运⾏） 状态。
 
@@ -338,7 +338,7 @@ TCP的拥塞控制采⽤了四种算法，即 慢开始 、 拥塞避免 、快�
 
 三次握⼿的⽬的是建⽴可靠的通信信道，说到通讯，简单来说就是数据的发送与接收，⽽三次握⼿最主 要的⽬的就是双⽅确认⾃⼰与对⽅的发送与接收是正常的。发送SYN用来请求连接，发送ACK表示发过来的SYN已接收，从发送SYN端到发送ACK端这边的通信正常
 
-![TCP三次握手](./images/计算机其它面试题/TCP_three-way_handshake.png)
+![TCP三次握手](./images/Computer_other_interview_questions/TCP_three-way_handshake.png)
 
 
 
@@ -378,7 +378,7 @@ TCP的拥塞控制采⽤了四种算法，即 慢开始 、 拥塞避免 、快�
 
 ### TCP断开：四次挥手
 
-![TCP四次挥手](./images/计算机其它面试题/TCP_waved_four_times.jpeg)
+![TCP四次挥手](./images/Computer_other_interview_questions/TCP_waved_four_times.jpeg)
 
 
 
@@ -592,7 +592,7 @@ SSL的握手过程严格说是SSL协议的子协议，RFC5246(SSL V1.2）分为�
 
 
 
-![状态码](./images/计算机其它面试题/status_code.png)
+![状态码](./images/Computer_other_interview_questions/status_code.png)
 
 
 
