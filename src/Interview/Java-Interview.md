@@ -15,7 +15,7 @@ tags:
 
 # 学习路线
 
-![](./images/Java学习路线图.png)
+![Java学习路线图](./images/Java_learning_roadmap.png)
 
 
 
