@@ -4,7 +4,7 @@ module.exports = config({
   title: "LifeAlsoIsGG's Blog",
   description: "We found hope in hopeless place",
 
-  base: "/static-blog/",
+  base: "",
 
   dest: "./dist",
 
