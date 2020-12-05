@@ -16,6 +16,7 @@ tags:
 
 ## 1. 参考
 
+> - [Redis 命令参考 — Redis 命令参考 (redisfans.com)](http://doc.redisfans.com/)
 > - [redis 总结——重构版](https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247484858&idx=1&sn=8e222ea6115e0b69cac91af14d2caf36&chksm=cea24a71f9d5c367148dccec3d5ddecf5ecd8ea096b5c5ec32f22080e66ac3c343e99151c9e0&token=1082669959&lang=zh_CN&scene=21#wechat_redirect)
 > - https://www.cnblogs.com/jasontec/p/9699242.html
 > - https://github.com/Snailclimb/JavaGuide
@@ -861,7 +862,45 @@ key可能会在某些时间点被超高并发地访问，是一种非常“热�
 
 
 
-## 11. 如何解决 Redis 的并发竞争 Key 问题
+## 11. Redis发布订阅
+
+参考
+
+> - [订阅与发布 — Redis 设计与实现 (redisbook.readthedocs.io)](https://redisbook.readthedocs.io/en/latest/feature/pubsub.html)
+
+
+
+使用场景
+
+> - 实时消息
+> - 聊天室（既可以是发送者也可以是订阅者）
+> - 订阅，关注推送
+
+
+
+
+
+
+
+## 12. Redis主从复制/集群
+
+参考
+
+> - [集群教程 — Redis 命令参考 (redisfans.com)](http://doc.redisfans.com/topic/cluster-tutorial.html#cluster-tutorial)
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 13. 如何解决 Redis 的并发竞争 Key 问题
 
 参考
 
@@ -970,11 +1009,11 @@ SETNX lock.youzhi<current Unix time + lock timeout + 1>
 
 
 
-## 12. 区别
+## 13. 区别
 
 
 
-### 12.1 redis 和 memcached 的区别
+### 13.1 redis 和 memcached 的区别
 
 
 
