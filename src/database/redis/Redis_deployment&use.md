@@ -2311,7 +2311,7 @@ aof-load-truncated yes
 aof-use-rdb-preamble yes
 ```
 
-
+:::
 
 
 
@@ -2516,7 +2516,7 @@ repl_backlog_histlen:0
 
 ### 11.2 `redis.conf`配置
 
-主数据库master的`redis.conf`无需配置，只需要配置从数据slave里的`redis.conf`，这里以docker创建不同的容器来运行不同的`redis.conf`为例，`redis.conf`文件名称不能一样，主要修改以下几项（这里默认不开启`appendonly`，所以不需要修改生成的`appendonly`文件名）
+这里以docker创建不同的容器来运行不同的`redis.conf`为例，`redis.conf`文件名称不能一样，主要修改以下几项（这里默认不开启`appendonly`，所以不需要修改生成的`appendonly`文件名）
 
 ```shell
 #端口号
@@ -2526,13 +2526,13 @@ port 6380
 pidfile /var/run/redis_6380.pid
 
 #日志文件不能相同
-logfile "/var/log/redis2.log"
+logfile "/var/log/redis-6380.log"
 
 #RDB文件名
-dbfilename dumb.rdb
+dbfilename dumb-6380.rdb
 
 #存放RDB和AOF的文件夹尽量也修改
-dir /data/redis2
+dir ./data/redis-6380
 
 #当master设密码时，slave需要设置连接master的密码
 masterauth 123456
@@ -2545,11 +2545,13 @@ replicaof 127.0.0.1 6379
 
 也可以通过`salveof`命令让当前redis实例成为某个redis实例的slave
 
-```shaell
+```shell
 slaveof 127.0.0.1 6379
 ```
 
 
+
+从服务器比主服务器多一个`slaveof`的配置和`masterauth`密码
 
 
 
@@ -2558,7 +2560,7 @@ slaveof 127.0.0.1 6379
 启动`master`
 
 ```shell
-docker run -p 6379:6379 --name redisMaster -v /usr/local/docker/redis/redis-master.conf:/etc/redis/redis-master.conf -v /usr/local/docker/redis/data/redis-master:/data/redis-master -d redis redis-server /etc/redis/redis-master.conf
+docker run -p 6379:6379 --name redis-6379 -v /usr/local/docker/redis/redis-6379.conf:/etc/redis/redis-6379.conf -v /usr/local/docker/redis/data/redis-6379:/data/redis-6379 -d redis redis-server /etc/redis/redis-6379.conf
 ```
 
 
@@ -2566,7 +2568,7 @@ docker run -p 6379:6379 --name redisMaster -v /usr/local/docker/redis/redis-mast
 启动`slave-1`
 
 ```shell
-docker run -p 6380:6380 --name redisSlave-1 -v /usr/local/docker/redis/redis-slave-1.conf:/etc/redis/redis-slave-1.conf -v /usr/local/docker/redis/data/redis-slave-1:/data/redis-slave-1 -d redis redis-server /etc/redis/redis-slave-1.conf
+docker run -p 6380:6380 --name redis-6380 -v /usr/local/docker/redis/redis-6380.conf:/etc/redis/redis-6380.conf -v /usr/local/docker/redis/data/redis-6380:/data/redis-6380 -d redis redis-server /etc/redis/redis-6380.conf
 ```
 
 
@@ -2574,7 +2576,7 @@ docker run -p 6380:6380 --name redisSlave-1 -v /usr/local/docker/redis/redis-sla
 启动`slave-2`
 
 ```shell
-docker run -p 6381:6381 --name redisSlave-2 -v /usr/local/docker/redis/redis-slave-2.conf:/etc/redis/redis-slave-2.conf -v /usr/local/docker/redis/data/redis-slave-2:/data/redis-slave-2 -d redis redis-server /etc/redis/redis-slave-2.conf
+docker run -p 6381:6381 --name redis-6381 -v /usr/local/docker/redis/redis-6381.conf:/etc/redis/redis-6381.conf -v /usr/local/docker/redis/data/redis-6381:/data/redis-6381 -d redis redis-server /etc/redis/redis-6381.conf
 ```
 
 
@@ -2701,4 +2703,53 @@ slaveof no one
 
 
 ## 12. Redis集群配置-Sentinel（哨兵）模式
+
+
+
+### 12.1 创建`sentinel.conf`
+
+
+
+`sentinel.conf`
+
+```shell
+# 哨兵提供对外的端口号
+port 26379
+daemonize no
+logfile "sentinel-26379.log"
+dir "./data/sentinel-26379"
+sentinel monitor mymaster 127.0.0.1 7000 2
+sentinel down-after-milliseconds mymaster 30000
+sentinel parallel-syncs mymaster 1
+sentinel failover-timeout mymaster 15000
+sentinel auth-pass mymaster 123
+bind 192.168.250.132 127.0.0.1
+```
+
+
+
+详解
+
+```shell
+# 告诉sentinel去监听地址为ip:port的一个master，这里的master-name可以自定义，quorum是一个数字，
+# 指明当有多少个sentinel认为一个master失效时，master才算真正失效，即客观下线
+sentinel monitor <master-name> <ip> <redis-port> <quorum>
+
+# 设置连接master和slave时的密码，注意的是sentinel不能分别为master和slave设置不同的密码，因此master和slave的密码应该设置相同。
+sentinel auth-pass <master-name> <password>
+
+# 这个配置项指定了需要多少失效时间，一个master才会被这个sentinel主观地认为是不可用的。 单位是毫秒，默认为30秒
+sentinel down-after-milliseconds <master-name> <milliseconds> 
+
+# 这个配置项指定了在发生failover主备切换时最多可以有多少个slave同时对新的master进行 同步，这个数字越小，完成failover所需的时间就越长，
+# 但是如果这个数字越大，就意味着越 多的slave因为replication而不可用。可以通过将这个值设为 1 来保证每次只有一个slave 处于不能处理命令请求的状态。
+sentinel parallel-syncs <master-name> <numslaves> 
+
+# failover-timeout 可以用在以下这些方面：
+# 同一个sentinel对同一个master两次failover之间的间隔时间。   
+# 当一个slave从一个错误的master那里同步数据开始计算时间。直到slave被纠正为向正确的master那里同步数据时。    
+# 当想要取消一个正在进行的failover所需要的时间。    
+# 当进行failover时，配置所有slaves指向新的master所需的最大时间。不过，即使过了这个超时，slaves依然会被正确配置为指向master，但是就不按parallel-syncs所配置的规则了。
+sentinel failover-timeout <master-name> <milliseconds>
+```
 
