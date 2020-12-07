@@ -37,6 +37,22 @@ tags:
 
 
 
+::: warning
+
+`redis.conf`中是否在后台开启的属性`daemonize`只能是`NO`，如果为`YES` 会的导致 redis 无法启动，因为后台会导致docker无任务可做而退出。
+
+```java
+daemonize no
+```
+
+:::
+
+
+
+
+
+
+
 ### 以配置文件方式启动
 
 参考
@@ -48,10 +64,19 @@ tags:
 已配置文件方式启动redis容器
 
 ```shell
-docker run -p 6379:6379 --name redisDemo -v /usr/local/docker/redis/redis.conf:/etc/redis/redis.conf -v /usr/local/docker/redis/data:/data -d redis redis-server /etc/redis/redis.conf --appendonly no
+docker run -p 6379:6379 --name redisDemo 
+-v /usr/local/docker/redis/redis.conf:/etc/redis/redis.conf 
+-v /usr/local/docker/redis/data:/data 
+-d redis redis-server /etc/redis/redis.conf
 ```
 
 
+
+说明
+
+> - -p 6378:6379 ：容器redis 端口6379 映射 宿主机未6378
+> - --name redis01：容器 名字 为 redis01
+> - -v /root/redis/redis01/conf/redis.conf:/etc/redis/redis.conf ：容器 /etc/redis/redis.conf 配置文件 映射宿主机 /root/redis/redis01/conf/redis.conf。 会将宿主机的配置文件复制到docker中。
 
 
 
@@ -2290,7 +2315,7 @@ aof-use-rdb-preamble yes
 
 
 
-## 9. 持久化配置
+## 9. Redis持久化配置
 
 理论参考
 
@@ -2444,4 +2469,236 @@ Reading messages... (press Ctrl-C to quit)
 127.0.0.1:6379> publish channelDemo message1
 (integer) 1
 ```
+
+
+
+更多请参考
+
+> - [订阅与发布 — Redis 设计与实现 (redisbook.readthedocs.io)](https://redisbook.readthedocs.io/en/latest/feature/pubsub.html)
+
+
+
+
+
+
+
+## 11. Redis集群配置-主从复制配置
+
+
+
+
+
+### 11.1 查看当前库信息
+
+```shell
+127.0.0.1:6379> info replication
+# Replication
+
+# 角色
+role:master
+
+# 从机数量
+connected_slaves:0
+
+master_replid:a8d691a368c6b581987c7502f0ec91b89edf812f
+master_replid2:0000000000000000000000000000000000000000
+master_repl_offset:0
+second_repl_offset:-1
+repl_backlog_active:0
+repl_backlog_size:1048576
+repl_backlog_first_byte_offset:0
+repl_backlog_histlen:0
+127.0.0.1:6379> 
+
+```
+
+
+
+### 11.2 `redis.conf`配置
+
+主数据库master的`redis.conf`无需配置，只需要配置从数据slave里的`redis.conf`，这里以docker创建不同的容器来运行不同的`redis.conf`为例，`redis.conf`文件名称不能一样，主要修改以下几项（这里默认不开启`appendonly`，所以不需要修改生成的`appendonly`文件名）
+
+```shell
+#端口号
+port 6380
+
+#pid文件不能相同
+pidfile /var/run/redis_6380.pid
+
+#日志文件不能相同
+logfile "/var/log/redis2.log"
+
+#RDB文件名
+dbfilename dumb.rdb
+
+#存放RDB和AOF的文件夹尽量也修改
+dir /data/redis2
+
+#当master设密码时，slave需要设置连接master的密码
+masterauth 123456
+
+#说明它是哪个master的slave，salveof 主IP（必须是真实IP，而不是本地127.0.0.1） 主服务端口
+replicaof 127.0.0.1 6379
+```
+
+
+
+也可以通过`salveof`命令让当前redis实例成为某个redis实例的slave
+
+```shaell
+slaveof 127.0.0.1 6379
+```
+
+
+
+
+
+### 11.3 启动容器
+
+启动`master`
+
+```shell
+docker run -p 6379:6379 --name redisMaster -v /usr/local/docker/redis/redis-master.conf:/etc/redis/redis-master.conf -v /usr/local/docker/redis/data/redis-master:/data/redis-master -d redis redis-server /etc/redis/redis-master.conf
+```
+
+
+
+启动`slave-1`
+
+```shell
+docker run -p 6380:6380 --name redisSlave-1 -v /usr/local/docker/redis/redis-slave-1.conf:/etc/redis/redis-slave-1.conf -v /usr/local/docker/redis/data/redis-slave-1:/data/redis-slave-1 -d redis redis-server /etc/redis/redis-slave-1.conf
+```
+
+
+
+启动`slave-2`
+
+```shell
+docker run -p 6381:6381 --name redisSlave-2 -v /usr/local/docker/redis/redis-slave-2.conf:/etc/redis/redis-slave-2.conf -v /usr/local/docker/redis/data/redis-slave-2:/data/redis-slave-2 -d redis redis-server /etc/redis/redis-slave-2.conf
+```
+
+
+
+启动后在`master`中再次调用`info replication`如下
+
+```shell
+127.0.0.1:6379> info replication
+# Replication
+role:master
+connected_slaves:2
+slave0:ip=127.0.0.1,port=6380,state=online,offset=3374,lag=0
+slave1:ip=127.0.0.1,port=6381,state=online,offset=3374,lag=1
+master_replid:2f92baa3754bfd24b42113cfabd498396bfa736b
+master_replid2:0000000000000000000000000000000000000000
+master_repl_offset:3374
+second_repl_offset:-1
+repl_backlog_active:1
+repl_backlog_size:1048576
+repl_backlog_first_byte_offset:1
+repl_backlog_histlen:3374
+```
+
+
+
+在`slave-1`中如下
+
+```shell
+127.0.0.1:6380> info replication
+# Replication
+role:slave
+master_host:47.100.59.153
+master_port:6379
+master_link_status:up
+master_last_io_seconds_ago:7
+master_sync_in_progress:0
+slave_repl_offset:5008
+slave_priority:100
+slave_read_only:1
+connected_slaves:0
+master_replid:2f92baa3754bfd24b42113cfabd498396bfa736b
+master_replid2:0000000000000000000000000000000000000000
+master_repl_offset:5008
+second_repl_offset:-1
+repl_backlog_active:1
+repl_backlog_size:1048576
+repl_backlog_first_byte_offset:1
+repl_backlog_histlen:5008
+```
+
+
+
+在`slave-2`中如下
+
+```shell
+127.0.0.1:6381> info replication
+# Replication
+role:slave
+master_host:47.100.59.153
+master_port:6379
+master_link_status:up
+master_last_io_seconds_ago:9
+master_sync_in_progress:0
+slave_repl_offset:5078
+slave_priority:100
+slave_read_only:1
+connected_slaves:0
+master_replid:2f92baa3754bfd24b42113cfabd498396bfa736b
+master_replid2:0000000000000000000000000000000000000000
+master_repl_offset:5078
+second_repl_offset:-1
+repl_backlog_active:1
+repl_backlog_size:1048576
+repl_backlog_first_byte_offset:771
+repl_backlog_histlen:4308
+```
+
+
+
+
+
+### 11.4 验证主写从读/主从宕机
+
+`master`写入数据时，其它`slave`通过`增量复制`会同步`master`中的数据
+
+当`slave`写的时候提示只能读
+
+```shell
+127.0.0.1:6380> set k1 v1
+(error) READONLY You can't write against a read only replica.
+127.0.0.1:6380> 
+```
+
+
+
+主从宕机
+
+> - 如果此时`master`宕机或断开连接，`slave`还能继续读；当`master`上线回来后，`slave`能继续同步`master`读的内容
+>
+> - 如果是`slave`宕机，那么此时`master`在期间写，当`slave`上线回来后会`全量复制` `master`的数据
+>
+>   > 当`slave`启动后，主动向`master`发送`SYNC`命令。`master`接收到`SYNC`命令后在后台保存快照（`RDB持久化`）和缓存保存快照这段时间的命令，然后将保存的快照文件和缓存的命令发送给`slave`。`slave`接收到快照文件和命令后加载快照文件和缓存的执行命令。
+>   >
+>   > 复制初始化后，`master`每次接收到的写命令都会同步发送给`slave`，保证`主从数据一致性`。
+
+
+
+### 11.5 其他注意
+
+当把`slave`从入到另一个`slave`时，被从入的`slave`依然不能写
+
+如果`master`宕机想要重新推举出新的master，或者说想让`slave`脱离`master`，可以通过以下命令
+
+```shell
+slaveof no one
+```
+
+
+
+如果需要自动选举，还需要`哨兵模式`
+
+
+
+
+
+## 12. Redis集群配置-Sentinel（哨兵）模式
 

@@ -882,7 +882,7 @@ key可能会在某些时间点被超高并发地访问，是一种非常“热�
 
 
 
-## 12. Redis主从复制/集群
+## 12. Redis集群
 
 参考
 
@@ -890,6 +890,145 @@ key可能会在某些时间点被超高并发地访问，是一种非常“热�
 
 
 
+三种集群模式
+
+> - 主从复制模式
+> - Sentinel（哨兵）模式
+> - Cluster（集群）模式
+
+
+
+
+
+## 13. Redis集群-主从复制模式
+
+参考
+
+> - [Redis集群主从复制（一主两从）搭建配置教程【Windows环境】 - 阿飞云 - 博客园 (cnblogs.com)](https://www.cnblogs.com/aflyun/p/8495561.html)
+
+
+
+为了使得集群在一部分节点下线或者无法与集群的大多数节点进行通讯的情况下， 仍然可以正常运作， Redis 集群对节点使用了主从复制功能： 集群中的每个节点都有 1 个至 N 个复制品（replica）， 其中一个复制品为主节点（master）， 而其余的 N-1 个复制品为从节点（slave）。[ **摘自** [Redis 集群中的主从复制](http://doc.redisfans.com/topic/cluster-tutorial.html#id4) ]
+
+那么上面是主从复制呢，简单的来说就是一个主节点master可以拥有一个甚至多个从节点的slave，而一个slave又可以拥有多个slave，如此下去，形成了强大的多级服务器集群架构。
+
+
+
+![master&slave](./images/Redis_theory_note/master&slave.png)
+
+
+
+### 13.1 特点
+
+> 1. 一个`master`可以有多个`slave`，一个`slave`只能有一个`master`
+> 2. 除了多个`slave`连到相同的`master`外，`slave`也可以连接其他`slave`形成图状结构
+> 3. 主从复制`不会阻塞master`。也就是说当一个或多个slave与master进行初次同步数据时，master可以继续处理client发来的请求。相反slave在初次同步数据时则会阻塞不能处理client的请求。
+> 4. 主数据库`master`对外一般用来`写`，而从数据库`slave`对外一般都是`只读`的，只有接收主数据库同步过来的数据才会`写`。
+> 5. 可以在`master`禁用数据持久化，只需要注释掉`master` 配置文件中的所有`save`配置，然后只在`slave`上配置数据持久化。
+> 6. `slave`挂了不影响其他`slave`的读和`master`的读和写，重新启动后会将数据从`master`同步过来，`master`挂了以后，不影响`slave`的读，但redis不再提供写服务，`master`重启后`redis`将重新对外提供写服务
+> 7. `master`挂了以后，不会在`slave`节点中重新选一个`master`
+
+
+
+
+
+### 13.2 作用
+
+> 1. ==数据冗余==：主从复制实现了数据的热备份,是`持久化`之外的一种数据冗余方式。
+> 2. ==故障恢复==：当主节点出现问题时,可以由从节点提供服务,实现快速的故障恢复，实际上是一种服务的冗余
+> 3. ==负载均衡==:在主从复制的基础上,配合`读写分离`,可以由主节点提供写服务,由从节点提供读服务(即写 Redis数据时应用连接主节点,读 Redis数据时应用连接从节点),分担服务器负载;尤其是在写少读多的场景下,通过多个从节点分担读负载,可以大大提高 Redis服务器的井发量。
+> 4. ==高可用(集群)基石==：除了上述作用以外,主从复制还是`哨兵`和`集群`能够实施的基础,因此说`主从复制`是 Redis高可用的基础
+
+
+
+
+
+### 13.3 工作机制
+
+
+
+![全量复制](./images/Redis_theory_note/Full_copy.png)
+
+
+
+> 1. 当设置好slave服务器后,slave会建立和master的连接，然后发送sync命令。
+> 2. Master接到命令启动后台的存盘进程，同时收集所有接收到的用于修改数据集命令，在后台进程执行完毕之后，master将传送整个数据文件到slave,以完成一次完全同步。
+> 3. 全量复制：而slave服务在接收到数据库文件数据后，将其存盘并加载到内存中（第一次全量）。只要是重新连接master,一次完全同步（全量复制)将被自动执行。
+> 4. 增量复制：Master继续将新的所有收集到的修改命令依次传给slave,完成同步。（之后增量）
+
+
+
+当设置好slave服务器后，slave会建立和master的连接，然后发送sync命令。无论是第一次同步建立的连接还是连接断开后的重新连接，master都会启动一个后台进程调用`bgsave`（相对于`save`来说不会阻塞客户端），将数据库快照保存到文件中，同时master主进程会开始收集新的写命令并缓存起来。后台进程完成写文件 后，master就发送文件给slave，slave将文件保存到磁盘上，然后加载到内存恢复数据库快照到slave上。接着master就会把缓存的命令转发给slave。而且后续master收到的写命令都会通过开始建立的连接发送给slave。从master到slave的同步数据的命令和从 client发送的命令使用相同的协议格式。当master和slave的连接断开时slave可以自动重新建立连接。如果master同时收到多个 slave发来的同步连接命令，只会使用启动一个进程来写数据库镜像，然后发送给所有slave。
+
+
+
+
+
+## 14. Sentinel（哨兵）模式
+
+参考
+
+> - [Redis哨兵（Sentinel）模式 - 简书 (jianshu.com)](https://www.jianshu.com/p/06ab9daf921d)
+> - [(23条消息) Redis集群详解_变成习惯-CSDN博客_redis集群](https://blog.csdn.net/miss1181248983/article/details/90056960)
+
+
+
+主从模式的弊端就是不具备高可用性，当master挂掉以后，Redis将不能再对外提供写入操作，需要手动重新选举master，这就需要人工干预，费事费力，还会造成一段时间内服务不可用，因此sentinel应运而生。
+
+![哨兵模式](./images/Redis_theory_note/Sentinel_Mode.jpg)
+
+
+
+这里的哨兵有两个作用
+
+> - 通过发送命令，让Redis服务器返回监控其运行状态，包括主服务器和从服务器。
+> - 当哨兵监测到master宕机，会自动将slave切换成master，然后通过`发布订阅模式`通知其他的从服务器，修改配置文件，让它们切换主机。
+
+然而一个哨兵进程对Redis服务器进行监控，可能会出现问题，为此，我们可以使用多个哨兵进行监控。各个哨兵之间还会进行监控，这样就形成了多哨兵模式。
+
+用文字描述一下**故障切换（failover）**的过程。假设主服务器宕机，哨兵1先检测到这个结果，系统并不会马上进行failover过程，仅仅是哨兵1主观的认为主服务器不可用，这个现象成为**主观下线**。当后面的哨兵也检测到主服务器不可用，并且数量达到一定值时，那么哨兵之间就会进行一次投票，投票的结果由一个哨兵发起，进行failover操作。切换成功后，就会通过发布订阅模式，让各个哨兵把自己监控的从服务器实现切换主机，这个过程称为**客观下线**。这样对于客户端而言，一切都是透明的。
+
+
+
+
+
+![多哨兵模式](./images/Redis_theory_note/Multiple_sentinels.jpg)
+
+
+
+
+
+
+
+### 14.1 特点
+
+> - sentinel模式是建立在主从模式的基础上，如果只有一个Redis节点，sentinel就没有任何意义
+> - 当master挂了以后，sentinel会在slave中选择一个做为master，并修改它们的配置文件，其他slave的配置文件也会被修改，比如slaveof属性会指向新的master 
+> - 当master重新启动后，它将不再是master而是做为slave接收新的master的同步数据
+> - sentinel因为也是一个进程有挂掉的可能，所以sentinel也会启动多个形成一个sentinel集群
+> - 多sentinel配置的时候，sentinel之间也会自动监控
+> - 当主从模式配置密码时，sentinel也会同步将配置信息修改到配置文件中，不需要担心
+> - 一个sentinel或sentinel集群可以管理多个主从Redis，多个sentinel也可以监控同一个redis 
+> - sentinel最好不要和Redis部署在同一台机器，不然Redis的服务器挂了以后，sentinel也挂了
+
+
+
+
+
+### 14.2 工作机制
+
+当使用sentinel模式的时候，客户端就不要直接连接Redis，而是连接sentinel的`ip`和`port`，由sentinel来提供具体的可提供服务的Redis实现，这样当master节点挂掉以后，sentinel就会感知并将新的master节点提供给使用者。
+
+
+
+> * 每个sentinel以每秒钟一次的频率向它所知的master，slave以及其他sentinel实例发送一个 `PING` 命令 
+> * 如果一个实例距离最后一次有效回复 PING 命令的时间超过 `down-after-milliseconds` 选项所指定的值， 则这个实例会被sentinel标记为`主观下线`。 
+> * 如果一个master被标记为`主观下线`，则正在监视这个master的所有sentinel要以每秒一次的频率确认master的确进入了主观下线状态
+> * 当有足够数量的sentinel（大于等于配置文件指定的值）在指定的时间范围内确认master的确进入了主观下线状态， 则master会被标记为客观下线 
+> * 在一般情况下， 每个sentinel会以每 10 秒一次的频率向它已知的所有master，slave发送 INFO 命令 
+> * 当master被sentinel标记为客观下线时，sentinel向下线的master的所有slave发送 INFO 命令的频率会从 10 秒一次改为 1 秒一次 
+> * 若没有足够数量的sentinel同意master已经下线，master的客观下线状态就会被移除；
+> * 若master重新向sentinel的 PING 命令返回有效回复，master的主观下线状态就会被移除
 
 
 
@@ -900,7 +1039,8 @@ key可能会在某些时间点被超高并发地访问，是一种非常“热�
 
 
 
-## 13. 如何解决 Redis 的并发竞争 Key 问题
+
+## 15. 如何解决 Redis 的并发竞争 Key 问题
 
 参考
 
