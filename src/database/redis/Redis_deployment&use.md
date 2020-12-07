@@ -63,11 +63,12 @@ daemonize no
 
 已配置文件方式启动redis容器
 
-```shell
+```sh
 docker run -p 6379:6379 --name redisDemo 
 -v /usr/local/docker/redis/redis.conf:/etc/redis/redis.conf 
 -v /usr/local/docker/redis/data:/data 
--d redis redis-server /etc/redis/redis.conf
+-d redis 
+redis-server /etc/redis/redis.conf
 ```
 
 
@@ -77,6 +78,33 @@ docker run -p 6379:6379 --name redisDemo
 > - -p 6378:6379 ：容器redis 端口6379 映射 宿主机未6378
 > - --name redis01：容器 名字 为 redis01
 > - -v /root/redis/redis01/conf/redis.conf:/etc/redis/redis.conf ：容器 /etc/redis/redis.conf 配置文件 映射宿主机 /root/redis/redis01/conf/redis.conf。 会将宿主机的配置文件复制到docker中。
+> -  -d 后台启动
+> - -p 端口映射 6379是redis端口 26379是哨兵端口
+> - redis：镜像名称
+
+
+
+
+
+进入容器
+
+```shell
+docker exec -it redis-6379 /bin/bash
+```
+
+
+
+运行redis
+
+```shell
+redis-cli -p 6379
+```
+
+
+
+
+
+
 
 
 
@@ -2704,6 +2732,10 @@ slaveof no one
 
 ## 12. Redis集群配置-Sentinel（哨兵）模式
 
+参考
+
+> - https://www.cnblogs.com/kingyifan/p/11721422.html
+
 
 
 ### 12.1 创建`sentinel.conf`
@@ -2723,7 +2755,6 @@ sentinel down-after-milliseconds mymaster 30000
 sentinel parallel-syncs mymaster 1
 sentinel failover-timeout mymaster 15000
 sentinel auth-pass mymaster 123
-bind 192.168.250.132 127.0.0.1
 ```
 
 
