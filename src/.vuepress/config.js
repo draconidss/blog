@@ -151,7 +151,7 @@ module.exports = config({
           ],
         },
 
-        {
+/*        {
           title: "Spring",
           icon: "creative",
           prefix: "Spring/",
@@ -181,7 +181,7 @@ module.exports = config({
             }
 
           ],
-        },
+        },*/
 
         {
           title: "数据结构&算法",
