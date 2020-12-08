@@ -71,6 +71,11 @@ module.exports = config({
         icon: "note",
       },
       {
+        text: "学习笔记",
+        link: "/category/学习笔记/",
+        icon: "note",
+      },
+      {
         text: "时间线",
         link: "/timeline/",
         icon: "time",
@@ -141,6 +146,38 @@ module.exports = config({
               icon: "creative",
               prefix: "Hadoop/",
               children: ["Hadoop_pseudo-distributed_configuration"]
+            }
+
+          ],
+        },
+
+        {
+          title: "Spring",
+          icon: "creative",
+          prefix: "Spring/",
+          children: [
+            "", "Spring-bacisNote", "SpringMVC-annotation", "SpringMVC-basicNote",
+            {
+              title: "SpringBoot",
+              icon: "creative",
+              prefix: "SpringBoot/",
+              children: ["Devtools-HotDeployment", "EasyExcel-use", "IDEA-deploy-Run-Dashboard",
+                "IDEA-Initial-Springboot+reverse-project+Configuration", "Lombok-use", "Maven-scope",
+                "Server-deployment-SpringBoot", "Swagger-use"]
+            },
+
+            {
+              title: "Mybatis",
+              icon: "creative",
+              prefix: "Mybatis/",
+              children: ["Mybatis-basic-notes", "Mybatis-grammar-notes", "Mybatis-reverse-project&Example-use"]
+            },
+
+            {
+              title: "SpringCloud",
+              icon: "creative",
+              prefix: "SpringCloud/",
+              children: ["Know-SpringCloud"]
             }
 
           ],

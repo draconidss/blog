@@ -13,7 +13,7 @@ tag:
 
 你可以设置 `themeconfig.mdEnhance.enableAll` 启用 [md-enhance](https://vuepress-md-enhance.mrhope.site) 插件的所有功能。
 
-```js {3-5}
+```js {3-5} {6}
 module.exports = {
   themeConfig: {
     mdEnhance: {

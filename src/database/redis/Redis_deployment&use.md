@@ -41,7 +41,7 @@ tags:
 
 `redis.conf`中是否在后台开启的属性`daemonize`只能是`NO`，如果为`YES` 会的导致 redis 无法启动，因为后台会导致docker无任务可做而退出。
 
-```java
+```sh
 daemonize no
 ```
 
@@ -64,22 +64,17 @@ daemonize no
 已配置文件方式启动redis容器
 
 ```sh
-docker run -p 6379:6379 --name redisDemo 
--v /usr/local/docker/redis/redis.conf:/etc/redis/redis.conf 
--v /usr/local/docker/redis/data:/data 
--d redis 
-redis-server /etc/redis/redis.conf
+docker run -p 6379:6379 --name redis-6379 -v /usr/local/docker/redis/redis-6379.conf:/etc/redis/redis-6379.conf -v /usr/local/docker/redis/data:/data -d redis redis-server /etc/redis/redis-6379.conf
 ```
 
 
 
 说明
 
-> - -p 6378:6379 ：容器redis 端口6379 映射 宿主机未6378
+> - -p 6378:6379 ：`docker端口:本机端口`，意思为将容器内6379端口映射到本机器的6379端口
 > - --name redis01：容器 名字 为 redis01
-> - -v /root/redis/redis01/conf/redis.conf:/etc/redis/redis.conf ：容器 /etc/redis/redis.conf 配置文件 映射宿主机 /root/redis/redis01/conf/redis.conf。 会将宿主机的配置文件复制到docker中。
+> - -v 映射指向，将本机/data/中`/data/docker_data/redis/conf/redis.conf`映射到容器中`/usr/local/etc/redis/redis.conf`文件，修改本机该文件即可同步如容器中的指定文件，这里避免了每次进入容器修改文件的繁琐操作
 > -  -d 后台启动
-> - -p 端口映射 6379是redis端口 26379是哨兵端口
 > - redis：镜像名称
 
 
@@ -88,7 +83,7 @@ redis-server /etc/redis/redis.conf
 
 进入容器
 
-```shell
+```sh
 docker exec -it redis-6379 /bin/bash
 ```
 
@@ -96,7 +91,7 @@ docker exec -it redis-6379 /bin/bash
 
 运行redis
 
-```shell
+```sh
 redis-cli -p 6379
 ```
 
@@ -2475,7 +2470,7 @@ Redis 客户端可以订阅任意数量的频道。
 
 ### 订阅端
 
-```shell
+```sh
 #订阅一个频道
 127.0.0.1:6379> subscribe channelDemo
 Reading messages... (press Ctrl-C to quit)
@@ -2493,7 +2488,7 @@ Reading messages... (press Ctrl-C to quit)
 
 ### 发送端
 
-```shell
+```sh
 127.0.0.1:6379> publish channelDemo message1
 (integer) 1
 ```
@@ -2518,7 +2513,7 @@ Reading messages... (press Ctrl-C to quit)
 
 ### 11.1 查看当前库信息
 
-```shell
+```sh
 127.0.0.1:6379> info replication
 # Replication
 
@@ -2546,7 +2541,7 @@ repl_backlog_histlen:0
 
 这里以docker创建不同的容器来运行不同的`redis.conf`为例，`redis.conf`文件名称不能一样，主要修改以下几项（这里默认不开启`appendonly`，所以不需要修改生成的`appendonly`文件名）
 
-```shell
+```sh
 #端口号
 port 6380
 
@@ -2573,7 +2568,7 @@ replicaof 127.0.0.1 6379
 
 也可以通过`salveof`命令让当前redis实例成为某个redis实例的slave
 
-```shell
+```sh
 slaveof 127.0.0.1 6379
 ```
 
@@ -2587,7 +2582,7 @@ slaveof 127.0.0.1 6379
 
 启动`master`
 
-```shell
+```sh
 docker run -p 6379:6379 --name redis-6379 -v /usr/local/docker/redis/redis-6379.conf:/etc/redis/redis-6379.conf -v /usr/local/docker/redis/data/redis-6379:/data/redis-6379 -d redis redis-server /etc/redis/redis-6379.conf
 ```
 
@@ -2595,7 +2590,7 @@ docker run -p 6379:6379 --name redis-6379 -v /usr/local/docker/redis/redis-6379.
 
 启动`slave-1`
 
-```shell
+```sh
 docker run -p 6380:6380 --name redis-6380 -v /usr/local/docker/redis/redis-6380.conf:/etc/redis/redis-6380.conf -v /usr/local/docker/redis/data/redis-6380:/data/redis-6380 -d redis redis-server /etc/redis/redis-6380.conf
 ```
 
@@ -2603,7 +2598,7 @@ docker run -p 6380:6380 --name redis-6380 -v /usr/local/docker/redis/redis-6380.
 
 启动`slave-2`
 
-```shell
+```sh
 docker run -p 6381:6381 --name redis-6381 -v /usr/local/docker/redis/redis-6381.conf:/etc/redis/redis-6381.conf -v /usr/local/docker/redis/data/redis-6381:/data/redis-6381 -d redis redis-server /etc/redis/redis-6381.conf
 ```
 
@@ -2611,7 +2606,7 @@ docker run -p 6381:6381 --name redis-6381 -v /usr/local/docker/redis/redis-6381.
 
 启动后在`master`中再次调用`info replication`如下
 
-```shell
+```sh
 127.0.0.1:6379> info replication
 # Replication
 role:master
@@ -2632,7 +2627,7 @@ repl_backlog_histlen:3374
 
 在`slave-1`中如下
 
-```shell
+```sh
 127.0.0.1:6380> info replication
 # Replication
 role:slave
@@ -2659,7 +2654,7 @@ repl_backlog_histlen:5008
 
 在`slave-2`中如下
 
-```shell
+```sh
 127.0.0.1:6381> info replication
 # Replication
 role:slave
@@ -2692,7 +2687,7 @@ repl_backlog_histlen:4308
 
 当`slave`写的时候提示只能读
 
-```shell
+```sh
 127.0.0.1:6380> set k1 v1
 (error) READONLY You can't write against a read only replica.
 127.0.0.1:6380> 
@@ -2718,7 +2713,7 @@ repl_backlog_histlen:4308
 
 如果`master`宕机想要重新推举出新的master，或者说想让`slave`脱离`master`，可以通过以下命令
 
-```shell
+```sh
 slaveof no one
 ```
 
@@ -2744,7 +2739,7 @@ slaveof no one
 
 `sentinel.conf`
 
-```shell
+```sh
 # 哨兵提供对外的端口号
 port 26379
 daemonize no
@@ -2761,7 +2756,7 @@ sentinel auth-pass mymaster 123
 
 详解
 
-```shell
+```sh
 # 告诉sentinel去监听地址为ip:port的一个master，这里的master-name可以自定义，quorum是一个数字，
 # 指明当有多少个sentinel认为一个master失效时，master才算真正失效，即客观下线
 sentinel monitor <master-name> <ip> <redis-port> <quorum>
