@@ -174,7 +174,7 @@ tags:
 ### [整体架构](http://www.macrozheng.com/#/cloud/springcloud?id=整体架构)
 
 
-![Springcloud整体架构](./images/Know-SpringCloud/springcloud_Architecture.png)
+![Springcloud整体架构](./images/Know-SpringCloud/springcloud_architecture.png)
 
 
 ### [SpringCloud的版本关系](http://www.macrozheng.com/#/cloud/springcloud?id=springcloud的版本关系)
