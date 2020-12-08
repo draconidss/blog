@@ -168,7 +168,7 @@ ArrayList
 
    > 添加一个元素
 
-2. **boolean addAll(Collection<? extends E> c)**
+2. **boolean addAll(Collection\<? extends E\> c)**
 
    > 将集合中的所有元素添加到其他集合中
 
@@ -242,7 +242,7 @@ System.out.println(map);//{DEMO1=1, DEMO2=2,DEMO3=12222}
 
 
 
-### Map<K , V> putAll(Map<? extends K, ? extends V> m)
+### Map\<K , V\> putAll(Map\<? extends K, ? extends V\> m)
 
 putAll可以合并两个相同类型的Map，被合并的类型必须是相等或继承的类型，只不过如果有相同的key那么用被合并的覆盖前面的
 
@@ -272,7 +272,7 @@ System.out.println(map3);
 
 
 
-### Map<K , V> clone()
+### Map\<K , V\> clone()
 
 克隆map
 
@@ -358,13 +358,13 @@ System.out.println(map3.replace("1" , "s" , "b"));//false,key相同，value不�
 
 
 
-### Collection<V> values()
+### Collection\<V\> values()
 
 获取map中所有的key并返回为`Collection<V>`类型
 
 
 
-### Set<V> keySet()
+### Set\<V\> keySet()
 
 获取map中所有的key并返回`Set<V>`类型，因为Set的元素是独一无二之的，之后可以用迭代器`iterator()`遍历
 
@@ -377,7 +377,7 @@ while (ot.hasNext()){
 
 
 
-### Set<Map.Entry<K,V>> entrySet()
+### Set\<Map.Entry\<K,V\>\> entrySet()
 
 返回所有结点，类型为`Set<Map.Entry<K,V>>`。也可以转换为迭代器`iterator()`遍历
 

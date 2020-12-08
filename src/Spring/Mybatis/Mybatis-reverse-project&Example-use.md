@@ -19,7 +19,7 @@ tags:
 
 
 
-# 1. 参考
+## 1. 参考
 
 > - http://mybatis.org/generator/index.html
 > - https://blog.csdn.net/for_my_life/article/details/51228098?utm_medium=distribute.pc_relevant.none-task-blog-title-1&spm=1001.2101.3001.4242
@@ -29,7 +29,7 @@ tags:
 
 
 
-# 2. Demo
+## 2. Demo
 
 
 
@@ -41,7 +41,7 @@ tags:
 
 
 
-# 3. 配置`pom.xml`
+## 3. 配置`pom.xml`
 
 
 
@@ -93,7 +93,7 @@ tags:
 
 
 
-# 4. 配置`mybatisGenerator.xml`
+## 4. 配置`mybatisGenerator.xml`
 
 
 
@@ -180,7 +180,7 @@ tags:
 
 
 
-# 5. 配置Run mybatis-generator
+## 5. 配置Run mybatis-generator
 
 
 
@@ -221,7 +221,7 @@ mybatis-generator:generate
 
 
 
-# 6. Example类的使用
+## 6. Example类的使用
 
 
 
@@ -233,7 +233,7 @@ mybatis-generator:generate
 
 
 
-## mapper接口中方法
+### 6.1 mapper接口中方法
 
 
 
@@ -253,7 +253,7 @@ mybatis-generator:generate
 
 
 
-## example实例解析
+### 6.2 example实例解析
 
 | 方法                                       | 说明                                          |
 | :----------------------------------------- | :-------------------------------------------- |
