@@ -206,7 +206,8 @@ AOP(Aspect-Oriented Programming):⾯向切⾯编程)能够将那些与业务⽆�
 
 ::: tip 参考
 
-
+- https://www.cnblogs.com/joy99/p/10941543.html
+- [SpringAOP详细配置与使用](https://blog.csdn.net/u010890358/article/details/80640433)
 
 
 
@@ -238,6 +239,8 @@ Spring AOP 已经集成了 AspectJ ，AspectJ 应该算的上是 Java ⽣态系�
 
 - https://www.awaimai.com/2596.html
 - https://blog.csdn.net/qq_39411208/article/details/88395875
+- [Spring IOC中Bean的作⽤域与⽣命周期](https://blog.csdn.net/qq_43709204/article/details/109991097)
+- https://blog.csdn.net/kongmin_123/article/details/82048392
 
 
 
@@ -257,20 +260,239 @@ Spring 官方文档对 bean 的解释是：
 
 
 
-### 5.1 Spring 中的 bean 的作⽤域有哪些?
+### 5.1 Spring中五种作用域?
 
 
 
-::: info Spring 中的 bean 的作⽤域有哪些?
+::: info Spring中的bean的作⽤域有哪些?
 
 
 
-- ==singleton== : 唯⼀ bean 实例，Spring 中的 bean 默认都是单例的。 
-- ==prototype== : 每次请求都会创建⼀个新的 bean 实例。 
-- ==request== : 每⼀次HTTP请求都会产⽣⼀个新的bean，该bean仅在当前HTTP request内有效。 
-- ==session== : 每⼀次HTTP请求都会产⽣⼀个新的 bean，该bean仅在当前 HTTP session 内有效。 
-- ==global-session==： 全局session作⽤域，仅仅在基于portlet的web应⽤中才有意义，Spring5已 经没有了。Portlet是能够⽣成语义代码(例如：HTML)⽚段的⼩型Java Web插件。它们基于 portlet容器，可以像servlet⼀样处理HTTP请求。但是，与 servlet 不同，每个 portlet 都有 不同的会话
 
 
+| 作用域      | 描述                                                         |
+| ----------- | ------------------------------------------------------------ |
+| singleton   | 在spring IoC容器仅存在一个Bean实例，Bean以单例方式存在，bean作用域范围的`默认值`。 |
+| prototype   | 每次从容器中调用Bean时，都返回一个新的实例，即每次调用getBean()时，相当于执行newXxxBean()。 |
+| request     | 每次HTTP请求都会创建一个新的Bean，该作用域仅适用于web的Spring WebApplicationContext环境。 |
+| session     | 同一个HTTP Session共享一个Bean，不同Session使用不同的Bean。该作用域仅适用于web的Spring WebApplicationContext环境。 |
+| application | 限定一个Bean的作用域为`ServletContext`的生命周期。该作用域仅适用于web的Spring WebApplicationContext环境。 |
+
+
+
+:::
+
+
+
+#### 5.1.1 singleton 作⽤域
+
+
+
+![singleton 作⽤域](./images/Spring-bacisNote/singleton_scope.png)
+
+
+
+
+
+::: warning 关于lazy-init
+
+
+
+lazy-init是懒加载, 如果等于true时作⽤是指Spring容器启动的时候不会去实例化这个bean,⽽是在程序调⽤时才去实例化. 默认是false即Spring容器启动时实例化.
+
+
+
+:::
+
+
+
+实例
+
+
+
+创建一个bean:
+
+::: info SingletonBean.java
+
+```java
+package com.spring.demo;
+public class  SingletonBean{
+   private String message;
+   public void setMessage(String message){
+      this.message  = message;
+   }
+   public void getMessage(){
+      System.out.println("Your Message : " + message);
+   }
+}
+```
+
+:::
+
+
+
+在Spring的配置文件中配置该bean:
+
+::: info Bean.xml
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+    <bean id="SingletonBean" class="com.spring.demo.SingletonBean" scope="singleton"></bean>
+    <!-- 或者 -->
+    <!--  <bean id="SingletonBean" class="com.spring.demo.SingletonBean" ></bean> -->
+</beans>
+```
+
+:::
+
+
+
+测试该Bean是否为单例的:
+
+::: info TestBean.java
+
+```java
+package com.spring.demo;
+ 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.junit.Test;
+ 
+public class TestBean {
+ 
+    @Test
+    public void textUser()
+    {
+        //1.获取spring文件
+        ApplicationContext context = new ClassPathXmlApplicationContext("Bean.xml");
+        //2.由配置文件返回对象
+        SingletonBean singletonBeanA = (SingletonBean)context.getBean("SingletonBean");
+        singletonBeanA.setMessage("I'm object A");
+        singletonBeanA.getMessage();
+        SingletonBean singletonBeanB = (SingletonBean)context.getBean("SingletonBean");
+        singletonBeanB.getMessage();
+    }
+}
+ 
+```
+
+:::
+
+
+
+运行结果:
+
+::: info 运行结果
+
+
+
+![singleton运行结果](./images/Spring-bacisNote/Singleton_result.png)
+
+
+
+:::
+
+
+
+`lazy-init`设置为`false`的好处
+
+::: info 好处
+
+可以提前发现潜在的配置问题
+
+Bean 对象存在于缓存中，使⽤时不⽤再去实例化bean，加快程序运⾏效率
+
+:::
+
+
+
+适合作为单例的对象
+
+::: info 适合作为单例的对象
+
+
+
+就是作为适合创建bean例的类，⼀般来说对于⽆状态或状态不可改变的对象适合使⽤单例模式。（不存在会改变对象状态的成员变量）
+
+比如：user类定义的是各种属性，但有的时候我们需要的只是user属性的一小部分，所以user就不适合作为单例，而controller层、service层、dao层里面的类似固定的操作固定的属性，不会发生什么变动，所以适合作为单例。
+
+
+
+:::
+
+
+
+
+
+#### 5.1.2 prototype 作⽤域
+
+
+
+![singleton 作⽤域](./images/Spring-bacisNote/prototype_scope.png)
+
+当一个bean的作用域为`prototype`，表示一个bean定义对应多个对象实例。声明为prototype作用域的bean会导致在每次对该bean请求（将其注入到另一个bean中，或者以程序的方式调用容器的getBean()方法）时都会创建一个新的bean实例。prototype是原型类型，它在我们创建容器的时候并没有实例化，而是当我们获取bean的时候才会去创建一个对象，而且我们每次获取到的对象都不是同一个对象。
+
+根据经验，对`有状态的bean`应该使用`prototype`作用域，而对`无状态的bean`则应该使用`singleton`作用域。
+
+
+
+
+
+#### 5.1.3 request 请求作用域
+
+Spring容器会在每次用到`loginAction`来处理每个HTTP请求的时候都会创建一个新的`LoginAction`实例。也就是说，`loginAction`Bean的作用域是HTTP `Request`级别的。
+
+当http请求调用作用域为request的bean的时候，每增加一个HTTP请求，Spring就会创建一个新的bean，在请求处理完成之后便及时销毁这个bean。开发者可以随意改变实例的状态，因为通过`loginAction`请求来创建的其他实例根本看不到开发者改变的实例状态，所有创建的Bean实例都是根据独立的请求来的。
+
+
+
+
+
+#### 5.1.4 session 会话作用域
+
+Spring容器会在每次调用到`userPreferences时，`在一个单独的HTTP会话周期来创建一个新的`UserPreferences`实例。换言之`userPreferences`Bean的作用域是HTTP `Session`级别的。
+
+Session中所有http请求共享同一个请求的bean实例。Session结束后就销毁bean。 在`request-scoped`作用域的Bean上，开发者可以随意的更改实例的状态。同样，使用从同一个userPreferences bean定义创建的其他HTTP Session实例在看不到不是自己的内部状态的修改，因为他们是单个的HTTP会话。每个Session请求都会创建新的`userPreferences`实例，所以开发者更改一个Bean的状态，对于其他的Bean仍然是不可见的。
+
+
+
+
+
+#### 5.1.5 application 全局作用域
+
+Spring容器会在整个web应用范围使用到`appPreferences`的时候创建一个新的`AppPreferences`的实例。也就是说，`appPreferences`Bean是在`ServletContext`级别的，作为常规的ServletContext属性。这种作用域在一些程度上来说和Spring的单例作用域相似，但是也有如下不同之处：
+
+
+
+- `application`作用域是每个`ServletContext`中包含一个，而不是每个Spring`ApplicationContext`之中包含一个（某些应用中可能包含不止一个`ApplicationContext`）。
+- `application`作用域仅仅作为`ServletContext`的属性可见，单例Bean是`ApplicationContext`可见。
+
+
+
+接下来再来简单的学习下在Spring当中如何自定义作用域：
+
+在Spring 2.0中，Spring的Bean作用域机制是可以扩展的，这意味着，你不仅可以使用Spring提供的预定义Bean作用域，还可以定义自己的作用域，甚至重新定义现有的作用域（不提倡这么做，而且你不能覆盖内置的singleton和prototype作用域）
+
+
+
+
+
+### 5.3 Spring 中的单例 bean 的线程安全问题了解吗？
+
+大部分时候我们并没有在系统中使用多线程，所以很少有人会关注这个问题。
+
+单例 bean 存在线程问题，主要是因为当多个线程操作同一个对象的时候，对这个对象的非静态成员变量的写操作会存在线程安全问题。
+
+常见的有两种解决办法：
+
+::: info 常见的有两种解决办法
+
+1. 在Bean对象中尽量避免定义可变的成员变量（不太现实）。
+2. 在类中定义一个`ThreadLocal`成员变量，将需要的可变成员变量保存在 `ThreadLocal` 中（推荐的一种方式）。
 
 :::

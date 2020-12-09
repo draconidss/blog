@@ -20,7 +20,7 @@ tags:
 
 
 
-# 参考
+## 参考
 
 > - [Java 并发和多线程教程-雅各布博客](http://tutorials.jenkov.com/java-concurrency/index.html)
 
@@ -28,7 +28,7 @@ tags:
 
 
 
-#  1. 线程、程序、进程的基本概念
+##  1. 线程、程序、进程的基本概念
 
 ![线程、程序、进程](./images/Java-Multithreading/Thread,_program,_process.png)
 
@@ -36,7 +36,7 @@ tags:
 
 
 
-# 2. 使⽤多线程可能带来什么问题?
+## 2. 使⽤多线程可能带来什么问题?
 
 并发编程的⽬的就是为了能提⾼程序的执⾏效率提⾼程序运⾏速度，但是并发编程并不总是能提⾼程序 运⾏速度的，⽽且并发编程可能会遇到很多问题，⽐如：**内存泄漏、上下⽂切换、死锁还有受限于硬件 和软件的资源闲置问题**。
 
@@ -44,7 +44,7 @@ tags:
 
 
 
-# 3. Java多线程的四种实现方式&启动原理
+## 3. Java多线程的四种实现方式&启动原理
 
 参考
 
@@ -71,7 +71,7 @@ tags:
 - 实现**Callable**接口通过**FutureTask**包装器来创建Thread线程，调用Thread为
 - 线程池，使用**ExecutorService**、Callable、Future实现有返回结果的多线程
 
-## 3.1 线程启动原理
+### 3.1 线程启动原理
 
 
 
@@ -86,7 +86,7 @@ Java多线程，皆始于Thread。Thread是多线程的根，每一个线程的�
 
 
 
-### 3.1.1 start()方法源码
+#### 3.1.1 start()方法源码
 
 ```java
  /**
@@ -168,7 +168,7 @@ Java多线程，皆始于Thread。Thread是多线程的根，每一个线程的�
 
 
 
-### 3.1.2 run()方法源码
+#### 3.1.2 run()方法源码
 
 ```java
 /**
@@ -197,7 +197,7 @@ run方法就很简单了，就是回调了Runable的run()接口。导致Thread�
 
 
 
-### 3.1.3 为什么我们调⽤ start() ⽅法时会执⾏ run() ⽅法，为什么我们不能直接调⽤ run() ⽅法？
+### 3.2 为什么我们调⽤ start() ⽅法时会执⾏ run() ⽅法，为什么我们不能直接调⽤ run() ⽅法？
 
 new ⼀个 Thread，线程进⼊了新建状态;调⽤ start() ⽅法，会启动⼀个线程并使线程进⼊了就绪状 态，当分配到时间⽚后就可以开始运⾏了。 start() 会执⾏线程的相应准备⼯作，然后⾃动执⾏ run() ⽅法的内容，这是真正的多线程⼯作。 ⽽直接执⾏ run() ⽅法，会把 run ⽅法当成⼀个 main 主线程下的普通⽅法去执⾏，并不会在某个线程中执⾏它，所以这并不是多线程⼯作。 总结： 调⽤ start ⽅法⽅可启动线程并使线程进⼊就绪状态，⽽ run ⽅法只是 thread 的⼀个普通 ⽅法调⽤，还是在主线程⾥执⾏。
 
@@ -205,7 +205,7 @@ new ⼀个 Thread，线程进⼊了新建状态;调⽤ start() ⽅法，会启�
 
 
 
-## 3.2 继承Thread类创建线程
+### 3.3 继承Thread类创建线程
 
 ​	Thread类本质上是实现了Runnable接口的一个实例，代表一个线程的实例。启动线程的唯一方法就是通过Thread类的start()实例方法。start()方法是一个native方法，它将启动一个新线程，并执行run()方法。这种方式实现多线程很简单，通过自己的类直接extend Thread，并复写run()方法，就可以启动新线程并执行自己定义的run()方法。例如：
 
@@ -232,7 +232,7 @@ myThread2.start();
 
 
 
-## 3.3 实现Runnable接口
+### 3.4 实现Runnable接口
 
 实现run方法，接口的实现类的实例作为**Thread**的**target**作为参数传入带参的**Thread**构造函数，通过调用**start()**方法启动线程。适用于已经有继承的父类无法继承Thread类的时候
 
@@ -257,7 +257,7 @@ class MyThread implements Runnable{
 
 
 
-## 3.4 实现Callable接口通过FutureTask包装器来创建Thread线程
+### 3.5 实现Callable接口通过FutureTask包装器来创建Thread线程
 
 - 创建Callable接口的实现类 ，并实现Call方法 
 - 创建Callable实现类的实现，使用FutureTask类包装Callable对象，该FutureTask对象封装了Callable对象的Call方法的返回值 
@@ -292,7 +292,7 @@ public class DemoCallable implements Callable<String>{
 
 
 
-## 3.5 通过线程池创建线程
+### 3.6 通过线程池创建线程
 
 ExecutorService、Callable都是属于Executor框架。返回结果的线程是在JDK1.5中引入的新特征，还有Future接口也是属于这个框架，有了这种特征得到返回值就很方便了。 
 通过分析可以知道，他同样也是实现了Callable接口，实现了Call方法，所以有返回值。这也就是正好符合了前面所说的两种分类
@@ -341,7 +341,7 @@ class RunnableThread implements Runnable
 
 
 
-# 4. 线程的⽣命周期和状态?
+## 4. 线程的⽣命周期和状态?
 
 Java 线程在运⾏的⽣命周期中的指定时刻只可能处于下⾯ 6 种不同状态的其中⼀个状态（图源《Java 并发编程艺术》4.1.4 节）。
 
@@ -365,7 +365,7 @@ Java 线程在运⾏的⽣命周期中的指定时刻只可能处于下⾯ 6 种
 
 
 
-# 5. 什么是上下⽂切换?
+## 5. 什么是上下⽂切换?
 
 
 
@@ -378,7 +378,7 @@ Java 线程在运⾏的⽣命周期中的指定时刻只可能处于下⾯ 6 种
 
 
 
-# 6. 什么是线程死锁?如何避免死锁?
+## 6. 什么是线程死锁?如何避免死锁?
 
 
 
@@ -386,7 +386,7 @@ Java 线程在运⾏的⽣命周期中的指定时刻只可能处于下⾯ 6 种
 
 
 
-## 6.1 产⽣死锁必须具备以下四个条件
+### 6.1 产⽣死锁必须具备以下四个条件
 
 
 
@@ -397,7 +397,7 @@ Java 线程在运⾏的⽣命周期中的指定时刻只可能处于下⾯ 6 种
 
 
 
-## 6.2 如何避免线程死锁?
+### 6.2 如何避免线程死锁?
 
 只要破坏产⽣死锁的四个条件中的其中⼀个就可以了
 
@@ -412,7 +412,7 @@ Java 线程在运⾏的⽣命周期中的指定时刻只可能处于下⾯ 6 种
 
 
 
-# 7. 说说 sleep() ⽅法和 wait() ⽅法区别和共同点?
+## 7. 说说 sleep() ⽅法和 wait() ⽅法区别和共同点?
 
 
 
@@ -422,7 +422,7 @@ Java 线程在运⾏的⽣命周期中的指定时刻只可能处于下⾯ 6 种
 
 
 
-## 7.1 详细
+### 7.1 详细
 
 1. 原理不同，**sleep（）方法是Thread类的静态方法**，是线程用来控制自身流程的，它会使此线程暂停执行一段时间，而把执行机会让给其他线程，等到计时时间一到，此线程会自动“苏醒”。例如，当线程执行报时功能时，每一秒钟打印一个时间，那么此时就需要在打印方法前面加上一个Sleep()方法，以便让自己每隔1s执行一次，该过程如同闹钟一样，**而wait（）方法是object类的方法，用于线程间的通信**，这个方法会使当前拥有该对象锁的进程等待，直到其它线程调用notify()方法（或notifyALL方法）时才“醒过来”，不过，开发人员也可以给它指定一个时间，自动“醒”过来。与wait()方法配套的方法还有notify（）方法和notifyALL()方法。
 2. 对锁的处理机制不同，由于sleep（）方法的主要作用是让线程暂停执行一段时间，时间一到则自动恢复，不涉及线程间的通信，因此，调用sleep（）方法并不会释放锁， 而wait()方法则不同，当调用wan()方法后，线程会释放掉它所占用的锁，从而使线程所在对象中的其他synchronized数据可被别的线程使用。举个简单的例子，如果小明拿遥控器的期间，可以用自己的sleep()方法每隔10min调一次频道，而在这10min里，遥控器还在他的手里。
@@ -432,13 +432,7 @@ Java 线程在运⾏的⽣命周期中的指定时刻只可能处于下⾯ 6 种
 
 
 
-
-
-# 
-
-
-
-​		new ⼀个 Thread，线程进⼊了新建状态;调⽤ start() ⽅法，会启动⼀个线程并使线程进⼊了就绪状 态，当分配到时间⽚后就可以开始运⾏了。 start() 会执⾏线程的相应准备⼯作，然后⾃动执⾏ run() ⽅法的内容，这是真正的多线程⼯作。 ⽽直接执⾏ run() ⽅法，会把 run ⽅法当成⼀个 main 线程下的普通⽅法去执⾏，并不会在某个线程中执⾏它，所以这并不是多线程⼯作。 总结： 调⽤ start ⽅法⽅可启动线程并使线程进⼊就绪状态，⽽ run ⽅法只是 thread 的⼀个普通 ⽅法调⽤，还是在主线程⾥执⾏。
+new ⼀个 Thread，线程进⼊了新建状态;调⽤ start() ⽅法，会启动⼀个线程并使线程进⼊了就绪状 态，当分配到时间⽚后就可以开始运⾏了。 start() 会执⾏线程的相应准备⼯作，然后⾃动执⾏ run() ⽅法的内容，这是真正的多线程⼯作。 ⽽直接执⾏ run() ⽅法，会把 run ⽅法当成⼀个 main 线程下的普通⽅法去执⾏，并不会在某个线程中执⾏它，所以这并不是多线程⼯作。 总结： 调⽤ start ⽅法⽅可启动线程并使线程进⼊就绪状态，⽽ run ⽅法只是 thread 的⼀个普通 ⽅法调⽤，还是在主线程⾥执⾏。
 
 
 
@@ -450,13 +444,13 @@ Java 线程在运⾏的⽣命周期中的指定时刻只可能处于下⾯ 6 种
 
 
 
-# 9. synchronized 关键字
+## 9. synchronized 关键字
 
 ​		synchronized关键字解决的是多个线程之间访问资源的同步性，synchronized关键字可以保证被它修饰 的⽅法或者代码块在任意时刻只能有⼀个线程执⾏。另外，在 Java 早期版本中，synchronized属于重量级锁，效率低下，**因为监视器锁（monitor）是依 赖于底层的操作系统的 Mutex Lock 来实现的，Java 的线程是映射到操作系统的原⽣线程之上的**。如 果要挂起或者唤醒⼀个线程，都需要操作系统帮忙完成，⽽操作系统实现线程之间的切换时需要从⽤户 态转换到内核态，这个状态之间的转换需要相对⽐较⻓的时间，时间成本相对较⾼，这也是为什么早期 的 synchronized 效率低的原因。庆幸的是在 Java 6 之后 Java 官⽅对从 JVM 层⾯对synchronized 较⼤优化，所以现在的 synchronized 锁效率也优化得很不错了。JDK1.6对锁的实现引⼊了⼤量的优化，如**⾃旋锁、适应性⾃旋锁、锁消除、锁粗化、偏向锁、轻量级锁**等技术来减少锁操作的开销。
 
 
 
-## 9.1 三种使用方式
+### 9.1 三种使用方式
 
 - **修饰实例方法，**作用于当前对象实例加锁，进入同步代码前要获得当前对象实例的锁
 - **修饰静态方法，**作用于当前类对象加锁，进入同步代码前要获得当前类对象的锁 。也就是给当前类加锁，会作
@@ -472,11 +466,11 @@ Java 线程在运⾏的⽣命周期中的指定时刻只可能处于下⾯ 6 种
 
 
 
-## 9.2 synchronized底层实现
+### 9.2 synchronized底层实现
 
 
 
-### 9.2.1 synchronized 同步语句块的情况
+#### 9.2.1 synchronized 同步语句块的情况
 
 ```java
 public class SynchronizedDemo {
@@ -498,7 +492,7 @@ public class SynchronizedDemo {
 
 
 
-### 9.2.2 synchronized 修饰⽅法的的情况
+#### 9.2.2 synchronized 修饰⽅法的的情况
 
 ```java
 public class SynchronizedDemo2 {
@@ -520,7 +514,7 @@ public class SynchronizedDemo2 {
 
 
 
-## 9.3 说说 JDK1.6 之后的synchronized 关键字底层做了哪些优化，可以详细介绍⼀下这些优化吗
+### 9.3 说说 JDK1.6 之后的synchronized 关键字底层做了哪些优化，可以详细介绍⼀下这些优化吗
 
 参考
 
@@ -541,7 +535,7 @@ public class SynchronizedDemo2 {
 
 
 
-### ①偏向锁
+#### ①偏向锁
 
 **引入偏向锁的目的和引入轻量级锁的目的很像，他们都是为了没有多线程竞争的前提下，减少传统的重量级锁使用操作系统互斥量产生的性能消耗。但是不同是：轻量级锁在无竞争的情况下使用 CAS 操作去代替使用互斥量。而偏向锁在无竞争的情况下会把整个同步都消除掉**。
 
@@ -551,7 +545,7 @@ public class SynchronizedDemo2 {
 
 
 
-### ② 轻量级锁
+#### ② 轻量级锁
 
 倘若偏向锁失败，虚拟机并不会立即升级为重量级锁，它还会尝试使用一种称为轻量级锁的优化手段(1.6之后加入的)。**轻量级锁不是为了代替重量级锁，它的本意是在没有多线程竞争的前提下，减少传统的重量级锁使用操作系统互斥量产生的性能消耗，因为使用轻量级锁时，不需要申请互斥量。另外，轻量级锁的加锁和解锁都用到了CAS操作。** 关于轻量级锁的加锁和解锁的原理可以查看《深入理解Java虚拟机：JVM高级特性与最佳实践》第二版的13章第三节锁优化。
 
@@ -559,7 +553,7 @@ public class SynchronizedDemo2 {
 
 
 
-### ③ 自旋锁和自适应自旋
+#### ③ 自旋锁和自适应自旋
 
 轻量级锁失败后，虚拟机为了避免线程真实地在操作系统层面挂起，还会进行一项称为自旋锁的优化手段。
 
@@ -577,13 +571,13 @@ public class SynchronizedDemo2 {
 
 
 
-### ④ 锁消除
+#### ④ 锁消除
 
 锁消除理解起来很简单，它指的就是虚拟机即使编译器在运行时，如果检测到那些共享数据不可能存在竞争，那么就执行锁消除。锁消除可以节省毫无意义的请求锁的时间。
 
 
 
-### ⑤ 锁粗化
+#### ⑤ 锁粗化
 
 原则上，我们在编写代码的时候，总是推荐将同步块的作用范围限制得尽量小，——直在共享数据的实际作用域才进行同步，这样是为了使得需要同步的操作数量尽可能变小，如果存在锁竞争，那等待线程也能尽快拿到锁。
 
@@ -591,23 +585,23 @@ public class SynchronizedDemo2 {
 
 
 
-## 9.4 Synchronized 和 ReenTrantLock 的对比
+### 9.4 Synchronized 和 ReenTrantLock 的对比
 
 
 
-### ① 两者都是可重入锁
+#### ① 两者都是可重入锁
 
 两者都是可重入锁。“可重入锁”概念是：自己可以再次获取自己的内部锁。比如一个线程获得了某个对象的锁，此时这个对象锁还没有释放，当其再次想要获取这个对象的锁的时候还是可以获取的，如果不可锁重入的话，就会造成死锁。同一个线程每次获取锁，锁的计数器都自增1，所以要等到锁的计数器下降为0时才能释放锁。
 
 
 
-### ② synchronized 依赖于 JVM 而 ReenTrantLock 依赖于 API
+#### ② synchronized 依赖于 JVM 而 ReenTrantLock 依赖于 API
 
 synchronized 是依赖于 JVM 实现的，前面我们也讲到了 虚拟机团队在 JDK1.6 为 synchronized 关键字进行了很多优化，但是这些优化都是在虚拟机层面实现的，并没有直接暴露给我们。ReenTrantLock 是 JDK 层面实现的（也就是 API 层面，需要 lock() 和 unlock 方法配合 try/finally 语句块来完成），所以我们可以通过查看它的源代码，来看它是如何实现的。
 
 
 
-### ③ ReenTrantLock 比 synchronized 增加了一些高级功能
+#### ③ ReenTrantLock 比 synchronized 增加了一些高级功能
 
 相比synchronized，ReenTrantLock增加了一些高级功能。主要来说主要有三点：
 
@@ -616,6 +610,8 @@ synchronized 是依赖于 JVM 实现的，前面我们也讲到了 虚拟机团�
 > 3. 可实现选择性通知（锁可以绑定多个条件）
 
 
+
+::: info ReenTrantLock 比 synchronized 增加了一些高级功能
 
 
 
@@ -629,13 +625,19 @@ synchronized 是依赖于 JVM 实现的，前面我们也讲到了 虚拟机团�
 
 
 
-### ④ 性能已不是选择标准
+:::
+
+
+
+#### ④ 性能已不是选择标准
 
 ​		在JDK1.6之前，synchronized 的性能是比 ReenTrantLock 差很多。**具体表示为：synchronized 关键字吞吐量随线程数的增加，下降得非常严重。而ReenTrantLock 基本保持一个比较稳定的水平**。我觉得这也侧面反映了， synchronized 关键字还有非常大的优化余地。后续的技术发展也证明了这一点，我们上面也讲了在 JDK1.6 之后 JVM 团队对 synchronized 关键字做了很多优化。**JDK1.6 之后，synchronized 和 ReenTrantLock 的性能基本是持平了。所以网上那些说因为性能才选择 ReenTrantLock 的文章都是错的！JDK1.6之后，性能已经不是选择synchronized和ReenTrantLock的影响因素了！而且虚拟机在未来的性能改进中会更偏向于原生的synchronized，所以还是提倡在synchronized能满足你的需求的情况下，优先考虑使用synchronized关键字来进行同步！优化后的synchronized和ReenTrantLock一样，在很多地方都是用到了CAS操作**。
 
 
 
-# 10. volatile关键字
+
+
+## 10. volatile关键字
 
 参考
 
@@ -644,14 +646,14 @@ synchronized 是依赖于 JVM 实现的，前面我们也讲到了 虚拟机团�
 
 
 
-## 10.1 两大特性
+### 10.1 两大特性
 
 - 保证了不同线程对该变量操作的**内存可见性**
 - 禁止指令重排序
 
 
 
-## 10.2 Java内存模型与volatile
+### 10.2 Java内存模型与volatile
 
 ​		在 **JDK1.2** 之前，Java的内存模型实现总是从主存（即共享内存）读取变量，是不需要进⾏特别的注意 的。⽽在当前的 Java 内存模型下，线程可以把变量保存本地内存（⽐如机器的寄存器）中，⽽不是直 接在主存中进⾏读写。**这就可能造成⼀个线程在主存中修改了⼀个变量的值，⽽另外⼀个线程还继续使 ⽤它在寄存器中的变量值的拷⻉，造成数据的不⼀致**。
 
@@ -667,7 +669,7 @@ synchronized 是依赖于 JVM 实现的，前面我们也讲到了 虚拟机团�
 
 
 
-## 10.3 并发编程的三个重要特性
+### 10.3 并发编程的三个重要特性
 
 1. **原⼦性 :** ⼀个的操作或者多次操作，要么所有的操作全部都得到执⾏并且不会收到任何因素的 ⼲扰⽽中断，要么所有的操作都执⾏，要么都不执⾏。 **synchronized 可以保证代码⽚段的原⼦性。** 
 2. **可⻅性 ：**当⼀个变量对共享变量进⾏了修改，那么另外的线程都是⽴即可以看到修改后的最新 值。 **volatile 关键字可以保证共享变量的可⻅性。**
@@ -675,13 +677,17 @@ synchronized 是依赖于 JVM 实现的，前面我们也讲到了 虚拟机团�
 
 
 
-## 10.4 内存可见性
+
+
+### 10.4 内存可见性
 
 ![内存可见性](./images/Java-Multithreading/Memory_visibility.jpg)
 
 
 
-# 11. synchronized | volatile 关键字的区别
+
+
+## 11. synchronized | volatile 关键字的区别
 
 
 
@@ -694,11 +700,11 @@ synchronized 是依赖于 JVM 实现的，前面我们也讲到了 虚拟机团�
 
 
 
-# 12. Java线程池
+## 12. Java线程池
 
 
 
-## 12.1 好处
+### 12.1 好处
 
 - 降低资源消耗。通过重复利⽤已创建的线程降低线程创建和销毁造成的消耗。 
 - 提⾼响应速度。当任务到达时，任务可以不需要的等到线程创建就能⽴即执⾏。 
@@ -708,7 +714,7 @@ synchronized 是依赖于 JVM 实现的，前面我们也讲到了 虚拟机团�
 
 
 
-## 12.2 创建线程池
+### 12.2 创建线程池
 
 
 
@@ -722,7 +728,7 @@ synchronized 是依赖于 JVM 实现的，前面我们也讲到了 虚拟机团�
 
 
 
-### 12.2.1 Executors创建线程池弊端
+#### 12.2.1 Executors创建线程池弊端
 
 
 
@@ -731,7 +737,7 @@ synchronized 是依赖于 JVM 实现的，前面我们也讲到了 虚拟机团�
 
 
 
-### 12.2.2 第一种方式：ThreadPoolExecutor的方式
+#### 12.2.2 第一种方式：ThreadPoolExecutor的方式
 
 ![ThreadPoolExecutor构造方法](./images/Java-Multithreading/ThreadPoolExecutor_construction.jpg)
 
@@ -773,7 +779,7 @@ public ThreadPoolExecutor(int corePoolSize,
 我们再来看中间的两个构造方法，和第一个的区别在于，**第二个和第三个指定了创建线程的工厂和线程池满时的处理策略。**
 
 
-### 12.2.3 第二种方式：通过Executor 框架的⼯具类Executors来实现
+#### 12.2.3 第二种方式：通过Executor 框架的⼯具类Executors来实现
 
 > - **FixedThreadPool** ： 该⽅法返回⼀个固定线程数量的线程池。该线程池中的线程数量始终不 变。当有⼀个新的任务提交时，线程池中若有空闲线程，则⽴即执⾏。若没有，则新的任务会被 暂存在⼀个任务队列中，待有线程空闲时，便处理在任务队列中的任务。 
 > - **SingleThreadExecutor**： ⽅法返回⼀个只有⼀个线程的线程池。若多余⼀个任务被提交到该线 程池，任务会被保存在⼀个任务队列中，待线程空闲，按先⼊先出的顺序执⾏队列中的任务。 
@@ -804,7 +810,7 @@ public static ExecutorService newFixedThreadPool(int nThreads) {
 
 
 
-## 12.3 ThreadPoolExecutor 类分析
+### 12.3 ThreadPoolExecutor 类分析
 
 参考
 
@@ -822,7 +828,7 @@ public static ExecutorService newFixedThreadPool(int nThreads) {
 
 
 
-## 12.4 线程池执行流程
+### 12.4 线程池执行流程
 
 
 
@@ -830,7 +836,7 @@ public static ExecutorService newFixedThreadPool(int nThreads) {
 
 
 
-# 13. java.util.concurrent
+## 13. java.util.concurrent
 
 参考
 
@@ -851,7 +857,7 @@ public static ExecutorService newFixedThreadPool(int nThreads) {
 
 
 
-## 线程池相关类
+### 线程池相关类
 
 
 
@@ -861,7 +867,7 @@ public static ExecutorService newFixedThreadPool(int nThreads) {
 
 
 
-## 阻塞队列相关类
+### 阻塞队列相关类
 
 ![阻塞队列相关类](./images/Java-Multithreading/Blocking_queue_related_classes.png)
 
@@ -869,7 +875,7 @@ public static ExecutorService newFixedThreadPool(int nThreads) {
 
 
 
-## ConcurrentMap类
+### ConcurrentMap类
 
 ![ConcurrentMap_class](./images/Java-Multithreading/ConcurrentMap_class.png)
 
@@ -877,7 +883,7 @@ public static ExecutorService newFixedThreadPool(int nThreads) {
 
 
 
-## 多线程其他类
+### 多线程其他类
 
 ![多线程其他类](./images/Java-Multithreading/Multithreading_other_classes.png)
 
@@ -891,7 +897,7 @@ public static ExecutorService newFixedThreadPool(int nThreads) {
 
 
 
-## CAS
+### CAS
 
 参考
 
@@ -902,7 +908,7 @@ public static ExecutorService newFixedThreadPool(int nThreads) {
 
 
 
-### 概述
+#### 概述
 
 `CAS（Compare-and-Swap）`，即比较并替换，是一种实现并发算法时常用到的技术，Java并发包中的很多类都使用了`CAS`技术。CAS是一种`无锁算法`，CAS有3个操作数
 
@@ -974,7 +980,7 @@ CAS比较与交换的伪代码可以表示为：
 
 
 
-### 使用例子/源码
+#### 使用例子/源码
 
 创建一个`AtomicInteger`类型来测试多线程多同一个变量的自增操作
 
@@ -1020,29 +1026,39 @@ getAndAddInt源码
 
 
 
-### CAS缺点
+#### CAS缺点
 
 CAS虽然很高效的解决了原子操作问题，但是CAS仍然存在三大问题。
 
-> 1. **循环时间长开销很大**：CAS 通常是配合无限循环一起使用的，我们可以看到 `getAndAddInt` 方法执行时，如果 CAS 失败，会一直进行尝试。如果 CAS 长时间一直不成功，可能会给 CPU 带来很大的开销。
->
-> 2. **只能保证一个变量的原子操作**：当对一个变量执行操作时，我们可以使用`循环 CAS` 的方式来保证原子操作，但是对`多个变量`操作时，CAS 目前无法直接保证操作的原子性。但是我们可以通过以下两种办法来解决：1）使用互斥锁来保证原子性；2）将多个变量封装成对象，通过 `AtomicReference` 来保证原子性。
->
-> 3. **ABA问题**：CAS 的使用流程通常如下：1）首先从地址 V 读取值 A；2）根据 A 计算目标值 B；3）通过 CAS 以原子的方式将地址 V 中的值从 A 修改为 B。
->
->    但是在第1步中读取的值是A，并且在第3步修改成功了，我们就能说它的值在第1步和第3步之间没有被其他线程改变过了吗?
->
->    **如果在这段期间它的值曾经被改成了B，后来又被改回为A**，那CAS操作就会误认为它从来没有被改变过。这个漏洞称为CAS操作的“ABA”问题。Java并发包为了解决这个问题，提供了一个带有标记的原子引用类“`AtomicStampedReference`”，它可以通过控制`变量值的版本`来保证CAS的正确性。
->
->    因此，在使用CAS前要考虑清楚“ABA”问题是否会影响`程序并发的正确性`，如果需要解决ABA问题，改用`传统的互斥同步`可能会比原子类更高效。
+
+
+::: info CAS缺点
 
 
 
-### CAS开销
+1. **循环时间长开销很大**：CAS 通常是配合无限循环一起使用的，我们可以看到 `getAndAddInt` 方法执行时，如果 CAS 失败，会一直进行尝试。如果 CAS 长时间一直不成功，可能会给 CPU 带来很大的开销。
+
+2. **只能保证一个变量的原子操作**：当对一个变量执行操作时，我们可以使用`循环 CAS` 的方式来保证原子操作，但是对`多个变量`操作时，CAS 目前无法直接保证操作的原子性。但是我们可以通过以下两种办法来解决：1）使用互斥锁来保证原子性；2）将多个变量封装成对象，通过 `AtomicReference` 来保证原子性。
+
+3. **ABA问题**：CAS 的使用流程通常如下：1）首先从地址 V 读取值 A；2）根据 A 计算目标值 B；3）通过 CAS 以原子的方式将地址 V 中的值从 A 修改为 B。
+
+   但是在第1步中读取的值是A，并且在第3步修改成功了，我们就能说它的值在第1步和第3步之间没有被其他线程改变过了吗?
+
+   **如果在这段期间它的值曾经被改成了B，后来又被改回为A**，那CAS操作就会误认为它从来没有被改变过。这个漏洞称为CAS操作的“ABA”问题。Java并发包为了解决这个问题，提供了一个带有标记的原子引用类“`AtomicStampedReference`”，它可以通过控制`变量值的版本`来保证CAS的正确性。
+
+   因此，在使用CAS前要考虑清楚“ABA”问题是否会影响`程序并发的正确性`，如果需要解决ABA问题，改用`传统的互斥同步`可能会比原子类更高效。
 
 
 
-### CAS在JDK中的应用
+:::
+
+
+
+#### CAS开销
+
+
+
+#### CAS在JDK中的应用
 
 在原子类变量中，如`java.util.concurrent.atomic`中的`AtomicXXX`，都使用了这些底层的JVM支持为数字类型的引用类型提供一种高效的CAS操作，而在`java.util.concurrent`中的大多数类在实现时都直接或间接的使用了这些原子变量类。
 
@@ -1076,7 +1092,7 @@ Java 1.8中`AtomicInteger.incrementAndGet()`的实现源码为：
 
 
 
-# 14. ThreadLocal
+## 14. ThreadLocal
 
 参考
 
@@ -1087,7 +1103,7 @@ Java 1.8中`AtomicInteger.incrementAndGet()`的实现源码为：
 
 
 
-## 简介
+### 14.1 简介
 
 多线程访问同一个共享变量的时候容易出现并发问题，特别是多个线程对一个变量进行写入的时候，为了保证线程安全，一般使用者在访问共享变量的时候需要进行额外的同步措施才能保证线程安全性。ThreadLocal是除了加锁这种同步方式之外的一种保证一种规避多线程访问出现线程不安全的方法，当我们在创建一个变量后，如果每个线程对其进行访问的时候访问的都是线程自己的变量这样就不会存在线程不安全问题。
 
@@ -1109,7 +1125,7 @@ Java 1.8中`AtomicInteger.incrementAndGet()`的实现源码为：
 
 
 
-## 如何使用/原理
+### 14.2 如何使用/原理
 
 
 
@@ -1154,7 +1170,7 @@ sThreadLocal.get()
 
 
 
-## set()方法
+### 14.3 set()方法
 
 ```java
 //set 方法
@@ -1191,7 +1207,7 @@ void createMap(Thread t, T firstValue) {
 
 
 
-## ThreadLocalMap
+### 14.4 ThreadLocalMap
 
 ```java
 //Entry为ThreadLocalMap静态内部类，对ThreadLocal的弱引用
@@ -1364,14 +1380,20 @@ int i = firstKey.threadLocalHashCode & (INITIAL_CAPACITY - 1)
 
 
 
-> 1. 对于某一`ThreadLocal`来讲，他的`索引值i`是确定的，在不同线程之间访问时访问的是不同的table数组的同一位置即都为table[i]，只不过这个不同线程之间的table是独立的。
-> 2. 对于同一线程的不同`ThreadLocal`来讲，这些`ThreadLocal`实例共享一个`table`数组，然后每个`ThreadLocal`实例在`table`中的`索引i`是不同的。
+::: info 总结如下
 
 
 
+1. 对于某一`ThreadLocal`来讲，他的`索引值i`是确定的，在不同线程之间访问时访问的是不同的table数组的同一位置即都为table[i]，只不过这个不同线程之间的table是独立的。
+2. 对于同一线程的不同`ThreadLocal`来讲，这些`ThreadLocal`实例共享一个`table`数组，然后每个`ThreadLocal`实例在`table`中的`索引i`是不同的。
 
 
-## get()方法
+
+:::
+
+
+
+### 14.5 get()方法
 
 ```java
 //ThreadLocal中get方法
@@ -1408,7 +1430,7 @@ private Entry getEntry(ThreadLocal<?> key) {
 
 
 
-## 内存泄漏问题
+### 14.6 内存泄漏问题
 
 ![](./images/Java-Multithreading/ThreadLocal_Thread_ThreadLocalMap.jpg)
 
@@ -1416,9 +1438,15 @@ private Entry getEntry(ThreadLocal<?> key) {
 
 上面这张图详细的揭示了`ThreadLocal`和`Thread`以及`ThreadLocalMap`三者的关系。
 
-> - Thread中有一个map，就是ThreadLocalMap
-> - ThreadLocalMap的key是ThreadLocal，值是我们自己设定的。
-> - ThreadLocal是一个弱引用，当为null时，会被当成垃圾回收
+
+
+::: info 关系
+
+- Thread中有一个map，就是ThreadLocalMap
+- ThreadLocalMap的key是ThreadLocal，值是我们自己设定的。
+- ThreadLocal是一个弱引用，当为null时，会被当成垃圾回收
+
+:::
 
 
 
@@ -1430,14 +1458,18 @@ private Entry getEntry(ThreadLocal<?> key) {
 
 
 
-## 特性
+### 14.7 特性
 
 `ThreadLocal`和`Synchronized`都是为了解决`多线程中相同变量的访问冲突`问题，不同的点是
 
 
 
-> - `Synchronized`是通过线程等待，`牺牲时间`来解决访问冲突
-> - ThreadLocal是通过每个线程单独一份存储空间，牺牲空间来解决冲突，并且相比于`Synchronized`，`ThreadLocal`具有`线程隔离`的效果，只有在线程内才能获取到对应的值，线程外则不能访问到想要的值。
+::: info 不同点
+
+- `Synchronized`是通过线程等待，`牺牲时间`来解决访问冲突
+- ThreadLocal是通过每个线程单独一份存储空间，牺牲空间来解决冲突，并且相比于`Synchronized`，`ThreadLocal`具有`线程隔离`的效果，只有在线程内才能获取到对应的值，线程外则不能访问到想要的值。
+
+:::
 
 
 
@@ -1449,7 +1481,7 @@ private Entry getEntry(ThreadLocal<?> key) {
 
 
 
-# 其他面试题
+## 其他面试题
 
 
 
@@ -1457,7 +1489,7 @@ private Entry getEntry(ThreadLocal<?> key) {
 
 
 
-## i++线程安全吗
+### i++线程安全吗
 
 参考
 
