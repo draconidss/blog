@@ -95,21 +95,57 @@ tags:
 
 ## 3. @Controller控制器
 
-在SpringMVC 中，控制器Controller 负责处理由DispatcherServlet 分发的请求，它把用户请求的数据经过业务处理层处理之后封装成一个Model ，然后再把该Model 返回给对应的View 进行展示。在SpringMVC 中提供了一个非常简便的定义Controller 的方法，你无需继承特定的类或实现特定的接口，只需使用@Controller 标记一个类是Controller ，然后使用@RequestMapping 和@RequestParam 等一些注解用以定义URL 请求和Controller 方法之间的映射，这样的Controller 就能被外界访问到。此外Controller 不会直接依赖于`HttpServletRequest` 和`HttpServletResponse` 等HttpServlet 对象，它们可以通过Controller 的方法参数灵活的获取到。
+在SpringMVC 中，控制器Controller 负责处理由`DispatcherServlet` 分发的请求，它把用户请求的数据经过业务处理层处理之后封装成一个`Model` ，然后再把该`Model` 返回给对应的`View` 进行展示。在`SpringMVC` 中提供了一个非常简便的定义`Controller` 的方法，你无需继承特定的类或实现特定的接口，只需使用`@Controller` 标记一个类是Controller ，然后使用`@RequestMapping` 和@`RequestParam` 等一些注解用以定义URL 请求和Controller 方法之间的映射，这样的Controller 就能被外界访问到。此外Controller 不会直接依赖于`HttpServletRequest` 和`HttpServletResponse` 等HttpServlet 对象，它们可以通过Controller 的方法参数灵活的获取到。
 
 @Controller 用于标记在一个类上，使用它标记的类就是一个SpringMVC Controller 对象。分发处理器将会扫描使用了该注解的类的方法，并检测该方法是否使用了@RequestMapping 注解。@Controller 只是定义了一个控制器类，而使用@RequestMapping 注解的方法才是真正处理请求的处理器。单单使用@Controller 标记在一个类上还不能真正意义上的说它就是SpringMVC 的一个控制器类，因为这个时候Spring 还不认识它。那么要如何做Spring 才能认识它呢？这个时候就需要我们把这个控制器类交给Spring 来管理。
 
 
 
-## 4. @RestController
+
+
+单独使⽤ `@Controller` 不加 `@ResponseBody` 的话⼀般使⽤在要返回⼀个视图的情况，这种情况 属于比较传统的Spring MVC 的应⽤，对应于`前后端不分离`的情况。
+
+
+
+
+
+![@Controller](./images/SpringMVC-annotation/@Controller.jpg)
+
+
+
+
+
+
+
+
+
+## 4. @ResponseBody
+
+作用： 该注解用于将Controller的方法返回的对象，通过适当的HttpMessageConverter转换为指定格式后，写入到`Response`对象的`body`数据区。
+
+使用时机：返回的数据不是`html`标签的页面，而是其他某种格式的数据时（如`json`、`xml`等）使用；
+
+
+
+
+
+
+
+## 5. @RestController
 
 可以发现，`@RestController`注解里面包含了`@Controller`注解和@`ResponseBody`注解，`@ResponseBody` 注解是将返回的数据结构转换为 `JSON` 格式，所以说可以这么理解：@RestController = @Controller + @ResponseBody ，省了很多事，我们使用 @RestController 之后就不需要再使用 @Controller 了。
 
 
 
+![@RestController](./images/SpringMVC-annotation/@RestController.jpg)
 
 
-## 5. @RequestMapping请求映射
+
+
+
+
+
+## 6. @RequestMapping请求映射
 
 RequestMapping是一个用来处理请求地址映射的注解，可用于类或方法上。用于类上，表示类中的所有响应请求的方法都是以该地址作为父路径。`@RequestMapping`注解是用来映射Web请求（访问路径和参数）、处理类和方法的。它可以注解在类和方法上。注解在方法上的`@RequestMapping`路径会继承注解在类上的路径，`@RequestMapping`支持Servlet的`request`和`response`作为参数，也支持对它们的媒体类型进行配置。
 
@@ -144,12 +180,6 @@ RequestMapping是一个用来处理请求地址映射的注解，可用于类或
 
 
 
-## 6. @ResponseBody
-
-作用： 该注解用于将Controller的方法返回的对象，通过适当的HttpMessageConverter转换为指定格式后，写入到`Response`对象的`body`数据区。
-
-使用时机：返回的数据不是`html`标签的页面，而是其他某种格式的数据时（如`json`、`xml`等）使用；
-
 
 
 
@@ -161,6 +191,8 @@ RequestMapping是一个用来处理请求地址映射的注解，可用于类或
 > - https://blog.csdn.net/weixin_38004638/article/details/99655322
 
 RequestBody 注解用于接收`contentType: "application/json;"`的body，接收参数可以是实体，比如前端通过 JSON 提交传来两个参数 username 和 password，此时我们需要在后端封装一个实体来接收。在传递的参数比较多的情况下，使用 @RequestBody 接收会非常方便。
+
+
 
 
 
@@ -193,6 +225,8 @@ public class TestController {
      }  
 }
 ```
+
+
 
 
 
