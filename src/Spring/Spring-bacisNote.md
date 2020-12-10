@@ -162,7 +162,7 @@ Web上下文模块建立在应用程序上下文模块之上，为基于web的�
 
 ## 3. IoC（Inverse of Control：控制反转）| DC（Dependency Injection：依赖注入）
 
-IoC（Inverse of Control:控制反转）是⼀种设计思想，就是 将原本在程序中⼿动创建对象的控制 权，交由Spring框架来管理。 IoC 在其他语⾔中也有应⽤，并⾮ Spring 特有。 IoC 容器是 Spring ⽤来实现 IoC 的载体， IoC 容器实际上就是个Map（key，value）,Map 中存放的是各种对象。 
+IoC（Inverse of Control:控制反转）是依赖倒置原则⼀种设计思想，就是把原先在代码里面需要实现的对象创建、对象之间的依赖，反转给Spring容器来帮忙实现。 IoC 在其他语⾔中也有应⽤，并⾮ Spring 特有。 IoC 容器是 Spring ⽤来实现 IoC 的载体， IoC 容器实际上就是个Map（key，value）,Map 中存放的是各种对象。 
 
 将对象之间的相互依赖关系交给 IoC 容器来管理，并由 IoC 容器完成对象的注⼊。这样可以很⼤程度 上简化应⽤的开发，把应⽤从复杂的依赖关系中解放出来。 IoC 容器就像是⼀个⼯⼚⼀样，当我们需 要创建⼀个对象的时候，只需要配置好配置⽂件/注解即可，完全不⽤考虑对象是如何被创建出来的。 在实际项⽬中⼀个 Service 类可能有⼏百甚⾄上千个类作为它的底层，假如我们需要实例化这个 Service，你可能要每次都要搞清这个 Service 所有底层类的构造函数，这可能会把⼈逼疯。如果利⽤ IoC 的话，你只需要配置好，然后在需要的地⽅引⽤就⾏了，这⼤⼤增加了项⽬的可维护性且降低了开 发难度。 
 
@@ -177,6 +177,7 @@ Spring 时代我们⼀般通过 XML ⽂件来配置 Bean，后来开发⼈员觉
 - https://www.zhihu.com/question/23277575/answer/169698662
 - https://www.cnblogs.com/xdp-gacl/p/4249939.html
 - https://www.awaimai.com/2596.html
+- [理解Spring的AOP和IOC实现原理](https://www.jianshu.com/p/78ba8bafb90a)
 
 
 
@@ -192,7 +193,148 @@ IOC源码阅读
 
 
 
+### 3.1 运行原理/设计模式
 
+Spring IOC容器通过`xml`,注解等其它方式配置`类及类之间的依赖关系`，完成了`对象的创建和依赖的管理注入`。实现IOC的主要原理是`工厂模式`加`反射机制`。
+
+
+
+![七大模块](./images/Spring-bacisNote/IOC_design_pattern.jpg)
+
+
+
+
+
+### 3.2 使用IOC的好处
+
+::: info 使用IOC的好处
+
+- 它将最小化应用程序中的代码量。
+- 它将使您的应用程序易于测试，因为它不需要单元测试用例中的任何单例或 JNDI 查找机制。
+- 它以最小的影响和最少的侵入机制促进松耦合。
+- 它支持即时的实例化和延迟加载服务。
+- 集中管理，实现类的可配置和易管理。
+- 降低了类与类之间的耦合度。
+
+:::
+
+
+
+### 3.3 依赖注入的方式
+
+
+
+::: tip 参考
+
+- [三种依赖注入的方式](https://www.cnblogs.com/levontor/p/11040029.html)
+
+:::
+
+
+
+::: info 依赖注入的方式
+
+- 构造函数方法注入
+- Setter方法注入
+- 接口注入
+
+
+
+在Spring Framwork中，仅使用`构造函数`和`setter`注入
+
+:::
+
+
+
+
+
+### 3.4 Spring IOC 容器 | BeanFactory | ApplicationContext
+
+
+
+::: tip 参考
+
+- https://blog.csdn.net/pythias_/article/details/82752881
+
+:::
+
+
+
+#### 3.4.1 Spring有多少种IOC容器
+
+::: info Spring有多少种IOC容器
+
+- BeanFactory：就像一个包含 bean 集合的工厂类。它会在客户端要求时实例化 bean。
+- ApplicationContext ：接口扩展了 BeanFactory 接口。它在 BeanFactory 基础上提供了一些额外的功能。
+
+
+
+`BeanFactory`和`ApplicationContext`是Spring的两大核心接口，都可以当做Spring的容器。其中`ApplicationContext`是`BeanFactory`的子接口。
+
+:::
+
+
+
+
+
+#### 3.4.2 BeanFactory | ApplicationContext对比
+
+::: info BeanFactory | ApplicationContext对比
+
+
+
+**功能上区别**
+
+`BeanFactory`是Spring里面最底层的接口，包含了各种Bean的定义，读取bean配置文档，管理bean的加载、实例化，控制bean的生命周期，维护bean之间的依赖关系。
+
+`ApplicationContext`接口作为`BeanFactory`的派生，是应用上下文，除了提供BeanFactory所具有的功能外，还提供了更完整的框架功能：
+
+
+
+> - 国际化（MessageSource）
+> - 访问资源，如URL和文件（ResourceLoader）
+> - 载入多个（有继承关系）上下文 ，使得每一个上下文都专注于一个特定的层次，比如应用的web层  
+> - 消息发送、响应机制（ApplicationEventPublisher）
+> - AOP（拦截器）
+
+
+
+**两者装载bean的区别**
+
+> - ==BeanFactory==：BeanFactory在启动的时候不会去实例化Bean，只有从容器中拿Bean的时候才会去实例化
+> - ==ApplicationContext==：ApplicationContext在启动的时候就把所有的Bean全部实例化了。它还可以为Bean配置`lazy-init=true`来让Bean延迟实例化
+
+
+
+**占用内存空间区别**
+
+相对于基本的`BeanFactory`，`ApplicationContext` 唯一的不足是占用内存空间。当应用程序配置Bean较多时，程序启动较慢。
+
+
+
+**创建方式区别**
+
+`BeanFactory`通常以`编程的方式`被创建，`ApplicationContext`还能以`声明的方式`创建，如使用ContextLoader。
+
+
+
+
+
+
+
+**我们该用BeanFactory还是ApplicationContent**
+
+> - ==延迟实例化的优点BeanFactory==：应用启动的时候占用资源很少；对资源要求较高的应用，比较有优势
+>
+> - ==不延迟实例化的优点ApplicationContent==：
+>
+>   > - 所有的Bean在启动的时候都加载，系统运行的速度快； 
+>   > - 在启动的时候所有的Bean都加载了，我们就能在系统启动的时候，尽早的发现系统中的`配置问题` 
+>   > - 建议web应用，在启动的时候就把所有的Bean都加载了。（把费时的操作放到系统启动中完成）
+
+
+
+:::
 
 
 
@@ -200,18 +342,72 @@ IOC源码阅读
 
 
 
-AOP(Aspect-Oriented Programming):⾯向切⾯编程)能够将那些与业务⽆关，却为业务模块所共同调⽤ 的逻辑或责任（例如事务处理、⽇志管理、权限控制等）封装起来，便于减少系统的重复代码，降低模 块间的耦合度，并有利于未来的可拓展性和可维护性。 
-
-
-
 ::: tip 参考
 
 - https://www.cnblogs.com/joy99/p/10941543.html
 - [SpringAOP详细配置与使用](https://blog.csdn.net/u010890358/article/details/80640433)
-
-
+- https://www.jianshu.com/p/78ba8bafb90a
 
 :::
+
+
+
+`OOP`面向对象，允许开发者定义纵向的关系，但并适用于定义横向的关系，导致了大量代码的重复，而不利于各个模块的重用。
+
+
+
+`AOP(Aspect-Oriented Programming)`:⾯向切⾯编程)能够将那些与业务⽆关，却为业务模块所共同调⽤的逻辑或责任（例如`事务处理`、`⽇志管理`、`权限控制`等）封装起来，便于减少系统的重复代码，降低模块间的耦合度，并有利于未来的可拓展性和可维护性。 
+
+
+
+
+
+### 4.1 使用AOP的好处
+
+::: info 好处
+
+- 降低模块的耦合度
+- 使系统容易扩展
+- 提高代码复用性
+
+:::
+
+
+
+### 4.2 AOP的基本概念
+
+::: info AOP基本概念
+
+| 名称                | 作用                                                         |
+| ------------------- | ------------------------------------------------------------ |
+| 连接点（JoinPoint） | 需要在程序中插入横切关注点的点，连接点可能是在类初始化、方法调用、字段调用或处理异常等等。Spring中只支持方法执行连接点。 |
+| 切入点（Pointcut）  | 一组相关连接点的集合。                                       |
+| 通知（Advice）      | 在连接点上执行的行为，增强提供了在AOP中需要在切入点所选择的连接点处进行扩展现有行为的手段。包括前置增强（before advice）、后置增强 (after advice)、环绕增强 |
+| 切面（Aspect）      | 通知和切入点的结合。                                         |
+| 织入（Weaving）     | 织入是一个过程，是将切面应用到目标对象从而创建出AOP代理对象的过程。 |
+| 代理（Proxy）       | 通过代理方式来对目标对象应用切面。AOP代理可以用JDK动态代理或CGLIB代理实现。 |
+| 目标对象（Target）  | 需要被织入关注点的对象。即被代理的对象。                     |
+
+:::
+
+
+
+
+
+### 4.3 AOP运行原理/设计模式
+
+
+
+![七大模块](./images/Spring-bacisNote/AOP_operational_principle.jpg)
+
+实现AOP的主要设计模式就是动态代理。
+Spring的动态代理有两种：一是`JDK的动态代理`；另一个是`cglib动态代理`。
+
+
+
+
+
+
 
 
 
@@ -250,7 +446,7 @@ Spring AOP 已经集成了 AspectJ ，AspectJ 应该算的上是 Java ⽣态系�
 
 ### 5.1 什么是bean
 
-Spring 官方文档对 bean 的解释是：
+Spring 官方文档对 Bean 的解释是：
 
 > In Spring, the objects that form the backbone of your application and that are managed by the Spring IoC container are called beans. A bean is an object that is instantiated, assembled, and otherwise managed by a Spring IoC container.
 
@@ -260,7 +456,11 @@ Spring 官方文档对 bean 的解释是：
 
 
 
-### 5.1 Spring中五种作用域?
+Bean也是基于用户提供容器的配置元数据创建
+
+
+
+### 5.2 Spring bean中五种作用域?
 
 
 
@@ -501,10 +701,134 @@ Spring容器会在整个web应用范围使用到`appPreferences`的时候创建�
 
 
 
-### 5.4 @Component 和 @Bean 的区别是什么？
+### 5.4 @Component 和 @Bean 的相同和区别是什么？
 
-作⽤对象不同: @Component 注解作⽤于类，⽽ @Bean 注解作⽤于⽅法。 
 
-@Component 通常是通过类路径扫描来⾃动侦测以及⾃动装配到Spring容器中（我们可以使⽤ @ComponentScan 注解定义要扫描的路径从中找出标识了需要装配的类⾃动装配到 Spring 的 bean 容器中）。 @Bean 注解通常是我们在标有该注解的⽅法中定义产⽣这个 bean, @Bean 告 诉了Spring这是某个类的示例，当我需要⽤它的时候还给我。 
 
-@Bean 注解⽐ Component 注解的⾃定义性更强，⽽且很多地⽅我们只能通过 @Bean 注解 来注册bean。⽐如当我们引⽤第三⽅库中的类需要装配到 Spring 容器时，则只能通过 @Bean 来实现
+`@Component`和`@Bean`都是用来注册Bean并装配到`Spring容器`中，但是`Bean`比`Component`的自定义性更强。可以实现一些Component实现不了的自定义加载类。
+
+
+
+::: info @Component 和 @Bean 的区别是什么
+
+- 作⽤对象不同: @Component 注解作⽤于`类`，⽽ @Bean 注解作⽤于`⽅法`。 
+
+- @Component （@Controller、@Service、@Repository）通常是通过类路径扫描来⾃动侦测以及⾃动装配到Spring容器中（我们可以使⽤ `@ComponentScan` 注解定义要扫描的路径从中找出标识了需要装配的类⾃动装配到 Spring 的 bean 容器中）。 @Bean 注解通常是我们在标有该注解的⽅法中定义产⽣这个 bean, @Bean告诉了Spring这是某个类的示例，当我需要⽤它的时候还给我。 
+
+- @Bean 注解⽐ Component 注解的⾃定义性更强，⽽且很多地⽅我们只能通过 @Bean 注解 来注册bean。⽐如当我们引⽤第三⽅库中的类需要装配到 Spring 容器时，则只能通过 @Bean 来实现
+
+:::
+
+
+
+#### @Bean 注解使⽤示例：
+
+```java
+@Configuration
+public class AppConfig {
+ @Bean
+ public TransferService transferService() {
+ return new TransferServiceImpl();
+ }
+}
+```
+
+上⾯的代码相当于下⾯的 xml 配置
+
+```xml
+<beans>
+ <bean id="transferService" class="com.acme.TransferServiceImpl"/>
+</beans>
+```
+
+
+
+
+
+### 5.5 将⼀个类声明为Spring的 bean 的注解有哪些
+
+我们⼀般使⽤ `@Autowired` 注解⾃动装配 bean，要想把类标识成可⽤于 `@Autowired` 注解⾃动装 配的 bean 的类,采⽤以下注解可实现： 
+
+
+
+::: info @Autowired
+
+- @Component ：通⽤的注解，可标注任意类为 Spring 组件。如果⼀个Bean不知道属于哪个 层，可以使⽤ @Component 注解标注。 
+- @Repository : 对应持久层即 Dao 层，主要⽤于数据库相关操作。 
+- @Service : 对应服务层，主要涉及⼀些复杂的逻辑，需要⽤到 Dao层。 
+- @Controller : 对应 Spring MVC 控制层，主要⽤户接受⽤户请求并调⽤ Service 层返回数 据给前端⻚⾯。
+
+:::
+
+
+
+
+
+
+
+### 5.6 Spring bean 的生命周期
+
+
+
+::: tip 参考
+
+- [Spring Bean的生命周期（非常详细）](https://www.cnblogs.com/zrtqsk/p/3735273.html)
+
+:::
+
+
+
+
+
+![Spring bean 的生命周期](./images/Spring-bacisNote/bean_lifetime.png)
+
+
+
+![Spring bean 的生命周期2](./images/Spring-bacisNote/bean_lifetime_2.jpg)
+
+
+
+若容器注册了以上各种接口，程序那么将会按照以上的流程进行。下面将仔细讲解各接口作用。
+
+
+
+#### 各种接口方法分类
+
+Bean的完整生命周期经历了各种方法调用，这些方法可以划分为以下几类：
+
+::: info  
+
+- Bean自身的方法：这个包括了Bean本身调用的方法和通过配置文件中\<bean\>的`init-method`和`destroy-method`指定的方法
+- Bean级生命周期接口方法：这个包括了BeanNameAware、BeanFactoryAware、InitializingBean和DiposableBean这些接口的方法
+- 容器级生命周期接口方法：这个包括了InstantiationAwareBeanPostProcessor 和 BeanPostProcessor 这两个接口实现，一般称它们的实现类为“后处理器”。
+- 工厂后处理器接口方法：这个包括了AspectJWeavingEnabler, ConfigurationClassPostProcessor, CustomAutowireConfigurer等等非常有用的工厂后处理器接口的方法。工厂后处理器也是容器级的。在应用上下文装配配置文件之后立即调用。
+
+:::
+
+
+
+
+
+### 5.7 Spring提供了哪些配置方式
+
+::: tip 参考
+
+- https://blog.csdn.net/qq_35744081/article/details/94986758
+
+:::
+
+
+
+::: info 三种配置方式
+
+- 基于xml的配置
+- 基于注解的配置
+- 基于Java的配置
+
+:::
+
+
+
+
+
+# 1. 基于xml的配
