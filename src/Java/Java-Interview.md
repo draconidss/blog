@@ -712,7 +712,7 @@ eat(new Dog());
 
 
 
-![final关键字2](images/Java-Interview/final关键字_2.png)
+![final关键字2](./images/Java-Interview/final_keyword_2.png)
 
 
 

@@ -535,7 +535,7 @@ SingleTon.INSTANCE
 ::: tip 参考
 
 - https://www.runoob.com/design-pattern/builder-pattern.html
-- https://www.jianshu.com/p/3d1c9ffb0a28
+- [一篇文章就彻底弄懂建造者模式(Builder Pattern)](https://www.jianshu.com/p/3d1c9ffb0a28)
 
 :::
 
@@ -545,11 +545,17 @@ SingleTon.INSTANCE
 
 
 
-建造者模式（Builder Pattern）使用多个简单的对象一步一步构建成一个复杂的对象。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。
+
+
+
+
+建造者模式（Builder Pattern）使用多个简单的对象一步一步构建成一个复杂的对象。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。创建者模式隐藏了复杂对象的创建过程，它把复杂对象的创建过程加以抽象，通过`子类继承或者重载`的方式，动态的创建具有复合属性的对象。
 
 一个 `Builder` 类会一步一步构造最终的对象。该 `Builder` 类是独立于其他对象的。
 
 
+
+**介绍**
 
 ::: info 介绍
 
@@ -568,9 +574,9 @@ SingleTon.INSTANCE
 
 
 
-使用场景
+**使用场景**
 
-::: info 使用场景
+::: tip 使用场景
 
 - 隔离复杂对象的创建和使用，相同的方法，不同执行顺序，产生不同事件结果
 - 多个部件都可以装配到一个对象中，但产生的运行结果不相同
@@ -580,7 +586,60 @@ SingleTon.INSTANCE
    产品内部变化复杂，会导致需要定义很多具体建造者类实现变化，增加项目中类的数量，增加系统的理解难度和运行成本
 - 需要生成的产品对象有复杂的内部结构，这些产品对象具备共性；
 
+:::
 
+
+
+
+
+**主要作用**
+
+::: info 主要作用
+
+- 在用户不知道对象的建造过程和细节的情况下就可以直接创建复杂的对象。
+
+- 用户只需要给出指定复杂对象的类型和内容；
+- 建造者模式负责按顺序创建复杂对象（把内部的建造过程和细节隐藏起来)
+
+:::
+
+
+
+**解决的问题**
+
+::: tip 解决的问题
+
+- 方便用户创建复杂的对象（不需要知道实现过程）
+- 代码复用性 & 封装性（将对象构建过程和细节进行封装 & 复用）
+
+> 例子：造汽车 & 买汽车。
+>
+> 1. 工厂（建造者模式）：负责制造汽车（组装过>程和细节在工厂内）
+> 2. 汽车购买者（用户）：你只需要说出你需要的>型号（对象的类型和内容），然后直接购买就可>>以使用了
+>     （不需要知道汽车是怎么组装的（车轮、车门、>发动机、方向盘等等））
+
+:::
+
+
+
+**优点**
+
+::: info 优点
+
+- 使用建造者模式可以使客户端不必知道产品内部组成的细节。
+- 具体的建造者类之间是相互独立的，这有利于系统的扩展。
+- 具体的建造者相互独立，因此可以对建造的过程逐步细化，而不会对其他模块产生任何影响。
+
+:::
+
+
+
+**缺点**
+
+::: tip 缺点
+
+- 建造者模式所创建的产品一般具有较多的共同点，其组成部分相似；如果产品之间的差异性很大，则不适合使用建造者模式，因此其使用范围受到一定的限制。
+- 如果产品的内部变化复杂，可能会导致需要定义很多具体建造者类来实现这种变化，导致系统变得很庞大。
 
 :::
 
@@ -588,4 +647,266 @@ SingleTon.INSTANCE
 
 
 
-### 4.2 案例
+### 4.2 原理
+
+![建造者模式UML类图](./images/Java-DesignPatterns/builder.png)
+
+
+
+::: info 原理模式
+
+- 指挥者（Director）直接和客户（Client）进行需求沟通；
+- 沟通后指挥者将客户创建产品的需求划分为各个部件的建造请求（Builder）；
+- 将各个部件的建造请求委派到具体的建造者（ConcreteBuilder）；
+- 各个具体建造者负责进行产品部件的构建；
+- 最终构建成具体产品（Product）。
+
+:::
+
+
+
+### 4.3 案例
+
+用 builder 模式创建`共享单车`为例子，示例代码：
+
+
+
+
+
+#### 产品Product类
+
+`Bike.java`
+
+```java
+@Data
+@ToString
+public class Bike {
+    /*框架*/
+    private String frame;
+    /*座椅*/
+    private String seat;
+    /*车胎*/
+    private String tire;
+
+}
+```
+
+
+
+#### 建造者Builder抽象类
+
+`Builder.java`
+
+```java
+// 抽象 builder 类
+public abstract class Builder {
+    abstract void buildBike();
+    abstract Bike createBike();
+}
+```
+
+
+
+#### 具体建造者ConcreteBuilder类
+
+`MobikeBuilder.java` 
+
+```java
+// 具体 builder 类 
+public class MobikeBuilder extends Builder{
+    private Bike mBike;
+
+    @Override
+    public void buildBike() {
+        mBike = new Bike();
+        mBike.setFrame("MobikeFrame");
+        mBike.setSeat("MobikeSeat");
+        mBike.setTire("MobikeTire");
+    }
+
+    @Override
+    public Bike createBike() {
+        return mBike;
+    }
+}
+```
+
+
+
+`OfoBuilder.java`
+
+```java
+// 具体 builder 类
+public class OfoBuilder extends Builder{
+    private Bike mBike;
+    @Override
+    public void buildBike() {
+        mBike = new Bike();
+        mBike.setFrame("OfoFrame");
+        mBike.setSeat("OfoSeat");
+        mBike.setTire("OfoTire");
+    }
+
+    @Override
+    public Bike createBike() {
+        return mBike;
+    }
+}
+```
+
+
+
+
+
+#### 指挥者Director类
+
+`Director.java`
+
+```java
+public class Director {
+    private Builder mBuilder = null;
+    public Director(Builder builder) {
+        this.mBuilder = builder;
+    }
+    public Bike construct() {
+        mBuilder.buildBike();
+        return mBuilder.createBike();
+    }
+}
+```
+
+
+
+#### 客户端使用
+
+`Client.java`
+
+```java
+public class Client {
+    public static void main(String[] args) {
+
+        //根据Ofo建造者创建Mobike实体类
+        Director MobikeDirector = new Director(new MobikeBuilder());
+        Bike MobikeBike = MobikeDirector.construct();
+        System.out.println("MobikeBike = " + MobikeBike.toString());
+
+        //根据Ofo建造者创建Ofo实体类
+        Director OfoDirector = new Director(new OfoBuilder());
+        Bike OfoBike = OfoDirector.construct();
+        System.out.println("OfoBike = " + OfoBike.toString());
+
+    }
+}
+```
+
+
+
+
+
+### 4.4 使用静态内部类Build
+
+当一个类构造器需要传入很多参数时，如果创建这个类的实例，代码可读性会非常差，而且很容易引入错误，此时就可以利用 builder模式进行重构，插件`lombok`的注解`@Builder`也是同样原理，重构的代码如下：
+
+
+
+`BikeWithBuild.java`
+
+```java
+public class BikeWithBuild {
+    /*框架*/
+    private String frame;
+    /*座椅*/
+    private String seat;
+    /*车胎*/
+    private String tire;
+
+    public BikeWithBuild() {}
+
+  // 构造方法范围设为private意味着只能通过内部即内部的Builder来创建对象
+    private BikeWithBuild(Builder builder) {
+        frame = builder.frame;
+        seat = builder.seat;
+        tire = builder.tire;
+    }
+
+  //设为静态，当类BikeWithBuild调用此静态方法后即BikeWithBuild.builder()返回Builder实体，
+  //即可以开始调用属性方法来构造，最后用Builder的build()返回实体类完成构造
+    public static BikeWithBuild.Builder builder() {
+        return new BikeWithBuild.Builder();
+    }
+
+
+  // 静态内部类Builder
+    public static final class Builder {
+        /*框架*/
+        private String frame;
+        /*座椅*/
+        private String seat;
+        /*车胎*/
+        private String tire;
+
+      // 空的构造方法
+        public Builder() {}
+
+        public BikeWithBuild.Builder frame(String frame) {
+            frame = frame;
+            return this;
+        }
+        public BikeWithBuild.Builder seat(String seat) {
+            seat = seat;
+            return this;
+        }
+        public BikeWithBuild.Builder tire(String tire) {
+            tire = tire;
+            return this;
+        }
+
+      //最后调用build将想要的属性赋值后的Builder作为参数来返回BikeWithBuild对象
+        public BikeWithBuild build() {
+            return new BikeWithBuild(this);
+        }
+    }
+}
+
+```
+
+
+
+使用
+
+```java
+BikeWithBuild bikeWithBuild = BikeWithBuild.builder()
+  .frame("frame")
+  .seat("seat")
+  .tire("tire")
+  .build();
+```
+
+
+
+上面的示例代码只是传入三个参数，如果参数是十四个甚至更多，builder 模式的优势将会更加明显，传递参数更加灵活，代码具有更高的可读性.
+
+
+
+
+
+优点是可以将构造器的setter方法名取成类似注释的方式，这样我们可以很清晰的知道刚才究竟设置的什么值，可读性较高
+
+缺点是比较冗长。
+
+
+
+
+
+### 4.5 建造者模式与抽象工厂模式的比较
+
+
+
+::: info 建造者模式与抽象工厂模式的比较
+
+- 与`抽象工厂模式`相比，`建造者模式`返回一个`组装好的完整产品`，而`抽象工厂模式`返回`一系列相关的产品`，这些产品位于`不同产品等级结构`，构成了一个`产品族` 。
+- 在`抽象工厂模式`中，客户端实例化工厂类，然后调用工厂方法获取所需产品对象；而在`建造者模式`中，客户端可以不直接调用建造者的相关方法，而是通过指挥者类来指导如何生成对象，包括对象的组装过程和建造步骤，它侧重于一步步构造一个复杂对象，返回一个完整的对象 。
+- 如果将`抽象工厂模式`看成汽车配件生产工厂，生产一个产品族的产品；那么`建造者模式`就是一个汽车组装工厂，通过对部件的组装可以返回一辆完整的汽车
+
+:::
+
