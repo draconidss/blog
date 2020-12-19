@@ -182,6 +182,35 @@ docker exec -it containerName/containerid redis-benchmark -h 127.0.0.1 -p 6379 -
 
 
 
+### 查看redis系统状态
+
+
+
+::: tip 参考
+
+- https://www.cnblogs.com/wshenjin/p/11431378.html
+
+:::
+
+
+
+
+
+```sh
+#部分Redis系统状态统计信息。
+info
+#全部Redis系统状态统计信息。
+info all
+#某一块的系统状态统计信息，其中section可以忽略大小写。
+info section
+```
+
+
+
+
+
+
+
 ### 3.1 数据库
 
 
@@ -832,7 +861,7 @@ void redisTest_2() throws JsonProcessingException {
 
 取出来后会经过反序列化
 
-![取出User并反序列化](./images/Redis_deployment&use/after_serializationException 2.jpg)
+![取出User并反序列化](./images/Redis_deployment&use/after_serializationException_2.jpg)
 
 
 
@@ -2727,9 +2756,14 @@ slaveof no one
 
 ## 12. Redis集群配置-Sentinel（哨兵）模式
 
-参考
 
-> - https://www.cnblogs.com/kingyifan/p/11721422.html
+
+::: tip 参考
+
+- https://www.cnblogs.com/kingyifan/p/11721422.html
+- https://www.cnblogs.com/kevingrace/p/9004460.html
+
+:::
 
 
 
