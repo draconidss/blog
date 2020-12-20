@@ -11,9 +11,9 @@ bgImageStyle: {
 }
 project:
   - type: project
-    name: project name
-    desc: project detailed description
-    link: your project link
+    name: My Project
+    desc: 个人项目
+    link: My-Project
 
   - type: link
     name: link name

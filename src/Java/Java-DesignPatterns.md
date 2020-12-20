@@ -18,14 +18,21 @@ tags:
 
 
 
+## 参考
+
+::: tip 参考
+
+- https://www.runoob.com/design-pattern/design-pattern-intro.html
+- http://c.biancheng.net/view/1317.html
+
+:::
+
+
+
 
 ## 1. 总览
 
 
-
-参考
-
-> - https://www.runoob.com/design-pattern/design-pattern-intro.html
 
 
 
@@ -143,6 +150,14 @@ tags:
 - 传输对象模式（Transfer Object Pattern）
 
 :::
+
+
+
+UML类图之间的关系
+
+
+
+
 
 
 
@@ -985,7 +1000,7 @@ BikeWithBuild bikeWithBuild = BikeWithBuild.builder()
 - **缺点**： 
 
   > 1. 配备克隆方法需要对类的功能进行通盘考虑，这对于全新的类不是很难，但对于已有的类不一定很容易，特别当一个类引用不支持串行化的间接对象，或者引用含有循环结构的时候。 
-  > 2. 必须实现 Cloneable 接口。
+  > 2. 必须实现 `Cloneable` 接口。
 
 - **使用场景**： 
 

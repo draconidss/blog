@@ -114,7 +114,7 @@ module.exports = config({
           prefix: "Java/",
           children: ["","Java-BasicNotes", "Java-Interview", "Java-Methods",
             "Java-Collections", "Java-Multithreading", "Java-JVM", "Java-DesignPatterns",
-            "Java-String", "Java-reflection", "Java-IO", "Java-Date", "Java-JDK8"]
+            "Java-String", "Java-reflection", "Java-IO", "Java-Date","Java-UML-ClassDiagram", "Java-JDK8"]
           /*children: ["","Java-BasicNotes", "Java-Interview", "Java-Methods",
             "Java-Collections", "Java-Multithreading", "Java-JVM", "Java-DesignPatterns",
             "Java-reflection", "Java-IO", "Java-Date", "Java-JDK8"]*/
@@ -202,6 +202,13 @@ module.exports = config({
           icon: "creative",
           prefix: "Docker/",
           children: ["", "Docker-deployment", "Docker-Install-software"],
+        },
+
+        {
+          title: "Nginx",
+          icon: "creative",
+          prefix: "Nginx/",
+          children: ["", "Nginx-basicNote"],
         },
 
         {
