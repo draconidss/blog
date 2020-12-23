@@ -24,6 +24,7 @@ tags:
 
 - https://www.runoob.com/design-pattern/design-pattern-intro.html
 - http://c.biancheng.net/view/1317.html
+- [设计模式之禅](https://cvws.icloud-content.com/B/AR_b41lQQbpGPKyDB2Cth7r_vzK3AaG4oUO4-A2dCnzqHATZcEgMSX-w/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%A6%85%E7%AC%AC%E4%BA%8C%E7%89%88.pdf?o=AqqTzisQ7qza5HyaDpFK6nPLonlFUQlVCk4i83IgM_Y8&v=1&x=3&a=CAoggWUx_-r41kyr2qnEnThp5TvL8LKkNGxY8lWYgwDGJJ0SbxCClJzV6C4YoovT1eguIgEAUgT_vzK3WgQMSX-waieVpjAqRUYfbXMyrkNCquWDdGrI6Lo3AggGoP7erhSrfoP04YytaVNyJ5V4IpSm5FvZhfGMeo-c561APVqoRrSyfG1hhkWv4zKBn8nvuyFExg&e=1608644871&fl=&r=8fed9b67-821e-4f58-a569-911f2f3cf0a1-1&k=95_8IK-mvZCdf0XwVvXk0Q&ckc=com.apple.clouddocs&ckz=com.apple.CloudDocs&p=54&s=F2kLuap5gtmmYNfbS88_bjogegU&cd=i)
 
 :::
 
@@ -167,7 +168,7 @@ tags:
 
 
 
-### 2.1 开闭原则
+### 2.1 开闭原则(Open Closed Principle,OCP)
 
 
 
@@ -182,7 +183,7 @@ tags:
 
 
 
-#### 2.1 介绍
+#### 2.1.1 介绍
 
 `开闭原则（Open Closed Principle，OCP）`由勃兰特·梅耶（Bertrand Meyer）提出，他在 1988 年的著作《面向对象软件构造》（Object Oriented Software Construction）中提出：
 
@@ -220,7 +221,7 @@ Software entities should be open for extension，but closed for modification。
 
 
 
-#### 2.2 作用
+#### 2.1.2 作用
 
 开闭原则是面向对象程序设计的终极目标，它使软件实体拥有一定的适应性和灵活性的同时具备稳定性和延续性。具体来说，其作用如下。
 
@@ -244,7 +245,7 @@ Software entities should be open for extension，but closed for modification。
 
 
 
-#### 2.3 示例
+#### 2.1.3 示例
 
 以书店销售书籍为例，其类图如下：
 
@@ -353,7 +354,7 @@ public class OffNovelBook extends NovelBook{
 
 
 
-#### 2.3 实现方法
+#### 2.1.4 实现方法
 
 第一：**抽象约束**
 抽象是对一组事物的通用描述，没有具体的实现，也就表示它可以有非常多的可能性，可以跟随需求的变化而变化。因此，通过接口或抽象类可以约束一组可能变化的行为，并且能够实现对扩展开放，其包含三层含义：
@@ -386,6 +387,129 @@ public class OffNovelBook extends NovelBook{
 
 
 
+### 2.2 依赖倒置原则(Dependency Inversion Principle,DIP)
+
+::: tip 参考
+
+[六大设计原则之依赖倒置原则](https://blog.csdn.net/hfreeman2008/article/details/52289571?ops_request_misc=%25257B%252522request%25255Fid%252522%25253A%252522160853876616780261982313%252522%25252C%252522scm%252522%25253A%25252220140713.130102334.pc%25255Fblog.%252522%25257D&request_id=160853876616780261982313&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v29-2-52289571.pc_v2_rank_blog_default&utm_term=%E5%85%AD%E5%A4%A7%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99)
+
+:::
+
+
+
+#### 2.2.1 介绍
+
+依赖倒置原则(Dependence Inversion Principle ,DIP)定义如下：
+
+::: info 定义
+
+**High level modules should not depend upon low level modules,Both should depend upon abstractions.Abstractions should not depend upon details.Details should depend upon abstracts.**
+
+:::
+
+
+
+翻译过来为：
+
+::: info 
+
+- 高层模块不应该依赖低层模块，两者都应该依赖抽象
+- 抽象不应该依赖细节
+- 细节应该依赖抽象
+
+:::
+
+
+
+**也可以说高层模块，低层模块，细节都应该依赖抽象**
+
+::: info
+
+每一个逻辑的实现都是由颗粒原子逻辑组成的，颗粒原子逻辑就是低层模块，而颗粒原子逻辑组成的模块就是高层模块。在java语言中，抽象就是接口或抽象类，两都都是不能直接被实例化的，细节就是实现类，实现接口或继承抽象类而产生的类就是细节，两者都可以直接被实例化。
+
+:::
+
+
+
+依赖倒置原则在java语言中，表现是：
+
+::: info
+
+- 模块间的依赖通过抽象发生，实现类之间不发生直接的依赖关系，其依赖关系是通过接口或抽象类产生的。
+- 接口或抽象类不依赖实现类
+- 实现类依赖接口或抽象类
+
+:::
+
+
+
+更加精简的定义就是“面向接口编程”—OOD(Object-Oriented Design，面向对象设计)的精髓之一。
+
+
+
+
+
+#### 2.2.2 好处
+
+采用依赖倒置原则可以减少类间的耦合性，提高系统的稳定，降低并行开发引起的风险，提高代码的可读性和可维护性。
+
+
+
+
+
+### 2.3 迪米特原则(Law of Demeter,LoD)
+
+::: tip 参考
+
+[六大设计原则之迪米特原则](https://blog.csdn.net/hfreeman2008/article/details/52335601?ops_request_misc=%25257B%252522request%25255Fid%252522%25253A%252522160862280716780257419145%252522%25252C%252522scm%252522%25253A%25252220140713.130102334.pc%25255Fblog.%252522%25257D&request_id=160862280716780257419145&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v29-3-52335601.pc_v2_rank_blog_default&utm_term=%E5%85%AD%E5%A4%A7%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99)
+
+:::
+
+
+
+#### 2.3.1 介绍
+
+迪米特原则(Law of Demeter,LoD)，也叫最少知识原则(Low knowledge Principle,LKP):
+
+**一个对象应该对其他对象有最少的了解。**
+
+通俗的讲：一个类对自己需要耦合或调用的类知道的最少，你(被耦合或调用的类)的内部是如何复杂和我没有关系，我就知道你提供的public方法，我只调用这些方法，其它的我不关心。
+
+
+
+
+
+### 2.4 里氏替换原则(Liskov Substitution Principle,LSP)
+
+::: tip 参考
+
+[六大设计原则之里氏替换原则](https://blog.csdn.net/hfreeman2008/article/details/52344343?ops_request_misc=%25257B%252522request%25255Fid%252522%25253A%252522160862280716780257419145%252522%25252C%252522scm%252522%25253A%25252220140713.130102334.pc%25255Fblog.%252522%25257D&request_id=160862280716780257419145&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v29-1-52344343.pc_v2_rank_blog_default&utm_term=%E5%85%AD%E5%A4%A7%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99)
+
+:::
+
+
+
+
+
+### 2.5 单一职责原则(Single Responsibility Principle,SPR)
+
+::: tip 参考
+
+[六大设计原则之单一职责原则](https://blog.csdn.net/hfreeman2008/article/details/52234287?ops_request_misc=%25257B%252522request%25255Fid%252522%25253A%252522160862280716780257419145%252522%25252C%252522scm%252522%25253A%25252220140713.130102334.pc%25255Fblog.%252522%25257D&request_id=160862280716780257419145&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v29-6-52234287.pc_v2_rank_blog_default&utm_term=%E5%85%AD%E5%A4%A7%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99)
+
+:::
+
+
+
+
+
+### 2.6 接口隔离原则
+
+::: tip 参考
+
+[六大设计原则之接口隔离原则](https://blog.csdn.net/hfreeman2008/article/details/52304172?ops_request_misc=%25257B%252522request%25255Fid%252522%25253A%252522160862280716780257419145%252522%25252C%252522scm%252522%25253A%25252220140713.130102334.pc%25255Fblog.%252522%25257D&request_id=160862280716780257419145&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v29-5-52304172.pc_v2_rank_blog_default&utm_term=%E5%85%AD%E5%A4%A7%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99)
+
+:::
 
 
 
@@ -393,12 +517,7 @@ public class OffNovelBook extends NovelBook{
 
 
 
-
-
-
-
-
-## 2. 单例模式（创建型模式）
+## 3. 单例模式（创建型模式）
 
 `创建型模式`
 
@@ -428,7 +547,7 @@ public class OffNovelBook extends NovelBook{
 
 
 
-### 2.1 步骤
+### 3.1 步骤
 
 
 
@@ -487,7 +606,7 @@ public class SingletonPatternDemo {
 
 
 
-### 2.2 懒汉式，线程不安全
+### 3.2 懒汉式，线程不安全
 
 
 
@@ -521,7 +640,7 @@ public class Singleton {
 
 
 
-### 2.3 懒汉式，线程安全
+### 3.3 懒汉式，线程安全
 
 
 
@@ -554,7 +673,7 @@ public class Singleton {
 
 
 
-### 2.3 饿汉式
+### 3.4 饿汉式
 
 | 名称             | 描述 |
 | ---------------- | ---- |
@@ -608,7 +727,7 @@ public class Singleton_Hungry {
 
 
 
-### 2.4 双重校验锁懒汉式（DCL，即 double-checked locking）
+### 3.5 双重校验锁懒汉式（DCL，即 double-checked locking）
 
 
 
@@ -659,7 +778,7 @@ public class Singleton {
 
 
 
-### 2.5 静态内部类
+### 3.6 静态内部类
 
 参考
 
@@ -715,7 +834,7 @@ public class Singleton{
 
 
 
-### 2.6 枚举式
+### 3.7 枚举式
 
 ```java
 public enum SingleTon{
@@ -740,7 +859,7 @@ SingleTon.INSTANCE
 
 
 
-## 3. 工厂/抽象工厂模式（创建型模式）
+## 4. 工厂/抽象工厂模式（创建型模式）
 
 `创建型模式`
 
@@ -778,7 +897,7 @@ SingleTon.INSTANCE
 
 
 
-## 4. 建造者模式（创建型模式）
+## 5. 建造者模式（创建型模式）
 
 `创建型模式`
 
@@ -793,7 +912,7 @@ SingleTon.INSTANCE
 
 
 
-### 4.1 介绍
+### 5.1 介绍
 
 
 
@@ -899,7 +1018,7 @@ SingleTon.INSTANCE
 
 
 
-### 4.2 原理
+### 5.2 原理
 
 ![建造者模式UML类图](./images/Java-DesignPatterns/builder.png)
 
@@ -917,7 +1036,7 @@ SingleTon.INSTANCE
 
 
 
-### 4.3 案例
+### 5.3 案例
 
 用 builder 模式创建`共享单车`为例子，示例代码：
 
@@ -989,7 +1108,7 @@ public class MobikeBuilder extends Builder{
     public void buildTire() {
         bikeProduct.setTire("MobikeTire");
     }
-    
+
 }
 ```
 
@@ -1079,7 +1198,7 @@ public class Client {
 
 
 
-### 4.4 使用静态内部类Build
+### 5.4 使用静态内部类Build
 
 当一个类构造器需要传入很多参数时，如果创建这个类的实例，代码可读性会非常差，而且很容易引入错误，此时就可以利用 builder模式进行重构，插件`lombok`的注解`@Builder`也是同样原理，重构的代码如下：
 
@@ -1174,7 +1293,7 @@ BikeWithBuild bikeWithBuild = BikeWithBuild.builder()
 
 
 
-### 4.5 建造者模式与抽象工厂模式的比较
+### 5.5 建造者模式与抽象工厂模式的比较
 
 
 
@@ -1190,7 +1309,7 @@ BikeWithBuild bikeWithBuild = BikeWithBuild.builder()
 
 
 
-## 5. 原型模式（创建型模式）
+## 6. 原型模式（创建型模式）
 
 `创建型模式`
 
@@ -1202,7 +1321,29 @@ BikeWithBuild bikeWithBuild = BikeWithBuild.builder()
 
 
 
-### 5.1 介绍
+原型模式（Prototype Pattern）的简单程度仅次于单例模式和迭代器模式。正是由于简 单，使用的场景才非常地多，其定义如下： 
+
+::: info
+
+Specify the kinds of objects to create using a prototypical instance,and create new objects by copying this prototype.（用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对 象。）
+
+:::
+
+
+
+![图13-3 原型模式的通用类图](./images/Java-DesignPatterns/General_class_diagram_of_the_prototype_pattern.jpg)
+
+
+
+
+
+### 6.1 介绍
+
+
+
+
+
+
 
 ::: info 介绍
 
@@ -1252,3 +1393,295 @@ BikeWithBuild bikeWithBuild = BikeWithBuild.builder()
 - **注意事项**：与通过对一个类进行实例化来构造新对象不同的是，原型模式是通过拷贝一个现有对象生成新对象的。浅拷贝实现 Cloneable，重写，深拷贝是通过实现 Serializable 读取二进制流。
 
 :::
+
+
+
+
+
+### 6.2 优点
+
+::: info 优点
+
+- 性能优良
+
+  > 原型模式是在内存二进制流的拷贝，要比直接new一个对象性能好很多，特别是要在一 个循环体内产生大量的对象时，原型模式可以更好地体现其优点。 
+
+- 逃避构造函数的约束 
+
+  > 这既是它的优点也是缺点，直接在内存中拷贝，构造函数是不会执行的（参见13.4 节）。优点就是减少了约束，缺点也是减少了约束，需要大家在实际应用时考虑。
+
+:::
+
+
+
+
+
+### 6.3 使用场景
+
+::: info 使用场景
+
+- 资源优化场景 ：类初始化需要消化非常多的资源，这个资源包括数据、硬件资源等。 
+- 性能和安全要求的场景：通过new产生一个对象需要非常繁琐的数据准备或访问权限，则可以使用原型模式。 
+- 一个对象多个修改者的场景：一个对象需要提供给其他对象访问，而且各个调用者可能都需要修改其值时，可以考虑 使用原型模式拷贝多个对象供调用者使用。 在实际项目中，原型模式很少单独出现，一般是和工厂方法模式一起出现，通过clone的 方法创建一个对象，然后由工厂方法提供给调用者。原型模式已经与Java融为一体，大家可 以随手拿来使用。
+
+:::
+
+
+
+
+
+### 6.4 示例
+
+现在电子账单越来越流行了，比如你的信用卡，每到月初的时候银行就会发一份电子邮 件给你，说你这个月消费了多少，什么时候消费的，积分是多少等，这是每个月发一次。还 有一种也是银行发的邮件你肯定非常有印象：广告信，现在各大银行的信用卡部门都在拉拢 客户，电子邮件是一种廉价、快捷的通信方式，你用纸质的广告信那个费用多高呀，比如我 行今天推出一个信用卡刷卡抽奖活动，通过电子账单系统可以一个晚上发送给600万客户， 为什么要用电子账单系统呢？直接找个发垃圾邮件的工具不就解决问题了吗？是个好主意， 但是这个方案在金融行业是行不通的，为什么？因为银行发送该类邮件是有要求的： 
+
+::: info 要求
+
+- 个性化服务 
+
+  一般银行都要求个性化服务，发过去的邮件上总有一些个人信息吧，比如“××先 生”，“××女士”等。 
+
+- 递送成功率
+
+  邮件的递送成功率有一定的要求，由于大批量地发送邮件会被接收方邮件服务器误认是 垃圾邮件，因此在邮件头要增加一些伪造数据，以规避被反垃圾邮件引擎误认为是垃圾邮 件。 
+
+:::
+
+
+
+从这两方面考虑广告信的发送也是电子账单系统（电子账单系统一般包括：账单分析、 账单生成器、广告信管理、发送队列管理、发送机、退信处理、报表管理等）的一个子功 能，我们今天就来考虑一下广告信这个模块是怎么开发的。那既然是广告信，肯定需要一个 模板，然后再从数据库中把客户的信息一个一个地取出，放到模板中生成一份完整的邮件， 然后扔给发送机进行发送处理，类图如图13-1所示。 
+
+在类图中AdvTemplate是广告信的模板，一般都是从数据库取出，生成一个BO或者是 DTO，我们这里使用一个静态的值来作代表；Mail类是一封邮件类，发送机发送的就是这个 类。我们先来看AdvTemplate，如代码清单13-1所示。
+
+
+
+![图13-1 发送电子账单类图](./images/Java-DesignPatterns/Send_e-bill_class_diagram.png)
+
+
+
+
+
+代码清单13-1 广告信模板代码
+
+```java
+public class AdvTemplate {
+  //广告信名称
+  private String advSubject ="XX银行国庆信用卡抽奖活动";
+  //广告信内容
+  private String advContext = "国庆抽奖活动通知：只要刷卡就送你一百万！...";
+  //取得广告信的名称
+  public String getAdvSubject(){
+    return this.advSubject;
+  }
+  //取得广告信的内容
+  public String getAdvContext(){
+    return this.advContext;
+  }
+}
+```
+
+代码清单13-2 邮件类代码
+
+```java
+public class Mail {
+  //收件人
+  private String receiver;
+  //邮件名称
+  private String subject;
+  //称谓
+  private String appellation;
+  //邮件内容
+  private String contxt;
+  //邮件的尾部，一般都是加上"XXX版权所有"等信息
+  private String tail;
+  //构造函数
+  public Mail(AdvTemplate advTemplate){
+    this.contxt = advTemplate.getAdvContext();
+    this.subject = advTemplate.getAdvSubject();
+  }
+  //省略getter/setter方法
+ 
+}
+```
+
+
+
+Mail类就是一个业务对象，虽然比较长，还是比较简单的。我们再来看业务场景类是如 何对邮件继续处理的，如代码清单11-3所示。
+
+代码清单13-3 场景类
+
+```java
+public class Client {
+  //发送账单的数量，这个值是从数据库中获得
+  private static int MAX_COUNT = 6;
+  public static void main(String[] args) {
+    //模拟发送邮件
+    int i=0;
+    //把模板定义出来，这个是从数据库中获得
+    Mail mail = new Mail(new AdvTemplate());
+    mail.setTail("XX银行版权所有");
+    while(i<MAX_COUNT){
+      //以下是每封邮件不同的地方
+      mail.setAppellation(getRandString(5)+" 先生（女士）");
+      mail.setReceiver(getRandString(5)+"@"+getRandString(8) +".com");
+      //然后发送邮件
+      sendMail(mail);
+      i++;
+    }
+  }
+  
+  //发送邮件
+  public static void sendMail(Mail mail){
+    System.out.println("标题："+mail.getSubject() + "\t收件人："+mail.getReceiver()+"\t...发送成功！");
+  }
+  
+  //获得指定长度的随机字符串
+  public static String getRandString(int maxLength){
+    String source ="abcdefghijklmnopqrskuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    StringBuffer sb = new StringBuffer();
+    Random rand = new Random();
+    for(int i=0;i<maxLength;i++){
+      sb.append(source.charAt(rand.nextInt(source.length())));
+    }
+    return sb.toString();
+  }
+}
+```
+
+
+
+运行结果如下所示：
+
+::: info 运行结果
+
+标题：XX银行国庆信用卡抽奖活动 收件人：fjQUm@ZnkyPSsL.com ...发送成功！ 
+
+标题：XX银行国庆信用卡抽奖活动 收件人：ZIKnC@NOKdloNM.com ...发送成功！ 
+
+标题：XX银行国庆信用卡抽奖活动 收件人：zNkMI@HpMMSZaz.com ...发送成功！ 
+
+标题：XX银行国庆信用卡抽奖活动 收件人：oMTFA@uBwkRjxa.com ...发送成功！ 
+
+标题：XX银行国庆信用卡抽奖活动 收件人：TquWT@TLLVNFja.com ...发送成功！ 
+
+标题：XX银行国庆信用卡抽奖活动 收件人：rkQbp@mfATHDQH.com ...发送成功！
+
+:::
+
+
+
+由于是随机数，每次运行都有所差异，不管怎么样，我们这个电子账单发送程序是编写 出来了，也能正常发送。我们再来仔细地想想，这个程序是否有问题？Look here，这是一个 线程在运行，也就是你发送的是单线程的，那按照一封邮件发出去需要0.02秒（够小了，你 还要到数据库中取数据呢），600万封邮件需要33个小时，也就是一个整天都发送不完，今 天的没发送完，明天的账单又产生了，日积月累，激起甲方人员一堆抱怨，那怎么办？ 
+
+
+
+好办，把sendMail修改为多线程，但是只把sendMail修改为多线程还是有问题的呀，产 生第一封邮件对象，放到线程1中运行，还没有发送出去；线程2也启动了，直接就把邮件对 象mail的收件人地址和称谓修改掉了，线程不安全了。说到这里，你会说这有N多种解决办 法，其中一种是使用一种新型模式来解决这个问题：通过对象的复制功能来解决这个问题， 类图稍做修改，如图13-2所示。
+
+
+
+
+
+![图13-2 修改后的发送电子账单类图](./images/Java-DesignPatterns/Modified_diagram_of_sending_electronic_bills.jpg)
+
+
+
+增加了一个`Cloneable接口`（Java自带的一个接口）， Mail实现了这个接口，在Mail类中 覆写`clone()`方法，我们来看Mail类的改变，如代码清单13-4所示。
+
+
+
+代码清单13-4 修改后的邮件类
+
+```java {18-28}
+public class Mail implements Cloneable{
+  //收件人
+  private String receiver;
+  //邮件名称
+  private String subject;
+  //称谓
+  private String appellation;
+  //邮件内容
+  private String contxt;
+  //邮件的尾部，一般都是加上"XXX版权所有"等信息
+  private String tail;
+  //构造函数
+  public Mail(AdvTemplate advTemplate){
+    this.contxt = advTemplate.getAdvContext();
+    this.subject = advTemplate.getAdvSubject();
+  }
+
+  @Override
+  public Mail clone(){
+    Mail mail =null;
+    try {
+      mail = (Mail)super.clone();
+    } catch (CloneNotSupportedException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+    return mail;
+  }
+}
+```
+
+注意看粗体部分，实现了一个接口，并重写了`clone`方法，大家可能看着这个类有点奇 怪，先保留你的好奇，我们继续讲下去，稍后会给你清晰的答案。我们再来看场景Client的 变化，如代码清单13-5所示。
+
+
+
+代码清单13-5 修改后的场景类
+
+```java
+public class Client {
+  //发送账单的数量，这个值是从数据库中获得
+  private static int MAX_COUNT = 6;
+  public static void main(String[] args) {
+    //模拟发送邮件
+    int i=0;
+    //把模板定义出来，这个是从数据中获得
+    Mail mail = new Mail(new AdvTemplate());
+    mail.setTail("XX银行版权所有");
+    while(i<MAX_COUNT){
+      //以下是每封邮件不同的地方
+      Mail cloneMail = mail.clone();
+      cloneMail.setAppellation(getRandString(5)+" 先生（女士）");
+      cloneMail.setReceiver(getRandString(5)+"@"+getRandString(8)+".com");
+      //然后发送邮件
+      sendMail(cloneMail);
+      i++;
+    }
+  }
+}
+```
+
+
+
+运行结果不变，一样完成了电子广告信的发送功能，而且sendMail即使是多线程也没有 关系。注意，看Client类中的粗体字mail.clone()这个方法，把对象复制一份，产生一个新的 对象，和原有对象一样，然后再修改细节的数据，如设置称谓、设置收件人地址等。这种不 通过new关键字来产生一个对象，而是通过对象复制来实现的模式就叫做原型模式。
+
+
+
+原型模式的核心是一个`clone`方法，通过该方法进行对象的拷贝，Java 提供了一个`Cloneable接口`来标示这个对象是`可拷贝的`，为什么说是“标示”呢？翻开JDK的帮助看看Cloneable是一个方法都没有的，这个接口只是一个`标记作用`，在JVM中具有这个标记 的对象才有可能被拷贝。那怎么才能从“有可能被拷贝”转换为“可以被拷贝”呢？方法是`覆盖 clone()`方法，是的，你没有看错是`重写clone()`方法，看看我们上面Mail类中的clone方法，如 代码清单13-6所示。
+
+```java
+@Override
+public Mail clone(){}
+```
+
+
+
+注意，在clone()方法上增加了一个注解@Override，没有继承一个类为什么可以覆写 呢？想想看，在Java中所有类的老祖宗是谁？对嘛，Object类，每个类默认都是继承了这个 类，所以用覆写是非常正确的——覆写了Object类中的clone方法！ 在Java中原型模式是如此简单，我们来看通用源代码，如代码清单13-7所示。
+
+```java
+public class PrototypeClass implements Cloneable{
+  //覆写父类Object方法
+  @Override
+  public PrototypeClass clone(){
+    PrototypeClass prototypeClass = null;
+    try {
+      prototypeClass = (PrototypeClass)super.clone();
+    } catch (CloneNotSupportedException e) {
+      //异常处理
+    }
+    return prototypeClass;
+  }
+}
+```
+
+
+
