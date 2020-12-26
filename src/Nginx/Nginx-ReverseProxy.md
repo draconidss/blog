@@ -72,3 +72,39 @@ Nginx在做反向代理时，提供性能稳定，并且能够提供配置灵活
 **正向代理是为客户端代理，反向代理是为服务端代理。**
 
 :::
+
+
+
+
+
+## 使用
+
+
+
+在`location块`中设置
+
+```json
+proxy_pass http://47.100.59.153:8080/;
+```
+
+
+
+```json
+server {
+    listen       80;
+    listen  [::]:80;
+    server_name  localhost;
+    
+		#基于反向代理到8080端口的tomcat服务器
+    location / {
+      proxy_pass http://47.100.59.153:8080/;
+    
+    }
+
+#    location / {
+#       root   /usr/share/nginx/html;
+#       index  index.html index.htm;
+#   }
+}
+```
+
