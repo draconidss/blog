@@ -208,7 +208,7 @@ module.exports = config({
           title: "Nginx",
           icon: "creative",
           prefix: "Nginx/",
-          children: ["", "Nginx-basicNote"],
+          children: ["", "Nginx-basicNote&deployment", "Nginx-LoadBalance", "Nginx-ReverseProxy"],
         },
 
         {

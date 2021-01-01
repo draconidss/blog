@@ -8,3 +8,8 @@ categories:
 ---
 
 
+- [Nginx基础笔记和安装配置](Nginx-basicNote&deployment)
+
+- [Nginx-负载均衡](Nginx-LoadBalance)
+
+- [Nginx-反向代理](Nginx-ReverseProxy)

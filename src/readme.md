@@ -16,9 +16,9 @@ project:
     link: My-Project
 
   - type: link
-    name: link name
-    desc: link detailed description
-    link: link address
+    name: 学习笔记
+    desc: 学习笔记目录
+    link: category/学习笔记
 
   - type: book
     name: book name
