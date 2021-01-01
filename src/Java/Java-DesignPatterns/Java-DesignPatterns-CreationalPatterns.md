@@ -1,15 +1,14 @@
 ---
 icon: 
-title: Java-设计模式
+title: 设计模式之创建型设计模式
 author: LifeAlsoIsGG
-time: 2020-08-09 23:57:52
+time: 2020-08-09 23:20:52
 description: 
 original: true
 image: 
 categories: 
   - Java
 tags: 
-  - 学习笔记
   - Java
   - Java设计模式
 ---
@@ -20,85 +19,13 @@ tags:
 
 ## 参考
 
+
+
 ::: tip 参考
 
 - https://www.runoob.com/design-pattern/design-pattern-intro.html
 - http://c.biancheng.net/view/1317.html
-- [设计模式之禅](https://cvws.icloud-content.com/B/AR_b41lQQbpGPKyDB2Cth7r_vzK3AaG4oUO4-A2dCnzqHATZcEgMSX-w/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%A6%85%E7%AC%AC%E4%BA%8C%E7%89%88.pdf?o=AqqTzisQ7qza5HyaDpFK6nPLonlFUQlVCk4i83IgM_Y8&v=1&x=3&a=CAoggWUx_-r41kyr2qnEnThp5TvL8LKkNGxY8lWYgwDGJJ0SbxCClJzV6C4YoovT1eguIgEAUgT_vzK3WgQMSX-waieVpjAqRUYfbXMyrkNCquWDdGrI6Lo3AggGoP7erhSrfoP04YytaVNyJ5V4IpSm5FvZhfGMeo-c561APVqoRrSyfG1hhkWv4zKBn8nvuyFExg&e=1608644871&fl=&r=8fed9b67-821e-4f58-a569-911f2f3cf0a1-1&k=95_8IK-mvZCdf0XwVvXk0Q&ckc=com.apple.clouddocs&ckz=com.apple.CloudDocs&p=54&s=F2kLuap5gtmmYNfbS88_bjogegU&cd=i)
-
-:::
-
-
-
-
-## 1. 总览
-
-
-
-
-
-根据设计模式的参考书 **Design Patterns - Elements of Reusable Object-Oriented Software（中文译名：设计模式 - 可复用的面向对象软件元素）** 中所提到的，总共有 23 种设计模式。这些模式可以分为三大类：创建型模式（Creational Patterns）、结构型模式（Structural Patterns）、行为型模式（Behavioral Patterns）。当然，我们还会讨论另一类设计模式：J2EE 设计模式。
-
-
-
-- **创建型模式**
-
-  > 这些设计模式提供了一种在创建对象的同时隐藏创建逻辑的方式，而不是使用 new 运算符直接实例化对象。这使得程序在判断针对某个给定实例需要创建哪些对象时更加灵活。
-
-  
-
-- **结构型模式**
-
-  > 这些设计模式关注类和对象的组合。继承的概念被用来组合接口和定义组合对象获得新功能的方式。
-
-  
-
-- **行为型模式**
-
-  > 这些设计模式特别关注对象之间的通信。
-
-  
-
-- **J2EE 模式**
-
-  > 这些设计模式特别关注表示层。这些模式是由 Sun Java Center 鉴定的。
-
-
-
-### 1.1 创建型模式
-
-这些设计模式提供了一种在创建对象的同时隐藏创建逻辑的方式，而不是使用 new 运算符直接实例化对象。这使得程序在判断针对某个给定实例需要创建哪些对象时更加灵活。
-
-
-
-::: info 创建型模式
-
-- 工厂模式（Factory Pattern）
-- 抽象工厂模式（Abstract Factory Pattern）
-- 单例模式（Singleton Pattern）
-- 建造者模式（Builder Pattern）
-- 原型模式（Prototype Pattern）
-
-:::
-
-
-
-### 1.2 结构型模式
-
-这些设计模式关注类和对象的组合。继承的概念被用来组合接口和定义组合对象获得新功能的方式。
-
-
-
-::: info 结构型模式
-
-- 适配器模式（Adapter Pattern）
-- 桥接模式（Bridge Pattern）
-- 过滤器模式（Filter、Criteria Pattern）
-- 组合模式（Composite Pattern）
-- 装饰器模式（Decorator Pattern）
-- 外观模式（Facade Pattern）
-- 享元模式（Flyweight Pattern）
-- 代理模式（Proxy Pattern）
+- [设计模式之禅](TheZen0fDesignPattern_2.pdf)
 
 :::
 
@@ -106,418 +33,9 @@ tags:
 
 
 
-### 1.3 行为型模式
 
-这些设计模式特别关注对象之间的通信。
 
-
-
-::: info 行为型模式
-
-- 责任链模式（Chain of Responsibility Pattern）
-- 命令模式（Command Pattern）
-- 解释器模式（Interpreter Pattern）
-- 迭代器模式（Iterator Pattern）
-- 中介者模式（Mediator Pattern）
-- 备忘录模式（Memento Pattern）
-- 观察者模式（Observer Pattern）
-- 状态模式（State Pattern）
-- 空对象模式（Null Object Pattern）
-- 策略模式（Strategy Pattern）
-- 模板模式（Template Pattern）
-- 访问者模式（Visitor Pattern）
-
-:::
-
-
-
-
-
-### 1.4 J2EE 模式
-
-这些设计模式特别关注表示层。这些模式是由 Sun Java Center 鉴定的。
-
-
-
-::: info J2EE 模式
-
-- MVC 模式（MVC Pattern）
-- 业务代表模式（Business Delegate Pattern）
-- 组合实体模式（Composite Entity Pattern）
-- 数据访问对象模式（Data Access Object Pattern）
-- 前端控制器模式（Front Controller Pattern）
-- 拦截过滤器模式（Intercepting Filter Pattern）
-- 服务定位器模式（Service Locator Pattern）
-- 传输对象模式（Transfer Object Pattern）
-
-:::
-
-
-
-
-
-## 2. 六大设计原则
-
-::: tip 参考
-
-[六大设计原则](https://so.csdn.net/so/search/blog?q=%E5%85%AD%E5%A4%A7%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99&t=blog&p=1&s=0&tm=0&lv=-1&ft=0&l=&u=hfreeman2008)
-
-:::
-
-![六大设计原则](./images/Java-DesignPatterns/The_six_design_principles.jpg)
-
-
-
-### 2.1 开闭原则(Open Closed Principle,OCP)
-
-
-
-::: tip 参考
-
-- http://c.biancheng.net/view/1322.html
-- [六大设计原则之开闭原则](https://blog.csdn.net/hfreeman2008/article/details/52344022?ops_request_misc=%25257B%252522request%25255Fid%252522%25253A%252522160853876616780261982313%252522%25252C%252522scm%252522%25253A%25252220140713.130102334.pc%25255Fblog.%252522%25257D&request_id=160853876616780261982313&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v29-4-52344022.pc_v2_rank_blog_default&utm_term=%E5%85%AD%E5%A4%A7%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99)
-
-:::
-
-
-
-
-
-#### 2.1.1 介绍
-
-`开闭原则（Open Closed Principle，OCP）`由勃兰特·梅耶（Bertrand Meyer）提出，他在 1988 年的著作《面向对象软件构造》（Object Oriented Software Construction）中提出：
-
-::: info 定义
-
-Software entities should be open for extension，but closed for modification。
-
-(一个软件实体如类，模块和函数应该对扩展开放，对修改关闭)
-
-:::
-
-
-
-开闭原则明确的告诉我们：软件实现应该对扩展开放，对修改关闭，其含义是说一个软件实体应该通过扩展来实现变化，而不是通过修改已有的代码来实现变化的。那什么是软件实体呢？这里的软件实体包括以下几个部分：
-
-
-
-::: info 软件实体
-
-1. 项目中划分出的模块
-2. 类与接口
-3. 方法
-
-:::
-
-
-
-开闭原则的含义是
-
-::: tip 开闭原则的含义
-
-当应用的需求改变时，在不修改软件实体的源代码或者二进制代码的前提下，可以扩展模块的功能，使其满足新的需求。一个软件产品只要在生命周期内，都会发生变化，即然变化是一个事实，我们就应该在设计时尽量适应这些变化，以提高项目的稳定性和灵活性，真正实现“拥抱变化”。开闭原则告诉我们应尽量通过扩展软件实体的行为来实现变化，而不是通过修改现有代码来完成变化，它是为软件实体的未来事件而制定的对现行开发设计进行约束的一个原则。
-
-:::
-
-
-
-#### 2.1.2 作用
-
-开闭原则是面向对象程序设计的终极目标，它使软件实体拥有一定的适应性和灵活性的同时具备稳定性和延续性。具体来说，其作用如下。
-
-::: info 作用
-
-1. **对软件测试的影响**：
-
-   软件遵守开闭原则的话，软件测试时`只需要对扩展的代码进行测试`就可以了，因为原有的测试代码仍然能够正常运行。
-
-2. **可以提高代码的可复用性**：
-
-   粒度越小，被复用的可能性就越大；在面向对象的程序设计中，根据原子和抽象编程可以提高代码的可复用性。
-
-3. **可以提高软件的可维护性**：
-
-   遵守开闭原则的软件，其稳定性高和延续性强，从而易于扩展和维护。
-
-:::
-
-
-
-
-
-#### 2.1.3 示例
-
-以书店销售书籍为例，其类图如下：
-
-
-
-![开闭原则示例](./images/Java-DesignPatterns/OpenClosedPrincipleDemo.jpg)
-
-
-
-书籍接口
-
-```java
-public interface IBook{
-  public String getName();
-  public String getPrice();
-  public String getAuthor();
-}
-```
-
-小说类书籍：
-
-```java
-public class NovelBook implements IBook{
-   private String name;
-   private int price;
-   private String author;
-
-   public NovelBook(String name,int price,String author){
-     this.name = name;
-     this.price = price;
-     this.author = author;
-   }
-
-   public String getAutor(){
-     return this.author;
-   }
-
-   public String getName(){
-     return this.name;
-   }  
-
-   public int getPrice(){
-     return this.price;
-   } 
-}
-```
-
-
-
-Client类：
-
-```java
-public class Client{
-   public static void main(Strings[] args){
-     IBook novel = new NovelBook("笑傲江湖",100,"金庸");
-     System.out.println("书籍名字："+novel.getName()+"书籍作者："+novel.getAuthor()+"书籍价格："+novel.getPrice());
-   }
-
-}
-```
-
-项目投产生，书籍正常销售，但是我们经常因为各种原因，要打折来销售书籍，这是一个变化，我们要如何应对这样一个需求变化呢？
-
-我们有下面三种方法可以解决此问题：
-
-::: info 解决方案
-
-- **修改接口**
-  在IBook接口中，增加一个方法getOffPrice(),专门用于进行打折处理，所有的实现类实现此方法。但是这样的一个修改方式，实现类NovelBook要修改，同时IBook接口应该是稳定且可靠，不应该经常发生改变，否则接口作为契约的作用就失去了。因此，此方案否定。
-- **修改实现类**
-  修改NovelBook类的方法，直接在getPrice()方法中实现打折处理。此方法是有问题的，例如我们如果getPrice()方法中只需要读取书籍的打折前的价格呢？这不是有问题吗？当然我们也可以再增加getOffPrice()方法，这也是可以实现其需求，但是这就有二个读取价格的方法，因此，该方案也不是一个最优方案。
-- **通过扩展实现变化**
-  我们可以增加一个子类OffNovelBook,覆写getPrice方法。此方法修改少，对现有的代码没有影响，风险少，是个好办法。
-
-:::
-
-
-
-![修改后的类图](./images/Java-DesignPatterns/OpenClosedPrincipleDemo_2.jpg)
-
-
-
-打折类：
-
-```java
-public class OffNovelBook extends NovelBook{
-
-   public OffNovelBook(String name,int price,String author){
-      super(name,price,author);
-   }
-
-   //覆写价格方法，当价格大于40，就打8析，其他价格就打9析
-   public int getPrice(){
-     if(this.price > 40){
-        return this.price * 0.8;
-     }else{
-        return this.price * 0.9;
-     }     
-   } 
-}
-```
-
-
-
-
-
-
-
-#### 2.1.4 实现方法
-
-第一：**抽象约束**
-抽象是对一组事物的通用描述，没有具体的实现，也就表示它可以有非常多的可能性，可以跟随需求的变化而变化。因此，通过接口或抽象类可以约束一组可能变化的行为，并且能够实现对扩展开放，其包含三层含义：
-
-- 通过接口或抽象类约束扩散，对扩展进行边界限定，不允许出现在接口或抽象类中不存在的public方法。
-- 参数类型，引用对象尽量使用接口或抽象类，而不是实现类，这主要是实现里氏替换原则的一个要求
-- 抽象层尽量保持稳定，一旦确定就不要修改
-
-
-
-
-
-第二：**元数据(metadata)控件模块行为**
-编程是一个很苦很累的活，那怎么才能减轻压力呢？答案是尽量使用元数据来控制程序的行为，减少重复开发。什么是元数据？用来描述环境和数据的数据，通俗的说就是配置参数，参数可以从文件中获得，也可以从数据库中获得。
-
-
-
-第三：**制定项目章程**
-在一个团队中，建立项目章程是非常重要的，因为章程是所有人员都必须遵守的约定，对项目来说，约定优于配置。这比通过接口或抽象类进行约束效率更高，而扩展性一点也没有减少。
-
-
-
-第四：**封装变化**
-对变化封装包含两层含义：
-(1)将相同的变化封装到一个接口或抽象类中
-(2)将不同的变化封装到不同的接口或抽象类中，不应该有两个不同的变化出现在同一个接口或抽象类中。
-封装变化，也就是受保护的变化，找出预计有变化或不稳定的点，我们为这些变化点创建稳定的接口。
-
-
-
-
-
-### 2.2 依赖倒置原则(Dependency Inversion Principle,DIP)
-
-::: tip 参考
-
-[六大设计原则之依赖倒置原则](https://blog.csdn.net/hfreeman2008/article/details/52289571?ops_request_misc=%25257B%252522request%25255Fid%252522%25253A%252522160853876616780261982313%252522%25252C%252522scm%252522%25253A%25252220140713.130102334.pc%25255Fblog.%252522%25257D&request_id=160853876616780261982313&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v29-2-52289571.pc_v2_rank_blog_default&utm_term=%E5%85%AD%E5%A4%A7%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99)
-
-:::
-
-
-
-#### 2.2.1 介绍
-
-依赖倒置原则(Dependence Inversion Principle ,DIP)定义如下：
-
-::: info 定义
-
-**High level modules should not depend upon low level modules,Both should depend upon abstractions.Abstractions should not depend upon details.Details should depend upon abstracts.**
-
-:::
-
-
-
-翻译过来为：
-
-::: info 
-
-- 高层模块不应该依赖低层模块，两者都应该依赖抽象
-- 抽象不应该依赖细节
-- 细节应该依赖抽象
-
-:::
-
-
-
-**也可以说高层模块，低层模块，细节都应该依赖抽象**
-
-::: info
-
-每一个逻辑的实现都是由颗粒原子逻辑组成的，颗粒原子逻辑就是低层模块，而颗粒原子逻辑组成的模块就是高层模块。在java语言中，抽象就是接口或抽象类，两都都是不能直接被实例化的，细节就是实现类，实现接口或继承抽象类而产生的类就是细节，两者都可以直接被实例化。
-
-:::
-
-
-
-依赖倒置原则在java语言中，表现是：
-
-::: info
-
-- 模块间的依赖通过抽象发生，实现类之间不发生直接的依赖关系，其依赖关系是通过接口或抽象类产生的。
-- 接口或抽象类不依赖实现类
-- 实现类依赖接口或抽象类
-
-:::
-
-
-
-更加精简的定义就是“面向接口编程”—OOD(Object-Oriented Design，面向对象设计)的精髓之一。
-
-
-
-
-
-#### 2.2.2 好处
-
-采用依赖倒置原则可以减少类间的耦合性，提高系统的稳定，降低并行开发引起的风险，提高代码的可读性和可维护性。
-
-
-
-
-
-### 2.3 迪米特原则(Law of Demeter,LoD)
-
-::: tip 参考
-
-[六大设计原则之迪米特原则](https://blog.csdn.net/hfreeman2008/article/details/52335601?ops_request_misc=%25257B%252522request%25255Fid%252522%25253A%252522160862280716780257419145%252522%25252C%252522scm%252522%25253A%25252220140713.130102334.pc%25255Fblog.%252522%25257D&request_id=160862280716780257419145&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v29-3-52335601.pc_v2_rank_blog_default&utm_term=%E5%85%AD%E5%A4%A7%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99)
-
-:::
-
-
-
-#### 2.3.1 介绍
-
-迪米特原则(Law of Demeter,LoD)，也叫最少知识原则(Low knowledge Principle,LKP):
-
-**一个对象应该对其他对象有最少的了解。**
-
-通俗的讲：一个类对自己需要耦合或调用的类知道的最少，你(被耦合或调用的类)的内部是如何复杂和我没有关系，我就知道你提供的public方法，我只调用这些方法，其它的我不关心。
-
-
-
-
-
-### 2.4 里氏替换原则(Liskov Substitution Principle,LSP)
-
-::: tip 参考
-
-[六大设计原则之里氏替换原则](https://blog.csdn.net/hfreeman2008/article/details/52344343?ops_request_misc=%25257B%252522request%25255Fid%252522%25253A%252522160862280716780257419145%252522%25252C%252522scm%252522%25253A%25252220140713.130102334.pc%25255Fblog.%252522%25257D&request_id=160862280716780257419145&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v29-1-52344343.pc_v2_rank_blog_default&utm_term=%E5%85%AD%E5%A4%A7%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99)
-
-:::
-
-
-
-
-
-### 2.5 单一职责原则(Single Responsibility Principle,SPR)
-
-::: tip 参考
-
-[六大设计原则之单一职责原则](https://blog.csdn.net/hfreeman2008/article/details/52234287?ops_request_misc=%25257B%252522request%25255Fid%252522%25253A%252522160862280716780257419145%252522%25252C%252522scm%252522%25253A%25252220140713.130102334.pc%25255Fblog.%252522%25257D&request_id=160862280716780257419145&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v29-6-52234287.pc_v2_rank_blog_default&utm_term=%E5%85%AD%E5%A4%A7%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99)
-
-:::
-
-
-
-
-
-### 2.6 接口隔离原则
-
-::: tip 参考
-
-[六大设计原则之接口隔离原则](https://blog.csdn.net/hfreeman2008/article/details/52304172?ops_request_misc=%25257B%252522request%25255Fid%252522%25253A%252522160862280716780257419145%252522%25252C%252522scm%252522%25253A%25252220140713.130102334.pc%25255Fblog.%252522%25257D&request_id=160862280716780257419145&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v29-5-52304172.pc_v2_rank_blog_default&utm_term=%E5%85%AD%E5%A4%A7%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99)
-
-:::
-
-
-
-
-
-
-
-## 3. 单例模式（创建型模式）
+## 1. 单例模式（创建型模式）
 
 `创建型模式`
 
@@ -547,7 +65,7 @@ public class OffNovelBook extends NovelBook{
 
 
 
-### 3.1 步骤
+### 1.1 步骤
 
 
 
@@ -606,7 +124,7 @@ public class SingletonPatternDemo {
 
 
 
-### 3.2 懒汉式，线程不安全
+### 1.2 懒汉式，线程不安全
 
 
 
@@ -640,7 +158,7 @@ public class Singleton {
 
 
 
-### 3.3 懒汉式，线程安全
+### 1.3 懒汉式，线程安全
 
 
 
@@ -673,7 +191,7 @@ public class Singleton {
 
 
 
-### 3.4 饿汉式
+### 1.4 饿汉式
 
 | 名称             | 描述 |
 | ---------------- | ---- |
@@ -727,7 +245,7 @@ public class Singleton_Hungry {
 
 
 
-### 3.5 双重校验锁懒汉式（DCL，即 double-checked locking）
+### 1.5 双重校验锁懒汉式（DCL，即 double-checked locking）
 
 
 
@@ -778,7 +296,7 @@ public class Singleton {
 
 
 
-### 3.6 静态内部类
+### 1.6 静态内部类
 
 参考
 
@@ -834,7 +352,7 @@ public class Singleton{
 
 
 
-### 3.7 枚举式
+### 1.7 枚举式
 
 ```java
 public enum SingleTon{
@@ -859,7 +377,7 @@ SingleTon.INSTANCE
 
 
 
-## 4. 工厂/抽象工厂模式（创建型模式）
+## 2. 工厂/抽象工厂模式（创建型模式）
 
 `创建型模式`
 
@@ -897,7 +415,7 @@ SingleTon.INSTANCE
 
 
 
-## 5. 建造者模式（创建型模式）
+## 3. 建造者模式（创建型模式）
 
 `创建型模式`
 
@@ -912,7 +430,7 @@ SingleTon.INSTANCE
 
 
 
-### 5.1 介绍
+### 3.1 介绍
 
 
 
@@ -1018,9 +536,9 @@ SingleTon.INSTANCE
 
 
 
-### 5.2 原理
+### 3.2 原理
 
-![建造者模式UML类图](./images/Java-DesignPatterns/builder.png)
+![建造者模式UML类图](./images/Java-DesignPatterns-CreationalPatterns/builder.png)
 
 
 
@@ -1036,7 +554,7 @@ SingleTon.INSTANCE
 
 
 
-### 5.3 案例
+### 3.3 案例
 
 用 builder 模式创建`共享单车`为例子，示例代码：
 
@@ -1198,7 +716,7 @@ public class Client {
 
 
 
-### 5.4 使用静态内部类Build
+### 3.4 使用静态内部类Build
 
 当一个类构造器需要传入很多参数时，如果创建这个类的实例，代码可读性会非常差，而且很容易引入错误，此时就可以利用 builder模式进行重构，插件`lombok`的注解`@Builder`也是同样原理，重构的代码如下：
 
@@ -1293,7 +811,7 @@ BikeWithBuild bikeWithBuild = BikeWithBuild.builder()
 
 
 
-### 5.5 建造者模式与抽象工厂模式的比较
+### 3.5 建造者模式与抽象工厂模式的比较
 
 
 
@@ -1309,7 +827,7 @@ BikeWithBuild bikeWithBuild = BikeWithBuild.builder()
 
 
 
-## 6. 原型模式（创建型模式）
+## 4. 原型模式（创建型模式）
 
 `创建型模式`
 
@@ -1331,13 +849,13 @@ Specify the kinds of objects to create using a prototypical instance,and create 
 
 
 
-![图13-3 原型模式的通用类图](./images/Java-DesignPatterns/General_class_diagram_of_the_prototype_pattern.jpg)
+![图13-3 原型模式的通用类图](./images/Java-DesignPatterns-CreationalPatterns/General_class_diagram_of_the_prototype_pattern.jpg)
 
 
 
 
 
-### 6.1 介绍
+### 4.1 介绍
 
 
 
@@ -1394,7 +912,7 @@ Specify the kinds of objects to create using a prototypical instance,and create 
 
 
 
-### 6.2 优点
+### 4.2 优点
 
 ::: info 优点
 
@@ -1412,7 +930,7 @@ Specify the kinds of objects to create using a prototypical instance,and create 
 
 
 
-### 6.3 使用场景
+### 4.3 使用场景
 
 ::: info 使用场景
 
@@ -1426,7 +944,7 @@ Specify the kinds of objects to create using a prototypical instance,and create 
 
 
 
-### 6.4 示例
+### 4.4 示例
 
 现在电子账单越来越流行了，比如你的信用卡，每到月初的时候银行就会发一份电子邮 件给你，说你这个月消费了多少，什么时候消费的，积分是多少等，这是每个月发一次。还 有一种也是银行发的邮件你肯定非常有印象：广告信，现在各大银行的信用卡部门都在拉拢 客户，电子邮件是一种廉价、快捷的通信方式，你用纸质的广告信那个费用多高呀，比如我 行今天推出一个信用卡刷卡抽奖活动，通过电子账单系统可以一个晚上发送给600万客户， 为什么要用电子账单系统呢？直接找个发垃圾邮件的工具不就解决问题了吗？是个好主意， 但是这个方案在金融行业是行不通的，为什么？因为银行发送该类邮件是有要求的： 
 
@@ -1450,7 +968,7 @@ Specify the kinds of objects to create using a prototypical instance,and create 
 
 
 
-![图13-1 发送电子账单类图](./images/Java-DesignPatterns/Send_e-bill_class_diagram.png)
+![图13-1 发送电子账单类图](./images/Java-DesignPatterns-CreationalPatterns/Send_e-bill_class_diagram.png)
 
 
 
@@ -1575,7 +1093,7 @@ public class Client {
 
 
 
-![图13-2 修改后的发送电子账单类图](./images/Java-DesignPatterns/Modified_diagram_of_sending_electronic_bills.jpg)
+![图13-2 修改后的发送电子账单类图](./images/Java-DesignPatterns-CreationalPatterns/Modified_diagram_of_sending_electronic_bills.jpg)
 
 
 
@@ -1678,6 +1196,7 @@ public class PrototypeClass implements Cloneable{
   }
 }
 ```
+
 
 
 

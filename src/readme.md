@@ -18,7 +18,7 @@ project:
   - type: link
     name: 学习笔记
     desc: 学习笔记目录
-    link: category/学习笔记
+    link: category/学习笔记/
 
   - type: book
     name: book name
