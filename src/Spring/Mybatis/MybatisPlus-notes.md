@@ -258,3 +258,42 @@ mybatis-plus:
 
 
 
+### 2.1 @TableName
+
+> 描述：表名注解
+
+|       属性       |   类型   | 必须指定 | 默认值 | 描述                                                         |
+| :--------------: | :------: | :------: | :----: | ------------------------------------------------------------ |
+|      value       |  String  |    否    |   ""   | 表名                                                         |
+|      schema      |  String  |    否    |   ""   | schema                                                       |
+| keepGlobalPrefix | boolean  |    否    | false  | 是否保持使用全局的 tablePrefix 的值(如果设置了全局 tablePrefix 且自行设置了 value 的值) |
+|    resultMap     |  String  |    否    |   ""   | xml 中 resultMap 的 id                                       |
+|  autoResultMap   | boolean  |    否    | false  | 是否自动构建 resultMap 并使用(如果设置 resultMap 则不会进行 resultMap 的自动构建并注入) |
+| excludeProperty  | String[] |    否    |   {}   | 需要排除的属性名(@since 3.3.1)                               |
+
+
+
+### 2.2 @TableId
+
+> 描述：主键注解
+
+| 属性  |  类型  | 必须指定 |   默认值    |    描述    |
+| :---: | :----: | :------: | :---------: | :--------: |
+| value | String |    否    |     ""      | 主键字段名 |
+| type  |  Enum  |    否    | IdType.NONE |  主键类型  |
+
+
+
+IdType
+
+|         值          | 描述                                                         |
+| :-----------------: | :----------------------------------------------------------- |
+|        AUTO         | 数据库ID自增。即使手动指定了Id，存入数据库还是按数据库字段最大值来自增 |
+|        NONE         | 无状态,该类型为未设置主键类型(注解里等于跟随全局,全局里约等于 INPUT)。MP set主键，使用雪花算法自动生成随机数 |
+|        INPUT        | insert前自行set主键值。                                      |
+|      ASSIGN_ID      | 分配ID(主键类型为Number(Long和Integer)或String)(since 3.3.0),使用接口`IdentifierGenerator`的方法`nextId`(默认实现类为`DefaultIdentifierGenerator`雪花算法) |
+|     ASSIGN_UUID     | 分配UUID,主键类型为String(since 3.3.0),使用接口`IdentifierGenerator`的方法`nextUUID`(默认default方法) |
+|   ID_WORKER(弃用)   | 分布式全局唯一ID 长整型类型(please use `ASSIGN_ID`)          |
+|     UUID(弃用)      | 32位UUID字符串(please use `ASSIGN_UUID`)                     |
+| ID_WORKER_STR(弃用) | 分布式全局唯一ID 字符串类型(please use `ASSIGN_ID`)          |
+
