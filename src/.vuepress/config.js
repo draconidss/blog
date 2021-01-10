@@ -176,7 +176,7 @@ module.exports = config({
               title: "Mybatis",
               icon: "creative",
               prefix: "Mybatis/",
-              children: ["Mybatis-basic-notes", "Mybatis-grammar-notes", "Mybatis-reverse-project&Example-use"]
+              children: ["Mybatis-basic-notes", "Mybatis-grammar-notes", "MybatisPlus-notes", "Mybatis-reverse-project&Example-use"]
             },
 
             {
@@ -214,7 +214,7 @@ module.exports = config({
           title: "Nginx",
           icon: "creative",
           prefix: "Nginx/",
-          children: ["", "Nginx-basicNote&deployment", "Nginx-LoadBalance", "Nginx-ReverseProxy"],
+          children: ["", "Nginx-basicNote&deployment", "Nginx-LoadBalance", "Nginx-ReverseProxy", "Nginx-Dynamic&static"],
         },
 
         {

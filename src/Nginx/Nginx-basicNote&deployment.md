@@ -17,10 +17,12 @@ tags:
 
 ::: tip 参考
 
+- [W3CSCHOOL-Nginx使用手册](https://www.w3cschool.cn/nginxsysc/)
 - [Nginx学习笔记 基于docker](https://blog.csdn.net/m0_49558851/article/details/107786372)
 - [当初我要是这么学习Nginx就好了！多图详解](https://www.jianshu.com/p/e90050dc89b6)
 - [搞懂Nginx一篇文章就够了](https://blog.csdn.net/yujing1314/article/details/107000737)
 - [Nginx 配置详解](https://www.runoob.com/w3cnote/nginx-setup-intro.html)
+- [nginx中文手册](https://www.nginx.cn/nginx-how-to)
 
 :::
 
@@ -202,9 +204,16 @@ docker-compose up -d
 
 
 
-## 配置文件
+## Nginx配置文件
 
 
+
+::: tip 参考
+
+- [nginx基本配置与参数说明](https://www.nginx.cn/76.html)
+- https://www.cnblogs.com/panchanggui/p/12067953.html
+
+:::
 
 
 
@@ -458,11 +467,7 @@ http {
 
 **`nginx.conf`详细配置示例**
 
-::: tip 参考
 
-- https://www.cnblogs.com/panchanggui/p/12067953.html
-
-:::
 
 
 
@@ -897,3 +902,25 @@ server {
 
 
 
+
+
+
+## Nginx集群
+
+单点故障，避免nginx的宕机，导致整个程序的崩溃
+
+
+
+准备
+
+::: info 准备
+
+- 准备多台Nginx
+- 准备`keepalived`，监听nginx的健康情况
+- 准备`haproxy`，提供一个虚拟的路径，统一的去接收用户的请求
+
+:::
+
+
+
+![nginx集群](./images/Nginx-basicNote&deployment/nginx-cluster.png)

@@ -11,7 +11,6 @@ tags:
 
 
 
-负载均衡
 
 
 
@@ -43,14 +42,20 @@ tags:
 | ------------------------- | ------------------------------------------------------------ |
 | round robin（轮询，默认） | 每个请求按`时间顺序逐一分配`到不同的后端服务，它均衡地对待后端的每一台服务器 |
 | weight（加权值轮询）      | 指定轮询几率，weight值(权重)和访问比例成正比，weight的值越大分配到的访问概率越高 |
-| least_conn（最小连接数）  | 最小连接数法根据后端服务器当前的连接情况，动态地选取其中当前积压连接数最少的一台服务器来处理当前的请求 |
+| least_conn（最小连接数）  | 最小连接数法根据后端服务器当前的连接情况，动态地选取其中当前`积压连接数最少`的一台服务器来处理当前的请求 |
 | ip_hash                   | 每个请求按`访问IP的哈希结果`分配，使来自同一个IP的访客固定访问一台后端服务器，并且可以有效解决动态网页存在的session共享问题。 |
-| fair                      | 比 weight、ip_hash更加智能的负载均衡算法，fair算法可以根据页面大小和加载时间长短智能地进行负载均衡，也就是根据`后端服务器的响应时间`来分配请求，响应时间短的优先分配。 |
+| fair                      | 比 weight、ip_hash更加智能的负载均衡算法，fair算法可以根据页面大小和加载时间长短智能地进行负载均衡，也就是根据`后端服务器的响应时间`来分配请求，`响应时间短`的优先分配。 |
 | url_hash                  | 按`访问的URL的哈希结果`来分配请求，使每个URL定向到一台后端服务器，可以进一步提高后端缓存服务器的效率。 |
 
 
 
+::: warning
 
+注意，`upstream`后面的名称不能带下划线,否则可能引起关键字冲突
+
+:::
+
+ 
 
 ### round robin（轮询，默认）
 
@@ -69,7 +74,13 @@ upstream backendserver {
   server 192.168.0.14：80 max_fails=2 fail_timeout=10s; 
   server 192.168.0.15：80 max_fails=2 fail_timeout=10s; 
 }
+
+location / {
+	proxy_pass http://backendserver/;
+}
 ```
+
+
 
 
 
@@ -91,6 +102,10 @@ upstream backendserver {
 upstream backendserver { 
   server 192.168.0.14:80 weight=5 max_fails=2 fail_timeout=10s; 
   server 192.168.0.15:80 weight=10 max_fails=2 fail_timeout=10s;
+}
+
+location / {
+	proxy_pass http://backendserver/;
 }
 ```
 
@@ -137,7 +152,7 @@ upstream backendserver {
 
 
 ```bash
-upstream backendserver { 
+upstream backendserver {
   ip_hash; 
   server 192.168.0.14:80 max_fails=2 fail_timeout=10s; 
   server 192.168.0.15:80 max_fails=2 fail_timeout=10s; 
@@ -184,7 +199,7 @@ upstream backendserver {
 
 按`访问的URL的哈希结果`来分配请求，使每个URL定向到一台后端服务器，可以进一步提高后端缓存服务器的效率。
 
-**适用于**：适用于后端服务器为缓存服务器时比较有效。
+**适用于**：适用于后端服务器为`缓存服务器`时比较有效。
 
 :::
 

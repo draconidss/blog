@@ -212,7 +212,7 @@ mybatis:
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
-            <version>1.2.10</version>
+            <version>1.3.0</version>
         </dependency>
 
         <!-- redis -->

@@ -49,6 +49,25 @@ Convert the interface of a class into another interface clients expect.Adapter l
 
 
 
+::: info 介绍
+
+- 意图：将一个类的接口转换成客户希望的另外一个接口。适配器模式使得原本由于接口不兼容而不能一起工作的那些类可以一起工作。
+- 主要解决：主要解决在软件系统中，常常要将一些"现存的对象"放到新的环境中，而新环境要求的接口是现对象不能满足的。
+- 何时使用： 1、系统需要使用现有的类，而此类的接口不符合系统的需要。 2、想要建立一个可以重复使用的类，用于与一些彼此之间没有太大关联的一些类，包括一些可能在将来引进的类一起工作，这些源类不一定有一致的接口。 3、通过接口转换，将一个类插入另一个类系中。（比如老虎和飞禽，现在多了一个飞虎，在不增加实体的需求下，增加一个适配器，在里面包容一个虎对象，实现飞的接口。）
+- 如何解决：继承或依赖（推荐）。
+- 关键代码：适配器继承或依赖已有的对象，实现想要的目标接口。
+- 应用实例： 1、美国电器 110V，中国 220V，就要有一个适配器将 110V 转化为 220V。 2、JAVA JDK 1.1 提供了 Enumeration 接口，而在 1.2 中提供了 Iterator 接口，想要使用 1.2 的 JDK，则要将以前系统的 Enumeration 接口转化为 Iterator 接口，这时就需要适配器模式。 3、在 LINUX 上运行 WINDOWS 程序。 4、JAVA 中的 jdbc。
+- 优点： 1、可以让任何两个没有关联的类一起运行。 2、提高了类的复用。 3、增加了类的透明度。 4、灵活性好。
+- 缺点： 1、过多地使用适配器，会让系统非常零乱，不易整体进行把握。比如，明明看到调用的是 A 接口，其实内部被适配成了 B 接口的实现，一个系统如果太多出现这种情况，无异于一场灾难。因此如果不是很有必要，可以不使用适配器，而是直接对系统进行重构。 2.由于 JAVA 至多继承一个类，所以至多只能适配一个适配者类，而且目标类必须是抽象类。
+- 使用场景：有动机地修改一个正常运行的系统的接口，这时应该考虑使用适配器模式。
+- 注意事项：适配器不是在详细设计时添加的，而是解决正在服役的项目的问题。
+
+:::
+
+
+
+
+
 适配器模式又叫做变压器模式，也叫做包装模式（Wrapper），但是包装模式可不止一 个，还包括了第17章讲解的装饰模式。适配器模式的通用类图，如图19-4所示。
 
 
@@ -142,11 +161,72 @@ public class Adaptee {
 
 
 
+我们的核心角色要出场了，适配器角色如代码清单19-11所示。 代码清单19-11 适配器角色
+
+```java
+public class Adapter extends Adaptee implements Target {
+  public void request() {
+    super.doSomething();
+  }
+}
+```
+
+
+
+所有的角色都已经在场了，那我们就开始看看这场演出，场景类如代码清单19-12所 示。
+
+```java
+public class Client {
+  public static void main(String[] args) {
+    //原有的业务逻辑
+    Target target = new ConcreteTarget();
+    target.request();
+    //现在增加了适配器角色后的业务逻辑
+    Target target2 = new Adapter();
+    target2.request();
+  }
+}
+```
 
 
 
 
-### 1.1 例子
+
+### 1.2 优点
+
+
+
+- 适配器模式可以让两个没有任何关系的类在一起运行，只要适配器这个角色能够搞定 他们就成。 
+
+- 增加了类的透明性
+
+  > 想想看，我们访问的Target目标角色，但是具体的实现都委托给了源角色，而这些对高层次模块是透明的，也是它不需要关心的。
+
+- 提高了类的复用度
+
+  > 当然了，源角色在原有的系统中还是可以正常使用，而在目标角色中也可以充当新的演 员。 
+
+- 灵活性非常好
+
+  > 某一天，突然不想要适配器，没问题，删除掉这个适配器就可以了，其他的代码都不用 修改，基本上就类似一个灵活的构件，想用就用，不想就卸载。
+
+ 
+
+### 1.3 使用场景
+
+适配器应用的场景只要记住一点就足够了：你有动机修改一个已经投产中的接口时，适 配器模式可能是最适合你的模式。比如系统扩展了，需要使用一个已有或新建立的类，但这 个类又不符合系统的接口，怎么办？使用适配器模式，这也是我们例子中提到的。
+
+
+
+
+
+### 1.4 注意事项
+
+适配器模式最好在详细设计阶段不要考虑它，它不是为了解决还处在开发阶段的问题， 而是解决正在服役的项目问题，没有一个系统分析师会在做详细设计的时候考虑使用适配器 模式，这个模式使用的主要场景是扩展应用中，就像我们上面的那个例子一样，系统扩展 了，不符合原有设计的时候才考虑通过适配器模式减少代码修改带来的风险。 再次提醒一点，项目一定要遵守依赖倒置原则和里氏替换原则，否则即使在适合使用适 配器的场合下，也会带来非常大的改造。
+
+
+
+### 1.5 例子
 
 2004年我带了一个项目，做一个人力资源管理项目，该项目是我们总公司发起的，公司 一共有700多号人。这个项目还是比较简单的，分为三大模块：人员信息管理、薪酬管理、 职位管理。当时开发时业务人员明确指明：人员信息管理的对象是所有员工的所有信息，所 有的员工指的是在职的员工，其他的离职的、退休的暂不考虑。根据需求我们设计了如图 19-1所示的类图。
 
@@ -402,3 +482,210 @@ public class Client {
 ```
 
 大家看，使用了适配器模式只修改了一句话，其他的业务逻辑都不用修改就解决了系统 对接的问题，而且在我们实际系统中只是增加了一个业务类的继承，就实现了可以查本公司 的员工信息，也可以查人力资源公司的员工信息，尽量少的修改，通过扩展的方式解决了该 问题。这就是适配模式。
+
+
+
+
+
+### 1.6 适配器模式的扩展
+
+我们刚刚讲的人力资源管理的例子中，其实是一个比较幸运的例子，为什么呢？如果劳 动服务公司提供的人员接口不止一个，也就是说，用户基本信息是一个接口，工作信息是一 个接口，家庭信息是一个接口，总共有三个接口三个实现类，想想看如何处理呢？不能再使 用我们上面的方法了，为什么呢？Java是不支持多继承的，你难道想让OuterUserInfo继承三 个实现类？此路不通，再想一个办法，对哦，可以使用类关联的办法嘛！声明一个 OuterUserInfo实现类，实现IUserInfo接口，通过再关联其他三个实现类不就可以解决这个问 题了吗？是的，是的，好方法，我们先画出类图，如图19-8所示。
+
+OuterUserInfo通过关联的方式与外界的三个实现类通讯，当然也可以理解为是聚合关 系。IUserInfo和UserInfo代码如代码清单19-1和代码清单19-2所示，不再赘述。我们来看看拆 分后的三个接口和实现类，用户基本信息接口如代码清单19-13所示。
+
+
+
+
+
+![图19-8 拆分接口后的类图](./images/Java-DesignPatterns-StructuralPatterns/19-8.jpg)
+
+
+
+代码清单19-13 用户基本信息接口
+
+`IOuterUserBaseInfo.java`
+
+```java
+public interface IOuterUserBaseInfo {
+  //基本信息，比如名称、性别、手机号码等
+  public Map getUserBaseInfo();
+}
+```
+
+
+
+代码清单19-14 用户家庭信息接口
+
+`IOuterUserHomeInfo.java`
+
+```java
+public interface IOuterUserHomeInfo {
+  //用户的家庭信息
+  public Map getUserHomeInfo();
+}
+
+```
+
+
+
+代码清单19-15 用户工作信息接口
+
+`IOuterUserOfficeInfo.java`
+
+```java
+public interface IOuterUserOfficeInfo {
+  //工作区域信息
+  public Map getUserOfficeInfo();
+}
+
+```
+
+
+
+读到这里，读者应该想到这样一个问题：系统这样设计是否合理呢？合理，绝对合理！ 想想`单一职责原则`是怎么说的，类和接口要保持职责单一，在实际的应用中类可以有多重职 责，但是接口一定要职责单一，因此，我们上面拆分接口的假想也是非常合乎逻辑的。我们 来看三个相关的实现类，用户基本信息如代码清单19-16所示。
+
+代码清单19-16 用户基本信息
+
+`OuterUserBaseInfo.java`
+
+```java
+public class OuterUserBaseInfo implements IOuterUserBaseInfo {
+  /*
+* 用户的基本信息
+*/
+  public Map getUserBaseInfo() {
+    HashMap baseInfoMap = new HashMap();
+    baseInfoMap.put("userName", "这个员工叫混世魔王...");
+    baseInfoMap.put("mobileNumber", "这个员工电话是...");
+    return baseInfoMap;
+  }
+}
+```
+
+
+
+代码清单19-17 用户家庭信息
+
+`OuterUserHomeInfo.java`
+
+```java
+public class OuterUserHomeInfo implements IOuterUserHomeInfo {
+  /*
+* 员工的家庭信息
+*/
+  public Map getUserHomeInfo() {
+    HashMap homeInfo = new HashMap();
+    homeInfo.put("homeTelNumbner", "员工的家庭电话是...");
+    homeInfo.put("homeAddress", "员工的家庭地址是...");
+    return homeInfo;
+  }
+}
+```
+
+
+
+代码清单19-18 用户工作信息
+
+`OuterUserOfficeInfo.java`
+
+```java
+public class OuterUserOfficeInfo implements IOuterUserOfficeInfo {
+  /*
+* 员工的工作信息，比如，职位等
+*/
+  public Map getUserOfficeInfo() {
+    HashMap officeInfo = new HashMap();
+    officeInfo.put("jobPosition","这个人的职位是BOSS...");
+    officeInfo.put("officeTelNumber", "员工的办公电话是...");
+    return officeInfo;
+  }
+}
+```
+
+
+
+这里又到我们的核心了——适配器。好，我们来看适配器代码，如代码清单19-19所 示。
+
+代码清单19-19 适配器
+
+```java
+public class OuterUserInfo implements IUserInfo {
+  //源目标对象
+  private IOuterUserBaseInfo baseInfo = null; //员工的基本信息
+  private IOuterUserHomeInfo homeInfo = null; //员工的家庭信息
+  private IOuterUserOfficeInfo officeInfo = null; //工作信息
+  //数据处理
+  private Map baseMap = null;
+  private Map homeMap = null;
+  private Map officeMap = null;
+  //构造函数传递对象
+  public OuterUserInfo(IOuterUserBaseInfo _baseInfo,IOuterUserHomeInfo _homeInfo,IOuterUserOfficeInfo _officeInfo){
+    this.baseInfo = _baseInfo;
+    this.homeInfo = _homeInfo;
+    this.officeInfo = _officeInfo;
+    //数据处理
+    this.baseMap = this.baseInfo.getUserBaseInfo();
+    this.homeMap = this.homeInfo.getUserHomeInfo();
+    this.officeMap = this.officeInfo.getUserOfficeInfo();
+  }
+  //家庭地址
+  public String getHomeAddress() {
+    String homeAddress = (String)this.homeMap.get("homeAddress");
+    System.out.println(homeAddress);
+    return homeAddress;
+  }
+  //家庭电话号码
+  public String getHomeTelNumber() {
+    String homeTelNumber = (String)this.homeMap.get("homeTelNumber");
+    System.out.println(homeTelNumber);
+    return homeTelNumber;
+  }
+  //职位信息
+  public String getJobPosition() {
+    String jobPosition = (String)this.officeMap.get("jobPosition");
+    System.out.println(jobPosition);
+    return jobPosition;
+  }
+  //手机号码
+  public String getMobileNumber() {
+    String mobileNumber = (String)this.baseMap.get("mobileNumber");
+    System.out.println(mobileNumber);
+    return mobileNumber;
+  }
+  //办公电话
+  public String getOfficeTelNumber() {
+    String officeTelNumber= (String)this.officeMap.get("officeTelNumber");
+    System.out.println(officeTelNumber);
+    return officeTelNumber;
+  }
+  // 员工的名称
+  public String getUserName() {
+    String userName = (String)this.baseMap.get("userName");
+    System.out.println(userName);
+    return userName;
+  }
+}
+
+```
+
+
+
+大家只要注意一下黑色字体的构造函数就可以了，它接收三个对象，其他部分变化不 大，只是变量名称进行了修改，我们再来看场景类，如代码清单19-20所示。
+
+```java
+public class Client {
+  public static void main(String[] args) {
+    //外系统的人员信息
+    IOuterUserBaseInfo baseInfo = new OuterUserBaseInfo();
+    IOuterUserHomeInfo homeInfo = new OuterUserHomeInfo();
+    IOuterUserOfficeInfo officeInfo = new OuterUserOfficeInfo();
+    //传递三个对象
+    IUserInfo youngGirl = new OuterUserInfo(baseInfo,homeInfo,officeInfo);
+    //从数据库中查到101个
+    for(int i=0;i<101;i++){
+      youngGirl.getMobileNumber();
+    }
+  }
+}
+```
+
