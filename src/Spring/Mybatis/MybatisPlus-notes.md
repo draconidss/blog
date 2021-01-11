@@ -440,7 +440,7 @@ sysUserMapper.updateById(sysUser2);
 
 这里先查询两次分别赋值给`sysSuser`和`sysUser2`，此时调用`debug`模式可以看到两个查询出来的`version`都为1
 
-![](./images/MybatisPlus-notes/@Version_debug.png)
+![@Version测试结果](./images/MybatisPlus-notes/@Version_debug.png)
 
 
 
@@ -521,3 +521,10 @@ mybatis-plus:
 
 
 
+
+
+#### 2.5.5 测试结果
+
+
+
+![@EnumValue测试结果](./images/MybatisPlus-notes/@EnumValue_test.png)
