@@ -213,7 +213,7 @@ class WebApplicationTests {
 
 
 
-### 1.9 其他配置
+### 1.9 application.yml配置
 
 ::: tip 参考
 
@@ -253,6 +253,14 @@ mybatis-plus:
 ::: tip 参考
 
 - [https://mybatis.plus/guide/annotation.html](https://mybatis.plus/guide/annotation.html)
+
+  
+
+  介绍 `MybatisPlus` 注解包相关类详解(更多详细描述可点击查看源码注释)
+
+  注解类包：
+
+  👉 [mybatis-plus-annotation(opens new window)](https://gitee.com/baomidou/mybatis-plus/tree/3.0/mybatis-plus-annotation/src/main/java/com/baomidou/mybatisplus/annotation)
 
 :::
 
@@ -296,4 +304,220 @@ IdType
 |   ID_WORKER(弃用)   | 分布式全局唯一ID 长整型类型(please use `ASSIGN_ID`)          |
 |     UUID(弃用)      | 32位UUID字符串(please use `ASSIGN_UUID`)                     |
 | ID_WORKER_STR(弃用) | 分布式全局唯一ID 字符串类型(please use `ASSIGN_ID`)          |
+
+
+
+
+
+
+
+### 2.3 @TableField
+
+> 描述：字段注解(非主键),value映射字段名
+>
+> exist表示是否为数据库字段false
+
+|       属性       |             类型             | 必须指定 |          默认值          |                             描述                             |
+| :--------------: | :--------------------------: | :------: | :----------------------: | :----------------------------------------------------------: |
+|      value       |            String            |    否    |            ""            |                         数据库字段名                         |
+|        el        |            String            |    否    |            ""            | 映射为原生 `#{ ... }` 逻辑,相当于写在 xml 里的 `#{ ... }` 部分 |
+|      exist       |           boolean            |    否    |           true           |                      是否为数据库表字段                      |
+|    condition     |            String            |    否    |            ""            | 字段 `where` 实体查询比较条件,有值设置则按设置的值为准,没有则为默认全局的 `%s=#{%s}`,[参考(opens new window)](https://github.com/baomidou/mybatis-plus/blob/3.0/mybatis-plus-annotation/src/main/java/com/baomidou/mybatisplus/annotation/SqlCondition.java) |
+|      update      |            String            |    否    |            ""            | 字段 `update set` 部分注入, 例如：update="%s+1"：表示更新时会set version=version+1(该属性优先级高于 `el` 属性) |
+|  insertStrategy  |             Enum             |    N     |         DEFAULT          | 举例：NOT_NULL: `insert into table_a(<if test="columnProperty != null">column</if>) values (<if test="columnProperty != null">#{columnProperty}</if>)` |
+|  updateStrategy  |             Enum             |    N     |         DEFAULT          | 举例：IGNORED: `update table_a set column=#{columnProperty}` |
+|  whereStrategy   |             Enum             |    N     |         DEFAULT          | 举例：NOT_EMPTY: `where <if test="columnProperty != null and columnProperty!=''">column=#{columnProperty}</if>` |
+|       fill       |             Enum             |    否    |    FieldFill.DEFAULT     |                       字段自动填充策略                       |
+|      select      |           boolean            |    否    |           true           |                     是否进行 select 查询                     |
+| keepGlobalFormat |           boolean            |    否    |          false           |              是否保持使用全局的 format 进行处理              |
+|     jdbcType     |           JdbcType           |    否    |    JdbcType.UNDEFINED    |           JDBC类型 (该默认值不代表会按照该值生效)            |
+|   typeHandler    | Class<? extends TypeHandler> |    否    | UnknownTypeHandler.class |          类型处理器 (该默认值不代表会按照该值生效)           |
+|   numericScale   |            String            |    否    |            ""            |                    指定小数点后保留的位数                    |
+
+
+
+#### 关于fill自动填充
+
+|      值       |         描述         |
+| :-----------: | :------------------: |
+|    DEFAULT    |      默认不处理      |
+|    INSERT     |    插入时填充字段    |
+|    UPDATE     |    更新时填充字段    |
+| INSERT_UPDATE | 插入和更新时填充字段 |
+
+
+
+例子(在实体类中)
+
+```java
+@TableField(fill = FieldFill.INSERT)
+private Date createTime;
+
+@TableField(fill = FieldFill.UPDATE)
+private Date updateTime;
+
+@TableField(fill = FieldFill.INSERT_UPDATE)
+private Date updateTime;
+```
+
+
+
+然后创建Handle方法
+
+`MyMetaObjectHandler.java`
+
+> 要加上注解`@Component`
+
+```java
+@Component
+public class MyMetaObjectHandler implements MetaObjectHandler {
+    @Override
+    public void insertFill(MetaObject metaObject) {
+        this.setFieldValByName("createTime", new Date(), metaObject);
+    }
+
+    @Override
+    public void updateFill(MetaObject metaObject) {
+
+    }
+
+}
+```
+
+
+
+这样插入的时候就能自动填充当前时间
+
+
+
+### 2.4 @Version
+
+标记乐观锁,通过 `version`字段来保证数据的安全性,当修改数据的时候,会以`version`作为更新时的条件,当条件成立的时候才会修改成功。
+
+例如
+
+::: info 例如
+
+线程1: update… set version=2 where version=1
+
+线程2: update…, set version=2 where version=1
+
+:::
+
+
+
+
+
+#### 2.4.1 数据库添加version字段
+
+设置默认为1
+
+
+
+#### 2.4.2 在实体类的属性上添加@Version注解
+
+```java
+@Version
+private Integer version;
+```
+
+
+
+#### 2.4.3 并发测试
+
+```java
+SysUser sysUser = sysUserMapper.selectById(1);
+sysUser = sysUser.toBuilder().name("小北").build();
+
+SysUser sysUser2 = sysUserMapper.selectById(1);
+sysUser2 = sysUser2.toBuilder().name("小南").build();
+
+sysUserMapper.updateById(sysUser);
+sysUserMapper.updateById(sysUser2);
+```
+
+
+
+这里先查询两次分别赋值给`sysSuser`和`sysUser2`，此时调用`debug`模式可以看到两个查询出来的`version`都为1
+
+![](./images/MybatisPlus-notes/@Version_debug.png)
+
+
+
+此时这里按顺序更新，由于第一次带着的version与数据库中的匹配，更新后version会变为2，而接着sysUser2也带着version=1去更新，由于更新是带着version=1为条件更新，但是数据库的version已经变成2了所以找不到，所以也就无法更新。
+
+最后的更新结果是sysUser的更新。
+
+
+
+### 2.5 @EnumValue
+
+枚举类型，根据数据库的字段映射替换成自定义枚举类型的实体
+
+
+
+#### 2.5.1 在数据库创建state字段
+
+1表示正常
+
+2表示禁用
+
+
+
+
+
+#### 2.5.2 在实体类加上对应属性state
+
+> 类型为创建的枚举型
+
+```java
+private SysUserState state;
+```
+
+
+
+
+
+#### 2.5.3 创建enum类型
+
+在字段`code`上加注解`@EnumValue`表示用code去对应映射数据库中字段`state`的值
+
+::: info
+
+- 如果`state`的值为1那么实体类中的`state`会自动填充为`NORMAL(1,"正常")`
+- 如果`state`的值为2那么实体类中的`state`会自动填充为`DISABLED(2, "禁用")`
+
+:::
+
+```java
+public enum SysUserState {
+    NORMAL(1,"正常"),
+    DISABLED(2, "禁用");
+
+    @EnumValue
+    private Integer code;
+    private String msg;
+
+    SysUserState(Integer code, String msg) {
+        this.code = code;
+        this.msg = msg;
+    }
+}
+```
+
+
+
+
+
+#### 2.5.4 在application.yml中配置扫描枚举的包
+
+```yaml {5}
+#mybatis-plus
+mybatis-plus:
+  mapper-locations: classpath:mapper/*
+  type-aliases-package: com.tme.musicrecognition.entity
+  type-enums-package: com.tme.musicrecognition.enums
+```
+
+
 
