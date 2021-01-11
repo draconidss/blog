@@ -528,3 +528,84 @@ mybatis-plus:
 
 
 ![@EnumValue测试结果](./images/MybatisPlus-notes/@EnumValue_test.png)
+
+
+
+
+
+#### 2.5.6 第二种方式：实现接口
+
+```java
+public enum SysUserStateEnum2 implements IEnum<Integer> {
+
+    NORMAL(1,"正常"),
+    DISABLED(2, "禁用");
+
+    private Integer code;
+    private String msg;
+
+    SysUserStateEnum2(Integer code, String msg) {
+        this.code = code;
+        this.msg = msg;
+    }
+
+  	//实现此方法，等同于在code上加注解@EnumValue
+    @Override
+    public Integer getValue() {
+        return this.code;
+    }
+}
+```
+
+
+
+
+
+### 2.6 @TableLogic
+
+> 描述：表字段逻辑处理注解（逻辑删除）
+
+|  属性  |  类型  | 必须指定 | 默认值 |     描述     |
+| :----: | :----: | :------: | :----: | :----------: |
+| value  | String |    否    |   ""   | 逻辑未删除值 |
+| delval | String |    否    |   ""   |  逻辑删除值  |
+
+
+
+#### 2.6.1 数据库增加字段deleted
+
+
+
+
+
+#### 2.6.2 application.yml配置
+
+```yaml {13-17}
+#mybatis-plus
+mybatis-plus:
+  mapper-locations: classpath:mapper/*
+  type-aliases-package: com.tme.musicrecognition.entity
+  type-enums-package: com.tme.musicrecognition.enums
+  # MyBatis 原生支持的配置
+  configuration:
+    # 是否开启自动驼峰命名规则（camel case）映射
+    mapUnderscoreToCamelCase: true
+    # 在控制台打印SQL命令并打印执行结果
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  # 全局策略配置
+  global-config:
+    db-config:
+      logic-delete-field: deleted  # 全局逻辑删除的实体字段名(since 3.3.0,配置后可以忽略不配置步骤2)
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+```
+
+
+
+如果不配置`logic-delete-field: deleted`，则可以直接在实体类中的`deleted`上加注解`@TableLogic`
+
+```java
+@TableLogic
+private Integer deleted;
+```
+
