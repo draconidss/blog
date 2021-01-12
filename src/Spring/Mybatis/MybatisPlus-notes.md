@@ -728,9 +728,103 @@ public PaginationInterceptor paginationInterceptor() {
 
 
 
+### 3.2 删除示例
+
+```java
+sysUserMapper.deleteById(1);
+//批量删除
+sysUserMapper.deleteBatchIds(Arrays.asList(1,2));
+//条件删除
+QueryWrapper queryWrapper = new QueryWrapper();
+queryWrapper.eq("gender", 1);
+sysUserMapper.delete(queryWrapper);
+//通过map删除
+HashMap<String, Object> conditionHashMap = new HashMap<>();
+conditionHashMap.put("gender", 1);
+sysUserMapper.deleteByMap(conditionHashMap);
+```
+
+
+
+### 3.3 更新示例
+
+```java
+System.out.println(("----- updateTest method test ------"));
+SysUser sysUser = sysUserMapper.selectById(1);
+sysUser = sysUser.toBuilder().name("小北").state(SysUserStateEnum.DISABLED).build();
+sysUserMapper.updateById(sysUser);
+
+//使用QueryWrapper作为更新条件更新成sysUser
+QueryWrapper queryWrapper = new QueryWrapper();
+queryWrapper.eq("gender", 2);
+sysUserMapper.update(SysUser.builder().name("熊熊").build(), queryWrapper);
+```
+
+
+
+### 3.4 增加示例
+
+```java
+System.out.println(("----- insertTest method test ------"));
+SysUser sysUser = SysUser.builder().name("小明").build();
+sysUserMapper.insert(sysUser);
+```
+
+
+
 
 
 ### 3.2 自定义SQL语句(多表关联查询)
 
+```java
+@Select("select * from sys_user su, sys_role sr, sys_user_role sur where su.user_id = #{userId} and su.user_id = sur.user_id and sr.role_id = sur.role_id")
+SysUserRoleVO selectRoleByUserId(Integer userId);
+```
 
+
+
+
+
+## 4. Mybatis-Plus自动生成代码
+
+自动生成
+
+::: info 自动生成
+
+- entity
+- mapper
+- service
+- serviceImpl
+- controller
+
+:::
+
+
+
+### 4.1 添加依赖
+
+```java
+<!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-generator -->
+<dependency>
+  <groupId>com.baomidou</groupId>
+  <artifactId>mybatis-plus-generator</artifactId>
+  <version>3.4.1</version>
+</dependency>
+//模板引擎velocity(默认)，Freemarker，Beetl
+<dependency>
+  <groupId>org.apache.velocity</groupId>
+  <artifactId>velocity-engine-core</artifactId>
+  <version>2.2</version>
+</dependency>
+```
+
+
+
+
+
+### 4.2 创建一个module用来生成代码
+
+
+
+### 4.3 创建并配置启动类
 
