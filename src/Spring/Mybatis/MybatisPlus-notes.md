@@ -609,3 +609,128 @@ mybatis-plus:
 private Integer deleted;
 ```
 
+
+
+#### 2.6.3 测试
+
+```java
+@Test
+public void deleteTest(){
+    sysUserMapper.deleteById(1);
+}
+```
+
+
+
+![@TableLogic测试结果](./images/MybatisPlus-notes/@TableLogic_test.png)
+
+
+
+> 可以看到这里是软删除，并不是真的删除。在后续查询中也会自动添加条件`deleted=0`来作为筛选条件
+
+
+
+
+
+
+
+## 3. CRUD示例
+
+
+
+### 3.1 查询示例
+
+```java
+    @Test
+    public void testSelect() {
+        System.out.println(("----- selectAll method test ------"));
+        //分页查询
+//        Page<SysUser> pages = null;
+//        PageHelper.startPage(0,3);
+//        pages = (Page<SysUser>) sysUserMapper.selectList(null);
+//        pages.getResult().forEach(System.out::println);
+//        System.out.println("pages.getTotal() = " + pages.getTotal());
+
+        //普通查询
+//        sysUserMapper.selectList(null);
+        //带条件查询
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("name", "小北");
+//        sysUserMapper.selectList(queryWrapper);
+        //多条件查询
+        queryWrapper = new QueryWrapper();
+        HashMap<String, Object> conditionHashMap = new HashMap<>();
+        /*conditionHashMap.put("name", "小北");
+        conditionHashMap.put("state", 2);
+        queryWrapper.allEq(conditionHashMap);*/
+        //大于等于
+        queryWrapper.ge("state",1);
+        //模糊查询
+        queryWrapper.like("name", "小");
+        //inSQL查询
+        queryWrapper.inSql("state","select state from sys_user where state > 0");
+        queryWrapper.inSql("version","select version from sys_user where version > 0");
+        //降序排序
+        queryWrapper.orderByDesc("state");
+
+
+        sysUserMapper.selectList(queryWrapper);
+
+    }
+
+    @Test
+    public void testSelect2() {
+        System.out.println(("----- testSelect method test ------"));
+        //批量查询
+//        sysUserMapper.selectBatchIds(Arrays.asList(1,2,3)).forEach(System.out::println);
+        //Map填充条件，只能做等值判断
+        HashMap<String, Object> conditionHashMap = new HashMap<>();
+        conditionHashMap.put("name", "小北");
+//        sysUserMapper.selectByMap(conditionHashMap).forEach(System.out::println);
+
+        //将查询结果填充到Map的List中
+//        sysUserMapper.selectMaps(null).forEach(System.out::println);
+
+        //分页查询
+        Page<SysUser> page = new Page<>(0,1);
+        Page<SysUser> result = sysUserMapper.selectPage(page, null);
+        System.out.println("page.getSize() = " + result.getSize());
+        System.out.println("page.getTotal() = " + result.getTotal());
+        result.getRecords().forEach(System.out::println);
+
+        //分页查询并封装在Map中
+        Page<Map<String, Object>> page2 = new Page<>(1, 2);
+//        sysUserMapper.selectMapsPage(page2, null).getRecords().forEach(System.out::println);
+
+
+    }
+```
+
+
+
+分页查询
+
+在`MybatisPlusConfig.java`中配置`Bean`
+
+```java
+@Bean
+public PaginationInterceptor paginationInterceptor() {
+    PaginationInterceptor paginationInterceptor = new PaginationInterceptor();
+    // 设置请求的页面大于最大页后操作， true调回到首页，false 继续请求  默认false
+    // paginationInterceptor.setOverflow(false);
+    // 设置最大单页限制数量，默认 500 条，-1 不受限制
+    // paginationInterceptor.setLimit(500);
+    // 开启 count 的 join 优化,只针对部分 left join
+    paginationInterceptor.setCountSqlParser(new JsqlParserCountOptimize(true));
+    return paginationInterceptor;
+}
+```
+
+
+
+
+
+### 3.2 自定义SQL语句(多表关联查询)
+
+
+
