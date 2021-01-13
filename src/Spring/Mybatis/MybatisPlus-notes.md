@@ -801,7 +801,11 @@ SysUserRoleVO selectRoleByUserId(Integer userId);
 
 
 
-### 4.1 添加依赖
+### 4.1 创建一个module用来生成代码
+
+
+
+### 4.2 添加依赖
 
 ```java
 <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-generator -->
@@ -822,9 +826,142 @@ SysUserRoleVO selectRoleByUserId(Integer userId);
 
 
 
-### 4.2 创建一个module用来生成代码
-
-
-
 ### 4.3 创建并配置启动类
 
+::: tip 参考
+
+- [代码生成器](https://baomidou.com/guide/generator.html)
+
+:::
+
+
+
+`MybatisPlusGenerator.java`
+
+```java
+package com.tme.musicrecognition.mybatisGenerator;
+
+import com.baomidou.mybatisplus.annotation.DbType;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;
+import com.baomidou.mybatisplus.core.toolkit.StringPool;
+import com.baomidou.mybatisplus.core.toolkit.StringUtils;
+import com.baomidou.mybatisplus.generator.AutoGenerator;
+import com.baomidou.mybatisplus.generator.InjectionConfig;
+import com.baomidou.mybatisplus.generator.config.*;
+import com.baomidou.mybatisplus.generator.config.po.TableInfo;
+import com.baomidou.mybatisplus.generator.config.rules.DateType;
+import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
+import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+/**
+ * @Project: music-recognition
+ * @Package: com.tme.musicrecognition.mybatisGenerator
+ * @ClassName: MybatisPlusGenerator
+ * @Author: Chen Long
+ * @Description:
+ * @Datetime: 2021/1/10  13:29
+ */
+public class MybatisPlusGenerator {
+    /**
+     * <p>
+     * 读取控制台内容
+     * </p>
+     */
+    public static String scanner(String tip) {
+        Scanner scanner = new Scanner(System.in);
+        StringBuilder help = new StringBuilder();
+        help.append("请输入" + tip + "：");
+        System.out.println(help.toString());
+        if (scanner.hasNext()) {
+            String ipt = scanner.next();
+            if (StringUtils.isNotBlank(ipt)) {
+                return ipt;
+            }
+        }
+        throw new MybatisPlusException("请输入正确的" + tip + "！");
+    }
+
+    public static void main(String[] args) {
+        // 代码生成器
+        AutoGenerator mpg = new AutoGenerator();
+
+        // 数据源配置
+        DataSourceConfig dsc = new DataSourceConfig();
+        dsc.setUrl("jdbc:mysql://localhost:3306/music_recognition?characterEncoding=utf8&useSSL=false&useUnicode=true&serverTimezone=CTT&allowMultiQueries=true");
+        // dsc.setSchemaName("public");
+        dsc.setDbType(DbType.MYSQL);
+        dsc.setDriverName("com.mysql.cj.jdbc.Driver");
+        dsc.setUsername("root");
+        dsc.setPassword("root");
+        mpg.setDataSource(dsc);
+
+        // 全局配置
+        GlobalConfig gc = new GlobalConfig();
+        //输出路径
+        gc.setOutputDir(System.getProperty("user.dir" ) +"\\mybatisGenerator" + "/src/main/java");
+        //      gc.setOutputDir(scanner("请输入项目路径") + "/src/main/java");
+        gc.setAuthor("v_geekrchen");
+        //生成之后是否打开资源管理器
+        gc.setOpen(false);
+        //重新生成后是否覆盖文件
+        gc.setFileOverride(true);
+        //%s为占位符，mp生成Service层代码，默认接口名称第一个字母是有I
+        gc.setServiceName("%sService");
+        //设置主键生成策略 自动增长
+        gc.setIdType(IdType.AUTO);
+        //设置Date类型 只使用java.util.date代替
+        gc.setDateType(DateType.ONLY_DATE);
+        // 实体属性 Swagger2 注解
+        gc.setSwagger2(true);
+        mpg.setGlobalConfig(gc);
+
+
+        // 包配置
+        PackageConfig pc = new PackageConfig();
+        pc.setParent("com.tme.musicrecognition");
+        pc.setModuleName("generator");
+        //        pc.setModuleName(scanner("模块名"));
+        pc.setController("controller");
+        pc.setService("service");
+        pc.setServiceImpl("service.impl");
+        pc.setMapper("mapper");
+        pc.setEntity("entity");
+        mpg.setPackageInfo(pc);
+
+
+        // 策略配置
+        StrategyConfig strategy = new StrategyConfig();
+        strategy.setInclude(scanner("表名，多个英文逗号分割").split(","));
+
+        //实体类名称驼峰命名
+        strategy.setNaming(NamingStrategy.underline_to_camel);
+        //字段名称驼峰命名
+        strategy.setColumnNaming(NamingStrategy.underline_to_camel);
+        //strategy.setSuperEntityClass("你自己的父类实体,没有就不用设置!");
+        //设置lombok
+        strategy.setEntityLombokModel(true);
+        //Controller使用RestController
+        strategy.setRestControllerStyle(true);
+        // 公共父类
+        //strategy.setSuperControllerClass("你自己的父类控制器,没有就不用设置!");
+        // 写于父类中的公共字段
+        //strategy.setSuperEntityColumns("id");
+
+        //驼峰转连字符
+        strategy.setControllerMappingHyphenStyle(true);
+        //strategy.setTablePrefix(pc.getModuleName() + "_");
+        mpg.setStrategy(strategy);
+        mpg.execute();
+    }
+}
+
+```
+
+
+
+然后运行即可

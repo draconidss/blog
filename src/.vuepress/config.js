@@ -162,7 +162,7 @@ module.exports = config({
           icon: "creative",
           prefix: "Spring/",
           children: [
-            "", "Spring-bacisNote", "SpringMVC-annotation", "SpringMVC-basicNote",
+            "", "Spring-bacisNote", "SpringMVC-annotation", "SpringMVC-basicNote","Spring-error&hole",
             {
               title: "SpringBoot",
               icon: "creative",
