@@ -167,7 +167,7 @@ module.exports = config({
               title: "SpringBoot",
               icon: "creative",
               prefix: "SpringBoot/",
-              children: ["Devtools-HotDeployment", "EasyExcel-use", "IDEA-deploy-Run-Dashboard",
+              children: ["SpringBoot&Vue", "Devtools-HotDeployment", "EasyExcel-use", "IDEA-deploy-Run-Dashboard",
                 "IDEA-Initial-Springboot+reverse-project+Configuration", "Lombok-use", "Maven-scope",
                 "Server-deployment-SpringBoot", "Swagger-use"]
             },
