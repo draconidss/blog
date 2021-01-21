@@ -156,7 +156,7 @@ RequestMapping是一个用来处理请求地址映射的注解，可用于类或
 - value， method
 
   > - value：   指定请求的实际地址，指定的地址可以是URI Template 模式。value 可以省略不写
-  > - method： 指定请求的method类型， GET、POST、PUT、DELETE等；默认为GET。不用每次在 @RequestMapping 注解中加 method 属性来指定，上面的 GET 方式请求可以直接使用 @GetMapping("/get") 注解，效果一样。相应地，PUT 方式、POST 方式和 DELETE 方式对应的注解分别为 `@PutMapping`、`@PostMapping` 和 `DeleteMapping`。
+  > - method： 指定请求的method类型， GET、POST、PUT、DELETE等；默认为GET。不用每次在 @RequestMapping 注解中加 method 属性来指定，上面的 GET 方式请求可以直接使用 @GetMapping("/get") 注解，效果一样。相应地，PUT 方式、POST 方式和 DELETE 方式对应的注解分别为`@GetMapping`， `@PutMapping`、`@PostMapping` 和 `DeleteMapping`。
 
 
 
@@ -165,7 +165,7 @@ RequestMapping是一个用来处理请求地址映射的注解，可用于类或
 - consumes，produces
 
   > - consumes： 指定处理请求的提交内容类型（Content-Type），例如application/json, text/html;
-  > - produces:  指定返回的内容类型，仅当request请求头中的(Accept)类型中包含该指定类型才返回；如 produces = “application/json; charset=UTF-8”
+  > - produces:  指定返回的内容类型，仅当request请求头中的(Accept)类型中包含该指定类型才返回；如 produces = “application/json; charset=UTF-8”，prodeces="image/jpeg"(可以用来配合swagger文档返回图片乱码的情况)
 
 
 
