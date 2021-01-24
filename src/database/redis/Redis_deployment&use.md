@@ -652,28 +652,27 @@ public class TestHash {
 ### 7.2 `application.yml`配置
 
 ```yaml
-spring:
   #reids相关配置
   redis:
     #redis服务器地址
-    host: 127.0.0.1
+    host: 47.100.59.153
     #redis服务器端口
     port: 6379
     database: 0
     #密码
-    password: 123456
-    jedis:
+    password: 0.00.0
+    lettuce:
       pool:
         #连接池最大连接数（使用负值表示没有限制）
-        max-active: 20
+        max-active: 1024
         #连接池最大阻塞等待时间（使用负值表示没有限制）
-        max-wait: -1
+        max-wait: 10000ms
         #连接池中最大空闲连接
-        max-idle: 10
+        max-idle: 200
         #连接池中最小空闲连接
-        min-idle: 1
+        min-idle: 5
     # 连接超时时间(毫秒)
-    timeout: 1000
+    timeout: 10000ms
 ```
 
 
