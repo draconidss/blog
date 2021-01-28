@@ -207,7 +207,7 @@ module.exports = config({
           title: "Docker",
           icon: "creative",
           prefix: "Docker/",
-          children: ["", "Docker-deployment", "Docker-Install-software"],
+          children: ["", "Docker-Note", "Docker-deployment", "Docker-Install-software"],
         },
 
         {
