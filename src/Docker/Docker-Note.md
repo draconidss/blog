@@ -112,6 +112,30 @@ Docker 的主要用途，目前有三大类。
 
 
 
+### docker可视化界面
+
+::: tip 参考
+
+- https://www.cnblogs.com/frankdeng/p/9686735.html
+
+:::
+
+
+
+
+
+
+
+## docker镜像容器原理
+
+::: tip 参考
+
+- https://zhuanlan.zhihu.com/p/93085215
+- http://dockone.io/article/783
+- https://blog.51cto.com/liuleis/2070461
+
+:::
+
 
 
 ## 常用命令
@@ -242,19 +266,58 @@ docker rmi -f $(docker images -aq)
 
 ::: warning 注意
 
-start是启动已创建好的，run是运行一个全新的容器
+- start是启动已创建好的，run是运行一个全新的容器
+- `run`的时候`--rm`代表用完容器自动删除容器
+- `run`的时候`-P`大写的P是随机端口
 
 :::
 
 
 
+### 其他
+
+```shell
+#查看各个容器状态（CPU等）
+docker stats
+#查看指定容器
+docker stats [容器]
+```
+
+
+
+![docker_stats](./images/Docker-Note/docker_stats.jpg)
+
+```shell
+#7.在使⽤ -d 参数时，容器启动后会进⼊后台。此时想要进⼊容器，可以通过以下指令进⼊
+docker attach 容器名称/id #不推荐使⽤，因为退出时会导致容器的停⽌
+docker exec -it 容器名称/id /bin/bash #在进⼊容器后可使⽤linux命令，退出使⽤exit
+
+#8.导出
+docker export 容器名称/id > 名称.tar
+
+#9.导⼊，可以使⽤ docker import 从容器快照⽂件中再导⼊为镜像，以下实例将快照⽂件指定
+路径的tar 导⼊到镜像 test/test:v1:
+cat tar路径 | docker import - test/test:v1
+#也可以通过指定 URL 或者某个⽬录来导⼊
+docker import http://example.com/exampleimage.tgz example/imagerepo
+
+#10.删除容器
+docker rm -f 容器名称/id
+
+#11.启动&停止docker
+service docker start#启动docker
+service docker stop#停止docker
+service docker restart#重启docker
+
+#12.开机自启动docker
+systemctl enable docker
+```
 
 
 
 
 
-
-## 日志 | 元数据 | 目录挂载 | 文件传输 
+## 日志 | 元数据 | 文件传输 
 
 
 
@@ -293,7 +356,74 @@ docker inspect [容器id/名]
 
 
 
+### 文件传输
+
+拷贝宿主机文件到容器
+
+```shell
+#将主机文件拷贝到容器中
+docker cp [主机文件] [容器]:[容器路径]
+```
+
+
+
+拷贝容器中的文件到宿主机
+
+```shell
+#将主机文件拷贝到容器中
+docker cp [容器]:[容器文件] [主机路径]
+```
+
+
+
+
+
+
+
+
+
+
+
+## 容器数据卷/目录挂载
+
+::: tip 参考
+
+- https://www.cnblogs.com/ruanraun/p/dockervolumes.html
+- https://www.cnblogs.com/ivictor/p/4834864.html
+- https://www.cnblogs.com/loveyous/p/11372034.html
+
+:::
+
+
+
+在容器中管理数据主要有两种方式：
+
+- 数据卷(Volumes)
+- 挂载主机目录(Bind mounts)
+
+
+
+![docker数据挂载](./images/Docker-Note/docker_volume.png)
+
+
+
+::: warning
+
+Docker中提供了两种挂载方式，`-v`和`-mount`
+
+Docker新用户应该选择 --mount参数
+
+经验丰富的Docker使用者对-v或者--volume已经很熟悉了，但是推荐使用-mount参数。
+
+:::
+
+
+
+
+
 ### 目录挂载
+
+持久化容器里面的数据到本地，通过`目录挂载`的方式
 
 可以在创建容器的时候，将宿主机的目录与容器内的目录进行映射，这样我们就可以通过修改宿主机某个目录的文件从而去影响容器，也就意味着挂载的目录`互相同步`。 
 
@@ -341,33 +471,146 @@ ll /usr/local/test
 
 
 
+然后查看容器元数据中的挂载目录信息
 
+```json
+"Mounts": [
+  {
+    "Type": "bind",
+    "Source": "/usr/local/docker/nginx/html",
+    "Destination": "/data/html",
+    "Mode": "rw",
+    "RW": true,
+    "Propagation": "rprivate"
+  },
+  {
+    "Type": "bind",
+    "Source": "/usr/local/docker/nginx/img",
+    "Destination": "/data/img",
+    "Mode": "rw",
+    "RW": true,
+    "Propagation": "rprivate"
+  },
+  {
+    "Type": "bind",
+    "Source": "/usr/local/docker/nginx/conf.d",
+    "Destination": "/etc/nginx/conf.d",
+    "Mode": "rw",
+    "RW": true,
+    "Propagation": "rprivate"
+  }
+],
 
-### 文件传输
-
-拷贝宿主机文件到容器
-
-```shell
-#将主机文件拷贝到容器中
-docker cp [主机文件] [容器]:[容器路径]
 ```
 
 
 
-拷贝容器中的文件到宿主机
+
+
+### 具名和匿名挂载
 
 ```shell
-#将主机文件拷贝到容器中
-docker cp [容器]:[容器文件] [主机路径]
+# 如何确实是具名/匿名挂载，还是指定路径挂载
+#匿名挂载
+-v 容器内路径
+
+#具名挂载
+-v 卷名:容器内路径
+
+#指定路径挂载
+-v /宿主机路径:容器内路径
 ```
 
 
 
 
 
+### 容器挂载目录权限
+
+在`容器内路径`后加`:ro`为可读，加`:rw`为可读可写
+
+::: info
+
+- **ro**:说明此挂载目录只能通过宿主机来操作，容器内部无法写
+- **rw**:默认，即可读可写
+
+:::
 
 
-## dockerfile
+
+
+
+### 数据卷容器共享
+
+如我我们经常需要多个容器之间进行数据共享我们需要用到命令`--volumes-from`
+
+
+
+具体示例
+
+1. 我们从仓库拉一个centos的容器镜像
+
+```bash
+Copy$ docker pull centos
+```
+
+2）然后运行这个镜像并创建一个数据卷挂载到/mydata
+
+```bash
+$ docker run -it -v /mydata --name mycentos centos
+```
+
+2. 再运行两个容器，在这两个容器中使用--volumes-from来挂载mycentos容器中的数据卷.
+
+```bash
+$ docker run -it --volumes-from mycentos --name soncentos1 centos
+
+$ docker run -it --volumes-from mycentos --name soncentos2 centos
+```
+
+此时，容器soncentos1和soncentos2都挂载同一个数据卷到相的/mydata目录。三个容器任何一方在该目录下的写入数据，其他容器都可以看到。
+
+
+
+::: warning 注意
+
+可以多次使用`--volumes-**from**`参数来从多个容器挂载多个数据卷。还可以从其他已经挂载了容器卷的容器来挂载数据卷。 使用--volumes-**from**参数所挂载数据卷的容器自身并不需要保持在运行状态。 
+
+如果删除了挂载的容器（包括dbdata、db1和db2），数据卷并不会被自动删除。如果要删除一个数据卷，必须在删除最后一个还挂载着它 的容器时显式使用docker rm -v命令来指定同时删除关联的容器。
+
+:::
+
+
+
+## 提交镜像/dockerfile
+
+
+
+### 使用commit命令
+
+```shell
+# 提交某个容器为镜像
+docker commit [容器]
+
+[root@izuf6f489inattnq5zpfcxz ~]# docker commit --help
+
+Usage:  docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
+
+Create a new image from a container's changes
+
+Options:
+  -a, --author string    Author (e.g., "John Hannibal Smith <hannibal@a-team.com>")
+  -c, --change list      Apply Dockerfile instruction to the created image
+  -m, --message string   Commit message
+  -p, --pause            Pause container during commit (default true)
+
+```
+
+
+
+### 使用dockerfile
+
+
 
 
 

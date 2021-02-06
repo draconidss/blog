@@ -64,9 +64,9 @@ docker pull mysql:5.7
 mkdir /mydata/mysql/mysql5.7 #先在根目录创建容器来存放mysql相关
 #将容器的3306端口映射到主机的3307接口，适合主机的3306接口被主机Mysql占用情况下
 docker run -p 3307:3306 --name mysql5.7 \
--v /mydata/mysql/mysql5.7/log:/var/log/mysql5.7 \
--v /mydata/mysql/mysql5.7/data:/var/lib/mysql5.7 \
--v /mydata/mysql/mysql5.7/conf:/etc/mysql5.7 \
+-v /usr/local/docker/mysql5.7/data:/var/lib/mysql \
+-v /usr/local/docker/mysql5.7/log:/var/log \
+-v /usr/local/docker/mysql5.7/conf:/etc/mysql \
 -e MYSQL_ROOT_PASSWORD=root \
 -d mysql:5.7
 ```
@@ -75,9 +75,9 @@ docker run -p 3307:3306 --name mysql5.7 \
 
 > - --restart=always：容器自启动
 > - -p 3307:3306：将容器的3306端⼝映射到主机的3307端⼝        
-> - -v /mydata/mysql/conf:/etc/mysql：将配置⽂件夹挂在到主机
-> - -v /mydata/mysql/log:/var/log/mysql：将⽇志⽂件夹挂载到主机
-> - -v /mydata/mysql/data:/var/lib/mysql/：将数据⽂件夹挂载到主机
+> - -v /usr/local/docker/mysql5.7/conf:/etc/mysql：将配置⽂件夹挂在到主机
+> - -v /usr/local/docker/mysql5.7/log:/var/log：将⽇志⽂件夹挂载到主机
+> - -v /usr/local/docker/mysql5.7/data:/var/lib/mysql：将数据⽂件夹挂载到主机
 > - -e MYSQL_ROOT_PASSWORD=root：初始化root⽤户的密码
 
 ![启动mysql容器](./images/Docker-install-software/start_mysql_container.jpg)

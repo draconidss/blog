@@ -200,7 +200,7 @@ module.exports = config({
           title: "Linux",
           icon: "creative",
           prefix: "Linux/",
-          children: ["", "Linux-commands", "Use-xshell-to-connect-Centos7-in-VM"],
+          children: ["", "Linux-skill", "Linux-commands", "Use-xshell-to-connect-Centos7-in-VM"],
         },
 
         {
