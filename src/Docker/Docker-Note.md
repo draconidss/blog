@@ -23,6 +23,7 @@ tags:
 
 - [阮一峰Docker 入门教程](http://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html)
 - https://www.bilibili.com/read/cv6041687/
+- [菜鸟教程 | Docker 教程](https://www.runoob.com/docker/docker-tutorial.html)
 
 :::
 
@@ -582,7 +583,7 @@ $ docker run -it --volumes-from mycentos --name soncentos2 centos
 
 
 
-## 提交镜像/dockerfile
+## 制作镜像
 
 
 
@@ -608,7 +609,31 @@ Options:
 
 
 
-### 使用dockerfile
+
+
+
+
+## Dockerfile-制作镜像
+
+::: tips 参考
+
+- [Dockerfile reference](https://docs.docker.com/engine/reference/builder/#dockerfile-examples)
+- [菜鸟教程 | Dockerfile](https://www.runoob.com/docker/docker-dockerfile.html)
+
+:::
+
+
+
+### 格式
+
+::: info
+
+- 每个保留关键字都是大写字母
+- 执行顺序从上到下
+- #表示注释
+- 每一个指令都会创建提交一个`新的镜像层`，并提交
+
+:::
 
 
 
