@@ -131,8 +131,8 @@ Docker 的主要用途，目前有三大类。
 
 ::: tip 参考
 
-- https://zhuanlan.zhihu.com/p/93085215
 - http://dockone.io/article/783
+- https://zhuanlan.zhihu.com/p/93085215
 - https://blog.51cto.com/liuleis/2070461
 
 :::
@@ -145,6 +145,7 @@ Docker 的主要用途，目前有三大类。
 
 ::: tip 参考
 
+- http://dockone.io/article/783
 - https://www.bilibili.com/read/cv6041687/
 - https://www.cnblogs.com/duanxz/p/7905233.html
 - https://jishuin.proginn.com/p/763bfbd2a0a8
@@ -155,7 +156,7 @@ Docker 的主要用途，目前有三大类。
 
 
 
-![docker下载镜像](./images/Docker-Note/docker_command.png)
+![docker常用命令](./images/Docker-Note/docker_command.png)
 
 
 
@@ -532,7 +533,7 @@ ll /usr/local/test
 
 ::: info
 
-- **ro**:说明此挂载目录只能通过宿主机来操作，容器内部无法写
+- **ro**:宿主机只能读取容器的数据卷内容不能修改
 - **rw**:默认，即可读可写
 
 :::
@@ -624,7 +625,170 @@ Options:
 
 
 
-### 格式
+
+
+### 命令
+
+
+
+![dockerfile命令1](./images/Docker-Note/dockerfile_command.png)
+
+
+
+
+
+![dockerfile命令2](./images/Docker-Note/dockerfile_command2.png)
+
+`CMD`&`ENTRYPOINT`的区别
+
+::: warning CMD&ENTRYPOINT的区别
+
+- CMD：指定这个容器启动的时候要运行的命令，只有最后一个会生效，可被替代
+- ENTRYPOINT：指定这个容器启动的时候要运行的命令，可以追加命令
+
+:::
+
+
+
+举例通过构建两个不同的dockerfile
+
+`dockerfile-cmd`
+
+```shell
+# 构建镜像为centos-cmd
+FROM centos
+CMD ["ls", "-a"]
+```
+
+`dockerfile-entrypoint`
+
+```shell
+# 构建镜像为centos-entrypoint
+FROM centos
+ENTRYPOINT ["ls", "-a"]
+```
+
+
+
+构建镜像再运行
+
+`centos-cmd`
+
+```shell
+
+[root@izuf6f489inattnq5zpfcxz ~]# docker run centos-cmd
+.
+..
+.dockerenv
+bin
+dev
+etc
+home
+lib
+lib64
+lost+found
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+usr
+var
+[root@izuf6f489inattnq5zpfcxz ~]#
+
+```
+
+
+
+`centos-entrypoint`
+
+```shell
+[root@izuf6f489inattnq5zpfcxz ~]# docker run centos-entrypoint
+.
+..
+.dockerenv
+bin
+dev
+etc
+home
+lib
+lib64
+lost+found
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+usr
+var
+[root@izuf6f489inattnq5zpfcxz ~]#
+```
+
+
+
+此时我们在`run`时追加命令，由于`cmd`是替换所以会报错，而`entrypoint`则不会
+
+`centos-cmd`
+
+```shell
+[root@izuf6f489inattnq5zpfcxz ~]# docker run centos-cmd -l
+docker: Error response from daemon: OCI runtime create failed: container_linux.go:349: starting container process caused "exec: \"-l\": executable file not found in $PATH": unknown.
+[root@izuf6f489inattnq5zpfcxz ~]#
+```
+
+
+
+`centos-entrypoint`
+
+```shell
+
+[root@izuf6f489inattnq5zpfcxz ~]# docker run centos-entrypoint -l
+total 56
+drwxr-xr-x   1 root root 4096 Feb  8 16:19 .
+drwxr-xr-x   1 root root 4096 Feb  8 16:19 ..
+-rwxr-xr-x   1 root root    0 Feb  8 16:19 .dockerenv
+lrwxrwxrwx   1 root root    7 Nov  3 15:22 bin -> usr/bin
+drwxr-xr-x   5 root root  340 Feb  8 16:19 dev
+drwxr-xr-x   1 root root 4096 Feb  8 16:19 etc
+drwxr-xr-x   2 root root 4096 Nov  3 15:22 home
+lrwxrwxrwx   1 root root    7 Nov  3 15:22 lib -> usr/lib
+lrwxrwxrwx   1 root root    9 Nov  3 15:22 lib64 -> usr/lib64
+drwx------   2 root root 4096 Dec  4 17:37 lost+found
+drwxr-xr-x   2 root root 4096 Nov  3 15:22 media
+drwxr-xr-x   2 root root 4096 Nov  3 15:22 mnt
+drwxr-xr-x   2 root root 4096 Nov  3 15:22 opt
+dr-xr-xr-x 151 root root    0 Feb  8 16:19 proc
+dr-xr-x---   2 root root 4096 Dec  4 17:37 root
+drwxr-xr-x  11 root root 4096 Dec  4 17:37 run
+lrwxrwxrwx   1 root root    8 Nov  3 15:22 sbin -> usr/sbin
+drwxr-xr-x   2 root root 4096 Nov  3 15:22 srv
+dr-xr-xr-x  13 root root    0 Feb  8 16:19 sys
+drwxrwxrwt   7 root root 4096 Dec  4 17:37 tmp
+drwxr-xr-x  12 root root 4096 Dec  4 17:37 usr
+drwxr-xr-x  20 root root 4096 Dec  4 17:37 var
+[root@izuf6f489inattnq5zpfcxz ~]#
+
+```
+
+可以看到此时`-l`命令被追加到`ls -a`中，最后执行了`ls -a -l`
+
+
+
+
+
+
+
+其他
 
 ::: info
 
@@ -634,6 +798,83 @@ Options:
 - 每一个指令都会创建提交一个`新的镜像层`，并提交
 
 :::
+
+
+
+
+
+### 示例：创建自己的centos镜像
+
+
+
+编写`dockerfile`文件
+
+```shell
+FROM centos
+MAINTAINER Chen Long
+
+ENV MYPATH /usr/local
+WORKDIR $MYPATH
+
+RUN yum -y install vim
+RUN yum -y install tree
+RUN yum -y install net-tools
+
+EXPOSE 80
+
+CMD echo $MYPATH
+CMD echo "---END---"
+CMD /bin/bash
+```
+
+
+
+执行build命令
+
+``` .shell
+docker build -f [dockerfile文件] -t [镜像名] .
+```
+
+
+
+构建完毕
+
+```shell
+Successfully built 0532ada899d9
+Successfully tagged mycentos:1.0.0
+```
+
+
+
+查看镜像
+
+```shell
+[root@izuf6f489inattnq5zpfcxz mydockerfile]# docker images
+REPOSITORY            TAG                 IMAGE ID            CREATED             SIZE
+mycentos              1.0.0               0532ada899d9        3 minutes ago       314MB
+```
+
+
+
+查看镜像构建历史
+
+```shell
+docker history [镜像]
+```
+
+
+
+![docker_history](./images/Docker-Note/docker_history.jpg)
+
+
+
+
+
+重命名镜像/打标签
+
+```shell
+docker tag [镜像]
+```
 
 
 
