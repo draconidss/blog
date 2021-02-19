@@ -410,6 +410,17 @@ decrby [key] [number]
 
 ### 3.9 Bitmap
 
+参考
+
+::: tips 参考
+
+- [一看就懂系列之 详解redis的bitmap在亿级项目中的应用](https://blog.csdn.net/u011957758/article/details/74783347)
+- https://www.cnblogs.com/wuhaidong/articles/10389484.html
+
+:::
+
+
+
 二进制，可用于打卡等状态变化
 
 
