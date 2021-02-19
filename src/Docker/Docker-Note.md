@@ -1,4 +1,3 @@
----
 icon: 
 title: Docker学习笔记
 author: LifeAlsoIsGG
@@ -9,7 +8,6 @@ categories:
   - Docker
 tags: 
   - Docker
----
 
 
 
@@ -145,6 +143,7 @@ Docker 的主要用途，目前有三大类。
 
 ::: tip 参考
 
+- [Docker官网文档](https://docs.docker.com/engine/reference/run/)
 - http://dockone.io/article/783
 - https://www.bilibili.com/read/cv6041687/
 - https://www.cnblogs.com/duanxz/p/7905233.html
@@ -401,7 +400,7 @@ docker cp [容器]:[容器文件] [主机路径]
 在容器中管理数据主要有两种方式：
 
 - 数据卷(Volumes)
-- 目录挂载(Bind mounts)
+- 挂载主机目录(Bind mounts)
 
 
 
@@ -584,16 +583,7 @@ $ docker run -it --volumes-from mycentos --name soncentos2 centos
 
 
 
-
 ## 制作镜像
-
-
-
-
-
-## 提交镜像/Dockerfile
-
-
 
 
 
@@ -616,7 +606,6 @@ Options:
   -p, --pause            Pause container during commit (default true)
 
 ```
-
 
 
 
@@ -886,13 +875,256 @@ docker history [镜像]
 docker tag [镜像]
 ```
 
-### 使用Dockerfile
-
-
-
 
 
 
 
 ## docker-compose
 
+
+
+
+
+## docker网络
+
+
+
+::: tips 参考
+
+- https://blog.csdn.net/meltsnow/article/details/94490994
+- https://blog.51cto.com/ganbing/2087598
+- [Docker四种网络模式](https://www.jianshu.com/p/22a7032bb7bd)
+
+:::
+
+
+
+
+
+### 定义
+
+安装Docker时，它会自动创建三个网络:
+
+- bridge（创建容器默认连接到此网络）
+- none 
+- host
+
+
+
+| 网络模式   | 简介                                                         |
+| ---------- | ------------------------------------------------------------ |
+| Host       | 容器将不会虚拟出自己的网卡，配置自己的IP等，而是使用宿主机的IP和端口。 |
+| Bridge     | 此模式会为每一个容器分配、设置IP等，并将容器连接到一个docker0虚拟网桥，通过docker0网桥以及Iptables nat表配置与宿主机通信。 |
+| None       | 该模式关闭了容器的网络功能。                                 |
+| Container  | 创建的容器不会创建自己的网卡，配置自己的IP，而是和一个指定的容器共享IP、端口范围。 |
+| 自定义网络 | 略                                                           |
+
+
+
+使用`docker network ls`查看
+
+```shell
+[root@izuf6f489inattnq5zpfcxz ~]# docker network ls
+NETWORK ID          NAME                DRIVER              SCOPE
+cdd42cba5f27        bridge              bridge              local
+83b40108e61e        host                host                local
+9b24385c4387        nginx_default       bridge              local
+a801bf66725a        none                null                local
+```
+
+> nginx为自己安装的
+
+
+
+**Docker内置这三个网络，运行容器时，你可以使用该–network标志来指定容器应连接到哪些网络。**
+
+**该bridge网络代表docker0所有Docker安装中存在的网络。除非你使用该docker run --network=选项指定，否则Docker守护程序默认将容器连接到此网络。**
+
+```shell {10-13}
+[root@izuf6f489inattnq5zpfcxz ~]# ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    link/ether 00:16:3e:10:a3:c3 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.3.46/18 brd 172.17.63.255 scope global eth0
+       valid_lft forever preferred_lft forever
+3: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP
+    link/ether 02:42:22:ac:5e:95 brd ff:ff:ff:ff:ff:ff
+    inet 172.18.0.1/16 brd 172.18.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+4: br-9b24385c4387: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP
+    link/ether 02:42:ba:48:bd:cc brd ff:ff:ff:ff:ff:ff
+    inet 172.23.0.1/16 brd 172.23.255.255 scope global br-9b24385c4387
+       valid_lft forever preferred_lft forever
+6: veth76d3b86@if5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-9b24385c4387 state UP
+    link/ether 76:09:c0:f5:c0:de brd ff:ff:ff:ff:ff:ff link-netnsid 0
+10: veth4a169f6@if9: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP
+    link/ether 56:2a:84:6f:4a:03 brd ff:ff:ff:ff:ff:ff link-netnsid 2
+12: veth46c9f96@if11: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP
+    link/ether 0e:7e:8a:1d:d4:c7 brd ff:ff:ff:ff:ff:ff link-netnsid 3
+14: veth6a04666@if13: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP
+    link/ether 72:6a:3a:3c:17:83 brd ff:ff:ff:ff:ff:ff link-netnsid 4
+16: vethb692a64@if15: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP
+    link/ether 6e:82:0e:c2:09:fd brd ff:ff:ff:ff:ff:ff link-netnsid 5
+18: veth976aa59@if17: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP
+    link/ether 82:61:29:70:0b:11 brd ff:ff:ff:ff:ff:ff link-netnsid 6
+22: vethdc31829@if21: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP
+    link/ether 72:5a:78:af:70:c8 brd ff:ff:ff:ff:ff:ff link-netnsid 1
+```
+
+
+
+**我们在使用docker run创建Docker容器时，可以用 --net 选项指定容器的网络模式，Docker可以有以下4种网络模式：**
+
+::: info 四种网络模式
+
+- **host**：使用 --net=host 指定。
+- **none**：使用 --net=none 指定。
+- **bridge**：使用 --net=bridge 指定，默认设置。
+- **container**：使用 --net=container:NAME_or_ID 指定。
+
+:::
+
+
+
+### Host
+
+相当于Vmware中的`桥接模式`，与宿主机在同一个网络中，但没有独立IP地址。
+
+众所周知，Docker使用了Linux的`Namespaces`技术来进行资源隔离，如`PID Namespace`隔离进程，`Mount Namespace`隔离文件系统，`Network Namespace`隔离网络等。
+
+一个Network Namespace提供了一份独立的网络环境，包括网卡、路由、Iptable规则等都与其他的Network Namespace隔离。一个Docker容器一般会分配一个独立的Network Namespace。但如果启动容器的时候使用host模式，那么这个容器将不会获得一个独立的Network Namespace，而是和宿主机共用一个Network Namespace。容器将不会虚拟出自己的网卡，配置自己的IP等，而是使用宿主机的IP和端口。
+
+
+
+**例如，我们在172.25.6.1/24的机器上用host模式启动一个ubuntu容器**
+
+```shell
+[root@server1 ~]# docker run -it --network=host ubuntu
+```
+
+
+
+可以看到，容器的网络使用的时宿主机的网络，但是，容器的其他方面，如`文件系统`、`进程列表`等还是和宿主机隔离的。
+
+![dockerfile命令1](./images/Docker-Note/docker_network_host.png)
+
+
+
+
+
+### Container
+
+在理解了host模式后，这个模式也就好理解了。这个模式指定新创建的容器和已经存在的一个容器共享一个`Network Namespace`，而不是和宿主机共享。新创建的容器不会创建自己的网卡，配置自己的IP，而是和一个指定的容器共享IP、端口范围等。同样，两个容器除了网络方面，其他的如文件系统、进程列表等还是隔离的。两个容器的进程可以通过lo网卡设备通信。
+
+
+
+
+
+### None
+
+该模式将容器放置在它自己的网络栈中，但是并不进行任何配置。实际上，该模式关闭了容器的网络功能，在以下两种情况下是有用的：容器并不需要网络（例如只需要写磁盘卷的批处理任务）。
+
+
+
+::: info overlay
+
+**在docker1.7代码进行了重构，单独把网络部分独立出来编写，所以在docker1.8新加入的一个overlay网络模式。Docker对于网络访问的控制也是在逐渐完善的。**
+
+:::
+
+
+
+
+
+### Bridge(默认)
+
+相当于Vmware中的`Nat模式`，容器使用独立`network Namespace`，并连接到`docker0`虚拟网卡（默认模式）。通过`docker0网桥`以及`Iptables nat表`配置与宿主机通信；
+
+bridge模式是`Docker默认的网络设置`，此模式会为每一个容器分配`Network Namespace`、设置IP等，并将一个主机上的Docker容器连接到一个虚拟网桥上。下面着重介绍一下此模式。
+
+
+
+当Docker server启动时，会在主机上创建一个名为`docker0的虚拟网桥`，此主机上启动的Docker容器会连接到这个虚拟网桥上。虚拟网桥的工作方式和物理交换机类似，这样主机上的所有容器就通过交换机连在了一个二层网络中。
+
+接下来就要为容器分配IP了，Docker会从RFC1918所定义的私有IP网段中，选择一个`和宿主机不同的IP地址和子网`分配给`docker0`，连接到docker0的容器就从这个子网中选择`一个未占用的IP`使用。如一般Docker会使用172.17.0.0/16这个网段，并将172.17.0.1/16分配给docker0网桥（在主机上使用ifconfig命令是可以看到docker0的，可以认为它是网桥的管理接口，在宿主机上作为一块虚拟网卡使用）。单机环境下的网络拓扑如下，主机地址为10.10.0.186/24。
+
+
+
+![dockerfile命令1](./images/Docker-Note/docker_bridge.png)
+
+
+
+#### 流程
+
+Docker完成以上网络配置的过程大致是这样的：
+
+
+
+1. 在主机上创建一对虚拟网卡`veth pair`设备。veth设备总是`成对出现`的，它们组成了一个数据的通道，数据从一个设备进入，就会从另一个设备出来。因此，veth设备常用来连接两个网络设备。
+
+   
+
+2. Docker将veth pair设备的一端放在新创建的容器中，并命名为`eth0`。另一端放在主机中，以veth65f9这样类似的名字命名，并将这个网络设备加入到docker0网桥中，可以通过brctl show命令查看。
+
+   ```shell
+   brctl show
+   bridge name     bridge id               STP enabled     interfaces
+   docker0         8000.02425f21c208       no
+   ```
+   
+   
+
+
+3. 从`docker0子网`中分配一个IP给容器使用，并设置`docker0的IP地址`为容器的`默认网关`。
+
+   运行容器：
+
+   ```shell
+   docker run --name=nginx_bridge --net=bridge -p 80:80 -d nginx        
+   9582dbec7981085ab1f159edcc4bf35e2ee8d5a03984d214bce32a30eab4921a
+   ```
+
+   
+
+
+
+#### 容器的通信
+
+在bridge模式下，连在同一网桥上的容器可以相互通信（若出于安全考虑，也可以禁止它们之间通信，方法是在`DOCKER_OPTS`变量中设置`–icc=false`，这样只有使用–link才能使两个容器通信）。
+
+Docker可以开启容器间通信（意味着默认配置–icc=true），也就是说，宿主机上的所有容器可以不受任何限制地相互通信，这可能导致拒绝服务攻击。进一步地，Docker可以通过–ip_forward和–iptables两个选项控制容器间、容器和外部世界的通信。
+
+容器也可以与外部通信，我们看一下主机上的`Iptable`规则，可以看到这么一条
+
+```shell
+-A POSTROUTING -s 172.17.0.0/16 ! -o docker0 -j MASQUERADE
+```
+
+
+
+这条规则会将源地址为172.17.0.0/16的包（也就是从Docker容器产生的包），并且不是从docker0网卡发出的，进行源地址转换，转换成主机网卡的地址。这么说可能不太好理解，举一个例子说明一下。假设主机有一块网卡为eth0，IP地址为10.10.101.105/24，网关为10.10.101.254。从主机上一个IP为172.17.0.1/16的容器中ping百度（180.76.3.151）。IP包首先从容器发往自己的默认网关docker0，包到达docker0后，也就到达了主机上。然后会查询主机的路由表，发现包应该从主机的eth0发往主机的网关10.10.105.254/24。接着包会转发给eth0，并从eth0发出去（主机的ip_forward转发应该已经打开）。这时候，上面的Iptable规则就会起作用，对包做SNAT转换，将源地址换为eth0的地址。这样，在外界看来，这个包就是从10.10.101.105上发出来的，Docker容器对外是不可见的。
+
+那么，外面的机器是如何访问Docker容器的服务呢？我们首先用下面命令创建一个含有web应用的容器，将容器的80端口映射到主机的80端口。
+
+```shell
+docker run --name=nginx_bridge --net=bridge -p 80:80 -d nginx
+```
+
+**此条规则就是对主机eth0收到的目的端口为80的tcp流量进行DNAT转换，将流量发往172.17.0.2:80，也就是我们上面创建的Docker容器。所以，外界只需访问10.10.101.105:80就可以访问到容器中的服务。**
+
+**除此之外，我们还可以自定义Docker使用的IP地址、DNS等信息，甚至使用自己定义的网桥，但是其工作方式还是一样的。**
+
+
+
+
+
+### 自定义网络
+
+**建议使用自定义的网桥来控制哪些容器可以相互通信，还可以自动DNS解析容器名称到IP地址。Docker提供了创建这些网络的默认网络驱动程序，你可以创建一个新的Bridge网络，Overlay或Macvlan网络。你还可以创建一个网络插件或远程网络进行完整的自定义和控制。**
+
+**你可以根据需要创建任意数量的网络，并且可以在任何给定时间将容器连接到这些网络中的零个或多个网络。此外，您可以连接并断开网络中的运行容器，而无需重新启动容器。当容器连接到多个网络时，其外部连接通过第一个非内部网络以词法顺序提供。**
+
+**接下来介绍Docker的内置网络驱动程序。**
