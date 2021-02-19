@@ -1134,4 +1134,92 @@ docker run --name=nginx_bridge --net=bridge -p 80:80 -d nginx
 
 **你可以根据需要创建任意数量的网络，并且可以在任何给定时间将容器连接到这些网络中的零个或多个网络。此外，您可以连接并断开网络中的运行容器，而无需重新启动容器。当容器连接到多个网络时，其外部连接通过第一个非内部网络以词法顺序提供。**
 
-**接下来介绍Docker的内置网络驱动程序。**
+
+
+创建网络
+
+```shell
+[root@izuf6f489inattnq5zpfcxz ~]# docker network create  --help
+
+Usage:  docker network create [OPTIONS] NETWORK
+
+Create a network
+
+Options:
+      --attachable           Enable manual container attachment
+      --aux-address map      Auxiliary IPv4 or IPv6 addresses used by Network driver (default map[])
+      --config-from string   The network from which copying the configuration
+      --config-only          Create a configuration only network
+  -d, --driver string        Driver to manage the Network (default "bridge")
+      --gateway strings      IPv4 or IPv6 Gateway for the master subnet
+      --ingress              Create swarm routing-mesh network
+      --internal             Restrict external access to the network
+      --ip-range strings     Allocate container ip from a sub-range
+      --ipam-driver string   IP Address Management Driver (default "default")
+      --ipam-opt map         Set IPAM driver specific options (default map[])
+      --ipv6                 Enable IPv6 networking
+      --label list           Set metadata on a network
+  -o, --opt map              Set driver specific options (default map[])
+      --scope string         Control the network's scope
+      --subnet strings       Subnet in CIDR format that represents a network segment
+
+```
+
+
+
+示例
+
+```shell
+docker network create --driver bridge --subnet 192.168.0.0/24 --gateway 192.168.0.1 mynet
+```
+
+::: info 示例
+
+- --driver bridge：驱动，默认为bridge
+- --subnet 192.168.0.0/24：子网
+- --gateway 192.168.0.1：网关
+
+:::
+
+
+
+查看元数据
+
+```shell
+[root@izuf6f489inattnq5zpfcxz ~]# docker inspect network mynet
+[
+    {
+        "Name": "mynet",
+        "Id": "078e90effc3fef80d9596c14277c5e798dd753e0b5ab77fccb8c5b7b7eb18f40",
+        "Created": "2021-02-20T00:55:36.875138453+08:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "192.168.0.0/24",
+                    "Gateway": "192.168.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {},
+        "Options": {},
+        "Labels": {}
+    }
+]
+
+```
+
+
+
+使用ping命令发现可以互通
