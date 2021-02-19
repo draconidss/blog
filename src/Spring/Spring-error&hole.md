@@ -46,3 +46,18 @@ tags:
 
 
 ![](./images/Spring-error&hole/springboot_error_1-2.png)
+
+
+
+
+
+
+
+### 将枚举类型输出时转换为JSON类型
+
+加上注解
+
+```java
+@JsonFormat(shape = JsonFormat.Shape.OBJECT)
+```
+
