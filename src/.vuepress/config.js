@@ -8,7 +8,7 @@ module.exports = config({
 
   dest: "./dist",
 
-  configureWebpack: () => {
+/*  configureWebpack: () => {
     const NODE_ENV = process.env.NODE_ENV;
     //判断是否是生产环境
     if(NODE_ENV === 'production'){
@@ -33,7 +33,7 @@ module.exports = config({
         }
       }
     }
-  },
+  },*/
 
   // remove this if you are not using Vue and React in "markdownEnhance: code demo"
   head: [
