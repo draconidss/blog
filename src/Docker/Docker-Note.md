@@ -401,7 +401,7 @@ docker cp [容器]:[容器文件] [主机路径]
 在容器中管理数据主要有两种方式：
 
 - 数据卷(Volumes)
-- 挂载主机目录(Bind mounts)
+- 目录挂载(Bind mounts)
 
 
 
@@ -584,7 +584,16 @@ $ docker run -it --volumes-from mycentos --name soncentos2 centos
 
 
 
+
 ## 制作镜像
+
+
+
+
+
+## 提交镜像/Dockerfile
+
+
 
 
 
@@ -607,6 +616,7 @@ Options:
   -p, --pause            Pause container during commit (default true)
 
 ```
+
 
 
 
@@ -875,6 +885,10 @@ docker history [镜像]
 ```shell
 docker tag [镜像]
 ```
+
+### 使用Dockerfile
+
+
 
 
 
