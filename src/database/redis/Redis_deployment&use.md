@@ -2798,7 +2798,7 @@ sentinel auth-pass mymaster 123
 
 
 
-详解
+配置详解
 
 ```sh
 # 告诉sentinel去监听地址为ip:port的一个master，这里的master-name可以自定义，quorum是一个数字，
@@ -2821,5 +2821,461 @@ sentinel parallel-syncs <master-name> <numslaves> 
 # 当想要取消一个正在进行的failover所需要的时间。    
 # 当进行failover时，配置所有slaves指向新的master所需的最大时间。不过，即使过了这个超时，slaves依然会被正确配置为指向master，但是就不按parallel-syncs所配置的规则了。
 sentinel failover-timeout <master-name> <milliseconds>
+```
+
+
+
+### 12.2 使用Docker启动哨兵
+
+
+
+
+
+
+
+## 13. Redis集群配置-集群cluster模式
+
+> 通过docker并自定义网络搭建
+
+::: tips 参考
+
+- https://www.cnblogs.com/catelina/p/13630036.html
+- [Redis-Cluster集群](https://www.jianshu.com/p/813a79ddf932)
+
+:::
+
+
+
+一般是三主三从
+
+
+
+### 13.1 创建集群网络
+
+```shell
+docker network create redis-net --subnet 172.38.0.0/16
+```
+
+> `--subnet`为子网范围
+
+
+
+
+
+### 13.2 创建生成redis配置文件脚本
+
+用于生成自定义的redis配置`redis.conf`
+
+```shell
+# 循环6次
+for port in $(seq 1 6);
+do
+  mkdir -p /usr/local/docker/redis-cluster/node-${port}/conf
+  touch /usr/local/docker/redis-cluster/node-${port}/conf/redis.conf
+  # 输出内容到/usr/local/docker/redis-cluster/node-${port}/conf/redis.conf
+  cat > /usr/local/docker/redis-cluster/node-${port}/conf/redis.conf << EOF
+port 6379
+bind 0.0.0.0
+cluster-enabled yes
+# 注意每个集群的cluster-config-file名称不能一样，官网说实例 ID在集群中保持一个独一无二（unique）的名字。
+cluster-config-file nodes-${port}.conf
+cluster-node-timeout 5000
+cluster-announce-ip 172.38.0.1${port}
+cluster-announce-port 6379
+appendonly yes
+# 注意该脚本，结束的EOF前面不能有空格，输出的内容前面也不能留空格
+EOF
+done
+```
+
+
+
+之后会生成6个配置文件
+
+
+
+### 13.3 创建脚本通过docker运行
+
+```shell
+for port in $(seq 1 6);
+do
+  docker run -p 638${port}:6379 -p 1638${port}:16379 --name redis-${port} \
+  -v /usr/local/docker/redis-cluster/node-${port}/data:/data \
+  -v /usr/local/docker/redis-cluster/node-${port}/conf/redis.conf:/etc/redis/redis.conf \
+  -d --net redis-net --ip 172.38.0.1${port} redis redis-server /etc/redis/redis.conf
+done
+```
+
+
+
+查看生成的六个容器
+
+```shell
+[root@izuf6f489inattnq5zpfcxz redis-cluster]# docker ps
+CONTAINER ID        IMAGE                 COMMAND                  CREATED              STATUS              PORTS                                              NAMES
+a6b9f914ece0        redis                 "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:6386->6379/tcp, 0.0.0.0:26386->26379/tcp   redis-6
+e8fd78ecb460        redis                 "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:6385->6379/tcp, 0.0.0.0:26385->26379/tcp   redis-5
+aa236068a616        redis                 "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:6384->6379/tcp, 0.0.0.0:26384->26379/tcp   redis-4
+d07e6c6a0e59        redis                 "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:6383->6379/tcp, 0.0.0.0:26383->26379/tcp   redis-3
+7404f91d3ec5        redis                 "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:6382->6379/tcp, 0.0.0.0:26382->26379/tcp   redis-2
+9b59cc207416        redis                 "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:6381->6379/tcp, 0.0.0.0:26381->26379/tcp   redis-1
+
+```
+
+
+
+### 13.4 启动集群
+
+进入某个redis
+
+```shell
+docker exec -it redis-1 /bin/bash
+```
+
+
+
+启动集群
+
+> 创建redis集群命令 `redis-cli --cluster create` 参数 `--cluster-replicas 1` 表示副本是1
+
+```shell
+# 创建redis集群命令 redis-cli --cluster create 参数 --cluster-replicas 1 表示副本是1
+redis-cli --cluster create 172.38.0.11:6379 172.38.0.12:6379 172.38.0.13:6379 172.38.0.14:6379 172.38.0.15:6379 172.38.0.16:6379 --cluster-replicas 1 
+```
+
+
+
+创建成功
+
+```shell
+Waiting for the cluster to join
+.
+>>> Performing Cluster Check (using node 172.38.0.11:6379)
+M: 2dd15c79a6850e19be1cf503731b21b75c618242 172.38.0.11:6379
+   slots:[0-5460] (5461 slots) master
+   1 additional replica(s)
+S: 54169c6085325e041c01812d88c0c4718d427989 172.38.0.15:6379
+   slots: (0 slots) slave
+   replicates 2dd15c79a6850e19be1cf503731b21b75c618242
+M: 722e27ee6ac3b34416387b56ebae3d69cf54a4d1 172.38.0.13:6379
+   slots:[10923-16383] (5461 slots) master
+   1 additional replica(s)
+M: 312454ec0845792a27650f1e237fc8be29d73f52 172.38.0.12:6379
+   slots:[5461-10922] (5462 slots) master
+   1 additional replica(s)
+S: f2f92641a484bc2e84a72a7aaeef68d713b1defc 172.38.0.16:6379
+   slots: (0 slots) slave
+   replicates 312454ec0845792a27650f1e237fc8be29d73f52
+S: dbe7035e84422f582ddd475cb822854c6ff57d00 172.38.0.14:6379
+   slots: (0 slots) slave
+   replicates 722e27ee6ac3b34416387b56ebae3d69cf54a4d1
+[OK] All nodes agree about slots configuration.
+>>> Check for open slots...
+>>> Check slots coverage...
+[OK] All 16384 slots covered.
+```
+
+
+
+
+
+### 13.5 进入集群
+
+```shell
+redis-cli -c
+```
+
+
+
+查看集群信息
+
+```shell
+127.0.0.1:6379> cluster info
+cluster_state:ok
+cluster_slots_assigned:16384
+cluster_slots_ok:16384
+cluster_slots_pfail:0
+cluster_slots_fail:0
+cluster_known_nodes:6
+cluster_size:3
+cluster_current_epoch:6
+cluster_my_epoch:1
+cluster_stats_messages_ping_sent:509
+cluster_stats_messages_pong_sent:515
+cluster_stats_messages_sent:1024
+cluster_stats_messages_ping_received:510
+cluster_stats_messages_pong_received:509
+cluster_stats_messages_meet_received:5
+cluster_stats_messages_received:1024
+```
+
+
+
+查看集群nodes
+
+```shell
+127.0.0.1:6379> cluster nodes
+54169c6085325e041c01812d88c0c4718d427989 172.38.0.15:6379@16379 slave 2dd15c79a6850e19be1cf503731b21b75c618242 0 1613875900000 1 connected
+722e27ee6ac3b34416387b56ebae3d69cf54a4d1 172.38.0.13:6379@16379 master - 0 1613875900000 3 connected 10923-16383
+312454ec0845792a27650f1e237fc8be29d73f52 172.38.0.12:6379@16379 master - 0 1613875900000 2 connected 5461-10922
+f2f92641a484bc2e84a72a7aaeef68d713b1defc 172.38.0.16:6379@16379 slave 312454ec0845792a27650f1e237fc8be29d73f52 0 1613875900847 2 connected
+2dd15c79a6850e19be1cf503731b21b75c618242 172.38.0.11:6379@16379 myself,master - 0 1613875899000 1 connected 0-5460
+dbe7035e84422f582ddd475cb822854c6ff57d00 172.38.0.14:6379@16379 slave 722e27ee6ac3b34416387b56ebae3d69cf54a4d1 0 1613875899000 3 connected
+```
+
+
+
+
+
+### 13.6 测试
+
+set一个值
+
+```shell
+root@d0de8a779418:/data# redis-cli -c
+127.0.0.1:6379> set k1 v1
+-> Redirected to slot [12706] located at 172.38.0.13:6379
+OK
+172.38.0.13:6379> 
+```
+
+可以看到此值通过桶算法被set到另一个节点。当通过get等命令获取值时如果key在其他节点，也会切换到其他主节点
+
+> 注意从节点不提供服务，只是作为备份和集群入口存在
+
+
+
+
+
+### 13.7 测试集群高可用
+
+模拟某个节点挂掉，此时他的从节点会顶替成为主节点，当挂掉的节点恢复时，会自动成为新的主节点的从节点
+
+
+
+查看初始节点状态
+
+```shell
+127.0.0.1:6379> cluster nodes
+54169c6085325e041c01812d88c0c4718d427989 172.38.0.15:6379@16379 slave 2dd15c79a6850e19be1cf503731b21b75c618242 0 1613875900000 1 connected
+722e27ee6ac3b34416387b56ebae3d69cf54a4d1 172.38.0.13:6379@16379 master - 0 1613875900000 3 connected 10923-16383
+312454ec0845792a27650f1e237fc8be29d73f52 172.38.0.12:6379@16379 master - 0 1613875900000 2 connected 5461-10922
+f2f92641a484bc2e84a72a7aaeef68d713b1defc 172.38.0.16:6379@16379 slave 312454ec0845792a27650f1e237fc8be29d73f52 0 1613875900847 2 connected
+2dd15c79a6850e19be1cf503731b21b75c618242 172.38.0.11:6379@16379 myself,master - 0 1613875899000 1 connected 0-5460
+dbe7035e84422f582ddd475cb822854c6ff57d00 172.38.0.14:6379@16379 slave 722e27ee6ac3b34416387b56ebae3d69cf54a4d1 0 1613875899000 3 connected
+```
+
+
+
+挂掉`172.38.0.11:6379`的主节点后，从节点`172.38.0.15:6379`自动顶替成为新的主节点
+
+```shell {5-5}
+127.0.0.1:6379> cluster nodes
+f2f92641a484bc2e84a72a7aaeef68d713b1defc 172.38.0.16:6379@16379 slave 312454ec0845792a27650f1e237fc8be29d73f52 0 1613879100375 2 connected
+dbe7035e84422f582ddd475cb822854c6ff57d00 172.38.0.14:6379@16379 slave 722e27ee6ac3b34416387b56ebae3d69cf54a4d1 0 1613879099373 3 connected
+722e27ee6ac3b34416387b56ebae3d69cf54a4d1 172.38.0.13:6379@16379 master - 0 1613879100579 3 connected 10923-16383
+#挂掉的主节点
+2dd15c79a6850e19be1cf503731b21b75c618242 172.38.0.11:6379@16379 master,fail - 1613879073779 1613879071274 1 connected
+312454ec0845792a27650f1e237fc8be29d73f52 172.38.0.12:6379@16379 myself,master - 0 1613879099000 2 connected 5461-10922
+#顶替上来的从节点
+54169c6085325e041c01812d88c0c4718d427989 172.38.0.15:6379@16379 master - 0 1613879100000 7 connected 0-5460
+```
+
+
+
+此时再恢复挂掉的主节点后
+
+```shell {5-5}
+127.0.0.1:6379> cluster nodes
+f2f92641a484bc2e84a72a7aaeef68d713b1defc 172.38.0.16:6379@16379 slave 312454ec0845792a27650f1e237fc8be29d73f52 0 1613879274000 2 connected
+dbe7035e84422f582ddd475cb822854c6ff57d00 172.38.0.14:6379@16379 slave 722e27ee6ac3b34416387b56ebae3d69cf54a4d1 0 1613879273030 3 connected
+722e27ee6ac3b34416387b56ebae3d69cf54a4d1 172.38.0.13:6379@16379 master - 0 1613879273000 3 connected 10923-16383
+2dd15c79a6850e19be1cf503731b21b75c618242 172.38.0.11:6379@16379 slave 54169c6085325e041c01812d88c0c4718d427989 0 1613879275046 7 connected
+312454ec0845792a27650f1e237fc8be29d73f52 172.38.0.12:6379@16379 myself,master - 0 1613879273000 2 connected 5461-10922
+54169c6085325e041c01812d88c0c4718d427989 172.38.0.15:6379@16379 master - 0 1613879274042 7 connected 0-5460
+```
+
+> 可以看到此时的`172.38.0.11:6379`节点已经变为从节点
+
+
+
+
+
+如果某个主节点和它的从节点一起挂掉，那么此时的redis集群不可用
+
+我们此时挂掉主节点`172.38.0.15:6379`以及它的从节点`172.38.0.11:6379`，之后再从其他节点进入查看集群状态
+
+```shell
+127.0.0.1:6379> cluster info
+#集群状态为fail不可用
+cluster_state:fail
+cluster_slots_assigned:16384
+cluster_slots_ok:10923
+cluster_slots_pfail:0
+cluster_slots_fail:5461
+cluster_known_nodes:6
+cluster_size:3
+cluster_current_epoch:7
+cluster_my_epoch:2
+cluster_stats_messages_ping_sent:9535
+cluster_stats_messages_pong_sent:9628
+cluster_stats_messages_meet_sent:1
+cluster_stats_messages_fail_sent:5
+cluster_stats_messages_auth-ack_sent:1
+cluster_stats_messages_sent:19170
+cluster_stats_messages_ping_received:9628
+cluster_stats_messages_pong_received:9534
+cluster_stats_messages_fail_received:3
+cluster_stats_messages_auth-req_received:1
+cluster_stats_messages_received:19166
+```
+
+可以看到`cluster_state:fail`，说明此时集群已经不可用(fail)
+
+
+
+再尝试set值也报错误
+
+```shell
+127.0.0.1:6379> set k2 v2
+(error) CLUSTERDOWN The cluster is down
+127.0.0.1:6379> 
+```
+
+
+
+
+
+### 13.8 增加节点
+
+由于集群已经初始化，我们后续增加节点只用增加就行
+
+创建两个新的redis容器，配置和创建方式同上
+
+> 新增两个redis容器`redis-7`和`redis-8`
+
+```shell
+[root@izuf6f489inattnq5zpfcxz ~]# docker ps
+CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS              PORTS                                              NAMES
+56cc93bc0184        redis                 "docker-entrypoint.s…"   5 seconds ago       Up 3 seconds        0.0.0.0:6388->6379/tcp, 0.0.0.0:16388->16379/tcp   redis-8
+8c27e66cbe48        redis                 "docker-entrypoint.s…"   5 seconds ago       Up 4 seconds        0.0.0.0:6387->6379/tcp, 0.0.0.0:16387->16379/tcp   redis-7
+```
+
+
+
+从某个节点进入集群并新增节点
+
+新增了`172.38.0.17 6379`和`172.38.0.18 6379`
+
+```shell
+172.38.0.15:6379> cluster meet 172.38.0.17 6379
+OK
+172.38.0.15:6379> cluster meet 172.38.0.18 6379
+OK
+```
+
+
+
+再次查看集群节点信息
+
+```shell {4-4}
+172.38.0.15:6379> cluster nodes
+2dd15c79a6850e19be1cf503731b21b75c618242 172.38.0.11:6379@16379 slave 54169c6085325e041c01812d88c0c4718d427989 0 1613883611396 7 connected
+722e27ee6ac3b34416387b56ebae3d69cf54a4d1 172.38.0.13:6379@16379 master - 0 1613883610594 3 connected 10923-16383
+d1f011036255d7266095b6163b433939722c4acb 172.38.0.18:6379@16379 master - 0 1613883610393 9 connected
+54169c6085325e041c01812d88c0c4718d427989 172.38.0.15:6379@16379 myself,master - 0 1613883609000 7 connected 0-5460
+f2f92641a484bc2e84a72a7aaeef68d713b1defc 172.38.0.16:6379@16379 master - 0 1613883611000 8 connected 5461-10922
+f288476630bd43910dff617591ac1521e06f9b72 172.38.0.17:6379@16379 master - 0 1613883610594 0 connected
+312454ec0845792a27650f1e237fc8be29d73f52 172.38.0.12:6379@16379 slave f2f92641a484bc2e84a72a7aaeef68d713b1defc 0 1613883611596 8 connected
+dbe7035e84422f582ddd475cb822854c6ff57d00 172.38.0.14:6379@16379 slave 722e27ee6ac3b34416387b56ebae3d69cf54a4d1 0 1613883610000 3 connected
+```
+
+发现新增的节点进来都是`master`身份即主节点
+
+
+
+### 13.9 更换节点身份
+
+将新增的`172.38.0.18 6379`节点身份改为`172.38.0.17 6379`的`slave`
+
+```shell
+redis-cli -c -h 172.38.0.18 -p 6379 cluster replicate f288476630bd43910dff617591ac1521e06f9b72(主节点node_id)
+```
+
+
+
+也可以进入集群后让当前节点变为某个节点的从节点
+
+```shell
+172.38.0.18:6379> CLUSTER REPLICATE f288476630bd43910dff617591ac1521e06f9b72
+OK
+172.38.0.18:6379> 
+```
+
+
+
+再次查看集群节点信息
+
+```shell {5-5}
+172.38.0.18:6379> cluster nodes
+722e27ee6ac3b34416387b56ebae3d69cf54a4d1 172.38.0.13:6379@16379 master - 0 1613884572000 3 connected 10923-16383
+dbe7035e84422f582ddd475cb822854c6ff57d00 172.38.0.14:6379@16379 slave 722e27ee6ac3b34416387b56ebae3d69cf54a4d1 0 1613884572009 3 connected
+f2f92641a484bc2e84a72a7aaeef68d713b1defc 172.38.0.16:6379@16379 master - 0 1613884570605 8 connected 5461-10922
+d1f011036255d7266095b6163b433939722c4acb 172.38.0.18:6379@16379 myself,slave f288476630bd43910dff617591ac1521e06f9b72 0 1613884572000 0 connected
+54169c6085325e041c01812d88c0c4718d427989 172.38.0.15:6379@16379 master - 0 1613884572910 7 connected 0-5460
+312454ec0845792a27650f1e237fc8be29d73f52 172.38.0.12:6379@16379 slave f2f92641a484bc2e84a72a7aaeef68d713b1defc 0 1613884571000 8 connected
+f288476630bd43910dff617591ac1521e06f9b72 172.38.0.17:6379@16379 master - 0 1613884572409 0 connected
+2dd15c79a6850e19be1cf503731b21b75c618242 172.38.0.11:6379@16379 slave 54169c6085325e041c01812d88c0c4718d427989 0 1613884572000 7 connected
+```
+
+发现已经更改
+
+
+
+### 13.11 删除节点
+
+```shell
+192.168.30.130:7008> CLUSTER FORGET 1a1c7f02fce87530bd5abdfc98df1cffce4f1767
+(error) ERR I tried hard but I can't forget myself...               #无法删除登录节点
+
+192.168.30.130:7008> CLUSTER FORGET e51ab166bc0f33026887bcf8eba0dff3d5b0bf14
+(error) ERR Can't forget my master!                 #不能删除自己的master节点
+
+192.168.30.130:7008> CLUSTER FORGET 6788453ee9a8d7f72b1d45a9093838efd0e501f1
+OK              #可以删除其它的master节点
+```
+
+
+
+
+
+### 13.10 其他集群操作
+
+```shell
+172.38.0.18:6379> cluster help
+ 1) CLUSTER <subcommand> arg arg ... arg. Subcommands are:
+ 2) ADDSLOTS <slot> [slot ...] -- Assign slots to current node.
+ 3) BUMPEPOCH -- Advance the cluster config epoch.
+ 4) COUNT-failure-reports <node-id> -- Return number of failure reports for <node-id>.
+ 5) COUNTKEYSINSLOT <slot> - Return the number of keys in <slot>.
+ 6) DELSLOTS <slot> [slot ...] -- Delete slots information from current node.
+ 7) FAILOVER [force|takeover] -- Promote current replica node to being a master.
+ 8) FORGET <node-id> -- Remove a node from the cluster.
+ 9) GETKEYSINSLOT <slot> <count> -- Return key names stored by current node in a slot.
+10) FLUSHSLOTS -- Delete current node own slots information.
+11) INFO - Return information about the cluster.
+12) KEYSLOT <key> -- Return the hash slot for <key>.
+13) MEET <ip> <port> [bus-port] -- Connect nodes into a working cluster.
+14) MYID -- Return the node id.
+15) NODES -- Return cluster configuration seen by node. Output format:
+16)     <id> <ip:port> <flags> <master> <pings> <pongs> <epoch> <link> <slot> ... <slot>
+17) REPLICATE <node-id> -- Configure current node as replica to <node-id>.
+18) RESET [hard|soft] -- Reset current node (default: soft).
+19) SET-config-epoch <epoch> - Set config epoch of current node.
+20) SETSLOT <slot> (importing|migrating|stable|node <node-id>) -- Set slot state.
+21) REPLICAS <node-id> -- Return <node-id> replicas.
+22) SAVECONFIG - Force saving cluster configuration on disk.
+23) SLOTS -- Return information about slots range mappings. Each range is made of:
+24)     start, end, master and replicas IP addresses, ports and ids
 ```
 

@@ -1223,3 +1223,17 @@ docker network create --driver bridge --subnet 192.168.0.0/24 --gateway 192.168.
 
 
 使用ping命令发现可以互通
+
+
+
+不同网络之间容器互通
+
+```shell
+docker network connect [网络] [容器]
+```
+
+
+
+其他
+
+- 在docker自定义网络部署redis集群(参考Redis部署与基本使用)
