@@ -1169,7 +1169,7 @@ B1节点替代了B节点，所以Redis集群将会选择B1节点作为新的主�
 
 
 
-### 11.1 分布式锁+时间戳
+### 16.1 分布式锁+时间戳
 
 
 
@@ -1238,7 +1238,7 @@ SETNX lock.youzhi<current Unix time + lock timeout + 1>
 
 
 
-### 11.2 消息队列
+### 16.2 消息队列
 
 在并发量过大的情况下,可以通过`消息中间件`进行处理,把`并行读写`进行`串行化`。
 
@@ -1252,11 +1252,11 @@ SETNX lock.youzhi<current Unix time + lock timeout + 1>
 
 
 
-## 13. 区别
+## 17. 区别
 
 
 
-### 13.1 redis 和 memcached 的区别
+### 17.1 redis 和 memcached 的区别
 
 
 
@@ -1272,5 +1272,15 @@ SETNX lock.youzhi<current Unix time + lock timeout + 1>
 
 
 
+
+
+
+## 18. Redis命名规则
+
+::: tips 参考
+
+- https://blog.csdn.net/u013521220/article/details/107640977
+
+::
 
 
