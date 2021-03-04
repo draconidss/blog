@@ -225,6 +225,13 @@ module.exports = config({
         },
 
         {
+          title: "错误笔记",
+          icon: "creative",
+          prefix: "Error/",
+          children: ["Springboot-Error"],
+        },
+
+        {
           title: "Guide",
           icon: "creative",
           prefix: "guide/",
