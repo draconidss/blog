@@ -924,3 +924,15 @@ server {
 
 
 ![nginx集群](./images/Nginx-basicNote&deployment/nginx-cluster.png)
+
+
+
+
+
+## Grafana+Prometheus监控(docker)
+
+::: tip 参考
+
+- https://www.cnblogs.com/xiao987334176/p/12870942.html
+
+:::

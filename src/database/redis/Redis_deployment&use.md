@@ -412,7 +412,7 @@ decrby [key] [number]
 
 参考
 
-::: tips 参考
+::: tip 参考
 
 - [一看就懂系列之 详解redis的bitmap在亿级项目中的应用](https://blog.csdn.net/u011957758/article/details/74783347)
 - https://www.cnblogs.com/wuhaidong/articles/10389484.html
@@ -2837,10 +2837,11 @@ sentinel failover-timeout <master-name> <milliseconds>
 
 > 通过docker并自定义网络搭建
 
-::: tips 参考
+::: tip 参考
 
 - https://www.cnblogs.com/catelina/p/13630036.html
 - [Redis-Cluster集群](https://www.jianshu.com/p/813a79ddf932)
+- [docker部署redis集群](https://www.cnblogs.com/xuchen0117/p/11678931.html)
 
 :::
 
@@ -2853,7 +2854,7 @@ sentinel failover-timeout <master-name> <milliseconds>
 ### 13.1 创建集群网络
 
 ```shell
-docker network create redis-net --subnet 172.38.0.0/16
+docker network create redis_cluster --subnet 172.38.0.0/16
 ```
 
 > `--subnet`为子网范围
@@ -2868,19 +2869,20 @@ docker network create redis-net --subnet 172.38.0.0/16
 
 ```shell
 # 循环6次
-for port in $(seq 1 6);
+for port in $(seq 79 84);
 do
-  mkdir -p /usr/local/docker/redis-cluster/node-${port}/conf
-  touch /usr/local/docker/redis-cluster/node-${port}/conf/redis.conf
-  # 输出内容到/usr/local/docker/redis-cluster/node-${port}/conf/redis.conf
-  cat > /usr/local/docker/redis-cluster/node-${port}/conf/redis.conf << EOF
+  mkdir -p /data/docker/redis-cluster/node-63${port}/conf
+  touch /data/docker/redis-cluster/node-63${port}/conf/redis.conf
+  cat > /data/docker/redis-cluster/node-63${port}/conf/redis.conf << EOF
 port 6379
 bind 0.0.0.0
+masterauth 123
+requirepass 123
 cluster-enabled yes
 # 注意每个集群的cluster-config-file名称不能一样，官网说实例 ID在集群中保持一个独一无二（unique）的名字。
-cluster-config-file nodes-${port}.conf
+cluster-config-file nodes-63${port}.conf
 cluster-node-timeout 5000
-cluster-announce-ip 172.38.0.1${port}
+cluster-announce-ip 172.38.0.${port}
 cluster-announce-port 6379
 appendonly yes
 # 注意该脚本，结束的EOF前面不能有空格，输出的内容前面也不能留空格
@@ -2897,12 +2899,12 @@ done
 ### 13.3 创建脚本通过docker运行
 
 ```shell
-for port in $(seq 1 6);
+for port in $(seq 79 84);
 do
-  docker run -p 638${port}:6379 -p 1638${port}:16379 --name redis-${port} \
-  -v /usr/local/docker/redis-cluster/node-${port}/data:/data \
-  -v /usr/local/docker/redis-cluster/node-${port}/conf/redis.conf:/etc/redis/redis.conf \
-  -d --net redis-net --ip 172.38.0.1${port} redis redis-server /etc/redis/redis.conf
+  docker run -p 63${port}:6379 -p 163${port}:16379 --name redis-63${port} \
+  -v /data/docker/redis-cluster/node-63${port}/data:/data \
+  -v /data/docker/redis-cluster/node-63${port}/conf/redis.conf:/etc/redis/redis.conf \
+  -d --net redis_cluster --ip 172.38.0.${port} redis redis-server /etc/redis/redis.conf
 done
 ```
 
@@ -2940,7 +2942,7 @@ docker exec -it redis-1 /bin/bash
 
 ```shell
 # 创建redis集群命令 redis-cli --cluster create 参数 --cluster-replicas 1 表示副本是1
-redis-cli --cluster create 172.38.0.11:6379 172.38.0.12:6379 172.38.0.13:6379 172.38.0.14:6379 172.38.0.15:6379 172.38.0.16:6379 --cluster-replicas 1 
+redis-cli --cluster create -a 123 172.38.0.79:6379 172.38.0.80:6379 172.38.0.81:6379 172.38.0.82:6379 172.38.0.83:6379 172.38.0.84:6379 --cluster-replicas 1 
 ```
 
 
