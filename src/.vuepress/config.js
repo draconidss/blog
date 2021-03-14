@@ -99,7 +99,7 @@ module.exports = config({
           title: "My-Project",
           icon: "creative",
           prefix: "My-Project/",
-          children: ["", "MyProject-AttendanceMiniprogram", "MyProject-JavaWeb-ActivitySystem",
+          children: ["", "Music-Recognition", "MyProject-AttendanceMiniprogram", "MyProject-JavaWeb-ActivitySystem",
             "MyProject-SupermarketSystem"]
         },
         {
