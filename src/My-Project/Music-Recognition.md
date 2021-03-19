@@ -52,8 +52,6 @@ tags:
 
 ### 总览
 
-
-
 ::: info 技术栈总览
 
 - 【前端】：Vue.js+ElementUi
@@ -78,4 +76,16 @@ Vue.js+组件ElementUi
 
 
 
+为了快速开发前端，使用Vue.js搭配组件ElementUi，后面将项目打包后放到Docker部署的Nginx中，进行反向代理。开发难度基本不高。
+
+
+
+
+
+### 后端
+
+::: info 技术栈
+
 Vue.js+组件ElementUi
+
+:::
