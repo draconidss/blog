@@ -103,10 +103,10 @@ module.exports = config({
             "MyProject-SupermarketSystem"]
         },
         {
-          title: "Java面试整理",
+          title: "面试",
           icon: "creative",
           prefix: "Interview/",
-          children: ["Java-Interview", "Computer_other_interview_questions", "tencent-cloud-note"]
+          children: ["Java-Interview", "Computer-network", "OperatingSystem", "tencent-cloud-note"]
         },
         {
           title: "Java",
