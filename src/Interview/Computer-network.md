@@ -57,6 +57,24 @@ tags:
 
 
 
+
+
+### HTTP1 | HTTP2 | HTTP3
+
+::: tip 参考
+
+- [一文读懂 HTTP1/HTTP2/HTTP/3](https://zhuanlan.zhihu.com/p/102561034)
+- https://blog.csdn.net/weixin_41205419/article/details/105510318
+- [一文读懂 HTTP/2 特性](https://zhuanlan.zhihu.com/p/26559480)
+
+:::
+
+
+
+
+
+
+
 ### Https
 
 ​		《图解HTTP》这本书中曾提过HTTPS是身披SSL外壳的HTTP。HTTPS是一种通过计算机网络进行安全通信的传输协议，经由HTTP进行通信，利用SSL/TLS建立全信道，加密数据包。HTTPS使用的主要目的是提供对网站服务器的身份认证，同时保护交换数据的隐私与完整性。基于HTTP协议，通过SSL或TLS提供加密处理数据、验证对方身份以及数据完整性保护
