@@ -61,3 +61,32 @@ tags:
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 ```
 
+
+
+### security的key最短四个字符
+
+报错
+
+secret key byte array cannot be null or empty.
+
+
+
+
+
+## MybatisPlus
+
+
+
+### myabtisplus执行方法异常 Cause: java.lang.IndexOutOfBoundsException: Index: 22, Size: 22
+
+调用自带方法  selectById()
+
+### The error occurred while handling results
+### Cause: java.lang.IndexOutOfBoundsException: Index: 22, Size: 22
+
+解决办法
+方法一：去除@Builder注解。
+
+方法二：增加构造函数，如Lombok提供的@NoArgsConstructor、@AllArgsConstructor。
+
+

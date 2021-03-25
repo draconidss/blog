@@ -2842,6 +2842,7 @@ sentinel failover-timeout <master-name> <milliseconds>
 - https://www.cnblogs.com/catelina/p/13630036.html
 - [Redis-Cluster集群](https://www.jianshu.com/p/813a79ddf932)
 - [docker部署redis集群](https://www.cnblogs.com/xuchen0117/p/11678931.html)
+- [Redis Cluster 高可用集群（Docker 实现）](https://blog.csdn.net/x3499633/article/details/88637819)
 
 :::
 
