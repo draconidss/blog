@@ -193,7 +193,7 @@ module.exports = config({
           title: "数据结构&算法",
           icon: "creative",
           prefix: "dataStructure&algorithm/",
-          children: ["", "DataStructure&algorithm_note", "DataStructure&algorithm_question"],
+          children: ["", "DataStructure","Algorithm", "DataStructure&algorithm_question"],
         },
 
         {

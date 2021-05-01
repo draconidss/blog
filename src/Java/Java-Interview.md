@@ -1138,3 +1138,17 @@ char c = input.next().charAt(0);
 - https://blog.csdn.net/kuangpeng1956/article/details/83817369
 
 :::
+
+
+
+
+
+## 内部类
+
+::: tips 参考
+
+- https://www.cnblogs.com/dolphin0520/p/3811445.html
+- https://blog.csdn.net/weixin_42762133/article/details/82890555
+
+:::
+

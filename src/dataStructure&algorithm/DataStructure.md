@@ -1,5 +1,5 @@
 ---
-title: 数据结构&算法基础笔记
+title: 数据结构
 time: 2020-08-30 18:03:39
 original: true
 categories: 
@@ -10,35 +10,155 @@ tags:
 
 
 
+## 参考
+
+::: tips 参考
+
+- 数据结构第二版
+
+:::
 
 
 
-## 1. 时间复杂度计算
+## 数据结构概述
+
+数据的逻辑结构是从逻辑关系上描述数据，它与数据的存储无关，是独立于计算机的。因此， 数据的逻辑结构可以看作是从具体问题抽象出来的数学模型。 数据的逻辑结构有两个要素： 一是数据元素；二是关系。数据元素的含义如前所述，关系是 指数据元素间的逻辑关系。根据数据元素之间关系的不同特性， 通常有四类基本结构， 如图1.3 所示。它们的复杂程度依次递进。
+
+可以分为
+
+- **逻辑结构**
+- **存储结构（物理结构）**
 
 
 
-## 2. 算法
+### 逻辑结构
+
+​	数据的逻辑结构是从逻辑关系上描述数据，它与数据的存储无关，是独立千计算机的。因此， 数据的逻辑结构可以看作是从具体问题抽象出来的数学模型。 
+
+​	数据的逻辑结构有两个要素： 一是数据元素；二是关系。数据元素的含义如前所述，关系是 指数据元素间的逻辑关系。根据数据元素之间关系的不同特性， 通常有四类基本结构， 如图1.3 所示。它们的复杂程度依次递进。
+
+![逻辑结构](./images/DataStructure/1.3.jpg)
+
+下面四种结构中所举的示例是以某班级学生作为数据对象（数据元素是学生的学籍档案记 录），来分别考察数据元素之间的关系。 
+
+- **集合结构** ：数据元素之间除了 “属于同一集合” 的关系外，别无其他关系。例如，确定一名学生是否为 班级成员， 只需将班级看做一个集合结构。 
+- **线性结构** ：数据元素之间存在**一对一**的关系。例如，将学生信息数据按照其入学报到的时间先后顺序进 行排列，将组成一个线性结构。 
+- **树结构** ：数据元素之间存在**一对多**的关系。例如，在班级的管理体系中，班长管理多个组长，每位组 长管理多名组员，从而构成树形结构。 
+- **图结构或网状结构** ：数据元素之间存在**多对多**的关系。例如，多位同学之间的朋友关系， 任何两位同学都可以是 朋友，从而构成图状结构或网状结构。
+
+
+
+![几种逻辑结构层次图](./images/DataStructure/1.4.jpg)
+
+
+
+### 存储结构（物理结构）
+
+可以分为
+
+- **顺序存储结构**
+- **链式存储结构**
 
 
 
 
 
-### 2.1 动态规划和贪心算法的区别
+## 时间复杂度分析
 
-相同点
-
-- 动态规划和贪心算法都是一种递推算法 
-- 均有局部最优解来推导全局最优解
+主要分析核心操作次数和问题规模
 
 
 
-不同点
+### 分析方法
 
-- 贪心算法中，作出的每步贪心决策都无法改变，因为贪心策略是由上一步的最优解推导下一步的最优解，而上一部之前的最优解则不作保留。 
-- 可以知道贪心法正确的条件是：每一步的最优解一定包含上一步的最优解。 
-- 全局最优解中一定包含某个局部最优解，但不一定包含前一个局部最优解，因此需要记录之前的所有最优解 
-- 动态规划的关键是状态转移方程，即如何由以求出的局部最优解来推导全局最优解 
-- 边界条件：即最简单的，可以直接得出的局部最优解
+> 找出所 数 次 有语句中语句频度最大的那条语句作为基本语 句， 计算基本语句的频度得到问题规模n的某个 函数j(n), 取其数量级用符号"O"表示即可。 具体计算数量级时， 可以遵循以下定理。
+
+
+
+### 示例
+
+
+
+- 常量阶示例。
+
+```java
+ {x++;s=O;}  
+```
+
+两条语句频度均为1' 算法的执行时间是一个与问题规模n无关的常数， 所以算法的时间复 杂度为T(n) = 0(1), 称为常量阶。 实际上，如果算法的执行时间不随问题规模n的增加而增长，算法中语句频度就是某个常数。 即使这个常数再大， 算法的时间复杂度都是 0(1)。例如， 上面的程序作如下改动：
+
+```java
+for (i=O;i<lOOOO; i++) {
+    x++; s=O;
+}
+```
+
+算法的时间复杂度仍然为 **0(1)**。
+
+
+
+- 线性阶示例。
+
+```java
+for (i=O; i<n; i++) {x++; s=O;)
+```
+
+循环体内两条基本语句的频度均为f{n) =n, 所以算法的时间复杂度为T(n) = O(n), 称为线 性阶。 
+
+
+
+- 平方阶示例。
+
+```java
+x=O;y=O;
+for (k=l; k<=n; k++)
+	x++;
+for(i=l;i<=n;i++)
+	for(j=l;j<=n;j++)
+		y++;
+```
+
+对循环语句只需考虑循环体中语句的执行次数， 以上程序段中频度最大的语句是(6), 其频 度为f(n) = n2 , 所以该算法的时间复杂度为T(n) = O(n2)， 称为平方阶。 **多数情况下， 当有若干个循环语句时， 算法的时间复杂度是由最深层循环内的基本语句的频 度j(n)决定的。**
+
+
+
+- 立方阶示例。
+
+```java
+x=l;
+for (i=l; i<=n; i++)
+	for(j=l;j<=i;j++)
+		for (k=l; k<=j; k++)
+			x++;
+```
+
+
+
+- 对数阶示例
+
+```java
+for (i=l; i<=n; i=i*2) {x++;s=O;) 
+```
+
+> 注：log2n省略为logn，因为即使log的底数不同，整体时间复杂度趋势一样，所以或略
+
+
+
+### 比较
+
+常量阶 < 对数阶 < 线性阶 < 线性对数阶 < 平方阶 < 立方阶 < n的k次方 < 指数阶
+
+
+
+### 最好、最坏和平均时间复杂度
+
+
+
+
+
+## 空间复杂度分析
+
+
 
 
 
@@ -50,15 +170,15 @@ tags:
 
 **只适用于大部分元素为相同时，比如五子棋**
 
-![稀疏数组1](./images/DataStructure&algorithm_note/SparseArray_1.jpg)
+![稀疏数组1](./images/DataStructure/SparseArray_1.jpg)
 
 **第一行记录总行和总列数和除0外有多少个非零数据，剩余的行则记录每个数据的位置和值**
 
-![稀疏数组2](./images/DataStructure&algorithm_note/SparseArray_2.jpg)
+![稀疏数组2](./images/DataStructure/SparseArray_2.jpg)
 
 **etc:五子棋**
 
-![稀疏数组3](./images/DataStructure&algorithm_note/SparseArray_3.jpg)
+![稀疏数组3](./images/DataStructure/SparseArray_3.jpg)
 
 
 
@@ -158,7 +278,7 @@ public class SparseArray {
 
 **运行结果**
 
-![稀疏数组运行结果](./images/DataStructure&algorithm_note/SparseArray_run_results.jpg)
+![稀疏数组运行结果](./images/DataStructure/SparseArray_run_results.jpg)
 
 
 
@@ -180,7 +300,7 @@ public class SparseArray {
 
   
 
-![队列](./images/DataStructure&algorithm_note/queue.jpg)
+![队列](./images/DataStructure/queue.jpg)
 
 
 
@@ -476,7 +596,7 @@ public class TreeNode {
 
 #### 前序遍历
 
-![前序遍历](./images/DataStructure&algorithm_note/Preorder_traversal.jpg)
+![前序遍历](./images/DataStructure/Preorder_traversal.jpg)
 
 ```java
 static ArrayList<Integer> arrayList = new ArrayList();
@@ -493,7 +613,7 @@ public static void preOrder(TreeNode tree) {
 
 #### 中序遍历
 
-![中序遍历](./images/DataStructure&algorithm_note/in-order_traversal.jpg)
+![中序遍历](./images/DataStructure/in-order_traversal.jpg)
 
 ```java
 static ArrayList<Integer> arrayList = new ArrayList();
@@ -512,7 +632,7 @@ public static void inOrderTraversal(TreeNode node) {
 
 #### 后序遍历
 
-![后序遍历](./images/DataStructure&algorithm_note/Post-order_traversal.jpg)
+![后序遍历](./images/DataStructure/Post-order_traversal.jpg)
 
 ```java
 static ArrayList<Integer> arrayList = new ArrayList();
@@ -558,7 +678,7 @@ class Solution {
 
 一层一层往下访问
 
-![广度优先搜索](./images/DataStructure&algorithm_note/BFS.jpg)
+![广度优先搜索](./images/DataStructure/BFS.jpg)
 
 - BFS代码
 
@@ -699,15 +819,15 @@ B和B+树的区别在于，B+树的非叶子结点只包含导航信息，不包
 
 
 
-![](./images/DataStructure&algorithm_note/Ten_classic_sorting_algorithms.png)
+![](./images/DataStructure/Ten_classic_sorting_algorithms.png)
 
 
 
-![](./images/DataStructure&algorithm_note/Ten_classic_sorting_algorithms_compare.png)
+![](./images/DataStructure/Ten_classic_sorting_algorithms_compare.png)
 
 
 
-![](./images/DataStructure&algorithm_note/Ten_classic_sorting_algorithms_description.png)
+![](./images/DataStructure/Ten_classic_sorting_algorithms_description.png)
 
 
 
@@ -733,7 +853,7 @@ O(n1+§)) 排序，§ 是介于 0 和 1 之间的常数。 希尔排序
 - k："桶"的个数
 - `In-place`：占用常数内存，不占用额外内存
 - `Out-place`：占用额外内存
-- 稳定性：排序后 2 个相等键值的顺序和排序之前它们的顺序相同
+- 稳定性：如果待排序的序列中存在值相等的元素，经过排序之后，相等元素之间原有的先后顺序不变，那么这种排序算法叫做稳定的排序算法；如果前后顺序发生变化，那么对应的排序算法就是不稳定的排序算法。在实际的排序应用中，往往不是对单一关键值进行排序，而是要求排序结果对所有的关键值都有序。所以，稳定的排序算法往往适用场景更广。
 
 
 
@@ -745,7 +865,9 @@ O(n1+§)) 排序，§ 是介于 0 和 1 之间的常数。 希尔排序
 
 
 
-![冒泡排序](./images/DataStructure&algorithm_note/BubbleSort.gif)
+两两比较相邻元素是否有序，如果逆序则交换两个元素，直到没有逆序的数据元素为止。每次冒泡都会至少让一个元素移动到它应该在的位置。
+
+![冒泡排序](./images/DataStructure/BubbleSort.gif)
 
 
 
@@ -762,17 +884,29 @@ O(n1+§)) 排序，§ 是介于 0 和 1 之间的常数。 希尔排序
 
 #### 6.2.2 什么时候最快
 
-当输入的数据已经是正序时（都已经是正序了，我还要你冒泡排序有何用啊）。
+当输入的数据已经是正序时（都已经是正序了，我还要你冒泡排序有何用啊），当待排序列已有序时，只需一次冒泡即可。时间复杂度为O(n)；
 
 
 
 #### 6.2.3 什么时候最慢
 
-当输入的数据是反序时（写一个 for 循环反序输出数据不就行了，干嘛要用你冒泡排序呢，我是闲的吗）。
+当输入的数据是反序时（写一个 for 循环反序输出数据不就行了，干嘛要用你冒泡排序呢，我是闲的吗），当待排序列完全逆序时，需要n次冒泡。时间复杂度为O(n2)；
 
 
 
-#### 6.2.4 代码实现
+#### 6.2.4 空间复杂度
+
+只借助了一个临时变量temp，所以空间复杂度为O(1)。
+
+
+
+#### 6.2.5 稳定性分析
+
+该算法中只有交换操作会改变数据元素的顺序，只要我们在数据元素值相等时不交换数据元素，那么算法就是稳定的。
+
+
+
+#### 6.2.6 代码实现
 
 ```java
 public class BubbleSort {
@@ -803,9 +937,129 @@ public class BubbleSort {
 
 
 
-### 6.3 快速排序
+### 6.3 选择排序
 
-![快速排序](./images/DataStructure&algorithm_note/quickSort.gif)
+![选择排序](./images/DataStructure/selectionSort.gif)
+
+
+
+选择排序是一种简单直观的排序算法，无论什么数据进去都是 `O(n²)` 的时间复杂度。所以用到它的时候，数据规模越小越好。唯一的好处可能就是不占用额外的内存空间了吧。
+
+
+
+#### 6.3.1 时间复杂度
+
+不管是已有序序列还是完全逆序序列，都要进行n次遍历无序区间操作，时间复杂度为O(n2)。
+
+![选择排序时间复杂度分析](./images/DataStructure/selectionSort.jpg)
+
+
+
+#### 6.3.2 稳定性
+
+选择排序算法中改变数据元素相对位置的操作为交换操作，当第i次中第i个数据元素不为当前无序区间最小值时则和最小值交换数据元素。当有重复元素时，就有可能发生相对位置改变。例如5，3，4，5，1第一次选择操作后为1，3，4，5，5，此时两个5的相对位置已经改变。所以选择排序算法不是稳定的。
+
+
+
+#### 6.3.3 步骤
+
+> - 首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置。
+> - 再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。
+> - 重复第二步，直到所有元素均排序完毕。
+
+
+
+```java
+    public static void SelectionSort(int[] arr){
+        for (int i = 0; i < arr.length; i++) {
+            int min = i;
+            for (int j = i + 1; j < arr.length; j++) {
+                if(arr[j] < arr[min]){
+                    min = j;
+                }
+            }
+            int tmp = arr[min];
+            arr[min] = arr[i];
+            arr[i] = tmp;
+        }
+    }
+```
+
+
+
+
+
+### 6.4 插入排序
+
+> - https://www.cnblogs.com/coding-996/p/12275710.html
+
+
+
+![插入排序](./images/DataStructure/insertionSort.gif)
+
+
+
+插入排序的代码实现虽然没有冒泡排序和选择排序那么简单粗暴，但它的原理应该是最容易理解的了，因为只要打过扑克牌的人都应该能够秒懂。插入排序是一种最简单直观的排序算法，它的工作原理是通过构建有序序列，对于未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。
+
+插入排序和冒泡排序一样，也有一种优化算法，叫做拆半插入。
+
+
+
+#### 6.4.1 时间复杂度
+
+- 最好：当待排序列已有序时，只需遍历一次即可完成排序。时间复杂度为O(n)；
+- 最坏：当待排序列完全逆序时，需要进行n-1次数据搬移和插入操作。时间复杂度为O(n2)；
+- 平均：与冒泡法的分析过程一样，平均情况时间复杂度为O(n2)。
+
+
+
+![插入排序时间复杂度](./images/DataStructure/insertionSort.jpg)
+
+
+
+#### 6.4.2 空间复杂度
+
+排序过程中只需要一个临时变量存储待插入数据，空间复杂度为O(1)。
+
+
+
+#### 6.4.3 稳定性
+
+插入排序过程中只有插入操作会改变数据元素的相对位置，只要元素大小比较时相等情况下不进行插入操作，插入排序算法就是稳定的。
+
+
+
+#### 6.4.4 算法步骤
+
+> - 将第一待排序序列第一个元素看做一个有序序列，把第二个元素到最后一个元素当成是未排序序列。
+> - 从头到尾依次扫描未排序序列，将扫描到的每个元素插入有序序列的适当位置。（如果待插入的元素与有序序列中的某个元素相等，则将待插入元素插入到相等元素的后面。）
+
+
+
+```java
+    public static void InsertionSort(int[] arr){
+        for (int i = 1; i < arr.length; i++) {
+            for (int j = i; j > 0; j--) {
+                /*如果要插入的数小于排好序的最后一个数，即arr[j] < arr[j - 1]那就交换*/
+                if(arr[j] < arr[j - 1]){
+                    int tmp = arr[j];
+                    arr[j] = arr[j - 1];
+                    arr[j - 1] = tmp;
+                }
+                /*否则直接退出遍历*/
+                else{
+                    break;
+                }
+            }
+        }
+    }
+```
+
+
+
+### 6.5 快速排序
+
+![快速排序](./images/DataStructure/quickSort.gif)
 
 参考
 
@@ -816,7 +1070,7 @@ public class BubbleSort {
 
 
 
-#### 6.3.1 步骤
+#### 6.5.1 步骤
 
 > 1. 从数列中挑出一个元素，称为 "基准"（pivot）;
 > 2. 重新排序数列，所有元素比基准值小的摆放在基准前面，所有元素比基准值大的摆在基准的后面（相同的数可以到任一边）。在这个分区退出之后，该基准就处于数列的中间位置。这个称为分区（partition）操作；
@@ -824,7 +1078,7 @@ public class BubbleSort {
 
 
 
-#### 6.3.2 挖坑+分治
+#### 6.5.2 挖坑+分治
 
 > - https://blog.csdn.net/nrsc272420199/article/details/82587933
 
@@ -857,7 +1111,7 @@ public class BubbleSort {
 
 
 
-#### 6.3.3 指针交换法
+#### 6.5.3 指针交换法
 
 参考
 
@@ -891,88 +1145,6 @@ public class BubbleSort {
 ```
 
 
-
-
-
-### 6.4 选择排序
-
-![选择排序](./images/DataStructure&algorithm_note/selectionSort.gif)
-
-
-
-选择排序是一种简单直观的排序算法，无论什么数据进去都是 `O(n²)` 的时间复杂度。所以用到它的时候，数据规模越小越好。唯一的好处可能就是不占用额外的内存空间了吧。
-
-
-
-#### 6.4.1 步骤
-
-> - 首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置。
-> - 再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。
-> - 重复第二步，直到所有元素均排序完毕。
-
-
-
-```java
-    public static void SelectionSort(int[] arr){
-        for (int i = 0; i < arr.length; i++) {
-            int min = i;
-            for (int j = i + 1; j < arr.length; j++) {
-                if(arr[j] < arr[min]){
-                    min = j;
-                }
-            }
-            int tmp = arr[min];
-            arr[min] = arr[i];
-            arr[i] = tmp;
-        }
-    }
-```
-
-
-
-
-
-### 6.5 插入排序
-
-> - https://www.cnblogs.com/coding-996/p/12275710.html
-
-
-
-![插入排序](./images/DataStructure&algorithm_note/insertionSort.gif)
-
-
-
-插入排序的代码实现虽然没有冒泡排序和选择排序那么简单粗暴，但它的原理应该是最容易理解的了，因为只要打过扑克牌的人都应该能够秒懂。插入排序是一种最简单直观的排序算法，它的工作原理是通过构建有序序列，对于未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。
-
-插入排序和冒泡排序一样，也有一种优化算法，叫做拆半插入。
-
-
-
-#### 6.5.1 算法步骤
-
-> - 将第一待排序序列第一个元素看做一个有序序列，把第二个元素到最后一个元素当成是未排序序列。
-> - 从头到尾依次扫描未排序序列，将扫描到的每个元素插入有序序列的适当位置。（如果待插入的元素与有序序列中的某个元素相等，则将待插入元素插入到相等元素的后面。）
-
-
-
-```java
-    public static void InsertionSort(int[] arr){
-        for (int i = 1; i < arr.length; i++) {
-            for (int j = i; j > 0; j--) {
-                /*如果要插入的数小于排好序的最后一个数，即arr[j] < arr[j - 1]那就交换*/
-                if(arr[j] < arr[j - 1]){
-                    int tmp = arr[j];
-                    arr[j] = arr[j - 1];
-                    arr[j - 1] = tmp;
-                }
-                /*否则直接退出遍历*/
-                else{
-                    break;
-                }
-            }
-        }
-    }
-```
 
 
 
@@ -1105,7 +1277,7 @@ public class BubbleSort {
 
 
 
-![堆排序](./images/DataStructure&algorithm_note/heapSort.gif)
+![堆排序](./images/DataStructure/heapSort.gif)
 
 
 
@@ -1116,13 +1288,13 @@ public class BubbleSort {
 
 
 
-![大顶堆和小顶堆](./images/DataStructure&algorithm_note/Big-top-pile&small-top-pile.png)
+![大顶堆和小顶堆](./images/DataStructure/Big-top-pile&small-top-pile.png)
 
 
 
 同时，我们对堆中的结点按层进行编号，将这种逻辑结构映射到数组中就是下面这个样子(`大顶堆`)
 
-![大顶堆和小顶堆2](./images/DataStructure&algorithm_note/Big-top-pile&small-top-pile_2.png)
+![大顶堆和小顶堆2](./images/DataStructure/Big-top-pile&small-top-pile_2.png)
 
 该数组从逻辑上讲就是一个堆结构，我们用简单的公式来描述一下堆的定义就是：
 
@@ -1161,7 +1333,7 @@ public class BubbleSort {
 
 
 
-![堆排序步骤一](./images/DataStructure&algorithm_note/HeapSort_step_1.png)
+![堆排序步骤一](./images/DataStructure/HeapSort_step_1.png)
 
 
 
@@ -1173,7 +1345,7 @@ public class BubbleSort {
 
 
 
-![堆排序步骤一](./images/DataStructure&algorithm_note/HeapSort_step_2.png)
+![堆排序步骤一](./images/DataStructure/HeapSort_step_2.png)
 
 
 
@@ -1228,7 +1400,7 @@ public class BubbleSort {
 
 ### 6.9 计数排序
 
-![计数排序](./images/DataStructure&algorithm_note/countingSort.gif)
+![计数排序](./images/DataStructure/countingSort.gif)
 
 
 
@@ -1295,7 +1467,7 @@ public class BubbleSort {
 
 
 
-![桶排序](./images/DataStructure&algorithm_note/BucketSort.png)
+![桶排序](./images/DataStructure/BucketSort.png)
 
 
 
@@ -1385,11 +1557,11 @@ public class BubbleSort {
 
 
 
-![基数排序](./images/DataStructure&algorithm_note/radixSort.gif)
+![基数排序](./images/DataStructure/radixSort.gif)
 
 
 
-![基数排序](./images/DataStructure&algorithm_note/radixSort.jpg)
+![基数排序](./images/DataStructure/radixSort.jpg)
 
 
 
