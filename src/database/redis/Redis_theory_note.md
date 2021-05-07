@@ -303,6 +303,31 @@ sinterstore key1 key2 key3 将交集存在key1内
 
 
 
+### 5.6 HyperLogLog
+
+
+
+### 5.7 Bitmap
+
+;:: tips 参考
+
+- https://www.jianshu.com/p/4c8e119f35db
+- https://blog.csdn.net/u011957758/article/details/74783347
+
+:::
+
+
+
+### 5.8 底层数据结构（重要）
+
+::: tips 参考
+
+- https://www.cnblogs.com/ysocean/p/9080942.html
+
+:::
+
+
+
 
 
 

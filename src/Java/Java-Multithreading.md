@@ -724,7 +724,7 @@ synchronized 是依赖于 JVM 实现的，前面我们也讲到了 虚拟机团�
 
 
 
-《阿⾥巴巴Java开发⼿册》中强制**线程池不允许使⽤ Executors 去创建**，⽽是通过 **ThreadPoolExecutor** 的⽅式，这样的处理⽅式让写的同学更加明确线程池的运⾏规则，规避资源耗尽 的⻛险
+《阿⾥巴巴Java开发⼿册》中强制**线程池不允许使⽤ Executors 去创建**，⽽是通过 **ThreadPoolExecutor** 的⽅式，这样的处理⽅式让写的同学更加明确线程池的运⾏规则，规避资源耗尽的⻛险
 
 
 
@@ -770,9 +770,21 @@ public ThreadPoolExecutor(int corePoolSize,
 | 4    | unit            | TimeUnit                  | 线程存活时长时间单位       |
 | 5    | workQueue       | BlockingQueue\<Runnable\> | 线程等待队列               |
 | 6    | threadFactory   | ThreadFactory             | 线程池创建线程的工厂       |
-| 7    | handler         | RejectedExecutionHandler  |                            |
+| 7    | handler         | RejectedExecutionHandler  | 拒绝策略                   |
 
 - **handler**：在队列（workQueue）和线程池达到最大线程数（maximumPoolSize）均满时仍有任务的情况下的处理方式；
+
+
+
+::: info 规则
+
+- 线程池的线程数量长期维持在 `corePoolSize` 个（核心线程数量）
+- 线程池的线程数量最大可以扩展到 `maximumPoolSize` 个
+- 在 `corePoolSize` ~ `maximumPoolSize` 这个区间的线程，一旦空闲超过`keepAliveTime`时间，就会被杀掉（时间单位）
+- 送来工作的线程数量超过最大数以后，送到 `workQueue` 里面待业
+- 待业队伍也满了，就按照事先约定的策略 `RejectedExecutionHandler` 给拒绝掉
+
+:::
 
 
 
@@ -824,11 +836,195 @@ public static ExecutorService newFixedThreadPool(int nThreads) {
 
 
 
+### 12.4 拒绝策略
+
+
+
+::: tips 参考
+
+- https://www.jianshu.com/p/f0506e098c5b
+
+:::
+
+
+
+所有拒绝策略都实现了接口`RejectedExecutionHandler`
+
+```java
+public interface RejectedExecutionHandler {
+
+    /**
+     * @param r the runnable task requested to be executed
+     * @param executor the executor attempting to execute this task
+     * @throws RejectedExecutionException if there is no remedy
+     */
+    void rejectedExecution(Runnable r, ThreadPoolExecutor executor);
+}
+```
+
+> 这个接口只有一个 rejectedExecution 方法。
+>
+> r 为待执行任务；executor 为线程池；方法可能会抛出拒绝异常。
+
+
+
+| 拒绝策略             | 说明                                       |
+| -------------------- | ------------------------------------------ |
+| AbortPolicy          | 直接抛出拒绝异常（默认策略）               |
+| CallerRunsPolicy     | 在调用者线程中，运行当前被丢弃的任务。     |
+| DiscardOledestPolicy | 丢弃队列中最老的，然后再次尝试提交新任务。 |
+| DiscardPolicy        | 默默丢弃无法加载的任务。                   |
+
+
+
+#### 12.4.1 AbortPolicy（默认策略）
+
+直接抛出拒绝异常（继承自RuntimeException），会中断调用者的处理过程，所以除非有明确需求，一般不推荐
+
+```java
+public static class AbortPolicy implements RejectedExecutionHandler {
+    public void rejectedExecution(Runnable r, ThreadPoolExecutor e) {
+        throw new RejectedExecutionException("Task " + r.toString() +
+                                             " rejected from " +
+                                             e.toString());
+    }
+}
+```
+
+
+
+#### 12.4.2 CallerRunsPolicy
+
+在调用者线程中（也就是说谁把 r 这个任务甩来的），运行当前被丢弃的任务。
+
+只会用调用者所在线程来运行任务，也就是说任务不会进入线程池。
+
+如果线程池已经被关闭，则直接丢弃该任务。
+
+```java
+public static class CallerRunsPolicy implements RejectedExecutionHandler {
+    public void rejectedExecution(Runnable r, ThreadPoolExecutor e) {
+        if (!e.isShutdown()) {
+            r.run();
+        }
+    }
+}
+```
+
+
+
+#### 12.4.3 DiscardOledestPolicy
+
+丢弃队列中最老的，然后再次尝试提交新任务。
+
+```java
+public static class DiscardOldestPolicy implements RejectedExecutionHandler {
+    public void rejectedExecution(Runnable r, ThreadPoolExecutor e) {
+        if (!e.isShutdown()) {
+            e.getQueue().poll();
+            e.execute(r);
+        }
+    }
+}
+```
+
+这里 e.getQueue() 是获得待执行的任务队列，也就是前面提到的待业队列。
+
+因为是队列，所以先进先出，一个poll()方法就能直接把队列中最老的抛弃掉，再次尝试执行execute(r)。
+
+这个队列在线程池定义的时候就能看到，是一个阻塞队列
+
+```java
+    /**
+     * The queue used for holding tasks and handing off to worker
+     * threads.  We do not require that workQueue.
+     */     
+    private final BlockingQueue<Runnable> workQueue;
+
+    public BlockingQueue<Runnable> getQueue() {
+        return workQueue;
+    }
+```
+
+
+
+#### 12.4.4 DiscardPolicy
+
+默默丢弃无法加载的任务。
+
+这个代码就很简单了，真的是啥也没做
+
+```java
+public static class DiscardPolicy implements RejectedExecutionHandler {
+    public void rejectedExecution(Runnable r, ThreadPoolExecutor e) {
+    }
+}
+```
 
 
 
 
-### 12.4 线程池执行流程
+
+#### 12.4.5 自定义
+
+通过实现 `RejectedExecutionHandler` 接口扩展
+
+jdk内置的四种拒绝策略（都在ThreadPoolExecutor.java里面）代码都很简洁易懂。
+
+我们只要继承接口都可以根据自己需要自定义拒绝策略。下面看两个例子。
+
+一是netty自己实现的线程池里面私有的一个拒绝策略。单独启动一个新的临时线程来执行任务。
+
+```java
+private static final class NewThreadRunsPolicy implements RejectedExecutionHandler {
+    public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) {
+        try {
+            final Thread t = new Thread(r, "Temporary task executor");
+            t.start();
+        } catch (Throwable e) {
+            throw new RejectedExecutionException(
+                "Failed to start a new thread", e);
+        }
+    }
+}
+```
+
+
+
+另外一个是dubbo的一个例子，它直接继承的 AbortPolicy ，加强了日志输出，并且输出dump文件
+
+```java
+public class AbortPolicyWithReport extends ThreadPoolExecutor.AbortPolicy {
+
+    @Override
+    public void rejectedExecution(Runnable r, ThreadPoolExecutor e) {
+        String msg = String.format("Thread pool is EXHAUSTED!" +
+                        " Thread Name: %s, Pool Size: %d (active: %d, core: %d, max: %d, largest: %d), Task: %d (completed: %d)," +
+                        " Executor status:(isShutdown:%s, isTerminated:%s, isTerminating:%s), in %s://%s:%d!",
+                threadName, e.getPoolSize(), e.getActiveCount(), e.getCorePoolSize(), e.getMaximumPoolSize(), e.getLargestPoolSize(),
+                e.getTaskCount(), e.getCompletedTaskCount(), e.isShutdown(), e.isTerminated(), e.isTerminating(),
+                url.getProtocol(), url.getIp(), url.getPort());
+        logger.warn(msg);
+        dumpJStack();
+        throw new RejectedExecutionException(msg);
+    }
+}
+
+```
+
+
+
+
+
+
+
+
+
+### 12.5 线程池执行流程
+
+
+
+
 
 
 

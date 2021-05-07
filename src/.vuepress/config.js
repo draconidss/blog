@@ -117,10 +117,10 @@ module.exports = config({
               title: "Java设计模式",
               icon: "",
               prefix: "Java-DesignPatterns/",
-              children: ["","Java-DesignPatterns-SixPrinciple", "Java-DesignPatterns-CreationalPatterns"
+              children: ["","Java-DesignPatterns-SevenPrinciple", "Java-DesignPatterns-CreationalPatterns"
                 , "Java-DesignPatterns-BehavioralPatterns", "Java-DesignPatterns-StructuralPatterns", "Java-DesignPatterns-J2eePattern"]
             },
-            "Java-String", "Java-reflection", "Java-IO", "Java-Date","Java-UML-ClassDiagram", "Java-JDK8", "Java-ClassLoader"]
+            "Java-String", "Java-reflection", "Java-IO", "Java-Date","Java-UML-ClassDiagram", "Java-JDK8"]
           /*children: ["","Java-BasicNotes", "Java-Interview", "Java-Methods",
             "Java-Collections", "Java-Multithreading", "Java-JVM", "Java-DesignPatterns",
             "Java-reflection", "Java-IO", "Java-Date", "Java-JDK8"]*/
@@ -201,6 +201,13 @@ module.exports = config({
           icon: "creative",
           prefix: "Linux/",
           children: ["", "Linux-skill", "Linux-commands", "Use-xshell-to-connect-Centos7-in-VM"],
+        },
+
+        {
+          title: "ElasticSearch",
+          icon: "creative",
+          prefix: "ElasticSearch/",
+          children: ["ElasticSearch"],
         },
 
         {

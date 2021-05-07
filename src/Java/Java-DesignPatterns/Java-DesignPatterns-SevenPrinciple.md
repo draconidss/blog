@@ -33,39 +33,9 @@ tags:
 
 
 
-## 总览
-
-
-
-::: info 七大原则
-
-- 单一职责原则
-- 接口隔离原则
-- 依赖倒置原则
-- 里氏替换原则
-- 开闭原则
-- 迪米特法则
-- 合成复用原则
-
-:::
-
 
 
 ![六大设计原则](./images/Java-DesignPatterns-SixPrinciple/The_six_design_principles.jpg)
-
-
-
-
-
-## 单一职责原则(Single Responsibility Principle,SPR)
-
-::: tip 参考
-
-[六大设计原则之单一职责原则](https://blog.csdn.net/hfreeman2008/article/details/52234287?ops_request_misc=%25257B%252522request%25255Fid%252522%25253A%252522160862280716780257419145%252522%25252C%252522scm%252522%25253A%25252220140713.130102334.pc%25255Fblog.%252522%25257D&request_id=160862280716780257419145&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v29-6-52234287.pc_v2_rank_blog_default&utm_term=%E5%85%AD%E5%A4%A7%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99)
-
-:::
-
-
 
 
 
@@ -392,7 +362,13 @@ public class OffNovelBook extends NovelBook{
 
 
 
+## 5. 单一职责原则(Single Responsibility Principle,SPR)
 
+::: tip 参考
+
+[六大设计原则之单一职责原则](https://blog.csdn.net/hfreeman2008/article/details/52234287?ops_request_misc=%25257B%252522request%25255Fid%252522%25253A%252522160862280716780257419145%252522%25252C%252522scm%252522%25253A%25252220140713.130102334.pc%25255Fblog.%252522%25257D&request_id=160862280716780257419145&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v29-6-52234287.pc_v2_rank_blog_default&utm_term=%E5%85%AD%E5%A4%A7%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99)
+
+:::
 
 
 
