@@ -113,8 +113,7 @@ module.exports = config({
           icon: "code",
           prefix: "Java/",
           children: ["","Java-BasicNotes", "Java-Interview", "Java-Methods",
-            "Java-Collections", "Java-Multithreading", 
-            {
+            "Java-Collections", "Java-Multithreading", {
               title: "Java-JVM",
               icon: "",
               prefix: "Java-JVM/",
@@ -126,8 +125,7 @@ module.exports = config({
               prefix: "Java-DesignPatterns/",
               children: ["","Java-DesignPatterns-SevenPrinciple", "Java-DesignPatterns-CreationalPatterns"
                 , "Java-DesignPatterns-BehavioralPatterns", "Java-DesignPatterns-StructuralPatterns", "Java-DesignPatterns-J2eePattern"]
-            },
-            "Java-String", "Java-reflection", "Java-IO", "Java-Date","Java-UML-ClassDiagram", "Java-JDK8"]
+            },"Java-String", "Java-reflection", "Java-IO", "Java-Date","Java-UML-ClassDiagram", "Java-JDK8"]
           /*children: ["","Java-BasicNotes", "Java-Interview", "Java-Methods",
             "Java-Collections", "Java-Multithreading", "Java-JVM", "Java-DesignPatterns",
             "Java-reflection", "Java-IO", "Java-Date", "Java-JDK8"]*/
