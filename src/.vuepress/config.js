@@ -118,7 +118,7 @@ module.exports = config({
               title: "Java-JVM",
               icon: "",
               prefix: "Java-JVM/",
-              children: ["","Java-JVM-Classloader", "Java-JVM"]
+              children: ["","Java-JVM-Classloader"]
             }, 
             {
               title: "Java设计模式",
