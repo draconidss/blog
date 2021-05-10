@@ -393,6 +393,10 @@ Java虚拟机对class文件采用的是按需加载的方式，也就是说当�
 
 
 
+![img](https://user-gold-cdn.xitu.io/2020/3/18/170ec8e47d7e861b?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
+
+
+
 如图，虽然我们自定义了一个java.lang包下的String尝试覆盖核心类库中的String，但是由于双亲委派机制，启动加载器会加载java核心类库的String类（BootStrap启动类加载器只加载包名为java、javax、sun等开头的类），而核心类库中的String并没有main方法
 
 ![img](https://user-gold-cdn.xitu.io/2020/3/18/170ec8d5358f0991?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
@@ -413,4 +417,17 @@ Java虚拟机对class文件采用的是按需加载的方式，也就是说当�
 - 自定义类：java.lang.String
 - 自定义类：java.lang.MeDsh（java.lang包需要访问权限，阻止我们用包名自定义类
 
+
+
+如图，虽然我们自定义了一个java.lang包下的String尝试覆盖核心类库中的String，但是由于双亲委派机制,启动加载器会加载java核心类库的String类(BootStrap启动类加载器只加载包名为java、javax、sun等开头的类),而核心类库中的String并没有main方法
+
+
 ![img](https://user-gold-cdn.xitu.io/2020/3/18/170ec8ddb41c5559?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
+
+
+
+### 沙箱安全机制
+
+自定义String类，但是在加载自定义String类的时候先使用引导类加载器加载，而引导类加载器在加载过程中会先加载jdk自带的文件（rt.jar包中的java\lang\String.class）,报错信息说没有main方法就是因为加载的是rt.jar包中的String类。这样可以保证对java核心源代码的保护，这就是**沙箱安全机制**.
+
+
