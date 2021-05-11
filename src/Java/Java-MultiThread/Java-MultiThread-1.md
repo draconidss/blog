@@ -26,7 +26,7 @@ tags:
 
 ## 线程的创建
 
-Java多线程，皆始于Thread。Thread是多线程的根，每一个线程的开启都始于Thread的`start()`方法。
+Java多线程，皆始于Thread。Thread是多线程的根，每一个线程的开启都始于Thread的`start()`方法
 
 参考
 
