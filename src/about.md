@@ -12,4 +12,4 @@ comment: false
 
 
 
-![about](.vuepress/public/about.jpg)
+![about](about.jpg)
