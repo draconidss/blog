@@ -108,20 +108,6 @@ module.exports = config({
           prefix: "Interview/",
           children: ["Java-Interview", "Computer-network", "OperatingSystem", "tencent-cloud-note"]
         },
-        {
-          title: "Java",
-          icon: "code",
-          prefix: "Java/",
-          children: ["","Java-BasicNotes", "Java-Interview", "Java-Methods","Java-Collections", 
-            {
-              title: "Java设计模式",
-              icon: "",
-              prefix: "Java-DesignPatterns/",
-              children: ["","Java-DesignPatterns-SevenPrinciple", "Java-DesignPatterns-CreationalPatterns"
-                , "Java-DesignPatterns-BehavioralPatterns", "Java-DesignPatterns-StructuralPatterns", "Java-DesignPatterns-J2eePattern"]
-            },"Java-String", "Java-reflection", "Java-IO", "Java-Date","Java-UML-ClassDiagram", "Java-JDK8"]
-
-        },
 
         {
           title: "数据库",
