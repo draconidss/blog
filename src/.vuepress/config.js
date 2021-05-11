@@ -115,18 +115,6 @@ module.exports = config({
           children: ["","Java-BasicNotes", "Java-Interview", "Java-Methods",
             "Java-Collections", 
             {
-              title: "Java-多线程",
-              icon: "",
-              prefix: "Java-MultiThread/",
-              children: ["", "Java-MultiThread-1", "Java-MultiThread"]
-            }, 
-            {
-              title: "Java-JVM",
-              icon: "",
-              prefix: "Java-JVM/",
-              children: [""]
-            }, 
-            {
               title: "Java设计模式",
               icon: "",
               prefix: "Java-DesignPatterns/",
