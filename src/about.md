@@ -12,4 +12,4 @@ comment: false
 
 
 
-![about](about.jpg)
+![about](./about.jpg)
