@@ -1,7 +1,7 @@
 ---
 icon: 
 time: 2021-05-11 19:41:12
-title: Java多线程概述/参考
+title: Java-多线程参考
 categories: 
   - 学习笔记
   - Java
@@ -19,4 +19,5 @@ categories:
 
 ## 调优工具
 
-- 
+- jvisuallvm
+- JMC（Java Mission Control）
