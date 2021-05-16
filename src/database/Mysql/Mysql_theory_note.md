@@ -441,9 +441,13 @@ SELECT @@tx_isolation
 
 
 
+### 4.6 MVCC
 
+::: tips 参考
 
+- https://blog.csdn.net/SnailMann/article/details/94724197
 
+:::
 
 
 
