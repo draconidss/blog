@@ -18,11 +18,9 @@ tags:
 
 
 
-
-
 ##  1. 线程、程序、进程的基本概念
 
-
+![线程、程序、进程](./images/Thread_program_process.png)
 
 
 
