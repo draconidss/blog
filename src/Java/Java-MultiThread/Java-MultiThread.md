@@ -828,7 +828,7 @@ public static ExecutorService newFixedThreadPool(int nThreads) {
 
 
 
-::: tips 参考
+::: tip 参考
 
 - https://www.jianshu.com/p/f0506e098c5b
 
