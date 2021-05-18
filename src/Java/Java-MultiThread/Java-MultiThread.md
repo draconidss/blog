@@ -20,7 +20,7 @@ tags:
 
 ##  1. 线程、程序、进程的基本概念
 
-![线程、程序、进程](./images/Thread_program_process.png)
+![线程、程序、进程](./images/Java-MultiThread-1//Thread_program_process.png)
 
 
 
@@ -41,7 +41,7 @@ tags:
 
 
 
-![线程类图](./images/Thread_class_diagram.jpg)
+![线程类图](./images/Java-MultiThread-1//Thread_class_diagram.jpg)
 
 
 
@@ -335,13 +335,13 @@ Java 线程在运⾏的⽣命周期中的指定时刻只可能处于下⾯ 6 种
 
 
 
-![线程生命周期状态](./images/Thread_life_cycle_state.jpg)
+![线程生命周期状态](./images/Java-MultiThread-1//Thread_life_cycle_state.jpg)
 
 
 
 线程在⽣命周期中并不是固定处于某⼀个状态⽽是随着代码的执⾏在不同状态之间切换。Java 线程状 态变迁如下图所示（图源《Java 并发编程艺术》4.1.4 节）：
 
-![线程生命周期状态2](./images/Thread_life_cycle_state_2.jpg)
+![线程生命周期状态2](./images/Java-MultiThread-1//Thread_life_cycle_state_2.jpg)
 
 
 
@@ -472,7 +472,7 @@ public class SynchronizedDemo {
 
 
 
-![synchronized反编译](./images/synchronized_decompilation.jpg)
+![synchronized反编译](./images/Java-MultiThread-1//synchronized_decompilation.jpg)
 
 
 
@@ -490,7 +490,7 @@ public class SynchronizedDemo2 {
 }
 ```
 
-![synchronized方法反编译](./images/synchronized_method_decompilation.jpg)
+![synchronized方法反编译](./images/Java-MultiThread-1//synchronized_method_decompilation.jpg)
 
 
 
@@ -645,13 +645,13 @@ synchronized 是依赖于 JVM 实现的，前面我们也讲到了 虚拟机团�
 
 ​		在 **JDK1.2** 之前，Java的内存模型实现总是从主存（即共享内存）读取变量，是不需要进⾏特别的注意 的。⽽在当前的 Java 内存模型下，线程可以把变量保存本地内存（⽐如机器的寄存器）中，⽽不是直 接在主存中进⾏读写。**这就可能造成⼀个线程在主存中修改了⼀个变量的值，⽽另外⼀个线程还继续使 ⽤它在寄存器中的变量值的拷⻉，造成数据的不⼀致**。
 
-![Java内存模型和volatile1](./images/Java_memory_model_and_volatile_1.jpg)
+![Java内存模型和volatile1](./images/Java-MultiThread-1//Java_memory_model_and_volatile_1.jpg)
 
 
 
 要解决这个问题，就需要把变量声明为**volatile**，这就指示 JVM，这个变量是不稳定的，每次使⽤它都 到主存中进⾏读取。 说⽩了， **volatile 关键字的主要作⽤就是保证变量的可⻅性然后还有⼀个作⽤是防⽌指令重排序。**
 
-![Java内存模型和volatile2](./images/Java_memory_model_and_volatile_2.jpg)
+![Java内存模型和volatile2](./images/Java-MultiThread-1//Java_memory_model_and_volatile_2.jpg)
 
 
 
@@ -669,7 +669,7 @@ synchronized 是依赖于 JVM 实现的，前面我们也讲到了 虚拟机团�
 
 ### 10.4 内存可见性
 
-![内存可见性](./images/Memory_visibility.jpg)
+![内存可见性](./images/Java-MultiThread-1//Memory_visibility.jpg)
 
 
 
@@ -727,7 +727,7 @@ synchronized 是依赖于 JVM 实现的，前面我们也讲到了 虚拟机团�
 
 #### 12.2.2 第一种方式：ThreadPoolExecutor的方式
 
-![ThreadPoolExecutor构造方法](./images/ThreadPoolExecutor_construction.jpg)
+![ThreadPoolExecutor构造方法](./images/Java-MultiThread-1//ThreadPoolExecutor_construction.jpg)
 
 
 
@@ -786,11 +786,11 @@ public ThreadPoolExecutor(int corePoolSize,
 >
 > - **CachedThreadPool**： 该⽅法返回⼀个可根据实际情况调整线程数量的线程池。线程池的线程数 量不确定，但若有空闲线程可以复⽤，则会优先使⽤可复⽤的线程。若所有线程均在⼯作，⼜有 新的任务提交，则会创建新的线程处理任务。所有线程在当前任务执⾏完毕后，将返回线程池进 ⾏复⽤。
 
-![Executos工具类的方法](./images/Executos_tool_class_method.jpg)
+![Executos工具类的方法](./images/Java-MultiThread-1//Executos_tool_class_method.jpg)
 
 
 
-![通过ThreaPoolExecutor类的构造方法](./images/Through_construction_of_ThraPoolExecutor_class.jpg)
+![通过ThreaPoolExecutor类的构造方法](./images/Java-MultiThread-1//Through_construction_of_ThraPoolExecutor_class.jpg)
 
 
 
@@ -816,7 +816,7 @@ public static ExecutorService newFixedThreadPool(int nThreads) {
 
 > - https://www.jianshu.com/p/c41e942bcd64
 
-![ThreadPoolExecutor的类图](./images/Class_diagram_of_ThreadPoolExecutor.jpg)
+![ThreadPoolExecutor的类图](./images/Java-MultiThread-1//Class_diagram_of_ThreadPoolExecutor.jpg)
 
 ​		当在execute(Runnable)方法中提交新任务并且少于corePoolSize线程正在运行时，即使其他工作线程处于空闲状态，也会创建一个新线程来处理该请求。 如果有多于corePoolSize但小于maximumPoolSize线程正在运行，则仅当队列已满时才会创建新线程。 通过设置corePoolSize和maximumPoolSize相同，您可以创建一个固定大小的线程池。 通过将maximumPoolSize设置为基本上无界的值，例如Integer.MAX_VALUE，您可以允许池容纳任意数量的并发任务。 通常，核心和最大池大小仅在构建时设置，但也可以使用`setCorePoolSize`和`setMaximumPoolSize`进行动态更改。
 
@@ -1045,7 +1045,7 @@ public class AbortPolicyWithReport extends ThreadPoolExecutor.AbortPolicy {
 
 
 
-![线程池相关类](./images/Thread_pool_related_classes.png)
+![线程池相关类](./images/Java-MultiThread-1//Thread_pool_related_classes.png)
 
 
 
@@ -1053,7 +1053,7 @@ public class AbortPolicyWithReport extends ThreadPoolExecutor.AbortPolicy {
 
 ### 阻塞队列相关类
 
-![阻塞队列相关类](./images/Blocking_queue_related_classes.png)
+![阻塞队列相关类](./images/Java-MultiThread-1//Blocking_queue_related_classes.png)
 
 
 
@@ -1061,7 +1061,7 @@ public class AbortPolicyWithReport extends ThreadPoolExecutor.AbortPolicy {
 
 ### ConcurrentMap类
 
-![ConcurrentMap_class](./images/ConcurrentMap_class.png)
+![ConcurrentMap_class](./images/Java-MultiThread-1//ConcurrentMap_class.png)
 
 
 
@@ -1069,7 +1069,7 @@ public class AbortPolicyWithReport extends ThreadPoolExecutor.AbortPolicy {
 
 ### 多线程其他类
 
-![多线程其他类](./images/Multithreading_other_classes.png)
+![多线程其他类](./images/Java-MultiThread-1//Multithreading_other_classes.png)
 
 
 
@@ -1120,7 +1120,7 @@ CAS比较与交换的伪代码可以表示为：
 
 
 
-![CAS算法理解](./images/CAS_algorithm.jpg)
+![CAS算法理解](./images/Java-MultiThread-1//CAS_algorithm.jpg)
 
 
 
@@ -1303,7 +1303,7 @@ Java 1.8中`AtomicInteger.incrementAndGet()`的实现源码为：
 
 
 
-![ThreadLocal简介](./images/Introduction_to_ThreadLocal.png)
+![ThreadLocal简介](./images/Java-MultiThread-1//Introduction_to_ThreadLocal.png)
 
 
 
@@ -1313,7 +1313,7 @@ Java 1.8中`AtomicInteger.incrementAndGet()`的实现源码为：
 
 
 
-![ThreadLocal和Thread以及ThreadLocalMap三者的关系](./images/ThreadLocal_Thread_ThreadLocalMap.jpg)
+![ThreadLocal和Thread以及ThreadLocalMap三者的关系](./images/Java-MultiThread-1//ThreadLocal_Thread_ThreadLocalMap.jpg)
 
 
 
@@ -1616,7 +1616,7 @@ private Entry getEntry(ThreadLocal<?> key) {
 
 ### 14.6 内存泄漏问题
 
-![](./images/ThreadLocal_Thread_ThreadLocalMap.jpg)
+![](./images/Java-MultiThread-1//ThreadLocal_Thread_ThreadLocalMap.jpg)
 
 
 
