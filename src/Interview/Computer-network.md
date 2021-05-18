@@ -262,7 +262,7 @@ TCP还设有一个保活计时器，显然，客户端如果出现故障，服�
 
 #### TCP协议如何保证可靠传输
 
-::: tips 参考
+::: tip 参考
 
 - https://juejin.cn/post/6916073832335802382
 - https://zhuanlan.zhihu.com/p/112317245
