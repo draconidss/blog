@@ -19,7 +19,7 @@ tags:
 
 ## 进程 | 线程 | 任务
 
-![线程、程序、进程](./images/Thread_program_process.png)
+
 
 
 
