@@ -223,7 +223,7 @@ class RunnableThread implements Runnable
 
 ## 线程的启动
 
-::: tips 参考
+::: tip 参考
 
 - [线程启动原理](https://www.jianshu.com/p/8c16aeea7e1a)
 
