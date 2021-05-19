@@ -40,7 +40,7 @@ tags:
 
 
 
-![线程类图](./images/Java-MultiThread-1/Thread_class_diagram.jpg)
+![线程类图](./images/Java-MultiThread-1/Thread_Class_diagram.jpg)
 
 
 
@@ -1672,11 +1672,10 @@ private Entry getEntry(ThreadLocal<?> key) {
 
 
 
-
-
 ### i++线程安全吗
 
 参考
 
 > - https://blog.csdn.net/weixin_39446980/article/details/90597576
 > - https://blog.csdn.net/zbw18297786698/article/details/53420780?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param
+
