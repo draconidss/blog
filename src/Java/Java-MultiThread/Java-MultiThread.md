@@ -497,8 +497,6 @@ synchronized 修饰的⽅法并没有 monitorenter 指令和 monitorexit 指令�
 
 
 
-
-
 ### 9.3 说说 JDK1.6 之后的synchronized 关键字底层做了哪些优化，可以详细介绍⼀下这些优化吗
 
 参考
