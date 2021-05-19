@@ -19,7 +19,7 @@ tags:
 
 ## 进程 | 线程 | 任务
 
-![线程、程序、进程](./images/Java-MultiThread-1//Thread_program_process.png)
+![线程、程序、进程](./images/Java-MultiThread-1/Thread_program_process.png)
 
 
 
@@ -38,7 +38,7 @@ Java多线程，皆始于Thread。Thread是多线程的根，每一个线程的�
 
 
 
-![线程类图](./images/Java-MultiThread-1//Thread_Class_diagram.jpg)
+![线程类图](./images/Java-MultiThread-1/Thread_Class_diagram.jpg)
 
 
 
@@ -446,7 +446,7 @@ Java 线程在运⾏的⽣命周期中的指定时刻只可能处于下⾯ 6 种
 
 
 
-![线程生命周期状态](./images/Java-MultiThread-1//thread_life_cycle_state.jpg)
+![线程生命周期状态](./images/Java-MultiThread-1/thread_life_cycle_state.jpg)
 
 
 
@@ -454,7 +454,7 @@ Java 线程在运⾏的⽣命周期中的指定时刻只可能处于下⾯ 6 种
 
 线程在⽣命周期中并不是固定处于某⼀个状态⽽是随着代码的执⾏在不同状态之间切换。Java 线程状 态变迁如下图所示（图源《Java 并发编程艺术》4.1.4 节）：
 
-![线程生命周期状态2](./images/Java-MultiThread-1//thread_life_cycle_state_2.jpg)
+![线程生命周期状态2](./images/Java-MultiThread-1/thread_life_cycle_state_2.jpg)
 
 
 
@@ -536,7 +536,7 @@ Java 线程在运⾏的⽣命周期中的指定时刻只可能处于下⾯ 6 种
 
 
 
-![串行,并发和并行](./images/Java-MultiThread-1//serial_Concurrency_Parallel.jpg)
+![串行,并发和并行](./images/Java-MultiThread-1/serial_Concurrency_Parallel.jpg)
 
 
 
