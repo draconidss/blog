@@ -801,6 +801,16 @@ Bean生命周期描述的是 Spring中一个Bean创建过程和销毁过程中�
 
 
 
+![Spring bean 的生命周期](./images/Spring-bacisNote/bean_life_cycle.jpg)
+
+
+
+
+
+
+
+
+
 ![Spring bean 的生命周期](./images/Spring-bacisNote/bean_lifetime.png)
 
 
@@ -854,7 +864,8 @@ Bean的完整生命周期经历了各种方法调用，这些方法可以划分�
 
 ::: tip 参考
 
-[Spring-bean的循环依赖以及解决方式](https://blog.csdn.net/u010853261/article/details/77940767)
+- [spring bean循环依赖的解决方法](https://www.cnblogs.com/yanggb/p/13125998.html)
+- [Spring-bean的循环依赖以及解决方式](https://blog.csdn.net/u010853261/article/details/77940767)
 
 :::
 
