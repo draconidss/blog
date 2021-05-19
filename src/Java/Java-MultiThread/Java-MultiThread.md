@@ -25,3 +25,5 @@ tags:
 
 
 
+
+![线程类图](./images/Java-MultiThread-1/Thread_Class_diagram.jpg)
