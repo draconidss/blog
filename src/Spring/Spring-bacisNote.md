@@ -503,7 +503,7 @@ Bean也是基于用户提供容器的配置元数据创建
 
 
 
-#### 5.1.1 singleton 作⽤域
+#### 5.1.1 singleton 作用域
 
 
 
@@ -804,6 +804,21 @@ Bean生命周期描述的是 Spring中一个Bean创建过程和销毁过程中�
 ![Spring bean 的生命周期](./images/Spring-bacisNote/bean_life_cycle.jpg)
 
 
+
+1. BeanDefinition定义：BeanDefinition表示Bean定义,它定义了某个Bean的类型, Spring就是利用Bean Definition来创建Bean的,比如需要利用 Bean Definition中 bean class属性确定Bean的类型,从而实例化出来对象。
+2. 
+
+
+
+
+
+| 作用域         | 描述                                                         |
+| -------------- | ------------------------------------------------------------ |
+| BeanDefinition |                                                              |
+| 构造方法推断   | 每次从容器中调用Bean时，都返回一个新的实例，即每次调用getBean()时，相当于执行newXxxBean()。 |
+| request        | 每次HTTP请求都会创建一个新的Bean，该作用域仅适用于web的Spring WebApplicationContext环境。 |
+| session        | 同一个HTTP Session共享一个Bean，不同Session使用不同的Bean。该作用域仅适用于web的Spring WebApplicationContext环境。 |
+| application    | 限定一个Bean的作用域为`ServletContext`的生命周期。该作用域仅适用于web的Spring WebApplicationContext环境。 |
 
 
 
