@@ -1,7 +1,7 @@
 ---
 icon: 
 time: 2021-05-10 00:20:01
-title: JVM概述/参考
+title: 概述/参考
 categories: 
   - 学习笔记
   - Java

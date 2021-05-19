@@ -1,6 +1,6 @@
 ---
 icon: 
-title: JVM-类加载子系统
+title: JVM
 author: LifeAlsoIsGG
 time: 2021-05-10 00:19:12
 description: 

@@ -18,7 +18,7 @@ tags:
 
 ## 参考
 
-::: tips
+::: tip
 
 - https://juejin.cn/post/6844904096059621390
 
