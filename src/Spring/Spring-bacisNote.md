@@ -468,14 +468,20 @@ Bean也是基于用户提供容器的配置元数据创建
 
 | 属性           | 描述                                                         |
 | -------------- | ------------------------------------------------------------ |
-| beanClass      | 表示一个bean类型，Spring在创建bean过程根据此属性来实例化得到对象 |
-| scope          | 每次从容器中调用Bean时，都返回一个新的实例，即每次调用getBean()时，相当于执行newXxxBean()。 |
-| isLazy         | 每次HTTP请求都会创建一个新的Bean，该作用域仅适用于web的Spring WebApplicationContext环境。 |
-| dependsOn      | 同一个HTTP Session共享一个Bean，不同Session使用不同的Bean。该作用域仅适用于web的Spring WebApplicationContext环境。 |
-| primary        | 限定一个Bean的作用域为`ServletContext`的生命周期。该作用域仅适用于web的Spring WebApplicationContext环境。 |
-| initMethodName |                                                              |
+| beanClass      | 表示一个bean类型。Spring在创建bean过程根据此属性来实例化得到对象 |
+| scope          | 作用域                                                       |
+| isLazy         | 是否懒加载。表示一个bean是不是需要懒加载,原型bean的 isLazy属性不起作用, 懒加载的单例bean,会在第一次 getBean的时候生成该bean,非懒加 载的单例bean,则会在 Spring启动过程中直接生成好。 |
+| dependsOn      | 表示一个bean在创建之前所依赖的其他bean,在一个bean创建之前,它所依赖的这些bean得先全部创建好。 |
+| primary        | 表示一个bean是主bean。在Spng中一个类型可以有多个bean对象, 在进行依赖注入时,如果根据类型找到了多个bean,此时会判断这些 bean中是否存在一个主bean,如果存在,则直接将这个bean注入给属性 |
+| initMethodName | 表示一个bean的初始化方法。一个bean的生命周期过程中有一个步骤叫初始化,Spng会在这个步骤中去调用bean的初始化方法,初始化逻辑由程序员自己控制,表示程序员可以自定义逻辑对bean进行加 |
 
 
+
+### 5.3 BeanFactory
+
+`BeanFactory`是创建Bean的Spring容器。
+
+`BeanFactory`利用`BeanDefinition`作为模板来生成Bean对象
 
 
 
@@ -791,6 +797,8 @@ public class AppConfig {
 
 
 
+Bean生命周期描述的是 Spring中一个Bean创建过程和销毁过程中所经历的步骤,其中Bean创建过程是重点。程序员可以利用Bean生命周期机制对Bean进行自定义加工。
+
 
 
 ![Spring bean 的生命周期](./images/Spring-bacisNote/bean_lifetime.png)
@@ -822,7 +830,7 @@ Bean的完整生命周期经历了各种方法调用，这些方法可以划分�
 
 
 
-### 5.7 Spring提供了哪些配置方式
+### 5.7 Spring提供了哪些bean配置方式
 
 ::: tip 参考
 
@@ -837,6 +845,16 @@ Bean的完整生命周期经历了各种方法调用，这些方法可以划分�
 - 基于xml的配置
 - 基于注解的配置
 - 基于Java的配置
+
+:::
+
+
+
+### 5.8 bean循环依赖问题
+
+::: tip 参考
+
+[Spring-bean的循环依赖以及解决方式](https://blog.csdn.net/u010853261/article/details/77940767)
 
 :::
 
