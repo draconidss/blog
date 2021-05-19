@@ -468,7 +468,7 @@ Bean也是基于用户提供容器的配置元数据创建
 
 | 属性           | 描述                                                         |
 | -------------- | ------------------------------------------------------------ |
-| beanClass      | 表示一个bean类型，                                           |
+| beanClass      | 表示一个bean类型，Spring在创建bean过程根据此属性来实例化得到对象 |
 | scope          | 每次从容器中调用Bean时，都返回一个新的实例，即每次调用getBean()时，相当于执行newXxxBean()。 |
 | isLazy         | 每次HTTP请求都会创建一个新的Bean，该作用域仅适用于web的Spring WebApplicationContext环境。 |
 | dependsOn      | 同一个HTTP Session共享一个Bean，不同Session使用不同的Bean。该作用域仅适用于web的Spring WebApplicationContext环境。 |
