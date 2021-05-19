@@ -334,13 +334,13 @@ Java 线程在运⾏的⽣命周期中的指定时刻只可能处于下⾯ 6 种
 
 
 
-![线程生命周期状态](./images/Java-MultiThread-1/Thread_life_cycle_state.jpg)
+![线程生命周期状态](./images/Java-MultiThread-1/Thread_life_cycle_state1.jpg)
 
 
 
 线程在⽣命周期中并不是固定处于某⼀个状态⽽是随着代码的执⾏在不同状态之间切换。Java 线程状 态变迁如下图所示（图源《Java 并发编程艺术》4.1.4 节）：
 
-![线程生命周期状态2](./images/Java-MultiThread-1/Thread_life_cycle_state_2.jpg)
+![线程生命周期状态2](./images/Java-MultiThread-1/Thread_life_cycle_state2.jpg)
 
 
 
