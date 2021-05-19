@@ -805,8 +805,12 @@ Bean生命周期描述的是 Spring中一个Bean创建过程和销毁过程中�
 
 
 
-1. BeanDefinition定义：BeanDefinition表示Bean定义,它定义了某个Bean的类型, Spring就是利用Bean Definition来创建Bean的,比如需要利用 Bean Definition中 bean class属性确定Bean的类型,从而实例化出来对象。
-2. 
+1. **BeanDefinition定义**：BeanDefinition表示Bean定义,它定义了某个Bean的类型, Spring就是利用Bean Definition来创建Bean的,比如需要利用 Bean Definition中 bean class属性确定Bean的类型,从而实例化出来对象。
+2. **构造方法推断**：一个Ben中可以有多个构造方法,此时就需要 Spring来判断到底使用哪个构造方法,这个过程是比较复杂的,篇幅有限,不展开介绍。通过构造方法推断之后确定一个构造方法后,就可以利用构造方法实例化得到一个对象了。
+3. **实例化和构造方法反射得到对象**：通过构造方法反射得到一个实例化对象,在 Spring中,可以通过Bean PostProcessor机制对实例化进行干预。
+4. **属性填充**：实例化所得到的对象,是“不完整”的对象,“不完整”的意思是该对象中的某些属性还没有进行属性填充,也就是Spng还没有自动给某些属性赋值,属性填充就是我们通常说的自动注入、依赖注入。
+5. **初始化**：在一个对象的属性填充之后, Spring提供了初始化机制,程序员可以利用初始化机制对Bean进行自定义加工,比如可以利用 Initializing Bean接口来对Bean中的其他属性进行赋值,或对Bean中的某些属性进行校验。
+6. **通过AOP生成代理对象**：初始化后是Bean创建生命周期中最后一个步骤,我们常说的AOP机制就是在这个步骤中通过 Bean PostProcessor机制实现的,初始化之后得到的对象才是真正的Bean对象。
 
 
 
