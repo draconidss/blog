@@ -152,8 +152,7 @@ module.exports = config({
               title: "Redis",
               icon: "creative",
               prefix: "redis/",
-              children: ["Redis_theory_note", "Redis_deployment&use",
-                "Redis_single_signin", "Redis_High_concurrency_spike_system"]
+              children: ["Redis_theory_note", "Redis_deployment&use","Redis_scene"]
             },
 
             {

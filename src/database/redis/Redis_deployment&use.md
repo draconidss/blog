@@ -15,11 +15,14 @@ tags:
 
 
 
-
 ## 参考
 
-> - [菜鸟笔记Redis](https://www.runoob.com/redis/redis-tutorial.html)
-> - [Redis 命令参考 — Redis 命令参考 (redisfans.com)](http://doc.redisfans.com/)
+::: tip
+
+- [菜鸟笔记Redis](https://www.runoob.com/redis/redis-tutorial.html)
+- [Redis 命令参考 — Redis 命令参考 (redisfans.com)](http://doc.redisfans.com/)
+
+:::
 
 
 

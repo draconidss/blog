@@ -12,7 +12,7 @@ categories:
 
 ## 参考
 
-::: tips 参考
+::: tip 参考
 
 - https://blog.csdn.net/qq_41701956/article/details/81664921
 - [尚硅谷](https://www.bilibili.com/video/BV1PJ411n7xZ)
@@ -26,7 +26,7 @@ categories:
 
 ### 官方规范参考
 
-::: tips 官方规范参考
+::: tip 官方规范参考
 
 - https://docs.oracle.com/javase/specs/index.html
 
