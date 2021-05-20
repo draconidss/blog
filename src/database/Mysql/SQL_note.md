@@ -1,8 +1,7 @@
 ---
 title: SQL学习笔记
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-10-12 20:47:17
-original: true
 categories: 
   - 数据库
 tags: 

@@ -1,10 +1,9 @@
 ---
 icon: 
 title: Linux技巧
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-08-15 16:45:16
 description: Linux技巧
-original: true
 image: 
 categories: 
   - Linux

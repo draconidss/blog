@@ -1,8 +1,7 @@
 ---
 title: Java面试整理
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-09-16 18:12:23
-original: true
 categories: 
   - 学习笔记
   - 面试

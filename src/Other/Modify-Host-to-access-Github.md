@@ -1,10 +1,9 @@
 ---
 icon: 
 title: 修改Host以访问Github
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-04-16 23:46:17
 description: 修改Host以访问Github
-original: true
 image: 
 categories: 
   - Other

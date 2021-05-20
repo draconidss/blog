@@ -1,7 +1,7 @@
 ---
 title: 数据结构&算法题目合集
 time: 2020-08-29 19:21:57
-original: true
+author: Draco
 categories: 
   - 数据结构&算法
 tags: 

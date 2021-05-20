@@ -1,8 +1,7 @@
 ---
 title: 服务器上部署SpringBoot
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-07-05 13:33:29
-original: true
 categories: 
   - Spring
   - SpringBoot

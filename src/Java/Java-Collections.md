@@ -1,10 +1,9 @@
 ---
 icon: 
 title: Java-集合容器
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-08-23 20:37:41
 description: 
-original: true
 image: 
 categories: 
   - Java

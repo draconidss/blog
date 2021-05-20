@@ -1,8 +1,7 @@
 ---
 title: JWT认证原理(更新中)
-author: LifeAlsoIsGG
+author: Draco
 time: 2021-01-17 11:10:39
-original: true
 categories: 
   - Spring
   - SpringBoot

@@ -1,7 +1,7 @@
 ---
 icon: 
 title: Java-设计模式
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-08-09 23:57:52
 description: 
 original: true

@@ -1,8 +1,7 @@
 ---
 title: Maven中依赖的scope总结
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-10-08 15:56:11
-original: true
 categories: 
   - Spring
   - SpringBoot

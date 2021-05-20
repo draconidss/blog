@@ -1,8 +1,7 @@
 ---
 title: Swagger使用
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-10-10 18:29:09
-original: true
 categories: 
   - Spring
   - SpringBoot

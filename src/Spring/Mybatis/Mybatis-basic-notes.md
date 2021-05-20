@@ -1,8 +1,7 @@
 ---
 title: Mybatis基础笔记
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-10-10 15:05:06
-original: true
 categories: 
   - Spring
   - Mybatis

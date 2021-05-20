@@ -1,8 +1,7 @@
 ---
 title: Mysql理论学习笔记
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-09-16 18:10:26
-original: true
 categories: 
   - 数据库
 tags: 

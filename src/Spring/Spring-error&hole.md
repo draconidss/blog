@@ -1,8 +1,7 @@
 ---
 title: Spring错误&坑记录
-author: LifeAlsoIsGG
+author: Draco
 time: 2021-01-13 12:00:37
-original: true
 categories: 
   - Spring
 tags: 

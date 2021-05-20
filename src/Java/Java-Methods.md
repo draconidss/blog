@@ -1,10 +1,9 @@
 ---
 icon: 
 title: Java-常用方法汇总
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-08-09 23:56:52
 description: 
-original: true
 image: 
 categories: 
   - Java

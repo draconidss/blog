@@ -1,8 +1,7 @@
 ---
 title: 认识SpringCloud
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-06-07 17:00:47
-original: true
 categories: 
   - Spring
   - SpringCloud

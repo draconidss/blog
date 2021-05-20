@@ -1,8 +1,7 @@
 ---
 title: Redis部署与基本使用
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-11-21 15:17:13
-original: true
 categories: 
   - 数据库
   - Redis

@@ -1,7 +1,7 @@
 ---
 icon: 
 title: Javaweb大学活动管理系统
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-07-12 01:34:30
 description: Javaweb大学活动管理系统
 original: true

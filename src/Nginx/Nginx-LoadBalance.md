@@ -1,8 +1,7 @@
 ---
 title: Nginx-负载均衡
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-12-25 00:58:57
-original: true
 categories: 
   - Nginx
 tags: 

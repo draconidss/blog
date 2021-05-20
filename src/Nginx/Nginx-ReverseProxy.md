@@ -1,8 +1,7 @@
 ---
 title: Nginx-反向代理
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-12-25 00:57:51
-original: true
 categories: 
   - Nginx
 tags: 

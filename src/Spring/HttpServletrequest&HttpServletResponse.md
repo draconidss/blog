@@ -1,8 +1,7 @@
 ---
 title: HttpServletrequest与HttpServletResponse
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-10-07 21:36:51
-original: true
 categories: 
   - Spring
 tags: 

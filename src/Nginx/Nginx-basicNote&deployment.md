@@ -1,6 +1,6 @@
 ---
 title: Nginx基础笔记和安装配置
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-12-19 16:07:12
 original: true
 categories: 

@@ -1,10 +1,9 @@
 ---
 icon: 
 title: Promise异步调用
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-07-11 22:10:38
 description: Promise异步调用
-original: true
 image: 
 categories: 
   - 前端

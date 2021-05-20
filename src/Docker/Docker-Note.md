@@ -1,10 +1,9 @@
 ---
 icon: 
 title: Docker学习笔记
-author: LifeAlsoIsGG
+author: Draco
 time: 2021-01-28 23:33:05
 description: Docker学习笔记
-original: true
 categories: 
   - Docker
 tags: 

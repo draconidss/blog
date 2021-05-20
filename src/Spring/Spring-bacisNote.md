@@ -1,8 +1,7 @@
 ---
 title: Spring基础笔记
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-09/16 14:57:41
-original: true
 categories: 
   - Spring
 tags: 

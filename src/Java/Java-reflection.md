@@ -1,10 +1,9 @@
 ---
 icon: 
 title: Java-反射
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-10-16 16:49:15
 description: 
-original: true
 image: 
 categories: 
   - Java

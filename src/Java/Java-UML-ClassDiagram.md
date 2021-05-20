@@ -1,8 +1,7 @@
 ---
 title: Java-UML类图
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-12-20 16:24:28
-original: true
 categories: 
   - Java
 tags: 

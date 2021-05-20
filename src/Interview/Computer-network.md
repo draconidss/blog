@@ -1,8 +1,7 @@
 ---
 title: 计算机网络
-author: LifeAlsoIsGG
+author: Draco
 time: 2021-03-21 15:13:00
-original: true
 categories: 
   - 面试
 tags: 

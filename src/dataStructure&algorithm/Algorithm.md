@@ -1,7 +1,7 @@
 ---
 title: 算法
 time: 2020-08-30 18:04:39
-original: true
+author: Draco
 categories: 
   - 数据结构&算法
 tags: 

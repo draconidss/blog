@@ -1,7 +1,7 @@
 ---
 icon: 
 title: 大三下实训期末作业
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-06-30 10:43:30
 description: 大三下实训期末作业
 original: true
@@ -4176,7 +4176,7 @@ getRealName() {
 #### 2.部署到服务器后无法找到表
 
    当项目部署到服务器上运行方法后，无法找到表，因而演示时无法用服务器演示
-   
+
 ![500_error](./images/Final-homework-for-junior-year-training/500_error.jpg)
 
 

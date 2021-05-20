@@ -1,7 +1,7 @@
 ---
 icon: 
 title: JavaSwing-超市系统
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-07-12 01:27:13
 description: JavaSwing-超市系统
 original: true
@@ -19,7 +19,6 @@ tags:
 
 
 <div align=center><img src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-SupermarketSystem/images/logo.png"/></div>
-
 
 
 ## 1. 链接
@@ -62,13 +61,11 @@ Github：https://github.com/LifeAlsoIsGG/MyProject-SupermarketSystem
 <div align=center><img src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-SupermarketSystem/images/首页.jpg" /></div>
 
 
-
 ## 5. 人员管理manage
 
 权限0为超管，1为收货员，2为进货员
 
 <div align=center><img src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-SupermarketSystem/images/人员管理.jpg"/></div>
-
 
 
 ## 6. 进货系统import
@@ -88,11 +85,9 @@ Github：https://github.com/LifeAlsoIsGG/MyProject-SupermarketSystem
 ### 6.1 添加进货
 
 <div align=center><img src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-SupermarketSystem/images/进货添加进货.jpg"/></div>
-
 ### 6.2 更改进货数量
 
 <div align=center><img src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-SupermarketSystem/images/进货修改数量.jpg"/></div>
-
 ### 6.3 确认进货订单&发送进货邮件
 
 <div align=center>
@@ -110,7 +105,6 @@ Github：https://github.com/LifeAlsoIsGG/MyProject-SupermarketSystem
 没有用到表格或html，只是简单的字符串排版
 
 <div align=center><img src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-SupermarketSystem/images/进货邮件内容.jpg"/></div>
-
 ### 6.5 更改进货订单状态
 
 模拟当进货成功后，==修改订单状态==为已入库或者已取消，如果已入库后库存数量会自动增加
@@ -140,11 +134,9 @@ Github：https://github.com/LifeAlsoIsGG/MyProject-SupermarketSystem
 ### 7.1 添加商品
 
 <div align=center><img src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-SupermarketSystem/images/收银添加商品.jpg"/></div>
-
 ### 7.2 库存不够提示
 
 <div align=center><img src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-SupermarketSystem/images/收银库存不够.jpg"/></div>
-
 ### 7.3 收银结账&支付成功
 
 <div align=center>
@@ -162,13 +154,11 @@ Github：https://github.com/LifeAlsoIsGG/MyProject-SupermarketSystem
 <div align=center><img src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-SupermarketSystem/images/收银成功首页.jpg"/></div>
 
 
-
 ## 8. 商品库存storage
 
 ### 8.1 总览
 
 <div align=center><img src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-SupermarketSystem/images/商品库存.jpg"/></div>
-
 
 
 ### 8.2 库存日志
@@ -202,11 +192,9 @@ Github：https://github.com/LifeAlsoIsGG/MyProject-SupermarketSystem
 <div align=center><img src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-SupermarketSystem/images/供应商.jpg"/></div>
 
 
-
 ## 10. 商品目录catalog
 
 <div align=center><img src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-SupermarketSystem/images/商品目录.jpg"/></div>
-
 
 
 ## 11. 联系contact

@@ -1,7 +1,7 @@
 ---
 title: 数据结构
 time: 2020-08-30 18:03:39
-original: true
+author: Draco
 categories: 
   - 数据结构&算法
 tags: 

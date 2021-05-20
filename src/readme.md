@@ -3,7 +3,7 @@ blog: true
 home : true
 icon: home
 heroImage: https://cdn.jsdelivr.net/gh/lifealsoisgg/static-blog@gh-pages/heroImage.png
-heroText: LifeAlsoIsGG's Blog
+heroText: Draco's Blog
 tagline: We found hope in hopeless place
 bgImage: https://cdn.jsdelivr.net/gh/lifealsoisgg/static-blog@gh-pages/bgImage.jpg
 bgImageStyle: {

@@ -1,10 +1,9 @@
 ---
 icon: 
 title: Java-基础面试题
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-08-08 23:24:32
 description: Java-基础面试题
-original: true
 image: 
 categories: 
   - Java

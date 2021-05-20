@@ -1,10 +1,9 @@
 ---
 icon: 
 title: Docker deployment
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-05-31 15:39:08
 description: Docker deployment
-original: true
 image: 
 categories: 
   - Docker

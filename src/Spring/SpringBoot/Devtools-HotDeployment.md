@@ -1,8 +1,7 @@
 ---
 title: Devtools热部署SpringBoot
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-10-07 23:05:45
-original: true
 categories: 
   - Spring
   - SpringBoot

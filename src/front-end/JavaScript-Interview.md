@@ -1,10 +1,9 @@
 ---
 icon: 
 title: JavaScript面试题
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-09-20 12:07:36
 description: JavaScript面试题
-original: true
 image: 
 categories: 
   - 前端

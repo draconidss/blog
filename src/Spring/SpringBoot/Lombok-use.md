@@ -1,8 +1,7 @@
 ---
 title: Lombok使用
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-10-08 22:18:09
-original: true
 categories: 
   - Spring
   - SpringBoot

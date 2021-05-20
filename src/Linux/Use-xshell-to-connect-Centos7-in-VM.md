@@ -1,10 +1,9 @@
 ---
 icon: 
 title: 用xshell连接虚拟机中的Centos7
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-06-06 22:14:50
 description: 用xshell连接虚拟机中的Centos7
-original: true
 image: 
 categories: 
   - Linux

@@ -1,10 +1,9 @@
 ---
 icon: 
 title: Java-String
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-11-25 23:10:27
 description: Java-IO
-original: true
 image: 
 categories: 
   - Java

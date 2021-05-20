@@ -1,8 +1,7 @@
 ---
 title: Nginx-动静分离
-author: LifeAlsoIsGG
+author: Draco
 time: 2021-01-03 00:04:05
-original: true
 categories: 
   - Nginx
 tags: 

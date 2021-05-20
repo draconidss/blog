@@ -1,8 +1,7 @@
 ---
 title: Redis理论学习笔记
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-10-12 20:45:07
-original: true
 categories: 
   - 数据库
   - Redis

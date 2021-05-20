@@ -1,10 +1,9 @@
 ---
 icon: 
 title: Docker:Install software
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-05-31 20:47:14
 description: Docker:Install software
-original: true
 image: 
 categories: 
   - Docker

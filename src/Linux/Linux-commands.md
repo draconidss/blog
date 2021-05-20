@@ -1,10 +1,9 @@
 ---
 icon: 
 title: Linux常用命令
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-08-14 16:45:16
 description: Linux常用命令
-original: true
 image: 
 categories: 
   - Linux

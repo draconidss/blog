@@ -1,10 +1,9 @@
 ---
 icon: 
 title: ElasticSearch
-author: LifeAlsoIsGG
+author: Draco
 time: 2021-05-07 20:06:38
 description: 
-original: true
 image: 
 categories: 
   - ElasticSearch

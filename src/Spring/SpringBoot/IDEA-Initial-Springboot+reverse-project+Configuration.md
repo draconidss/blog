@@ -1,8 +1,7 @@
 ---
 title: IDEA初始化SpringBoot项目+逆向工程+配置
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-10-01 22:40:15
-original: true
 categories: 
   - Spring
   - SpringBoot

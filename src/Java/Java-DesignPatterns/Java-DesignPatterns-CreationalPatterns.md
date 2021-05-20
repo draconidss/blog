@@ -1,10 +1,9 @@
 ---
 icon: 
 title: 设计模式之创建型设计模式
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-08-09 23:20:52
 description: 
-original: true
 image: 
 categories: 
   - Java

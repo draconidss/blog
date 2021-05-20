@@ -1,10 +1,9 @@
 ---
 icon: 
 title: Java-JDK8新特性
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-10-15 12:39:23
 description: 
-original: true
 image: 
 categories: 
   - Java

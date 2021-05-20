@@ -1,7 +1,7 @@
 ---
 title: Hadoop伪分布式配置
 time: 2020-05-02 18:59:32
-original: true
+original: false
 categories: 
   - 数据库
   - Hadoop

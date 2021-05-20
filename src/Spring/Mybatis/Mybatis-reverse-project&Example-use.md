@@ -4,7 +4,7 @@ title: Mybatis逆向工程&Example类使用
 slug: Mybatis逆向工程&Example类使用
 date: 2020/10/01 22:35:50
 status: publish
-author: LifeAlsoIsGG
+author: Draco
 categories: 
   - Spring
   - Mybatis

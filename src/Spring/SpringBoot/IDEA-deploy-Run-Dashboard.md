@@ -1,8 +1,7 @@
 ---
 title: IDEA配置Run Dashboard
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-10-02 00:04:29
-original: true
 categories: 
   - Spring
   - SpringBoot

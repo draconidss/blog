@@ -1,7 +1,7 @@
 ---
 icon: 
 title: 实验室出入管理小程序
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-08-07 00:24:30
 description: 实验室出入管理小程序
 original: true
@@ -18,7 +18,6 @@ tags:
 
 
 <div align=center><img src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/logo.png"/></div>
-
 
 
 原文链接
@@ -40,11 +39,9 @@ Github
 
 
 
-
 此小程序获得了[2020中国微信官方小程序大赛](https://developers.weixin.qq.com/community/competition)华南赛区二等奖🎉
 
 <div align=center><img width="70%"src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/2020微信小程序应用开发赛华南赛区二等奖.jpg"/></div>
-
 
 
 赛区奖项比例
@@ -57,7 +54,6 @@ Github
 
 
 <div align=center><img src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/华南赛区.png"/></div>
-
 
 
 
@@ -108,11 +104,9 @@ Github
 <div align=center><img src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/获取openid.jpg"/></div>
 
 
-
 `订阅消息`
 
 <div align=center><img width="50%" src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/订阅消息.jpg"/></div>
-
 
 
 
@@ -132,7 +126,6 @@ Github
 <div align=center><img src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/dock栏.jpg"/></div>
 
 
-
 > 1. 首页
 > 2. 日志
 > 3. 仪表盘
@@ -150,13 +143,11 @@ Github
 
 
 
-
 ### 5.1 首页Home
 
 当进入页面时会判断你当前在哪个实验室，如果不在则可以**模拟选择教室进入**，模拟进入后会发送打卡通知
 
 <div align=center>  <table><tr>    <img width="50%" src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/home7.jpg"/>    <img width="50%" src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/订阅消息.jpg"/>    </tr></table></div>	
-
 
 
 
@@ -171,17 +162,13 @@ Github
 
 
 <div align=center>  <table><tr>    <img width="50%" src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/home1.jpg"/>    <img width="50%" src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/home2.jpg"/>   </tr></table></div>
-
 <div align=center>  <table><tr>   <img width="50%" src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/home3.jpg"/> <img width="50%" src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/home4.jpg"/>    </tr></table></div>
-
 <div align=center>  <table><tr>     <img width="50%" src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/home5.jpg"/>  <img width="50%" src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/home6.jpg"/>  </tr></table></div>
-
 
 
 之后点击右下角的按钮则可以**模拟退出实验室**，成功后也会发送打卡通知
 
 <div align=center>  <table><tr>    <img width="50%" src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/home6.jpg"/>    <img width="50%" src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/订阅消息.jpg"/>    </tr></table></div>
-
 
 
 
@@ -197,11 +184,9 @@ Github
 
 
 
-
 点击Tab栏中**我的实验室**可以查看我去过的实验室，点击实验室卡片可以看到**我在这间实验室的日志**
 
 <div align=center>  <table><tr>    <img width="50%" src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/log3.jpg"/>    <img width="50%" src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/log4.jpg"/>    </tr></table></div>
-
 
 
 
@@ -233,7 +218,6 @@ Github
 <div align=center>  <table><tr>    <img width="30%" src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/admin1.jpg"/>    <img width="30%" src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/room1.jpg"/>  <img width="30%" src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/room2.jpg"/>  </tr></table></div>
 
 
-
 在**概览**页面
 
 - 超管：**查看监控(TODO)**，**关闭开放实验室(如果实验室有人会提醒)**，**添加删除此房间管理员**，超管默认为管理员，没分配时不会显示，分配后会头像会显示**超管**
@@ -242,7 +226,6 @@ Github
 
 
 <div align=center>  <table><tr>    <img width="30%" src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/room3.jpg"/>    <img width="30%" src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/room4.jpg"/>  <img width="30%" src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/room5.jpg"/>  </tr></table></div>
-
 
 
 ### 5.4 排行榜Rank
@@ -258,7 +241,6 @@ Github
 
 
 
-
 ### 5.5 我的Profile
 
 我的界面，需要在这里实名手机绑定，在学校用基本调用接口输入学号密码，但这里为了方便只能模拟用手机绑定。在这里也可以主动申请服务消息的打卡通知，滑动接收消息的Switch即可。
@@ -266,11 +248,9 @@ Github
 <div align=center>  <table><tr>    <img width="30%" src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/profile1.jpg"/>    <img width="30%" src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/profile2.jpg"/>  <img width="30%" src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/profile3.jpg"/>  </tr></table></div>
 
 
-
 点击最下方的**介绍&使用手册**可以帮助您更快地了解并使用小程序。
 
 <div align=center>  <table><tr>    <img width="50%" src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/refe.jpg"/>   </tr></table></div>
-
 
 
 

@@ -1,10 +1,9 @@
 ---
 icon: 
 title: 设计模式七大原则
-author: LifeAlsoIsGG
+author: Draco
 time: 2020-08-09 22:37:52
 description: 
-original: true
 image: 
 categories: 
   - Java

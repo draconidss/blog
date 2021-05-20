@@ -1,8 +1,7 @@
 ---
 title: 操作系统
-author: LifeAlsoIsGG
+author: Draco
 time: 2021-03-21 15:26:08
-original: true
 categories: 
   - 面试
 tags: 

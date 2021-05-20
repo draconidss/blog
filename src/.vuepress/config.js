@@ -63,7 +63,7 @@ module.exports = config({
     sidebarDisplay: "mobile",
     sidebar: "auto",
     sidebarDepth: 3,
-    author: "LifeAlsoIsGG",
+    author: "Draco",
     nav: [
       {
         text: "分类",
