@@ -1,7 +1,7 @@
 const { config } = require("vuepress-theme-hope");
 
 module.exports = config({
-  title: "LifeAlsoIsGG's Blog",
+  title: "Draco's Blog",
   description: "We found hope in hopeless place",
 
   base: "",
