@@ -1,31 +1,17 @@
 ---
-title: SpringBoot基础笔记
+title: Maven笔记
 author: Draco
-time: 2021-04-29 14:48:00
+time: 2021-05-22 22:37:47
 categories: 
   - Spring
 tags: 
   - Spring
-  - SpringBoot
+  - Maven
 ---
 
 
 
-
-
-## SpringBoot启动流程
-
-
-
-
-
-
-
-## Maven
-
-
-
-### 参考
+## 参考
 
 ::: tip 
 
@@ -33,6 +19,10 @@ tags:
 - https://blog.csdn.net/qq_44839652/article/details/107709822
 
 :::
+
+
+
+## 概述
 
 
 
@@ -45,7 +35,7 @@ tags:
 
 
 
-### 标准目录结构
+## 标准目录结构
 
 - **src**：用于存放项目源码
   - **main**：用于存放运行主要代码
@@ -61,7 +51,7 @@ tags:
 
 
 
-### pom.xml文件详解
+## pom.xml文件详解
 
 ::: tip
 
@@ -71,7 +61,9 @@ tags:
 
 
 
-### 常用命令
+
+
+## 常用命令
 
 格式：`mvn [plugin]:[command]`
 
@@ -91,29 +83,12 @@ tags:
 
 
 
+
+
+## Maven构建多模块项目
+
+
+
+
+
 ### Maven多环境打包
-
-::: tip
-
-- [maven多环境打包](https://www.cnblogs.com/grasp/p/12118684.html)
-
-:::
-
-
-
-### Maven依赖范围
-
-- **compile，**默认值，适用于所有阶段（开发、测试、部署、运行），本jar会一直存在所有阶段。
-- **provided，**只在开发、测试阶段使用，目的是不让Servlet容器和你本地仓库的jar包冲突 。如servlet.jar。
-- **runtime，**只在运行时使用，如JDBC驱动，适用运行和测试阶段。
-- **test，**只在测试时使用，用于编译和运行测试代码。不会随项目发布。
-- **system，**类似provided，需要显式提供包含依赖的jar，Maven不会在Repository中查找它。
-
-| 范围     |      |      |      |
-| -------- | ---- | ---- | ---- |
-| scope    | 编译 | 测试 | 运行 |
-| compile  | Y    | Y    | Y    |
-| test     |      | Y    |      |
-| provided | Y    | Y    |      |
-| runtime  |      | Y    | Y    |
-| system   | Y    | Y    |      |
