@@ -1,6 +1,6 @@
 ---
 icon: 
-title: ElasticSearch
+title: ElasticSearch笔记
 author: Draco
 time: 2021-05-07 20:06:38
 description: 
@@ -15,10 +15,11 @@ tags:
 
 ## 参考
 
-::: tips 参考
+::: tip 参考
 
 - [尚硅谷视频](https://www.bilibili.com/video/BV1hh411D7sb?from=search&seid=13278230873440832054)
 - [尚硅谷笔记](https://blog.csdn.net/u011863024/article/details/115721328)
+- [官方文档](https://www.elastic.co/guide/cn/elasticsearch/guide/current/index.html)
 
 :::
 
@@ -262,4 +263,10 @@ Lucene 是 Apache 软件基金会 Jakarta 项目组的一个子项目，提供�
 ### 集群搭建
 
 参考笔记
+
+
+
+
+
+## 面试题
 

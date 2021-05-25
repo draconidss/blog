@@ -106,7 +106,7 @@ module.exports = config({
           title: "面试",
           icon: "creative",
           prefix: "Interview/",
-          children: ["Java-Interview", "Computer-network", "OperatingSystem", "tencent-cloud-note", "字节测开面经"]
+          children: ["Java-Interview", "Computer-network", "OperatingSystem", "tencent-cloud-note"]
         },
         {
           title: "Java",
@@ -215,14 +215,14 @@ module.exports = config({
           title: "ElasticSearch",
           icon: "creative",
           prefix: "ElasticSearch/",
-          children: ["ElasticSearch"],
+          children: ["ElasticSearch", "ElasticSearch-Interview"],
         },
 
         {
           title: "Docker",
           icon: "creative",
           prefix: "Docker/",
-          children: ["", "Docker-Note", "Docker-deployment", "Docker-Install-software"],
+          children: ["Docker-Note", "Docker-deployment", "Docker-Install-software"],
         },
 
         {

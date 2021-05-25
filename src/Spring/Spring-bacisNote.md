@@ -17,9 +17,12 @@ tags:
 
 ## 参考
 
-> - 
+::: tip
 
+- [脑图参考](https://www.processon.com/mindmap/60abc60407912906fbcf50ba)
+- [脑图参考](https://my.oschina.net/u/3080373/blog/891918)
 
+:::
 
 
 
@@ -71,25 +74,25 @@ Spring 官⽹列出的 Spring 的 6 个特征:
 
 
 
-所有模块
-
 ![](./images/Spring-bacisNote/Spring_Framework_Runtime.jpg)
-
-
 
 
 
 七大模块
 
+![Spring的7个模块.png](https://image-1300566513.cos.ap-guangzhou.myqcloud.com/upload/images/20191227/9f2158a9b2056835f44a06fce30b91fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-![七大模块](./images/Spring-bacisNote/seven_module.jpg)
+
+![2、常用模块.png](https://image-1300566513.cos.ap-guangzhou.myqcloud.com/upload/images/20191227/206d8714bd3f0cf904af3c58ef8cd1a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
 
 
 
 ### 2.1 核心容器（Spring Core）
 
-　　Core模块是Spring的核心类库，Spring的所有功能都依赖于该类库，Core主要实现`IOC`功能，Spring的所有功能都是借助`IOC`实现的。核心容器提供Spring框架的基本功能。Spring以bean的方式组织和管理Java应用中的各个组件及其关系。Spring使用`BeanFactory`来产生和管理`Bean`，它是`工厂模式`的实现，并提供`依赖注入（Dependency Injection）`管理`Bean`容器功能。`BeanFactory`它提供对Factory模式的经典实现来消除对程序性`单例模式`的需要，并真正地允许你从程序逻辑中分离出`依赖关系和配置`。`BeanFactory`使用`控制反转(IoC)`模式将`应用的配置和依赖性规范`与`实际的应用程序代码`分开。
+Core模块是Spring的核心类库，Spring的所有功能都依赖于该类库，Core主要实现`IOC`功能，Spring的所有功能都是借助`IOC`实现的。核心容器提供Spring框架的基本功能。Spring以bean的方式组织和管理Java应用中的各个组件及其关系。Spring使用`BeanFactory`来产生和管理`Bean`，它是`工厂模式`的实现，并提供`依赖注入（Dependency Injection）`管理`Bean`容器功能。`BeanFactory`它提供对Factory模式的经典实现来消除对程序性`单例模式`的需要，并真正地允许你从程序逻辑中分离出`依赖关系和配置`。`BeanFactory`使用`控制反转(IoC)`模式将`应用的配置和依赖性规范`与`实际的应用程序代码`分开。
 
 
 
@@ -159,7 +162,7 @@ Web上下文模块建立在应用程序上下文模块之上，为基于web的�
 
 
 
-## 3. IoC（Inverse of Control：控制反转）| DC（Dependency Injection：依赖注入）
+## 3. IoC（控制反转）| DC（依赖注入）
 
 IoC（Inverse of Control:控制反转）是依赖倒置原则⼀种设计思想，就是把原先在代码里面需要实现的对象创建、对象之间的依赖，反转给Spring容器来帮忙实现。 IoC 在其他语⾔中也有应⽤，并⾮ Spring 特有。 IoC 容器是 Spring ⽤来实现 IoC 的载体， IoC 容器实际上就是个Map（key，value）,Map 中存放的是各种对象。 
 
@@ -940,7 +943,7 @@ Bean的完整生命周期经历了各种方法调用，这些方法可以划分�
 
 
 
- Controller类使用继承@Component注解的方法，将其以单例的形式放入spring容器，如果仔细看的话会发现每个注解里面都有一个默认的value()方法，它的作用是为当前的注解声明一个名字，一般默认为类名，然后spring会通过配置文件中的context:component-scan的配置，进行如下操作：
+Controller类使用继承@Component注解的方法，将其以单例的形式放入spring容器，如果仔细看的话会发现每个注解里面都有一个默认的value()方法，它的作用是为当前的注解声明一个名字，一般默认为类名，然后spring会通过配置文件中的context:component-scan的配置，进行如下操作：
 
 
 
