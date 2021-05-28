@@ -793,6 +793,7 @@ public class AppConfig {
 
 ::: tip 参考
 
+- https://www.zhihu.com/question/38597960
 - [Spring Bean的生命周期（非常详细）](https://www.cnblogs.com/zrtqsk/p/3735273.html)
 
 :::
