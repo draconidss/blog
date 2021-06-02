@@ -1268,6 +1268,10 @@ public class TestServiceImpl {
 
 
 
+
+
+
+
 ## SpringMVC工作流程
 
 ![Springmvc工作原理图](./images/Spring-bacisNote/Springmvc_working_principle_diagram.jpg)
@@ -1275,8 +1279,6 @@ public class TestServiceImpl {
 
 
 ::: info 流程详解
-
-
 
 1. 用户向服务端发送一次请求，这个请求会先到前端控制器`DispatcherServlet`(也叫中央控制器)。
 
@@ -1291,8 +1293,6 @@ public class TestServiceImpl {
 6. `DispatcherServlet`将模型数据填充到视图中
 
 7. `DispatcherServlet`将结果响应给用户
-
-
 
 :::
 

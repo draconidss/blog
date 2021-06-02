@@ -517,5 +517,17 @@ http协议报文
 
 
 
+### 转发和重定向区别
+
+::: tip 
+
+- [转发和重定向区别](https://blog.csdn.net/weixin_40001125/article/details/88663468)
+
+:::
+
+
+
+
+
 ### cookie和session区别
 
