@@ -136,6 +136,13 @@ module.exports = config({
         },
 
         {
+          title: "Golang",
+          icon: "creative",
+          prefix: "Golang/",
+          children: ["Golang-description&use", "Golang-basic"]
+        },
+
+        {
           title: "数据库",
           icon: "creative",
           prefix: "database/",
