@@ -63,7 +63,7 @@ Java多线程，皆始于Thread。Thread是多线程的根，每一个线程的�
 
 ### 第一种：继承Thread类创建线程
 
-​	Thread类本质上是实现了Runnable接口的一个实例，代表一个线程的实例。启动线程的唯一方法就是通过Thread类的start()实例方法。start()方法是一个native方法，它将启动一个新线程，并执行run()方法。这种方式实现多线程很简单，通过自己的类直接extend Thread，并复写run()方法，就可以启动新线程并执行自己定义的run()方法。例如：
+Thread类本质上是实现了Runnable接口的一个实例，代表一个线程的实例。启动线程的唯一方法就是通过Thread类的start()实例方法。start()方法是一个native方法，它将启动一个新线程，并执行run()方法。这种方式实现多线程很简单，通过自己的类直接extend Thread，并复写run()方法，就可以启动新线程并执行自己定义的run()方法。例如：
 
 ```java
 public class MyThread extends Thread {  
@@ -83,13 +83,47 @@ myThread2.start();
 
 需要注意的是继承Thread方式，target对象为null，重写了run方法，导致方式1中的Thread原生的run方法失效，因此并不会调用到target.run()的逻辑，而是直接调用子类重写的run方法。
 
-因为java是单根继承，此方式一般不常用。
+
+
+`Thread`里面的`run()`方法
+
+```java
+@Override
+public void run() {
+    if (target != null) {
+        target.run();
+    }
+}
+```
+
+总体来说分两种情况
+
+- **直接使用Thread**：在new时可以指定`Runnable`接口类型的构造参数`target`，如果有则调用`target`的run方法，如果没有则调用默认的（即什么都不干）或自己重写的run方法
+- **通过继承Thread**：没有对应构造器，所以`target`为`null`，所以会调用默认的`run()`方法或调用重写的`run()`方法
+
+
+
+
+
+> 因为java是单根继承，此方式一般不常用。
 
 
 
 ### 第二种：实现Runnable接口
 
-实现run方法，接口的实现类的实例作为**Thread**的**target**作为参数传入带参的**Thread**构造函数，通过调用**start()**方法启动线程。适用于已经有继承的父类无法继承Thread类的时候
+
+
+Runnable接口只有一个无返回值的run方法
+
+```java
+public interface Runnable {
+    public abstract void run();
+}
+```
+
+
+
+实现run方法，接口的实现类的实例作为`Thread`的`target`作为参数传入带参的`Thread`构造函数，通过调用`start()`方法启动线程。适用于已经有继承的父类无法继承Thread类的时候
 
 ```java
 public class ThreadDemo02 {
@@ -100,7 +134,8 @@ public class ThreadDemo02 {
         t1.start(); 
     }
 }
- 
+
+
 class MyThread implements Runnable{
     @Override
     public void run() {
@@ -110,7 +145,9 @@ class MyThread implements Runnable{
 }
 ```
 
-是较常用且最本质实现。此构造方法相当于对Runnable实例进行一层包装，在`线程t`启动时，调用Thread的run方法从而间接调用target.run()：
+
+
+是较常用且最本质实现。此构造方法相当于对`Runnable`实例进行一层包装，在`线程t`启动时，调用`Thread`的`run`方法从而间接调用`target.run()`：
 
 ```java
 public class Thread implements Runnable {
@@ -132,10 +169,40 @@ public class Thread implements Runnable {
 
 ### 第三种：实现Callable接口通过FutureTask包装器来创建Thread线程
 
-- 创建Callable接口的实现类 ，并实现Call方法 
-- 创建Callable实现类的实现，使用FutureTask类包装Callable对象，该FutureTask对象封装了Callable对象的Call方法的返回值 
+::: tip 参考
+
+- https://blog.csdn.net/yucaixiang/article/details/89241435
+- https://blog.csdn.net/ghsau/article/details/7451464
+- https://blog.csdn.net/javazejian/article/details/50896505
+
+:::
+
+
+
+Callable接口相对于Runnable接口无返回值的run方法，是有返回值的run方法，通过泛型指定返回的类型
+
+```java
+public interface Callable<V> {
+    /**
+     * Computes a result, or throws an exception if unable to do so.
+     *
+     * @return computed result
+     * @throws Exception if unable to compute a result
+     */
+    V call() throws Exception;
+}
+```
+
+
+
+
+
+FutureTask可用于`异步获取执行结果`或`取消执行任务`的场景
+
+- 创建`Callable`接口的实现类 ，并实现`Call`方法 
+- 创建`Callable`实现类的实现，使用`FutureTask`类包装`Callable`对象，该`FutureTask`对象封装了Callable对象的Call方法的返回值 
 - 使用FutureTask对象作为Thread对象的target创建并启动线程 
-- 调用FutureTask对象的get()来获取子线程执行结束的返回值
+- 调用FutureTask对象的get()来获取子线程执行结束的返回值（get方法是阻塞的，可以设定阻塞时间，没获取到则返回null）
 
 ```java
 public class DemoCallable implements Callable<String>{
@@ -157,9 +224,42 @@ public class DemoCallable implements Callable<String>{
 }
 ```
 
-这个方法里，明明没有看到run方法，没有看到Runnable，为什么说本质也是实现Runnable接口呢？
 
-回看开篇的类图，`FutureTask`实现了`RunnableFuture`，`RunnableFuture`则实现了`Runnable`和`Future`两个接口。因此构造Thread时，`FutureTask`还是被转型为`Runnable`使用。**因此其本质还是实现Runnable接口。**
+
+另外，FutrueTask的构造器除了接收Callable外，还有接收`Runnable`和`返回类型result`：
+
+```java
+public FutureTask(Runnable runnable, V result) {
+    this.callable = Executors.callable(runnable, result);
+    this.state = NEW;       // ensure visibility of callable
+}
+```
+
+
+
+Future接口方法
+
+```java
+public interface Future<V> {
+    boolean cancel(boolean mayInterruptIfRunning);
+    boolean isCancelled();
+    boolean isDone();
+    V get() throws InterruptedException, ExecutionException;
+    V get(long timeout, TimeUnit unit) throws InterruptedException, ExecutionException, TimeoutException;
+}
+```
+
+
+
+- **V get()** ：获取异步执行的结果，如果没有结果可用，此方法会阻塞直到异步计算完成。
+- **V get(Long timeout , TimeUnit unit)** ：获取异步执行结果，如果没有结果可用，此方法会阻塞，但是会有时间限制，如果阻塞时间超过设定的timeout时间，该方法将抛出异常。
+- **boolean isDone()** ：如果任务执行结束，无论是正常结束或是中途取消还是发生异常，都返回true。
+- **boolean isCanceller()** ：如果任务完成前被取消，则返回true。
+- **boolean cancel(boolean mayInterruptRunning)** ：如果任务还没开始，执行cancel(...)方法将返回false；如果任务已经启动，执行cancel(true)方法将以中断执行此任务线程的方式来试图停止任务，如果停止成功，返回true；当任务已经启动，执行cancel(false)方法将不会对正在执行的任务线程产生影响(让线程正常执行到完成)，此时返回false；当任务已经完成，执行cancel(...)方法将返回false。mayInterruptRunning参数表示是否中断执行中的线程。
+  通过方法分析我们也知道实际上Future提供了3种功能：
+  1. 能够中断执行中的任务
+  2. 判断任务是否执行完成
+  3. 获取任务执行完成后的结果。
 
 
 
@@ -170,12 +270,13 @@ public class DemoCallable implements Callable<String>{
 ExecutorService、Callable都是属于Executor框架。返回结果的线程是在JDK1.5中引入的新特征，还有Future接口也是属于这个框架，有了这种特征得到返回值就很方便了。 
 通过分析可以知道，他同样也是实现了Callable接口，实现了Call方法，所以有返回值。这也就是正好符合了前面所说的两种分类
 
-执行Callable任务后，可以获取一个Future的对象，在该对象上调用get就可以获取到Callable任务返回的Object了。get方法是阻塞的，即：线程无返回结果，get方法会一直等待。
+通过`submit()`（execute()方法无返回值）方法执行Callable任务后，可以获取一个Future的返回对象，在该对象上调用get就可以获取到Callable任务返回的Object了。get方法是阻塞的，即：线程无返回结果，get方法会一直等待。
 
 ```java
 public class ThreadDemo05{
  
-    private static int POOL_NUM = 10;     //线程池数量
+    //线程池数量
+    private static int POOL_NUM = 10;     
  
     /**
      * @param args
@@ -183,13 +284,17 @@ public class ThreadDemo05{
      */
     public static void main(String[] args) throws InterruptedException {
         // TODO Auto-generated method stub
-        ExecutorService executorService = Executors.newFixedThreadPool(5);  
+        ExecutorService executorService = Executors.newFixedThreadPool(5);
         for(int i = 0; i<POOL_NUM; i++)  
         {  
             RunnableThread thread = new RunnableThread();
  
             //Thread.sleep(1000);
-            executorService.execute(thread);  
+            //无返回值
+            /executorService.execute(thread);
+            
+            //有返回值
+            Future<String> future = executorService.submit(thread);  
         }
         //关闭线程池
         executorService.shutdown(); 
@@ -197,16 +302,25 @@ public class ThreadDemo05{
  
 }
  
-class RunnableThread implements Runnable  
+class RunnableThread implements Callable<String>  
 {     
     @Override
-    public void run()  
+    public void call()  
     {  
-        System.out.println("通过线程池方式创建的线程：" + Thread.currentThread().getName() + " ");  
+        System.out.println("通过线程池方式创建的线程：" + Thread.currentThread().getName() + " ");
+        return "线程结束后的返回值：" + Thread.currentThread().getName() + " ";
  
     }  
 }  
 ```
+
+
+
+### Future | FutureTask
+
+
+
+
 
 
 
@@ -233,7 +347,7 @@ class RunnableThread implements Runnable
 ### 一些概念
 
 - Java多线程，皆始于Thread。Thread是多线程的根，每一个线程的开启都始于Thread的start()方法。
-- start方法调用结束并不意味着相应的线程已经开始运行，**运行时间有线程调度器决定**
+- start方法调用结束并不意味着相应的线程已经开始运行，运行时间有`线程调度器`决定
 - 线程属于“一次性用品”,我们不能通过重新调用一个已经运行结束的线程的`start`方法来使其重新运行。事实上, start方法也只能够被调用一次,多次调用同一个 Thread实例的start方法会导致其抛出`IllegalThreadState Exception`异常。
 
 
@@ -393,12 +507,12 @@ Thread类的run方法的这种处理逻辑决定了创建线程的两种方式:
 | void run()                         | 线程的任务处理逻辑                                           | 该方法是由Java虚拟机直接调用的，一般情况下应用程序不应该调用该方法 |
 | void start()                       | 启动线程                                                     | 该方法的返回并不代表相应的线程已经被启动；一个Thread实例的start方法  只能够被调用一次，多次调用会抛出异常 |
 | void join()                        | 等待线程运行结束                                             | 线程A调用线程B的join方法，那么线程A的运行会被暂停，直到线程B运行结束 |
-| static void     yield()            | 使当前线程主动放弃其对处理器的占用，这可 能导致当前线程被暂停 | 这个方法是不可靠的，该方法被调用时当前线程可能仍然继续运行(视系统当  前的运行状况而定)  。会使线程为READY状态 |
+| static void     yield()            | 使当前线程主动放弃其对处理器的占用，这可 能导致当前线程被暂停 | 这个方法是不可靠的，该方法被调用时当前线程可能仍然继续运行(视系统当前的运行状况而定)  。会使线程为READY状态 |
 | static void     sleep(long millis) | 使当前线程休眠(暂停运行)指定的时间                           |                                                              |
 | isAlive()                          | 判断线程是否处于活动状态                                     | 线程调用start后，即处于活动状态                              |
 | interrupt()                        | 中断线程                                                     |                                                              |
-| wait()                             | 导致线程等待，进入堵塞状态。                                 | 该方法要在同步方法或者同步代码块中才使用的                   |
-| notify()                           | 唤醒当前线程，进入运行状态                                   | 该方法要在同步方法或者同步代码块中才使用的                   |
+| wait()                             | 导致线程等待，进入堵塞状态。释放锁。                         | 该方法要在同步方法或者同步代码块中才使用的                   |
+| notify()                           | 唤醒当前线程，进入运行状态。不释放锁。                       | 该方法要在同步方法或者同步代码块中才使用的                   |
 | notifyAll()                        | 唤醒所有等待的线程。                                         | 该方法要在同步方法或者同步代码块中才使用的                   |
 
 
@@ -676,8 +790,6 @@ store(index,r1); /指令③:将奇存器r1的内容写入变量index所对应的
 ## 线程安全性
 
 
-
-### 定义
 
 一般而言，如果一个类在单线程环境下能够运作正常，并且在多线程环境下，如果使用方不必做任何改变的情况下也能运作正常， 那么我们就称其是线程安全的，相应地我们称这个类具有线程安全性。
 
@@ -1189,7 +1301,7 @@ LockSupport.park()
 
 ### 资源调度策略
 
-​	资源调度的一种常见策略就是`排队`。`资源调度器`内部维护一个`等待队列`，在存在资源争用的情况下， `申请失败的线程`会被存入该队列。通常，被存入等待队列的线程会被暂停。当相应的资源被其持有线程释放时， 等待队列中的一个线程会被选中并被唤醒而获得再次申请资源的机会。 被唤醒的线程如果申请到资源的独占权，那么该线程会从等待队列中移除； 否则，该线程仍然会停留在等待队列中等待再次申请的机会，即该线程会再次被暂停。 因此，等待队列中的等待线程可能经历若干次暂停与唤醒才获得相应资源的独占权。可见，资源的调度可能导致上下文切换。
+资源调度的一种常见策略就是`排队`。`资源调度器`内部维护一个`等待队列`，在存在资源争用的情况下， `申请失败的线程`会被存入该队列。通常，被存入等待队列的线程会被暂停。当相应的资源被其持有线程释放时， 等待队列中的一个线程会被选中并被唤醒而获得再次申请资源的机会。 被唤醒的线程如果申请到资源的独占权，那么该线程会从等待队列中移除； 否则，该线程仍然会停留在等待队列中等待再次申请的机会，即该线程会再次被暂停。 因此，等待队列中的等待线程可能经历若干次暂停与唤醒才获得相应资源的独占权。可见，资源的调度可能导致上下文切换。
 
 
 

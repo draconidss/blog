@@ -16,6 +16,40 @@ tags:
 
 ### 最长回文子串
 
+`中心扩展`
+
+```java
+/*中心扩展*/
+public static String longestPalindrome_expandCenter(String s) {
+    int maxLen = 0;
+    int begin = 0;
+    if (s.length() < 2) {
+        return s;
+    }
+    for (int i = 0; i < s.length(); i++) {
+        //比较两种方式的最大值
+        int len = Math.max(expandAroundCenter(s, i, i), expandAroundCenter(s, i, i + 1));
+        if (len > maxLen) {
+            //赋值给索引begin
+            begin = i - (len - 1) / 2;
+            //赋值给回文串最大长度
+            maxLen = len;
+        }
+    }
+    return s.substring(begin, begin + maxLen);
+}
+
+public static int expandAroundCenter(String s, int left, int right) {
+    while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
+        left--;
+        right++;
+    }
+    return right - left - 1;
+}
+```
+
+
+
 `动态规划`
 
 ```java
@@ -57,17 +91,28 @@ tags:
 `滑动窗口`
 
 ```java
+//滑动窗口
 public static int lengthOfLongestSubstring(String s) {
     Map<Character, Integer> map = new HashMap<>();
+    String maxStr = "";
     int max = 0, start = 0;
     for (int end = 0; end < s.length(); end++) {
         char ch = s.charAt(end);
+        //找到上一次该字符被遍历时的下标的后一个位置，与现在的start作比较
+        //如果map.get(ch)+1 < start,在窗口之前，则还是原来的start
+        //如果map.get(ch)+1 = start,则说明在start的前一个，则还是start还是不变
+        //如果map.get(ch)+1 > start,则说明在start的后面，那么窗口就得左边收缩到遍历到的该位置即
         if (map.containsKey(ch)){
             start = Math.max(map.get(ch)+1, start);
         }
-        max = Math.max(max,end - start + 1);
+
+        if(max < end - start + 1){
+            max = end - start + 1;
+            maxStr = s.substring(start, end + 1);
+        }
         map.put(ch,end);
     }
+    System.out.println("最长无重复字符最长子串：" + maxStr);
     return max;
 }
 ```
@@ -78,42 +123,42 @@ public static int lengthOfLongestSubstring(String s) {
 
 ```java
 public ListNode reverseKGroup(ListNode head, int k) {
-        ListNode dummy = new ListNode(0);
-        dummy.next = head;
+    ListNode dummy = new ListNode(0);
+    dummy.next = head;
 
-        ListNode pre = dummy;
-        ListNode end = dummy;
+    ListNode pre = dummy;
+    ListNode end = dummy;
 
-        while (end.next != null) {
-            for (int i = 0; i < k && end != null; i++){
-                end = end.next;
-            }
-            if (end == null){
-                break;
-            }
-            ListNode start = pre.next;
-            ListNode next = end.next;
-            end.next = null;
-            pre.next = reverse(start);
-            start.next = next;
-            pre = start;
-
-            end = pre;
+    while (end.next != null) {
+        for (int i = 0; i < k && end != null; i++){
+            end = end.next;
         }
-        return dummy.next;
-    }
-
-    private ListNode reverse(ListNode head) {
-        ListNode pre = null;
-        ListNode curr = head;
-        while (curr != null) {
-            ListNode next = curr.next;
-            curr.next = pre;
-            pre = curr;
-            curr = next;
+        if (end == null){
+            break;
         }
-        return pre;
+        ListNode start = pre.next;
+        ListNode next = end.next;
+        end.next = null;
+        pre.next = reverse(start);
+        start.next = next;
+        pre = start;
+
+        end = pre;
     }
+    return dummy.next;
+}
+
+private ListNode reverse(ListNode head) {
+    ListNode pre = null;
+    ListNode curr = head;
+    while (curr != null) {
+        ListNode next = curr.next;
+        curr.next = pre;
+        pre = curr;
+        curr = next;
+    }
+    return pre;
+}
 ```
 
 
@@ -314,6 +359,8 @@ class Solution {
 
 ### 相交链表
 
+`使用Set`
+
 ```java
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
@@ -334,6 +381,157 @@ public class Solution {
     }
 }
 ```
+
+
+
+`使用双指针`
+
+```java
+public class Solution {
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        if (headA == null || headB == null) {
+            return null;
+        }
+        ListNode pA = headA, pB = headB;
+        while (pA != pB) {
+            pA = pA == null ? headB : pA.next;
+            pB = pB == null ? headA : pB.next;
+        }
+        return pA;
+    }
+}
+
+作者：LeetCode-Solution
+链接：https://leetcode-cn.com/problems/intersection-of-two-linked-lists/solution/xiang-jiao-lian-biao-by-leetcode-solutio-a8jn/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+```
+
+
+
+
+
+### Z字遍历二叉树
+
+```java
+public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+    List<List<Integer>> lists = new ArrayList<>();
+    zigzagLevelOrder(lists, root, 0);
+    return lists;
+}
+
+public void zigzagLevelOrder(List<List<Integer>> lists, TreeNode node, int floor){
+    if(Objects.isNull(node)){
+        return ;
+    }
+    //传递过来floor（从0开始）值等于链表个数（层数）时，说明是还未开始遍历的层，就新添加一个链表
+    //否则，说明已经创建好该层的链表，直接插入即可
+    //这里不能用小于等于，因为进入左节点后增加一个链表后，同层的右结点的floor小于size会又创建一个链表
+    if(floor == lists.size()){
+        lists.add(new LinkedList<>());
+    }
+
+    //使用链表来添加每层的元素
+    LinkedList<Integer> subList = (LinkedList<Integer>) lists.get(floor);
+
+    //从层数0开始，如果奇数层（从右往左遍历）则该层每个元素使用头插法，如果是偶数层则相反
+    if(floor % 2  == 1){
+        subList.addFirst(node.val);
+    }else {
+        subList.addLast(node.val);
+    }
+
+    //递归继续遍历左节点
+    zigzagLevelOrder(lists, node.left, floor + 1);
+    //递归继续遍历右结点
+    zigzagLevelOrder(lists, node.right, floor + 1);
+}
+```
+
+
+
+### 构建 | 反转 | 层序遍历 二叉树
+
+```java
+public class TreeTest {
+
+    //递归反转二叉树
+    public static TreeNode treeReserve(TreeNode root){
+        if(Objects.isNull(root)){
+            return root;
+        }
+
+        TreeNode temp = root.left;
+        root.left = treeReserve(root.right);
+        root.right = treeReserve(temp);
+
+        return root;
+    }
+
+    //数组 -> 二叉树 [1, 2, 3, 4, 5, 6, 7] ->
+    public static TreeNode arrToTree(int[] arr, int index){
+
+        if(index >= arr.length){
+            return null;
+        }
+
+        TreeNode root = null;
+        int value = arr[index];
+        root = new TreeNode(value);
+
+        root.left = arrToTree(arr, 2 * index + 1);
+        root.right = arrToTree(arr, 2 * index + 2);
+
+
+        return root;
+    }
+
+    //二叉树转数组
+    public static void treeToArr(TreeNode root){
+
+        if(Objects.isNull(root)){
+            return;
+        }
+
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()){
+            TreeNode treeNode = queue.poll();
+            System.out.println(treeNode.val);
+            if(!Objects.isNull(treeNode.left)){
+                queue.offer(treeNode.left);
+            }
+
+            if(!Objects.isNull(treeNode.right)){
+                queue.offer(treeNode.right);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        //数组构建二叉树
+        int[] arr = {1, 2, 3, 4, 5, 6, 7};
+        System.out.println("构建二叉树");
+        TreeNode treeNode = arrToTree(arr, 0);
+        System.out.println(treeNode);
+
+
+
+        //反转二叉树
+        System.out.println("反转二叉树");
+        System.out.println(treeReserve(treeNode));
+
+
+        //层序遍历
+        System.out.println("层序遍历");
+        treeToArr(treeNode);
+
+    }
+}
+
+```
+
+
 
 
 
