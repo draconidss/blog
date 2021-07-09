@@ -121,6 +121,26 @@ public static int lengthOfLongestSubstring(String s) {
 
 ### K个一组翻转链表
 
+::: tip
+
+https://leetcode-cn.com/problems/reverse-nodes-in-k-group/solution/tu-jie-kge-yi-zu-fan-zhuan-lian-biao-by-user7208t/
+
+:::
+
+
+
+- 链表分区为已翻转部分+待翻转部分+未翻转部分
+- 每次翻转前，要确定翻转链表的范围，这个必须通过 k 此循环来确定
+- 需记录翻转链表前驱和后继，方便翻转完成后把已翻转部分和未翻转部分连接起来
+- 初始需要两个变量 pre 和 end，pre 代表待翻转链表的前驱，end 代表待翻转链表的末尾
+- 经过k此循环，end 到达末尾，记录待翻转链表的后继 next = end.next
+- 翻转链表，然后将三部分链表连接起来，然后重置 pre 和 end 指针，然后进入下一次循环
+- 特殊情况，当翻转部分长度不足 k 时，在定位 end 完成后，end==null，已经到达末尾，说明题目已完成，直接返回即可
+- 时间复杂度为 O(n*K)O(n∗K) 最好的情况为 O(n)O(n) 最差的情况未 O(n^2)O(n2)
+- 空间复杂度为 O(1)O(1) 除了几个必须的节点指针外，我们并没有占用其他空间
+
+
+
 ```java
 public ListNode reverseKGroup(ListNode head, int k) {
     ListNode dummy = new ListNode(0);
@@ -142,7 +162,6 @@ public ListNode reverseKGroup(ListNode head, int k) {
         pre.next = reverse(start);
         start.next = next;
         pre = start;
-
         end = pre;
     }
     return dummy.next;
@@ -530,6 +549,219 @@ public class TreeTest {
 }
 
 ```
+
+
+
+
+
+### 合并二叉树
+
+可以使用深度优先搜索合并两个二叉树。从根节点开始同时遍历两个二叉树，并将对应的节点进行合并。
+
+两个二叉树的对应节点可能存在以下三种情况，对于每种情况使用不同的合并方式。
+
+如果两个二叉树的对应节点都为空，则合并后的二叉树的对应节点也为空；
+
+如果两个二叉树的对应节点只有一个为空，则合并后的二叉树的对应节点为其中的非空节点；
+
+如果两个二叉树的对应节点都不为空，则合并后的二叉树的对应节点的值为两个二叉树的对应节点的值之和，此时需要显性合并两个节点。
+
+对一个节点进行合并之后，还要对该节点的左右子树分别进行合并。这是一个递归的过程。
+
+
+
+```java
+class Solution {
+    public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
+        if (t1 == null) {
+            return t2;
+        }
+        if (t2 == null) {
+            return t1;
+        }
+        TreeNode merged = new TreeNode(t1.val + t2.val);
+        merged.left = mergeTrees(t1.left, t2.left);
+        merged.right = mergeTrees(t1.right, t2.right);
+        return merged;
+    }
+}
+```
+
+
+
+### 回文链表
+
+```java
+//2. 使用递归遍历到最后一个时，和递归外的从头开始的指针不断比较，相当于前后比较
+public Boolean isPalindrome_recursion(ListNode listNode){
+    ListNode front = listNode;
+    return checkPalindrome(listNode, front);
+}
+
+//递归
+public Boolean checkPalindrome(ListNode listNode, ListNode front){
+    if(!Objects.isNull(listNode)){
+        //如果有一个不符合就不断返回false
+        if(!checkPalindrome(listNode.next, front)){
+            return false;
+        }
+        if(front.val != listNode.val){
+            return false;
+        }
+    }
+    front = front.next;
+    return true;
+}
+```
+
+
+
+### 前序和后续遍历构建二叉树
+
+::: tip 参考
+
+[参考](https://leetcode-cn.com/problems/zhong-jian-er-cha-shu-lcof/solution/mian-shi-ti-07-zhong-jian-er-cha-shu-di-gui-fa-qin/)
+
+:::
+
+```java
+public class 剑指Offer07_重建二叉树 {
+    static int[] preorder = {3, 9, 20, 15, 7};
+    static int[] inorder = {9, 3, 15, 20, 7};
+    static HashMap<Integer, Integer> map = new HashMap<>();
+
+
+    static class TreeNode {
+        int val;
+        TreeNode left = null;
+        TreeNode right = null;
+
+        TreeNode(int x) {
+            val = x;
+        }
+    }
+
+
+    public static TreeNode rebuilderTree() {
+
+        for (int i = 0; i < inorder.length; i++) {
+            map.put(inorder[i], i);
+        }
+        return recur(0, 0, inorder.length - 1);
+
+    }
+
+    public static TreeNode recur(int pre_root, int in_left, int in_right) {
+        if (in_left > in_right) {
+            return null;
+        }
+
+        TreeNode treeNode = new TreeNode(preorder[pre_root]);
+        int in_idx = map.get(preorder[pre_root]);
+        treeNode.left = recur(pre_root + 1, in_left, in_idx - 1);
+        treeNode.right = recur(pre_root + (in_idx - in_left) + 1, in_idx + 1, in_right);
+        return treeNode;
+
+    }
+}
+```
+
+
+
+### 全排列
+
+```java
+class Solution {
+    public List<List<Integer>> permute(int[] nums) {
+
+        List<List<Integer>> res = new ArrayList<>();
+        int[] visited = new int[nums.length];
+        backtrack(res, nums, new ArrayList<Integer>(), visited);
+        return res;
+
+    }
+
+    private void backtrack(List<List<Integer>> res, int[] nums, ArrayList<Integer> tmp, int[] visited) {
+        if (tmp.size() == nums.length) {
+            res.add(new ArrayList<>(tmp));
+            return;
+        }
+        for (int i = 0; i < nums.length; i++) {
+            if (visited[i] == 1) continue;
+            visited[i] = 1;
+            tmp.add(nums[i]);
+            backtrack(res, nums, tmp, visited);
+            visited[i] = 0;
+            tmp.remove(tmp.size() - 1);
+        }
+    }
+}
+```
+
+
+
+### 排序链表
+
+```java
+class Solution {
+    public ListNode sortList(ListNode head) {
+        return sortList(head, null);
+    }
+
+    public ListNode sortList(ListNode head, ListNode tail) {
+        if (head == null) {
+            return head;
+        }
+        if (head.next == tail) {
+            head.next = null;
+            return head;
+        }
+        ListNode slow = head, fast = head;
+        while (fast != tail) {
+            slow = slow.next;
+            fast = fast.next;
+            if (fast != tail) {
+                fast = fast.next;
+            }
+        }
+        ListNode mid = slow;
+        ListNode list1 = sortList(head, mid);
+        ListNode list2 = sortList(mid, tail);
+        ListNode sorted = merge(list1, list2);
+        return sorted;
+    }
+
+    public ListNode merge(ListNode head1, ListNode head2) {
+        ListNode dummyHead = new ListNode(0);
+        ListNode temp = dummyHead, temp1 = head1, temp2 = head2;
+        while (temp1 != null && temp2 != null) {
+            if (temp1.val <= temp2.val) {
+                temp.next = temp1;
+                temp1 = temp1.next;
+            } else {
+                temp.next = temp2;
+                temp2 = temp2.next;
+            }
+            temp = temp.next;
+        }
+        if (temp1 != null) {
+            temp.next = temp1;
+        } else if (temp2 != null) {
+            temp.next = temp2;
+        }
+        return dummyHead.next;
+    }
+}
+
+作者：LeetCode-Solution
+链接：https://leetcode-cn.com/problems/sort-list/solution/pai-xu-lian-biao-by-leetcode-solution/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+```
+
+
+
+
 
 
 
