@@ -9,4 +9,7 @@ comment: false
 
 
 
-![about](./about.jpg)
+![about](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/about/about.jpg)
+
+
+
