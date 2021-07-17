@@ -58,7 +58,7 @@ module.exports = config({
 
 
   themeConfig: {
-    logo: "https://cdn.jsdelivr.net/gh/lifealsoisgg/static-blog@gh-pages/logo.png",
+    logo: "https://cdn.jsdelivr.net/gh/lifealsoisgg/Blog@gh-pages/logo.png",
     baseLang: "zh-CN",
     sidebarDisplay: "mobile",
     sidebar: "auto",
