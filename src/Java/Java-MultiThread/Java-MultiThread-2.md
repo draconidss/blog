@@ -1,6 +1,6 @@
 ---
 icon: 
-title: Java-多线程-2
+title: Java多线程-2
 author: Draco
 time: 2021-08-04 21:18:29
 description: 
@@ -122,7 +122,7 @@ void methodB() {
 
 ## Sychronized（内部锁）
 
-Java平台中的任何一个对象都有唯一一个与之关联的锁。 这种锁被称为``监视器 (Monitor) `或者`内部锁 (Intrinsic Lock)``。内部锁是一种``排他锁``，它能够保障
+Java平台中的任何一个对象都有唯一一个与之关联的锁。 这种锁被称为``监视器 (Monitor)``或者``内部锁 (Intrinsic Lock)``。内部锁是一种``排他锁``，它能够保障
 
 - 原子性
 - 可见性
@@ -188,7 +188,7 @@ public class SynchronizedMethodExample {
 
 ### 内部锁的调度
 
-Java虚拟机会为每个内部锁分配一个``入口集(Entry Set)``， 用于记录等待获得相应内部锁的线程。
+Java虚拟机会为每个内部锁分配一个``入口集(Entry List)``， 用于记录等待获得相应内部锁的线程。
 
 多个线程申请同一个锁的时候，只有一个申请者能够成为该锁的持有线程（即申请锁的操作成功）， 而其他申请者的申请操作会失败。 这些申请失败的线程并不会抛出异常， 而是会被暂停（生命周期状态变为`BLOCKED`) 并被存入相应锁的入口集中等待再次申请锁的机会。 
 
@@ -202,3 +202,24 @@ Java虚拟机会为每个内部锁分配一个``入口集(Entry Set)``， 用于
 
 ## Lock接口（显示锁）
 
+jdk1.5引入的排他锁，其作用于内部锁相同， 但是它提供了一些内部锁所不具备的特性。显示锁是`java.util.concurrent.locks.Lock`接口的实例，``java.util.concurrent.locks.Lock`是它的默认实现类
+
+
+
+### 常用方法
+
+|                          |                                      |
+| ------------------------ | ------------------------------------ |
+| void lock()              | 获取锁                               |
+| void lockInterruptibly() | 如果当前线程未被中断，则获取锁       |
+| newCondition()           | 返回绑定到此Lock实例的新Conditon实例 |
+|                          |                                      |
+|                          |                                      |
+|                          |                                      |
+
+void lock() 获取锁
+void lockInterruptibly() 如果当前线程未被中断，则获取锁
+newCondition() 返回绑定到此Lock实例的新Conditon实例
+tryLock() 仅在调试时锁为空闲状态才获取锁
+tryLock(long time, TimeUnit uinit) 如果说在给定的时间空闲，并且当前线程未被中断，则获取锁
+unlock() 释放锁

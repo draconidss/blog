@@ -117,7 +117,7 @@ module.exports = config({
               title: "Java-多线程",
               icon: "",
               prefix: "Java-MultiThread/",
-              children: ["", "Java-MultiThread-1", "Java-MultiThread"]
+              children: ["", "Java-MultiThread-1", "Java-MultiThread-2", "Java-MultiThread-keyword","Java-MultiThread"]
           }, 
             {
               title: "Java-JVM",
