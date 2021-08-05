@@ -240,17 +240,24 @@ module.exports = config({
         },
 
         {
-          title: "前端",
-          icon: "creative",
-          prefix: "front-end/",
-          children: ["", "JavaScript-Interview", "Promise_Asynchronous_call"],
-        },
-
-        {
           title: "错误笔记",
           icon: "creative",
           prefix: "Error/",
           children: ["Springboot-Error"],
+        },
+
+        {
+          title: "Github",
+          icon: "creative",
+          prefix: "Git/",
+          children: ["Git"],
+        },
+
+        {
+          title: "前端",
+          icon: "creative",
+          prefix: "front-end/",
+          children: ["", "JavaScript-Interview", "Promise_Asynchronous_call"],
         },
 
         {

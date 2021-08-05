@@ -16,9 +16,9 @@ project:
     link: My-Project
 
   - type: link
-    name: 学习笔记
-    desc: 学习笔记目录
-    link: category/学习笔记/
+    name: Java全栈知识体系
+    desc: Java全栈知识体系
+    link: https://www.pdai.tech/
 
   - type: book
     name: book name
