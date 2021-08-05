@@ -2,10 +2,10 @@
 blog: true
 home : true
 icon: home
-heroImage: https://cdn.jsdelivr.net/gh/lifealsoisgg/Blog@gh-pages/heroImage.png
+heroImage: https://blog-1300186248.cos.ap-shanghai.myqcloud.com/about/heroImage.png
 heroText: Draco's Blog
 tagline: We found hope in hopeless place
-bgImage: https://cdn.jsdelivr.net/gh/lifealsoisgg/Blog@gh-pages/bgImage.jpg
+bgImage: https://blog-1300186248.cos.ap-shanghai.myqcloud.com/about/bgImage.jpg
 bgImageStyle: {
   height: '600px'
 }
