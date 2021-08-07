@@ -2,7 +2,7 @@ const { config } = require("vuepress-theme-hope");
 
 module.exports = config({
   title: "Draco's Blog",
-  description: "We found hope in hopeless place",
+  description: "This time I will not be silent",
 
   base: "",
 
@@ -71,9 +71,9 @@ module.exports = config({
         icon: "note",
       },
       {
-        text: "学习笔记",
-        link: "/category/学习笔记/",
-        icon: "note",
+        text: "学习路线",
+        link: "/study-line/",
+        icon: "info",
       },
       {
         text: "时间线",
@@ -95,6 +95,7 @@ module.exports = config({
 
     sidebar: {
       "/": [
+        "study-line",
         {
           title: "My-Project",
           icon: "creative",
