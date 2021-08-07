@@ -122,6 +122,20 @@ void methodB() {
 
 ## Sychronized（内部锁）
 
+
+
+### 参考
+
+- [关键字: synchronized详解](https://www.pdai.tech/md/java/thread/java-thread-x-key-synchronized.html)
+- [jvm：ObjectMonitor源码](https://blog.csdn.net/zwjyyy1203/article/details/106217887)
+- [Java并发基石——所谓“阻塞”：Object Monitor和AQS（1）](https://blog.csdn.net/yinwenjie/article/details/84922958)
+
+
+
+
+
+### 简介
+
 Java平台中的任何一个对象都有唯一一个与之关联的锁。 这种锁被称为``监视器 (Monitor)``或者``内部锁 (Intrinsic Lock)``。内部锁是一种``排他锁``，它能够保障
 
 - 原子性
@@ -134,10 +148,14 @@ Java平台中的任何一个对象都有唯一一个与之关联的锁。 这种
 
 ### 使用方法
 
-- synchronized 关键字修饰的方法就被称为同步方法(SynchronizedMethod) 
-- synchronized修饰的静态方法就被称为同步静态方法
-- synchronized修饰的实例 方法就被称为同步实例方法
+- synchronized修饰的实例方法：多线程并发访问时，只能有一个线程进入，获得``对象内置锁``，其他线程阻塞等待，但在此期间线程仍然可以访问其他方法。
+- synchronized修饰的静态方法：多线程并发访问时，只能有一个线程进入，获得``类锁``，其他线程阻塞等待，但在此期间线程仍然可以访问其他方法。
+- synchronized修饰的代码块，：多线程并发访问时，只能有一个线程进入，根据``括号中的对象或者是类``，获得相应的对象内置锁或者是类锁
 - 同步方法的整个方法体就是一个临界区。
+
+
+
+> 每个类都有一个类锁，类的每个对象也有一个内置锁，它们是互不干扰的，也就是说一个线程可以同时获得``类锁``和该类实例化``对象的内置锁``，当线程访问非synchronzied修饰的方法时，并不需要获得锁，因此不会产生阻塞。
 
 
 
@@ -188,6 +206,13 @@ public class SynchronizedMethodExample {
 
 ### 内部锁的调度
 
+概念
+
+- 监控区（Entry Set）：锁已被其他线程获取，期待获取锁的线程就进入Monitor对象的监控区
+- 待授权区（Wait Set）：曾经获取到锁，但是调用了wait方法，线程进入待授权区
+
+
+
 Java虚拟机会为每个内部锁分配一个``入口集(Entry List)``， 用于记录等待获得相应内部锁的线程。
 
 多个线程申请同一个锁的时候，只有一个申请者能够成为该锁的持有线程（即申请锁的操作成功）， 而其他申请者的申请操作会失败。 这些申请失败的线程并不会抛出异常， 而是会被暂停（生命周期状态变为`BLOCKED`) 并被存入相应锁的入口集中等待再次申请锁的机会。 
@@ -200,9 +225,19 @@ Java虚拟机会为每个内部锁分配一个``入口集(Entry List)``， 用�
 
 
 
+![img](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/%E5%86%85%E9%83%A8%E9%94%81%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2%E5%9B%BE.png)
+
+
+
+
+
+
+
+
+
 ## Lock接口（显示锁）
 
-jdk1.5引入的排他锁，其作用于内部锁相同， 但是它提供了一些内部锁所不具备的特性。显示锁是`java.util.concurrent.locks.Lock`接口的实例，``java.util.concurrent.locks.Lock`是它的默认实现类
+jdk1.5引入的排他锁，其作用于内部锁相同， 但是它提供了一些内部锁所不具备的特性。显示锁是`java.util.concurrent.locks.Lock`接口的实例，`java.util.concurrent.locks.Lock`是它的默认实现类
 
 
 

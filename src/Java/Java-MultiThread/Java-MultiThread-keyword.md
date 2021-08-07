@@ -17,7 +17,19 @@ tags:
 
 
 
-## Sychronized
+## Sychronized(内部锁)
+
+[关键字: synchronized详解](https://www.pdai.tech/md/java/thread/java-thread-x-key-synchronized.html)
+
+
+
+### 底层原理：ObjectMonitor
+
+[jvm：ObjectMonitor源码](https://blog.csdn.net/zwjyyy1203/article/details/106217887)
+
+
+
+
 
 
 
