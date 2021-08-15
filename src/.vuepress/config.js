@@ -202,7 +202,7 @@ module.exports = config({
               children: ["Know-SpringCloud"]
             }
 
-          ],
+          ]
         },
 
         {
@@ -238,6 +238,20 @@ module.exports = config({
           icon: "creative",
           prefix: "Nginx/",
           children: ["", "Nginx-basicNote&deployment", "Nginx-LoadBalance", "Nginx-ReverseProxy", "Nginx-Dynamic&static"],
+        },
+
+        {
+          title: "消息队列",
+          icon: "creative",
+          prefix: "MQ/",
+          children: [
+            {
+              title: "RabbitMQ",
+              icon: "creative",
+              prefix: "RabbitMQ/",
+              children: ["RabbitMQ"]
+            }
+          ]
         },
 
         {
