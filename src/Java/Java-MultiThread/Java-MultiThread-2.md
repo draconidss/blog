@@ -264,6 +264,18 @@ jdk1.5引入的排他锁，其作用于内部锁相同， 但是它提供了一�
 
 
 
+### 显示锁的调度
+
+可以根据``ReentrantLock(boolean fail)`` 指定公平和非公平锁，true为公平锁
+
+公平锁保障锁调度的公平性往往是以增加上下文切换为代价的，因此显式锁默认非公平调度策略，适合``````锁被持有时间相对长``和``线程申请锁的平均间隔时间相对长``的情形。
+
+总的来说，公平锁开销大于非公平锁.
+
+
+
+
+
 ## Synchronized 和 ReenTrantLock
 
 
@@ -312,11 +324,19 @@ synchronized 中的锁是非公平的，ReentrantLock 默认情况下也是非�
 
 
 
-**7. 异常处理**
+**7. 异常处理&锁泄露**
 
-synchronized 异常就会释放锁，而 ReenTrantLock 异常需要在 finally 里 unlock。
+synchronized 异常就会自动释放锁来避免``锁泄露``，而 ReenTrantLock 异常需要在 finally 里 unlock。
 
 通过反编译可以看到sychronized有两个释放锁标志`monitorexit`，最后一个`monitorexit`是用于如果同步代码块中出现``Exception或者Error`，则会调用第二个`monitorexit`指令来保证释放锁
+
+
+
+**8. 灵活性**
+
+内部锁是基于代码块的锁，灵活性较差，要么使用，用么不使用；
+
+而显示锁是基于对象的锁，灵活性强，比如可以在一个方法内申请锁，在另一个方法释放锁，而内部锁是无法做到的。
 
 
 
