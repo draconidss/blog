@@ -359,7 +359,7 @@ public class Singleton{
 
 
 
-### 1.7 枚举式
+### 1.7 枚举式（拒绝反射构造）
 
 ```java
 public enum SingleTon{
