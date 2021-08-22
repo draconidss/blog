@@ -20,5 +20,5 @@ categories:
 ## 调优工具
 
 - jvisuallvm
-- JMC（Java Mission Control）
+- JMC（Java Mission Control）：拥有JMX，JFR（飞行记录器）
 
