@@ -431,3 +431,77 @@ ReentrantReadWriteLock所实现的读写锁是个`可重入锁`。
 - 锁降级：支持。即一个线程持有读写锁的`写锁`的情况下可以继续获得相应的`读锁`。
 - 锁升级：不支持。目前获取`读锁`后需要释放`读锁`才能获取`写锁`。
 
+
+
+**锁降级**
+
+```java
+//锁降级
+public void downGrade() {
+  boolean readLockAcquired = false;
+  writeLock.lock();
+  try {
+    //在此区域访问(读，写)共享变量
+    //...
+    //当线程在持有写锁的情况下申请读锁readLock
+    readLock.lock();
+    readLockAcquired = true;
+  } catch (Exception e) {
+    e.printStackTrace();
+  } finally {
+    writeLock.unlock();
+  }
+
+  if(readLockAcquired){
+    try {
+      //读取共享数据
+
+    } catch (Exception e) {
+      e.printStackTrace();
+    } finally {
+      readLock.unlock();
+    }
+  }
+}
+```
+
+
+
+**锁升级**
+
+```java
+//锁升级
+public void upGrade() {
+  readLock.lock();
+  try {
+    // Must release read lock before acquiring write lock
+    readLock.unlock();
+    writeLock.lock();
+    try {
+      //在此区域访问(读，写)共享变量
+      System.out.println(Thread.currentThread().getName() + "写操作正在执行。。。");
+      Thread.sleep(1000);
+      System.out.println(Thread.currentThread().getName() + "写操作结束。。。");
+    } catch (Exception e) {
+      e.printStackTrace();
+    } finally {
+      writeLock.unlock();
+    }
+  } catch (Exception e) {
+    e.printStackTrace();
+  } finally {
+    readLock.unlock();
+  }
+}
+```
+
+
+
+## 内存屏障
+
+可见性的两个动作
+
+- 刷新处理器
+- 冲刷处理器
+
+底层是借助`内存屏障`实现的上述动作。

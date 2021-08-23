@@ -546,10 +546,26 @@ Java线程的优先级属性本质上只是一个给``线程调度器``的提示
 | static void yield()                | 使当前线程主动放弃其对处理器的占用，这可能导致当前线程被暂停 | 这个方法是不可靠的，该方法被调用时当前线程可能仍然继续运行(视系统当前的运行状况而定)  。会使线程为READY状态 |
 | static void     sleep(long millis) | 使当前线程休眠(暂停运行)指定的时间                           |                                                              |
 | isAlive()                          | 判断线程是否处于活动状态                                     | 线程调用start后，即处于活动状态                              |
-| interrupt()                        | 中断线程                                                     |                                                              |
+| interrupt()                        | 中断线程                                                     | 该方法只是把设置当前线程一个属性标记为true，需要用户自己获取然后判断决定接下来的操作 |
+| static interrupted                 | 自己中断自己                                                 | 静态方法，只能自己中断自己                                   |
 | wait()                             | 导致线程等待，进入堵塞状态。释放锁。                         | 该方法要在同步方法或者同步代码块中才使用的                   |
 | notify()                           | 唤醒当前线程，进入运行状态。不释放锁。                       | 该方法要在同步方法或者同步代码块中才使用的                   |
 | notifyAll()                        | 唤醒所有等待的线程。                                         | 该方法要在同步方法或者同步代码块中才使用的                   |
+
+
+
+### interrupt&interrupted
+
+- 只是把设置当前线程一个属性标记为true，并不会直接中断，即使抛出异常也会执行完剩下的操作，需要用户自己获取然后判断决定接下来的操作。
+- 当线程发送中断请求后，sleep()方法抛出了InterruptedException异常，并且将线程的中断状态重置为false
+- 抛出异常是为了线程从阻塞状态醒过来，并在结束线程前让程序员有足够的时间来处理中断请求。
+- 处于阻塞的线程，即在执行Object对象的wait()、wait(long)、wait(long, int)，或者线程类的join()、join(long)、join(long, int)、sleep(long)、sleep(long,int)方法后线程的状态，当线程调用interrupt()方法后，这些方法将抛出`InterruptedException`异常，并清空线程的中断状态，即`isInterrupted()`返回false
+
+
+
+synchronized在获锁的过程中是不能被中断的，意思是说如果产生了死锁，则不可能被中断（请参考后面的测试例子）。与synchronized功能相似的reentrantLock.lock()方法也是一样，它也不可中断的，即如果发生死锁，那么reentrantLock.lock()方法无法终止，如果调用时被阻塞，则它一直阻塞到它获取到锁为止
+
+但是如果调用带`超时`的tryLock方法reentrantLock.tryLock(long timeout, TimeUnit unit)，那么如果线程在等待时被中断，将抛出一个`InterruptedException`异常，这是一个非常有用的特性，因为它允许程序打破死锁。你也可以调用`reentrantLock.lockInterruptibly()`方法，它就相当于一个超时设为无限的tryLock方法。
 
 
 
