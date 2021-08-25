@@ -557,15 +557,14 @@ Java线程的优先级属性本质上只是一个给``线程调度器``的提示
 ### interrupt&interrupted
 
 - 只是把设置当前线程一个属性标记为true，并不会直接中断，即使抛出异常也会执行完剩下的操作，需要用户自己获取然后判断决定接下来的操作。
-- 当线程发送中断请求后，sleep()方法抛出了InterruptedException异常，并且将线程的中断状态重置为false
+- 当线程发送中断请求后，sleep()方法抛出了``InterruptedException``异常，并且将线程的中断状态重置为``false`
 - 抛出异常是为了线程从阻塞状态醒过来，并在结束线程前让程序员有足够的时间来处理中断请求。
-- 处于阻塞的线程，即在执行Object对象的wait()、wait(long)、wait(long, int)，或者线程类的join()、join(long)、join(long, int)、sleep(long)、sleep(long,int)方法后线程的状态，当线程调用interrupt()方法后，这些方法将抛出`InterruptedException`异常，并清空线程的中断状态，即`isInterrupted()`返回false
+- 处于等待的线程，即在执行Object对象的wait()、wait(long)、wait(long, int)，或者线程类的join()、join(long)、join(long, int)、sleep(long)、sleep(long,int)方法后线程的状态，当线程调用interrupt()方法后，会立即退出被阻塞状态，这些方法将抛出`InterruptedException`异常，并清空线程的中断状态，即`isInterrupted()`返回false
+- 在阻塞状态，synchronized在获锁的过程中是不能被中断的，意思是说如果产生了死锁，则不可能被中断（请参考后面的测试例子）。与synchronized功能相似的reentrantLock.lock()方法也是一样，它也不可中断的，即如果发生死锁，那么reentrantLock.lock()方法无法终止，如果调用时被阻塞，则它一直阻塞到它获取到锁为止
 
 
 
-synchronized在获锁的过程中是不能被中断的，意思是说如果产生了死锁，则不可能被中断（请参考后面的测试例子）。与synchronized功能相似的reentrantLock.lock()方法也是一样，它也不可中断的，即如果发生死锁，那么reentrantLock.lock()方法无法终止，如果调用时被阻塞，则它一直阻塞到它获取到锁为止
-
-但是如果调用带`超时`的tryLock方法reentrantLock.tryLock(long timeout, TimeUnit unit)，那么如果线程在等待时被中断，将抛出一个`InterruptedException`异常，这是一个非常有用的特性，因为它允许程序打破死锁。你也可以调用`reentrantLock.lockInterruptibly()`方法，它就相当于一个超时设为无限的tryLock方法。
+但是如果调用带`超时`的tryLock方法reentrantLock.tryLock(long timeout, TimeUnit unit)，那么如果线程在等待时被中断，将抛出一个`InterruptedException`异常，这是一个非常有用的特性，因为它允许程序打破死锁。你也可以调用`reentrantLock.lockInterruptibly()`方法，在阻塞时可以立即响应``interrupt`。
 
 
 
