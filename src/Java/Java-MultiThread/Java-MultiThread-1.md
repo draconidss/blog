@@ -554,6 +554,15 @@ Java线程的优先级属性本质上只是一个给``线程调度器``的提示
 
 
 
+### stop&suspend
+
+禁用原因
+
+- stop：,是因为它不安全。它会解除由线程获取的所有锁定,而且如果对象处于一 种不连贯状态,那么其他线程能在那种状态下检查和修改它们。结果很难检查出真正的问题 所在
+- suspend：suspend()方法容易发生死锁。调用 suspend()的时候,目标线程会停下来,但却仍 然持有在这之前获得的锁定
+
+
+
 ### interrupt&interrupted
 
 - 只是把设置当前线程一个属性标记为true，并不会直接中断，即使抛出异常也会执行完剩下的操作，需要用户自己获取然后判断决定接下来的操作。
@@ -564,7 +573,13 @@ Java线程的优先级属性本质上只是一个给``线程调度器``的提示
 
 
 
-但是如果调用带`超时`的tryLock方法reentrantLock.tryLock(long timeout, TimeUnit unit)，那么如果线程在等待时被中断，将抛出一个`InterruptedException`异常，这是一个非常有用的特性，因为它允许程序打破死锁。你也可以调用`reentrantLock.lockInterruptibly()`方法，在阻塞时可以立即响应``interrupt`。
+但是如果调用带`超时`的tryLock方法reentrantLock.tryLock(long timeout, TimeUnit unit)，那么如果线程在等待时被中断，将抛出一个`InterruptedException`异常，这是一个非常有用的特性，因为它允许程序打破死锁。你也可以调用`reentrantLock.lockInterruptibly()`方法，在阻塞时可以立即响应`interrupt`。
+
+
+
+**食用方法**
+
+可以通过捕获异常的方式来处理被中断的线程
 
 
 
