@@ -16,7 +16,7 @@ tags:
 
 ::: tip
 
-- [Go编程时光](http://golang.iswbm.com/en/latest/index.html)
+- [Go编程时光](http://golang.iswbm.com/)
 - [Go语言入门教程](http://c.biancheng.net/golang/)
 - [菜鸟教程](https://www.runoob.com/go/go-tutorial.html)
 

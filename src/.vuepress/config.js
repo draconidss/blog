@@ -140,7 +140,7 @@ module.exports = config({
           title: "Golang",
           icon: "creative",
           prefix: "Golang/",
-          children: ["Golang-description&use", "Golang-basic"]
+          children: [ "Golang", "Golang-description&use"]
         },
 
         {
