@@ -125,6 +125,10 @@ Java内置核心函数接口
 
 
 
+![img](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-NewFeature/stream%E5%9B%BE.png)
+
+
+
 #### 中间操作：筛选与切片
 
 多个中间操作可以连接起来形成一个流水线，除非流水线上触发终止操作，否则中间操作不会执行任何的处理！而在终止操作时一次性全部处理，称为“惰性求值”。
@@ -150,6 +154,7 @@ Java内置核心函数接口
 | mapToInt(ToIntFunction f)       | 接收一个函数作为参数，该函数会被应用到每个元素上，产生一个新的IntStream。 |
 | mapToLong(ToLongFunction f)     | 接收一个函数作为参数，该函数会被应用到每个元素上，产生一个新的LongStream。 |
 | flatMap(Function f)             | 接收一个函数作为参数，将流中的每个值都换成另一个流，然后把所有流连接成一个流 |
+| peek(Consumer c)                | 接收一个函数作为参数，不同于map有返回值，peek无返回值        |
 
 
 
@@ -188,6 +193,12 @@ Java内置核心函数接口
 
 > map 和reduce 的连接通常称为map-reduce 模式，因Google 用它来进行网络搜索而出名。
 
+ 
+
+- Optional reduce(BinaryOperator accumulator)：第一次执行时，accumulator函数的第一个参数为流中的第一个元素，第二个参数为流中元素的第二个元素；第二次执行时，第一个参数为第一次函数执行的结果，第二个参数为流中的第三个元素；依次类推。
+- T reduce(T identity, BinaryOperator accumulator)：流程跟上面一样，只是第一次执行时，accumulator函数的第一个参数为identity，而第二个参数为流中的第一个元素。
+  
+
 
 
 #### 终止操作：收集
@@ -201,6 +212,16 @@ Java内置核心函数接口
 
 
 ![img](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-NewFeature/Collectors2.png)
+
+
+
+#### 并行流
+
+参考
+
+- [并行流](https://www.cnblogs.com/baidawei/p/9370048.html)
+
+
 
 
 
@@ -224,4 +245,6 @@ Java内置核心函数接口
 
 
 of()和get()搭配使用，ofNullable()和orElse()搭配使用
+
+
 
