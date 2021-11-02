@@ -21,6 +21,7 @@ tags:
 
 - [脑图参考](https://www.processon.com/mindmap/60abc60407912906fbcf50ba)
 - [脑图参考](https://my.oschina.net/u/3080373/blog/891918)
+- [尚硅谷笔记](https://blog.csdn.net/weixin_47872288/article/details/117921644?spm=1001.2014.3001.5501)
 
 :::
 
@@ -34,6 +35,8 @@ Spring 官⽹：https://spring.io/。
 
 
 
+
+
 ## 1. Spring特征
 
 Spring 官⽹列出的 Spring 的 6 个特征:
@@ -44,7 +47,7 @@ Spring 官⽹列出的 Spring 的 6 个特征:
 
 
 
-- **核⼼技术** ：依赖注⼊(DI)，AOP，事件(events)，资源，i18n，验证，数据绑定，类型转换， SpEL。 
+- **核心技术** ：依赖注⼊(DI)，AOP，事件(events)，资源，i18n，验证，数据绑定，类型转换， SpEL。 
 - **测试** ：模拟对象，TestContext框架，Spring MVC 测试，WebTestClient。 
 - **数据访问** ：事务，DAO⽀持，JDBC，ORM，编组XML。 
 - **Web⽀持** : Spring MVC和Spring WebFlux Web框架。 
@@ -56,6 +59,14 @@ Spring 官⽹列出的 Spring 的 6 个特征:
 :::
 
 
+
+## 优点
+
+- IOC方便解耦，简便开发
+- AOP不改变源代码，增加其功能
+- 方便程序测试
+- 方便其他程序的整合
+- 降低API的开发难度
 
 
 
@@ -77,10 +88,6 @@ Spring 官⽹列出的 Spring 的 6 个特征:
 ![](./images/Spring-bacisNote/Spring_Framework_Runtime.jpg)
 
 
-
-七大模块
-
-![Spring的7个模块.png](https://image-1300566513.cos.ap-guangzhou.myqcloud.com/upload/images/20191227/9f2158a9b2056835f44a06fce30b91fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
@@ -157,6 +164,12 @@ Web上下文模块建立在应用程序上下文模块之上，为基于web的�
 ### 2.7 MVC模块（Spring Web MVC）
 
 　　MVC框架是一个全功能的构建Web应用程序的MVC实现。通过策略接口，MVC框架变成为高度可配置的。MVC容纳了大量视图技术，其中包括JSP、POI等，模型来有JavaBean来构成，存放于m当中，而视图是一个街口，负责实现模型，控制器表示逻辑代码，由c的事情。Spring框架的功能可以用在任何J2EE服务器当中，大多数功能也适用于不受管理的环境。Spring的核心要点就是支持不绑定到特定J2EE服务的可重用业务和数据的访问的对象，毫无疑问这样的对象可以在不同的J2EE环境，独立应用程序和测试环境之间重用。
+
+
+
+
+
+## IoC（控制反转）
 
 
 

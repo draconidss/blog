@@ -1109,7 +1109,7 @@ CAS比较与交换的伪代码可以表示为：
 > do{
 >
 > 	备份旧数据；
-> 	
+> 				
 > 	基于旧数据构造新数据；
 >
 > }while(!CAS( 内存地址，备份的旧数据，新数据 ))
@@ -1304,6 +1304,14 @@ Java 1.8中`AtomicInteger.incrementAndGet()`的实现源码为：
 ![ThreadLocal简介](./images/Java-MultiThread-1/Introduction_to_ThreadLocal.png)
 
 
+
+除此之外，threadlocal还可避免很深的方法调用时的参数传递，当一个线程调用很深的方法需要从头吧参数传到底部处理时，可以用threadlocal保存当前线程的这个值，然后再取出就行
+
+
+
+### 哈希冲突
+
+`ThreadLocalMap`解决`哈希冲突`的方式是`线性探测法`，如果当前数组位有值，则判断下一个数组位是否有值，如果有值继续向下寻找，直到一个为空的数组位，这样保证在所有线程的Map中存放的同一个ThreadLocal的位置都是相同的
 
 
 
@@ -1632,11 +1640,39 @@ private Entry getEntry(ThreadLocal<?> key) {
 
 
 
+#### 那为什么使用弱引用而不是强引用？？
+
+我们看看Key使用的
+
+- key 使用强引用：当hreadLocalMap的key为强引用回收ThreadLocal时，因为ThreadLocalMap还持有ThreadLocal的强引用，如果没有手动删除，ThreadLocal不会被回收，导致Entry内存泄漏。这种情况发生在例如ThreadLocal设为null不再使用且线程池处理完线程在复用时依然还持有强引用到ThreadLocal导致一直无法回收。
+- key 使用弱引用：当ThreadLocalMap的key为弱引用回收ThreadLocal时，由于ThreadLocalMap持有ThreadLocal的弱引用，即使没有手动删除，ThreadLocal也会被回收。当key为null，在下一次ThreadLocalMap调用set(),get()，remove()方法的时候会被清除value值。
+
+
+
+
+
 重点来了，突然我们`ThreadLocal`是`null`了，也就是要被`垃圾回收器`回收了，但是此时我们的`ThreadLocalMap`生命周期和`Thread`的一样，它不会回收，这时候就出现了一个现象。那就是`ThreadLocalMap`的`key`没了，但是`value`还在，这就造成了`内存泄漏`。
 
 
 
-解决办法：使用完`ThreadLocal`后，执行`remove`操作，避免出现`内存溢出`情况。
+#### 为什么value不设为弱引用
+
+不设置为弱引用，是因为不清楚这个`Value`除了`map`的引用还是否还存在其他引用，如果不存在其他引用，当`GC`的时候就会直接将这个Value干掉了，而此时我们的`ThreadLocal`还处于使用期间，就会造成Value为null的错误，所以将其设置为强引用。
+
+
+
+#### 为什么要remove
+
+Java为了最小化减少内存泄露的可能性和影响，在ThreadLocal的get,set的时候都会清除线程Map里所有key为null的value。
+
+threadLocal对象设null了，开始发生“内存泄露”，然后使用线程池，这个线程结束，线程放回线程池中不销毁，这个线程一直不被使用，或者分配使用了又不再调用get,set方法，那么这个期间就会发生真正的内存泄露。
+
+
+
+#### 正确食用方法
+
+- 每次使用完ThreadLocal都调用它的remove()方法清除数据
+- 将ThreadLocal变量定义成private static，这样就一直存在ThreadLocal的强引用，也就能保证任何时候都能通过ThreadLocal的弱引用访问到Entry的value值，进而清除掉 。
 
 
 
@@ -1655,7 +1691,7 @@ private Entry getEntry(ThreadLocal<?> key) {
 
 
 
-正因为ThreadLocal的线程隔离特性，使他的应用场景相对来说更为特殊一些。在android中Looper、ActivityThread以及AMS中都用到了`ThreadLocal`。当某些数据是以线程为作用域并且不同线程具有不同的数据副本的时候，就可以考虑采用`ThreadLocal`。
+正因为ThreadLocal的线程隔离特性，使他的应用场景相对来说更为特殊一些。在android中Looper、ActivityThread以及AMS中都用到了`ThreadLocal`。当某些数据是以线程为作用域并且不同线程具有不同的数据副本的时候或者说只有在同一个线程共享数据时，就可以考虑采用`ThreadLocal`。
 
 
 

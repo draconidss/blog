@@ -275,14 +275,14 @@ public class Singleton {
     private volatile static Singleton singleton;  
     private Singleton (){}  
     public static Singleton getSingleton() {  
-    if (singleton == null) {  
-        synchronized (Singleton.class) {  
         if (singleton == null) {  
-            singleton = new Singleton();  
+            synchronized (Singleton.class) {  
+                if (singleton == null) {  
+                    singleton = new Singleton();  
+                }  
+            }  
         }  
-        }  
-    }  
-    return singleton;  
+        return singleton;  
     }  
 }
 ```
@@ -394,6 +394,12 @@ SingleTon.INSTANCE
 
 在工厂模式中，我们在创建对象时不会对客户端暴露创建逻辑，并且是通过使用一个共同的接口来指向新创建的对象。
 
+工厂方法模式是典型的解耦框架。高层模块值需要知道产品的抽象类，其他的实 现类都不用关心，符合迪米特法则，我不需要的就不要去交流；也符合依赖倒置原则，只依赖产品类的抽象；当然也符合里氏替换原则，使用产品子类替换产品父类，没问题！
+
+
+
+![image-20211024164737188](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-DesignPatterns-CreationalPatterns/%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E9%80%9A%E7%94%A8%E5%9B%BE.png)
+
 
 
 参考
@@ -419,6 +425,10 @@ SingleTon.INSTANCE
 ```
 
 
+
+### 简单工厂（静态工厂）
+
+没有抽象工厂类，而是工厂类使用静态方法来创建实体，也被称为静态工厂类，不符合开闭原则但实简单
 
 
 

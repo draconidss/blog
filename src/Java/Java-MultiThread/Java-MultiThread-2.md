@@ -131,8 +131,6 @@ void methodB() {
 
 
 
-
-
 ### 简介
 
 Java平台中的任何一个对象都有唯一一个与之关联的锁。 这种锁被称为``监视器 (Monitor)``或者``内部锁 (Intrinsic Lock)``。内部锁是一种``排他锁``，它能够保障
@@ -228,6 +226,14 @@ Java虚拟机会为每个内部锁分配一个``入口集(Entry List)``， 用�
 
 
 
+### 锁原理
+
+//TODO:monitor markword objectMonitor
+
+![img](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/Mark%20Word.png)
+
+
+
 ### 锁升级过程
 
 - [锁升级过程](https://blog.csdn.net/zzti_erlie/article/details/103997713?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-3.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-3.control)
@@ -235,9 +241,11 @@ Java虚拟机会为每个内部锁分配一个``入口集(Entry List)``， 用�
 
 
 
-
-
 ![preview](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/%E9%94%81%E5%8D%87%E7%BA%A7%E8%BF%87%E7%A8%8B.jpg)
+
+
+
+
 
 
 
@@ -747,3 +755,18 @@ public class Counter{
 }
 ```
 
+
+
+
+
+## 锁优化
+
+![img](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/%E9%94%81%E4%BC%98%E5%8C%96.png)
+
+
+
+## 线程池
+
+### 线程池复用原理
+
+在线程池中，线程会从 workQueue 中读取任务来执行，最小的执行单位就是 Worker，Worker 实现了 Runnable 接口，重写了 run 方法，这个 run 方法是让每个线程去执行一个循环，在这个循环代码中，去判断是否有任务待执行，若有则直接去执行这个任务，因此线程数不会增加。

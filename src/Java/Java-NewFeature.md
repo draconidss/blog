@@ -69,6 +69,10 @@ Java内置核心函数接口
 
 
 
+![image-20211023141750400](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-NewFeature/%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3.png)
+
+
+
 ### 方法引用
 
 当要传递给Lambda体的操作，已经有实现的方法了，可以使用方法引用！
@@ -222,6 +226,18 @@ Java内置核心函数接口
 - [并行流](https://www.cnblogs.com/baidawei/p/9370048.html)
 
 
+
+注意
+
+- 在现实中，对顺序流调用 parallel 方法并不意味着流本身有任何实际的变化。它在内部实际上就是设了一个 boolean 标志，表示你想让调用 parallel 之后进行的所有操作都并行执行。
+- 类似地，你只需要对并行流调用 sequential 方法就可以把它变成顺序流。
+- 如果有多个，调用的方式是看最后一次 parallel 或 sequential从而决定整体流水线调用方式
+
+
+
+关于效率问题
+
+参考：[https://blog.csdn.net/ryo1060732496/article/details/88831864](https://blog.csdn.net/ryo1060732496/article/details/88831864)
 
 
 
