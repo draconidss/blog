@@ -125,6 +125,9 @@ Dubbo + Zookerper
 ### Redis
 
 - 尚硅谷【12】
+- Redis设计与实现
+- Redis实战
+- Redis5源码
 
 
 

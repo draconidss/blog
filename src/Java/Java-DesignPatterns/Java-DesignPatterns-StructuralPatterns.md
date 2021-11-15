@@ -30,13 +30,132 @@ tags:
 
 
 
+## 代理模式
+
+### 定义
+
+Provide a surrogate or placeholder for another object to control access to it.（为其他对象提供 一种代理以控制对这个对象的访问。）
 
 
-## 1. 适配器模式
+
+![image-20211114145043383](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-DesignPatterns-StructuralPatterns/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F.png)
 
 
 
-### 1.1 定义
+代理者要代理谁就产生该代理的实例，然后把被代理者传递进来，该模式在实际的项目应用中比较广泛。
+
+
+
+### 普通代理
+
+它的要求就是客户端只能访问代理角色，而不能访问真实角色，这是比较简单的。
+
+
+
+### 强制代理
+
+当访问一个真实角色时，返回的都是代理角色，无论什么情况。
+
+
+
+### 动态代理
+
+动态代理是在实现阶段不用关心代理谁，而在运行阶段才指定代理哪一个对象，相对来说，自己写代理类的方式就是静态代理。本章节的核心部分 就在动态代理上，现在有一个非常流行的名称叫做面向横切面编程，也就是AOP（Aspect Oriented Programming），其核心就是采用了动态代理机制。
+
+![image-20211114172114717](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-DesignPatterns-StructuralPatterns/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86.png)
+
+
+
+在类图中增加了一个InvocationHandler接口和GamePlayIH类，作用就是产生一个对象的 代理对象，其中`InvocationHandler`是JDK提供的动态代理接口，对被代理类的方法进行代理。
+
+
+
+其中invoke方法是接口InvocationHandler定义必须实现的，它完成对真实方法的调用。我 们来详细讲解一下InvocationHandler接口，动态代理是根据被代理的接口生成所有的方法， 也就是说给定一个接口，动态代理会宣称“我已经实现该接口下的所有方法了”，那各位读者 想想看，动态代理怎么才能实现被代理接口中的方法呢？默认情况下所有的方法返回值都是 空的，是的，代理已经实现它了，但是没有任何的逻辑含义，那怎么办？好办，通过 InvocationHandler接口，所有方法都由该Handler来进行处理，即所有被代理的方法都由 InvocationHandler接管实际的处理任务。
+
+![image-20211114181847364](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-DesignPatterns-StructuralPatterns/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%862.png)
+
+
+
+动态调用过程
+
+![image-20211114185027020](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-DesignPatterns-StructuralPatterns/%E5%8A%A8%E6%80%81%E8%B0%83%E7%94%A8%E8%BF%87%E7%A8%8B.png)
+
+
+
+
+
+动态代理具体步骤：
+
+1. 通过实现 InvocationHandler 接口创建自己的调用处理器；
+2. 通过为 Proxy 类指定 ClassLoader 对象和一组 interface 来创建动态代理类；
+3. 通过反射机制获得动态代理类的构造函数，其唯一参数类型是调用处理器接口类型；
+4. 通过构造函数创建动态代理类实例，构造时调用处理器对象作为参数被传入。
+
+
+
+Proxy的newProxyInstance
+
+```java
+    public static Object newProxyInstance(ClassLoader loader,
+                                          Class<?>[] interfaces,
+                                          InvocationHandler h)
+        throws IllegalArgumentException
+    {
+        Objects.requireNonNull(h);
+
+        final Class<?>[] intfs = interfaces.clone();
+        final SecurityManager sm = System.getSecurityManager();
+        if (sm != null) {
+            checkProxyAccess(Reflection.getCallerClass(), loader, intfs);
+        }
+         //生成代理类对象
+        Class<?> cl = getProxyClass0(loader, intfs);
+
+        //使用指定的调用处理程序获取代理类的构造函数对象
+        try {
+            if (sm != null) {
+                checkNewProxyPermission(Reflection.getCallerClass(), cl);
+            }
+
+            final Constructor<?> cons = cl.getConstructor(constructorParams);
+            final InvocationHandler ih = h;
+            //如果Class作用域为私有，通过 setAccessible 支持访问
+            if (!Modifier.isPublic(cl.getModifiers())) {
+                AccessController.doPrivileged(new PrivilegedAction<Void>() {
+                    public Void run() {
+                        cons.setAccessible(true);
+                        return null;
+                    }
+                });
+            }
+            //获取Proxy Class构造函数，创建Proxy代理实例。
+            return cons.newInstance(new Object[]{h});
+        } catch (IllegalAccessException|InstantiationException e) {
+            throw new InternalError(e.toString(), e);
+        } catch (InvocationTargetException e) {
+            Throwable t = e.getCause();
+            if (t instanceof RuntimeException) {
+                throw (RuntimeException) t;
+            } else {
+                throw new InternalError(t.toString(), t);
+            }
+        } catch (NoSuchMethodException e) {
+            throw new InternalError(e.toString(), e);
+        }
+    }
+```
+
+
+
+
+
+
+
+## 适配器模式
+
+
+
+### 定义
 
 适配器模式（Adapter Pattern）的定义如下： 
 
@@ -191,7 +310,7 @@ public class Client {
 
 
 
-### 1.2 优点
+### 优点
 
 
 
@@ -211,7 +330,7 @@ public class Client {
 
  
 
-### 1.3 使用场景
+### 使用场景
 
 适配器应用的场景只要记住一点就足够了：你有动机修改一个已经投产中的接口时，适 配器模式可能是最适合你的模式。比如系统扩展了，需要使用一个已有或新建立的类，但这 个类又不符合系统的接口，怎么办？使用适配器模式，这也是我们例子中提到的。
 
@@ -219,13 +338,13 @@ public class Client {
 
 
 
-### 1.4 注意事项
+### 注意事项
 
 适配器模式最好在详细设计阶段不要考虑它，它不是为了解决还处在开发阶段的问题， 而是解决正在服役的项目问题，没有一个系统分析师会在做详细设计的时候考虑使用适配器 模式，这个模式使用的主要场景是扩展应用中，就像我们上面的那个例子一样，系统扩展 了，不符合原有设计的时候才考虑通过适配器模式减少代码修改带来的风险。 再次提醒一点，项目一定要遵守依赖倒置原则和里氏替换原则，否则即使在适合使用适 配器的场合下，也会带来非常大的改造。
 
 
 
-### 1.5 例子
+### 例子
 
 2004年我带了一个项目，做一个人力资源管理项目，该项目是我们总公司发起的，公司 一共有700多号人。这个项目还是比较简单的，分为三大模块：人员信息管理、薪酬管理、 职位管理。当时开发时业务人员明确指明：人员信息管理的对象是所有员工的所有信息，所 有的员工指的是在职的员工，其他的离职的、退休的暂不考虑。根据需求我们设计了如图 19-1所示的类图。
 
@@ -486,7 +605,7 @@ public class Client {
 
 
 
-### 1.6 适配器模式的扩展
+### 适配器模式的扩展
 
 我们刚刚讲的人力资源管理的例子中，其实是一个比较幸运的例子，为什么呢？如果劳 动服务公司提供的人员接口不止一个，也就是说，用户基本信息是一个接口，工作信息是一 个接口，家庭信息是一个接口，总共有三个接口三个实现类，想想看如何处理呢？不能再使 用我们上面的方法了，为什么呢？Java是不支持多继承的，你难道想让OuterUserInfo继承三 个实现类？此路不通，再想一个办法，对哦，可以使用类关联的办法嘛！声明一个 OuterUserInfo实现类，实现IUserInfo接口，通过再关联其他三个实现类不就可以解决这个问 题了吗？是的，是的，好方法，我们先画出类图，如图19-8所示。
 

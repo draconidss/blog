@@ -187,6 +187,15 @@ module.exports = config({
                 "Server-deployment-SpringBoot", "Swagger-use"]
             },
 
+
+          ]
+        },
+        {
+              title: "SpringCloud",
+              icon: "creative",
+              prefix: "SpringCloud/",
+              children: ["Know-SpringCloud", "SpringCloud"]
+        },
             {
               title: "Mybatis",
               icon: "creative",
@@ -194,15 +203,6 @@ module.exports = config({
               children: ["Mybatis-basic-notes", "Mybatis-grammar-notes", "MybatisPlus-notes", "Mybatis-reverse-project&Example-use"]
             },
 
-            {
-              title: "SpringCloud",
-              icon: "creative",
-              prefix: "SpringCloud/",
-              children: ["Know-SpringCloud"]
-            }
-
-          ]
-        },
 
         {
           title: "数据结构&算法",

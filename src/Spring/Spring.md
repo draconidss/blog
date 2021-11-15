@@ -37,7 +37,7 @@ Spring 官⽹：https://spring.io/。
 
 
 
-## 1. Spring特征
+## Spring特征
 
 Spring 官⽹列出的 Spring 的 6 个特征:
 
@@ -60,7 +60,7 @@ Spring 官⽹列出的 Spring 的 6 个特征:
 
 
 
-## 优点
+## Spring优点
 
 - IOC方便解耦，简便开发
 - AOP不改变源代码，增加其功能
@@ -70,7 +70,7 @@ Spring 官⽹列出的 Spring 的 6 个特征:
 
 
 
-## 2. Spring七大模块
+## Spring七大模块
 
 ::: tip 参考
 
@@ -97,89 +97,119 @@ Spring 官⽹列出的 Spring 的 6 个特征:
 
 
 
-### 2.1 核心容器（Spring Core）
-
-Core模块是Spring的核心类库，Spring的所有功能都依赖于该类库，Core主要实现`IOC`功能，Spring的所有功能都是借助`IOC`实现的。核心容器提供Spring框架的基本功能。Spring以bean的方式组织和管理Java应用中的各个组件及其关系。Spring使用`BeanFactory`来产生和管理`Bean`，它是`工厂模式`的实现，并提供`依赖注入（Dependency Injection）`管理`Bean`容器功能。`BeanFactory`它提供对Factory模式的经典实现来消除对程序性`单例模式`的需要，并真正地允许你从程序逻辑中分离出`依赖关系和配置`。`BeanFactory`使用`控制反转(IoC)`模式将`应用的配置和依赖性规范`与`实际的应用程序代码`分开。
 
 
+## IOC（控制反转）
 
+所需依赖
 
-
-### 2.2 应用上下文（Spring Context）
-
-核心模块的`BeanFactory`使`Spring`成为一个`容器`，而`上下文模块`使它成为一个`框架`。Spring上下文是一个配置文件，这个模块扩展了`BeanFactory`的概念，增加了消息、事件传播以及验证的支持。另外，这个模块提供了许多企业服务，例如电子邮件、JNDI访问、EJB集成、远程以及时序调度（scheduling）服务。也包括了对模版框架例如Velocity和FreeMarker集成的支持。
-
+- beans
+- context
+- core
+- expression
 
 
 
+### 概念
 
-### 2.3 Spring面向切面编程（Spring AOP）
+IOC（Inverse of Control:控制反转）是依赖倒置原则⼀种设计思想，就是把原先在代码里面需要实现的对象创建、对象之间的依赖，通过抽象交由给IOC容器来管理。IOC容器实际上就是个Map（key，value）,Map 中存放的是各种对象。
 
-通过配置管理特性，`Spring AOP` 模块直接将面向切面的编程功能集成到了 Spring框架中。所以，可以很容易地使 Spring框架管理的任何对象支持 `AOP`。`Spring AOP` 模块为基于 Spring 的应用程序中的对象提供了事务管理服务。通过使用 `Spring AOP`，不用依赖 EJB 组件，就可以将`声明性事务管理`集成到应用程序中。
-
-
-
-Spring在它的AOP模块中提供了对面向切面编程的丰富支持。例如方法拦截器（servletListener ,controller....）和切点，可以有效的防止代码上功能的耦合，这个模块是在Spring应用中实现切面编程的基础。Spring的AOP模块也将`元数据`编程引入了Spring。使用Spring的`元数据支持`，你可以为你的源代码增加注释，指示Spring在何处以及如何应用切面函数。
-
-
-
-::: info AOP
-
-AOP = Aspect Oriented Programming   
-
-AOP是OOP的延续，是（Aspect Oriented Programming）的缩写，意思是面向切面（方面）编程。  
-
-主要的功能是：日志记录，性能统计，安全控制，事务处理，异常处理等等
-
-:::  
+- 将对象之间的相互依赖关系交给 IoC 容器来管理，并由 IoC 容器完成对象的注⼊。这样可以很⼤程度 上简化应用的开发，把应⽤从复杂的依赖关系中解放出来。 
+- IoC 容器就像是⼀个工厂⼀样，当我们需 要创建⼀个对象的时候，只需要配置好配置⽂件/注解即可，完全不⽤考虑对象是如何被创建出来的。 
+- 在实际项⽬中⼀个 Service 类可能有⼏百甚⾄上千个类作为它的底层，假如我们需要实例化这个 Service，你可能要每次都要搞清这个 Service 所有底层类的构造函数，这可能会把⼈逼疯。如果利⽤ IoC 的话，你只需要配置好，然后在需要的地⽅引⽤就⾏了，这⼤⼤增加了项⽬的可维护性且降低了开 发难度。 
 
 
 
+Spinrg中通过下面来实现
 
-
-### 2.4 DAO模块（Spring DAO）
-
-使用`JDBC`经常导致大量的重复代码，取得连接、创建语句、处理结果集，然后关闭连接、旧代码中迁移自定义工具类`JDBCUtil` 也让开发变得繁琐。Spring的`Dao`模块对传统的JDBC进行了抽象，还提供了一种比编程性更好的声明性事务管理方法。JDBC、DAO的抽象层提供了有意义的异常层次结构，可用该结构来管理异常处理，和不同数据库供应商所抛出的错误信息。异常层次结构简化了错误处理，并且极大的降低了需要编写的代码数量，比如打开和关闭链接。
-
-
-
-
-
-### 2.5 对象实体映射（Spring ORM）
-
-Spring框架插入了若干个`ORM框架`，从而提供了ORM对象的关系工具，其中包括了Hibernate、JDO和 IBatis SQL Map等，所有这些都遵从Spring的通用事物和DAO异常层次结构。通过`ORM`包，可以混合使用所有Spring提供的特性进行“`对象/关系`”映射，方便开发时小组内整合代码。Spring本身并不对ORM进行实现，仅对常见的ORM框架进行封装，并对其进行管理。
+- xml配置
+- 工厂模式
+- 反射
 
 
 
+### IOC接口
 
-
-### 2.6 Web模块（Spring Web）
-
-Web上下文模块建立在应用程序上下文模块之上，为基于web的应用程序提供了上下文。所以Spring框架支持与Struts集成，web模块还简化了处理多部分请求以及将请求参数绑定到域对象的工作。
-
-
-
-
-
-### 2.7 MVC模块（Spring Web MVC）
-
-　　MVC框架是一个全功能的构建Web应用程序的MVC实现。通过策略接口，MVC框架变成为高度可配置的。MVC容纳了大量视图技术，其中包括JSP、POI等，模型来有JavaBean来构成，存放于m当中，而视图是一个街口，负责实现模型，控制器表示逻辑代码，由c的事情。Spring框架的功能可以用在任何J2EE服务器当中，大多数功能也适用于不受管理的环境。Spring的核心要点就是支持不绑定到特定J2EE服务的可重用业务和数据的访问的对象，毫无疑问这样的对象可以在不同的J2EE环境，独立应用程序和测试环境之间重用。
+- BeanFactory：Spring内部使用接口，不提供给开发人员。`懒加载`，加载配置xml解析不会创建对象，只有getBean才会创建对象
+- ApplicationContext：是BeanFactory`子接口`，功能强大，开发人员可使用，加载配置就会创建对象
+  - ClassPathXmlApplicationContext：相对路径，src下
+  - FileSystemXmlApplicationContext：绝对路径，src下
 
 
 
+### Bean管理
+
+- 基于xml配置
+- 基于注解
 
 
-## IoC（控制反转）
+
+### Bean生命周期管理（基于xml)
+
+参考
+
+- [xml官方文档](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-factory-metadata)
 
 
+
+#### 对象创建
+
+```xml
+<bean id="userService" class="com.atguigu.spring5.service.UserService">
+```
+
+```java
+//1 加载spring配置文件
+ApplicationContext context =new ClassPathXmlApplicationContext("bean2.xml");
+
+//2 获取配置创建的对象
+UserService userService = context.getBean("userService", UserService.class);
+```
+
+默认调用的是`无参构造函数`完成对象创建
+
+
+
+#### 属性注入
+
+- 使用set方式
+- 使用有参构造函数
+- 使用xml注入属性
+
+
+
+使用xml注入属性
+
+```XML
+<bean id="book" class="com.atguigu.spring5.Book">
+    <property name="码农研究僧" value="99999"></property>
+</bean>
+```
+
+
+
+使用有参构造函数
+
+```xml
+<bean id="orders" class="com.atguigu.spring5.Orders">
+    <constructor-arg name="oname" value="电脑"></constructor-arg>
+    <constructor-arg name="address" value="China"></constructor-arg>
+</bean>
+```
+
+
+
+
+
+### Bean生命周期管理(基于注解)
 
 
 
 ## 3. IoC（控制反转）| DC（依赖注入）
 
-IoC（Inverse of Control:控制反转）是依赖倒置原则⼀种设计思想，就是把原先在代码里面需要实现的对象创建、对象之间的依赖，反转给Spring容器来帮忙实现。 IoC 在其他语⾔中也有应⽤，并⾮ Spring 特有。 IoC 容器是 Spring ⽤来实现 IoC 的载体， IoC 容器实际上就是个Map（key，value）,Map 中存放的是各种对象。 
+ 
 
-将对象之间的相互依赖关系交给 IoC 容器来管理，并由 IoC 容器完成对象的注⼊。这样可以很⼤程度 上简化应⽤的开发，把应⽤从复杂的依赖关系中解放出来。 IoC 容器就像是⼀个⼯⼚⼀样，当我们需 要创建⼀个对象的时候，只需要配置好配置⽂件/注解即可，完全不⽤考虑对象是如何被创建出来的。 在实际项⽬中⼀个 Service 类可能有⼏百甚⾄上千个类作为它的底层，假如我们需要实例化这个 Service，你可能要每次都要搞清这个 Service 所有底层类的构造函数，这可能会把⼈逼疯。如果利⽤ IoC 的话，你只需要配置好，然后在需要的地⽅引⽤就⾏了，这⼤⼤增加了项⽬的可维护性且降低了开 发难度。 
+
 
 Spring 时代我们⼀般通过 XML ⽂件来配置 Bean，后来开发⼈员觉得 XML ⽂件来配置不太好，于是 SpringBoot 注解配置就慢慢开始流⾏起来。
 
