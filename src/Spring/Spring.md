@@ -199,9 +199,59 @@ UserService userService = context.getBean("userService", UserService.class);
 
 
 
+### Bean生命周期管理(工厂bean)
+
+spring有两种类型，一种是上面的普通bean，另一种是工厂bean普通bean，在配置文件中，定义的bean类型就是返回类型而工厂bean返回类型可以不同
+
+- 创建类，让这个类作为工厂bean，实现接口FactoryBean
+
+- 实现接口内的方法，定义返回的bean类型
 
 
-### Bean生命周期管理(基于注解)
+
+### Bean作用域
+
+在Spring中默认是单例，一共有五种，在Spring中bean标签的scope属性设置。
+
+- singleton：单例模式，使用 singleton 定义的 Bean 在 Spring 容器中只有一个实例，这也是 Bean 默认的作用域。
+- prototype：原型模式，每次通过 Spring 容器获取 prototype 定义的 Bean 时，容器都将创建一个新的 Bean 实例。
+- request：在一次 HTTP 请求中，容器会返回该 Bean 的同一个实例。而对不同的 HTTP 请求，会返回不同的实例，该作用域仅在当前 HTTP Request 内有效。
+- session：在一次 HTTP Session 中，容器会返回该 Bean 的同一个实例。而对不同的 HTTP 请求，会返回不同的实例，该作用域仅在当前 HTTP Session 内有效。
+- global Session：在一个全局的 HTTP Session 中，容器会返回该 Bean 的同一个实例。该作用域仅在使用 portlet context 时有效。
+
+
+
+在上述五种作用域中，singleton 和 prototype 是最常用的两种，接下来将对这两种作用域进行详细讲解。
+
+
+
+### Bean生命周期
+
+参考
+
+- [https://www.cnblogs.com/javazhiyin/p/10905294.html](https://www.cnblogs.com/javazhiyin/p/10905294.html)
+
+
+
+![image-20211120194324042](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Spring/bean%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png)
+
+
+
+- 如果实现InstantiationAwareBeanPostProcessor接口，那么会调用postProcessBeforeInstantiation方法，如果该方法返回非null则不会走后续流程
+- Spring对bean通过构造器进行实例化，构造器的推断可以使用@Autowired注解，如果有多个自定义构造方法，那么根据可注入性，顺序性来注入
+- Spring将值和bean的引用注入到bean对应的属性中； 
+- 如果bean实现了BeanNameAware接口，Spring将bean的ID传递给 setBean-Name()方法； 
+- 如果bean实现了BeanFactoryAware接口，Spring将调用 setBeanFactory()方法，将BeanFactory容器实例传入；
+- 如果bean实现了ApplicationContextAware接口，Spring将调用 setApplicationContext()方法，将bean所在的应用上下文的引用 传入进来； 
+- 如果bean实现了BeanPostProcessor接口，Spring将调用它们的 post-ProcessBeforeInitialization()方法； 
+- 如果bean实现了InitializingBean接口，Spring将调用它们的 after-PropertiesSet()方法。
+- 调用bean标签指定的属性init-Method初始化方法
+- 如果bean实现了BeanPostProcessor接口，Spring将调用它们的 post-ProcessAfterInitialization()方法；
+- 此时，bean已经准备就绪，可以被应用程序使用了，它们将一直驻留在应用上下文中，直到该应用上下文被销毁； 
+- 如果bean实现了DisposableBean接口，Spring将调用它的 destroy()接口方法。同样，如果bean使用destroy-method声明了 销毁方法，该方法也会被调用。
+- 调用bean标签指定的属性detroy-Method毁灭方法
+
+
 
 
 

@@ -32,6 +32,13 @@ tags:
 
 ## 代理模式
 
+参考
+
+- [JAVA动态代理](https://www.jianshu.com/p/9bcac608c714)
+- [JAVA动态代理](https://www.zhihu.com/question/20794107/answer/658139129)
+
+
+
 ### 定义
 
 Provide a surrogate or placeholder for another object to control access to it.（为其他对象提供 一种代理以控制对这个对象的访问。）
@@ -46,19 +53,37 @@ Provide a surrogate or placeholder for another object to control access to it.�
 
 
 
-### 普通代理
+### 静态代理
 
 它的要求就是客户端只能访问代理角色，而不能访问真实角色，这是比较简单的。
 
+> 强制代理：当访问一个真实角色时，返回的都是代理角色，无论什么情况。
 
 
-### 强制代理
 
-当访问一个真实角色时，返回的都是代理角色，无论什么情况。
+1.为现有的每一个类都编写一个**对应的**代理类，并且让它实现和目标类相同的接口（假设都有）
+
+![img](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-DesignPatterns-StructuralPatterns/%E9%9D%99%E6%80%81%E4%BB%A3%E7%90%86.jpg)
+
+2.在创建代理对象时，通过构造器塞入一个目标对象，然后在代理对象的方法内部调用目标对象同名方法，并在调用前后打印日志。也就是说，**代理对象 = 增强代码 + 目标对象（原对象）**。有了代理对象后，就不用原对象了
+
+
+
+![img](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-DesignPatterns-StructuralPatterns/%E9%9D%99%E6%80%81%E4%BB%A3%E7%90%862.jpg)
+
+
+
+缺陷
+
+程序员要手动为每一个目标类编写对应的代理类。如果当前系统已经有成百上千个类，工作量太大了。所以，现在我们的努力方向是：如何少写或者不写代理类，却能完成代理功能？
 
 
 
 ### 动态代理
+
+要创建一个实例，最关键的就是得到对应的Class对象。能否不写代理类，而直接得到代理Class对象，然后根据它创建代理实例（反射）。
+
+
 
 动态代理是在实现阶段不用关心代理谁，而在运行阶段才指定代理哪一个对象，相对来说，自己写代理类的方式就是静态代理。本章节的核心部分 就在动态代理上，现在有一个非常流行的名称叫做面向横切面编程，也就是AOP（Aspect Oriented Programming），其核心就是采用了动态代理机制。
 
@@ -93,61 +118,144 @@ Provide a surrogate or placeholder for another object to control access to it.�
 
 
 
-Proxy的newProxyInstance
+![img](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-DesignPatterns-StructuralPatterns/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
+
+
+
+
+
+#### 底层原理
+
+1. 创建一个`ProxyHandle`实现`InvocationHandler`接口的invoke方法，并在invoke方法中写好增强的逻辑
+2. 通过`Proxy.newProxyInstance(ClassLoader c, Interface[] i, InvocationHandler handle)`方法传入实例对象的，根据实例对象的构造器和接口生成class文件通过反射创造一个代理类并创建代理对象
+3. 代理类是实现`InvocationHandler`接口且内部有一个变量`invocationHandler`，代理对象也实现了原本实例对象的接口，但是代理对象的实现方法都是只调用`invocationHandler`的`invoke`方法
+4. 最后我们用代理对象来执行方法，就会调用我们的invoke方法的增强逻辑
+
+
+
+
+
+![img](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-DesignPatterns-StructuralPatterns/%E5%8A%A8%E6%80%81%E8%B0%83%E7%94%A8%E8%BF%87%E7%A8%8B2.jpg)
+
+
+
+![img](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-DesignPatterns-StructuralPatterns/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86%E8%BF%87%E7%A8%8B3.jpg)
+
+
+
+#### 实例
+
+`HelloInterface`
 
 ```java
-    public static Object newProxyInstance(ClassLoader loader,
-                                          Class<?>[] interfaces,
-                                          InvocationHandler h)
-        throws IllegalArgumentException
-    {
-        Objects.requireNonNull(h);
-
-        final Class<?>[] intfs = interfaces.clone();
-        final SecurityManager sm = System.getSecurityManager();
-        if (sm != null) {
-            checkProxyAccess(Reflection.getCallerClass(), loader, intfs);
-        }
-         //生成代理类对象
-        Class<?> cl = getProxyClass0(loader, intfs);
-
-        //使用指定的调用处理程序获取代理类的构造函数对象
-        try {
-            if (sm != null) {
-                checkNewProxyPermission(Reflection.getCallerClass(), cl);
-            }
-
-            final Constructor<?> cons = cl.getConstructor(constructorParams);
-            final InvocationHandler ih = h;
-            //如果Class作用域为私有，通过 setAccessible 支持访问
-            if (!Modifier.isPublic(cl.getModifiers())) {
-                AccessController.doPrivileged(new PrivilegedAction<Void>() {
-                    public Void run() {
-                        cons.setAccessible(true);
-                        return null;
-                    }
-                });
-            }
-            //获取Proxy Class构造函数，创建Proxy代理实例。
-            return cons.newInstance(new Object[]{h});
-        } catch (IllegalAccessException|InstantiationException e) {
-            throw new InternalError(e.toString(), e);
-        } catch (InvocationTargetException e) {
-            Throwable t = e.getCause();
-            if (t instanceof RuntimeException) {
-                throw (RuntimeException) t;
-            } else {
-                throw new InternalError(t.toString(), t);
-            }
-        } catch (NoSuchMethodException e) {
-            throw new InternalError(e.toString(), e);
-        }
-    }
+public interface HelloInterface {
+    void sayHello();
+}
 ```
 
 
 
+`Hello.class`
 
+```java
+public class Hello implements HelloInterface {
+
+    @Override
+    public void sayHello() {
+        System.out.println("Hello world!");
+    }
+}
+```
+
+
+
+`ProxyHandle.class`
+
+```java
+public class ProxyHandler implements InvocationHandler {
+
+    private Object object;
+
+    public ProxyHandler(Object object) {
+        this.object = object;
+    }
+
+    //增强逻辑
+    @Override
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        System.out.println("Before invoke " + method.getName());
+        Object result = method.invoke(object, args);
+        System.out.println("After invoke " + method.getName());
+        return result;
+    }
+
+    //自定义方法返回代理类
+    public static Object getProxy(Object object) {
+        InvocationHandler handler = new ProxyHandler(object);
+        return Proxy.newProxyInstance(object.getClass().getClassLoader(), object.getClass().getInterfaces(), handler);
+    }
+}
+```
+
+
+
+`Main`
+
+```java
+@Test
+public void test2() {
+    HelloInterface hello = new Hello();
+    HelloInterface helloProxy = (HelloInterface) ProxyHandler.getProxy(hello);
+    helloProxy.sayHello();
+}
+```
+
+
+
+结果
+
+```java
+Before invoke sayHello
+Hello world!
+After invoke sayHello
+```
+
+
+
+#### CGLIB动态代理
+
+参考
+
+- [CGLib动态代理原理及实现](https://www.cnblogs.com/suizhikuo/p/13941272.html)
+
+
+
+JDK实现动态代理需要实现类通过接口定义业务方法，对于没有接口的类，如何实现动态代理呢，这就需要CGLib了。CGLib采用了非常底层的字节码技术，其原理是通过字节码技术为一个类创建子类，并在子类中采用方法拦截的技术拦截所有父类方法的调用，顺势织入横切逻辑。JDK动态代理与CGLib动态代理均是实现Spring AOP的基础。
+
+
+
+CGLib创建的动态代理对象性能比JDK创建的动态代理对象的性能高不少，但是CGLib在创建代理对象时所花费的时间却比JDK多得多，所以对于单例的对象，因为无需频繁创建对象，用CGLib合适，反之，使用JDK方式要更为合适一些。
+
+同时，由于CGLib由于是采用动态创建子类的方法，对于`final`方法，无法进行代理增强，但是能调用原来的方法
+
+
+
+区别
+
+- JDK动态代理只能对实现了接口的类生成代理，而不能针对类
+- CGLIB是针对类实现代理，主要是对指定的类生成一个子类，覆盖其中的方法因为是继承，所以该类或方法最好不要声明成final 
+
+
+
+spring
+
+1. 如果目标对象实现了接口，默认情况下会采用JDK的动态代理实现AOP 
+2. 如果目标对象实现了接口，可以强制使用CGLIB实现AOP 
+3. 如果目标对象没有实现了接口，必须采用CGLIB库，spring会自动在JDK动态代理和CGLIB之间转换
+
+如何强制使用CGLIB实现AOP？
+ （1）添加CGLIB库，SPRING_HOME/cglib/*.jar
+ （2）在spring配置文件中加入<aop:aspectj-autoproxy proxy-target-class="true"/>
 
 
 
