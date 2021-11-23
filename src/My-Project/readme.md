@@ -122,8 +122,8 @@ categories:
 - 介绍：大二下学期网页设计作品，HTML+CSS+JAVASCRIPT大杂烩，以未来星际航空交谈为主题的飞船租赁，星旅，新闻资讯，星际通行证，星际军事等信息综合类网站
 - 类型：网页设计
 - 介绍文档：无
-- 预览链接：[The Expanse](https://expanse.lifeisgg.online/)
-- Github地址：https://github.com/LifeAlsoIsGG/MyProject-WebDesign
+- 预览链接：[The Expanse](https://lifealsoisgg.github.io/MyProject-TheExpanse/index.html)
+- Github地址：[https://github.com/LifeAlsoIsGG/MyProject-WebDesign](https://github.com/LifeAlsoIsGG/MyProject-TheExpanse)
 
 :::
 

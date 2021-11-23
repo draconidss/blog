@@ -132,7 +132,7 @@ module.exports = config({
               prefix: "Java-DesignPatterns/",
               children: ["","Java-DesignPatterns-SevenPrinciple", "Java-DesignPatterns-CreationalPatterns"
                 , "Java-DesignPatterns-BehavioralPatterns", "Java-DesignPatterns-StructuralPatterns", "Java-DesignPatterns-J2eePattern"]
-            },"Java-String", "Java-reflection", "Java-IO", "Java-Date","Java-UML-ClassDiagram", "Java-NewFeature"]
+            },"Java-String", "Java-annotation&reflection", "Java-IO", "Java-Date","Java-UML-ClassDiagram", "Java-NewFeature"]
 
         },
 

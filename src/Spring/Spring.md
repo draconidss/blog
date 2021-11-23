@@ -128,7 +128,20 @@ Spinrg中通过下面来实现
 
 
 
-### IOC接口
+### 好处
+
+- 它将最小化应用程序中的代码量。
+- 它将使您的应用程序易于测试，因为它不需要单元测试用例中的任何单例或 JNDI 查找机制。
+- 它以最小的影响和最少的侵入机制促进松耦合。
+- 它支持即时的实例化和延迟加载服务。
+- 集中管理，实现类的可配置和易管理。
+- 降低了类与类之间的耦合度。
+
+
+
+
+
+### IOC容器接口
 
 - BeanFactory：Spring内部使用接口，不提供给开发人员。`懒加载`，加载配置xml解析不会创建对象，只有getBean才会创建对象
 - ApplicationContext：是BeanFactory`子接口`，功能强大，开发人员可使用，加载配置就会创建对象
@@ -137,10 +150,62 @@ Spinrg中通过下面来实现
 
 
 
-### Bean管理
+#### BeanFactory | ApplicationContext对比
 
-- 基于xml配置
-- 基于注解
+
+
+**功能上区别**
+
+`BeanFactory`是Spring里面最底层的接口，包含了各种Bean的定义，读取bean配置文档，管理bean的加载、实例化，控制bean的生命周期，维护bean之间的依赖关系。
+
+`ApplicationContext`接口作为`BeanFactory`的派生，是应用上下文，除了提供BeanFactory所具有的功能外，还提供了更完整的框架功能：
+
+
+
+> - 国际化（MessageSource）
+> - 访问资源，如URL和文件（ResourceLoader）
+> - 载入多个（有继承关系）上下文 ，使得每一个上下文都专注于一个特定的层次，比如应用的web层  
+> - 消息发送、响应机制（ApplicationEventPublisher）
+> - AOP（拦截器）
+
+
+
+**两者装载bean的区别**
+
+> - ==BeanFactory==：BeanFactory在启动的时候不会去实例化Bean，只有从容器中拿Bean的时候才会去实例化
+> - ==ApplicationContext==：ApplicationContext在启动的时候就把所有的Bean全部实例化了。它还可以为Bean配置`lazy-init=true`来让Bean延迟实例化
+
+
+
+**占用内存空间区别**
+
+相对于基本的`BeanFactory`，`ApplicationContext` 唯一的不足是占用内存空间。当应用程序配置Bean较多时，程序启动较慢。
+
+
+
+**创建方式区别**
+
+`BeanFactory`通常以`编程的方式`被创建，`ApplicationContext`还能以`声明的方式`创建，如使用ContextLoader。
+
+
+
+
+
+
+
+**我们该用BeanFactory还是ApplicationContent**
+
+> - ==延迟实例化的优点BeanFactory==：应用启动的时候占用资源很少；对资源要求较高的应用，比较有优势
+>
+> - ==不延迟实例化的优点ApplicationContent==：
+>
+>   > - 所有的Bean在启动的时候都加载，系统运行的速度快； 
+>   > - 在启动的时候所有的Bean都加载了，我们就能在系统启动的时候，尽早的发现系统中的`配置问题` 
+>   > - 建议web应用，在启动的时候就把所有的Bean都加载了。（把费时的操作放到系统启动中完成）
+
+
+
+
 
 
 
@@ -199,29 +264,65 @@ UserService userService = context.getBean("userService", UserService.class);
 
 
 
-### Bean生命周期管理(工厂bean)
+#### 自动装配
 
-spring有两种类型，一种是上面的普通bean，另一种是工厂bean普通bean，在配置文件中，定义的bean类型就是返回类型而工厂bean返回类型可以不同
-
-- 创建类，让这个类作为工厂bean，实现接口FactoryBean
-
-- 实现接口内的方法，定义返回的bean类型
+参考：[https://www.cnblogs.com/bear7/p/12531016.html](https://www.cnblogs.com/bear7/p/12531016.html)
 
 
 
-### Bean作用域
-
-在Spring中默认是单例，一共有五种，在Spring中bean标签的scope属性设置。
-
-- singleton：单例模式，使用 singleton 定义的 Bean 在 Spring 容器中只有一个实例，这也是 Bean 默认的作用域。
-- prototype：原型模式，每次通过 Spring 容器获取 prototype 定义的 Bean 时，容器都将创建一个新的 Bean 实例。
-- request：在一次 HTTP 请求中，容器会返回该 Bean 的同一个实例。而对不同的 HTTP 请求，会返回不同的实例，该作用域仅在当前 HTTP Request 内有效。
-- session：在一次 HTTP Session 中，容器会返回该 Bean 的同一个实例。而对不同的 HTTP 请求，会返回不同的实例，该作用域仅在当前 HTTP Session 内有效。
-- global Session：在一个全局的 HTTP Session 中，容器会返回该 Bean 的同一个实例。该作用域仅在使用 portlet context 时有效。
 
 
+### 基于注解：声明为bean
 
-在上述五种作用域中，singleton 和 prototype 是最常用的两种，接下来将对这两种作用域进行详细讲解。
+我们⼀般使⽤ `@Autowired` 注解⾃动装配 bean，要想把类标识成可⽤于 `@Autowired` 注解⾃动装 配的 bean 的类,采⽤以下注解可实现： 
+
+- @Component ：通⽤的注解，可标注任意类为 Spring 组件。如果⼀个Bean不知道属于哪个 层，可以使⽤ @Component 注解标注。 
+- @Repository : 对应持久层即 Dao 层，主要⽤于数据库相关操作。 
+- @Service : 对应服务层，主要涉及⼀些复杂的逻辑，需要⽤到 Dao层。 
+- @Controller : 对应 Spring MVC 控制层，主要⽤户接受⽤户请求并调⽤ Service 层返回数 据给前端页面，也可用@RestController
+
+
+
+### 基于注解：属性注入@Autowired和@Qualifier
+
+
+
+
+
+
+
+## Spring Bean
+
+
+
+::: tip 参考
+
+
+
+- https://www.awaimai.com/2596.html
+- https://blog.csdn.net/qq_39411208/article/details/88395875
+- [Spring IOC中Bean的作⽤域与⽣命周期](https://blog.csdn.net/qq_43709204/article/details/109991097)
+- https://blog.csdn.net/kongmin_123/article/details/82048392
+
+
+
+:::
+
+
+
+### 什么是bean
+
+Spring 官方文档对 Bean 的解释是：
+
+> In Spring, the objects that form the backbone of your application and that are managed by the Spring IoC container are called beans. A bean is an object that is instantiated, assembled, and otherwise managed by a Spring IoC container.
+
+翻译过来就是：
+
+> 在 Spring 中，构成应用程序`主干`并由`Spring IoC容器`管理的`对象`称为`bean`。bean是一个由`Spring IoC`容器实例化、组装和管理的对象。
+
+
+
+Bean也是基于用户提供容器的配置元数据创建
 
 
 
@@ -234,6 +335,16 @@ spring有两种类型，一种是上面的普通bean，另一种是工厂bean普
 
 
 ![image-20211120194324042](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Spring/bean%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png)
+
+
+
+具体过程
+
+![Spring bean 的生命周期2](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Spring-Interview/spring%20bean%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F2.jpg)
+
+
+
+![Spring bean 的生命周期](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Spring-Interview/spring%20bean%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F3.jpg)
 
 
 
@@ -253,34 +364,16 @@ spring有两种类型，一种是上面的普通bean，另一种是工厂bean普
 
 
 
+#### 各种接口方法分类
 
+Bean的完整生命周期经历了各种方法调用，这些方法可以划分为以下几类：
 
-## 3. IoC（控制反转）| DC（依赖注入）
+::: info  
 
- 
-
-
-
-Spring 时代我们⼀般通过 XML ⽂件来配置 Bean，后来开发⼈员觉得 XML ⽂件来配置不太好，于是 SpringBoot 注解配置就慢慢开始流⾏起来。
-
-
-
-::: tip 参考
-
-
-
-- https://www.zhihu.com/question/23277575/answer/169698662
-- https://www.cnblogs.com/xdp-gacl/p/4249939.html
-- https://www.awaimai.com/2596.html
-- [理解Spring的AOP和IOC实现原理](https://www.jianshu.com/p/78ba8bafb90a)
-
-
-
-IOC源码阅读
-
-- https://javadoop.com/post/spring-ioc
-
-
+- Bean自身的方法：这个包括了Bean本身调用的方法和通过配置文件中\<bean\>的`init-method`和`destroy-method`指定的方法
+- Bean级生命周期接口方法：这个包括了BeanNameAware、BeanFactoryAware、InitializingBean和DiposableBean这些接口的方法
+- 容器级生命周期接口方法：这个包括了InstantiationAwareBeanPostProcessor 和 BeanPostProcessor 这两个接口实现，一般称它们的实现类为“后处理器”。
+- 工厂后处理器接口方法：这个包括了AspectJWeavingEnabler, ConfigurationClassPostProcessor, CustomAutowireConfigurer等等非常有用的工厂后处理器接口的方法。工厂后处理器也是容器级的。在应用上下文装配配置文件之后立即调用。
 
 :::
 
@@ -288,301 +381,13 @@ IOC源码阅读
 
 
 
-### 3.1 运行原理/设计模式
 
-Spring IOC容器通过`xml`,注解等其它方式配置`类及类之间的依赖关系`，完成了`对象的创建和依赖的管理注入`。实现IOC的主要原理是`工厂模式`加`反射机制`。
 
 
 
-![七大模块](./images/Spring-bacisNote/IOC_design_pattern.jpg)
 
 
-
-
-
-### 3.2 使用IOC的好处
-
-::: info 使用IOC的好处
-
-- 它将最小化应用程序中的代码量。
-- 它将使您的应用程序易于测试，因为它不需要单元测试用例中的任何单例或 JNDI 查找机制。
-- 它以最小的影响和最少的侵入机制促进松耦合。
-- 它支持即时的实例化和延迟加载服务。
-- 集中管理，实现类的可配置和易管理。
-- 降低了类与类之间的耦合度。
-
-:::
-
-
-
-### 3.3 依赖注入的方式
-
-
-
-::: tip 参考
-
-- [三种依赖注入的方式](https://www.cnblogs.com/levontor/p/11040029.html)
-
-:::
-
-
-
-::: info 依赖注入的方式
-
-- 构造函数方法注入
-- Setter方法注入
-- 接口注入
-
-
-
-在Spring Framwork中，仅使用`构造函数`和`setter`注入
-
-:::
-
-
-
-
-
-### 3.4 Spring IOC 容器 | BeanFactory | ApplicationContext
-
-
-
-::: tip 参考
-
-- https://blog.csdn.net/pythias_/article/details/82752881
-
-:::
-
-
-
-#### 3.4.1 Spring有多少种IOC容器
-
-::: info Spring有多少种IOC容器
-
-- BeanFactory：就像一个包含 bean 集合的工厂类。它会在客户端要求时实例化 bean。
-- ApplicationContext ：接口扩展了 BeanFactory 接口。它在 BeanFactory 基础上提供了一些额外的功能。
-
-
-
-`BeanFactory`和`ApplicationContext`是Spring的两大核心接口，都可以当做Spring的容器。其中`ApplicationContext`是`BeanFactory`的子接口。
-
-:::
-
-
-
-
-
-#### 3.4.2 BeanFactory | ApplicationContext对比
-
-::: info BeanFactory | ApplicationContext对比
-
-
-
-**功能上区别**
-
-`BeanFactory`是Spring里面最底层的接口，包含了各种Bean的定义，读取bean配置文档，管理bean的加载、实例化，控制bean的生命周期，维护bean之间的依赖关系。
-
-`ApplicationContext`接口作为`BeanFactory`的派生，是应用上下文，除了提供BeanFactory所具有的功能外，还提供了更完整的框架功能：
-
-
-
-> - 国际化（MessageSource）
-> - 访问资源，如URL和文件（ResourceLoader）
-> - 载入多个（有继承关系）上下文 ，使得每一个上下文都专注于一个特定的层次，比如应用的web层  
-> - 消息发送、响应机制（ApplicationEventPublisher）
-> - AOP（拦截器）
-
-
-
-**两者装载bean的区别**
-
-> - ==BeanFactory==：BeanFactory在启动的时候不会去实例化Bean，只有从容器中拿Bean的时候才会去实例化
-> - ==ApplicationContext==：ApplicationContext在启动的时候就把所有的Bean全部实例化了。它还可以为Bean配置`lazy-init=true`来让Bean延迟实例化
-
-
-
-**占用内存空间区别**
-
-相对于基本的`BeanFactory`，`ApplicationContext` 唯一的不足是占用内存空间。当应用程序配置Bean较多时，程序启动较慢。
-
-
-
-**创建方式区别**
-
-`BeanFactory`通常以`编程的方式`被创建，`ApplicationContext`还能以`声明的方式`创建，如使用ContextLoader。
-
-
-
-
-
-
-
-**我们该用BeanFactory还是ApplicationContent**
-
-> - ==延迟实例化的优点BeanFactory==：应用启动的时候占用资源很少；对资源要求较高的应用，比较有优势
->
-> - ==不延迟实例化的优点ApplicationContent==：
->
->   > - 所有的Bean在启动的时候都加载，系统运行的速度快； 
->   > - 在启动的时候所有的Bean都加载了，我们就能在系统启动的时候，尽早的发现系统中的`配置问题` 
->   > - 建议web应用，在启动的时候就把所有的Bean都加载了。（把费时的操作放到系统启动中完成）
-
-
-
-:::
-
-
-
-## 4. AOP（Aspect-Oriented Programming）：面向切面编程
-
-
-
-::: tip 参考
-
-- https://www.cnblogs.com/joy99/p/10941543.html
-- [SpringAOP详细配置与使用](https://blog.csdn.net/u010890358/article/details/80640433)
-- https://www.jianshu.com/p/78ba8bafb90a
-
-:::
-
-
-
-`OOP`面向对象，允许开发者定义纵向的关系，但并适用于定义横向的关系，导致了大量代码的重复，而不利于各个模块的重用。
-
-
-
-`AOP(Aspect-Oriented Programming)`:⾯向切⾯编程)能够将那些与业务⽆关，却为业务模块所共同调⽤的逻辑或责任（例如`事务处理`、`⽇志管理`、`权限控制`等）封装起来，便于减少系统的重复代码，降低模块间的耦合度，并有利于未来的可拓展性和可维护性。 
-
-
-
-
-
-### 4.1 使用AOP的好处
-
-::: info 好处
-
-- 降低模块的耦合度
-- 使系统容易扩展
-- 提高代码复用性
-
-:::
-
-
-
-### 4.2 AOP的基本概念
-
-::: info AOP基本概念
-
-| 名称                | 作用                                                         |
-| ------------------- | ------------------------------------------------------------ |
-| 连接点（JoinPoint） | 需要在程序中插入横切关注点的点，连接点可能是在类初始化、方法调用、字段调用或处理异常等等。Spring中只支持方法执行连接点。 |
-| 切入点（Pointcut）  | 一组相关连接点的集合。                                       |
-| 通知（Advice）      | 在连接点上执行的行为，增强提供了在AOP中需要在切入点所选择的连接点处进行扩展现有行为的手段。包括前置增强（before advice）、后置增强 (after advice)、环绕增强 |
-| 切面（Aspect）      | 通知和切入点的结合。                                         |
-| 织入（Weaving）     | 织入是一个过程，是将切面应用到目标对象从而创建出AOP代理对象的过程。 |
-| 代理（Proxy）       | 通过代理方式来对目标对象应用切面。AOP代理可以用JDK动态代理或CGLIB代理实现。 |
-| 目标对象（Target）  | 需要被织入关注点的对象。即被代理的对象。                     |
-
-:::
-
-
-
-
-
-### 4.3 AOP运行原理/设计模式
-
-
-
-![七大模块](./images/Spring-bacisNote/AOP_operational_principle.jpg)
-
-实现AOP的主要设计模式就是动态代理。
-Spring的动态代理有两种：一是`JDK的动态代理`；另一个是`cglib动态代理`。
-
-
-
-
-
-
-
-
-
-### Spring AOP 和 AspectJ AOP 有什么区别？
-
-Spring AOP 属于运⾏时增强，⽽ AspectJ 是编译时增强。 Spring AOP 基于代理(Proxying)，⽽ AspectJ 基于字节码操作(Bytecode Manipulation)。 
-
-Spring AOP 已经集成了 AspectJ ，AspectJ 应该算的上是 Java ⽣态系统中最完整的 AOP 框架了。 AspectJ 相⽐于 Spring AOP 功能更加强⼤，但是 Spring AOP 相对来说更简单。
-
- 如果我们的切⾯⽐᫾少，那么两者性能差异不⼤。但是，当切⾯太多的话，最好选择 AspectJ ，它⽐ Spring AOP 快很多。
-
-
-
-
-
-
-
-## 5. Spring Bean
-
-
-
-::: tip 参考
-
-
-
-- https://www.awaimai.com/2596.html
-- https://blog.csdn.net/qq_39411208/article/details/88395875
-- [Spring IOC中Bean的作⽤域与⽣命周期](https://blog.csdn.net/qq_43709204/article/details/109991097)
-- https://blog.csdn.net/kongmin_123/article/details/82048392
-
-
-
-:::
-
-
-
-### 5.1 什么是bean
-
-Spring 官方文档对 Bean 的解释是：
-
-> In Spring, the objects that form the backbone of your application and that are managed by the Spring IoC container are called beans. A bean is an object that is instantiated, assembled, and otherwise managed by a Spring IoC container.
-
-翻译过来就是：
-
-> 在 Spring 中，构成应用程序`主干`并由`Spring IoC容器`管理的`对象`称为`bean`。bean是一个由`Spring IoC`容器实例化、组装和管理的对象。
-
-
-
-Bean也是基于用户提供容器的配置元数据创建
-
-
-
-### 5.2 BeanDefinition
-
-`BeanDefinition`表示Bean定义，Spring根据`BeanDfinition`来创建Bean对象，`BeanDfinition`有很多属性用来描述Bean。
-
-
-
-| 属性           | 描述                                                         |
-| -------------- | ------------------------------------------------------------ |
-| beanClass      | 表示一个bean类型。Spring在创建bean过程根据此属性来实例化得到对象 |
-| scope          | 作用域                                                       |
-| isLazy         | 是否懒加载。表示一个bean是不是需要懒加载,原型bean的 isLazy属性不起作用, 懒加载的单例bean,会在第一次 getBean的时候生成该bean,非懒加 载的单例bean,则会在 Spring启动过程中直接生成好。 |
-| dependsOn      | 表示一个bean在创建之前所依赖的其他bean,在一个bean创建之前,它所依赖的这些bean得先全部创建好。 |
-| primary        | 表示一个bean是主bean。在Spng中一个类型可以有多个bean对象, 在进行依赖注入时,如果根据类型找到了多个bean,此时会判断这些 bean中是否存在一个主bean,如果存在,则直接将这个bean注入给属性 |
-| initMethodName | 表示一个bean的初始化方法。一个bean的生命周期过程中有一个步骤叫初始化,Spng会在这个步骤中去调用bean的初始化方法,初始化逻辑由程序员自己控制,表示程序员可以自定义逻辑对bean进行加 |
-
-
-
-### 5.3 BeanFactory
-
-`BeanFactory`是创建Bean的Spring容器。
-
-`BeanFactory`利用`BeanDefinition`作为模板来生成Bean对象
-
-
-
-
-
-### 5.2 Spring bean中五种作用域?
+### Spring bean中五种作用域?
 
 | 作用域      | 描述                                                         |
 | ----------- | ------------------------------------------------------------ |
@@ -598,7 +403,7 @@ Bean也是基于用户提供容器的配置元数据创建
 
 
 
-#### 5.1.1 singleton 作用域
+#### singleton 作用域
 
 
 
@@ -743,7 +548,7 @@ Bean 对象存在于缓存中，使⽤时不⽤再去实例化bean，加快程�
 
 
 
-#### 5.1.2 prototype 作⽤域
+#### prototype 作⽤域
 
 
 
@@ -757,7 +562,7 @@ Bean 对象存在于缓存中，使⽤时不⽤再去实例化bean，加快程�
 
 
 
-#### 5.1.3 request 请求作用域
+#### request 请求作用域
 
 Spring容器会在每次用到`loginAction`来处理每个HTTP请求的时候都会创建一个新的`LoginAction`实例。也就是说，`loginAction`Bean的作用域是HTTP `Request`级别的。
 
@@ -767,7 +572,7 @@ Spring容器会在每次用到`loginAction`来处理每个HTTP请求的时候都
 
 
 
-#### 5.1.4 session 会话作用域
+#### session 会话作用域
 
 Spring容器会在每次调用到`userPreferences时，`在一个单独的HTTP会话周期来创建一个新的`UserPreferences`实例。换言之`userPreferences`Bean的作用域是HTTP `Session`级别的。
 
@@ -777,7 +582,7 @@ Session中所有http请求共享同一个请求的bean实例。Session结束后�
 
 
 
-#### 5.1.5 application 全局作用域
+#### application 全局作用域
 
 Spring容器会在整个web应用范围使用到`appPreferences`的时候创建一个新的`AppPreferences`的实例。也就是说，`appPreferences`Bean是在`ServletContext`级别的，作为常规的ServletContext属性。这种作用域在一些程度上来说和Spring的单例作用域相似，但是也有如下不同之处：
 
@@ -794,131 +599,28 @@ Spring容器会在整个web应用范围使用到`appPreferences`的时候创建�
 
 
 
+### BeanDefinition
 
+`BeanDefinition`表示Bean定义，Spring根据`BeanDfinition`来创建Bean对象，`BeanDfinition`有很多属性用来描述Bean。
 
-### 5.3 Spring 中的单例 bean 的线程安全问题了解吗？
 
-大部分时候我们并没有在系统中使用多线程，所以很少有人会关注这个问题。
 
-单例 bean 存在线程问题，主要是因为当多个线程操作同一个对象的时候，对这个对象的非静态成员变量的写操作会存在线程安全问题。
-
-常见的有两种解决办法：
-
-::: info 常见的有两种解决办法
-
-1. 在Bean对象中尽量避免定义可变的成员变量（不太现实）。
-2. 在类中定义一个`ThreadLocal`成员变量，将需要的可变成员变量保存在 `ThreadLocal` 中（推荐的一种方式）。
-
-:::
-
-
-
-
-
-### 5.4 @Component 和 @Bean 的相同和区别是什么？
-
-
-
-`@Component`和`@Bean`都是用来注册Bean并装配到`Spring容器`中，但是`Bean`比`Component`的自定义性更强。可以实现一些Component实现不了的自定义加载类。
-
-
-
-::: info @Component 和 @Bean 的区别是什么
-
-- 作⽤对象不同: @Component 注解作⽤于`类`，⽽ @Bean 注解作⽤于`⽅法`。 
-
-- @Component （@Controller、@Service、@Repository）通常是通过类路径扫描来⾃动侦测以及⾃动装配到Spring容器中（我们可以使⽤ `@ComponentScan` 注解定义要扫描的路径从中找出标识了需要装配的类⾃动装配到 Spring 的 bean 容器中）。 @Bean 注解通常是我们在标有该注解的⽅法中定义产⽣这个 bean, @Bean告诉了Spring这是某个类的示例，当我需要⽤它的时候还给我。 
-
-- @Bean 注解⽐ Component 注解的⾃定义性更强，⽽且很多地⽅我们只能通过 @Bean 注解 来注册bean。⽐如当我们引⽤第三⽅库中的类需要装配到 Spring 容器时，则只能通过 @Bean 来实现
-
-:::
-
-
-
-#### @Bean 注解使⽤示例：
-
-```java
-@Configuration
-public class AppConfig {
- @Bean
- public TransferService transferService() {
- return new TransferServiceImpl();
- }
-}
-```
-
-上⾯的代码相当于下⾯的 xml 配置
-
-```xml
-<beans>
- <bean id="transferService" class="com.acme.TransferServiceImpl"/>
-</beans>
-```
-
-
-
-
-
-### 5.5 将⼀个类声明为Spring的 bean 的注解有哪些
-
-我们⼀般使⽤ `@Autowired` 注解⾃动装配 bean，要想把类标识成可⽤于 `@Autowired` 注解⾃动装 配的 bean 的类,采⽤以下注解可实现： 
-
-
-
-::: info @Autowired
-
-- @Component ：通⽤的注解，可标注任意类为 Spring 组件。如果⼀个Bean不知道属于哪个 层，可以使⽤ @Component 注解标注。 
-- @Repository : 对应持久层即 Dao 层，主要⽤于数据库相关操作。 
-- @Service : 对应服务层，主要涉及⼀些复杂的逻辑，需要⽤到 Dao层。 
-- @Controller : 对应 Spring MVC 控制层，主要⽤户接受⽤户请求并调⽤ Service 层返回数 据给前端⻚⾯。
-
-:::
-
-
-
-
-
-
-
-### 5.6 Spring bean 的生命周期
-
-
-
-::: tip 参考
-
-- https://www.zhihu.com/question/38597960
-- [Spring Bean的生命周期（非常详细）](https://www.cnblogs.com/zrtqsk/p/3735273.html)
-
-:::
-
-
-
-Bean生命周期描述的是 Spring中一个Bean创建过程和销毁过程中所经历的步骤,其中Bean创建过程是重点。程序员可以利用Bean生命周期机制对Bean进行自定义加工。
-
-
-
-![Spring bean 的生命周期](./images/Spring-bacisNote/bean_life_cycle.jpg)
-
-
-
-1. **BeanDefinition定义**：BeanDefinition表示Bean定义,它定义了某个Bean的类型, Spring就是利用Bean Definition来创建Bean的,比如需要利用 Bean Definition中 bean class属性确定Bean的类型,从而实例化出来对象。
-2. **构造方法推断**：一个Ben中可以有多个构造方法,此时就需要 Spring来判断到底使用哪个构造方法,这个过程是比较复杂的,篇幅有限,不展开介绍。通过构造方法推断之后确定一个构造方法后,就可以利用构造方法实例化得到一个对象了。
-3. **实例化和构造方法反射得到对象**：通过构造方法反射得到一个实例化对象,在 Spring中,可以通过Bean PostProcessor机制对实例化进行干预。
-4. **属性填充**：实例化所得到的对象,是“不完整”的对象,“不完整”的意思是该对象中的某些属性还没有进行属性填充,也就是Spng还没有自动给某些属性赋值,属性填充就是我们通常说的自动注入、依赖注入。
-5. **初始化**：在一个对象的属性填充之后, Spring提供了初始化机制,程序员可以利用初始化机制对Bean进行自定义加工,比如可以利用 Initializing Bean接口来对Bean中的其他属性进行赋值,或对Bean中的某些属性进行校验。
-6. **通过AOP生成代理对象**：初始化后是Bean创建生命周期中最后一个步骤,我们常说的AOP机制就是在这个步骤中通过 Bean PostProcessor机制实现的,初始化之后得到的对象才是真正的Bean对象。
-
-
-
-
-
-| 作用域         | 描述                                                         |
+| 属性           | 描述                                                         |
 | -------------- | ------------------------------------------------------------ |
-| BeanDefinition |                                                              |
-| 构造方法推断   | 每次从容器中调用Bean时，都返回一个新的实例，即每次调用getBean()时，相当于执行newXxxBean()。 |
-| request        | 每次HTTP请求都会创建一个新的Bean，该作用域仅适用于web的Spring WebApplicationContext环境。 |
-| session        | 同一个HTTP Session共享一个Bean，不同Session使用不同的Bean。该作用域仅适用于web的Spring WebApplicationContext环境。 |
-| application    | 限定一个Bean的作用域为`ServletContext`的生命周期。该作用域仅适用于web的Spring WebApplicationContext环境。 |
+| beanClass      | 表示一个bean类型。Spring在创建bean过程根据此属性来实例化得到对象 |
+| scope          | 作用域                                                       |
+| isLazy         | 是否懒加载。表示一个bean是不是需要懒加载,原型bean的 isLazy属性不起作用, 懒加载的单例bean,会在第一次 getBean的时候生成该bean,非懒加 载的单例bean,则会在 Spring启动过程中直接生成好。 |
+| dependsOn      | 表示一个bean在创建之前所依赖的其他bean,在一个bean创建之前,它所依赖的这些bean得先全部创建好。 |
+| primary        | 表示一个bean是主bean。在Spng中一个类型可以有多个bean对象, 在进行依赖注入时,如果根据类型找到了多个bean,此时会判断这些 bean中是否存在一个主bean,如果存在,则直接将这个bean注入给属性 |
+| initMethodName | 表示一个bean的初始化方法。一个bean的生命周期过程中有一个步骤叫初始化,Spng会在这个步骤中去调用bean的初始化方法,初始化逻辑由程序员自己控制,表示程序员可以自定义逻辑对bean进行加 |
+
+
+
+### BeanFactory
+
+`BeanFactory`是创建Bean的Spring容器。
+
+`BeanFactory`利用`BeanDefinition`作为模板来生成Bean对象
 
 
 
@@ -926,36 +628,7 @@ Bean生命周期描述的是 Spring中一个Bean创建过程和销毁过程中�
 
 
 
-![Spring bean 的生命周期](./images/Spring-bacisNote/bean_lifetime.png)
-
-
-
-![Spring bean 的生命周期2](./images/Spring-bacisNote/bean_lifetime_2.jpg)
-
-
-
-若容器注册了以上各种接口，程序那么将会按照以上的流程进行。下面将仔细讲解各接口作用。
-
-
-
-#### 各种接口方法分类
-
-Bean的完整生命周期经历了各种方法调用，这些方法可以划分为以下几类：
-
-::: info  
-
-- Bean自身的方法：这个包括了Bean本身调用的方法和通过配置文件中\<bean\>的`init-method`和`destroy-method`指定的方法
-- Bean级生命周期接口方法：这个包括了BeanNameAware、BeanFactoryAware、InitializingBean和DiposableBean这些接口的方法
-- 容器级生命周期接口方法：这个包括了InstantiationAwareBeanPostProcessor 和 BeanPostProcessor 这两个接口实现，一般称它们的实现类为“后处理器”。
-- 工厂后处理器接口方法：这个包括了AspectJWeavingEnabler, ConfigurationClassPostProcessor, CustomAutowireConfigurer等等非常有用的工厂后处理器接口的方法。工厂后处理器也是容器级的。在应用上下文装配配置文件之后立即调用。
-
-:::
-
-
-
-
-
-### 5.7 Spring提供了哪些bean配置方式
+### Spring提供了哪些bean配置方式
 
 ::: tip 参考
 
@@ -975,7 +648,7 @@ Bean的完整生命周期经历了各种方法调用，这些方法可以划分�
 
 
 
-### 5.8 bean循环依赖问题
+### bean循环依赖问题
 
 ::: tip 参考
 
@@ -990,11 +663,6 @@ Bean的完整生命周期经历了各种方法调用，这些方法可以划分�
 
 
 
-## 6. Spring控制器是什么设计模式，有什么问题，为什么是这个模式
-
-
-
-是**单例模式**，所以在多线程访问的时候有线程安全问题不要用同步会影晌性能的。解决方案是在控制器里面不能写字段成员变量。使用单例模式是为了性能（无需频繁初始化），同时也没有必要使用多例模式。万一必须要定义一个非静态成员变量时候，则通过注解`@Scope("prototype")`，将其设置为多例模式
 
 
 
@@ -1002,362 +670,174 @@ Bean的完整生命周期经历了各种方法调用，这些方法可以划分�
 
 
 
-## 7. Spring用到了哪些设计模式
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## AOP（Aspect-Oriented Programming）：面向切面编程
+
+
 
 ::: tip 参考
 
-- [Spring设计模式](https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247485303&idx=1&sn=9e4626a1e3f001f9b0d84a6fa0cff04a&chksm=cea248bcf9d5c1aaf48b67cc52bac74eb29d6037848d6cf213b0e5466f2d1fda970db700ba41&token=255050878&lang=zh_CN%23rd)
-- https://zhuanlan.zhihu.com/p/114244039
+- https://www.cnblogs.com/joy99/p/10941543.html
+- [SpringAOP详细配置与使用](https://blog.csdn.net/u010890358/article/details/80640433)
+- https://www.jianshu.com/p/78ba8bafb90a
 
 :::
 
 
 
-- 1.简单工厂(非23种设计模式中的一种)
-- 2.工厂方法
-- 3.单例模式
-- 4.适配器模式
-- 5.装饰器模式
-- 6.代理模式
-- 7.观察者模式
-- 8.策略模式
-- 9.模版方法模式
+`OOP`面向对象，允许开发者定义纵向的关系，但并适用于定义横向的关系，导致了大量代码的重复，而不利于各个模块的重用。
 
 
 
+`AOP(Aspect-Oriented Programming)`:⾯向切⾯编程)能够将那些与业务⽆关，却为业务模块所共同调⽤的逻辑或责任（例如`事务处理`、`⽇志管理`、`权限控制`等）封装起来，便于减少系统的重复代码，降低模块间的耦合度，并有利于未来的可拓展性和可维护性。 
 
 
-## Spring注解
 
 
 
-注解本质是一个继承了 Annotation的特殊接口,其具体实现类是Java运行时生成的动态代理类。我们通过反射获取注解时,返回的是Java运行时生成的动态代理对象。通过代理对象调用自定义注解的方法,会最终调用AnnotationInvocationHandler的 invoke方法。该方法会从 membervalues这个Map中索引出对应的值。而 membervalues的来源是Java常量池
+### 使用AOP的好处
 
+::: info 好处
 
+- 降低模块的耦合度
+- 使系统容易扩展
+- 提高代码复用性
 
+:::
 
 
-Controller类使用继承@Component注解的方法，将其以单例的形式放入spring容器，如果仔细看的话会发现每个注解里面都有一个默认的value()方法，它的作用是为当前的注解声明一个名字，一般默认为类名，然后spring会通过配置文件中的context:component-scan的配置，进行如下操作：
 
+### AOP的基本概念
 
+::: info AOP基本概念
 
-- 使用asm技术扫描.class文件，并将包含@Component及元注解为@Component的注解@Controller、@Service、@Repository或者其他自定义的的bean注册到beanFactory中，
-- 然后spring在注册处理器
-- 实例化处理器，然后将其放到beanPostFactory中，然后我们就可以在类中进行使用了。
-- 创建bean时，会自动调用相应的处理器进行处理。
+| 名称                | 作用                                                         |
+| ------------------- | ------------------------------------------------------------ |
+| 连接点（JoinPoint） | 需要在程序中插入横切关注点的点，连接点可能是在类初始化、方法调用、字段调用或处理异常等等。Spring中只支持方法执行连接点，通俗来说就是可以被增强的方法 |
+| 切入点（Pointcut）  | 一组相关连接点的集合，通俗来说就是实际被增强的方法           |
+| 通知（Advice）      | 在连接点上执行的增强行为逻辑，增强提供了在AOP中需要在切入点所选择的连接点处进行扩展现有行为的手段。包括前置通知、后置通知 、环绕通知、异常通知、最终通知 |
+| 切面（Aspect）      | 通知和切入点的结合，吧通知应用到切入点的过程                 |
+| 织入（Weaving）     | 织入是一个过程，是将切面应用到目标对象从而创建出AOP代理对象的过程。 |
+| 代理（Proxy）       | 通过代理方式来对目标对象应用切面。AOP代理可以用JDK动态代理或CGLIB代理实现。 |
+| 目标对象（Target）  | 需要被织入关注点的对象。即被代理的对象。                     |
 
+:::
 
 
 
 
-### SpringMVC常用注解
 
+### AOP运行原理/设计模式
 
 
-参考
 
-> - https://www.cnblogs.com/leskang/p/5445698.html
+![七大模块](./images/Spring-bacisNote/AOP_operational_principle.jpg)
 
+实现AOP的主要设计模式就是动态代理。
+Spring的动态代理有两种：一是`JDK的动态代理`；另一个是`cglib动态代理`。
 
 
-- **@Controller**
 
-  > `@Controller`注解在类上，表明这个类是Spring MVC里的`Controller`，将其声明为Spring的一个Bean，`DispatchServlet`会自动扫描注解了此注解的类，并将Web请求映射到注解了`@RequestMapping`的方法上，需要注意的是，在Spring MVC声明控制器Bean的时候，只能使用@Controller。
+#### 使用场景
 
+1. 如果目标对象实现了接口，默认情况下会采用JDK的动态代理实现AOP ，可以强制使用CGLIB实现AOP 
+2. 如果目标对象没有实现了接口，必须采用CGLIB库，spring会自动在JDK动态代理和CGLIB之间转换
 
+如何强制使用CGLIB实现AOP？
 
-- **@RestController**
+- 添加CGLIB库，SPRING_HOME/cglib/*.jar
+- 在spring配置文件中加入<aop:aspectj-autoproxy proxy-target-class="true"/>
 
-  > `@RestController`是一个组合注解，组合了`@Controller`和`@ResponseBody`，意味着当只开发一个和页面交互数据的控制的时候，需要使用此注解。 若没有此注解，要想实现上述功能，则需自己在代码中加`@Controller`和`@ResponseBody`两个注解。
 
 
+#### 区别
 
-- **@RequestMapping**
+- JDK动态代理只能对实现了接口的类生成代理，而不能针对类
+- CGLIB是针对类实现代理，主要是对指定的类生成一个子类，覆盖其中的方法因为是继承，所以该类或方法最好不要声明成final 
 
-  > `@RequestMapping`注解是用来映射Web请求（访问路径和参数）、处理类和方法的。它可以注解在类和方法上。注解在方法上的`@RequestMapping`路径会继承注解在类上的路径，`@RequestMapping`支持Servlet的request和response作为参数，也支持对它们的媒体类型进行配置。
 
-  
 
-- **@ResponseBody**
+### AspectJ
 
-  > `@ResponseBody`支持将返回值放在`response`体内，而不是返回一个页面。我们很多机遇`Ajax`的程序，可以以此注解返回数据而不是返回页面；此注解可以放在返回值或者方法上。
+- 在@Configuration标记的类上加@EnableAspectJAutoProxy注解
+- 在代理类中加@Component和@AspectJ并自定义通知方法
 
-- **@RequestBody**
-
-  > `@RequestBody`允许`request`的参数在`request`体中，而不是在直接链接在地址后面。此注解放在参数前。
-
-  
-
-- **@PathVariable**
-
-  > `@PathVariable` 用来接收路径参数，如`/news/001`,可接收001作为参数，此注解放置在参数前。
-
-  
-
-- **@Resource和@Autowired**
-
-  > @Resource和@Autowired都是做bean的注入时使用，其实@Resource并不是Spring的注解，它的包是javax.annotation.Resource，需要导入，但是Spring支持该注解的注入。
-
-  
-
-- **@Repository**
-
-  > 用于注解dao层，在daoImpl类上面注解。
-
-
-
-### @Controller控制器
-
-在SpringMVC 中，控制器Controller 负责处理由`DispatcherServlet` 分发的请求，它把用户请求的数据经过业务处理层处理之后封装成一个`Model` ，然后再把该`Model` 返回给对应的`View` 进行展示。在`SpringMVC` 中提供了一个非常简便的定义`Controller` 的方法，你无需继承特定的类或实现特定的接口，只需使用`@Controller` 标记一个类是Controller ，然后使用`@RequestMapping` 和@`RequestParam` 等一些注解用以定义URL 请求和Controller 方法之间的映射，这样的Controller 就能被外界访问到。此外Controller 不会直接依赖于`HttpServletRequest` 和`HttpServletResponse` 等HttpServlet 对象，它们可以通过Controller 的方法参数灵活的获取到。
-
-@Controller 用于标记在一个类上，使用它标记的类就是一个SpringMVC Controller 对象。分发处理器将会扫描使用了该注解的类的方法，并检测该方法是否使用了@RequestMapping 注解。@Controller 只是定义了一个控制器类，而使用@RequestMapping 注解的方法才是真正处理请求的处理器。单单使用@Controller 标记在一个类上还不能真正意义上的说它就是SpringMVC 的一个控制器类，因为这个时候Spring 还不认识它。那么要如何做Spring 才能认识它呢？这个时候就需要我们把这个控制器类交给Spring 来管理。
-
-
-
-
-
-单独使⽤ `@Controller` 不加 `@ResponseBody` 的话⼀般使⽤在要返回⼀个视图的情况，这种情况 属于比较传统的Spring MVC 的应⽤，对应于`前后端不分离`的情况。
-
-
-
-
-
-![@Controller](./images/SpringMVC-annotation/@Controller.jpg)
-
-
-
-
-
-
-
-
-
-### @ResponseBody
-
-作用： 该注解用于将Controller的方法返回的对象，通过适当的HttpMessageConverter转换为指定格式后，写入到`Response`对象的`body`数据区。
-
-使用时机：返回的数据不是`html`标签的页面，而是其他某种格式的数据时（如`json`、`xml`等）使用；
-
-
-
-
-
-
-
-### @RestController
-
-可以发现，`@RestController`注解里面包含了`@Controller`注解和@`ResponseBody`注解，`@ResponseBody` 注解是将返回的数据结构转换为 `JSON` 格式，所以说可以这么理解：@RestController = @Controller + @ResponseBody ，省了很多事，我们使用 @RestController 之后就不需要再使用 @Controller 了。
-
-
-
-![@RestController](./images/SpringMVC-annotation/@RestController.jpg)
-
-
-
-
-
-
-
-### @RequestMapping请求映射
-
-RequestMapping是一个用来处理请求地址映射的注解，可用于类或方法上。用于类上，表示类中的所有响应请求的方法都是以该地址作为父路径。`@RequestMapping`注解是用来映射Web请求（访问路径和参数）、处理类和方法的。它可以注解在类和方法上。注解在方法上的`@RequestMapping`路径会继承注解在类上的路径，`@RequestMapping`支持Servlet的`request`和`response`作为参数，也支持对它们的媒体类型进行配置。
-
-
-
-#### 属性
-
-- value， method
-
-  > - value：   指定请求的实际地址，指定的地址可以是URI Template 模式。value 可以省略不写
-  > - method： 指定请求的method类型， GET、POST、PUT、DELETE等；默认为GET。不用每次在 @RequestMapping 注解中加 method 属性来指定，上面的 GET 方式请求可以直接使用 @GetMapping("/get") 注解，效果一样。相应地，PUT 方式、POST 方式和 DELETE 方式对应的注解分别为`@GetMapping`， `@PutMapping`、`@PostMapping` 和 `DeleteMapping`。
-
-
-
-
-
-- consumes，produces
-
-  > - consumes： 指定处理请求的提交内容类型（Content-Type），例如application/json, text/html;
-  > - produces:  指定返回的内容类型，仅当request请求头中的(Accept)类型中包含该指定类型才返回；如 produces = “application/json; charset=UTF-8”，prodeces="image/jpeg"(可以用来配合swagger文档返回图片乱码的情况)
-
-
-
-
-
-- params，headers
-
-  > - params： 指定request中必须包含某些参数值是，才让该方法处理。
-  > - headers： 指定request中必须包含某些指定的header值，才能让该方法处理请求。
-
-
-
-### @RequestBody
-
-参考
-
-> - https://blog.csdn.net/weixin_38004638/article/details/99655322
-
-RequestBody 注解用于接收`contentType: "application/json;"`的body，接收参数可以是实体，比如前端通过 JSON 提交传来两个参数 username 和 password，此时我们需要在后端封装一个实体来接收。在传递的参数比较多的情况下，使用 @RequestBody 接收会非常方便。
-
-
-
-
-
-### @PathVariable
-
-@PathVariable 注解主要用来获取 URL 参数，Spring Boot 支持 `Restfull` 风格的 URL，比如一个 GET 请求携带一个参数 id，我们将 id 作为参数接收，可以使用 @PathVariable 注解。前提是青请求值中要有括号包含对应的参数如下：
-
-
+示例
 
 ```java
-@Controller  
-public class TestController {  
-     @RequestMapping(value="/user/{userId}/roles/{roleId}",method = RequestMethod.GET)  
-     public String getLogin(@PathVariable("userId") String userId,  
-         @PathVariable("roleId") String roleId){  
-         System.out.println("User Id : " + userId);  
-         System.out.println("Role Id : " + roleId);  
-         return "hello";  
-     }  
-     @RequestMapping(value="/product/{productId}",method = RequestMethod.GET)  
-     public String getProduct(@PathVariable("productId") String productId){  
-           System.out.println("Product Id : " + productId);  
-           return "hello";  
-     }  
-     @RequestMapping(value="/javabeat/{regexp1:[a-z-]+}",  
-           method = RequestMethod.GET)  
-     public String getRegExp(@PathVariable("regexp1") String regexp1){  
-           System.out.println("URI Part 1 : " + regexp1);  
-           return "hello";  
-     }  
-}
-```
+@Component
+@Aspect
+public class UserDaoProxy {
+    //切入点抽取
+    @Pointcut("execution(* com.longchen.spring5.web.dao.UserDao.add(..))")
+    private void pointCut() {
 
+    }
 
+    //前置通知
+    @Before("pointCut()")
+    public void before() {
+        System.out.println("before");
+    }
 
+    //环绕通知，其中的前置处理比前置通知顺序优先
+    @Around("pointCut()")
+    public void around(ProceedingJoinPoint proceedingJoinPoint) {
+        System.out.println("around before");
+        //方法执行
+        try {
+            proceedingJoinPoint.proceed();
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
+        System.out.println("around after");
+    }
 
+    //非异常时返回通知
+    @AfterReturning("pointCut()")
+    public void afterReturning() {
+        System.out.println("afterReturning");
+    }
 
-### @RequestParam
+    //异常时通知
+    @AfterThrowing("pointCut()")
+    public void afterThrowing() {
+        System.out.println("afterThrowing");
+    }
 
-@RequestParam 注解顾名思义，也是获取请求参数的，主要用于在SpringMVC后台控制层获取参数，类似一种request.getParameter("name")。上面我们介绍了 @PathValiable 注解也是获取请求参数的，那么 @RequestParam 和 @PathVariable 有什么不同呢：
-
-
-
-@PathValiable 是从 URL 模板中获取参数值，类似Restfull
-
-```java
-http://localhost:8080/user/{id}
-```
-
-
-
-@RequestParam 是从 Request 里获取参数值，即这种风格的 URL：
-
-```java
-http://localhost:8080/user?id=1
-```
-
-
-
-#### 属性
-
-defaultValue = "0", required = false, value = "isApp"；
-
-
-
-- **required**：true 表示该参数必须要传，否则就会报 404 错误，false 表示可有可无。
-- **defaultValue**：表示设置默认值
-- **value**:值表示接受的传入的参数类型
-
-
-
-
-
-### @Resource和@Autowired
-
-@Resource和@Autowired都是做bean的注入时使用，其实@Resource并不是Spring的注解，它的包是javax.annotation.Resource，需要导入，但是Spring支持该注解的注入。
-
-
-
-#### 不同点
-
-
-
-@Resources按名字，是JDK的；@Autowired按类型，是Spring的。
-
-- @Autowired注解是按类型装配依赖对象，默认情况下它要求依赖对象必须存在，如果允许null值，可以设置它required属性为false。
-- @Resource注解和@Autowired一样，也可以标注在字段或属性的setter方法上，但它默认按名称装配。名称可以通过@Resource的name属性指定，如果没有指定name属性，当注解标注在字段上，即默认取字段的名称作为bean名称寻找依赖对象，当注解标注在属性的setter方法上，即默认取属性名作为bean名称寻找依赖对象。 
-
-
-
-#### @Autowired
-
-@Autowired为Spring提供的注解，需要导入包`org.springframework.beans.factory.annotation.Autowired`;只按照byType注入。
-
-```java
-public class TestServiceImpl {
-    // 下面两种@Autowired只要使用一种即可
-    @Autowired
-    private UserDao userDao; // 用于字段上
-    
-    @Autowired
-    public void setUserDao(UserDao userDao) { // 用于属性的方法上
-        this.userDao = userDao;
+    //最终通知
+    @After("pointCut()")
+    public void after() {
+        System.out.println("after");
     }
 }
 ```
 
 
 
-#### @Resource
-
-@Resource默认按照`ByName`自动注入，由J2EE提供，需要导入包javax.annotation.Resource。@Resource有两个重要的属性：`name`和`type`，而Spring将@Resource注解的name属性解析为bean的名字，而type属性则解析为bean的类型。所以，如果使用name属性，则使用byName的自动注入策略，而使用type属性时则使用byType自动注入策略。如果既不制定name也不制定type属性，这时将通过反射机制使用byName自动注入策略。
-
-```java
-public class TestServiceImpl {
-    // 下面两种@Resource只要使用一种即可
-    @Resource(name="userDao")
-    private UserDao userDao; // 用于字段上
-    
-    @Resource(name="userDao")
-    public void setUserDao(UserDao userDao) { // 用于属性的setter方法上
-        this.userDao = userDao;
-    }
-}
-```
-
-注：最好是将@Resource放在setter方法上，因为这样更符合面向对象的思想，通过set、get去操作属性，而不是直接去操作属性。
 
 
+### Spring AOP 和 AspectJ AOP 有什么区别？
 
-::: info @Resource装配顺序
+Spring AOP 属于运⾏时增强，⽽ AspectJ 是编译时增强。 Spring AOP 基于代理(Proxying)，⽽ AspectJ 基于字节码操作(Bytecode Manipulation)。 
 
+Spring AOP 已经集成了 AspectJ ，AspectJ 应该算的上是 Java ⽣态系统中最完整的 AOP 框架了。 AspectJ 相⽐于 Spring AOP 功能更加强⼤，但是 Spring AOP 相对来说更简单。
 
-
-1. 如果同时指定了name和type，则从Spring上下文中找到唯一匹配的bean进行装配，找不到则抛出异常。
-2. 如果指定了name，则从上下文中查找名称（id）匹配的bean进行装配，找不到则抛出异常。
-3. 如果指定了type，则从上下文中找到类似匹配的唯一bean进行装配，找不到或是找到多个，都会抛出异常。
-4. 如果既没有指定name，又没有指定type，则自动按照byName方式进行装配；如果没有匹配，则回退为一个原始类型进行匹配，如果匹配则自动装配。
-
-@Resource的作用相当于@Autowired，只不过@Autowired按照byType自动注入。
-
-
-
-:::
-
-
-
-
-
-## SpringMVC组件
-
-
-
-- `DispatcherServlet`：前端控制器。也称为中央控制器，它是整个请求响应的控制中心，组件的调用由它统一调度。有了他就减少了其他组件之间的耦合度。
-- `HandlerMapping`：处理器映射器。它根据用户访问的 URL 映射到对应的后端处理器 Handler。也就是说它知道处理用户请求的后端处理器，但是它并不执行后端处理器，而是将处理器告诉给中央处理器。
-- `HandlerAdapter`：处理器适配器。根据传过来不同类型的`Hadnle`它调用后端处理器中的方法，返回逻辑视图 `ModelAndView` 对象给`DispatcherServlet`。
-- `ViewResolver`：视图解析器。将 `ModelAndView` 逻辑视图解析为具体的视图（如 JSP）。
-- `Handler`：后端处理器。对用户具体请求进行处理，也就是我们编写的 `Controller` 类。需要程序员开发
+ 如果我们的切⾯少，那么两者性能差异不⼤。但是，当切⾯太多的话，最好选择 AspectJ ，它⽐ Spring AOP 快很多。
 
 
 
@@ -1365,29 +845,9 @@ public class TestServiceImpl {
 
 
 
-## SpringMVC工作流程
-
-![Springmvc工作原理图](./images/Spring-bacisNote/Springmvc_working_principle_diagram.jpg)
+## JDBC
 
 
-
-::: info 流程详解
-
-1. 用户向服务端发送一次请求，这个请求会先到前端控制器`DispatcherServlet`(也叫中央控制器)。
-
-2. `DispatcherServlet`接收到请求后会调用`HandlerMapping`处理器映射器来，根据配置或注解获取不同的`Handle`，并返回给`DispatcherServlet`。由此得知，该请求该由哪个`Controller`来处理（并未调用Controller，只是得知）
-
-3. `DispatcherServlet`调用`HandlerAdapter`处理器适配器，告诉处理器适配器应该要去执行哪个`Controller`
-
-4. `HandlerAdapter`处理器适配器去执行`Controller`并得到`ModelAndView`(数据和视图)，并层层返回给`DispatcherServlet`
-
-5. `DispatcherServlet`将`ModelAndView`交给`ViewReslover`视图解析器解析，然后返回真正的视图`View`。
-
-6. `DispatcherServlet`将模型数据填充到视图中
-
-7. `DispatcherServlet`将结果响应给用户
-
-:::
 
 
 

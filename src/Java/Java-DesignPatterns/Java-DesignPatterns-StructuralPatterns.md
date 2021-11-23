@@ -236,26 +236,31 @@ JDK实现动态代理需要实现类通过接口定义业务方法，对于没�
 
 CGLib创建的动态代理对象性能比JDK创建的动态代理对象的性能高不少，但是CGLib在创建代理对象时所花费的时间却比JDK多得多，所以对于单例的对象，因为无需频繁创建对象，用CGLib合适，反之，使用JDK方式要更为合适一些。
 
+
+
+失效情况
+
 同时，由于CGLib由于是采用动态创建子类的方法，对于`final`方法，无法进行代理增强，但是能调用原来的方法
 
 
 
-区别
+#### jdk和cglib两种动态代理区别
 
 - JDK动态代理只能对实现了接口的类生成代理，而不能针对类
 - CGLIB是针对类实现代理，主要是对指定的类生成一个子类，覆盖其中的方法因为是继承，所以该类或方法最好不要声明成final 
 
 
 
-spring
+#### Spring
 
 1. 如果目标对象实现了接口，默认情况下会采用JDK的动态代理实现AOP 
 2. 如果目标对象实现了接口，可以强制使用CGLIB实现AOP 
 3. 如果目标对象没有实现了接口，必须采用CGLIB库，spring会自动在JDK动态代理和CGLIB之间转换
 
 如何强制使用CGLIB实现AOP？
- （1）添加CGLIB库，SPRING_HOME/cglib/*.jar
- （2）在spring配置文件中加入<aop:aspectj-autoproxy proxy-target-class="true"/>
+
+- 添加CGLIB库，SPRING_HOME/cglib/*.jar
+- 在spring配置文件中加入<aop:aspectj-autoproxy proxy-target-class="true"/>
 
 
 
