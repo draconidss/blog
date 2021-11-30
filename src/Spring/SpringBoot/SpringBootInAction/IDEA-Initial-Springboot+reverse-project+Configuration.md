@@ -5,6 +5,7 @@ time: 2020-10-01 22:40:15
 categories: 
   - Spring
   - SpringBoot
+  - SpringBootInAction
 tags: 
   - SpringBoot
   - IDEA
@@ -20,7 +21,9 @@ tags:
 1. 选择Spring initializr
 2. 选择来源链接：https://start.aliyun.com/
 
-![使用阿里云镜像](./images/IDEA-Initial-Springboot+reverse-project+Configuration/Use_Alibaba_Cloud_Image.jpg)
+
+
+![使用阿里云镜像](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/IDEA-Initial-Springboot/%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F.jpg)
 
 
 
@@ -30,7 +33,7 @@ tags:
 
 
 
-![](./images/IDEA-Initial-Springboot+reverse-project+Configuration/project_metadata.jpg)
+![](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/IDEA-Initial-Springboot/%E9%A1%B9%E7%9B%AE%E4%BF%A1%E6%81%AF.jpg)
 
 
 
@@ -40,7 +43,7 @@ tags:
 
 
 
-![选择依赖](./images/IDEA-Initial-Springboot+reverse-project+Configuration/Select_dependency.jpg)
+![选择依赖](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/IDEA-Initial-Springboot/%E9%80%89%E6%8B%A9%E4%BE%9D%E8%B5%96.jpg)
 
 
 
@@ -476,7 +479,7 @@ mybatis:
 
 点击右上角`Edit Configuration`
 
-![选择依赖](./images/IDEA-Initial-Springboot+reverse-project+Configuration/deploy_Run-mybatis-generator.jpg)
+![选择依赖](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/IDEA-Initial-Springboot/%E9%85%8D%E7%BD%AERun%20mybatis-generator.jpg)
 
 
 
@@ -534,7 +537,7 @@ mybatis:
 
 
 
-![springboot项目结构](./images/IDEA-Initial-Springboot+reverse-project+Configuration/springboot_project_structure.jpg)
+![springboot项目结构](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/IDEA-Initial-Springboot/springboot%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84.jpg)
 
 
 

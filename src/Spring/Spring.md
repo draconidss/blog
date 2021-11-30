@@ -845,9 +845,16 @@ Spring AOP 已经集成了 AspectJ ，AspectJ 应该算的上是 Java ⽣态系�
 
 
 
-## JDBC
+## jdbcTemplate
+
+1. 声明Druid连接池并注入连接数据库四个属性
+2. 声明jdbcTemplate并将Druid作为dataSource注入到其中然后可以使用
 
 
 
+### 源码原理
 
+参考
+
+- [spring源码剖析（七）JdbcTemplate数据库封装原理解读](https://blog.csdn.net/fighterandknight/article/details/51358140)
 

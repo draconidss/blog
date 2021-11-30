@@ -72,6 +72,51 @@ secret key byte array cannot be null or empty.
 
 
 
+### 不自动注入dataSource而启动Springboot
+
+参考：[@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)不生效](https://blog.csdn.net/qq_25811101/article/details/109410072)
+
+
+
+方案一：在启动方法添加exclude
+
+```java
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class,
+    DataSourceTransactionManagerAutoConfiguration.class,
+    DruidDataSourceAutoConfigure.class,
+    HibernateJpaAutoConfiguration.class})
+```
+
+
+
+方案二：在yml文件中配置
+
+```yaml
+spring:
+  application:
+    name: order
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+```
+
+
+
+
+
+## Gradle
+
+
+
+### No cached version of com.android.tools.build:gradle:3.6.2 available for offline mode
+
+参考：[No cached version of com.android.tools.build:gradle:3.6.2 available for offlin 解决办法](https://www.cnblogs.com/flay/p/12641381.html)
+
+在IDEA中点击右边Gradle设为非无线模式
+
+
+
+
+
 ## MybatisPlus
 
 
@@ -87,5 +132,4 @@ secret key byte array cannot be null or empty.
 方法一：去除@Builder注解。
 
 方法二：增加构造函数，如Lombok提供的@NoArgsConstructor、@AllArgsConstructor。
-
 

@@ -5,6 +5,7 @@ time: 2021-01-17 11:10:39
 categories: 
   - Spring
   - SpringBoot
+  - SpringBootInAction
 tags: 
   - SpringBoot
   - JWT
@@ -111,21 +112,11 @@ Payload JWT的第二部分是payload，它包含声明（要求）。声明是�
 
 
 
-![signature](./images/JWT-Authorization/signature.jpg)
+![signature](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/JWT-Authorization/signature.jpg)
 
 
 
 Signature需要使用编码后的header和payload以及我们提供的一个密钥，最后使用header中指定的签名算法（HS256）进行签名。签名的作用是保证JWT没有被篡改过
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -201,7 +192,7 @@ header应该看起来是这样的：
 
 
 
-![](./images/JWT-Authorization/JWT&Session.jpg)
+![](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/JWT-Authorization/JWT&Session.jpg)
 
 
 
@@ -221,11 +212,11 @@ header应该看起来是这样的：
 
 
 
-![JWT用户认证](./images/JWT-Authorization/JWT_User_Authorization.jpg)
+![JWT用户认证](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/JWT-Authorization/JWT_User_Authorization.jpg)
 
 
 
-![JWT用户认证](./images/JWT-Authorization/JWT_User_Authorization_2.jpg)
+![JWT用户认证](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/JWT-Authorization/JWT_User_Authorization_2.jpg)
 
 
 

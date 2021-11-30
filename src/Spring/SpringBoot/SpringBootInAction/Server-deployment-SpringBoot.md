@@ -5,6 +5,7 @@ time: 2020-07-05 13:33:29
 categories: 
   - Spring
   - SpringBoot
+  - SpringBootInAction
 tags: 
   - SpringBoot
 ---
@@ -33,13 +34,15 @@ tags:
 
 点击右边的**Maven**的**clean**，**package**后并运行会打包成**jar**包在**target**下
 
-![har开始打包](./images/Server-deployment-SpringBoot/jar_start_pack.jpg)
+![har开始打包](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Server-deployment-SpringBoot/jar_start_pack.jpg)
+
+
 
 
 
 打包成功后的路径如下
 
-![jar打包成功](./images/Server-deployment-SpringBoot/jar_pack_succes.jpg)
+![jar打包成功](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Server-deployment-SpringBoot/jar_pack_succes.jpg)
 
 
 
@@ -51,7 +54,7 @@ tags:
 lsof -i tcp:8885
 ```
 
-![查看端口](./images/Server-deployment-SpringBoot/view_port.jpg)
+![查看端口](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Server-deployment-SpringBoot/view_port.jpg)
 
 上方是已经运行的springboot项目在8885端口
 
@@ -153,13 +156,13 @@ public class Application extends SpringBootServletInitializer {
 
 与上面相同
 
-![jar开始打包](./images/Server-deployment-SpringBoot/jar_start_pack.jpg)
+![jar开始打包](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Server-deployment-SpringBoot/jar_start_pack.jpg)
 
 
 
 打包成功后的路径如下
 
-![war打包成功](./images/Server-deployment-SpringBoot/war_pack_success.jpg)
+![war打包成功](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Server-deployment-SpringBoot/war_pack_success.jpg)
 
 
 

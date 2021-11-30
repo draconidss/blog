@@ -5,6 +5,7 @@ time: 2020-10-10 18:29:09
 categories: 
   - Spring
   - SpringBoot
+  - SpringBootInAction
 tags: 
   - SpringBoot
   - Swagger
@@ -185,7 +186,7 @@ public class SwaggerConfig {
 
 
 
-![](./images/Swagger-use/swagger_page.jpg)
+![](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Swagger-use/swagger_page.jpg)
 
 
 
@@ -243,7 +244,7 @@ public class DemoDataController {
 }
 ```
 
-![@Api效果图](./images/Swagger-use/@Api_Effect_picture.jpg)
+![@Api效果图](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Swagger-use/@Api_Effect_picture.jpg)
 
 
 
@@ -276,7 +277,7 @@ public void exportExcel() throws IOException {
 
 
 
-![@ApiOperation效果图](./images/Swagger-use/@ApiOperation_Effect_picture.jpg)
+![@ApiOperation效果图](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Swagger-use/@ApiOperation_Effect_picture.jpg)
 
 
 
@@ -314,7 +315,7 @@ public void exportExcel(@ApiParam(name="param",value="ApiParam_value",required=t
 
 
 
-![@ApiParam效果图](./images/Swagger-use/@ApiParam_Effect_picture.jpg)
+![@ApiParam效果图](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Swagger-use/@ApiParam_Effect_picture.jpg)
 
 
 
@@ -419,7 +420,7 @@ public class DemoData {
 
 
 
-![](./images/Swagger-use/@ApiModel.jpg)
+![](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Swagger-use/@ApiModel.jpg)
 
 
 
@@ -493,7 +494,7 @@ http://localhost:8000/doc.html
 
 
 
-![](./images/Swagger-use/SwaggerBootstrapUI.jpg)
+![](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Swagger-use/SwaggerBootstrapUI.jpg)
 
 
 
