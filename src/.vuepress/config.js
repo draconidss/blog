@@ -177,7 +177,7 @@ module.exports = config({
         title: "Spring",
         icon: "creative",
         prefix: "Spring/",
-        children: ["Spring","Spring-annotation","Spring-error&hole","Spring-Interview",
+        children: ["Spring","Spring-annotation","Spring-error&hole","Spring-RestTemplate","Spring-Interview",
         {
           title: "Spring Boot",
           icon: "creative",
