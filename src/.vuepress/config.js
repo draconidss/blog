@@ -265,7 +265,7 @@ module.exports = config({
           title: "RabbitMQ",
           icon: "creative",
           prefix: "RabbitMQ/",
-          children: ["RabbitMQ"]
+          children: ["RabbitMQ", "RabbitMQ-Interview"]
         }
         ]
       },
