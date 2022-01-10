@@ -21,7 +21,7 @@ tags:
 ## 参考
 
 - 尚硅谷
-- https://zhangc233.github.io/2021/07/23/RabbitMQ/
+- [尚硅谷笔记](https://zhangc233.github.io/2021/07/23/RabbitMQ/)
 - 《RabbitMQ实战指南》
 
 
@@ -166,7 +166,7 @@ RabbitMO整体上是一个生产者与消费者模型，主要负责接收、存
 
 
 
-### 交换器类型
+### 交换器类型（路由规则）
 
 - fanout：它会把所有发送到该交换器的消息路由到所有与该交换器绑定的队列中。
 - direct：它会把消息路由到那些BindingKey和RoutingKey完全匹配的队列中。
@@ -235,7 +235,7 @@ channel.queueBind(QUEUE_NAME, EXCHANGE_NAME, ROUTING_KEY);
 
 ![image-20220101231901431](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/RabbitMQ/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E6%96%B9%E6%B3%95%E5%B1%9E%E6%80%A7_1.png)
 
-> autoDelete指的是当交换器有绑定的队列或交换器，且与之解绑时且autoDelete为true时自动删除，而不是与客户端断开连接就删除
+> autoDelete指的是当交换器至少有一个绑定的队列或交换器，且与之解绑时且autoDelete为true时自动删除，而不是与客户端断开连接就删除
 
 
 
@@ -308,9 +308,9 @@ RabbitMQ的消费模式分两种：
 
 
 
-#### 推模式
+#### 推模式（订阅模式）
 
-推模式可以通过持续订阅的方式消费信息，相关类：
+推模式可以通过持续订阅的方式等待消息队列推送消息并消费信息，相关类：
 
 ```java
 import com.rabbitmq.client.Consumer;
@@ -329,7 +329,7 @@ Channel类中的basicConsume方法有如下形式
 
 
 
-#### 拉模式
+#### 拉模式（主动消费）
 
 这里讲一下拉模式的消费方式。通过channel.basicGet方法可以单条地获取消息，其返回值是GetRespone。Channel类的basicGet方法没有其他重载方法，只有：
 GetResponse basicGet (String queue,boolean autoAck)throws IOException;其中queue代表队列的名称，如果设置autoAck为false，那么同样需要调用channel.basicAck来确认消息已被成功接收。拉模式的关键代码如代码清单3-10所示。
@@ -373,11 +373,15 @@ channel.basicAck(response.getEnvelope().getDeliveryTag(), false);
 
 RabbitMQ在2.O.0版本开始引入了Basic.Reject这个命令，消费者客户端可以调用与其对应的channel.basicReject方法来告诉RabbitMQ拒绝这个消息。
 
-Channel类中的basicReject方法定义如下：
-void basicReject (long deliveryTag,boolean requeue)throws IOException;
-其中deliveryTag可以看作消息的编号，它是一个64位的长整型值，最大值是9223372036854775807。如果requeue参数设置为true，则RabbitMQ会重新将这条消息存入队列，以便可以发送给下一个订阅的消费者；如果requeue参数设置为false，则RabbitMQ立即会把消息从队列中移除，而不会把它发送给新的消费者。
+Channel类中的basicReject方法定义如下：void basicReject (long deliveryTag,boolean requeue)throws IOException;
+
+其中deliveryTag可以看作消息的编号，它是一个64位的长整型值，最大值是9223372036854775807。
+
+- 如果requeue参数设置true，则RabbitMQ会重新将这条消息存入队列，以便可以发送给下一个订阅的消费者；
+- 如果requeue参数设置为false，则RabbitMQ立即会把消息从队列中移除，而不会把它发送给新的消费者。
 
 Basic.Reject命令一次只能拒绝一条消息，如果想要批量拒绝消息，则可以使用
+
 Basic.Nack这个命令。消费者客户端可以调用channel.basicNack方法来实现，方法定义如下：
 
 ```java
@@ -414,7 +418,7 @@ conn.close()
 
 
 
-## 消息何去何从
+## 消息何去何从（未路由消息处理）
 
 
 
@@ -424,8 +428,8 @@ mandatory和 immediate是 `channel.basicpublish`方法中的两个参数，它�
 
 概括来说：
 
-- mandatory参数告诉服务器至少将该消息路由到一个队列中，否则将消息返回给生产者。
-- immediate参数告诉服务器，如果该消息关联的队列上有消费者，则立刻投递如果所有匹配的队列上都没有消费者，则直接将消息返还给生产者，不用将消息存入队列而等待消费者了。
+- mandatory：参数告诉服务器至少将该消息路由到一个队列中，否则将消息返回给生产者。
+- immediate：参数告诉服务器，如果该消息关联的队列上有消费者，则立刻投递如果所有匹配的队列上都没有消费者，则直接将消息返还给生产者，不用将消息存入队列而等待消费者了。
 
 
 
@@ -583,13 +587,11 @@ channel.basicPublish("", "ttl_queue", new AMQP.BasicProperties().builder()
 - 队列也没有被重新声明
 - 在过期时间段内也未调用过 Basic.Get命令
 
-设置队列里的TTL可以应用于类似RPC方式的回复队列，在RPC中，许多队列会被创建
-出来，但是却是未被使用的。
+设置队列里的TTL可以应用于类似RPC方式的回复队列，在RPC中，许多队列会被创建出来，但是却是未被使用的。
 
-Rabbitmq会确保在过期时间到达后将队列删除，但是不保障删除的动作有多及时。在
-Rabbitmq重启后，持久化的队列的过期时间会被重新计算。
+Rabbitmq会确保在过期时间到达后将队列删除，但是不保障删除的动作有多及时。在Rabbitmq重启后，持久化的队列的过期时间会被重新计算。
 
-用于表示过期时间的x- expires参数以毫秒为单位，并且服从和x- message-tt1一样的约束条件，不过不能设置为0。比如该参数设置为1000，则表示该队列如果在1秒钟之内未使用则会被删除
+用于表示过期时间的x- expires参数以毫秒为单位，并且服从和x- message-ttl一样的约束条件，不过不能设置为0。比如该参数设置为1000，则表示该队列如果在1秒钟之内未使用则会被删除
 
 
 
@@ -609,8 +611,7 @@ DLX，全称为 Dead-letter-Exchange，可以称之为死信交换器，也有�
 
 
 
-DLX也是一个正常的交换器，和一般的交换器没有区别，它能在任何的队列上被指定，实
-际上就是设置某个队列的属性。当这个队列中存在死信时， Rabbitmq就会自动地将这个消息重新发布到设置的DLX上去，进而被路由到另一个队列，即死信队列。
+DLX也是一个正常的交换器，和一般的交换器没有区别，它能在任何的队列上被指定，实际上就是设置某个队列的属性。当这个队列中存在死信时， Rabbitmq就会自动地将这个消息重新发布到设置的DLX上去，进而被路由到另一个队列，即死信队列。
 
 可以监听这个队列中的消息以进行相应的处理，这个特性与将消息的TTL设置为0配合使用可以弥补 `immediate`参数的功能。
 
@@ -671,5 +672,237 @@ public void ttlAndDlx() throws Exception {
 
 ## 延迟队列
 
+延迟队列存储的对象是对应的延迟消息，所谓“延迟消息”是指当消息被发送以后，并不想让消费者立刻拿到消息，而是等待特定时间后，消费者才能拿到这个消息进行消费。延迟队列的使用场景有很多，比如：
+
+- 在订单系统中，一个用户下单之后通常有30分钟的时间进行支付，如果30分钟之内没有支付成功，那么这个订单将进行异常处理，这时就可以使用延迟队列来处理这些订单了。
+- 用户希望通过手机远程遥控家里的智能设备在指定的时间进行工作。这时候就可以将用户指令发送到延迟队列，当指令设定的时间到了再将指令推送到智能设备。
 
 
+
+在AMQP中本身不支持延迟队列，但是可以通过DLX和TTL模拟延迟队列，即消费者订阅死信队列，然后生产者发送消息指定TTL到TTL后消息就能进入死信队列，消费者刚好能消费这个延迟了TTL的消息
+
+![image-20220108184812049](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/RabbitMQ/image-20220108184812049.png)
+
+
+
+## 优先级队列
+
+指队列和消息的优先级，优先级高的消息具备优先被消费的特权
+
+- 消息队列优先级：可以通过`x-max-priority`设置
+- 消息优先级：通过prop参数设置，默认最低优先级0，最高位队列设置的最大优先级，优先级高可以被优先消费，这里的优先级比较是队列中的值而不包括准备发送的消息
+
+```java
+/**
+     * @description: 优先级队列
+     **/
+@Test
+public void priorityQueue() throws Exception {
+  Channel channel = RabbitMqUtils.getChannel();
+  Map<String, Object> args = Maps.newHashMap();
+  //声明优先级
+  args.put("x-max-priority", 10);
+  channel.queueDeclare("queue.priority", true, false, false, args);
+  //设置消息优先级
+  channel.basicPublish("", "",
+                       new AMQP.BasicProperties().builder()
+                       //默认最小是0
+                       .priority(5)
+                       .build(), "message".getBytes());
+}
+```
+
+![image-20220108233051589](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/RabbitMQ/%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97.png)
+
+
+
+## RPC实现
+
+一般在RabbitMQ中进行RPC是很简单。客户端发送请求消息，服务端回复响应的消息。
+
+为了接收响应的消息，我们需要在请求消息中发送一个回调队列（参考下面代码中的`replyTo`）。可以使用默认的队列，具体示例代码如代码清单4-11所示。
+
+```java
+/**
+     * @description: rpc调用且回调
+     **/
+@Test
+public void rpc() throws Exception {
+  Channel channel = RabbitMqUtils.getChannel();
+  String callbackQueueName = channel.queueDeclare().getQueue();
+  channel.basicPublish("", "rpc_queue", new AMQP.BasicProperties.Builder()
+                       //回调队列接收响应的消息
+                       .replyTo(callbackQueueName)
+                       .build(),
+                       "message".getBytes());
+}
+```
+
+
+
+对于代码中涉及的BasicProperties这个类，这里就用到两个属性。
+
+- replyTo：通常用来设置一个回调队列。
+- correlationId：用来关联请求（request）和其调用RPC之后的回复（response）。
+
+如果像上面的代码中一样，为每个RPC请求创建一个回调队列，则是非常低效的。但是幸运的是这里有一个通用的解决方案——**可以为每个客户端创建一个单一的回调队列**。这样就产生了一个新的问题，对于回调队列而言，在其接收到一条回复的消息之后，它并不知道这条消息应该和哪一个请求匹配。
+
+这里就用到`correlationId`这个属性了，我们应该为每一个请求设置一个唯一的`correlationId`。之后在回调队列接收到回复的消息时，可以根据这个属性匹配到相应的请求。如果回调队列接收到一条未知`correlationId`的回复消息，可以简单地将其丢弃。
+
+![image-20220109180122979](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/RabbitMQ/rabbitmq-rpc.png)
+
+RPC处理流程如下：
+
+- 当客户端启动时，创建一个匿名的回调队列（名称由RabbitMQ自动创建）。
+- 客户端为RPC请求设置2个属性：replyTo用来告知RPC服务端回复请求时的目的队列，即回调队列；correlationId用来标记一个请求。
+- 请求被发送到rpc queue队列中。
+- RPC服务端监听rpc_queue队列中的请求，当请求到来时，服务端会处理并且把带有结果的消息发送给客户端。接收的队列就是replyTo设定的回调队列。
+- 客户端监听回调队列，当有消息时，检查correlationId属性，如果与请求匹配，那就是结果了。
+
+
+
+## 持久化
+
+
+
+- 交换机持久化：声明时设置`durable`参数为true，不设置持久化重启关闭时消息不会丢失，但是相关的交换器元数据会丢失，不能将消息发送到这个交换器了
+- 队列持久化：声明时设置`durable`参数为true，不设置持久化重启关闭时消息会丢失
+- 消息持久化：投递时将消息的`deliverytMode`属性设置为2即可持久化，如果只是队列持久化当重启后消息会丢失，如果消息持久化但是队列没持久化name消息也会丢失
+
+> 可以将所有的消息都设置为持久化，但是这样会严重影响RabbitMO的`性能`（随机）。写入磁盘的速度比写入内存的速度慢得不只一点点。对于可靠性不是那么高的消息可以不采用持久化处理以提高整体的吞吐量。在选择是否要将消息持久化时，需要在可靠性和吐吞量之间做一个权衡
+
+
+
+如果都设置持久化并不意味着数据不会丢失，当订阅消息队列时设置`autoAck`为true时消费者这边没及时消费那么就会丢失消息
+
+
+
+### 镜像队列
+
+其次，在持久化的消息正确存入RabbitMQ之后，还需要有一段时间（虽然很短，但是不可忽视）才能存入磁盘之中。RabbitMQ并不会为每条消息都进行同步存盘（调用内核的fsync方法）的处理，可能仅仅保存到`操作系统缓存`之中而不是物理磁盘之中。如果在这段时间内RabbitMQ服务节点发生了宕机、重启等异常情况，消息保存还没来得及落盘，那么这些消息将丢失。
+
+
+
+RabbitMQ的镜像队列机制相当于配置了副本主节点和从节点，实际生产环境的关键业务业务队列也会设置镜像队列，还可以在发送端引入`事务机制`或者`发送方确认机制`来保证消息已经正确地发送并存储至RabbitMQ中，前提还要保证在调用channel.basicPublish方法的时候交换器能够将消息正确路由到相应的队列之中。
+
+
+
+## 生产者确认
+
+除了消费者确认应答机制，还要确保生产者这边到底有没有正确把消息发送到消息队列中去，默认情况生产者发送消息服务器不会返回任何消息给生产者，有以下方式
+
+
+
+- 通过事务机制
+- 通过发送方确认机制
+
+
+
+### 事务机制
+
+相关的方法有三个
+
+- channel.txSelect：将当前信道设置成事务模式
+- channel.txCommit：用于提交事务
+- channel.txRollback：用于事务回滚
+
+在通过channel.txSelect方法开启事务之后，我们便可以发布消息给RabbitMQ了：
+
+- 如果事务提交成功，则消息一定到达了RabbitMQ中
+- 如果在事务提交执行之前由于RabbitMQ异常崩溃或者其他原因抛出异常，这个时候我们便可以将其捕获，进而通过执行channel.txRollback方法来实现事务回滚。
+
+> 注意这里的RabbitMQ中的事务机制与大多数数据库中的事务概念并不相同，需要注意区分。
+>
+> 事务机制在一条消息发送后会使发送端阻塞，以等待Rabbitmq回应，之后才能发送下一条消息
+
+```java
+/**
+     * @description: 事务
+     **/
+@Test
+public void transaction() throws Exception {
+  Channel channel = RabbitMqUtils.getChannel();
+  //将信道设置为事务模式
+  channel.txSelect();
+  channel.basicPublish(EXCHANGE_NAME, ROUTING_KEY, MessageProperties.PERSISTENT_TEXT_PLAIN, "transaction".getBytes());
+  //提交事务
+  channel.txCommit();
+}
+```
+
+
+
+流程如下
+
+![image-20220110154800172](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/RabbitMQ/rabbitmq%E4%BA%8B%E5%8A%A1.png)
+
+
+
+- 客户端发送Tx.Select，将信道置为事务模式：
+- Broker回复Tx.Select-Ok，确认已将信道置为事务模式；
+- 在发送完消息之后，客户端发送Tx.Commit提交事务；
+- Broker回复Tx.Commit-Ok，确认事务提交。
+
+
+
+#### 事务回滚
+
+```java
+/**
+     * @description: 事务
+     **/
+@Test
+public void transaction() throws Exception {
+  Channel channel = RabbitMqUtils.getChannel();
+  //将信道设置为事务模式
+  channel.txSelect();
+  for (int i = 0; i < 10; i++) {
+    try {
+      channel.basicPublish(EXCHANGE_NAME, ROUTING_KEY, MessageProperties.PERSISTENT_TEXT_PLAIN, "transaction".getBytes());
+      //异常
+      int result = 1 / 0;
+      //提交事务
+      channel.txCommit();
+    } catch (Exception e) {
+      e.printStackTrace();
+      //在事务提交之前铺捉到异常并回滚
+      channel.txRollback();
+    }
+  }
+
+}
+```
+
+
+
+![image-20220110160010989](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/RabbitMQ/%E4%BA%8B%E5%8A%A1%E5%9B%9E%E6%BB%9A.png)
+
+
+
+
+
+### 发送确认机制
+
+使用事务机制会使RabbitMQ性能有损失造成吞吐量下降，所以有发送确认机制。
+
+生产者将信道设置成`confirm（确认）模式`，一旦信道进入confirm模式，所有在该信道上面发布的消息都会被指派一个唯一的ID（从1开始），一旦消息被投递到所有匹配的队列之后，RabbitMQ就会发送一个确认（Basic.Ack）给生产者（包含消息的唯一ID），这就使得生产者知晓消息已经正确到达了目的地了。
+
+> 如果消息和队列是可持久化的，那么确认消息会在消息写入磁盘之后发出。
+
+RabbitMQ回传给生产者的确认消息中的`deliveryTag`包含了确认消息，此外RabbitMQ也可以设置channel.basicAck方法中的`multiple`参数，表示到这个序号之前的所有消息都已经得到了处理，可以参考图4-10。注意辨别这里的确认和消费时候的确认之间的异同。
+
+
+
+![image-20220110171845530](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/RabbitMQ/%E5%8F%91%E9%80%81%E6%96%B9%E7%A1%AE%E8%AE%A4%E6%9C%BA%E5%88%B6.png)
+
+事务机制在一条消息发送之后会使发送端阻塞，以等待RabbitMQ的回应，之后才能继续发送下一条消息。
+
+相比之下，发送方确认机制最大的好处在于它是`异步`的，一旦发布一条消息，生产者应用程序就可以在等信道返回确认的同时继续发送下一条消息，当消息最终得到确认之后，生产者应用程序便可以通过`回调方法`来处理该确认消息，如果RabbitMQ因为自身内部错误导致消息丢失，就会发送一条`nack（Basic.Nack）`命令，生产者应用程序同样可以在回调方法中处理该nack命令。
+
+
+
+#### 使用
+
+- 生产者通过调用`channel.confirmSelect`方法（即Confirm.Select命令）将信道设置为`confirm`模式
+- 之后RabbitMQ会返回Confirm.Select-Ok命令表示同意生产者将当前信道设置为confirm模式。
+- 所有被发送的后续消息都被ack或者nack一次，不会出现一条消息既被ack又被nack的情况，并且RabbitMQ也并没有对消息被confirm的快慢做任何保证。
