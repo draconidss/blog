@@ -767,7 +767,7 @@ RPC处理流程如下：
 
 - 交换机持久化：声明时设置`durable`参数为true，不设置持久化重启关闭时消息不会丢失，但是相关的交换器元数据会丢失，不能将消息发送到这个交换器了
 - 队列持久化：声明时设置`durable`参数为true，不设置持久化重启关闭时消息会丢失
-- 消息持久化：投递时将消息的`deliverytMode`属性设置为2即可持久化，如果只是队列持久化当重启后消息会丢失，如果消息持久化但是队列没持久化name消息也会丢失
+- 消息持久化：投递时将消息的`deliveryMode`属性设置为2即可持久化，如果只是队列持久化当重启后消息会丢失，如果消息持久化但是队列没持久化name消息也会丢失
 
 > 可以将所有的消息都设置为持久化，但是这样会严重影响RabbitMO的`性能`（随机）。写入磁盘的速度比写入内存的速度慢得不只一点点。对于可靠性不是那么高的消息可以不采用持久化处理以提高整体的吞吐量。在选择是否要将消息持久化时，需要在可靠性和吐吞量之间做一个权衡
 
@@ -783,18 +783,24 @@ RPC处理流程如下：
 
 
 
-RabbitMQ的镜像队列机制相当于配置了副本主节点和从节点，实际生产环境的关键业务业务队列也会设置镜像队列，还可以在发送端引入`事务机制`或者`发送方确认机制`来保证消息已经正确地发送并存储至RabbitMQ中，前提还要保证在调用channel.basicPublish方法的时候交换器能够将消息正确路由到相应的队列之中。
+RabbitMQ的镜像队列机制相当于配置了副本主节点和从节点，实际生产环境的关键业务业务队列也会设置镜像队列，还可以在发送端引入`事务机制`或者`发送方确认机制`来保证消息已经正确地发送并存储至RabbitMQ中，前提还要保证在调用`channel.basicPublish`方法的时候交换器能够将消息正确路由到相应的队列之中。
 
 
 
 ## 生产者确认
 
-除了消费者确认应答机制，还要确保生产者这边到底有没有正确把消息发送到消息队列中去，默认情况生产者发送消息服务器不会返回任何消息给生产者，有以下方式
+除了消费者确认应答机制，还要确保生产者这边到底有没有正确把消息发送到消息队列的交换器中去，默认情况生产者发送消息服务器不会返回任何消息给生产者，有以下方式
 
 
 
 - 通过事务机制
 - 通过发送方确认机制
+
+
+
+> 两者不能共存
+>
+> 这里的确认消息发送到RabbitMQ是指消息被正确的发往RabbitMQ的交换器，如果交换器没有匹配的队列消息也可能会丢失，配合mandory参数或备份交换器使用
 
 
 
@@ -906,3 +912,195 @@ RabbitMQ回传给生产者的确认消息中的`deliveryTag`包含了确认消�
 - 生产者通过调用`channel.confirmSelect`方法（即Confirm.Select命令）将信道设置为`confirm`模式
 - 之后RabbitMQ会返回Confirm.Select-Ok命令表示同意生产者将当前信道设置为confirm模式。
 - 所有被发送的后续消息都被ack或者nack一次，不会出现一条消息既被ack又被nack的情况，并且RabbitMQ也并没有对消息被confirm的快慢做任何保证。
+
+
+
+确认方式
+
+- 单个同步确认：每发送一个消息就调用`channel.waitForConfirms`，这时候是同步串行化的
+- 批量确认：每发送一批消息后，再调用`channel.waitForConfirms`方法，等待服务器确认返回。当出现Nack或超时情况，客户端需要将这一批次消息重发，带来明显的重复消息数量，且经常消息丢失时，批量confirm性能不升反降
+- 异步确认：提供回调方法，服务端确认了一条或者多条消息后客户端会回调方法处理
+
+
+
+单个同步确认&批量确认
+
+```java
+/**
+     * @description: 发送者确认：发送确认机制(单个同步确认，批量确认)
+     **/
+@Test
+public void confirm() throws Exception {
+  Channel channel = RabbitMqUtils.getChannel();
+  //设置为确认模式
+  channel.confirmSelect();
+
+  //单个同步确认
+  for (int i = 0; i < 5; i++) {
+    String message = i + "producer confirm";
+    channel.basicPublish(EXCHANGE_NAME, ROUTING_KEY, null, message.getBytes());
+    //服务端返回 false 或超时时间内未返回，生产者可以消息重发
+    if (channel.waitForConfirms()) {
+      System.out.println("消息发送成功");
+    } else {
+      System.out.println("消息发送失败");
+    }
+  }
+
+  //批量确认
+  for (int i = 0; i < 5; i++) {
+    String message = i + "producer confirm";
+    channel.basicPublish(EXCHANGE_NAME, ROUTING_KEY, null, message.getBytes());
+  }
+  if (channel.waitForConfirms()) {
+    System.out.println("消息批量发送成功");
+  } else {
+    System.out.println("消息批量发送失败");
+    //重新批量发送消息
+  }
+}
+```
+
+
+
+![image-20220110181136940](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/RabbitMQ/%E5%8F%91%E9%80%81%E5%A4%9A%E6%9D%A1%E6%B6%88%E6%81%AF%E5%8F%91%E9%80%81%E7%A1%AE%E8%AE%A4%E6%A8%A1%E5%BC%8F.png)
+
+
+
+异步确认：
+
+异步confirm方法的编程实现最为复杂。在客户端Channel接口中提供的`addConfirmListener`方法可以添加`ConfirmListener`这个回调接口，这个ConfirmListener接口包含两个方法：`handleAck`和`handleNack`，分别用来处理
+RabbitMQ回传的`Basic.Ack`和`Basic.Nack`。在这两个方法中都包含有一个参数`deliveryTag`（在publisher confirm模式下用来标记消息的唯一有序序号）。我们需要为每一个信道维护一个已发送未确认的消息序号集合，
+
+- 在发送时根据channel.getNextPublishSeqNo()获取发送消息时的`deliveryTag`并插入
+- 在回调方法中根据返回的`deliveryTag`去移除集合中的消息或标记其已确认
+
+集合最好采用`SortedSet`维护消息序号，`waitForConfirms`也是通过`Sortedset`来维护消息序号
+
+```java
+/**
+     * @description: 发送者确认：发送确认机制(异步确认)
+     **/
+@Test
+public void confirmAsync() throws Exception {
+  Channel channel = RabbitMqUtils.getChannel();
+  channel.queuePurge(QUEUE_NAME);
+  channel.confirmSelect();
+  /*
+         * 线程安全跳跃表
+         * 1.map能将序号与消息进行关联
+         * 2.轻松批量删除条目根据序号
+         * 3.线程安全并发
+         * */
+  //已发送未确认的消息
+  ConcurrentSkipListMap<Long, String> outstandingConfirm = new ConcurrentSkipListMap<Long, String>();
+
+  // 消息确认成功，回调函数
+  ConfirmCallback ackCallback = (deliverTag, multiple) -> {
+    // 如果是批量的,就批量清除
+    if (multiple) {
+      outstandingConfirm.headMap(deliverTag, true).clear();
+    } else {
+      outstandingConfirm.remove(deliverTag);
+    }
+    System.out.println("消息确认成功：" + deliverTag);
+  };
+  /*
+         * 1. 消息的标记
+         * 2. 是否为批量确认
+         * */
+  ConfirmCallback nackCallback = (deliverTag, multiple) -> {
+    String message = outstandingConfirm.get(deliverTag);
+    System.out.println("未确认的消息：" + deliverTag);
+  };
+
+  /*
+         * 消息监听器
+         * 1. 监听那些成功了
+         * 2. 监听那些失败了
+         * */
+  channel.addConfirmListener(ackCallback, nackCallback);
+  for (int i = 0; i < 10; i++) {
+    String message = String.valueOf(i);
+    outstandingConfirm.put(channel.getNextPublishSeqNo(), message);
+    channel.basicPublish(EXCHANGE_NAME, ROUTING_KEY, null, message.getBytes());
+  }
+  System.out.println("发布" + 10 + "个异步确认消息");
+}
+
+```
+
+
+
+
+
+#### watiForConfirm
+
+如果没有开启confirm模式调用任何watiForConfirm都会报错。
+
+```java
+/**
+ * Wait until all messages published since the last call have been
+ * either ack'd or nack'd by the broker.  Note, when called on a
+ * non-Confirm channel, waitForConfirms throws an IllegalStateException.
+ * @return whether all the messages were ack'd (and none were nack'd)
+ * @throws java.lang.IllegalStateException
+ */
+boolean waitForConfirms() throws InterruptedException;
+
+/**
+ * Wait until all messages published since the last call have been
+ * either ack'd or nack'd by the broker; or until timeout elapses.
+ * If the timeout expires a TimeoutException is thrown.  When
+ * called on a non-Confirm channel, waitForConfirms throws an
+ * IllegalStateException.
+ * @return whether all the messages were ack'd (and none were nack'd)
+ * @throws java.lang.IllegalStateException
+ */
+boolean waitForConfirms(long timeout) throws InterruptedException, TimeoutException;
+
+/** Wait until all messages published since the last call have
+ * been either ack'd or nack'd by the broker.  If any of the
+ * messages were nack'd, waitForConfirmsOrDie will throw an
+ * IOException.  When called on a non-Confirm channel, it will
+ * throw an IllegalStateException.
+ * @throws java.lang.IllegalStateException
+ */
+ void waitForConfirmsOrDie() throws IOException, InterruptedException;
+
+/** Wait until all messages published since the last call have
+ * been either ack'd or nack'd by the broker; or until timeout elapses.
+ * If the timeout expires a TimeoutException is thrown.  If any of the
+ * messages were nack'd, waitForConfirmsOrDie will throw an
+ * IOException.  When called on a non-Confirm channel, it will
+ * throw an IllegalStateException.
+ * @throws java.lang.IllegalStateException
+ */
+void waitForConfirmsOrDie(long timeout) throws IOException, InterruptedException, TimeoutException;
+```
+
+`waitForConfirmsOrDie`在接收到RabbitMQ返回的Basic.Nack之后会抛出`IoException`异常
+
+
+
+### 比较
+
+四种方式比较
+
+![image-20220110223704926](https://blog-1300186248.cos.ap-shanghai.myqcloud.com/RabbitMQ/%E7%94%9F%E4%BA%A7%E8%80%85%E7%A1%AE%E8%AE%A4%E5%9B%9B%E7%A7%8D%E6%96%B9%E5%BC%8FQPS%E6%AF%94%E8%BE%83.png)
+
+
+
+可以看到批量confirm和异步confirm这两种方式所呈现的性能要比其余两种好得多。
+
+事务机制和普通confirm的方式吐吞量很低，但是编程方式简单，不需要在客户端维护状态（这里指的是维护deliveryTag及缓存未确认的消息）.
+
+批量confirm方式的问题在于遇到RabbitMQ服务端返回Basic.Nack需要重发批量消息而导致的性能降低。异步confirm方式编程模型最为复杂，而且和批量confirm方式一样需要在客户端维护状态。
+
+在实际生产环境中采用何种方式，这里就仁者见仁智者见智了，不过**强烈建议读者使用异步confirm的方式**。
+
+
+
+
+
+## 消费端要点
