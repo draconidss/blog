@@ -68,6 +68,14 @@ NIO
 
 
 
+
+
+## Golang
+
+- [ ] Golang基础
+
+
+
 ## 数据库
 
 ### Mysql
@@ -181,10 +189,20 @@ Python
 
 
 
+## Linux
+
+- Linux基础，《Linux私房菜》
+- ssh
+- curl
+
+
+
+
+
 ## 其他
 
-- 《clean code》
-- 《Java阿里开发手册》
+- [ ] 《clean code》
+- [x] 《Java阿里开发手册》
 
 
 
