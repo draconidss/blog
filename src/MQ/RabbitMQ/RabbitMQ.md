@@ -1507,6 +1507,39 @@ rabbitmqctl list_connections [-p vhost] [connectionInfoItem]
 
 
 
-如果单纯使用curl方式可以用`rabbitmqadmin`工具来调用，该工具只是一种用于访问 rabbitmq-server api 便捷方式
+如果单纯使用curl方式可以用`rabbitmqadmin`工具来调用，是一个python脚本，该工具只是一种用于访问 rabbitmq-server api 便捷方式
 
-[官方文档参考](https://www.rabbitmq.com/management-cli.html)
+- [官方文档参考](https://www.rabbitmq.com/management-cli.html)
+- [rabbitmqadmin使用](http://soft.dog/2016/04/20/RabbitMQ-cli-rabbitmqadmin/)
+
+工具下载方式：
+
+```bash
+curl http://localhost:15672/cli/rabbitmqadmin
+```
+
+
+
+
+
+## RabbitMQ配置
+
+大多数情况不用修改配置，提供了三种方式定制化：
+
+- 环境变量（Enviroment Variables）。RabbitMQ服务端参数可以通过环境变量进行配置，例如，节点名称、RabbitMQ配置文件的地址、节点内部通信端口等。
+- 配置文件（Configuration File）。可以定义RabbitMQ服务和插件设置，例如，TCP监听端口，以及其他网络相关的设置、内存限制、磁盘限制等。
+- 运行时参数和策略（Runtime Parameters and Policies）。可以在运行时定义集群层面的服务设置。
+
+
+
+### 环境变量
+
+在Shell环境中配置，环境变量都是以`RABBITMQ_`开头，也可以在`rabbitmq-env.conf`中配置
+
+非Shell环境中配置，则需要去除`RABBITMQ_`前缀
+
+优先级：Shell环境 > 配置文件 > 默认配置
+
+
+
+当采用rabbitmq-server-detached启动RabbitMQ服务的时候，此服务节点默认以“rabbit@”加上当前的Shell环境的hostname（主机名）来命名，即rabbit@$HOSTNAME。如果要自定义名称可以在`rabbitmq-server`命令前添加`RABBITMQ_NODENAME`
