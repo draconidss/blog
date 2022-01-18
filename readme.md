@@ -10,8 +10,8 @@ bgImage: https://blog-1300186248.cos.ap-shanghai.myqcloud.com/bgImage.jpg
 heroFullScreen: true
 project:
   - type: project
-    name: Project
-    desc: my project
+    name: My Project
+    desc: 一些个人项目就是说
     link: /project
 
   - type: link

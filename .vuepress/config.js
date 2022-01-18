@@ -68,14 +68,14 @@ module.exports = config({
         "study-line",
         {
           title: "My Project",
-          icon: "creative",
+          icon: "",
           prefix: "my-project/",
           children: ["", "Music-Recognition", "MyProject-AttendanceMiniprogram", "MyProject-JavaWeb-ActivitySystem",
             "MyProject-SupermarketSystem"]
         },
         {
           title: "Interview",
-          icon: "creative",
+          icon: "",
           prefix: "interview/",
           children: ["Java-Interview", "Computer-network", "OperatingSystem", "tencent-cloud-note", "cekai"]
         },
@@ -108,34 +108,34 @@ module.exports = config({
 
         {
           title: "Golang",
-          icon: "creative",
+          icon: "",
           prefix: "golang/",
           children: ["Golang", "Golang-description&use"]
         },
 
         {
           title: "Database",
-          icon: "creative",
+          icon: "",
           prefix: "database/",
           children: [
             "",
             {
               title: "Mysql",
-              icon: "creative",
+              icon: "",
               prefix: "mysql/",
               children: ["Mysql_theory_note", "SQL_note"]
             },
 
             {
               title: "Redis",
-              icon: "creative",
+              icon: "",
               prefix: "redis/",
               children: ["Redis_theory_note", "Redis_deployment&use", "Redis_scene"]
             },
 
             {
               title: "Hadoop",
-              icon: "creative",
+              icon: "",
               prefix: "hadoop/",
               children: ["Hadoop_pseudo-distributed_configuration"]
             }
@@ -145,16 +145,16 @@ module.exports = config({
 
         {
           title: "Spring",
-          icon: "creative",
+          icon: "",
           prefix: "Spring/",
           children: ["Spring", "Spring-annotation", "Spring-error&hole", "Spring-RestTemplate", "Spring-Interview",
             {
               title: "Spring Boot",
-              icon: "creative",
+              icon: "",
               prefix: "springBoot/",
               children: [{
                 title: "SpringBoot tool",
-                icon: "creative",
+                icon: "",
                 prefix: "springBoot-tool/",
                 children: ["SpringBoot&Vue", "EasyExcel-use",
                   "IDEA-Initial-Springboot+reverse-project+Configuration",
@@ -163,7 +163,7 @@ module.exports = config({
             },
             {
               title: "SpringCloud",
-              icon: "creative",
+              icon: "",
               prefix: "SpringCloud/",
               children: ["Know-SpringCloud", "SpringCloud"]
             },
@@ -185,7 +185,7 @@ module.exports = config({
         },
         {
           title: "Mybatis",
-          icon: "creative",
+          icon: "",
           prefix: "mybatis/",
           children: ["Mybatis-basic-notes", "Mybatis-grammar-notes", "MybatisPlus-notes", "Mybatis-reverse-project&Example-use"]
         },
@@ -193,47 +193,47 @@ module.exports = config({
 
         {
           title: "DataStructure",
-          icon: "creative",
+          icon: "",
           prefix: "dataStructure&algorithm/",
           children: ["", "DataStructure", "Algorithm", "DataStructure&algorithm_question"],
         },
 
         {
           title: "Linux",
-          icon: "creative",
+          icon: "",
           prefix: "linux/",
           children: ["Linux-skill", "Linux-commands"],
         },
 
         {
           title: "ElasticSearch",
-          icon: "creative",
+          icon: "",
           prefix: "elasticSearch/",
           children: ["ElasticSearch", "ElasticSearch-Interview"],
         },
 
         {
           title: "Docker",
-          icon: "creative",
+          icon: "",
           prefix: "docker/",
           children: ["Docker-Note", "Docker-deployment", "Docker-Install-software"],
         },
 
         {
           title: "Nginx",
-          icon: "creative",
+          icon: "",
           prefix: "nginx/",
           children: ["", "Nginx-basicNote&deployment", "Nginx-LoadBalance", "Nginx-ReverseProxy", "Nginx-Dynamic&static"],
         },
 
         {
           title: "MessageQueue",
-          icon: "creative",
+          icon: "",
           prefix: "mq/",
           children: [
             {
               title: "RabbitMQ",
-              icon: "creative",
+              icon: "",
               prefix: "rabbitMQ/",
               children: ["RabbitMQ", "RabbitMQ-Interview"]
             }
@@ -242,28 +242,28 @@ module.exports = config({
 
         {
           title: "ErrorNote",
-          icon: "creative",
+          icon: "",
           prefix: "error/",
           children: ["Springboot-Error"],
         },
 
         {
           title: "Git",
-          icon: "creative",
+          icon: "",
           prefix: "git/",
           children: ["Git"],
         },
 
         {
           title: "Frontend",
-          icon: "creative",
+          icon: "",
           prefix: "front-end/",
           children: ["", "JavaScript-Interview", "Promise_Asynchronous_call"],
         },
 
         {
           title: "Guide",
-          icon: "creative",
+          icon: "",
           prefix: "guide/",
           children: ["", "page", "markdown", "disable", "encrypt"],
         },
@@ -308,7 +308,7 @@ module.exports = config({
             "layout",
             {
               title: "如何使用",
-              icon: "creative",
+              icon: "",
               prefix: "guide/",
               children: ["", "page", "markdown", "disable", "encrypt"],
             },
@@ -334,18 +334,9 @@ module.exports = config({
       content: "粤ICP备19126168号",
     },
 
-    // comment: {
-    //   type: "waline",
-    //   serverURL: "https://vuepress-theme-hope-comment.vercel.app",
-    // },
-
     comment: {
-      type: "valine",
-      appId: "UhjxD2LPBH9vMPURVoIv0EGJ-gzGzoHsz",
-      appKey: "xlubLmY4NeX73i1NivxCO0jA",
-      visitor: "true",
-      recordIP: "true",
-      placeholder: "还请不吝赐教"
+      type: "waline",
+      serverURL: "https://bw3hvpzf.api.lncldglobal.com",
     },
 
     copyright: {

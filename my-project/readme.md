@@ -2,6 +2,7 @@
 icon: 
 time: 2020-08-07 22:10:27
 title: My Project
+sticky: true
 categories: 
   - My Project
 ---
