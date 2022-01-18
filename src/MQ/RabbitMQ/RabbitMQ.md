@@ -25,7 +25,7 @@ tags:
 
 
 
-- 尚硅谷
+- 尚硅谷RabbitMQ
 - [尚硅谷笔记](https://zhangc233.github.io/2021/07/23/RabbitMQ/)
 - 《RabbitMQ实战指南》
 

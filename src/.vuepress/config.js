@@ -66,30 +66,30 @@ module.exports = config({
     author: "Draco",
     nav: [
     {
-      text: "分类",
+      text: "Category",
       link: "/category/",
       icon: "note",
     },
     {
-      text: "学习路线",
+      text: "StudyLine",
       link: "/study-line/",
       icon: "info",
     },
     {
-      text: "时间线",
+      text: "Timeline",
       link: "/timeline/",
       icon: "time",
     },
     {
-      text: "关于",
+      text: "About",
       link: "/about/",
       icon: "info",
-    },
-    {
-      text: "相册",
-      link: "https://photos.lifeisgg.online/",
-      icon: "emoji",
     }
+    // {
+    //   text: "相册",
+    //   link: "https://photos.lifeisgg.online/",
+    //   icon: "emoji",
+    // }
 
     ],
 
@@ -104,7 +104,7 @@ module.exports = config({
         "MyProject-SupermarketSystem"]
       },
       {
-        title: "面试",
+        title: "Interview",
         icon: "creative",
         prefix: "Interview/",
         children: ["Java-Interview", "Computer-network", "OperatingSystem", "tencent-cloud-note", "cekai"]
@@ -115,7 +115,7 @@ module.exports = config({
         prefix: "Java/",
         children: ["","Java-BasicNotes", "Java-Interview", "Java-Methods","Java-Collections", 
         {
-          title: "Java-多线程",
+          title: "Java-Thread",
           icon: "",
           prefix: "Java-MultiThread/",
           children: ["", "Java-MultiThread-1", "Java-MultiThread-2", "Java-MultiThread-keyword","Java-MultiThread"]
@@ -127,7 +127,7 @@ module.exports = config({
           children: ["", "Java-JVM-Classloader", "Java-JVM-Run", "Java-JVM"]
         }, 
         {
-          title: "Java设计模式",
+          title: "Java-DesignPattern",
           icon: "",
           prefix: "Java-DesignPatterns/",
           children: ["","Java-DesignPatterns-SevenPrinciple", "Java-DesignPatterns-CreationalPatterns"
@@ -144,7 +144,7 @@ module.exports = config({
       },
 
       {
-        title: "数据库",
+        title: "Database",
         icon: "creative",
         prefix: "database/",
         children: [
@@ -222,7 +222,7 @@ module.exports = config({
 
 
       {
-        title: "数据结构&算法",
+        title: "DataStructure",
         icon: "creative",
         prefix: "dataStructure&algorithm/",
         children: ["", "DataStructure","Algorithm", "DataStructure&algorithm_question"],
@@ -232,7 +232,7 @@ module.exports = config({
         title: "Linux",
         icon: "creative",
         prefix: "Linux/",
-        children: ["", "Linux-skill", "Linux-commands", "Use-xshell-to-connect-Centos7-in-VM"],
+        children: ["Linux-skill", "Linux-commands"],
       },
 
       {
@@ -257,7 +257,7 @@ module.exports = config({
       },
 
       {
-        title: "消息队列",
+        title: "MessageQueue",
         icon: "creative",
         prefix: "MQ/",
         children: [
@@ -271,7 +271,7 @@ module.exports = config({
       },
 
       {
-        title: "错误笔记",
+        title: "ErrorNote",
         icon: "creative",
         prefix: "Error/",
         children: ["Springboot-Error"],
@@ -285,7 +285,7 @@ module.exports = config({
       },
 
       {
-        title: "前端",
+        title: "Frontend",
         icon: "creative",
         prefix: "front-end/",
         children: ["", "JavaScript-Interview", "Promise_Asynchronous_call"],
