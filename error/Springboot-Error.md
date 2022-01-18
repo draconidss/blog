@@ -32,7 +32,7 @@ tags:
 
 ### 如果此时service上已经加了注解`@Service`或者没有其他基本问题，那么可能是**主启动类与被扫描的文件夹不在同一路径**下，所以扫描不到。
 
-![](D:\repository\static-blog\src\Spring\images\Spring-error&hole\springboot_error_1-1.png)
+
 
 
 
@@ -44,7 +44,6 @@ tags:
 
 
 
-![](D:\repository\static-blog\src\Spring\images\Spring-error&hole\springboot_error_1-2.png)
 
 
 

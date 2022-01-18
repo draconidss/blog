@@ -98,13 +98,13 @@ tags:
 
 #### 线程的状态/⽣命周期和状态
 
-![线程生命周期](D:\repository\static-blog\src\Interview\images\Computer_other_interview_questions\Thread_life-cycle.jpg)
+![线程生命周期]
 
 
 
 线程在⽣命周期中并不是固定处于某⼀个状态⽽是随着代码的执⾏在不同状态之间切换。Java 线程状 态变迁如下图所示（图源《Java 并发编程艺术》4.1.4 节）：
 
-![线程生命周期2](D:\repository\static-blog\src\Interview\images\Computer_other_interview_questions\Thread_life-cycle_2.jpg)
+![线程生命周期2]
 
 由上图可以看出：线程创建之后它将处于 NEW（新建） 状态，调⽤ start() ⽅法后开始运⾏，线程 这时候处于 READY（可运⾏） 状态。可运⾏状态的线程获得了 CPU 时间⽚（timeslice）后就处于 RUNNING（运⾏） 状态。
 
