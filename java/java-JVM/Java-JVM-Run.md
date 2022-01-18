@@ -41,7 +41,7 @@ tags:
 
 
 
-![JVM组成图2](D:/repository/static-blog/src/Java/Java-JVM/images/Java-JVM/JVM_composition_diagram_2.jpg)
+JVM组成图2
 
 
 

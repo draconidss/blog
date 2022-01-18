@@ -41,7 +41,7 @@ tags:
 
 
 
-![正向代理](D:/repository/static-blog/src/Nginx/images/Nginx-ReverseProxy/Forward_proxy.png)
+正向代理
 
 
 
@@ -65,7 +65,7 @@ Nginx在做反向代理时，提供性能稳定，并且能够提供配置灵活
 
 
 
-![反向代理](D:/repository/static-blog/src/Nginx/images/Nginx-ReverseProxy/Reverse_Proxy.png)
+反向代理
 
 
 
