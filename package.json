@@ -1,21 +1,16 @@
 {
-  "name": "vuepress-theme-hope-template",
+  "name": "blog",
   "version": "1.0.0",
-  "description": "Template for vuepress-theme-hope",
-  "scripts": {
-    "serve": "vuepress dev src",
-    "cleanServe": "vuepress dev src --no-cache",
-    "build": "vuepress build src",
-    "test": "echo \"Warning: no test specified\" && exit 0"
-  },
-  "author": "Mr.Hope",
+  "description": "A project of vuepress-theme-hope",
   "license": "MIT",
-  "keywords": [
-    "vuepress",
-    "personal-blog"
-  ],
-  "dependencies": {
-    "vuepress": "1.7.1",
-    "vuepress-theme-hope": "1.7.0"
+  "scripts": {
+    "docs:build": "vuepress build /Users/chenlong/workplace/vuepress-theme-hope",
+    "docs:clean-dev": "vuepress dev /Users/chenlong/workplace/vuepress-theme-hope --no-cache",
+    "docs:dev": "vuepress dev /Users/chenlong/workplace/vuepress-theme-hope",
+    "docs:eject-theme": "vuepress eject-hope /Users/chenlong/workplace/vuepress-theme-hope"
+  },
+  "devDependencies": {
+    "vuepress": "^1.9.7",
+    "vuepress-theme-hope": "^1.23.0"
   }
 }

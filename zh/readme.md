@@ -10,9 +10,9 @@ bgImage: https://blog-1300186248.cos.ap-shanghai.myqcloud.com/bgImage.jpg
 heroFullScreen: true
 project:
   - type: project
-    name: Project
-    desc: my project
-    link: /project
+    name: My Project
+    desc: 个人项目
+    link: My-Project
 
   - type: link
     name: Java全栈知识体系
