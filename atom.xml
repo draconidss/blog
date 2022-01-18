@@ -6,7 +6,7 @@
   <author>
     <name>Draco</name>
   </author>
-  <updated>2022-01-18T12:48:36.574Z</updated>
+  <updated>2022-01-18T16:15:57.400Z</updated>
   <generator>@mr-hope/vuepress-plugin-feed</generator>
   <link rel="self" href="https://vuepress-theme-hope-demo.mrhope.site/atom.xml"/>
   <link rel="alternate" href="https://vuepress-theme-hope-demo.mrhope.site/"/>
@@ -23,7 +23,7 @@
     <title type="html">About</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/about/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/about/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="about"> About</h2>
 <p>这里是我的博客和笔记Wiki，通过<code>Vuepress</code>搭建在<code>Github Pages</code>上</p>
 <p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/about/about.jpg" alt="about" /></p>
@@ -34,14 +34,14 @@
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-01-18T12:47:30.000Z</published>
+    <published>2022-01-18T16:15:26.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">算法</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/Algorithm/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/Algorithm/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="动态规划和贪心算法的区别"> 动态规划和贪心算法的区别</h2>
 <p>相同点</p>
 <ul>
@@ -70,7 +70,7 @@
     <title type="html">数据结构</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/DataStructure/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/DataStructure/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -1360,10 +1360,24 @@
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
+    <title type="html">数据结构&amp;算法学习目录</title>
+    <id>https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/</id>
+    <link href="https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/"/>
+    <updated>2022-01-18T16:15:26.000Z</updated>
+    <author>
+      <name>Draco</name>
+    </author>
+    <contributor>
+      <name>Draco</name>
+    </contributor>
+    <published>2020-11-24T23:10:27.000Z</published>
+    <rights>Copyright by Draco</rights>
+  </entry>
+  <entry>
     <title type="html">数据结构&amp;算法题目合集</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/DataStructure&amp;algorithm_question/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/DataStructure&amp;algorithm_question/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h1 id="_1-通用操作"> 1. 通用操作</h1>
 <h2 id="_1-1-输入类"> 1.1 输入类</h2>
 <h3 id="_1-1-1-利用字符串输入不定长int数组-逗号隔开"> 1.1.1 利用字符串输入不定长int数组，逗号隔开</h3>
@@ -2010,24 +2024,10 @@
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
-    <title type="html">数据结构&amp;算法学习目录</title>
-    <id>https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/</id>
-    <link href="https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
-    <author>
-      <name>Draco</name>
-    </author>
-    <contributor>
-      <name>Draco</name>
-    </contributor>
-    <published>2020-11-24T23:10:27.000Z</published>
-    <rights>Copyright by Draco</rights>
-  </entry>
-  <entry>
     <title type="html">Hadoop伪分布式配置</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/database/hadoop/Hadoop_pseudo-distributed_configuration/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/database/hadoop/Hadoop_pseudo-distributed_configuration/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="_1-准备"> 1. 准备</h2>
 <blockquote>
 <ol>
@@ -2162,7 +2162,7 @@ hadoop version
     <title type="html">Mysql理论学习笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/database/mysql/Mysql_theory_note/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/database/mysql/Mysql_theory_note/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="_1-参考"> 1. 参考</h2>
 <h2 id="_2-存储引擎"> 2. 存储引擎</h2>
 <h3 id="_2-1-查看mysql提供的所有存储引擎"> 2.1 查看MySQL提供的所有存储引擎</h3>
@@ -2595,7 +2595,7 @@ hadoop version
     <title type="html">SQL学习笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/database/mysql/SQL_note/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/database/mysql/SQL_note/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h1 id="参考"> 参考</h1>
 <blockquote>
 <ul>
@@ -2678,7 +2678,7 @@ hadoop version
     <title type="html">数据库学习目录</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/database/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/database/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <author>
       <name>Draco</name>
     </author>
@@ -2689,10 +2689,26 @@ hadoop version
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
+    <title type="html">Redis集群和哨兵</title>
+    <id>https://vuepress-theme-hope-demo.mrhope.site/database/redis/Redis-cluster&amp;sentinel/</id>
+    <link href="https://vuepress-theme-hope-demo.mrhope.site/database/redis/Redis-cluster&amp;sentinel/"/>
+    <updated>2022-01-18T16:15:26.000Z</updated>
+    <content type="html"><![CDATA[<p>Redis集群和哨兵</p>
+]]></content>
+    <author>
+      <name>Draco</name>
+    </author>
+    <contributor>
+      <name>Draco</name>
+    </contributor>
+    <published>2021-01-03T22:17:53.000Z</published>
+    <rights>Copyright by Draco</rights>
+  </entry>
+  <entry>
     <title type="html">Redis部署与基本使用</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/database/redis/Redis_deployment&amp;use/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/database/redis/Redis_deployment&amp;use/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>Tips</p>
 <ul>
@@ -5347,7 +5363,7 @@ OK              <span>#可以删除其它的master节点</span>
     <title type="html">Redis应用场景</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/database/redis/Redis_scene/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/database/redis/Redis_scene/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="单点登录-sso"> 单点登录（SSO）</h2>
 <h3 id="参考"> 参考</h3>
 <div><p>参考</p>
@@ -5380,10 +5396,114 @@ OK              <span>#可以删除其它的master节点</span>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
+    <title type="html">Docker:Install software</title>
+    <id>https://vuepress-theme-hope-demo.mrhope.site/docker/Docker-Install-software/</id>
+    <link href="https://vuepress-theme-hope-demo.mrhope.site/docker/Docker-Install-software/"/>
+    <updated>2022-01-18T16:15:26.000Z</updated>
+    <summary type="html"><![CDATA[Docker:Install software]]></summary>
+    <content type="html"><![CDATA[<h2 id="_1-概念"> 1. 概念</h2>
+<blockquote>
+<ul>
+<li>镜像：相当于java中的类,镜像由一层层只读层堆在一起</li>
+<li>容器：镜像只读层+读写层，运行态容器为由一个可读写的文件系统「静态容器」+ 隔离的进程空间和其中的进程构成(可以理解为<strong>虚拟机中的虚拟机</strong>)</li>
+</ul>
+</blockquote>
+<p><img src="./images/Docker-install-software/image&container.png" alt="" /></p>
+<h3 id="_1-1-查看镜像"> 1.1 查看镜像</h3>
+<div><pre><code><span>docker</span> images
+</code></pre>
+<div><span>1</span><br></div></div><p><img src="./images/Docker-install-software/Mirror.jpg" alt="镜像" /></p>
+<h3 id="_1-2-查看容器"> 1.2 查看容器</h3>
+<div><pre><code><span>docker</span> <span>ps</span> -a
+</code></pre>
+<div><span>1</span><br></div></div><p><img src="./images/Docker-install-software/container.jpg" alt="容器" /></p>
+<h2 id="_2-安装mysql"> 2. 安装Mysql</h2>
+<h3 id="_2-1-下载mysql5-7的docker镜像"> 2.1 下载mysql5.7的docker镜像</h3>
+<div><pre><code><span>docker</span> pull mysql:5.7
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="_2-2-使用docker命令启动容器"> 2.2 使⽤docker命令启动容器</h3>
+<div><pre><code><span>mkdir</span> /mydata/mysql/mysql5.7 <span>#先在根目录创建容器来存放mysql相关</span>
+<span>#将容器的3306端口映射到主机的3307接口，适合主机的3306接口被主机Mysql占用情况下</span>
+<span>docker</span> run -p <span>3307</span>:3306 --name mysql5.7 <span>\</span>
+-v /usr/local/docker/mysql5.7/data:/var/lib/mysql <span>\</span>
+-v /usr/local/docker/mysql5.7/log:/var/log <span>\</span>
+-v /usr/local/docker/mysql5.7/conf:/etc/mysql <span>\</span>
+-e <span>MYSQL_ROOT_PASSWORD</span><span>=</span>root <span>\</span>
+-d mysql:5.7
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><p>参数说明</p>
+<blockquote>
+<ul>
+<li>--restart=always：容器自启动</li>
+<li>-p 3307:3306：将容器的3306端⼝映射到主机的3307端⼝</li>
+<li>-v /usr/local/docker/mysql5.7/conf:/etc/mysql：将配置⽂件夹挂在到主机</li>
+<li>-v /usr/local/docker/mysql5.7/log:/var/log：将⽇志⽂件夹挂载到主机</li>
+<li>-v /usr/local/docker/mysql5.7/data:/var/lib/mysql：将数据⽂件夹挂载到主机</li>
+<li>-e MYSQL_ROOT_PASSWORD=root：初始化root⽤户的密码</li>
+</ul>
+</blockquote>
+<p><img src="./images/Docker-install-software/start_mysql_container.jpg" alt="启动mysql容器" /></p>
+<h3 id="_2-3-进入运行mysql的docker容器"> 2.3 进⼊运⾏mysql的docker容器</h3>
+<div><pre><code><span>docker</span> <span>exec</span> -it mysql5.7 /bin/bash
+</code></pre>
+<div><span>1</span><br></div></div><p><img src="./images/Docker-install-software/enter_container.jpg" alt="进入容器" /></p>
+<h3 id="_2-4-使用mysql命令打开客户端"> 2.4 使⽤Mysql命令打开客户端</h3>
+<div><pre><code>mysql -uroot -proot
+</code></pre>
+<div><span>1</span><br></div></div><p><img src="./images/Docker-install-software/enter_mysql.jpg" alt="进入mysql" /></p>
+<h3 id="_2-5-测试连接"> 2.5 测试连接</h3>
+<p>使用Navicat连接工具</p>
+<p><img src="./images/Docker-install-software/navicat_connect_to_mysql_1.jpg" alt="navicat连接mysql1" /></p>
+<p>连接成功</p>
+<p><img src="./images/Docker-install-software/navicat_connect_to_mysql_2.jpg" alt="navicat连接mysql2" /></p>
+<h2 id="_3-安装nginx"> 3. 安装Nginx</h2>
+<h3 id="_3-1-下载nginx1-10的docker镜像"> 3.1 下载Nginx1.10的docker镜像</h3>
+<div><pre><code><span>docker</span> pull nginx:1.18
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="_3-2-先运行一次容器-为了拷⻉配置文件"> 3.2 先运⾏⼀次容器（为了拷⻉配置⽂件）</h3>
+<div><pre><code><span>docker</span> run -p <span>81</span>:80 --name nginx1.18 <span>\</span>
+-v /mydata/nginx1.18/html:/usr/share/nginx1.18/html <span>\</span>
+-v /mydata/nginx1.18/logs:/var/log/nginx1.18 <span>\</span>
+-d nginx:1.18
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><blockquote>
+<p>注：加了 -d 参数默认不会进⼊容器，想要进⼊容器需要使⽤指令 <code>docker exec</code>。</p>
+</blockquote>
+<h3 id="_3-3-将容器内的配置文件拷⻉到指定目录"> 3.3 将容器内的配置⽂件拷⻉到指定⽬录</h3>
+<div><pre><code><span>docker</span> container <span>cp</span> nginx1.18:/etc/nginx /mydata/nginx1.18/
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="_3-4-修改文件名称"> 3.4 修改⽂件名称</h3>
+<div><pre><code><span>cd</span> /mydata/nginx1.18 
+<span>mv</span> nginx conf
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><h3 id="_3-5-终止并删除容器"> 3.5 终⽌并删除容器</h3>
+<div><pre><code><span>docker</span> stop nginx1.18
+<span>docker</span> <span>rm</span> nginx1.18
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><h3 id="_3-6-再次使用docker命令启动"> 3.6 再次使⽤docker命令启动</h3>
+<div><pre><code><span>docker</span> run -p <span>81</span>:80 --name nginx1.18 <span>\</span>
+-v /mydata/nginx1.18/html:/usr/share/nginx1.18/html <span>\</span>
+-v /mydata/nginx1.18/logs:/var/log/nginx1.18 <span>\</span>
+-v /mydata/nginx1.18/conf:/etc/nginx1.18 <span>\</span>
+-d nginx:1.18
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h3 id="_3-7-启动成功"> 3.7 启动成功</h3>
+<p><img src="./images/Docker-install-software/nginx_start.jpg" alt="nginx启动成功" /></p>
+]]></content>
+    <author>
+      <name>Draco</name>
+    </author>
+    <contributor>
+      <name>Draco</name>
+    </contributor>
+    <published>2020-05-31T20:47:14.000Z</published>
+    <rights>Copyright by Draco</rights>
+  </entry>
+  <entry>
     <title type="html">Redis理论学习笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/database/redis/Redis_theory_note/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/database/redis/Redis_theory_note/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="_1-参考"> 1. 参考</h2>
 <blockquote>
 <ul>
@@ -6145,114 +6265,10 @@ appendfsync no #让操作系统决定何时进⾏同步
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
-    <title type="html">Docker:Install software</title>
-    <id>https://vuepress-theme-hope-demo.mrhope.site/docker/Docker-Install-software/</id>
-    <link href="https://vuepress-theme-hope-demo.mrhope.site/docker/Docker-Install-software/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
-    <summary type="html"><![CDATA[Docker:Install software]]></summary>
-    <content type="html"><![CDATA[<h2 id="_1-概念"> 1. 概念</h2>
-<blockquote>
-<ul>
-<li>镜像：相当于java中的类,镜像由一层层只读层堆在一起</li>
-<li>容器：镜像只读层+读写层，运行态容器为由一个可读写的文件系统「静态容器」+ 隔离的进程空间和其中的进程构成(可以理解为<strong>虚拟机中的虚拟机</strong>)</li>
-</ul>
-</blockquote>
-<p><img src="./images/Docker-install-software/image&container.png" alt="" /></p>
-<h3 id="_1-1-查看镜像"> 1.1 查看镜像</h3>
-<div><pre><code><span>docker</span> images
-</code></pre>
-<div><span>1</span><br></div></div><p><img src="./images/Docker-install-software/Mirror.jpg" alt="镜像" /></p>
-<h3 id="_1-2-查看容器"> 1.2 查看容器</h3>
-<div><pre><code><span>docker</span> <span>ps</span> -a
-</code></pre>
-<div><span>1</span><br></div></div><p><img src="./images/Docker-install-software/container.jpg" alt="容器" /></p>
-<h2 id="_2-安装mysql"> 2. 安装Mysql</h2>
-<h3 id="_2-1-下载mysql5-7的docker镜像"> 2.1 下载mysql5.7的docker镜像</h3>
-<div><pre><code><span>docker</span> pull mysql:5.7
-</code></pre>
-<div><span>1</span><br></div></div><h3 id="_2-2-使用docker命令启动容器"> 2.2 使⽤docker命令启动容器</h3>
-<div><pre><code><span>mkdir</span> /mydata/mysql/mysql5.7 <span>#先在根目录创建容器来存放mysql相关</span>
-<span>#将容器的3306端口映射到主机的3307接口，适合主机的3306接口被主机Mysql占用情况下</span>
-<span>docker</span> run -p <span>3307</span>:3306 --name mysql5.7 <span>\</span>
--v /usr/local/docker/mysql5.7/data:/var/lib/mysql <span>\</span>
--v /usr/local/docker/mysql5.7/log:/var/log <span>\</span>
--v /usr/local/docker/mysql5.7/conf:/etc/mysql <span>\</span>
--e <span>MYSQL_ROOT_PASSWORD</span><span>=</span>root <span>\</span>
--d mysql:5.7
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><p>参数说明</p>
-<blockquote>
-<ul>
-<li>--restart=always：容器自启动</li>
-<li>-p 3307:3306：将容器的3306端⼝映射到主机的3307端⼝</li>
-<li>-v /usr/local/docker/mysql5.7/conf:/etc/mysql：将配置⽂件夹挂在到主机</li>
-<li>-v /usr/local/docker/mysql5.7/log:/var/log：将⽇志⽂件夹挂载到主机</li>
-<li>-v /usr/local/docker/mysql5.7/data:/var/lib/mysql：将数据⽂件夹挂载到主机</li>
-<li>-e MYSQL_ROOT_PASSWORD=root：初始化root⽤户的密码</li>
-</ul>
-</blockquote>
-<p><img src="./images/Docker-install-software/start_mysql_container.jpg" alt="启动mysql容器" /></p>
-<h3 id="_2-3-进入运行mysql的docker容器"> 2.3 进⼊运⾏mysql的docker容器</h3>
-<div><pre><code><span>docker</span> <span>exec</span> -it mysql5.7 /bin/bash
-</code></pre>
-<div><span>1</span><br></div></div><p><img src="./images/Docker-install-software/enter_container.jpg" alt="进入容器" /></p>
-<h3 id="_2-4-使用mysql命令打开客户端"> 2.4 使⽤Mysql命令打开客户端</h3>
-<div><pre><code>mysql -uroot -proot
-</code></pre>
-<div><span>1</span><br></div></div><p><img src="./images/Docker-install-software/enter_mysql.jpg" alt="进入mysql" /></p>
-<h3 id="_2-5-测试连接"> 2.5 测试连接</h3>
-<p>使用Navicat连接工具</p>
-<p><img src="./images/Docker-install-software/navicat_connect_to_mysql_1.jpg" alt="navicat连接mysql1" /></p>
-<p>连接成功</p>
-<p><img src="./images/Docker-install-software/navicat_connect_to_mysql_2.jpg" alt="navicat连接mysql2" /></p>
-<h2 id="_3-安装nginx"> 3. 安装Nginx</h2>
-<h3 id="_3-1-下载nginx1-10的docker镜像"> 3.1 下载Nginx1.10的docker镜像</h3>
-<div><pre><code><span>docker</span> pull nginx:1.18
-</code></pre>
-<div><span>1</span><br></div></div><h3 id="_3-2-先运行一次容器-为了拷⻉配置文件"> 3.2 先运⾏⼀次容器（为了拷⻉配置⽂件）</h3>
-<div><pre><code><span>docker</span> run -p <span>81</span>:80 --name nginx1.18 <span>\</span>
--v /mydata/nginx1.18/html:/usr/share/nginx1.18/html <span>\</span>
--v /mydata/nginx1.18/logs:/var/log/nginx1.18 <span>\</span>
--d nginx:1.18
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><blockquote>
-<p>注：加了 -d 参数默认不会进⼊容器，想要进⼊容器需要使⽤指令 <code>docker exec</code>。</p>
-</blockquote>
-<h3 id="_3-3-将容器内的配置文件拷⻉到指定目录"> 3.3 将容器内的配置⽂件拷⻉到指定⽬录</h3>
-<div><pre><code><span>docker</span> container <span>cp</span> nginx1.18:/etc/nginx /mydata/nginx1.18/
-</code></pre>
-<div><span>1</span><br></div></div><h3 id="_3-4-修改文件名称"> 3.4 修改⽂件名称</h3>
-<div><pre><code><span>cd</span> /mydata/nginx1.18 
-<span>mv</span> nginx conf
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><h3 id="_3-5-终止并删除容器"> 3.5 终⽌并删除容器</h3>
-<div><pre><code><span>docker</span> stop nginx1.18
-<span>docker</span> <span>rm</span> nginx1.18
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><h3 id="_3-6-再次使用docker命令启动"> 3.6 再次使⽤docker命令启动</h3>
-<div><pre><code><span>docker</span> run -p <span>81</span>:80 --name nginx1.18 <span>\</span>
--v /mydata/nginx1.18/html:/usr/share/nginx1.18/html <span>\</span>
--v /mydata/nginx1.18/logs:/var/log/nginx1.18 <span>\</span>
--v /mydata/nginx1.18/conf:/etc/nginx1.18 <span>\</span>
--d nginx:1.18
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h3 id="_3-7-启动成功"> 3.7 启动成功</h3>
-<p><img src="./images/Docker-install-software/nginx_start.jpg" alt="nginx启动成功" /></p>
-]]></content>
-    <author>
-      <name>Draco</name>
-    </author>
-    <contributor>
-      <name>Draco</name>
-    </contributor>
-    <published>2020-05-31T20:47:14.000Z</published>
-    <rights>Copyright by Draco</rights>
-  </entry>
-  <entry>
     <title type="html">Docker学习笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/docker/Docker-Note/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/docker/Docker-Note/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <summary type="html"><![CDATA[Docker学习笔记]]></summary>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <p>参考</p>
@@ -7004,7 +7020,7 @@ Options:
     <title type="html">Docker deployment</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/docker/Docker-deployment/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/docker/Docker-deployment/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <summary type="html"><![CDATA[Docker deployment]]></summary>
     <content type="html"><![CDATA[<p>环境</p>
 <p>CentOs 7</p>
@@ -7134,7 +7150,7 @@ https://download.docker.com/linux/centos/docker-ce.repo
     <title type="html">Dubbo笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/dubbo/Dubbo/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/dubbo/Dubbo/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>Tips</p>
 <ul>
@@ -7155,7 +7171,7 @@ https://download.docker.com/linux/centos/docker-ce.repo
     <title type="html">ElasticSearch面试</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/elasticSearch/ElasticSearch-Interview/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/elasticSearch/ElasticSearch-Interview/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -7311,7 +7327,7 @@ https://download.docker.com/linux/centos/docker-ce.repo
     <title type="html">ElasticSearch笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/elasticSearch/ElasticSearch/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/elasticSearch/ElasticSearch/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -7526,7 +7542,7 @@ https://download.docker.com/linux/centos/docker-ce.repo
     <title type="html">Spring错误笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/error/Springboot-Error/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/error/Springboot-Error/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="解决springboot无法注入service的原因之一testcontroller-required-a-bean-of-type-com-yifeng-study-service-userservice-that-could-not-be-found-报错"> 解决SpringBoot无法注入service的原因之一TestController required a bean of type ‘com.yifeng.study.service.UserService’ that could not be found.报错</h2>
 <p>参考</p>
 <div><p>Tips</p>
@@ -7565,7 +7581,7 @@ https://download.docker.com/linux/centos/docker-ce.repo
     <title type="html">JavaScript面试题</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/front-end/JavaScript-Interview/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/front-end/JavaScript-Interview/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <summary type="html"><![CDATA[JavaScript面试题]]></summary>
     <content type="html"><![CDATA[<h2 id="js作用域"> JS作用域</h2>
 <p>参考</p>
@@ -7593,7 +7609,7 @@ https://download.docker.com/linux/centos/docker-ce.repo
     <title type="html">Promise异步调用</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/front-end/Promise_Asynchronous_call/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/front-end/Promise_Asynchronous_call/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <summary type="html"><![CDATA[Promise异步调用]]></summary>
     <content type="html"><![CDATA[<p>官方文档</p>
 <blockquote>
@@ -7720,7 +7736,7 @@ https://download.docker.com/linux/centos/docker-ce.repo
     <title type="html">前端学习目录</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/front-end/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/front-end/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <author>
       <name>Draco</name>
     </author>
@@ -7734,7 +7750,7 @@ https://download.docker.com/linux/centos/docker-ce.repo
     <title type="html">Git笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/git/Git/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/git/Git/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <blockquote>
 <ul>
@@ -7966,7 +7982,7 @@ https://download.docker.com/linux/centos/docker-ce.repo
     <title type="html">Golang-介绍和使用</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/golang/Golang-description&amp;use/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/golang/Golang-description&amp;use/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>Tips</p>
 <ul>
@@ -8058,7 +8074,7 @@ https://download.docker.com/linux/centos/docker-ce.repo
     <title type="html">Golang-语法基础</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/golang/Golang/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/golang/Golang/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>Tips</p>
 <ul>
@@ -8281,7 +8297,7 @@ ptr:  0xc000010098
     <title type="html">Component disabled</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/guide/disable/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/guide/disable/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <summary type="html"><![CDATA[<p>You can disable some functions on the page by setting the Frontmatter of the page.</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>You can disable some functions on the page by setting the Frontmatter of the page.</p>
@@ -8308,14 +8324,14 @@ ptr:  0xc000010098
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-01-18T12:47:30.000Z</published>
+    <published>2022-01-18T16:15:26.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">Encryption article</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/guide/encrypt/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/guide/encrypt/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h1 id="encryption-article"> Encryption article</h1>
 <p>The actual article content.</p>
 <p>Paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text.</p>
@@ -8328,14 +8344,14 @@ ptr:  0xc000010098
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-01-18T12:47:30.000Z</published>
+    <published>2022-01-18T16:15:26.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">Markdown Enhance</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/guide/markdown/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/guide/markdown/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <summary type="html"><![CDATA[<p><code>vuepress-theme-hope</code> enables more syntax in Markdown via the built-in <a href="https://vuepress-theme-hope.github.io/md-enhance" target="_blank" rel="noopener noreferrer">md-enhance</a> plugin.</p>
 ]]></summary>
     <content type="html"><![CDATA[<p><code>vuepress-theme-hope</code> enables more syntax in Markdown via the built-in <a href="https://vuepress-theme-hope.github.io/md-enhance" target="_blank" rel="noopener noreferrer">md-enhance</a> plugin.</p>
@@ -8793,14 +8809,14 @@ A custom details container
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-01-18T12:47:30.000Z</published>
+    <published>2022-01-18T16:15:26.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">page config</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/guide/page/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/guide/page/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="page-information"> Page information</h2>
 <p>You can set page information in Markdown’s Frontmatter.</p>
 <ul>
@@ -8853,26 +8869,10 @@ A custom details container
     <rights>Copyright by Ms.Hope</rights>
   </entry>
   <entry>
-    <title type="html">Redis集群和哨兵</title>
-    <id>https://vuepress-theme-hope-demo.mrhope.site/database/redis/Redis-cluster&amp;sentinel/</id>
-    <link href="https://vuepress-theme-hope-demo.mrhope.site/database/redis/Redis-cluster&amp;sentinel/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
-    <content type="html"><![CDATA[<p>Redis集群和哨兵</p>
-]]></content>
-    <author>
-      <name>Draco</name>
-    </author>
-    <contributor>
-      <name>Draco</name>
-    </contributor>
-    <published>2021-01-03T22:17:53.000Z</published>
-    <rights>Copyright by Draco</rights>
-  </entry>
-  <entry>
     <title type="html">Guides</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/guide/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/guide/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h1 id="guides"> Guides</h1>
 <ul>
 <li>
@@ -8896,83 +8896,14 @@ A custom details container
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-01-18T12:47:30.000Z</published>
-    <rights>Copyright by Draco</rights>
-  </entry>
-  <entry>
-    <title type="html">Java面试整理</title>
-    <id>https://vuepress-theme-hope-demo.mrhope.site/interview/Java-Interview/</id>
-    <link href="https://vuepress-theme-hope-demo.mrhope.site/interview/Java-Interview/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="学习路线"> 学习路线</h1>
-<p><img src="./images/Java_learning_roadmap.png" alt="Java学习路线图" /></p>
-<h2 id="java"> Java</h2>
-<blockquote>
-<ul>
-<li>
-<p><a href="https://wiki.lifeisgg.online/archives/Java-JVM/" target="_blank" rel="noopener noreferrer">Java-JVM</a></p>
-</li>
-<li>
-<p><a href="https://wiki.lifeisgg.online/archives/Java-%E5%AE%B9%E5%99%A8" target="_blank" rel="noopener noreferrer">Java-容器</a></p>
-</li>
-<li>
-<p><a href="https://wiki.lifeisgg.online/archives/Java-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%B9%B6%E5%8F%91/" target="_blank" rel="noopener noreferrer">Java-多线程并发</a></p>
-</li>
-<li>
-<p><a href="https://wiki.lifeisgg.online/archives/Java-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" target="_blank" rel="noopener noreferrer">Java-设计模式</a></p>
-</li>
-<li>
-<p><a href="https://wiki.lifeisgg.online/archives/Java-%E6%96%B9%E6%B3%95%E6%B1%87%E6%80%BB/" target="_blank" rel="noopener noreferrer">Java-方法汇总</a></p>
-</li>
-<li>
-<p><a href="https://wiki.lifeisgg.online/archives/Java-%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/" target="_blank" rel="noopener noreferrer">Java-基础面试题</a></p>
-</li>
-<li>
-<p><a href="https://wiki.lifeisgg.online/archives/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0/" target="_blank" rel="noopener noreferrer">Java-基础知识笔记</a></p>
-</li>
-</ul>
-</blockquote>
-<h2 id="数据结构算法"> 数据结构算法</h2>
-<blockquote>
-<ul>
-<li><a href="https://wiki.lifeisgg.online/archives/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84&amp;%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/" target="_blank" rel="noopener noreferrer">数据结构&amp;算法笔记</a></li>
-<li><a href="https://wiki.lifeisgg.online/archives/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84&amp;%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE%E5%90%88%E9%9B%86/" target="_blank" rel="noopener noreferrer">数据结构&amp;算法题目合集</a></li>
-</ul>
-</blockquote>
-<h2 id="mysql"> Mysql</h2>
-<blockquote>
-<ul>
-<li><a href="https://wiki.lifeisgg.online/archives/Mysql%E9%9D%A2%E8%AF%95%E9%A2%98/" target="_blank" rel="noopener noreferrer">Mysql面试题</a></li>
-</ul>
-</blockquote>
-<h2 id="spring"> Spring</h2>
-<blockquote>
-<ul>
-<li><a href="https://wiki.lifeisgg.online/archives/Spring%E9%9D%A2%E8%AF%95%E9%A2%98/" target="_blank" rel="noopener noreferrer">Spring面试题</a></li>
-<li><a href="https://wiki.lifeisgg.online/archives/SpringMVC%E9%9D%A2%E8%AF%95%E9%A2%98/" target="_blank" rel="noopener noreferrer">SpringMVC面试题</a></li>
-</ul>
-</blockquote>
-<h2 id="其它面试题"> 其它面试题</h2>
-<blockquote>
-<ul>
-<li><a href="https://wiki.lifeisgg.online/archives/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%85%B6%E5%AE%83%E9%9D%A2%E8%AF%95%E9%A2%98/" target="_blank" rel="noopener noreferrer">计算机其它面试题</a></li>
-</ul>
-</blockquote>
-]]></content>
-    <author>
-      <name>Draco</name>
-    </author>
-    <contributor>
-      <name>Draco</name>
-    </contributor>
-    <published>2020-09-16T18:12:23.000Z</published>
+    <published>2022-01-18T16:15:26.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">计算机网络</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/interview/Computer-network/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/interview/Computer-network/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="osi与tcp-ip各层的结构与功能-都有哪些协议"> OSI与TCP/IP各层的结构与功能,都有哪些协议?</h2>
 <h2 id="http-https"> Http | Https</h2>
 <p>参考</p>
@@ -9365,10 +9296,79 @@ A custom details container
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
+    <title type="html">Java面试整理</title>
+    <id>https://vuepress-theme-hope-demo.mrhope.site/interview/Java-Interview/</id>
+    <link href="https://vuepress-theme-hope-demo.mrhope.site/interview/Java-Interview/"/>
+    <updated>2022-01-18T16:15:26.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="学习路线"> 学习路线</h1>
+<p><img src="./images/Java_learning_roadmap.png" alt="Java学习路线图" /></p>
+<h2 id="java"> Java</h2>
+<blockquote>
+<ul>
+<li>
+<p><a href="https://wiki.lifeisgg.online/archives/Java-JVM/" target="_blank" rel="noopener noreferrer">Java-JVM</a></p>
+</li>
+<li>
+<p><a href="https://wiki.lifeisgg.online/archives/Java-%E5%AE%B9%E5%99%A8" target="_blank" rel="noopener noreferrer">Java-容器</a></p>
+</li>
+<li>
+<p><a href="https://wiki.lifeisgg.online/archives/Java-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%B9%B6%E5%8F%91/" target="_blank" rel="noopener noreferrer">Java-多线程并发</a></p>
+</li>
+<li>
+<p><a href="https://wiki.lifeisgg.online/archives/Java-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" target="_blank" rel="noopener noreferrer">Java-设计模式</a></p>
+</li>
+<li>
+<p><a href="https://wiki.lifeisgg.online/archives/Java-%E6%96%B9%E6%B3%95%E6%B1%87%E6%80%BB/" target="_blank" rel="noopener noreferrer">Java-方法汇总</a></p>
+</li>
+<li>
+<p><a href="https://wiki.lifeisgg.online/archives/Java-%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/" target="_blank" rel="noopener noreferrer">Java-基础面试题</a></p>
+</li>
+<li>
+<p><a href="https://wiki.lifeisgg.online/archives/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0/" target="_blank" rel="noopener noreferrer">Java-基础知识笔记</a></p>
+</li>
+</ul>
+</blockquote>
+<h2 id="数据结构算法"> 数据结构算法</h2>
+<blockquote>
+<ul>
+<li><a href="https://wiki.lifeisgg.online/archives/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84&amp;%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/" target="_blank" rel="noopener noreferrer">数据结构&amp;算法笔记</a></li>
+<li><a href="https://wiki.lifeisgg.online/archives/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84&amp;%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE%E5%90%88%E9%9B%86/" target="_blank" rel="noopener noreferrer">数据结构&amp;算法题目合集</a></li>
+</ul>
+</blockquote>
+<h2 id="mysql"> Mysql</h2>
+<blockquote>
+<ul>
+<li><a href="https://wiki.lifeisgg.online/archives/Mysql%E9%9D%A2%E8%AF%95%E9%A2%98/" target="_blank" rel="noopener noreferrer">Mysql面试题</a></li>
+</ul>
+</blockquote>
+<h2 id="spring"> Spring</h2>
+<blockquote>
+<ul>
+<li><a href="https://wiki.lifeisgg.online/archives/Spring%E9%9D%A2%E8%AF%95%E9%A2%98/" target="_blank" rel="noopener noreferrer">Spring面试题</a></li>
+<li><a href="https://wiki.lifeisgg.online/archives/SpringMVC%E9%9D%A2%E8%AF%95%E9%A2%98/" target="_blank" rel="noopener noreferrer">SpringMVC面试题</a></li>
+</ul>
+</blockquote>
+<h2 id="其它面试题"> 其它面试题</h2>
+<blockquote>
+<ul>
+<li><a href="https://wiki.lifeisgg.online/archives/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%85%B6%E5%AE%83%E9%9D%A2%E8%AF%95%E9%A2%98/" target="_blank" rel="noopener noreferrer">计算机其它面试题</a></li>
+</ul>
+</blockquote>
+]]></content>
+    <author>
+      <name>Draco</name>
+    </author>
+    <contributor>
+      <name>Draco</name>
+    </contributor>
+    <published>2020-09-16T18:12:23.000Z</published>
+    <rights>Copyright by Draco</rights>
+  </entry>
+  <entry>
     <title type="html">操作系统</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/interview/OperatingSystem/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/interview/OperatingSystem/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <blockquote>
 <ul>
@@ -9505,10 +9505,47 @@ A custom details container
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
+    <title type="html">面试大纲</title>
+    <id>https://vuepress-theme-hope-demo.mrhope.site/interview/interview/</id>
+    <link href="https://vuepress-theme-hope-demo.mrhope.site/interview/interview/"/>
+    <updated>2022-01-18T16:15:26.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="java"> Java</h2>
+<ul>
+<li>集合</li>
+<li>多线程（sychronized, volatile）</li>
+<li>JVM</li>
+</ul>
+<h2 id="golang"> Golang</h2>
+<ul>
+<li>协程</li>
+</ul>
+<h2 id="mysql"> Mysql</h2>
+<h2 id="spring"> Spring</h2>
+<h3 id="springboot"> springboot</h3>
+<h3 id="springcloud"> springcloud</h3>
+<h2 id="计算机网络"> 计算机网络</h2>
+<h2 id="算法"> 算法</h2>
+<ul>
+<li>排序算法</li>
+</ul>
+<h2 id="redis"> Redis</h2>
+<h2 id="rabbitmq"> RabbitMQ</h2>
+<h2 id="elasticsearch"> ElasticSearch</h2>
+]]></content>
+    <author>
+      <name>Draco</name>
+    </author>
+    <contributor>
+      <name>Draco</name>
+    </contributor>
+    <published>2020-09-16T18:11:23.000Z</published>
+    <rights>Copyright by Draco</rights>
+  </entry>
+  <entry>
     <title type="html">字节测开面经</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/interview/cekai/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/interview/cekai/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="算法"> 算法</h2>
 <h3 id="最长回文子串"> 最长回文子串</h3>
 <p><code>中心扩展</code></p>
@@ -10344,47 +10381,10 @@ A custom details container
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
-    <title type="html">面试大纲</title>
-    <id>https://vuepress-theme-hope-demo.mrhope.site/interview/interview/</id>
-    <link href="https://vuepress-theme-hope-demo.mrhope.site/interview/interview/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="java"> Java</h2>
-<ul>
-<li>集合</li>
-<li>多线程（sychronized, volatile）</li>
-<li>JVM</li>
-</ul>
-<h2 id="golang"> Golang</h2>
-<ul>
-<li>协程</li>
-</ul>
-<h2 id="mysql"> Mysql</h2>
-<h2 id="spring"> Spring</h2>
-<h3 id="springboot"> springboot</h3>
-<h3 id="springcloud"> springcloud</h3>
-<h2 id="计算机网络"> 计算机网络</h2>
-<h2 id="算法"> 算法</h2>
-<ul>
-<li>排序算法</li>
-</ul>
-<h2 id="redis"> Redis</h2>
-<h2 id="rabbitmq"> RabbitMQ</h2>
-<h2 id="elasticsearch"> ElasticSearch</h2>
-]]></content>
-    <author>
-      <name>Draco</name>
-    </author>
-    <contributor>
-      <name>Draco</name>
-    </contributor>
-    <published>2020-09-16T18:11:23.000Z</published>
-    <rights>Copyright by Draco</rights>
-  </entry>
-  <entry>
     <title type="html">腾讯云学习笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/interview/tencent-cloud-note/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/interview/tencent-cloud-note/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<p>参考</p>
 <blockquote>
 <ul>
@@ -10405,7 +10405,7 @@ A custom details container
     <title type="html">Java-基础知识笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/Java-BasicNotes/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/Java-BasicNotes/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <summary type="html"><![CDATA[Java-基础知识笔记]]></summary>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <blockquote>
@@ -10929,7 +10929,7 @@ A custom details container
     <title type="html">Java-集合容器</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/Java-Collections/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/Java-Collections/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="容器总览"> 容器总览</h2>
 <p>注</p>
 <blockquote>
@@ -12210,7 +12210,7 @@ A custom details container
     <title type="html">Java-IO</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/Java-IO/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/Java-IO/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <summary type="html"><![CDATA[Java-IO]]></summary>
     <content type="html"><![CDATA[<h1 id="_10"> 10</h1>
 <p>Java-你好</p>
@@ -12228,7 +12228,7 @@ A custom details container
     <title type="html">Java-基础面试题</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/Java-Interview/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/Java-Interview/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <summary type="html"><![CDATA[Java-基础面试题]]></summary>
     <content type="html"><![CDATA[<h2 id="学习路线"> 学习路线</h2>
 <p><img src="./images/Java-Interview/Java_learning_roadmap.png" alt="Java学习路线图" /></p>
@@ -13004,7 +13004,7 @@ c1<span>.</span><span>eat</span><span>(</span><span>)</span><span>;</span>
     <title type="html">Java-常用方法汇总</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/Java-Methods/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/Java-Methods/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h1 id="_1-java集合"> 1. Java集合</h1>
 <h2 id="_1-1-collection"> 1.1 Collection</h2>
 <h3 id="_1-1-1-排序操作"> 1.1.1 排序操作</h3>
@@ -13531,7 +13531,7 @@ int最小值是：-2147483648
     <title type="html">Java-新特性</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/Java-NewFeature/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/Java-NewFeature/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <ul>
 <li><a href="https://blog.csdn.net/PorkBird/article/details/113727704" target="_blank" rel="noopener noreferrer">Java8新特性</a></li>
@@ -13826,7 +13826,7 @@ int最小值是：-2147483648
     <title type="html">Java-String</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/Java-String/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/Java-String/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <summary type="html"><![CDATA[Java-IO]]></summary>
     <content type="html"><![CDATA[<h2 id="_1-string常用方法"> 1. String常用方法</h2>
 <blockquote>
@@ -14013,7 +14013,7 @@ str2<span>.</span><span>intern</span><span>(</span><span>)</span><span>;</span>
     <title type="html">Java-UML类图</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/Java-UML-ClassDiagram/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/Java-UML-ClassDiagram/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -14154,7 +14154,7 @@ str2<span>.</span><span>intern</span><span>(</span><span>)</span><span>;</span>
     <title type="html">Java-注解和反射</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/Java-annotation&amp;reflection/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/Java-annotation&amp;reflection/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <blockquote>
 <ul>
@@ -14646,7 +14646,7 @@ str2<span>.</span><span>intern</span><span>(</span><span>)</span><span>;</span>
     <title type="html">设计模式之行为型设计模式</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/Java-DesignPatterns-BehavioralPatterns/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/Java-DesignPatterns-BehavioralPatterns/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -14710,7 +14710,7 @@ str2<span>.</span><span>intern</span><span>(</span><span>)</span><span>;</span>
     <title type="html">设计模式之创建型设计模式</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/Java-DesignPatterns-CreationalPatterns/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/Java-DesignPatterns-CreationalPatterns/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -15499,7 +15499,7 @@ str2<span>.</span><span>intern</span><span>(</span><span>)</span><span>;</span>
     <title type="html">设计模式之J2EE设计模式</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/Java-DesignPatterns-J2eePattern/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/Java-DesignPatterns-J2eePattern/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -15523,7 +15523,7 @@ str2<span>.</span><span>intern</span><span>(</span><span>)</span><span>;</span>
     <title type="html">设计模式七大原则</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/Java-DesignPatterns-SevenPrinciple/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/Java-DesignPatterns-SevenPrinciple/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -15735,7 +15735,7 @@ str2<span>.</span><span>intern</span><span>(</span><span>)</span><span>;</span>
     <title type="html">设计模式七大原则</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/Java-DesignPatterns-SixPrinciple/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/Java-DesignPatterns-SixPrinciple/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -15983,7 +15983,7 @@ str2<span>.</span><span>intern</span><span>(</span><span>)</span><span>;</span>
     <title type="html">设计模式之结构型设计模式</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/Java-DesignPatterns-StructuralPatterns/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/Java-DesignPatterns-StructuralPatterns/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -16597,7 +16597,7 @@ str2<span>.</span><span>intern</span><span>(</span><span>)</span><span>;</span>
     <title type="html">Java-设计模式</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -16715,7 +16715,7 @@ str2<span>.</span><span>intern</span><span>(</span><span>)</span><span>;</span>
     <title type="html">JVM-类加载子系统</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-JVM/Java-JVM-Classloader/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-JVM/Java-JVM-Classloader/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="jvm概述"> JVM概述</h2>
 <h3 id="jvm跨平台原理"> JVM跨平台原理</h3>
 <ol>
@@ -17051,7 +17051,7 @@ java.lang.invoke.MethodHandle实例的解析结果REF_getStatic、REF_putStatic�
     <title type="html">JVM-运行时数据区</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-JVM/Java-JVM-Run/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-JVM/Java-JVM-Run/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>Tips</p>
 <ul>
@@ -17359,7 +17359,7 @@ java.lang.invoke.MethodHandle实例的解析结果REF_getStatic、REF_putStatic�
     <title type="html">JVM</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-JVM/Java-JVM/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-JVM/Java-JVM/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="jvm组成"> JVM组成</h2>
 <p>总共分为三大区域</p>
 <ul>
@@ -18009,7 +18009,7 @@ java.lang.invoke.MethodHandle实例的解析结果REF_getStatic、REF_putStatic�
     <title type="html">概述/参考</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-JVM/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-JVM/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -18044,10 +18044,625 @@ java.lang.invoke.MethodHandle实例的解析结果REF_getStatic、REF_putStatic�
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
+    <title type="html">Java多线程-2</title>
+    <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-MultiThread/Java-MultiThread-2/</id>
+    <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-MultiThread/Java-MultiThread-2/"/>
+    <updated>2022-01-18T16:15:26.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="java线程同步机制"> Java线程同步机制</h2>
+<h3 id="同步机制简介"> 同步机制简介</h3>
+<p>对于同一个个许可证所保护的共享数据而言，任何线程访问这些共享数据前必须先持有该许可证。</p>
+<ul>
+<li>一个线程只有在持有许可证的情况下才能够对这些共享数据进行访问；</li>
+<li>一个许可证一 一次只能够被个线程持有；</li>
+<li>许可证的持有线程在其结束对这些共享数据的访问后必须让出（释放） 其持有的许可证， 以便其他线程能够对这些共享数据进行访问。</li>
+</ul>
+<p>一个线程在访间共享数据前必须申请相应的锁（许可证）， 线程的这个动作被称为锁的获得 (Acquire)。一个线程获得某个锁（持有许可证），我们就称该线程为相应锁的持 有线程（线程持有许可证），一个锁一次只能被一个线程持有。锁的持有线程可以对该锁所保护的共享数据进行访问，访问结束后该线程必须释放 (Release) 相应的锁。锁的持有 线程在其获得锁之后和 释放锁之前这段时间内所执行的代码被称为临界区 (Critical Section)。因此，共享数据只允许在临界区内进行访问，临界区一次只能被一个线程执行。</p>
+<h3 id="临界区"> 临界区</h3>
+<p>锁的持有线程在获得锁之后和释放锁之前这段时间内所执行的代码被称为临界区。共享数据只能在临界区内进行访问，临界区一次只能被一个线程执行。</p>
+<h3 id="锁简介"> 锁简介</h3>
+<p>锁具有<code>排他性</code>，一次只能被一个线程持有，被称为<code>排它锁</code>或<code>互斥锁</code>。</p>
+<p>按照虚拟机对锁的实现划分，分为</p>
+<ul>
+<li>内部锁（Intrinsic Lock）：非公平锁，例如<code>sychronized</code></li>
+<li>显示锁（Explicit Lock）支持<code>非公平锁</code>和<code>公平锁</code>，例如JUC包下的<code>Lock</code>等实现类<code>ReentrenLock</code></li>
+</ul>
+<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/互斥锁示意图.png" alt="互斥锁示意图" /></p>
+<h2 id="锁的概念"> 锁的概念</h2>
+<h3 id="可重入性"> 可重入性</h3>
+<p>一个线程在持有一个锁的时候还能够继续成功申请该锁，就称该锁具有可重入性，反之则称为非可重入性。</p>
+<div><pre><code><span>void</span> <span>methodA</span><span>(</span><span>)</span> <span>{</span> 
+  <span>acquireLock</span><span>(</span>lock<span>)</span><span>;</span>／／申请锁lock
+  ／／省略其他代码
+  <span>methodB</span><span>(</span><span>)</span><span>;</span> 
+  <span>releaseLock</span><span>(</span>lock<span>)</span><span>;</span>／／释放锁lock
+<span>}</span>
+
+<span>void</span> <span>methodB</span><span>(</span><span>)</span> <span>{</span> 
+  <span>acquireLock</span><span>(</span>lock<span>)</span><span>;</span>／／申请锁lock
+  <span>releaseLock</span><span>(</span>lock<span>)</span><span>;</span>／／释放锁lock
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><p>方法methodA使用了锁lock，该锁引导的临界区代码又调用了另外一个方法methodB,而方法methodB也使用了lock。那么， 这就产生了一个问题：methodA的执行线程持有锁 lock 的时候调用了methodB, 而methodB执行的时候又去申请锁lock, 而lock此时正被当前线程持有（未被释放）。那么，此时methodB究竟能否获得（申请成功） lock呢？可重入性就描述了这样一个问题。</p>
+<h4 id="实现原理"> 实现原理</h4>
+<p>可重入锁可以被理解为一个对象，该对象包含一个<code>计数器属性</code>。计数器属性的初始值为 0, 表示相应的锁还没有被任何线程持有。</p>
+<ul>
+<li>每次线程获得一个可重入锁的时候， 该锁的 计数器值会被增加1。</li>
+<li>每次一个线程释放锁的时候， 该锁的计数器属性值就会被减1。</li>
+</ul>
+<p>可重入锁的持有线程初次获得该锁时相应的开销相对大，这是因为该锁的持有线程必须与其他线程 ”竞争” 以获得锁。</p>
+<p>可重入锁的持有线程继续荻得相应锁所产生的开销要小得 多，这是因为此时Java虚拟机只需要将相应锁的计数器属性值增加1即可以实现锁的获得。</p>
+<h3 id="锁的粒度"> 锁的粒度</h3>
+<p>一个锁实例可以保护一个或者多个共享数据，一个实例所保护的共享数据的数量大小就被称为该锁的粒度，锁保护的共享数据越大，我们就称该锁的粒度越粗，反之则称粒度细。</p>
+<h2 id="锁的开销"> 锁的开销</h2>
+<ul>
+<li>锁的申请和释放所产生的开销（主要是时间开销）</li>
+<li>锁的上下文切换（主要是时间开销）：锁作为一种排他性资源，一旦被争用就可能导致上下文切换，而没有被争用的锁则可能不会导致上下文切换</li>
+<li>锁泄露</li>
+<li>死锁锁死活锁饿死等线程其他活性故障。</li>
+</ul>
+<h3 id="锁泄露"> 锁泄露</h3>
+<p>锁泄露指一个线程获得该锁之后，由于程序的错误、缺陷导致该锁一直无法被释放而其他线程一直无法获得该锁的现象。因此，锁泄露会导致同步在该锁上的所有线程都无法进展。</p>
+<h2 id="sychronized-内部锁"> Sychronized（内部锁）</h2>
+<h3 id="参考"> 参考</h3>
+<ul>
+<li><a href="https://www.pdai.tech/md/java/thread/java-thread-x-key-synchronized.html" target="_blank" rel="noopener noreferrer">关键字: synchronized详解</a></li>
+<li><a href="https://blog.csdn.net/zwjyyy1203/article/details/106217887" target="_blank" rel="noopener noreferrer">jvm：ObjectMonitor源码</a></li>
+<li><a href="https://blog.csdn.net/yinwenjie/article/details/84922958" target="_blank" rel="noopener noreferrer">Java并发基石——所谓“阻塞”：Object Monitor和AQS（1）</a></li>
+<li><a href="https://blog.csdn.net/zzti_erlie/article/details/103997713?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-3.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-3.control" target="_blank" rel="noopener noreferrer">锁升级过程</a></li>
+</ul>
+<h3 id="简介"> 简介</h3>
+<p>Java平台中的任何一个对象都有唯一一个与之关联的锁。 这种锁被称为<code>监视器 (Monitor)</code>或者<code>内部锁 (Intrinsic Lock)</code>。内部锁是一种<code>排他锁</code>，它能够保障</p>
+<ul>
+<li>原子性</li>
+<li>可见性</li>
+<li>有序性</li>
+</ul>
+<p>内部锁是通过 synchronized 关键字实现的。</p>
+<h3 id="使用方法"> 使用方法</h3>
+<ul>
+<li>synchronized修饰的实例方法：多线程并发访问时，只能有一个线程进入，获得<code>对象内置锁</code>，其他线程阻塞等待，但在此期间线程仍然可以访问其他方法。</li>
+<li>synchronized修饰的静态方法：多线程并发访问时，只能有一个线程进入，获得<code>类锁</code>，其他线程阻塞等待，但在此期间线程仍然可以访问其他方法。</li>
+<li>synchronized修饰的代码块，：多线程并发访问时，只能有一个线程进入，根据<code>括号中的对象或者是类</code>，获得相应的对象内置锁或者是类锁</li>
+<li>同步方法的整个方法体就是一个临界区。</li>
+</ul>
+<blockquote>
+<p>每个类都有一个类锁，类的每个对象也有一个内置锁，它们是互不干扰的，也就是说一个线程可以同时获得<code>类锁</code>和该类实例化<code>对象的内置锁</code>，当线程访问非synchronzied修饰的方法时，并不需要获得锁，因此不会产生阻塞。</p>
+</blockquote>
+<div><pre><code><span>Synchronized</span><span>(</span>锁句柄<span>)</span><span>{</span>
+    <span>//在此代码块访问共享数据</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>synchronized关键字所引导的代码块就是临界区 。锁句柄是一个对象的引用（或者能够返回对象的表达式）。例如，锁句柄可以填写为this 关键字（表示当前对象）。</p>
+<p>习惯上我们也直接称锁句柄为锁。锁句柄对应的监视器就被称为相应同步块的引导锁。相应地， 我们称呼相应的同步块为该锁引导的同步块。</p>
+<blockquote>
+<p>锁句柄通常采用final修饰（private final）。这是因为锁句柄的值一旦改变，会导致同一个代码块的多个线程实际上使用不同的锁，而导致竞态。</p>
+</blockquote>
+<h3 id="同步静态方法"> 同步静态方法</h3>
+<div><pre><code><span>public</span> <span>class</span> <span>SynchronizedMethodExample</span> <span>{</span>
+    <span>public</span> <span>static</span> sysnchronized <span>void</span> <span>staticMethod</span><span>(</span><span>)</span><span>{</span>
+        <span>//在此访问共享数据</span>
+    <span>}</span>
+    <span>//...</span>
+<span>}</span>
+
+<span>//相当于</span>
+<span>public</span> <span>class</span> <span>SynchronizedMethodExample</span> <span>{</span>
+    <span>public</span> <span>static</span> <span>void</span> <span>staticMethod</span><span>(</span><span>)</span><span>{</span>
+        <span>sysnchronized</span><span>(</span><span>SynchronizedMethodExample</span><span>.</span><span>class</span><span>)</span><span>{</span>
+             <span>//在此访问共享数据</span>
+        <span>}</span>
+    <span>}</span>
+    <span>//...</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br></div></div><p>线程在执行临界区代码的时候必须持有该临界区的<code>引导锁</code>。一个线程执行到同步代码块必须申请该同步块的引导锁，只有申请成功该锁的线程才能够执行相的应临界区。</p>
+<p>一旦执行完临界区代码，引导该临界区的锁就会被自动释放。整个内部锁申请和释放的过程都是由<code>java虚拟机</code>负责实施的，所以synchronized实现的锁被称为<code>内部锁</code>。</p>
+<p><strong>内部锁不会导致锁泄露</strong>，java编译器在将同步代码块编译成字节码的时候，对临界区可能抛出的异常（未被捕获）进行了处理，所以即使临界区代码抛出异常也不会妨碍内部锁的释放。</p>
+<h3 id="内部锁的调度"> 内部锁的调度</h3>
+<p>概念</p>
+<ul>
+<li>监控区（Entry Set）：锁已被其他线程获取，期待获取锁的线程就进入Monitor对象的监控区</li>
+<li>待授权区（Wait Set）：曾经获取到锁，但是调用了wait方法，线程进入待授权区</li>
+</ul>
+<p>Java虚拟机会为每个内部锁分配一个<code>入口集(Entry List)</code>， 用于记录等待获得相应内部锁的线程。</p>
+<p>多个线程申请同一个锁的时候，只有一个申请者能够成为该锁的持有线程（即申请锁的操作成功）， 而其他申请者的申请操作会失败。 这些申请失败的线程并不会抛出异常， 而是会被暂停（生命周期状态变为<code>BLOCKED</code>) 并被存入相应锁的入口集中等待再次申请锁的机会。</p>
+<p>入口集中的线程就被称为相应内部锁的等待线程。当这些线程申请的锁被其持有线程释放的时候， <strong>该锁的入口集中的一个任意线程会被Java虚拟机唤醒</strong>， 从而得到再次申请锁的机会。</p>
+<p>由于Java虚拟机对内部锁的调度<code>仅支持非公平调度</code>， 被唤醒的等待线程占用处理器运行时可能还有其他新的活跃线程 （处于 RUNNABLE状态，且未进入过入口集）与该线程抢占这个被释放锁， 因此被唤醒的线程不一定就能成为该锁的持有 线程。</p>
+<p>另外，Java虚拟机如何从一个锁的入口集中选择一个等待线程，作为下一个可以参与再次申请相应锁的线程，这个细节与Java虚拟机的具体实现有关：这个被选中的线程有可能是入口集中等待时间最长的线程， 也可能是等待时间最短的线程，或者完全是随机。</p>
+<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/内部锁状态转换图.png" alt="img" /></p>
+<h3 id="锁原理"> 锁原理</h3>
+<p>//TODO:monitor markword objectMonitor</p>
+<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/Mark Word.png" alt="img" /></p>
+<h3 id="锁升级过程"> 锁升级过程</h3>
+<ul>
+<li><a href="https://blog.csdn.net/zzti_erlie/article/details/103997713?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-3.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-3.control" target="_blank" rel="noopener noreferrer">锁升级过程</a></li>
+<li>https://blog.csdn.net/zwjyyy1203/article/details/106217887</li>
+</ul>
+<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/锁升级过程.jpg" alt="preview" /></p>
+<h2 id="lock接口-显示锁"> Lock接口（显示锁）</h2>
+<p>jdk1.5引入的排他锁，其作用于内部锁相同， 但是它提供了一些内部锁所不具备的特性。显示锁是<code>java.util.concurrent.locks.Lock</code>接口的实例，<code>java.util.concurrent.locks.Lock</code>是它的默认实现类</p>
+<h3 id="常用方法"> 常用方法</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void lock()</td>
+<td>获取锁</td>
+</tr>
+<tr>
+<td>void lockInterruptibly()</td>
+<td>如果当前线程未被中断，则获取锁</td>
+</tr>
+<tr>
+<td>newCondition()</td>
+<td>返回绑定到此Lock实例的新Conditon实例</td>
+</tr>
+<tr>
+<td>tryLock()</td>
+<td>仅在调试时锁为空闲状态才获取锁</td>
+</tr>
+<tr>
+<td>tryLock(long time, TimeUnit uinit)</td>
+<td>如果说在给定的时间空闲，并且当前线程未被中断，则获取锁</td>
+</tr>
+<tr>
+<td>unlock()</td>
+<td>释放锁</td>
+</tr>
+</tbody>
+</table>
+<h3 id="显示锁的调度"> 显示锁的调度</h3>
+<p>可以根据<code>ReentrantLock(boolean fail)</code> 指定公平和非公平锁，true为公平锁</p>
+<p>公平锁保障锁调度的公平性往往是以增加上下文切换为代价的，因此显式锁默认非公平调度策略，适合``````锁被持有时间相对长<code>和</code>线程申请锁的平均间隔时间相对长``的情形。</p>
+<p>总的来说，公平锁开销大于非公平锁.</p>
+<h2 id="synchronized-和-reentrantlock"> Synchronized 和 ReenTrantLock</h2>
+<h3 id="对比"> 对比</h3>
+<p><strong>1. 锁的实现</strong></p>
+<p>synchronized 是 JVM 实现的，而 ReentrantLock 是 JDK 实现的。</p>
+<p><strong>2. 性能</strong></p>
+<p>新版本 Java 对 synchronized 进行了很多优化，例如自旋锁等，synchronized 与 ReentrantLock 大致相同。</p>
+<p><strong>3. 等待可中断</strong></p>
+<p>ReentrantLock 可中断，而 synchronized 不行</p>
+<p>当持有锁的线程长期不释放锁的时候，正在等待的线程可以选择放弃等待，改为处理其他事情。</p>
+<p><strong>4. 公平锁</strong></p>
+<p>synchronized 中的锁是非公平的，ReentrantLock 默认情况下也是非公平的，但是也可以是公平的。</p>
+<p>公平锁是指多个线程在等待同一个锁时，必须按照申请锁的时间顺序来依次获得锁。</p>
+<p><strong>5. 锁绑定多个条件</strong></p>
+<p>一个 ReentrantLock 可以同时绑定多个 Condition 对象，通过调用<code>newCondition()</code>方法来创建。</p>
+<p><strong>6. 是否可重入</strong></p>
+<p>两者都是可重入锁。</p>
+<p>“可重入锁”概念是：自己可以再次获取自己的内部锁。比如一个线程获得了某个对象的锁，此时这个对象锁还没有释放，当其再次想要获取这个对象的锁的时候还是可以获取的，如果不可锁重入的话，就会造成死锁。同一个线程每次获取锁，锁的计数器都自增1，所以要等到锁的计数器下降为0时才能释放锁。</p>
+<p><strong>7. 异常处理&amp;锁泄露</strong></p>
+<p>synchronized 异常就会自动释放锁来避免<code>锁泄露</code>，而 ReenTrantLock 异常需要在 finally 里 unlock。</p>
+<p>通过反编译可以看到sychronized有两个释放锁标志<code>monitorexit</code>，最后一个<code>monitorexit</code>是用于如果同步代码块中出现``Exception或者Error<code>，则会调用第二个</code>monitorexit`指令来保证释放锁</p>
+<p><strong>8. 灵活性</strong></p>
+<p>内部锁是基于代码块的锁，灵活性较差，要么使用，用么不使用；</p>
+<p>而显示锁是基于对象的锁，灵活性强，比如可以在一个方法内申请锁，在另一个方法释放锁，而内部锁是无法做到的。</p>
+<p>还有如果一个内部锁的持有线程一直不释放这个锁(这通常是由于代码错误导致的),那 么同步在该锁之上的所有线程就会一直被暂停而使其任务无法进展。而显式锁则可以轻松 地避免这样的问题。Lock接口定义了一个 <code>try Lock</code>方法。该方法的作用是尝试申请相应 Lock实例锁表示的锁。如果相应的锁未被其他任何线程持有,那么该方法会返回true,表 示其获得了相应的锁;否则,该方法并不会导致其执行线程被暂停而是直接返回 false, 表示其未获得相应的锁。更高级可以使用带参数超时等待的try lock方法。</p>
+<p><strong>9. 监控定位</strong></p>
+<p>在问题定位方面,尤其是定位生产环境上的问题的时候,<code>线程转储( Thread dump 参见第1章)</code>就像是线程的“工作报告”一样可以告诉我们Java虚拟机中关于线程的详 细信息。</p>
+<p>线程转储中会包含内部锁的相关信息,包括一个线程等待哪些锁以及这些锁的当 前(获取相应线程转储那一刻)持有线程。</p>
+<p>而在JDK1.5下,线程转储中并不包含显式锁 的相关信息。不过,JDK1.6提供的工具 <code>jstack</code>所产生的线程转储中可以包含显式锁的信 息5。</p>
+<h3 id="reentrantlock的高级功能"> ReenTrantLock的高级功能</h3>
+<p>ReenTrantLock 比 synchronized 增加了一些高级功能。主要有三点</p>
+<ol>
+<li>等待可中断</li>
+<li>可指定公平和非公平锁</li>
+<li>可实现选择性通知（锁可以绑定多个条件）</li>
+</ol>
+<ul>
+<li><strong>ReenTrantLock提供了一种能够中断等待锁的线程的机制</strong>，通过**lock.lockInterruptibly()**来实现这个机制。也就是说正在等待的线程可以选择放弃等待，改为处理其他事情。</li>
+<li><strong>ReenTrantLock可以指定是公平锁还是非公平锁。而synchronized只能是非公平锁。所谓的公平锁就是先等待的线程先获得锁。</strong> ReenTrantLock默认情况是非公平的，可以通过 ReenTrantLock类的<code>ReentrantLock(boolean fair)</code>构造方法来制定是否是公平的。</li>
+<li><strong>synchronized关键字与wait()和notify/notifyAll()方法相结合可以实现等待/通知机制</strong>，ReentrantLock类当然也可以实现，但是需要借助于Condition接口与newCondition() 方法。Condition是JDK1.5之后才有的，它具有很好的灵活性，比如可以实现多路通知功能也就是在一个Lock对象中可以创建多个Condition实例（即对象监视器），<strong>线程对象可以注册在指定的Condition中，从而可以有选择性的进行线程通知，在调度线程上更加灵活。 在使用notify/notifyAll()方法进行通知时，被通知的线程是由 JVM 选择的，用ReentrantLock类结合Condition实例可以实现“选择性通知”</strong> ，这个功能非常重要，而且是Condition接口默认提供的。而synchronized关键字就相当于整个Lock对象中只有一个Condition实例，所有的线程都注册在它一个身上。如果执行notifyAll()方法的话就会通知所有处于等待状态的线程这样会造成很大的效率问题，而Condition实例的signalAll()方法 只会唤醒注册在该Condition实例中的所有等待线程。</li>
+</ul>
+<p>如果你想使用上述功能，那么选择ReenTrantLock是一个不错的选择。</p>
+<h3 id="使用选择"> 使用选择</h3>
+<p>除非需要灵活的使用锁，去使用 ReentrantLock 的高级功能，否则优先使用 synchronized。这是因为 synchronized 是 JVM 实现的一种锁机制，JVM 原生地支持它，而 ReentrantLock 不是所有的 JDK 版本都支持。并且使用 synchronized 不用担心没有释放锁而导致死锁或锁泄露问题，因为 JVM 会确保锁的释放。</p>
+<p>内部锁的优点是简单易用,显式锁的优点是功能强大,这两种锁各自都存在一些弱势。</p>
+<ul>
+<li>一般来说,新开发的代码中我们可以选用显式锁。但是选用显式锁的时候需要注意 显式锁的不正确使用会导致锁泄漏这样严重的问题;线程转储可能无法包含显式锁的相关 信息,从而导致问题定位的困难。</li>
+<li>另外,我们也可以使用相对保守的策略——默认情况下选用内部锁,仅在需要显式锁 所提供的特性的时候才选用显式锁。比如,在多数线程持有一个锁的时间相对长或者线程 申请锁的平均时间间隔相对长的情况下使用非公平锁是不太恰当的,因此我们可考虑使用 公平锁(显式锁)。</li>
+</ul>
+<h3 id="性能已不是选择标准"> 性能已不是选择标准</h3>
+<p>在JDK1.6之前，synchronized 的性能是比 ReenTrantLock 差很多。<strong>具体表示为：synchronized 关键字吞吐量随线程数的增加，下降得非常严重。而ReenTrantLock 基本保持一个比较稳定的水平</strong>。我觉得这也侧面反映了， synchronized 关键字还有非常大的优化余地。后续的技术发展也证明了这一点，我们上面也讲了在 JDK1.6 之后 JVM 团队对 synchronized 关键字做了很多优化。<strong>JDK1.6 之后，synchronized 和 ReenTrantLock 的性能基本是持平了。所以网上那些说因为性能才选择 ReenTrantLock 的文章都是错的！JDK1.6之后，性能已经不是选择synchronized和ReenTrantLock的影响因素了！而且虚拟机在未来的性能改进中会更偏向于原生的synchronized，所以还是提倡在synchronized能满足你的需求的情况下，优先考虑使用synchronized关键字来进行同步！优化后的synchronized和ReenTrantLock一样，在很多地方都是用到了CAS操作</strong>。</p>
+<h2 id="锁优化与选择"> 锁优化与选择</h2>
+<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/锁优化.png" alt="img" /></p>
+<h2 id="改进锁-读写锁"> 改进锁：读写锁</h2>
+<p>读写锁( Read/Write Lock)是一种改进型的排他锁,也被称为共享/排他( Shared Exclusive)锁。读写锁允许多个线程可以同时读取(只读)共享变量,但是一次只允许个线程对共享变量进行更新(<code>包括读取后再更新</code>)。任何线程读取共享变量的时候,其他 线程无法更新这些变量;一个线程更新共享变量的时候,其他任何线程都无法访问该变量。</p>
+<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/读写锁的两种角色.png" alt="读写锁的两种角色" /></p>
+<p>总的来说,<strong>读锁之间可以变法访问，读锁和写锁直接互斥，写锁和写锁之间互斥</strong></p>
+<ul>
+<li>读锁对于读线 程来说起到保护其访问的共享变量在其访问期间不被修改的作用,并使多个读线程可以同 时读取这些变量从而提高了并发性;</li>
+<li>而写锁保障了写线程能够以独占的方式安全地更新共 享变量。写线程对共享变量的更新对读线程是可见的。</li>
+</ul>
+<h3 id="对比-2"> 对比</h3>
+<p>与普通的排他锁(如内部锁和 Reentrantlock)相比,读写锁在排他性方面比较弱(这是我们所期望的)。在原子性、可见性和有序性保障方面,它所起到的作用与普通的排他锁是一致的，</p>
+<ul>
+<li>写线程<code>释放写锁</code>所起到的作用相当于一个线程释放一个普通排他锁;</li>
+<li>读线程<code>获得读锁</code>所起到的作用相当于一个线程获得一个普通排他锁。</li>
+</ul>
+<h3 id="适用场景"> 适用场景</h3>
+<p>由于内部实现较为复杂， 只有同时满足下面两个条件的时候,读写锁才是适宜的选择。否则,使用读写锁会得 不偿失(开销)。</p>
+<ul>
+<li>只读操作比写(更新)操作要频繁得多</li>
+<li>读线程持有锁的时间比较长</li>
+</ul>
+<h3 id="读写锁的升级降级"> 读写锁的升级降级</h3>
+<p>ReentrantReadWriteLock所实现的读写锁是个<code>可重入锁</code>。</p>
+<ul>
+<li>锁降级：支持。即一个线程持有读写锁的<code>写锁</code>的情况下可以继续获得相应的<code>读锁</code>。</li>
+<li>锁升级：不支持。目前获取<code>读锁</code>后需要释放<code>读锁</code>才能获取<code>写锁</code>。</li>
+</ul>
+<p><strong>锁降级</strong></p>
+<div><pre><code><span>//锁降级</span>
+<span>public</span> <span>void</span> <span>downGrade</span><span>(</span><span>)</span> <span>{</span>
+  <span>boolean</span> readLockAcquired <span>=</span> <span>false</span><span>;</span>
+  writeLock<span>.</span><span>lock</span><span>(</span><span>)</span><span>;</span>
+  <span>try</span> <span>{</span>
+    <span>//在此区域访问(读，写)共享变量</span>
+    <span>//...</span>
+    <span>//当线程在持有写锁的情况下申请读锁readLock</span>
+    readLock<span>.</span><span>lock</span><span>(</span><span>)</span><span>;</span>
+    readLockAcquired <span>=</span> <span>true</span><span>;</span>
+  <span>}</span> <span>catch</span> <span>(</span><span>Exception</span> e<span>)</span> <span>{</span>
+    e<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
+  <span>}</span> <span>finally</span> <span>{</span>
+    writeLock<span>.</span><span>unlock</span><span>(</span><span>)</span><span>;</span>
+  <span>}</span>
+
+  <span>if</span><span>(</span>readLockAcquired<span>)</span><span>{</span>
+    <span>try</span> <span>{</span>
+      <span>//读取共享数据</span>
+
+    <span>}</span> <span>catch</span> <span>(</span><span>Exception</span> e<span>)</span> <span>{</span>
+      e<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
+    <span>}</span> <span>finally</span> <span>{</span>
+      readLock<span>.</span><span>unlock</span><span>(</span><span>)</span><span>;</span>
+    <span>}</span>
+  <span>}</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br></div></div><p><strong>锁升级</strong></p>
+<div><pre><code><span>//锁升级</span>
+<span>public</span> <span>void</span> <span>upGrade</span><span>(</span><span>)</span> <span>{</span>
+  readLock<span>.</span><span>lock</span><span>(</span><span>)</span><span>;</span>
+  <span>try</span> <span>{</span>
+    <span>// Must release read lock before acquiring write lock</span>
+    readLock<span>.</span><span>unlock</span><span>(</span><span>)</span><span>;</span>
+    writeLock<span>.</span><span>lock</span><span>(</span><span>)</span><span>;</span>
+    <span>try</span> <span>{</span>
+      <span>//在此区域访问(读，写)共享变量</span>
+      <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Thread</span><span>.</span><span>currentThread</span><span>(</span><span>)</span><span>.</span><span>getName</span><span>(</span><span>)</span> <span>+</span> <span>"写操作正在执行。。。"</span><span>)</span><span>;</span>
+      <span>Thread</span><span>.</span><span>sleep</span><span>(</span><span>1000</span><span>)</span><span>;</span>
+      <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Thread</span><span>.</span><span>currentThread</span><span>(</span><span>)</span><span>.</span><span>getName</span><span>(</span><span>)</span> <span>+</span> <span>"写操作结束。。。"</span><span>)</span><span>;</span>
+    <span>}</span> <span>catch</span> <span>(</span><span>Exception</span> e<span>)</span> <span>{</span>
+      e<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
+    <span>}</span> <span>finally</span> <span>{</span>
+      writeLock<span>.</span><span>unlock</span><span>(</span><span>)</span><span>;</span>
+    <span>}</span>
+  <span>}</span> <span>catch</span> <span>(</span><span>Exception</span> e<span>)</span> <span>{</span>
+    e<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
+  <span>}</span> <span>finally</span> <span>{</span>
+    readLock<span>.</span><span>unlock</span><span>(</span><span>)</span><span>;</span>
+  <span>}</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br></div></div><h2 id="内存屏障"> 内存屏障</h2>
+<p>可见性的两个动作</p>
+<ul>
+<li><strong>刷新处理器</strong>：获得锁前，保证了该锁的当前持有线程能够读取到前一个持有线程对这些数
+据所做的更新</li>
+<li><strong>冲刷处理器</strong>：释放锁后，保证了该锁的持有线程对这些数据所做的更新对该锁的后续持
+有线程可见</li>
+</ul>
+<p>底层是借助<code>内存屏障</code>实现的上述动作。</p>
+<h3 id="定义"> 定义</h3>
+<p>内存屏障是对一类仅针对内存读丶写操作指令的跨处理器架构的比较底层的抽象。<code>内存屏障</code>是被插入到<code>两个指令之间</code>使用的，其作用是禁止编译器丶处理器重排序从而保证<code>有序性</code>，但放的位置不同作用也有不同。</p>
+<p>它在指令序列(如指令1;指令2;指令3)中就像是一堵墙(因此被称为屏障)一样使其两侧(之前和之后)的指令无法“穿越”它(一旦穿越了就是重排序了)。</p>
+<p>但是,为了实现禁止重排序的功能,这些指令也往往具有一个副作用——刷新处理器缓存、冲刷处理器缓存,从而保证可见性。不同微架构的处理器所提供的这样的指令是不同的,并且出于不同的目的使用的相应指令也是不同的。</p>
+<h3 id="按可见性保障划分"> 按可见性保障划分</h3>
+<ul>
+<li>加载屏障：刷新处理器缓存</li>
+<li>存储屏障：冲刷处理器缓存</li>
+</ul>
+<h4 id="加载屏障"> 加载屏障</h4>
+<ul>
+<li>用法：Java虚拟机会在 <code>Monitorenter(申请锁)</code>对应的机器码指令之后<code>临界区开始之前</code>的地方插人一个<code>加载屏障</code>。</li>
+<li>作用：这使得读线程的执行处理器能够将写线程对相应共享变量所做的更新从其他处理器同步到该处理器的高速缓存中。</li>
+</ul>
+<h4 id="存储屏障"> 存储屏障</h4>
+<ul>
+<li>用法：Java虚拟机会在 <code>MonitorExit(释放锁)</code>对应的<code>机器码指令之后</code>插入一个<code>存储屏障</code></li>
+<li>作用：这就保障了写线程在释放锁之前在临界区中对共享变量所做的更新对读线程的执行处理器来说是可同步的</li>
+</ul>
+<p><strong>因此,可见性的保障是通过写线程和读线程成对地使用<code>存储屏障</code>和<code>加载屏障</code>实现的。</strong></p>
+<p>这有点像高考成绩查询:高考阅卷完毕之后虽然每个考生的分数都已经确定,但是这些分数对于考生来说仍然是未知的。只有当分数公布的时候,考生才能够去查询自己的分数。这里</p>
+<ul>
+<li>考试成绩就相当于阅卷方和考生之间需要共享的数据:</li>
+<li>阅卷方公布成绩相当于执行存储屏障,它使得考生的分数可以被查询;</li>
+<li>考生查询其考试成绩相当于执行加载屏障,它使得考生可以得知自己的考试成绩</li>
+</ul>
+<h3 id="按有序性保障划分"> 按有序性保障划分</h3>
+<ul>
+<li>获取屏障</li>
+<li>释放屏障</li>
+</ul>
+<h4 id="获取屏障"> 获取屏障</h4>
+<ul>
+<li>用法：Java虚拟机会在 <code>Monitorenter之后</code>(它包含了读操作)和<code>临界区开始之前</code>的地方插人一个<code>获取屏障</code></li>
+<li>作用：其作用是禁止该读操作与其后的任何读写操作之间进行<code>重排序</code>，这相当于在进行后续操作<code>之前</code>先要获得相应共享数据的<code>所有权</code>(这也是该屏障的名称来源)，<code>获取屏障</code>禁止了临界区中的任何读、写操作被重排序到<code>临界区之前</code>的可能性,</li>
+</ul>
+<h4 id="释放屏障"> 释放屏障</h4>
+<ul>
+<li>用法：<code>Monitorexit之前</code>(它包含了写操作)和<code>临界区之后</code>的地方插入一个<code>释放屏障</code>。</li>
+<li>作用：禁止该写操作与其前面的任何读写操作之间进行<code>重排序</code>，这相当于在对相应共享数据<code>操作结束后</code>释放所有权(这也是该屏障的名称来源)，<code>释放屏障</code>又禁止了临界区中的任何读、写操作被重排序到<code>临界区之后</code>的可能性。</li>
+</ul>
+<p>因此,这两种屏障就像是三明治的两层面包片把火腿夹住一样把临界区中 的代码(指令序列)包括起来,如图3-4所示</p>
+<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/内存屏障在锁中的使用.png" alt="内存屏障在锁中的使用" /></p>
+<h3 id="总结"> 总结</h3>
+<p>因此临界 区内的任何读、写操作都无法被重排序到临界区之外。在锁的排他性的作用下,这使得临 界区中执行的操作序列具有<code>原子性</code>。因此,写线程在临界区中对各个共享变量所做的更新 会同时对读线程可见,即在读线程看来各个共享变量就像是“一下子”被更新的,于是这 些线程无从(也无必要)区分这些共享变量是以何种顺序被更新的。这使得写线程在临界 区中执行的操作自然而然地具有有序性—读线程对这些操作的感知顺序与源代码顺序一致</p>
+<p><strong>可见,锁对有序性的保障是通过写线程和读线程配对使用释放屏障与加载屏障实现的</strong></p>
+<h2 id="轻量级同步机制-volatile关键字"> 轻量级同步机制：volatile关键字</h2>
+<h3 id="定义-2"> 定义</h3>
+<p>volatile字面有“易挥发”的意思,引申开来就是有“不稳定”的意思。</p>
+<p>volatile关键字用于修饰共享可变变量,即没有使用 <code>final</code>关键字修饰的实例变量或静态变量,如下所示</p>
+<div><pre><code><span>private</span> <span>volatile</span> <span>int</span> logLevel
+</code></pre>
+<div><span>1</span><br></div></div><ul>
+<li>volatile关键字表示被修饰的变量的值容易变化(即被其他线程更改),因而不稳定。</li>
+<li>volatile变量的不稳定性意味着对这种变量的读和写操作都必须从<code>高速缓存</code>或者<code>主内存</code> （也是通过高速缓存读取）中读取，以读取<code>变量的相对新值</code>。</li>
+<li>因此, volatile变量不会被编译器分配到<code>寄存器</code>进行存储，对volatile变量的读写操作都是内存访问(访问高速缓存相当于主内存)操作。</li>
+</ul>
+<p>保证了</p>
+<ul>
+<li>可见性</li>
+<li>有序性</li>
+<li>原子性：仅能保障<code>写volatile</code>变量操作的原子性，但没有锁的排他性，所以不会引起<code>上下文切换</code>（因为变量在主内存）</li>
+</ul>
+<h3 id="作用"> 作用</h3>
+<ul>
+<li>可见性</li>
+<li>有序性</li>
+<li>保障long/double型变量的<code>读写操作</code>的原子性</li>
+</ul>
+<p>当有“中间结果”进行操作，比如使用共享变量count2的赋值操作</p>
+<div><pre><code><span>private</span> <span>volatile</span> <span>int</span> count1<span>;</span>
+<span>private</span> <span>int</span> count2<span>;</span>
+count1 <span>=</span> count2 <span>+</span> <span>1</span><span>;</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>该赋值操作为<code>read-modify-write</code>操作，在执行过程可能有其他线程更新了<code>count2</code>的值，但如果<code>count2</code>是<code>局部变量</code>那么整个就是<code>原子性</code>的。</p>
+<p>volatile仅仅保障对其修饰的变量的写操作(以及读操作)本身的原子性，如果赋值操作的是局部变量，那么也认为是<code>原子性</code>的。</p>
+<ul>
+<li>写线程对 volatile变量的写操作会产生类似于释放锁的效果。</li>
+<li>读线程对 volatile变量的读操作会产生类似于获得锁的效果。</li>
+</ul>
+<p>因此, volatile具有保障有性和可见性的作用</p>
+<h3 id="存储屏障-2"> 存储屏障</h3>
+<h4 id="写操作"> 写操作</h4>
+<ul>
+<li>该操作<code>之前</code>插入一个<code>释放屏障</code></li>
+<li>在该操作<code>之后</code>插入一个<code>存储屏障</code></li>
+</ul>
+<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/volatile插入屏障.png" alt="volatile写操作屏障.png" /></p>
+<p>其中,<code>释放屏障</code>禁止了 volatile写操作与该操作之前的仼何读、写操作进行重排序 从而保证了 volatile写操作之前的任何读、写操作会先于 volatile写操作被提交,即其他线 程看到写线程对 volatile变量的更新时,写线程在更新 volatile变量之前所执行的内存操作 的结果对于读线程必然也是可见的。这就保障了读线程对写线程在更新 volatile变量前对 共享变量所执行的更新操作的感知顺序与相应的源代码顺序一致,即保障了有序性。</p>
+<p>volatileε虽然能够保障有序性,但是它不像锁那样具备排他性,所以并不能保障其他操作的原子性,而<code>只能够保障对被修饰变量的写操作的原子性</code>。因此, volatile变量写操作之前的操作如果涉及共享可变变量,那么竞态仍可能产生。这是因为共享变量被赋值给volatile变量的时候其他线程可能已经更新了该共享变量的值。</p>
+<h4 id="读操作"> 读操作</h4>
+<ul>
+<li>该操作<code>之前</code>插入一个<code>加载屏障</code></li>
+<li>在该操作<code>之后</code>插入一个<code>获取屏障</code></li>
+</ul>
+<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/volatile读操作屏障.png" alt="volatile读操作屏障" /></p>
+<p>综上所述</p>
+<ul>
+<li>写 volatile变量操作与该操作之前的任何读、写操作不会被重排序</li>
+<li>读 volatile变量操作与该操作之后的任何读、写操作不会被重排序。</li>
+</ul>
+<p>volatile关键字的作用体现在对修饰变量的读写操作上。</p>
+<h3 id="数组"> 数组</h3>
+<p>如果被修饰的变量是个数组,那么 volatile关键字只能够对<code>数组引用本</code>身的操作(读 取数组引用和更新数组引用)起作用，而无法对<code>数组元素的操作(读取、更新数组元素)</code> 起作用。</p>
+<p>对数组的操作可分为读取数组元素、写数组元素和读取数组引用这几种类型</p>
+<div><pre><code>inti<span>=</span> anArray<span>[</span><span>0</span><span>]</span><span>;</span><span>//操作类型①:读取数组元素</span>
+
+aRray<span>[</span><span>1</span><span>]</span><span>=</span><span>1</span><span>;</span><span>//操作类型②:写数组元素</span>
+
+<span>volatile</span> <span>int</span><span>[</span><span>]</span> anotherArray<span>=</span> anArray<span>;</span><span>//操作类型③:读取数组引用</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>仅能保证第一个操作读取到的引用内存地址是最新的，但不能保证操作二读取到的数组元素是最新的。</p>
+<p>如果要保证数组的读取元素也是最新的，可以用<code>AtomicIntegerArray</code>等</p>
+<h3 id="开销"> 开销</h3>
+<ul>
+<li>写：介于普通写取和临界区写之间，不用申请锁和上下文切换</li>
+<li>读：介于普通写取和临界区写之间，需要从主内存中读取</li>
+</ul>
+<h3 id="适用场景-2"> 适用场景</h3>
+<p>条件</p>
+<ul>
+<li>对变量的写操作不依赖于当前值。</li>
+<li>该变量没有包含在具有其他变量的不变式中</li>
+</ul>
+<blockquote>
+<p>volatile关键字在可见性方面仅仅是保证读线程能够读取到共享变量的相对新值。 对于<code>引用型变量</code>和<code>数组变量</code>, volatile关键字并不能保证读线程能够读取到相应对象的 字段(实例变量、静态变量)、元素的相对新值。</p>
+</blockquote>
+<p>场景</p>
+<ul>
+<li>状态标志：不用申请锁，且同步</li>
+<li>保证可见性：其他线程能在不加锁的情况下看到变量的更新</li>
+<li>替代锁：对volatile变量的写操作是原子性的，比较适合多线程共享<code>一个</code>状态变量而不是多线程共享<code>一组</code>变量。某些情形下,我们可以将多个线程共享的一组状态变量合并成一个对象,用个 volatile变量来引用该对象,从而使我们不必要使用锁。</li>
+<li>简易的读写锁：在该场景中,读写锁是通过混合使用 锁和 volatile变量而实现的,其中锁用于保障共享变量写操作的原子性, volatile 变量用于保障共享变量的可见性。因此,与 Reentrantread writelock所实现的读 写锁不同的是,这种简易版读写锁仅涉及一个共享变量并且允许一个线程读取这 个共享变量时其他线程可以更新该变量(这是因为读线程并没有加锁)。因此 这种读写锁允许读线程可以读取到共享变量的非最新值。该场景的一个典型例子 是实现一个计数器,如清单3-7所示3。</li>
+</ul>
+<div><pre><code><span>public</span> <span>class</span> <span>Counter</span><span>{</span>
+    <span>private</span> <span>volatile</span> <span>long</span> count<span>;</span>
+    <span>public</span> <span>long</span> <span>vaule</span><span>(</span><span>)</span><span>{</span>
+        <span>return</span> count<span>;</span>
+    <span>}</span>
+    <span>public</span> <span>void</span> <span>increment</span><span>(</span><span>)</span><span>{</span>
+        <span>synchronized</span> <span>(</span><span>this</span><span>)</span><span>{</span>
+            count<span>++</span><span>;</span>
+        <span>}</span>
+    <span>}</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><h2 id="cas"> CAS</h2>
+<p>参考</p>
+<blockquote>
+<ul>
+<li>https://blog.csdn.net/v123411739/article/details/79561458</li>
+<li>https://www.jianshu.com/p/ab2c8fce878b</li>
+</ul>
+</blockquote>
+<h3 id="概述"> 概述</h3>
+<p><code>CAS（Compare-and-Swap）</code>，即比较并替换，是一种实现并发算法时常用到的技术，Java并发包中的很多类都使用了<code>CAS</code>技术。CAS是一种<code>无锁算法</code>，CAS有3个操作数</p>
+<blockquote>
+<ul>
+<li>内存值V</li>
+<li>旧的预期值A</li>
+<li>要修改的新值B</li>
+</ul>
+</blockquote>
+<p>当且仅当<code>预期值A</code>和<code>内存值V</code>相同时(说明此时内存中的值没有被其他线程改变)，将<code>内存值V</code>修改为<code>B</code>，否则什么都不做。</p>
+<p>CAS比较与交换的伪代码可以表示为：</p>
+<blockquote>
+<p>do{</p>
+<p>备份旧数据；</p>
+<p>基于旧数据构造新数据；</p>
+<p>}while(!CAS( 内存地址，备份的旧数据，新数据 ))</p>
+</blockquote>
+<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/CAS_algorithm.jpg" alt="CAS算法理解" /></p>
+<p>参考<code>getAndAddInt</code>方法源码</p>
+<div><pre><code>    <span>public</span> <span>final</span> <span>int</span> <span>getAndAddInt</span><span>(</span><span>Object</span> var1<span>,</span> <span>long</span> var2<span>,</span> <span>int</span> var4<span>)</span> <span>{</span>
+        <span>int</span> var5<span>;</span>
+        <span>do</span> <span>{</span>
+            var5 <span>=</span> <span>this</span><span>.</span><span>getIntVolatile</span><span>(</span>var1<span>,</span> var2<span>)</span><span>;</span>
+        <span>}</span> <span>while</span><span>(</span><span>!</span><span>this</span><span>.</span><span>compareAndSwapInt</span><span>(</span>var1<span>,</span> var2<span>,</span> var5<span>,</span> var5 <span>+</span> var4<span>)</span><span>)</span><span>;</span>
+
+        <span>return</span> var5<span>;</span>
+    <span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><p>注：t1，t2线程是同时更新<code>同一变量56的值</code></p>
+<p>因为t1和t2线程都同时去访问<code>同一变量56</code>，所以他们会把<strong>主内存的值完全拷贝一份到自己的工作内存空间</strong>，所以t1和t2线程的预期值都为<code>56</code>。</p>
+<p>假设t1在与t2线程竞争中线程t1能去更新变量的值，而其他线程都失败。（失败的线程并不会被挂起，而是被告知这次竞争中失败，并可以再次发起尝试）。t1线程去更新变量值改为57，然后写到内存中。此时对于t2来说，内存值变为了57，与预期值56不一致，就操作失败了（想改的值不再是原来的值）。</p>
+<p>（上图通俗的解释是：CPU去更新一个值，但如果想改的值不再是原来的值，操作就失败，因为很明显，有其它操作先改变了这个值。）</p>
+<p>就是指当两者进行比较时</p>
+<blockquote>
+<ul>
+<li>如果相等，则证明共享数据没有被修改，替换成新值，然后继续往下运行；</li>
+<li>如果不相等，说明共享数据已经被修改，放弃已经所做的操作，然后重新执行刚才的操作。</li>
+</ul>
+</blockquote>
+<p>容易看出 CAS 操作是基于共享数据不会被修改的假设，采用了类似于数据库的<code>commit-retry</code> 的模式。当同步冲突出现的机会很少时，这种假设能带来较大的性能提升。</p>
+<h3 id="使用例子-源码"> 使用例子/源码</h3>
+<p>创建一个<code>AtomicInteger</code>类型来测试多线程多同一个变量的自增操作</p>
+<div><pre><code>    <span>public</span> <span>static</span> <span>AtomicInteger</span> race <span>=</span> <span>new</span> <span>AtomicInteger</span><span>(</span><span>0</span><span>)</span><span>;</span>
+
+    <span>public</span> <span>static</span> <span>void</span> <span>increase</span><span>(</span><span>)</span> <span>{</span>
+        <span>/*race++;并非原子操作，经过下面三个步骤，取值，+1，写值*/</span>
+        race<span>.</span><span>getAndIncrement</span><span>(</span><span>)</span><span>;</span>
+    <span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>getAndIncrement()源码</p>
+<div><pre><code>    <span>public</span> <span>final</span> <span>int</span> <span>getAndIncrement</span><span>(</span><span>)</span> <span>{</span>
+        <span>return</span> unsafe<span>.</span><span>getAndAddInt</span><span>(</span><span>this</span><span>,</span> valueOffset<span>,</span> <span>1</span><span>)</span><span>;</span>
+    <span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>getAndAddInt源码</p>
+<div><pre><code>    <span>public</span> <span>final</span> <span>int</span> <span>getAndAddInt</span><span>(</span><span>Object</span> var1<span>,</span> <span>long</span> var2<span>,</span> <span>int</span> var4<span>)</span> <span>{</span>
+        <span>int</span> var5<span>;</span>
+        <span>do</span> <span>{</span>
+            var5 <span>=</span> <span>this</span><span>.</span><span>getIntVolatile</span><span>(</span>var1<span>,</span> var2<span>)</span><span>;</span>
+        <span>}</span> <span>while</span><span>(</span><span>!</span><span>this</span><span>.</span><span>compareAndSwapInt</span><span>(</span>var1<span>,</span> var2<span>,</span> var5<span>,</span> var5 <span>+</span> var4<span>)</span><span>)</span><span>;</span>
+
+        <span>return</span> var5<span>;</span>
+    <span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><p>可以看到最后底层调用的是<code>compareAndSwapInt()</code>，如果 CAS 失败，会一直进行尝试</p>
+<h3 id="cas缺点"> CAS缺点</h3>
+<p>CAS虽然很高效的解决了原子操作问题，但是CAS仍然存在三大问题。</p>
+<div><p>CAS缺点</p>
+<ol>
+<li>
+<p><strong>循环时间长开销很大</strong>：CAS 通常是配合无限循环一起使用的，我们可以看到 <code>getAndAddInt</code> 方法执行时，如果 CAS 失败，会一直进行尝试。如果 CAS 长时间一直不成功，可能会给 CPU 带来很大的开销。</p>
+</li>
+<li>
+<p><strong>只能保证一个变量的原子操作</strong>：当对一个变量执行操作时，我们可以使用<code>循环 CAS</code> 的方式来保证原子操作，但是对<code>多个变量</code>操作时，CAS 目前无法直接保证操作的原子性。但是我们可以通过以下两种办法来解决：1）使用互斥锁来保证原子性；2）将多个变量封装成对象，通过 <code>AtomicReference</code> 来保证原子性。</p>
+</li>
+<li>
+<p><strong>ABA问题</strong>：CAS 的使用流程通常如下：1）首先从地址 V 读取值 A；2）根据 A 计算目标值 B；3）通过 CAS 以原子的方式将地址 V 中的值从 A 修改为 B。</p>
+<p>但是在第1步中读取的值是A，并且在第3步修改成功了，我们就能说它的值在第1步和第3步之间没有被其他线程改变过了吗?</p>
+<p><strong>如果在这段期间它的值曾经被改成了B，后来又被改回为A</strong>，那CAS操作就会误认为它从来没有被改变过。这个漏洞称为CAS操作的“ABA”问题。Java并发包为了解决这个问题，提供了一个带有标记的原子引用类“<code>AtomicStampedReference</code>”，它可以通过控制<code>变量值的版本</code>来保证CAS的正确性。</p>
+<p>因此，在使用CAS前要考虑清楚“ABA”问题是否会影响<code>程序并发的正确性</code>，如果需要解决ABA问题，改用<code>传统的互斥同步</code>可能会比原子类更高效。</p>
+</li>
+</ol>
+</div>
+<h3 id="cas在jdk中的应用"> CAS在JDK中的应用</h3>
+<p>在原子类变量中，如<code>java.util.concurrent.atomic</code>中的<code>AtomicXXX</code>，都使用了这些底层的JVM支持为数字类型的引用类型提供一种高效的CAS操作，而在<code>java.util.concurrent</code>中的大多数类在实现时都直接或间接的使用了这些原子变量类。</p>
+<p>Java 1.8中<code>AtomicInteger.incrementAndGet()</code>的实现源码为：</p>
+<div><pre><code>    <span>public</span> <span>final</span> <span>int</span> <span>incrementAndGet</span><span>(</span><span>)</span> <span>{</span>
+        <span>return</span> unsafe<span>.</span><span>getAndAddInt</span><span>(</span><span>this</span><span>,</span> valueOffset<span>,</span> <span>1</span><span>)</span> <span>+</span> <span>1</span><span>;</span>
+    <span>}</span>
+
+
+    <span>public</span> <span>final</span> <span>int</span> <span>getAndAddInt</span><span>(</span><span>Object</span> var1<span>,</span> <span>long</span> var2<span>,</span> <span>int</span> var4<span>)</span> <span>{</span>
+        <span>int</span> var5<span>;</span>
+        <span>do</span> <span>{</span>
+            var5 <span>=</span> <span>this</span><span>.</span><span>getIntVolatile</span><span>(</span>var1<span>,</span> var2<span>)</span><span>;</span>
+        <span>}</span> <span>while</span><span>(</span><span>!</span><span>this</span><span>.</span><span>compareAndSwapInt</span><span>(</span>var1<span>,</span> var2<span>,</span> var5<span>,</span> var5 <span>+</span> var4<span>)</span><span>)</span><span>;</span>
+
+        <span>return</span> var5<span>;</span>
+    <span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div><p>由此可见，<code>AtomicInteger.incrementAndGet</code>的实现用了<code>乐观锁</code>技术，调用了类<code>sun.misc.Unsafe</code>库里面的 <code>CAS</code>算法，用<code>CPU指令</code>来实现<code>无锁自增</code>。所以，<code>AtomicInteger.incrementAndGet</code>的自增比用<code>synchronized</code>的锁效率倍增。</p>
+<h2 id="原子变量-atomic"> 原子变量（Atomic）</h2>
+<p>原子变量类( Atomics)是基于CAS实现的能够保障对共享变量进行read- modify- write 更新操作的原子性和可见性的一组工具类。这里所谓的read- modify- write更新操作,是指 对共享变量的更新不是一个简单的赋值操作,而是变量的新值依赖于变量的旧值,例如自 增操作“ count-+”。由于 volatile无法保障自增操作的原子性,而原子变量类的内部实现通 常借助一个 volatile变量并保障对该变量的read- modify-wite更新操作的原子性,因此它可以 被看作<code>增强型的 volatile变量</code>。原子变量类一共有12个,可以被分为4组。</p>
+<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/原子变量类.png" alt="image-20211113154800436" /></p>
+<ul>
+<li>字段更新器：解决ABA问题，<a href="https://www.cnblogs.com/54chensongxia/p/12167772.html" target="_blank" rel="noopener noreferrer">参考</a></li>
+<li>引用型：主要针对引用的对象是否是原来的</li>
+</ul>
+<h3 id="atomiclong常用方法"> AtomicLong常用方法</h3>
+<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/AtomicLong常用方法.png" alt="image-20211113155240337" /></p>
+<h3 id="字段更新器"> 字段更新器</h3>
+<p>原子类型字段更新器在内部通过Unsafe类的native方法保证操作的原子性。</p>
+<p>关于原子类型字段更新器的使用需要注意以下几个方面：</p>
+<ul>
+<li>字段必须是volatile类型的，用于保证可见性。</li>
+<li>字段和字段更新器的访问类型(public/protected/private)必须一致。</li>
+<li>字段只能是实例变量，不能是类变量(static)。</li>
+<li>字段不能是final的变量，这样的字段不可修改。</li>
+<li>如果要处理Integer和Long类型，则需要使用AtomicReferenceFieldUpdater</li>
+</ul>
+<h3 id="set和lazyset"> set和lazySet</h3>
+<p>参考</p>
+<ul>
+<li><a href="https://blog.csdn.net/szhlcy/article/details/102561224?spm=1001.2101.3001.6650.1&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.no_search_link&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.no_search_link" target="_blank" rel="noopener noreferrer">lazySet</a></li>
+</ul>
+<p>普通Atomic下的set保证了原子性和可见性，而lazySet只保证了原子性不保证可见性，目的是在有些情况下减少内存屏障所需要优化性能，底层只是简单地对变量普通写。</p>
+<p>set方法的设置操作在写操作的前后都加了内存屏障，因为AtomicInteger中的value是volatile修饰的，具体可以看前面的一篇博文Java并发volatile关键字的作用和汇编原理。而lazySet方法并不是直接的操作value字段，而是通过Unsafe类的putOrderedInt方法先通过初始化时候计算出的vlaue字段的偏移变量找到字段地址，然后调用本地方法进行操作的，在本地方法中只在写操作前面加了一个屏障，而后面没有加。</p>
+<h2 id="对象的发布和逸出"> 对象的发布和逸出</h2>
+<h2 id="java线程同步机制总结"> Java线程同步机制总结</h2>
+<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/java线程同步机制总结.png" alt="image-20211113202234366" /></p>
+<h2 id="线程池"> 线程池</h2>
+<h3 id="线程池复用原理"> 线程池复用原理</h3>
+<p>在线程池中，线程会从 workQueue 中读取任务来执行，最小的执行单位就是 Worker，Worker 实现了 Runnable 接口，重写了 run 方法，这个 run 方法是让每个线程去执行一个循环，在这个循环代码中，去判断是否有任务待执行，若有则直接去执行这个任务，因此线程数不会增加。</p>
+]]></content>
+    <author>
+      <name>Draco</name>
+    </author>
+    <contributor>
+      <name>Draco</name>
+    </contributor>
+    <published>2021-08-04T21:18:29.000Z</published>
+    <rights>Copyright by Draco</rights>
+  </entry>
+  <entry>
     <title type="html">Java多线程-1</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-MultiThread/Java-MultiThread-1/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-MultiThread/Java-MultiThread-1/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="进程-线程-多线程多进程"> 进程 | 线程 | 多线程多进程</h2>
 <h3 id="线程和进程区别"> 线程和进程区别</h3>
 <p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-1/线程和进程区别.png" alt="线程、程序、进程" /></p>
@@ -19078,625 +19693,10 @@ myThread2<span>.</span><span>start</span><span>(</span><span>)</span><span>;</sp
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
-    <title type="html">Java多线程-2</title>
-    <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-MultiThread/Java-MultiThread-2/</id>
-    <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-MultiThread/Java-MultiThread-2/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="java线程同步机制"> Java线程同步机制</h2>
-<h3 id="同步机制简介"> 同步机制简介</h3>
-<p>对于同一个个许可证所保护的共享数据而言，任何线程访问这些共享数据前必须先持有该许可证。</p>
-<ul>
-<li>一个线程只有在持有许可证的情况下才能够对这些共享数据进行访问；</li>
-<li>一个许可证一 一次只能够被个线程持有；</li>
-<li>许可证的持有线程在其结束对这些共享数据的访问后必须让出（释放） 其持有的许可证， 以便其他线程能够对这些共享数据进行访问。</li>
-</ul>
-<p>一个线程在访间共享数据前必须申请相应的锁（许可证）， 线程的这个动作被称为锁的获得 (Acquire)。一个线程获得某个锁（持有许可证），我们就称该线程为相应锁的持 有线程（线程持有许可证），一个锁一次只能被一个线程持有。锁的持有线程可以对该锁所保护的共享数据进行访问，访问结束后该线程必须释放 (Release) 相应的锁。锁的持有 线程在其获得锁之后和 释放锁之前这段时间内所执行的代码被称为临界区 (Critical Section)。因此，共享数据只允许在临界区内进行访问，临界区一次只能被一个线程执行。</p>
-<h3 id="临界区"> 临界区</h3>
-<p>锁的持有线程在获得锁之后和释放锁之前这段时间内所执行的代码被称为临界区。共享数据只能在临界区内进行访问，临界区一次只能被一个线程执行。</p>
-<h3 id="锁简介"> 锁简介</h3>
-<p>锁具有<code>排他性</code>，一次只能被一个线程持有，被称为<code>排它锁</code>或<code>互斥锁</code>。</p>
-<p>按照虚拟机对锁的实现划分，分为</p>
-<ul>
-<li>内部锁（Intrinsic Lock）：非公平锁，例如<code>sychronized</code></li>
-<li>显示锁（Explicit Lock）支持<code>非公平锁</code>和<code>公平锁</code>，例如JUC包下的<code>Lock</code>等实现类<code>ReentrenLock</code></li>
-</ul>
-<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/互斥锁示意图.png" alt="互斥锁示意图" /></p>
-<h2 id="锁的概念"> 锁的概念</h2>
-<h3 id="可重入性"> 可重入性</h3>
-<p>一个线程在持有一个锁的时候还能够继续成功申请该锁，就称该锁具有可重入性，反之则称为非可重入性。</p>
-<div><pre><code><span>void</span> <span>methodA</span><span>(</span><span>)</span> <span>{</span> 
-  <span>acquireLock</span><span>(</span>lock<span>)</span><span>;</span>／／申请锁lock
-  ／／省略其他代码
-  <span>methodB</span><span>(</span><span>)</span><span>;</span> 
-  <span>releaseLock</span><span>(</span>lock<span>)</span><span>;</span>／／释放锁lock
-<span>}</span>
-
-<span>void</span> <span>methodB</span><span>(</span><span>)</span> <span>{</span> 
-  <span>acquireLock</span><span>(</span>lock<span>)</span><span>;</span>／／申请锁lock
-  <span>releaseLock</span><span>(</span>lock<span>)</span><span>;</span>／／释放锁lock
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><p>方法methodA使用了锁lock，该锁引导的临界区代码又调用了另外一个方法methodB,而方法methodB也使用了lock。那么， 这就产生了一个问题：methodA的执行线程持有锁 lock 的时候调用了methodB, 而methodB执行的时候又去申请锁lock, 而lock此时正被当前线程持有（未被释放）。那么，此时methodB究竟能否获得（申请成功） lock呢？可重入性就描述了这样一个问题。</p>
-<h4 id="实现原理"> 实现原理</h4>
-<p>可重入锁可以被理解为一个对象，该对象包含一个<code>计数器属性</code>。计数器属性的初始值为 0, 表示相应的锁还没有被任何线程持有。</p>
-<ul>
-<li>每次线程获得一个可重入锁的时候， 该锁的 计数器值会被增加1。</li>
-<li>每次一个线程释放锁的时候， 该锁的计数器属性值就会被减1。</li>
-</ul>
-<p>可重入锁的持有线程初次获得该锁时相应的开销相对大，这是因为该锁的持有线程必须与其他线程 ”竞争” 以获得锁。</p>
-<p>可重入锁的持有线程继续荻得相应锁所产生的开销要小得 多，这是因为此时Java虚拟机只需要将相应锁的计数器属性值增加1即可以实现锁的获得。</p>
-<h3 id="锁的粒度"> 锁的粒度</h3>
-<p>一个锁实例可以保护一个或者多个共享数据，一个实例所保护的共享数据的数量大小就被称为该锁的粒度，锁保护的共享数据越大，我们就称该锁的粒度越粗，反之则称粒度细。</p>
-<h2 id="锁的开销"> 锁的开销</h2>
-<ul>
-<li>锁的申请和释放所产生的开销（主要是时间开销）</li>
-<li>锁的上下文切换（主要是时间开销）：锁作为一种排他性资源，一旦被争用就可能导致上下文切换，而没有被争用的锁则可能不会导致上下文切换</li>
-<li>锁泄露</li>
-<li>死锁锁死活锁饿死等线程其他活性故障。</li>
-</ul>
-<h3 id="锁泄露"> 锁泄露</h3>
-<p>锁泄露指一个线程获得该锁之后，由于程序的错误、缺陷导致该锁一直无法被释放而其他线程一直无法获得该锁的现象。因此，锁泄露会导致同步在该锁上的所有线程都无法进展。</p>
-<h2 id="sychronized-内部锁"> Sychronized（内部锁）</h2>
-<h3 id="参考"> 参考</h3>
-<ul>
-<li><a href="https://www.pdai.tech/md/java/thread/java-thread-x-key-synchronized.html" target="_blank" rel="noopener noreferrer">关键字: synchronized详解</a></li>
-<li><a href="https://blog.csdn.net/zwjyyy1203/article/details/106217887" target="_blank" rel="noopener noreferrer">jvm：ObjectMonitor源码</a></li>
-<li><a href="https://blog.csdn.net/yinwenjie/article/details/84922958" target="_blank" rel="noopener noreferrer">Java并发基石——所谓“阻塞”：Object Monitor和AQS（1）</a></li>
-<li><a href="https://blog.csdn.net/zzti_erlie/article/details/103997713?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-3.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-3.control" target="_blank" rel="noopener noreferrer">锁升级过程</a></li>
-</ul>
-<h3 id="简介"> 简介</h3>
-<p>Java平台中的任何一个对象都有唯一一个与之关联的锁。 这种锁被称为<code>监视器 (Monitor)</code>或者<code>内部锁 (Intrinsic Lock)</code>。内部锁是一种<code>排他锁</code>，它能够保障</p>
-<ul>
-<li>原子性</li>
-<li>可见性</li>
-<li>有序性</li>
-</ul>
-<p>内部锁是通过 synchronized 关键字实现的。</p>
-<h3 id="使用方法"> 使用方法</h3>
-<ul>
-<li>synchronized修饰的实例方法：多线程并发访问时，只能有一个线程进入，获得<code>对象内置锁</code>，其他线程阻塞等待，但在此期间线程仍然可以访问其他方法。</li>
-<li>synchronized修饰的静态方法：多线程并发访问时，只能有一个线程进入，获得<code>类锁</code>，其他线程阻塞等待，但在此期间线程仍然可以访问其他方法。</li>
-<li>synchronized修饰的代码块，：多线程并发访问时，只能有一个线程进入，根据<code>括号中的对象或者是类</code>，获得相应的对象内置锁或者是类锁</li>
-<li>同步方法的整个方法体就是一个临界区。</li>
-</ul>
-<blockquote>
-<p>每个类都有一个类锁，类的每个对象也有一个内置锁，它们是互不干扰的，也就是说一个线程可以同时获得<code>类锁</code>和该类实例化<code>对象的内置锁</code>，当线程访问非synchronzied修饰的方法时，并不需要获得锁，因此不会产生阻塞。</p>
-</blockquote>
-<div><pre><code><span>Synchronized</span><span>(</span>锁句柄<span>)</span><span>{</span>
-    <span>//在此代码块访问共享数据</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>synchronized关键字所引导的代码块就是临界区 。锁句柄是一个对象的引用（或者能够返回对象的表达式）。例如，锁句柄可以填写为this 关键字（表示当前对象）。</p>
-<p>习惯上我们也直接称锁句柄为锁。锁句柄对应的监视器就被称为相应同步块的引导锁。相应地， 我们称呼相应的同步块为该锁引导的同步块。</p>
-<blockquote>
-<p>锁句柄通常采用final修饰（private final）。这是因为锁句柄的值一旦改变，会导致同一个代码块的多个线程实际上使用不同的锁，而导致竞态。</p>
-</blockquote>
-<h3 id="同步静态方法"> 同步静态方法</h3>
-<div><pre><code><span>public</span> <span>class</span> <span>SynchronizedMethodExample</span> <span>{</span>
-    <span>public</span> <span>static</span> sysnchronized <span>void</span> <span>staticMethod</span><span>(</span><span>)</span><span>{</span>
-        <span>//在此访问共享数据</span>
-    <span>}</span>
-    <span>//...</span>
-<span>}</span>
-
-<span>//相当于</span>
-<span>public</span> <span>class</span> <span>SynchronizedMethodExample</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>void</span> <span>staticMethod</span><span>(</span><span>)</span><span>{</span>
-        <span>sysnchronized</span><span>(</span><span>SynchronizedMethodExample</span><span>.</span><span>class</span><span>)</span><span>{</span>
-             <span>//在此访问共享数据</span>
-        <span>}</span>
-    <span>}</span>
-    <span>//...</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br></div></div><p>线程在执行临界区代码的时候必须持有该临界区的<code>引导锁</code>。一个线程执行到同步代码块必须申请该同步块的引导锁，只有申请成功该锁的线程才能够执行相的应临界区。</p>
-<p>一旦执行完临界区代码，引导该临界区的锁就会被自动释放。整个内部锁申请和释放的过程都是由<code>java虚拟机</code>负责实施的，所以synchronized实现的锁被称为<code>内部锁</code>。</p>
-<p><strong>内部锁不会导致锁泄露</strong>，java编译器在将同步代码块编译成字节码的时候，对临界区可能抛出的异常（未被捕获）进行了处理，所以即使临界区代码抛出异常也不会妨碍内部锁的释放。</p>
-<h3 id="内部锁的调度"> 内部锁的调度</h3>
-<p>概念</p>
-<ul>
-<li>监控区（Entry Set）：锁已被其他线程获取，期待获取锁的线程就进入Monitor对象的监控区</li>
-<li>待授权区（Wait Set）：曾经获取到锁，但是调用了wait方法，线程进入待授权区</li>
-</ul>
-<p>Java虚拟机会为每个内部锁分配一个<code>入口集(Entry List)</code>， 用于记录等待获得相应内部锁的线程。</p>
-<p>多个线程申请同一个锁的时候，只有一个申请者能够成为该锁的持有线程（即申请锁的操作成功）， 而其他申请者的申请操作会失败。 这些申请失败的线程并不会抛出异常， 而是会被暂停（生命周期状态变为<code>BLOCKED</code>) 并被存入相应锁的入口集中等待再次申请锁的机会。</p>
-<p>入口集中的线程就被称为相应内部锁的等待线程。当这些线程申请的锁被其持有线程释放的时候， <strong>该锁的入口集中的一个任意线程会被Java虚拟机唤醒</strong>， 从而得到再次申请锁的机会。</p>
-<p>由于Java虚拟机对内部锁的调度<code>仅支持非公平调度</code>， 被唤醒的等待线程占用处理器运行时可能还有其他新的活跃线程 （处于 RUNNABLE状态，且未进入过入口集）与该线程抢占这个被释放锁， 因此被唤醒的线程不一定就能成为该锁的持有 线程。</p>
-<p>另外，Java虚拟机如何从一个锁的入口集中选择一个等待线程，作为下一个可以参与再次申请相应锁的线程，这个细节与Java虚拟机的具体实现有关：这个被选中的线程有可能是入口集中等待时间最长的线程， 也可能是等待时间最短的线程，或者完全是随机。</p>
-<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/内部锁状态转换图.png" alt="img" /></p>
-<h3 id="锁原理"> 锁原理</h3>
-<p>//TODO:monitor markword objectMonitor</p>
-<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/Mark Word.png" alt="img" /></p>
-<h3 id="锁升级过程"> 锁升级过程</h3>
-<ul>
-<li><a href="https://blog.csdn.net/zzti_erlie/article/details/103997713?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-3.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-3.control" target="_blank" rel="noopener noreferrer">锁升级过程</a></li>
-<li>https://blog.csdn.net/zwjyyy1203/article/details/106217887</li>
-</ul>
-<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/锁升级过程.jpg" alt="preview" /></p>
-<h2 id="lock接口-显示锁"> Lock接口（显示锁）</h2>
-<p>jdk1.5引入的排他锁，其作用于内部锁相同， 但是它提供了一些内部锁所不具备的特性。显示锁是<code>java.util.concurrent.locks.Lock</code>接口的实例，<code>java.util.concurrent.locks.Lock</code>是它的默认实现类</p>
-<h3 id="常用方法"> 常用方法</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>void lock()</td>
-<td>获取锁</td>
-</tr>
-<tr>
-<td>void lockInterruptibly()</td>
-<td>如果当前线程未被中断，则获取锁</td>
-</tr>
-<tr>
-<td>newCondition()</td>
-<td>返回绑定到此Lock实例的新Conditon实例</td>
-</tr>
-<tr>
-<td>tryLock()</td>
-<td>仅在调试时锁为空闲状态才获取锁</td>
-</tr>
-<tr>
-<td>tryLock(long time, TimeUnit uinit)</td>
-<td>如果说在给定的时间空闲，并且当前线程未被中断，则获取锁</td>
-</tr>
-<tr>
-<td>unlock()</td>
-<td>释放锁</td>
-</tr>
-</tbody>
-</table>
-<h3 id="显示锁的调度"> 显示锁的调度</h3>
-<p>可以根据<code>ReentrantLock(boolean fail)</code> 指定公平和非公平锁，true为公平锁</p>
-<p>公平锁保障锁调度的公平性往往是以增加上下文切换为代价的，因此显式锁默认非公平调度策略，适合``````锁被持有时间相对长<code>和</code>线程申请锁的平均间隔时间相对长``的情形。</p>
-<p>总的来说，公平锁开销大于非公平锁.</p>
-<h2 id="synchronized-和-reentrantlock"> Synchronized 和 ReenTrantLock</h2>
-<h3 id="对比"> 对比</h3>
-<p><strong>1. 锁的实现</strong></p>
-<p>synchronized 是 JVM 实现的，而 ReentrantLock 是 JDK 实现的。</p>
-<p><strong>2. 性能</strong></p>
-<p>新版本 Java 对 synchronized 进行了很多优化，例如自旋锁等，synchronized 与 ReentrantLock 大致相同。</p>
-<p><strong>3. 等待可中断</strong></p>
-<p>ReentrantLock 可中断，而 synchronized 不行</p>
-<p>当持有锁的线程长期不释放锁的时候，正在等待的线程可以选择放弃等待，改为处理其他事情。</p>
-<p><strong>4. 公平锁</strong></p>
-<p>synchronized 中的锁是非公平的，ReentrantLock 默认情况下也是非公平的，但是也可以是公平的。</p>
-<p>公平锁是指多个线程在等待同一个锁时，必须按照申请锁的时间顺序来依次获得锁。</p>
-<p><strong>5. 锁绑定多个条件</strong></p>
-<p>一个 ReentrantLock 可以同时绑定多个 Condition 对象，通过调用<code>newCondition()</code>方法来创建。</p>
-<p><strong>6. 是否可重入</strong></p>
-<p>两者都是可重入锁。</p>
-<p>“可重入锁”概念是：自己可以再次获取自己的内部锁。比如一个线程获得了某个对象的锁，此时这个对象锁还没有释放，当其再次想要获取这个对象的锁的时候还是可以获取的，如果不可锁重入的话，就会造成死锁。同一个线程每次获取锁，锁的计数器都自增1，所以要等到锁的计数器下降为0时才能释放锁。</p>
-<p><strong>7. 异常处理&amp;锁泄露</strong></p>
-<p>synchronized 异常就会自动释放锁来避免<code>锁泄露</code>，而 ReenTrantLock 异常需要在 finally 里 unlock。</p>
-<p>通过反编译可以看到sychronized有两个释放锁标志<code>monitorexit</code>，最后一个<code>monitorexit</code>是用于如果同步代码块中出现``Exception或者Error<code>，则会调用第二个</code>monitorexit`指令来保证释放锁</p>
-<p><strong>8. 灵活性</strong></p>
-<p>内部锁是基于代码块的锁，灵活性较差，要么使用，用么不使用；</p>
-<p>而显示锁是基于对象的锁，灵活性强，比如可以在一个方法内申请锁，在另一个方法释放锁，而内部锁是无法做到的。</p>
-<p>还有如果一个内部锁的持有线程一直不释放这个锁(这通常是由于代码错误导致的),那 么同步在该锁之上的所有线程就会一直被暂停而使其任务无法进展。而显式锁则可以轻松 地避免这样的问题。Lock接口定义了一个 <code>try Lock</code>方法。该方法的作用是尝试申请相应 Lock实例锁表示的锁。如果相应的锁未被其他任何线程持有,那么该方法会返回true,表 示其获得了相应的锁;否则,该方法并不会导致其执行线程被暂停而是直接返回 false, 表示其未获得相应的锁。更高级可以使用带参数超时等待的try lock方法。</p>
-<p><strong>9. 监控定位</strong></p>
-<p>在问题定位方面,尤其是定位生产环境上的问题的时候,<code>线程转储( Thread dump 参见第1章)</code>就像是线程的“工作报告”一样可以告诉我们Java虚拟机中关于线程的详 细信息。</p>
-<p>线程转储中会包含内部锁的相关信息,包括一个线程等待哪些锁以及这些锁的当 前(获取相应线程转储那一刻)持有线程。</p>
-<p>而在JDK1.5下,线程转储中并不包含显式锁 的相关信息。不过,JDK1.6提供的工具 <code>jstack</code>所产生的线程转储中可以包含显式锁的信 息5。</p>
-<h3 id="reentrantlock的高级功能"> ReenTrantLock的高级功能</h3>
-<p>ReenTrantLock 比 synchronized 增加了一些高级功能。主要有三点</p>
-<ol>
-<li>等待可中断</li>
-<li>可指定公平和非公平锁</li>
-<li>可实现选择性通知（锁可以绑定多个条件）</li>
-</ol>
-<ul>
-<li><strong>ReenTrantLock提供了一种能够中断等待锁的线程的机制</strong>，通过**lock.lockInterruptibly()**来实现这个机制。也就是说正在等待的线程可以选择放弃等待，改为处理其他事情。</li>
-<li><strong>ReenTrantLock可以指定是公平锁还是非公平锁。而synchronized只能是非公平锁。所谓的公平锁就是先等待的线程先获得锁。</strong> ReenTrantLock默认情况是非公平的，可以通过 ReenTrantLock类的<code>ReentrantLock(boolean fair)</code>构造方法来制定是否是公平的。</li>
-<li><strong>synchronized关键字与wait()和notify/notifyAll()方法相结合可以实现等待/通知机制</strong>，ReentrantLock类当然也可以实现，但是需要借助于Condition接口与newCondition() 方法。Condition是JDK1.5之后才有的，它具有很好的灵活性，比如可以实现多路通知功能也就是在一个Lock对象中可以创建多个Condition实例（即对象监视器），<strong>线程对象可以注册在指定的Condition中，从而可以有选择性的进行线程通知，在调度线程上更加灵活。 在使用notify/notifyAll()方法进行通知时，被通知的线程是由 JVM 选择的，用ReentrantLock类结合Condition实例可以实现“选择性通知”</strong> ，这个功能非常重要，而且是Condition接口默认提供的。而synchronized关键字就相当于整个Lock对象中只有一个Condition实例，所有的线程都注册在它一个身上。如果执行notifyAll()方法的话就会通知所有处于等待状态的线程这样会造成很大的效率问题，而Condition实例的signalAll()方法 只会唤醒注册在该Condition实例中的所有等待线程。</li>
-</ul>
-<p>如果你想使用上述功能，那么选择ReenTrantLock是一个不错的选择。</p>
-<h3 id="使用选择"> 使用选择</h3>
-<p>除非需要灵活的使用锁，去使用 ReentrantLock 的高级功能，否则优先使用 synchronized。这是因为 synchronized 是 JVM 实现的一种锁机制，JVM 原生地支持它，而 ReentrantLock 不是所有的 JDK 版本都支持。并且使用 synchronized 不用担心没有释放锁而导致死锁或锁泄露问题，因为 JVM 会确保锁的释放。</p>
-<p>内部锁的优点是简单易用,显式锁的优点是功能强大,这两种锁各自都存在一些弱势。</p>
-<ul>
-<li>一般来说,新开发的代码中我们可以选用显式锁。但是选用显式锁的时候需要注意 显式锁的不正确使用会导致锁泄漏这样严重的问题;线程转储可能无法包含显式锁的相关 信息,从而导致问题定位的困难。</li>
-<li>另外,我们也可以使用相对保守的策略——默认情况下选用内部锁,仅在需要显式锁 所提供的特性的时候才选用显式锁。比如,在多数线程持有一个锁的时间相对长或者线程 申请锁的平均时间间隔相对长的情况下使用非公平锁是不太恰当的,因此我们可考虑使用 公平锁(显式锁)。</li>
-</ul>
-<h3 id="性能已不是选择标准"> 性能已不是选择标准</h3>
-<p>在JDK1.6之前，synchronized 的性能是比 ReenTrantLock 差很多。<strong>具体表示为：synchronized 关键字吞吐量随线程数的增加，下降得非常严重。而ReenTrantLock 基本保持一个比较稳定的水平</strong>。我觉得这也侧面反映了， synchronized 关键字还有非常大的优化余地。后续的技术发展也证明了这一点，我们上面也讲了在 JDK1.6 之后 JVM 团队对 synchronized 关键字做了很多优化。<strong>JDK1.6 之后，synchronized 和 ReenTrantLock 的性能基本是持平了。所以网上那些说因为性能才选择 ReenTrantLock 的文章都是错的！JDK1.6之后，性能已经不是选择synchronized和ReenTrantLock的影响因素了！而且虚拟机在未来的性能改进中会更偏向于原生的synchronized，所以还是提倡在synchronized能满足你的需求的情况下，优先考虑使用synchronized关键字来进行同步！优化后的synchronized和ReenTrantLock一样，在很多地方都是用到了CAS操作</strong>。</p>
-<h2 id="锁优化与选择"> 锁优化与选择</h2>
-<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/锁优化.png" alt="img" /></p>
-<h2 id="改进锁-读写锁"> 改进锁：读写锁</h2>
-<p>读写锁( Read/Write Lock)是一种改进型的排他锁,也被称为共享/排他( Shared Exclusive)锁。读写锁允许多个线程可以同时读取(只读)共享变量,但是一次只允许个线程对共享变量进行更新(<code>包括读取后再更新</code>)。任何线程读取共享变量的时候,其他 线程无法更新这些变量;一个线程更新共享变量的时候,其他任何线程都无法访问该变量。</p>
-<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/读写锁的两种角色.png" alt="读写锁的两种角色" /></p>
-<p>总的来说,<strong>读锁之间可以变法访问，读锁和写锁直接互斥，写锁和写锁之间互斥</strong></p>
-<ul>
-<li>读锁对于读线 程来说起到保护其访问的共享变量在其访问期间不被修改的作用,并使多个读线程可以同 时读取这些变量从而提高了并发性;</li>
-<li>而写锁保障了写线程能够以独占的方式安全地更新共 享变量。写线程对共享变量的更新对读线程是可见的。</li>
-</ul>
-<h3 id="对比-2"> 对比</h3>
-<p>与普通的排他锁(如内部锁和 Reentrantlock)相比,读写锁在排他性方面比较弱(这是我们所期望的)。在原子性、可见性和有序性保障方面,它所起到的作用与普通的排他锁是一致的，</p>
-<ul>
-<li>写线程<code>释放写锁</code>所起到的作用相当于一个线程释放一个普通排他锁;</li>
-<li>读线程<code>获得读锁</code>所起到的作用相当于一个线程获得一个普通排他锁。</li>
-</ul>
-<h3 id="适用场景"> 适用场景</h3>
-<p>由于内部实现较为复杂， 只有同时满足下面两个条件的时候,读写锁才是适宜的选择。否则,使用读写锁会得 不偿失(开销)。</p>
-<ul>
-<li>只读操作比写(更新)操作要频繁得多</li>
-<li>读线程持有锁的时间比较长</li>
-</ul>
-<h3 id="读写锁的升级降级"> 读写锁的升级降级</h3>
-<p>ReentrantReadWriteLock所实现的读写锁是个<code>可重入锁</code>。</p>
-<ul>
-<li>锁降级：支持。即一个线程持有读写锁的<code>写锁</code>的情况下可以继续获得相应的<code>读锁</code>。</li>
-<li>锁升级：不支持。目前获取<code>读锁</code>后需要释放<code>读锁</code>才能获取<code>写锁</code>。</li>
-</ul>
-<p><strong>锁降级</strong></p>
-<div><pre><code><span>//锁降级</span>
-<span>public</span> <span>void</span> <span>downGrade</span><span>(</span><span>)</span> <span>{</span>
-  <span>boolean</span> readLockAcquired <span>=</span> <span>false</span><span>;</span>
-  writeLock<span>.</span><span>lock</span><span>(</span><span>)</span><span>;</span>
-  <span>try</span> <span>{</span>
-    <span>//在此区域访问(读，写)共享变量</span>
-    <span>//...</span>
-    <span>//当线程在持有写锁的情况下申请读锁readLock</span>
-    readLock<span>.</span><span>lock</span><span>(</span><span>)</span><span>;</span>
-    readLockAcquired <span>=</span> <span>true</span><span>;</span>
-  <span>}</span> <span>catch</span> <span>(</span><span>Exception</span> e<span>)</span> <span>{</span>
-    e<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-  <span>}</span> <span>finally</span> <span>{</span>
-    writeLock<span>.</span><span>unlock</span><span>(</span><span>)</span><span>;</span>
-  <span>}</span>
-
-  <span>if</span><span>(</span>readLockAcquired<span>)</span><span>{</span>
-    <span>try</span> <span>{</span>
-      <span>//读取共享数据</span>
-
-    <span>}</span> <span>catch</span> <span>(</span><span>Exception</span> e<span>)</span> <span>{</span>
-      e<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-    <span>}</span> <span>finally</span> <span>{</span>
-      readLock<span>.</span><span>unlock</span><span>(</span><span>)</span><span>;</span>
-    <span>}</span>
-  <span>}</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br></div></div><p><strong>锁升级</strong></p>
-<div><pre><code><span>//锁升级</span>
-<span>public</span> <span>void</span> <span>upGrade</span><span>(</span><span>)</span> <span>{</span>
-  readLock<span>.</span><span>lock</span><span>(</span><span>)</span><span>;</span>
-  <span>try</span> <span>{</span>
-    <span>// Must release read lock before acquiring write lock</span>
-    readLock<span>.</span><span>unlock</span><span>(</span><span>)</span><span>;</span>
-    writeLock<span>.</span><span>lock</span><span>(</span><span>)</span><span>;</span>
-    <span>try</span> <span>{</span>
-      <span>//在此区域访问(读，写)共享变量</span>
-      <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Thread</span><span>.</span><span>currentThread</span><span>(</span><span>)</span><span>.</span><span>getName</span><span>(</span><span>)</span> <span>+</span> <span>"写操作正在执行。。。"</span><span>)</span><span>;</span>
-      <span>Thread</span><span>.</span><span>sleep</span><span>(</span><span>1000</span><span>)</span><span>;</span>
-      <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Thread</span><span>.</span><span>currentThread</span><span>(</span><span>)</span><span>.</span><span>getName</span><span>(</span><span>)</span> <span>+</span> <span>"写操作结束。。。"</span><span>)</span><span>;</span>
-    <span>}</span> <span>catch</span> <span>(</span><span>Exception</span> e<span>)</span> <span>{</span>
-      e<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-    <span>}</span> <span>finally</span> <span>{</span>
-      writeLock<span>.</span><span>unlock</span><span>(</span><span>)</span><span>;</span>
-    <span>}</span>
-  <span>}</span> <span>catch</span> <span>(</span><span>Exception</span> e<span>)</span> <span>{</span>
-    e<span>.</span><span>printStackTrace</span><span>(</span><span>)</span><span>;</span>
-  <span>}</span> <span>finally</span> <span>{</span>
-    readLock<span>.</span><span>unlock</span><span>(</span><span>)</span><span>;</span>
-  <span>}</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br></div></div><h2 id="内存屏障"> 内存屏障</h2>
-<p>可见性的两个动作</p>
-<ul>
-<li><strong>刷新处理器</strong>：获得锁前，保证了该锁的当前持有线程能够读取到前一个持有线程对这些数
-据所做的更新</li>
-<li><strong>冲刷处理器</strong>：释放锁后，保证了该锁的持有线程对这些数据所做的更新对该锁的后续持
-有线程可见</li>
-</ul>
-<p>底层是借助<code>内存屏障</code>实现的上述动作。</p>
-<h3 id="定义"> 定义</h3>
-<p>内存屏障是对一类仅针对内存读丶写操作指令的跨处理器架构的比较底层的抽象。<code>内存屏障</code>是被插入到<code>两个指令之间</code>使用的，其作用是禁止编译器丶处理器重排序从而保证<code>有序性</code>，但放的位置不同作用也有不同。</p>
-<p>它在指令序列(如指令1;指令2;指令3)中就像是一堵墙(因此被称为屏障)一样使其两侧(之前和之后)的指令无法“穿越”它(一旦穿越了就是重排序了)。</p>
-<p>但是,为了实现禁止重排序的功能,这些指令也往往具有一个副作用——刷新处理器缓存、冲刷处理器缓存,从而保证可见性。不同微架构的处理器所提供的这样的指令是不同的,并且出于不同的目的使用的相应指令也是不同的。</p>
-<h3 id="按可见性保障划分"> 按可见性保障划分</h3>
-<ul>
-<li>加载屏障：刷新处理器缓存</li>
-<li>存储屏障：冲刷处理器缓存</li>
-</ul>
-<h4 id="加载屏障"> 加载屏障</h4>
-<ul>
-<li>用法：Java虚拟机会在 <code>Monitorenter(申请锁)</code>对应的机器码指令之后<code>临界区开始之前</code>的地方插人一个<code>加载屏障</code>。</li>
-<li>作用：这使得读线程的执行处理器能够将写线程对相应共享变量所做的更新从其他处理器同步到该处理器的高速缓存中。</li>
-</ul>
-<h4 id="存储屏障"> 存储屏障</h4>
-<ul>
-<li>用法：Java虚拟机会在 <code>MonitorExit(释放锁)</code>对应的<code>机器码指令之后</code>插入一个<code>存储屏障</code></li>
-<li>作用：这就保障了写线程在释放锁之前在临界区中对共享变量所做的更新对读线程的执行处理器来说是可同步的</li>
-</ul>
-<p><strong>因此,可见性的保障是通过写线程和读线程成对地使用<code>存储屏障</code>和<code>加载屏障</code>实现的。</strong></p>
-<p>这有点像高考成绩查询:高考阅卷完毕之后虽然每个考生的分数都已经确定,但是这些分数对于考生来说仍然是未知的。只有当分数公布的时候,考生才能够去查询自己的分数。这里</p>
-<ul>
-<li>考试成绩就相当于阅卷方和考生之间需要共享的数据:</li>
-<li>阅卷方公布成绩相当于执行存储屏障,它使得考生的分数可以被查询;</li>
-<li>考生查询其考试成绩相当于执行加载屏障,它使得考生可以得知自己的考试成绩</li>
-</ul>
-<h3 id="按有序性保障划分"> 按有序性保障划分</h3>
-<ul>
-<li>获取屏障</li>
-<li>释放屏障</li>
-</ul>
-<h4 id="获取屏障"> 获取屏障</h4>
-<ul>
-<li>用法：Java虚拟机会在 <code>Monitorenter之后</code>(它包含了读操作)和<code>临界区开始之前</code>的地方插人一个<code>获取屏障</code></li>
-<li>作用：其作用是禁止该读操作与其后的任何读写操作之间进行<code>重排序</code>，这相当于在进行后续操作<code>之前</code>先要获得相应共享数据的<code>所有权</code>(这也是该屏障的名称来源)，<code>获取屏障</code>禁止了临界区中的任何读、写操作被重排序到<code>临界区之前</code>的可能性,</li>
-</ul>
-<h4 id="释放屏障"> 释放屏障</h4>
-<ul>
-<li>用法：<code>Monitorexit之前</code>(它包含了写操作)和<code>临界区之后</code>的地方插入一个<code>释放屏障</code>。</li>
-<li>作用：禁止该写操作与其前面的任何读写操作之间进行<code>重排序</code>，这相当于在对相应共享数据<code>操作结束后</code>释放所有权(这也是该屏障的名称来源)，<code>释放屏障</code>又禁止了临界区中的任何读、写操作被重排序到<code>临界区之后</code>的可能性。</li>
-</ul>
-<p>因此,这两种屏障就像是三明治的两层面包片把火腿夹住一样把临界区中 的代码(指令序列)包括起来,如图3-4所示</p>
-<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/内存屏障在锁中的使用.png" alt="内存屏障在锁中的使用" /></p>
-<h3 id="总结"> 总结</h3>
-<p>因此临界 区内的任何读、写操作都无法被重排序到临界区之外。在锁的排他性的作用下,这使得临 界区中执行的操作序列具有<code>原子性</code>。因此,写线程在临界区中对各个共享变量所做的更新 会同时对读线程可见,即在读线程看来各个共享变量就像是“一下子”被更新的,于是这 些线程无从(也无必要)区分这些共享变量是以何种顺序被更新的。这使得写线程在临界 区中执行的操作自然而然地具有有序性—读线程对这些操作的感知顺序与源代码顺序一致</p>
-<p><strong>可见,锁对有序性的保障是通过写线程和读线程配对使用释放屏障与加载屏障实现的</strong></p>
-<h2 id="轻量级同步机制-volatile关键字"> 轻量级同步机制：volatile关键字</h2>
-<h3 id="定义-2"> 定义</h3>
-<p>volatile字面有“易挥发”的意思,引申开来就是有“不稳定”的意思。</p>
-<p>volatile关键字用于修饰共享可变变量,即没有使用 <code>final</code>关键字修饰的实例变量或静态变量,如下所示</p>
-<div><pre><code><span>private</span> <span>volatile</span> <span>int</span> logLevel
-</code></pre>
-<div><span>1</span><br></div></div><ul>
-<li>volatile关键字表示被修饰的变量的值容易变化(即被其他线程更改),因而不稳定。</li>
-<li>volatile变量的不稳定性意味着对这种变量的读和写操作都必须从<code>高速缓存</code>或者<code>主内存</code> （也是通过高速缓存读取）中读取，以读取<code>变量的相对新值</code>。</li>
-<li>因此, volatile变量不会被编译器分配到<code>寄存器</code>进行存储，对volatile变量的读写操作都是内存访问(访问高速缓存相当于主内存)操作。</li>
-</ul>
-<p>保证了</p>
-<ul>
-<li>可见性</li>
-<li>有序性</li>
-<li>原子性：仅能保障<code>写volatile</code>变量操作的原子性，但没有锁的排他性，所以不会引起<code>上下文切换</code>（因为变量在主内存）</li>
-</ul>
-<h3 id="作用"> 作用</h3>
-<ul>
-<li>可见性</li>
-<li>有序性</li>
-<li>保障long/double型变量的<code>读写操作</code>的原子性</li>
-</ul>
-<p>当有“中间结果”进行操作，比如使用共享变量count2的赋值操作</p>
-<div><pre><code><span>private</span> <span>volatile</span> <span>int</span> count1<span>;</span>
-<span>private</span> <span>int</span> count2<span>;</span>
-count1 <span>=</span> count2 <span>+</span> <span>1</span><span>;</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>该赋值操作为<code>read-modify-write</code>操作，在执行过程可能有其他线程更新了<code>count2</code>的值，但如果<code>count2</code>是<code>局部变量</code>那么整个就是<code>原子性</code>的。</p>
-<p>volatile仅仅保障对其修饰的变量的写操作(以及读操作)本身的原子性，如果赋值操作的是局部变量，那么也认为是<code>原子性</code>的。</p>
-<ul>
-<li>写线程对 volatile变量的写操作会产生类似于释放锁的效果。</li>
-<li>读线程对 volatile变量的读操作会产生类似于获得锁的效果。</li>
-</ul>
-<p>因此, volatile具有保障有性和可见性的作用</p>
-<h3 id="存储屏障-2"> 存储屏障</h3>
-<h4 id="写操作"> 写操作</h4>
-<ul>
-<li>该操作<code>之前</code>插入一个<code>释放屏障</code></li>
-<li>在该操作<code>之后</code>插入一个<code>存储屏障</code></li>
-</ul>
-<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/volatile插入屏障.png" alt="volatile写操作屏障.png" /></p>
-<p>其中,<code>释放屏障</code>禁止了 volatile写操作与该操作之前的仼何读、写操作进行重排序 从而保证了 volatile写操作之前的任何读、写操作会先于 volatile写操作被提交,即其他线 程看到写线程对 volatile变量的更新时,写线程在更新 volatile变量之前所执行的内存操作 的结果对于读线程必然也是可见的。这就保障了读线程对写线程在更新 volatile变量前对 共享变量所执行的更新操作的感知顺序与相应的源代码顺序一致,即保障了有序性。</p>
-<p>volatileε虽然能够保障有序性,但是它不像锁那样具备排他性,所以并不能保障其他操作的原子性,而<code>只能够保障对被修饰变量的写操作的原子性</code>。因此, volatile变量写操作之前的操作如果涉及共享可变变量,那么竞态仍可能产生。这是因为共享变量被赋值给volatile变量的时候其他线程可能已经更新了该共享变量的值。</p>
-<h4 id="读操作"> 读操作</h4>
-<ul>
-<li>该操作<code>之前</code>插入一个<code>加载屏障</code></li>
-<li>在该操作<code>之后</code>插入一个<code>获取屏障</code></li>
-</ul>
-<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/volatile读操作屏障.png" alt="volatile读操作屏障" /></p>
-<p>综上所述</p>
-<ul>
-<li>写 volatile变量操作与该操作之前的任何读、写操作不会被重排序</li>
-<li>读 volatile变量操作与该操作之后的任何读、写操作不会被重排序。</li>
-</ul>
-<p>volatile关键字的作用体现在对修饰变量的读写操作上。</p>
-<h3 id="数组"> 数组</h3>
-<p>如果被修饰的变量是个数组,那么 volatile关键字只能够对<code>数组引用本</code>身的操作(读 取数组引用和更新数组引用)起作用，而无法对<code>数组元素的操作(读取、更新数组元素)</code> 起作用。</p>
-<p>对数组的操作可分为读取数组元素、写数组元素和读取数组引用这几种类型</p>
-<div><pre><code>inti<span>=</span> anArray<span>[</span><span>0</span><span>]</span><span>;</span><span>//操作类型①:读取数组元素</span>
-
-aRray<span>[</span><span>1</span><span>]</span><span>=</span><span>1</span><span>;</span><span>//操作类型②:写数组元素</span>
-
-<span>volatile</span> <span>int</span><span>[</span><span>]</span> anotherArray<span>=</span> anArray<span>;</span><span>//操作类型③:读取数组引用</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>仅能保证第一个操作读取到的引用内存地址是最新的，但不能保证操作二读取到的数组元素是最新的。</p>
-<p>如果要保证数组的读取元素也是最新的，可以用<code>AtomicIntegerArray</code>等</p>
-<h3 id="开销"> 开销</h3>
-<ul>
-<li>写：介于普通写取和临界区写之间，不用申请锁和上下文切换</li>
-<li>读：介于普通写取和临界区写之间，需要从主内存中读取</li>
-</ul>
-<h3 id="适用场景-2"> 适用场景</h3>
-<p>条件</p>
-<ul>
-<li>对变量的写操作不依赖于当前值。</li>
-<li>该变量没有包含在具有其他变量的不变式中</li>
-</ul>
-<blockquote>
-<p>volatile关键字在可见性方面仅仅是保证读线程能够读取到共享变量的相对新值。 对于<code>引用型变量</code>和<code>数组变量</code>, volatile关键字并不能保证读线程能够读取到相应对象的 字段(实例变量、静态变量)、元素的相对新值。</p>
-</blockquote>
-<p>场景</p>
-<ul>
-<li>状态标志：不用申请锁，且同步</li>
-<li>保证可见性：其他线程能在不加锁的情况下看到变量的更新</li>
-<li>替代锁：对volatile变量的写操作是原子性的，比较适合多线程共享<code>一个</code>状态变量而不是多线程共享<code>一组</code>变量。某些情形下,我们可以将多个线程共享的一组状态变量合并成一个对象,用个 volatile变量来引用该对象,从而使我们不必要使用锁。</li>
-<li>简易的读写锁：在该场景中,读写锁是通过混合使用 锁和 volatile变量而实现的,其中锁用于保障共享变量写操作的原子性, volatile 变量用于保障共享变量的可见性。因此,与 Reentrantread writelock所实现的读 写锁不同的是,这种简易版读写锁仅涉及一个共享变量并且允许一个线程读取这 个共享变量时其他线程可以更新该变量(这是因为读线程并没有加锁)。因此 这种读写锁允许读线程可以读取到共享变量的非最新值。该场景的一个典型例子 是实现一个计数器,如清单3-7所示3。</li>
-</ul>
-<div><pre><code><span>public</span> <span>class</span> <span>Counter</span><span>{</span>
-    <span>private</span> <span>volatile</span> <span>long</span> count<span>;</span>
-    <span>public</span> <span>long</span> <span>vaule</span><span>(</span><span>)</span><span>{</span>
-        <span>return</span> count<span>;</span>
-    <span>}</span>
-    <span>public</span> <span>void</span> <span>increment</span><span>(</span><span>)</span><span>{</span>
-        <span>synchronized</span> <span>(</span><span>this</span><span>)</span><span>{</span>
-            count<span>++</span><span>;</span>
-        <span>}</span>
-    <span>}</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><h2 id="cas"> CAS</h2>
-<p>参考</p>
-<blockquote>
-<ul>
-<li>https://blog.csdn.net/v123411739/article/details/79561458</li>
-<li>https://www.jianshu.com/p/ab2c8fce878b</li>
-</ul>
-</blockquote>
-<h3 id="概述"> 概述</h3>
-<p><code>CAS（Compare-and-Swap）</code>，即比较并替换，是一种实现并发算法时常用到的技术，Java并发包中的很多类都使用了<code>CAS</code>技术。CAS是一种<code>无锁算法</code>，CAS有3个操作数</p>
-<blockquote>
-<ul>
-<li>内存值V</li>
-<li>旧的预期值A</li>
-<li>要修改的新值B</li>
-</ul>
-</blockquote>
-<p>当且仅当<code>预期值A</code>和<code>内存值V</code>相同时(说明此时内存中的值没有被其他线程改变)，将<code>内存值V</code>修改为<code>B</code>，否则什么都不做。</p>
-<p>CAS比较与交换的伪代码可以表示为：</p>
-<blockquote>
-<p>do{</p>
-<p>备份旧数据；</p>
-<p>基于旧数据构造新数据；</p>
-<p>}while(!CAS( 内存地址，备份的旧数据，新数据 ))</p>
-</blockquote>
-<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/CAS_algorithm.jpg" alt="CAS算法理解" /></p>
-<p>参考<code>getAndAddInt</code>方法源码</p>
-<div><pre><code>    <span>public</span> <span>final</span> <span>int</span> <span>getAndAddInt</span><span>(</span><span>Object</span> var1<span>,</span> <span>long</span> var2<span>,</span> <span>int</span> var4<span>)</span> <span>{</span>
-        <span>int</span> var5<span>;</span>
-        <span>do</span> <span>{</span>
-            var5 <span>=</span> <span>this</span><span>.</span><span>getIntVolatile</span><span>(</span>var1<span>,</span> var2<span>)</span><span>;</span>
-        <span>}</span> <span>while</span><span>(</span><span>!</span><span>this</span><span>.</span><span>compareAndSwapInt</span><span>(</span>var1<span>,</span> var2<span>,</span> var5<span>,</span> var5 <span>+</span> var4<span>)</span><span>)</span><span>;</span>
-
-        <span>return</span> var5<span>;</span>
-    <span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><p>注：t1，t2线程是同时更新<code>同一变量56的值</code></p>
-<p>因为t1和t2线程都同时去访问<code>同一变量56</code>，所以他们会把<strong>主内存的值完全拷贝一份到自己的工作内存空间</strong>，所以t1和t2线程的预期值都为<code>56</code>。</p>
-<p>假设t1在与t2线程竞争中线程t1能去更新变量的值，而其他线程都失败。（失败的线程并不会被挂起，而是被告知这次竞争中失败，并可以再次发起尝试）。t1线程去更新变量值改为57，然后写到内存中。此时对于t2来说，内存值变为了57，与预期值56不一致，就操作失败了（想改的值不再是原来的值）。</p>
-<p>（上图通俗的解释是：CPU去更新一个值，但如果想改的值不再是原来的值，操作就失败，因为很明显，有其它操作先改变了这个值。）</p>
-<p>就是指当两者进行比较时</p>
-<blockquote>
-<ul>
-<li>如果相等，则证明共享数据没有被修改，替换成新值，然后继续往下运行；</li>
-<li>如果不相等，说明共享数据已经被修改，放弃已经所做的操作，然后重新执行刚才的操作。</li>
-</ul>
-</blockquote>
-<p>容易看出 CAS 操作是基于共享数据不会被修改的假设，采用了类似于数据库的<code>commit-retry</code> 的模式。当同步冲突出现的机会很少时，这种假设能带来较大的性能提升。</p>
-<h3 id="使用例子-源码"> 使用例子/源码</h3>
-<p>创建一个<code>AtomicInteger</code>类型来测试多线程多同一个变量的自增操作</p>
-<div><pre><code>    <span>public</span> <span>static</span> <span>AtomicInteger</span> race <span>=</span> <span>new</span> <span>AtomicInteger</span><span>(</span><span>0</span><span>)</span><span>;</span>
-
-    <span>public</span> <span>static</span> <span>void</span> <span>increase</span><span>(</span><span>)</span> <span>{</span>
-        <span>/*race++;并非原子操作，经过下面三个步骤，取值，+1，写值*/</span>
-        race<span>.</span><span>getAndIncrement</span><span>(</span><span>)</span><span>;</span>
-    <span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>getAndIncrement()源码</p>
-<div><pre><code>    <span>public</span> <span>final</span> <span>int</span> <span>getAndIncrement</span><span>(</span><span>)</span> <span>{</span>
-        <span>return</span> unsafe<span>.</span><span>getAndAddInt</span><span>(</span><span>this</span><span>,</span> valueOffset<span>,</span> <span>1</span><span>)</span><span>;</span>
-    <span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>getAndAddInt源码</p>
-<div><pre><code>    <span>public</span> <span>final</span> <span>int</span> <span>getAndAddInt</span><span>(</span><span>Object</span> var1<span>,</span> <span>long</span> var2<span>,</span> <span>int</span> var4<span>)</span> <span>{</span>
-        <span>int</span> var5<span>;</span>
-        <span>do</span> <span>{</span>
-            var5 <span>=</span> <span>this</span><span>.</span><span>getIntVolatile</span><span>(</span>var1<span>,</span> var2<span>)</span><span>;</span>
-        <span>}</span> <span>while</span><span>(</span><span>!</span><span>this</span><span>.</span><span>compareAndSwapInt</span><span>(</span>var1<span>,</span> var2<span>,</span> var5<span>,</span> var5 <span>+</span> var4<span>)</span><span>)</span><span>;</span>
-
-        <span>return</span> var5<span>;</span>
-    <span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><p>可以看到最后底层调用的是<code>compareAndSwapInt()</code>，如果 CAS 失败，会一直进行尝试</p>
-<h3 id="cas缺点"> CAS缺点</h3>
-<p>CAS虽然很高效的解决了原子操作问题，但是CAS仍然存在三大问题。</p>
-<div><p>CAS缺点</p>
-<ol>
-<li>
-<p><strong>循环时间长开销很大</strong>：CAS 通常是配合无限循环一起使用的，我们可以看到 <code>getAndAddInt</code> 方法执行时，如果 CAS 失败，会一直进行尝试。如果 CAS 长时间一直不成功，可能会给 CPU 带来很大的开销。</p>
-</li>
-<li>
-<p><strong>只能保证一个变量的原子操作</strong>：当对一个变量执行操作时，我们可以使用<code>循环 CAS</code> 的方式来保证原子操作，但是对<code>多个变量</code>操作时，CAS 目前无法直接保证操作的原子性。但是我们可以通过以下两种办法来解决：1）使用互斥锁来保证原子性；2）将多个变量封装成对象，通过 <code>AtomicReference</code> 来保证原子性。</p>
-</li>
-<li>
-<p><strong>ABA问题</strong>：CAS 的使用流程通常如下：1）首先从地址 V 读取值 A；2）根据 A 计算目标值 B；3）通过 CAS 以原子的方式将地址 V 中的值从 A 修改为 B。</p>
-<p>但是在第1步中读取的值是A，并且在第3步修改成功了，我们就能说它的值在第1步和第3步之间没有被其他线程改变过了吗?</p>
-<p><strong>如果在这段期间它的值曾经被改成了B，后来又被改回为A</strong>，那CAS操作就会误认为它从来没有被改变过。这个漏洞称为CAS操作的“ABA”问题。Java并发包为了解决这个问题，提供了一个带有标记的原子引用类“<code>AtomicStampedReference</code>”，它可以通过控制<code>变量值的版本</code>来保证CAS的正确性。</p>
-<p>因此，在使用CAS前要考虑清楚“ABA”问题是否会影响<code>程序并发的正确性</code>，如果需要解决ABA问题，改用<code>传统的互斥同步</code>可能会比原子类更高效。</p>
-</li>
-</ol>
-</div>
-<h3 id="cas在jdk中的应用"> CAS在JDK中的应用</h3>
-<p>在原子类变量中，如<code>java.util.concurrent.atomic</code>中的<code>AtomicXXX</code>，都使用了这些底层的JVM支持为数字类型的引用类型提供一种高效的CAS操作，而在<code>java.util.concurrent</code>中的大多数类在实现时都直接或间接的使用了这些原子变量类。</p>
-<p>Java 1.8中<code>AtomicInteger.incrementAndGet()</code>的实现源码为：</p>
-<div><pre><code>    <span>public</span> <span>final</span> <span>int</span> <span>incrementAndGet</span><span>(</span><span>)</span> <span>{</span>
-        <span>return</span> unsafe<span>.</span><span>getAndAddInt</span><span>(</span><span>this</span><span>,</span> valueOffset<span>,</span> <span>1</span><span>)</span> <span>+</span> <span>1</span><span>;</span>
-    <span>}</span>
-
-
-    <span>public</span> <span>final</span> <span>int</span> <span>getAndAddInt</span><span>(</span><span>Object</span> var1<span>,</span> <span>long</span> var2<span>,</span> <span>int</span> var4<span>)</span> <span>{</span>
-        <span>int</span> var5<span>;</span>
-        <span>do</span> <span>{</span>
-            var5 <span>=</span> <span>this</span><span>.</span><span>getIntVolatile</span><span>(</span>var1<span>,</span> var2<span>)</span><span>;</span>
-        <span>}</span> <span>while</span><span>(</span><span>!</span><span>this</span><span>.</span><span>compareAndSwapInt</span><span>(</span>var1<span>,</span> var2<span>,</span> var5<span>,</span> var5 <span>+</span> var4<span>)</span><span>)</span><span>;</span>
-
-        <span>return</span> var5<span>;</span>
-    <span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div><p>由此可见，<code>AtomicInteger.incrementAndGet</code>的实现用了<code>乐观锁</code>技术，调用了类<code>sun.misc.Unsafe</code>库里面的 <code>CAS</code>算法，用<code>CPU指令</code>来实现<code>无锁自增</code>。所以，<code>AtomicInteger.incrementAndGet</code>的自增比用<code>synchronized</code>的锁效率倍增。</p>
-<h2 id="原子变量-atomic"> 原子变量（Atomic）</h2>
-<p>原子变量类( Atomics)是基于CAS实现的能够保障对共享变量进行read- modify- write 更新操作的原子性和可见性的一组工具类。这里所谓的read- modify- write更新操作,是指 对共享变量的更新不是一个简单的赋值操作,而是变量的新值依赖于变量的旧值,例如自 增操作“ count-+”。由于 volatile无法保障自增操作的原子性,而原子变量类的内部实现通 常借助一个 volatile变量并保障对该变量的read- modify-wite更新操作的原子性,因此它可以 被看作<code>增强型的 volatile变量</code>。原子变量类一共有12个,可以被分为4组。</p>
-<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/原子变量类.png" alt="image-20211113154800436" /></p>
-<ul>
-<li>字段更新器：解决ABA问题，<a href="https://www.cnblogs.com/54chensongxia/p/12167772.html" target="_blank" rel="noopener noreferrer">参考</a></li>
-<li>引用型：主要针对引用的对象是否是原来的</li>
-</ul>
-<h3 id="atomiclong常用方法"> AtomicLong常用方法</h3>
-<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/AtomicLong常用方法.png" alt="image-20211113155240337" /></p>
-<h3 id="字段更新器"> 字段更新器</h3>
-<p>原子类型字段更新器在内部通过Unsafe类的native方法保证操作的原子性。</p>
-<p>关于原子类型字段更新器的使用需要注意以下几个方面：</p>
-<ul>
-<li>字段必须是volatile类型的，用于保证可见性。</li>
-<li>字段和字段更新器的访问类型(public/protected/private)必须一致。</li>
-<li>字段只能是实例变量，不能是类变量(static)。</li>
-<li>字段不能是final的变量，这样的字段不可修改。</li>
-<li>如果要处理Integer和Long类型，则需要使用AtomicReferenceFieldUpdater</li>
-</ul>
-<h3 id="set和lazyset"> set和lazySet</h3>
-<p>参考</p>
-<ul>
-<li><a href="https://blog.csdn.net/szhlcy/article/details/102561224?spm=1001.2101.3001.6650.1&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.no_search_link&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.no_search_link" target="_blank" rel="noopener noreferrer">lazySet</a></li>
-</ul>
-<p>普通Atomic下的set保证了原子性和可见性，而lazySet只保证了原子性不保证可见性，目的是在有些情况下减少内存屏障所需要优化性能，底层只是简单地对变量普通写。</p>
-<p>set方法的设置操作在写操作的前后都加了内存屏障，因为AtomicInteger中的value是volatile修饰的，具体可以看前面的一篇博文Java并发volatile关键字的作用和汇编原理。而lazySet方法并不是直接的操作value字段，而是通过Unsafe类的putOrderedInt方法先通过初始化时候计算出的vlaue字段的偏移变量找到字段地址，然后调用本地方法进行操作的，在本地方法中只在写操作前面加了一个屏障，而后面没有加。</p>
-<h2 id="对象的发布和逸出"> 对象的发布和逸出</h2>
-<h2 id="java线程同步机制总结"> Java线程同步机制总结</h2>
-<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-2/java线程同步机制总结.png" alt="image-20211113202234366" /></p>
-<h2 id="线程池"> 线程池</h2>
-<h3 id="线程池复用原理"> 线程池复用原理</h3>
-<p>在线程池中，线程会从 workQueue 中读取任务来执行，最小的执行单位就是 Worker，Worker 实现了 Runnable 接口，重写了 run 方法，这个 run 方法是让每个线程去执行一个循环，在这个循环代码中，去判断是否有任务待执行，若有则直接去执行这个任务，因此线程数不会增加。</p>
-]]></content>
-    <author>
-      <name>Draco</name>
-    </author>
-    <contributor>
-      <name>Draco</name>
-    </contributor>
-    <published>2021-08-04T21:18:29.000Z</published>
-    <rights>Copyright by Draco</rights>
-  </entry>
-  <entry>
     <title type="html">Java多线程-JUC使用</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-MultiThread/Java-MultiThread-JUC/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-MultiThread/Java-MultiThread-JUC/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<p>TODO</p>
 <p>https://www.bilibili.com/video/BV1Kw411Z7dF</p>
 ]]></content>
@@ -19713,7 +19713,7 @@ aRray<span>[</span><span>1</span><span>]</span><span>=</span><span>1</span><span
     <title type="html">Java多线程-关键字&amp;锁</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-MultiThread/Java-MultiThread-keyword/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-MultiThread/Java-MultiThread-keyword/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="sychronized-内部锁"> Sychronized(内部锁)</h2>
 <p><a href="https://www.pdai.tech/md/java/thread/java-thread-x-key-synchronized.html" target="_blank" rel="noopener noreferrer">关键字: synchronized详解</a></p>
 <h3 id="底层原理-objectmonitor"> 底层原理：ObjectMonitor</h3>
@@ -19735,7 +19735,7 @@ aRray<span>[</span><span>1</span><span>]</span><span>=</span><span>1</span><span
     <title type="html">Java-多线程并发</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-MultiThread/Java-MultiThread/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-MultiThread/Java-MultiThread/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="_1-线程、程序、进程的基本概念"> 1. 线程、程序、进程的基本概念</h2>
 <p><img src="./images/Java-MultiThread-1/Thread_program_process.png" alt="线程、程序、进程" /></p>
 <h2 id="_2-使用多线程可能带来什么问题"> 2. 使用多线程可能带来什么问题?</h2>
@@ -20864,7 +20864,7 @@ sThreadLocal<span>.</span><span>get</span><span>(</span><span>)</span>
     <title type="html">概述/参考</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-MultiThread/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-MultiThread/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <blockquote>
 <ul>
@@ -20891,7 +20891,7 @@ sThreadLocal<span>.</span><span>get</span><span>(</span><span>)</span>
     <title type="html">Java学习目录</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<ul>
 <li>
 <p><a href="./Java-BasicNotes.html">Java-基础知识笔记</a></p>
@@ -20952,7 +20952,7 @@ sThreadLocal<span>.</span><span>get</span><span>(</span><span>)</span>
     <title type="html">Linux常用命令</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/linux/Linux-commands/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/linux/Linux-commands/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <summary type="html"><![CDATA[Linux常用命令]]></summary>
     <content type="html"><![CDATA[<h1 id="菜鸟教程linux命令大全"> 菜鸟教程Linux命令大全</h1>
 <blockquote>
@@ -20989,7 +20989,7 @@ sThreadLocal<span>.</span><span>get</span><span>(</span><span>)</span>
     <title type="html">Linux技巧</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/linux/Linux-skill/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/linux/Linux-skill/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <summary type="html"><![CDATA[Linux技巧]]></summary>
     <content type="html"><![CDATA[<h2 id="环境"> 环境</h2>
 <p><code>Centos7</code></p>
@@ -21076,7 +21076,7 @@ tree -L <span>1</span> /var/lib/docker/
     <title type="html">SSH</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/linux/SSH/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/linux/SSH/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <summary type="html"><![CDATA[SSH]]></summary>
     <content type="html"><![CDATA[<h2 id="环境"> 环境</h2>
 <p><code>Centos7</code></p>
@@ -21163,7 +21163,7 @@ tree -L <span>1</span> /var/lib/docker/
     <title type="html">RabbitMQ面试题</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/mq/rabbitmq/RabbitMQ-Interview/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/mq/rabbitmq/RabbitMQ-Interview/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<p>面试</p>
 ]]></content>
     <author>
@@ -21179,7 +21179,7 @@ tree -L <span>1</span> /var/lib/docker/
     <title type="html">RabbitMQ</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/mq/rabbitmq/RabbitMQ/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/mq/rabbitmq/RabbitMQ/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="大纲"> 大纲</h2>
 <p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/RabbitMQ/RabbitMQ.png" alt="RabbitMQ大纲" /></p>
 <h2 id="参考"> 参考</h2>
@@ -22214,7 +22214,7 @@ rabbitmqctl list_queues [-p vhost] [queueInfoItem]
     <title type="html">听歌识曲开放平台</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/my-project/Music-Recognition/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/my-project/Music-Recognition/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <summary type="html"><![CDATA[听歌识曲开放平台]]></summary>
     <content type="html"><![CDATA[<h2 id="需求评审-拆分"> 需求评审/拆分</h2>
 <p>入职后了解到招我是因为目前有许多其他部门需要批量调用我们的<code>识曲服务SDK</code>，有着采用脚本或者临时调用的方式繁琐，不可控，沟通成本高，无法持久化日志等等痛点，所以一直想做一个开放平台中台，通过中台去调用服务。对于需求方来说，可视化，方便，实时查看批量识曲结果，可增量；而对于我们服务提供者兼管理者而言，可以动态查看各个识曲任务调用的SDK的QPS可视化并做到随时动态控制和预警，还能根据需求方那边具体的业务分配QPS并提前扩容(申请机器)等等，最重要的是让我们和需求方的对接规范化，流程化，可监控是最重要的。甚至以后还有可能开放出去面向<code>toB</code>，将听歌识曲开放平台推广(可参考其他开放平台<a href="https://www.acrcloud.com/music-recognition/" target="_blank" rel="noopener noreferrer">ACRCloud</a>)</p>
@@ -22351,7 +22351,7 @@ pipe.execute<span>(</span><span>)</span>
     <title type="html">实验室出入管理小程序</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/my-project/MyProject-AttendanceMiniprogram/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/my-project/MyProject-AttendanceMiniprogram/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <summary type="html"><![CDATA[实验室出入管理小程序]]></summary>
     <content type="html"><![CDATA[<div align=center><img src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/logo.png"/></div>
 <p>原文链接</p>
@@ -22541,7 +22541,7 @@ pipe.execute<span>(</span><span>)</span>
     <title type="html">Javaweb大学活动管理系统</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/my-project/MyProject-JavaWeb-ActivitySystem/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/my-project/MyProject-JavaWeb-ActivitySystem/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <summary type="html"><![CDATA[Javaweb大学活动管理系统]]></summary>
     <content type="html"><![CDATA[<p><a href="./MyProject-JavaWeb-ActivitySystem.html"><img src="./images/My-Project/activity_system.png" alt="" /></a></p>
 <blockquote>
@@ -22566,7 +22566,7 @@ pipe.execute<span>(</span><span>)</span>
     <title type="html">JavaSwing-超市系统</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/my-project/MyProject-SupermarketSystem/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/my-project/MyProject-SupermarketSystem/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <summary type="html"><![CDATA[JavaSwing-超市系统]]></summary>
     <content type="html"><![CDATA[<div align=center><img src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-SupermarketSystem/images/logo.png"/></div>
 <h2 id="_1-链接"> 1. 链接</h2>
@@ -22705,7 +22705,7 @@ pipe.execute<span>(</span><span>)</span>
     <title type="html">My Project</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/my-project/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/my-project/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="attendance-miniprogram"> Attendance Miniprogram <MyBadge text="2020中国微信官方小程序大赛华南赛区二等奖" type="tip"  vertical="top"/></h2>
 <p><a href="./MyProject-AttendanceMiniprogram.html"><img src="./images/My-Project/attendance_miniprogram.png" alt="" /></a></p>
 <div><p>Attendance Miniprogram</p>
@@ -22771,7 +22771,7 @@ pipe.execute<span>(</span><span>)</span>
     <title type="html">Mybatis基础笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/mybatis/Mybatis-basic-notes/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/mybatis/Mybatis-basic-notes/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<p>基础面试</p>
 ]]></content>
     <author>
@@ -22787,7 +22787,7 @@ pipe.execute<span>(</span><span>)</span>
     <title type="html">Mybatis语法笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/mybatis/Mybatis-grammar-notes/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/mybatis/Mybatis-grammar-notes/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="select"> SELECT</h2>
 <h2 id="insert"> INSERT</h2>
 <p>插入后获取主键，<a href="https://blog.csdn.net/qq_36614559/article/details/80257228?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param" target="_blank" rel="noopener noreferrer">参考</a></p>
@@ -22807,7 +22807,7 @@ pipe.execute<span>(</span><span>)</span>
     <title type="html">Mybatis逆向工程&amp;Example类使用</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/mybatis/Mybatis-reverse-project&amp;Example-use/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/mybatis/Mybatis-reverse-project&amp;Example-use/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="_1-参考"> 1. 参考</h2>
 <blockquote>
 <ul>
@@ -23124,14 +23124,14 @@ pipe.execute<span>(</span><span>)</span>
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-01-18T12:47:30.000Z</published>
+    <published>2022-01-18T16:15:26.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">Mybatis-Plus基础笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/mybatis/MybatisPlus-notes/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/mybatis/MybatisPlus-notes/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -24071,7 +24071,7 @@ sysUserMapper<span>.</span><span>insert</span><span>(</span>sysUser<span>)</span
     <title type="html">Nginx-动静分离</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/nginx/Nginx-Dynamic&amp;static/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/nginx/Nginx-Dynamic&amp;static/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <h2 id="介绍"> 介绍</h2>
 <p><img src="./images/Nginx-Dynamic&static/dynamic&static.jpg" alt="什么是动静分离" /></p>
@@ -24153,7 +24153,7 @@ location /img <span>{</span>
     <title type="html">Nginx-负载均衡</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/nginx/Nginx-LoadBalance/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/nginx/Nginx-LoadBalance/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -24292,7 +24292,7 @@ location / <span>{</span>
     <title type="html">Nginx-反向代理</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/nginx/Nginx-ReverseProxy/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/nginx/Nginx-ReverseProxy/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -24428,7 +24428,7 @@ location ~* \.(gif/jpg/png)$ <span>{</span>
     <title type="html">Nginx基础笔记和安装配置</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/nginx/Nginx-basicNote&amp;deployment/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/nginx/Nginx-basicNote&amp;deployment/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -25241,7 +25241,7 @@ server <span>{</span>
     <title type="html">Nginx学习目录</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/nginx/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/nginx/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -25284,7 +25284,7 @@ server <span>{</span>
     <title type="html">修改Host以访问Github</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/other/Modify-Host-to-access-Github/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/other/Modify-Host-to-access-Github/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <summary type="html"><![CDATA[修改Host以访问Github]]></summary>
     <content type="html"><![CDATA[<p>修改文件：C:\Windows\System32\drivers\etc\HOST</p>
 <div><pre><code># Github
@@ -25318,35 +25318,35 @@ server <span>{</span>
     <title type="html">My Project</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/project/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/project/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <author>
       <name>Draco</name>
     </author>
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-01-18T12:47:30.000Z</published>
+    <published>2022-01-18T16:15:26.000Z</published>
     <rights>true</rights>
   </entry>
   <entry>
     <title type="html">Blog Home</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <author>
       <name>Draco</name>
     </author>
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-01-18T12:47:30.000Z</published>
+    <published>2022-01-18T16:15:26.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">Slide page</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/slides/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/slides/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[
 <i>Not supported content</i>]]></content>
     <author>
@@ -25355,14 +25355,14 @@ server <span>{</span>
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-01-18T12:47:30.000Z</published>
+    <published>2022-01-18T16:15:26.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">HttpServletrequest与HttpServletResponse</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/HttpServletrequest&amp;HttpServletResponse/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/HttpServletrequest&amp;HttpServletResponse/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <blockquote>
 <ul>
@@ -25544,7 +25544,7 @@ server <span>{</span>
     <title type="html">Spring面试题</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/Spring-Interview/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/Spring-Interview/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="bean"> bean</h2>
 <h3 id="bean生命周期"> bean生命周期</h3>
 <h3 id="bean作用域"> bean作用域</h3>
@@ -25670,7 +25670,7 @@ server <span>{</span>
     <title type="html">Spring-RestTemplate</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/Spring-RestTemplate/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/Spring-RestTemplate/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="spring-resttemplate"> Spring-RestTemplate</h2>
 <div><pre><code><span>@Configuration</span>
 <span>public</span> <span>class</span> <span>ApplicationContextConfig</span> <span>{</span>
@@ -25697,7 +25697,7 @@ server <span>{</span>
     <title type="html">Spring注解</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/Spring-annotation/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/Spring-annotation/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="spring注解"> Spring注解</h2>
 <p>注解本质是一个继承了 Annotation的特殊接口,其具体实现类是Java运行时生成的动态代理类。我们通过反射获取注解时,返回的是Java运行时生成的动态代理对象。通过代理对象调用自定义注解的方法,会最终调用AnnotationInvocationHandler的 invoke方法。该方法会从 membervalues这个Map中索引出对应的值。而 membervalues的来源是Java常量池</p>
 <p>Controller类使用继承@Component注解的方法，将其以单例的形式放入spring容器，如果仔细看的话会发现每个注解里面都有一个默认的value()方法，它的作用是为当前的注解声明一个名字，一般默认为类名，然后spring会通过配置文件中的context:component-scan的配置，进行如下操作：</p>
@@ -26101,74 +26101,10 @@ server <span>{</span>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
-    <title type="html">Spring错误&amp;坑记录</title>
-    <id>https://vuepress-theme-hope-demo.mrhope.site/spring/Spring-error&amp;hole/</id>
-    <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/Spring-error&amp;hole/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="springboot相关"> SpringBoot相关</h2>
-<h3 id="解决springboot无法注入service的原因之一testcontroller-required-a-bean-of-type-com-yifeng-study-service-userservice-that-could-not-be-found-报错"> 解决SpringBoot无法注入service的原因之一TestController required a bean of type ‘com.yifeng.study.service.UserService’ that could not be found.报错</h3>
-<p>参考</p>
-<div><p>Tips</p>
-<p><a href="https://blog.csdn.net/xzxToney/article/details/105248704?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1.control" target="_blank" rel="noopener noreferrer">参考</a></p>
-</div>
-<h4 id="原因"> 原因</h4>
-<p>如果此时service上已经加了注解<code>@Service</code>或者没有其他基本问题，那么可能是<strong>主启动类与被扫描的文件夹不在同一路径</strong>下，所以扫描不到。</p>
-<p><img src="./images/Spring-error&hole/springboot_error_1-1.png" alt="" /></p>
-<h4 id="解决办法"> 解决办法</h4>
-<p>将启动器类放在与扫描包同级即可，一般是和controller包的上一层的包的同一级。例如</p>
-<blockquote>
-<p>我在这里多了一层web,将主启动类放入study文件夹下，和web同级即可。</p>
-</blockquote>
-<p><img src="./images/Spring-error&hole/springboot_error_1-2.png" alt="" /></p>
-<h3 id="将枚举类型输出时转换为json类型"> 将枚举类型输出时转换为JSON类型</h3>
-<p>加上注解</p>
-<div><pre><code><span>@JsonFormat</span><span>(</span>shape <span>=</span> <span>JsonFormat<span>.</span>Shape</span><span>.</span>OBJECT<span>)</span>
-</code></pre>
-<div><span>1</span><br></div></div><h3 id="security的key最短四个字符"> security的key最短四个字符</h3>
-<p>报错</p>
-<p>secret key byte array cannot be null or empty.</p>
-<h3 id="不自动注入datasource而启动springboot"> 不自动注入dataSource而启动Springboot</h3>
-<p>参考：<a href="https://blog.csdn.net/qq_25811101/article/details/109410072" target="_blank" rel="noopener noreferrer">@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)不生效</a></p>
-<p>方案一：在启动方法添加exclude</p>
-<div><pre><code><span>@SpringBootApplication</span><span>(</span>exclude <span>=</span> <span>{</span><span>DataSourceAutoConfiguration</span><span>.</span><span>class</span><span>,</span>
-    <span>DataSourceTransactionManagerAutoConfiguration</span><span>.</span><span>class</span><span>,</span>
-    <span>DruidDataSourceAutoConfigure</span><span>.</span><span>class</span><span>,</span>
-    <span>HibernateJpaAutoConfiguration</span><span>.</span><span>class</span><span>}</span><span>)</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>方案二：在yml文件中配置</p>
-<div><pre><code><span>spring</span><span>:</span>
-  <span>application</span><span>:</span>
-    <span>name</span><span>:</span> order
-  <span>autoconfigure</span><span>:</span>
-    <span>exclude</span><span>:</span> org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h2 id="gradle"> Gradle</h2>
-<h3 id="no-cached-version-of-com-android-tools-build-gradle-3-6-2-available-for-offline-mode"> No cached version of com.android.tools.build:gradle:3.6.2 available for offline mode</h3>
-<p>参考：<a href="https://www.cnblogs.com/flay/p/12641381.html" target="_blank" rel="noopener noreferrer">No cached version of com.android.tools.build:gradle:3.6.2 available for offlin 解决办法</a></p>
-<p>在IDEA中点击右边Gradle设为非无线模式</p>
-<h2 id="mybatisplus"> MybatisPlus</h2>
-<h3 id="myabtisplus执行方法异常-cause-java-lang-indexoutofboundsexception-index-22-size-22"> myabtisplus执行方法异常 Cause: java.lang.IndexOutOfBoundsException: Index: 22, Size: 22</h3>
-<p>调用自带方法  selectById()</p>
-<h3 id="the-error-occurred-while-handling-results"> The error occurred while handling results</h3>
-<h3 id="cause-java-lang-indexoutofboundsexception-index-22-size-22"> Cause: java.lang.IndexOutOfBoundsException: Index: 22, Size: 22</h3>
-<p>解决办法
-方法一：去除@Builder注解。</p>
-<p>方法二：增加构造函数，如Lombok提供的@NoArgsConstructor、@AllArgsConstructor。</p>
-]]></content>
-    <author>
-      <name>Draco</name>
-    </author>
-    <contributor>
-      <name>Draco</name>
-    </contributor>
-    <published>2021-01-13T12:00:37.000Z</published>
-    <rights>Copyright by Draco</rights>
-  </entry>
-  <entry>
     <title type="html">Spring基础笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/Spring/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/Spring/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>Tips</p>
 <ul>
@@ -26723,14 +26659,78 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-01-18T12:47:30.000Z</published>
+    <published>2022-01-18T16:15:26.000Z</published>
+    <rights>Copyright by Draco</rights>
+  </entry>
+  <entry>
+    <title type="html">Spring错误&amp;坑记录</title>
+    <id>https://vuepress-theme-hope-demo.mrhope.site/spring/Spring-error&amp;hole/</id>
+    <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/Spring-error&amp;hole/"/>
+    <updated>2022-01-18T16:15:26.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="springboot相关"> SpringBoot相关</h2>
+<h3 id="解决springboot无法注入service的原因之一testcontroller-required-a-bean-of-type-com-yifeng-study-service-userservice-that-could-not-be-found-报错"> 解决SpringBoot无法注入service的原因之一TestController required a bean of type ‘com.yifeng.study.service.UserService’ that could not be found.报错</h3>
+<p>参考</p>
+<div><p>Tips</p>
+<p><a href="https://blog.csdn.net/xzxToney/article/details/105248704?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1.control" target="_blank" rel="noopener noreferrer">参考</a></p>
+</div>
+<h4 id="原因"> 原因</h4>
+<p>如果此时service上已经加了注解<code>@Service</code>或者没有其他基本问题，那么可能是<strong>主启动类与被扫描的文件夹不在同一路径</strong>下，所以扫描不到。</p>
+<p><img src="./images/Spring-error&hole/springboot_error_1-1.png" alt="" /></p>
+<h4 id="解决办法"> 解决办法</h4>
+<p>将启动器类放在与扫描包同级即可，一般是和controller包的上一层的包的同一级。例如</p>
+<blockquote>
+<p>我在这里多了一层web,将主启动类放入study文件夹下，和web同级即可。</p>
+</blockquote>
+<p><img src="./images/Spring-error&hole/springboot_error_1-2.png" alt="" /></p>
+<h3 id="将枚举类型输出时转换为json类型"> 将枚举类型输出时转换为JSON类型</h3>
+<p>加上注解</p>
+<div><pre><code><span>@JsonFormat</span><span>(</span>shape <span>=</span> <span>JsonFormat<span>.</span>Shape</span><span>.</span>OBJECT<span>)</span>
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="security的key最短四个字符"> security的key最短四个字符</h3>
+<p>报错</p>
+<p>secret key byte array cannot be null or empty.</p>
+<h3 id="不自动注入datasource而启动springboot"> 不自动注入dataSource而启动Springboot</h3>
+<p>参考：<a href="https://blog.csdn.net/qq_25811101/article/details/109410072" target="_blank" rel="noopener noreferrer">@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)不生效</a></p>
+<p>方案一：在启动方法添加exclude</p>
+<div><pre><code><span>@SpringBootApplication</span><span>(</span>exclude <span>=</span> <span>{</span><span>DataSourceAutoConfiguration</span><span>.</span><span>class</span><span>,</span>
+    <span>DataSourceTransactionManagerAutoConfiguration</span><span>.</span><span>class</span><span>,</span>
+    <span>DruidDataSourceAutoConfigure</span><span>.</span><span>class</span><span>,</span>
+    <span>HibernateJpaAutoConfiguration</span><span>.</span><span>class</span><span>}</span><span>)</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>方案二：在yml文件中配置</p>
+<div><pre><code><span>spring</span><span>:</span>
+  <span>application</span><span>:</span>
+    <span>name</span><span>:</span> order
+  <span>autoconfigure</span><span>:</span>
+    <span>exclude</span><span>:</span> org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h2 id="gradle"> Gradle</h2>
+<h3 id="no-cached-version-of-com-android-tools-build-gradle-3-6-2-available-for-offline-mode"> No cached version of com.android.tools.build:gradle:3.6.2 available for offline mode</h3>
+<p>参考：<a href="https://www.cnblogs.com/flay/p/12641381.html" target="_blank" rel="noopener noreferrer">No cached version of com.android.tools.build:gradle:3.6.2 available for offlin 解决办法</a></p>
+<p>在IDEA中点击右边Gradle设为非无线模式</p>
+<h2 id="mybatisplus"> MybatisPlus</h2>
+<h3 id="myabtisplus执行方法异常-cause-java-lang-indexoutofboundsexception-index-22-size-22"> myabtisplus执行方法异常 Cause: java.lang.IndexOutOfBoundsException: Index: 22, Size: 22</h3>
+<p>调用自带方法  selectById()</p>
+<h3 id="the-error-occurred-while-handling-results"> The error occurred while handling results</h3>
+<h3 id="cause-java-lang-indexoutofboundsexception-index-22-size-22"> Cause: java.lang.IndexOutOfBoundsException: Index: 22, Size: 22</h3>
+<p>解决办法
+方法一：去除@Builder注解。</p>
+<p>方法二：增加构造函数，如Lombok提供的@NoArgsConstructor、@AllArgsConstructor。</p>
+]]></content>
+    <author>
+      <name>Draco</name>
+    </author>
+    <contributor>
+      <name>Draco</name>
+    </contributor>
+    <published>2021-01-13T12:00:37.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">Maven笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/maven/Maven/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/maven/Maven/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>Tips</p>
 <ul>
@@ -26864,7 +26864,7 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
     <title type="html">EasyExcel导入导出Excel</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/EasyExcel-use/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/EasyExcel-use/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <blockquote>
 <ul>
@@ -27011,10 +27011,141 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
+    <title type="html">JWT认证原理(更新中)</title>
+    <id>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/JWT-Authorization/</id>
+    <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/JWT-Authorization/"/>
+    <updated>2022-01-18T16:15:26.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
+<div><p>参考</p>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/86937325" target="_blank" rel="noopener noreferrer">五分钟带你了解啥是JWT</a></li>
+<li><a href="https://www.bilibili.com/video/BV1i54y1m7cP" target="_blank" rel="noopener noreferrer">【编程不良人】JWT认证原理、流程整合springboot实战应用,前后端分离认证的解决方案!</a></li>
+</ul>
+</div>
+<h2 id="介绍"> 介绍</h2>
+<h3 id="是什么"> 是什么</h3>
+<div><p>是什么</p>
+<p>JSON Web Token (JWT)是一个开放标准(RFC 7519)，它定义了一种紧凑的、自包含的方式，用于作为JSON对象在各方之间安全地传输信息。该信息可以被验证和信任，因为它是数字签名的。</p>
+</div>
+<h3 id="使用场景"> 使用场景</h3>
+<div><p>使用场景</p>
+<ul>
+<li>Authorization (授权) : 这是使用JWT的最常见场景。一旦用户登录，后续每个请求都将包含JWT，允许用户访问该令牌允许的路由、服务和资源。单点登录是现在广泛使用的JWT的一个特性，因为它的开销很小，并且可以轻松地跨域使用。</li>
+<li>Information Exchange (信息交换) : 对于安全的在各方之间传输信息而言，JSON Web Tokens无疑是一种很好的方式。因为JWT可以被签名，例如，用公钥/私钥对，你可以确定发送人就是它们所说的那个人。另外，由于签名是使用头和有效负载计算的，您还可以验证内容没有被篡改。</li>
+</ul>
+</div>
+<h3 id="结构"> 结构</h3>
+<div><p>结构</p>
+<ul>
+<li>Header</li>
+<li>Payload</li>
+<li>Signature</li>
+</ul>
+<p>因此，一个典型的JWT看起来是这个样子的：</p>
+<blockquote>
+<p>xxxxx.yyyyy.zzzzz</p>
+</blockquote>
+</div>
+<p><strong>Header</strong></p>
+<p>典型的由两部分组成：token的类型（“JWT”）和算法名称（比如：HMAC SHA256或者RSA等等）。</p>
+<p>例如</p>
+<div><pre><code><span>{</span>
+    <span>'alg'</span><span>:</span> <span>"HS256"</span><span>,</span>
+    <span>'typ'</span><span>:</span> <span>"JWT"</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>然后，用Base64对这个JSON编码就得到JWT的第一部分，只是翻译回原来的样子，并不是<code>解密</code></p>
+<p><strong>Payload</strong></p>
+<p>Payload JWT的第二部分是payload，它包含声明（要求）。声明是关于实体(通常是用户)和其他数据的声明。声明有三种类型: registered, public 和 private。</p>
+<div><p>Info</p>
+<ul>
+<li>Registered claims : 这里有一组预定义的声明，它们不是强制的，但是推荐。比如：iss (issuer), exp (expiration time), sub (subject), aud (audience)等。</li>
+<li>Public claims : 可以随意定义。</li>
+<li>Private claims : 用于在同意使用它们的各方之间共享信息，并且不是注册的或公开的声明。 下面是一个例子：</li>
+</ul>
+</div>
+<p>也可以用Base64编码。注意，不要在JWT的payload或header中放置敏感信息，除非它们是加密的。</p>
+<p><strong>Signature</strong></p>
+<blockquote>
+<p>为了得到签名部分，你必须有编码过的header、编码过的payload、一个秘钥，签名算法是header中指定的那个，然对它们签名即可。</p>
+</blockquote>
+<p>例如</p>
+<blockquote>
+<p>HMACSHA256(base64UrlEncode(header) + &quot;.&quot; + base64UrlEncode(payload), secret)</p>
+</blockquote>
+<p>签名是用于验证消息在传递过程中有没有被更改，并且，对于使用私钥签名的token，它还可以验证JWT的发送方是否为它所称的发送方。</p>
+<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/JWT-Authorization/signature.jpg" alt="signature" /></p>
+<p>Signature需要使用编码后的header和payload以及我们提供的一个密钥，最后使用header中指定的签名算法（HS256）进行签名。签名的作用是保证JWT没有被篡改过</p>
+<h3 id="如何工作"> 如何工作</h3>
+<p>在认证的时候，当用户用他们的凭证成功登录以后，一个<code>JSON Web Token</code>将会被返回。此后，token就是用户凭证了，你必须非常小心以防止出现安全问题。一般而言，你保存令牌的时候不应该超过你所需要它的时间。</p>
+<p>无论何时用户想要访问受保护的路由或者资源的时候，用户代理（通常是浏览器）都应该带上JWT，典型的，通常放在<code>Authorization header</code>中，用Bearer schema。</p>
+<p>header应该看起来是这样的：</p>
+<blockquote>
+<p>Authorization: Bearer</p>
+</blockquote>
+<p>服务器上的受保护的路由将会检查Authorization header中的JWT是否有效，如果有效，则用户可以访问受保护的资源。如果JWT包含足够多的必需的数据，那么就可以减少对某些操作的数据库查询的需要，尽管可能并不总是如此。</p>
+<p>如果token是在授权头（Authorization header）中发送的，那么跨源资源共享(CORS)将不会成为问题，因为它不使用cookie。</p>
+<h3 id="其他"> 其他</h3>
+<div><p>参考</p>
+<p><a href="https://zhuanlan.zhihu.com/p/86937325" target="_blank" rel="noopener noreferrer">五分钟带你了解啥是JWT</a></p>
+</div>
+<h2 id="基于token的身份认证与基于服务器的身份认证"> 基于Token的身份认证与基于服务器的身份认证</h2>
+<h3 id="基于服务器的身份认证"> 基于服务器的身份认证</h3>
+<p>在讨论基于Token的身份认证是如何工作的以及它的好处之前，我们先来看一下以前我们是怎么做的：</p>
+<blockquote>
+<p>HTTP协议是无状态的，也就是说，如果我们已经认证了一个用户，那么他下一次请求的时候，服务器不知道我是谁，我们必须再次认证</p>
+</blockquote>
+<p>传统的做法是将已经认证过的用户信息存储在服务器上，比如<code>Session</code>。用户下次请求的时候带着<code>Session ID</code>，然后服务器以此检查用户是否认证过。</p>
+<p>这种基于服务器的身份认证方式存在一些问题：</p>
+<div><p>Info</p>
+<ul>
+<li><strong>Sessions</strong> : 每次用户认证通过以后，服务器需要创建一条记录保存用户信息，通常是在内存中，随着认证通过的用户越来越多，服务器的在这里的开销就会越来越大。</li>
+<li><strong>Scalability</strong> : 由于Session是在内存中的，这就带来一些扩展性的问题。</li>
+<li><strong>CORS</strong> : 当我们想要扩展我们的应用，让我们的数据被多个移动设备使用时，我们必须考虑跨资源共享问题。当使用AJAX调用从另一个域名下获取资源时，我们可能会遇到禁止请求的问题。</li>
+<li><strong><a href="https://www.cnblogs.com/hyddd/archive/2009/04/09/1432744.html" target="_blank" rel="noopener noreferrer">CSRF</a></strong> : 用户很容易受到CSRF攻击。CSRF（Cross-site request forgery），中文名称：跨站请求伪造，也被称为：one click attack/session riding，缩写为：CSRF/XSRF。</li>
+</ul>
+</div>
+<h3 id="jwt与session的差异"> JWT与Session的差异</h3>
+<p>相同点是，它们都是存储用户信息；然而，<code>Session</code>是在<code>服务器端</code>的，而<code>JWT</code>是在<code>客户端</code>的。</p>
+<ul>
+<li><code>Session</code>方式存储用户信息的最大问题在于要<code>占用大量服务器内存</code>，增加服务器的开销。而<code>JWT</code>方式将用户状态分散到了客户端中，可以明显减轻服务端的内存压力。</li>
+<li><code>Session</code>的状态是存储在服务器端，客户端只有<code>session id</code>；而<code>Token</code>的状态是存储在<code>客户端</code>。</li>
+</ul>
+<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/JWT-Authorization/JWT&Session.jpg" alt="" /></p>
+<h3 id="基于token的身份认证是如何工作的"> 基于Token的身份认证是如何工作的</h3>
+<p>基于Token的身份认证是无状态的，服务器或者Session中不会存储任何用户信息。</p>
+<p>没有会话信息意味着应用程序可以根据需要扩展和添加更多的机器，而不必担心用户登录的位置。</p>
+<p>虽然这一实现可能会有所不同，但其主要流程如下：</p>
+<p>-用户携带用户名和密码请求访问 -服务器校验用户凭据 -应用提供一个token给客户端 -客户端存储token，并且在随后的每一次请求中都带着它 -服务器校验token并返回数据</p>
+<p>注意：</p>
+<p>-每一次请求都需要token -Token应该放在请求header中 -我们还需要将服务器设置为接受来自所有域的请求，用Access-Control-Allow-Origin: *</p>
+<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/JWT-Authorization/JWT_User_Authorization.jpg" alt="JWT用户认证" /></p>
+<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/JWT-Authorization/JWT_User_Authorization_2.jpg" alt="JWT用户认证" /></p>
+<h3 id="用token的好处"> 用Token的好处</h3>
+<ul>
+<li>无状态和可扩展性：Tokens存储在客户端。完全无状态，可扩展。我们的负载均衡器可以将用户传递到任意服务器，因为在任何地方都没有状态或会话信息。</li>
+<li>安全：Token不是Cookie。（The token, not a cookie.）每次请求的时候Token都会被发送。而且，由于没有Cookie被发送，还有助于防止<code>CSRF</code>攻击。即使在你的实现中将token存储到客户端的Cookie中，这个Cookie也只是一种存储机制，而非身份认证机制。没有基于会话的信息可以操作，因为我们没有会话!</li>
+<li>还有一点，token在一段时间以后会过期，这个时候用户需要重新登录。这有助于我们保持安全。还有一个概念叫token撤销，它允许我们根据相同的授权许可使特定的token甚至一组token无效。</li>
+</ul>
+<h3 id="jwt与oauth的区别"> JWT与OAuth的区别</h3>
+<p>OAuth2是一种授权框架 ，JWT是一种认证协议 -无论使用哪种方式切记用HTTPS来保证数据的安全性</p>
+<p>OAuth2用在使用第三方账号登录的情况(比如使用weibo, qq, github登录某个app)，而JWT是用在前后端分离, 需要简单的对后台API进行保护时使用。</p>
+<h2 id="springboot整合jwt"> SpringBoot整合JWT</h2>
+]]></content>
+    <author>
+      <name>Draco</name>
+    </author>
+    <contributor>
+      <name>Draco</name>
+    </contributor>
+    <published>2021-01-17T11:10:39.000Z</published>
+    <rights>Copyright by Draco</rights>
+  </entry>
+  <entry>
     <title type="html">IDEA初始化SpringBoot项目+逆向工程+配置</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/IDEA-Initial-Springboot+reverse-project+Configuration/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/IDEA-Initial-Springboot+reverse-project+Configuration/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="_1-使用阿里云镜像作为初始源创建"> 1. 使用阿里云镜像作为初始源创建</h2>
 <ol>
 <li>选择Spring initializr</li>
@@ -27605,141 +27736,10 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
-    <title type="html">JWT认证原理(更新中)</title>
-    <id>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/JWT-Authorization/</id>
-    <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/JWT-Authorization/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
-<div><p>参考</p>
-<ul>
-<li><a href="https://zhuanlan.zhihu.com/p/86937325" target="_blank" rel="noopener noreferrer">五分钟带你了解啥是JWT</a></li>
-<li><a href="https://www.bilibili.com/video/BV1i54y1m7cP" target="_blank" rel="noopener noreferrer">【编程不良人】JWT认证原理、流程整合springboot实战应用,前后端分离认证的解决方案!</a></li>
-</ul>
-</div>
-<h2 id="介绍"> 介绍</h2>
-<h3 id="是什么"> 是什么</h3>
-<div><p>是什么</p>
-<p>JSON Web Token (JWT)是一个开放标准(RFC 7519)，它定义了一种紧凑的、自包含的方式，用于作为JSON对象在各方之间安全地传输信息。该信息可以被验证和信任，因为它是数字签名的。</p>
-</div>
-<h3 id="使用场景"> 使用场景</h3>
-<div><p>使用场景</p>
-<ul>
-<li>Authorization (授权) : 这是使用JWT的最常见场景。一旦用户登录，后续每个请求都将包含JWT，允许用户访问该令牌允许的路由、服务和资源。单点登录是现在广泛使用的JWT的一个特性，因为它的开销很小，并且可以轻松地跨域使用。</li>
-<li>Information Exchange (信息交换) : 对于安全的在各方之间传输信息而言，JSON Web Tokens无疑是一种很好的方式。因为JWT可以被签名，例如，用公钥/私钥对，你可以确定发送人就是它们所说的那个人。另外，由于签名是使用头和有效负载计算的，您还可以验证内容没有被篡改。</li>
-</ul>
-</div>
-<h3 id="结构"> 结构</h3>
-<div><p>结构</p>
-<ul>
-<li>Header</li>
-<li>Payload</li>
-<li>Signature</li>
-</ul>
-<p>因此，一个典型的JWT看起来是这个样子的：</p>
-<blockquote>
-<p>xxxxx.yyyyy.zzzzz</p>
-</blockquote>
-</div>
-<p><strong>Header</strong></p>
-<p>典型的由两部分组成：token的类型（“JWT”）和算法名称（比如：HMAC SHA256或者RSA等等）。</p>
-<p>例如</p>
-<div><pre><code><span>{</span>
-    <span>'alg'</span><span>:</span> <span>"HS256"</span><span>,</span>
-    <span>'typ'</span><span>:</span> <span>"JWT"</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>然后，用Base64对这个JSON编码就得到JWT的第一部分，只是翻译回原来的样子，并不是<code>解密</code></p>
-<p><strong>Payload</strong></p>
-<p>Payload JWT的第二部分是payload，它包含声明（要求）。声明是关于实体(通常是用户)和其他数据的声明。声明有三种类型: registered, public 和 private。</p>
-<div><p>Info</p>
-<ul>
-<li>Registered claims : 这里有一组预定义的声明，它们不是强制的，但是推荐。比如：iss (issuer), exp (expiration time), sub (subject), aud (audience)等。</li>
-<li>Public claims : 可以随意定义。</li>
-<li>Private claims : 用于在同意使用它们的各方之间共享信息，并且不是注册的或公开的声明。 下面是一个例子：</li>
-</ul>
-</div>
-<p>也可以用Base64编码。注意，不要在JWT的payload或header中放置敏感信息，除非它们是加密的。</p>
-<p><strong>Signature</strong></p>
-<blockquote>
-<p>为了得到签名部分，你必须有编码过的header、编码过的payload、一个秘钥，签名算法是header中指定的那个，然对它们签名即可。</p>
-</blockquote>
-<p>例如</p>
-<blockquote>
-<p>HMACSHA256(base64UrlEncode(header) + &quot;.&quot; + base64UrlEncode(payload), secret)</p>
-</blockquote>
-<p>签名是用于验证消息在传递过程中有没有被更改，并且，对于使用私钥签名的token，它还可以验证JWT的发送方是否为它所称的发送方。</p>
-<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/JWT-Authorization/signature.jpg" alt="signature" /></p>
-<p>Signature需要使用编码后的header和payload以及我们提供的一个密钥，最后使用header中指定的签名算法（HS256）进行签名。签名的作用是保证JWT没有被篡改过</p>
-<h3 id="如何工作"> 如何工作</h3>
-<p>在认证的时候，当用户用他们的凭证成功登录以后，一个<code>JSON Web Token</code>将会被返回。此后，token就是用户凭证了，你必须非常小心以防止出现安全问题。一般而言，你保存令牌的时候不应该超过你所需要它的时间。</p>
-<p>无论何时用户想要访问受保护的路由或者资源的时候，用户代理（通常是浏览器）都应该带上JWT，典型的，通常放在<code>Authorization header</code>中，用Bearer schema。</p>
-<p>header应该看起来是这样的：</p>
-<blockquote>
-<p>Authorization: Bearer</p>
-</blockquote>
-<p>服务器上的受保护的路由将会检查Authorization header中的JWT是否有效，如果有效，则用户可以访问受保护的资源。如果JWT包含足够多的必需的数据，那么就可以减少对某些操作的数据库查询的需要，尽管可能并不总是如此。</p>
-<p>如果token是在授权头（Authorization header）中发送的，那么跨源资源共享(CORS)将不会成为问题，因为它不使用cookie。</p>
-<h3 id="其他"> 其他</h3>
-<div><p>参考</p>
-<p><a href="https://zhuanlan.zhihu.com/p/86937325" target="_blank" rel="noopener noreferrer">五分钟带你了解啥是JWT</a></p>
-</div>
-<h2 id="基于token的身份认证与基于服务器的身份认证"> 基于Token的身份认证与基于服务器的身份认证</h2>
-<h3 id="基于服务器的身份认证"> 基于服务器的身份认证</h3>
-<p>在讨论基于Token的身份认证是如何工作的以及它的好处之前，我们先来看一下以前我们是怎么做的：</p>
-<blockquote>
-<p>HTTP协议是无状态的，也就是说，如果我们已经认证了一个用户，那么他下一次请求的时候，服务器不知道我是谁，我们必须再次认证</p>
-</blockquote>
-<p>传统的做法是将已经认证过的用户信息存储在服务器上，比如<code>Session</code>。用户下次请求的时候带着<code>Session ID</code>，然后服务器以此检查用户是否认证过。</p>
-<p>这种基于服务器的身份认证方式存在一些问题：</p>
-<div><p>Info</p>
-<ul>
-<li><strong>Sessions</strong> : 每次用户认证通过以后，服务器需要创建一条记录保存用户信息，通常是在内存中，随着认证通过的用户越来越多，服务器的在这里的开销就会越来越大。</li>
-<li><strong>Scalability</strong> : 由于Session是在内存中的，这就带来一些扩展性的问题。</li>
-<li><strong>CORS</strong> : 当我们想要扩展我们的应用，让我们的数据被多个移动设备使用时，我们必须考虑跨资源共享问题。当使用AJAX调用从另一个域名下获取资源时，我们可能会遇到禁止请求的问题。</li>
-<li><strong><a href="https://www.cnblogs.com/hyddd/archive/2009/04/09/1432744.html" target="_blank" rel="noopener noreferrer">CSRF</a></strong> : 用户很容易受到CSRF攻击。CSRF（Cross-site request forgery），中文名称：跨站请求伪造，也被称为：one click attack/session riding，缩写为：CSRF/XSRF。</li>
-</ul>
-</div>
-<h3 id="jwt与session的差异"> JWT与Session的差异</h3>
-<p>相同点是，它们都是存储用户信息；然而，<code>Session</code>是在<code>服务器端</code>的，而<code>JWT</code>是在<code>客户端</code>的。</p>
-<ul>
-<li><code>Session</code>方式存储用户信息的最大问题在于要<code>占用大量服务器内存</code>，增加服务器的开销。而<code>JWT</code>方式将用户状态分散到了客户端中，可以明显减轻服务端的内存压力。</li>
-<li><code>Session</code>的状态是存储在服务器端，客户端只有<code>session id</code>；而<code>Token</code>的状态是存储在<code>客户端</code>。</li>
-</ul>
-<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/JWT-Authorization/JWT&Session.jpg" alt="" /></p>
-<h3 id="基于token的身份认证是如何工作的"> 基于Token的身份认证是如何工作的</h3>
-<p>基于Token的身份认证是无状态的，服务器或者Session中不会存储任何用户信息。</p>
-<p>没有会话信息意味着应用程序可以根据需要扩展和添加更多的机器，而不必担心用户登录的位置。</p>
-<p>虽然这一实现可能会有所不同，但其主要流程如下：</p>
-<p>-用户携带用户名和密码请求访问 -服务器校验用户凭据 -应用提供一个token给客户端 -客户端存储token，并且在随后的每一次请求中都带着它 -服务器校验token并返回数据</p>
-<p>注意：</p>
-<p>-每一次请求都需要token -Token应该放在请求header中 -我们还需要将服务器设置为接受来自所有域的请求，用Access-Control-Allow-Origin: *</p>
-<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/JWT-Authorization/JWT_User_Authorization.jpg" alt="JWT用户认证" /></p>
-<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/JWT-Authorization/JWT_User_Authorization_2.jpg" alt="JWT用户认证" /></p>
-<h3 id="用token的好处"> 用Token的好处</h3>
-<ul>
-<li>无状态和可扩展性：Tokens存储在客户端。完全无状态，可扩展。我们的负载均衡器可以将用户传递到任意服务器，因为在任何地方都没有状态或会话信息。</li>
-<li>安全：Token不是Cookie。（The token, not a cookie.）每次请求的时候Token都会被发送。而且，由于没有Cookie被发送，还有助于防止<code>CSRF</code>攻击。即使在你的实现中将token存储到客户端的Cookie中，这个Cookie也只是一种存储机制，而非身份认证机制。没有基于会话的信息可以操作，因为我们没有会话!</li>
-<li>还有一点，token在一段时间以后会过期，这个时候用户需要重新登录。这有助于我们保持安全。还有一个概念叫token撤销，它允许我们根据相同的授权许可使特定的token甚至一组token无效。</li>
-</ul>
-<h3 id="jwt与oauth的区别"> JWT与OAuth的区别</h3>
-<p>OAuth2是一种授权框架 ，JWT是一种认证协议 -无论使用哪种方式切记用HTTPS来保证数据的安全性</p>
-<p>OAuth2用在使用第三方账号登录的情况(比如使用weibo, qq, github登录某个app)，而JWT是用在前后端分离, 需要简单的对后台API进行保护时使用。</p>
-<h2 id="springboot整合jwt"> SpringBoot整合JWT</h2>
-]]></content>
-    <author>
-      <name>Draco</name>
-    </author>
-    <contributor>
-      <name>Draco</name>
-    </contributor>
-    <published>2021-01-17T11:10:39.000Z</published>
-    <rights>Copyright by Draco</rights>
-  </entry>
-  <entry>
     <title type="html">服务器上部署SpringBoot</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/Server-deployment-SpringBoot/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/Server-deployment-SpringBoot/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="_1-第一种-打包为jar包"> 1. 第一种:打包为jar包</h2>
 <h3 id="_1-1-pom-xml配置"> 1.1 pom.xml配置</h3>
 <p>在<strong>pom.xml</strong>里面配置如下</p>
@@ -27837,7 +27837,7 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
     <title type="html">SpringBoot&amp;Vue项目搭建(持续更新)</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/SpringBoot&amp;Vue/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/SpringBoot&amp;Vue/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <p>https://www.bilibili.com/video/BV1dp4y1v7K2</p>
@@ -27872,7 +27872,7 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
     <title type="html">Swagger使用</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/Swagger-use/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/Swagger-use/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <blockquote>
 <ul>
@@ -28366,7 +28366,7 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
     <title type="html">认识SpringCloud</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/springcloud/Know-SpringCloud/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/springcloud/Know-SpringCloud/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h1 id="springcloud课程"> SpringCloud课程</h1>
 <h2 id="一、微服务和微服务架构"> 一、微服务和微服务架构</h2>
 <h3 id="_1-什么是微服务"> 1.什么是微服务</h3>
@@ -28937,7 +28937,7 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
     <title type="html">SpringSecurity</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/springsecurity/SpringSecurity/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/springsecurity/SpringSecurity/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<p>SpringBoot整合SpringSecurity</p>
 ]]></content>
     <author>
@@ -28953,7 +28953,7 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
     <title type="html">学习路线</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/study-line/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/study-line/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="计算机基础"> 计算机基础</h2>
 <p>《王道》</p>
 <ul>
@@ -29071,14 +29071,14 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-01-18T12:47:30.000Z</published>
+    <published>2022-01-18T16:15:26.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">组件禁用</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/zh/guide/disable/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/zh/guide/disable/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <summary type="html"><![CDATA[<p>你可以通过设置页面的 Frontmatter，在页面禁用一些功能。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>你可以通过设置页面的 Frontmatter，在页面禁用一些功能。</p>
@@ -29105,14 +29105,14 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-01-18T12:47:30.000Z</published>
+    <published>2022-01-18T16:15:26.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">密码加密的文章</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/zh/guide/encrypt/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/zh/guide/encrypt/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h1 id="密码加密的文章"> 密码加密的文章</h1>
 <p>实际的文章内容。</p>
 <p>段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字。</p>
@@ -29125,14 +29125,14 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-01-18T12:47:30.000Z</published>
+    <published>2022-01-18T16:15:26.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">Markdown 增强</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/zh/guide/markdown/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/zh/guide/markdown/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <summary type="html"><![CDATA[<p><code>vuepress-theme-hope</code> 通过内置 <a href="https://vuepress-theme-hope.github.io/md-enhance" target="_blank" rel="noopener noreferrer">md-enhance</a>，在 Markdown 中启用了更多的语法与新功能。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p><code>vuepress-theme-hope</code> 通过内置 <a href="https://vuepress-theme-hope.github.io/md-enhance" target="_blank" rel="noopener noreferrer">md-enhance</a>，在 Markdown 中启用了更多的语法与新功能。</p>
@@ -29590,14 +29590,14 @@ $$
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-01-18T12:47:30.000Z</published>
+    <published>2022-01-18T16:15:26.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">页面配置</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/zh/guide/page/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/zh/guide/page/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h2 id="页面信息"> 页面信息</h2>
 <p>你可以在 Markdown 的 Frontmatter 中设置页面信息。</p>
 <ul>
@@ -29653,7 +29653,7 @@ $$
     <title type="html">主要功能与配置演示</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/zh/guide/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/zh/guide/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<h1 id="主要功能与配置演示"> 主要功能与配置演示</h1>
 <ul>
 <li>
@@ -29677,28 +29677,32 @@ $$
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-01-18T12:47:30.000Z</published>
+    <published>2022-01-18T16:15:26.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
-    <title type="html">Blog Home</title>
-    <id>https://vuepress-theme-hope-demo.mrhope.site/zh/</id>
-    <link href="https://vuepress-theme-hope-demo.mrhope.site/zh/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <title type="html">项目主页</title>
+    <id>https://vuepress-theme-hope-demo.mrhope.site/zh/home/</id>
+    <link href="https://vuepress-theme-hope-demo.mrhope.site/zh/home/"/>
+    <updated>2022-01-18T16:15:26.000Z</updated>
+    <content type="html"><![CDATA[<p>这是普通主页的案例。你可以在这里放置你的主体内容。</p>
+<p>想要使用此布局，你需要在页面 front matter 中设置 <code>home: true</code>。</p>
+<p>配置项的相关说明详见 <a href="https://vuepress-theme-hope.github.io/zh/guide/layout/home/" target="_blank" rel="noopener noreferrer">项目主页配置</a>。</p>
+]]></content>
     <author>
       <name>Draco</name>
     </author>
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-01-18T12:47:30.000Z</published>
+    <published>2022-01-18T16:15:26.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">幻灯片页</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/zh/slides/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/zh/slides/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[
 <i>Not supported content</i>]]></content>
     <author>
@@ -29707,28 +29711,28 @@ $$
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-01-18T12:47:30.000Z</published>
+    <published>2022-01-18T16:15:26.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
-    <title type="html">My Project</title>
-    <id>https://vuepress-theme-hope-demo.mrhope.site/zh/project/</id>
-    <link href="https://vuepress-theme-hope-demo.mrhope.site/zh/project/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <title type="html">Blog Home</title>
+    <id>https://vuepress-theme-hope-demo.mrhope.site/zh/</id>
+    <link href="https://vuepress-theme-hope-demo.mrhope.site/zh/"/>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <author>
       <name>Draco</name>
     </author>
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-01-18T12:47:30.000Z</published>
-    <rights>true</rights>
+    <published>2022-01-18T16:15:26.000Z</published>
+    <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">自定义布局</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/zh/layout/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/zh/layout/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <content type="html"><![CDATA[<p>您可以使用带有 Markdown 支持的插槽来自定义页面布局。</p>
 <div><p>Note</p>
 <p>此处仅仅是一个演示，你应该自行根据需求添加样式。</p>
@@ -29753,25 +29757,21 @@ $$
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-01-18T12:47:30.000Z</published>
+    <published>2022-01-18T16:15:26.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
-    <title type="html">项目主页</title>
-    <id>https://vuepress-theme-hope-demo.mrhope.site/zh/home/</id>
-    <link href="https://vuepress-theme-hope-demo.mrhope.site/zh/home/"/>
-    <updated>2022-01-18T12:47:30.000Z</updated>
-    <content type="html"><![CDATA[<p>这是普通主页的案例。你可以在这里放置你的主体内容。</p>
-<p>想要使用此布局，你需要在页面 front matter 中设置 <code>home: true</code>。</p>
-<p>配置项的相关说明详见 <a href="https://vuepress-theme-hope.github.io/zh/guide/layout/home/" target="_blank" rel="noopener noreferrer">项目主页配置</a>。</p>
-]]></content>
+    <title type="html">My Project</title>
+    <id>https://vuepress-theme-hope-demo.mrhope.site/zh/project/</id>
+    <link href="https://vuepress-theme-hope-demo.mrhope.site/zh/project/"/>
+    <updated>2022-01-18T16:15:26.000Z</updated>
     <author>
       <name>Draco</name>
     </author>
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-01-18T12:47:30.000Z</published>
-    <rights>Copyright by Draco</rights>
+    <published>2022-01-18T16:15:26.000Z</published>
+    <rights>true</rights>
   </entry>
 </feed>
