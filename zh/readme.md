@@ -11,8 +11,8 @@ heroFullScreen: true
 project:
   - type: project
     name: My Project
-    desc: 一些个人项目就是说
-    link: /project
+    desc: 个人项目
+    link: My-Project
 
   - type: link
     name: Java全栈知识体系

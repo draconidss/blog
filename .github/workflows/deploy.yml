@@ -27,7 +27,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Build Template
-        run: yarn run build
+        run: yarn docs:build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
