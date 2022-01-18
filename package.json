@@ -4,10 +4,10 @@
   "description": "A project of vuepress-theme-hope",
   "license": "MIT",
   "scripts": {
-    "docs:build": "vuepress build /Users/chenlong/workplace/vuepress-theme-hope",
-    "docs:clean-dev": "vuepress dev /Users/chenlong/workplace/vuepress-theme-hope --no-cache",
-    "docs:dev": "vuepress dev /Users/chenlong/workplace/vuepress-theme-hope",
-    "docs:eject-theme": "vuepress eject-hope /Users/chenlong/workplace/vuepress-theme-hope"
+    "docs:build": "vuepress build",
+    "docs:clean-dev": "vuepress dev --no-cache",
+    "docs:dev": "vuepress dev",
+    "docs:eject-theme": "vuepress eject-hope"
   },
   "devDependencies": {
     "vuepress": "^1.9.7",
