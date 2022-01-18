@@ -336,7 +336,8 @@ module.exports = config({
 
     comment: {
       type: "waline",
-      serverURL: "https://bw3hvpzf.api.lncldglobal.com",
+      serverURL: "https://blog.comment.lifeisgg.online",
+      visitor: true
     },
 
     copyright: {
