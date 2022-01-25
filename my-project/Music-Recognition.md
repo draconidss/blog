@@ -1,10 +1,10 @@
 ---
 icon: 
-title: 听歌识曲开放平台
+title: 音频批量识别平台
 author: Draco
 time: 2021-03-14 12:29:45
 password: tencentmusic
-description: 听歌识曲开放平台
+description: 音频批量识别平台
 original: true
 image: 
 categories: 

@@ -1,6 +1,7 @@
 ---
 icon: info
 comment: false
+star: false
 ---
 
 ## About

@@ -16,7 +16,7 @@ tag:
 # this page is sticky in article list
 sticky: false
 # this page will appear in aricle channel in home page
-star: true
+star: false
 # You can customize the footer
 footer: Footer content for test
 ---

@@ -17,6 +17,7 @@ comment: false
 footer: false
 
 backtotop: false
+star: false
 ---
 
 You can disable some functions on the page by setting the Frontmatter of the page.

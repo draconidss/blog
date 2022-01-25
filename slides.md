@@ -2,6 +2,7 @@
 title: Slide page
 icon: slides
 layout: Slide
+star: true
 ---
 
 <!-- markdownlint-disable MD024 MD033 -->

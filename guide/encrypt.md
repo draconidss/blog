@@ -4,6 +4,7 @@ password: 1234
 category: Guide
 tag:
   - encryption
+star: false
 ---
 
 # Encryption article

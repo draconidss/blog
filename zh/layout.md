@@ -1,6 +1,7 @@
 ---
 title: 自定义布局
 icon: layout
+star: false
 ---
 
 您可以使用带有 Markdown 支持的插槽来自定义页面布局。
@@ -16,7 +17,7 @@ icon: layout
 
 .content__navbar-start, .content__navbar-center, .content__navbar-end
   display inline-block
-  
+
   p
     margin 0
     line-height 2rem
