@@ -6,8 +6,8 @@
     <link>https://vuepress-theme-hope-demo.mrhope.site/</link>
     <description>美好的肉体即正义本身</description>
     <language>en-US</language>
-    <pubDate>Tue, 25 Jan 2022 07:42:27 GMT</pubDate>
-    <lastBuildDate>Tue, 25 Jan 2022 07:42:27 GMT</lastBuildDate>
+    <pubDate>Fri, 18 Feb 2022 07:46:36 GMT</pubDate>
+    <lastBuildDate>Fri, 18 Feb 2022 07:46:36 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright by Draco</copyright>
@@ -18,34 +18,12 @@
       <link>https://vuepress-theme-hope-demo.mrhope.site/about/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/about/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">About</source>
-      <pubDate>Tue, 25 Jan 2022 07:41:56 GMT</pubDate>
+      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="about"> About</h2>
 <p>这里是我的博客和笔记Wiki，通过<code>Vuepress</code>搭建在<code>Github Pages</code>上</p>
 <p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/about/about.jpg" alt="about" /></p>
 ]]></content:encoded>
       <enclosure url="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/about/about.jpg" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>算法</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/Algorithm/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/Algorithm/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">算法</source>
-      <pubDate>Sun, 30 Aug 2020 18:04:39 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="动态规划和贪心算法的区别"> 动态规划和贪心算法的区别</h2>
-<p>相同点</p>
-<ul>
-<li>动态规划和贪心算法都是一种递推算法</li>
-<li>均有局部最优解来推导全局最优解</li>
-</ul>
-<p>不同点</p>
-<ul>
-<li>贪心算法中，作出的每步贪心决策都无法改变，因为贪心策略是由上一步的最优解推导下一步的最优解，而上一部之前的最优解则不作保留。</li>
-<li>可以知道贪心法正确的条件是：每一步的最优解一定包含上一步的最优解。</li>
-<li>全局最优解中一定包含某个局部最优解，但不一定包含前一个局部最优解，因此需要记录之前的所有最优解</li>
-<li>动态规划的关键是状态转移方程，即如何由以求出的局部最优解来推导全局最优解</li>
-<li>边界条件：即最简单的，可以直接得出的局部最优解</li>
-</ul>
-]]></content:encoded>
     </item>
     <item>
       <title>数据结构&amp;算法题目合集</title>
@@ -689,6 +667,28 @@
 <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>words<span>)</span><span>;</span>
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>算法</title>
+      <link>https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/Algorithm/</link>
+      <guid>https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/Algorithm/</guid>
+      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">算法</source>
+      <pubDate>Sun, 30 Aug 2020 18:04:39 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="动态规划和贪心算法的区别"> 动态规划和贪心算法的区别</h2>
+<p>相同点</p>
+<ul>
+<li>动态规划和贪心算法都是一种递推算法</li>
+<li>均有局部最优解来推导全局最优解</li>
+</ul>
+<p>不同点</p>
+<ul>
+<li>贪心算法中，作出的每步贪心决策都无法改变，因为贪心策略是由上一步的最优解推导下一步的最优解，而上一部之前的最优解则不作保留。</li>
+<li>可以知道贪心法正确的条件是：每一步的最优解一定包含上一步的最优解。</li>
+<li>全局最优解中一定包含某个局部最优解，但不一定包含前一个局部最优解，因此需要记录之前的所有最优解</li>
+<li>动态规划的关键是状态转移方程，即如何由以求出的局部最优解来推导全局最优解</li>
+<li>边界条件：即最简单的，可以直接得出的局部最优解</li>
+</ul>
+]]></content:encoded>
     </item>
     <item>
       <title>数据结构</title>
@@ -7805,7 +7805,24 @@ https://download.docker.com/linux/centos/docker-ce.repo
 <li>https://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html</li>
 </ul>
 </div>
-]]></content:encoded>
+<h2 id="奇技"> 奇技</h2>
+<h3 id="将修改加入到某次commit中"> 将修改加入到某次commit中</h3>
+<div><pre><code><span>#保存改动</span>
+<span>git</span> stash
+
+<span>#进入要插入的commit的之前一个commit,在编辑页面将修改的commit的pick修改为edit</span>
+<span>git</span> rebase -i <span>&lt;</span>commit<span>></span>
+
+<span>#拿出改动</span>
+<span>git</span> stash pop
+
+<span>#添加到缓存区</span>
+<span>git</span> <span>add</span> <span>.</span>
+
+<span>#加入到commit</span>
+<span>git</span> commit --amend --no-edit
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br></div></div>]]></content:encoded>
       <enclosure url="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Git/Git%E5%B7%A5%E4%BD%9C%E6%B5%81.png" type="image/png"/>
     </item>
     <item>
@@ -8118,7 +8135,7 @@ ptr:  0xc000010098
       <description>&amp;lt;p&amp;gt;You can disable some functions on the page by setting the Frontmatter of the page.&amp;lt;/p&amp;gt;
 </description>
       <category>Guide</category>
-      <pubDate>Tue, 25 Jan 2022 07:41:56 GMT</pubDate>
+      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
       <content:encoded><![CDATA[<p>You can disable some functions on the page by setting the Frontmatter of the page.</p>
 
 <p>These should be disabled on this page:</p>
@@ -8143,7 +8160,7 @@ ptr:  0xc000010098
       <guid>https://vuepress-theme-hope-demo.mrhope.site/guide/encrypt/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Encryption article</source>
       <category>Guide</category>
-      <pubDate>Tue, 25 Jan 2022 07:41:56 GMT</pubDate>
+      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="encryption-article"> Encryption article</h1>
 <p>The actual article content.</p>
 <p>Paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text.</p>
@@ -8158,7 +8175,7 @@ ptr:  0xc000010098
       <description>&amp;lt;p&amp;gt;&amp;lt;code&amp;gt;vuepress-theme-hope&amp;lt;/code&amp;gt; enables more syntax in Markdown via the built-in &amp;lt;a href=&amp;quot;https://vuepress-theme-hope.github.io/md-enhance&amp;quot; target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot;&amp;gt;md-enhance&amp;lt;/a&amp;gt; plugin.&amp;lt;/p&amp;gt;
 </description>
       <category>Guide</category>
-      <pubDate>Tue, 25 Jan 2022 07:41:56 GMT</pubDate>
+      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
       <content:encoded><![CDATA[<p><code>vuepress-theme-hope</code> enables more syntax in Markdown via the built-in <a href="https://vuepress-theme-hope.github.io/md-enhance" target="_blank" rel="noopener noreferrer">md-enhance</a> plugin.</p>
 
 <h2 id="enable-all"> Enable all</h2>
@@ -8663,7 +8680,7 @@ A custom details container
       <guid>https://vuepress-theme-hope-demo.mrhope.site/guide/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Guides</source>
       <category>Guide</category>
-      <pubDate>Tue, 25 Jan 2022 07:41:56 GMT</pubDate>
+      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="guides"> Guides</h1>
 <ul>
 <li>
@@ -8679,68 +8696,6 @@ A custom details container
 <p><a href="./encrypt.html">Encryption Demo</a></p>
 </li>
 </ul>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Java面试整理</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/interview/Java-Interview/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/interview/Java-Interview/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Java面试整理</source>
-      <pubDate>Wed, 16 Sep 2020 18:12:23 GMT</pubDate>
-      <content:encoded><![CDATA[<h1 id="学习路线"> 学习路线</h1>
-<p><img src="./images/Java_learning_roadmap.png" alt="Java学习路线图" /></p>
-<h2 id="java"> Java</h2>
-<blockquote>
-<ul>
-<li>
-<p><a href="https://wiki.lifeisgg.online/archives/Java-JVM/" target="_blank" rel="noopener noreferrer">Java-JVM</a></p>
-</li>
-<li>
-<p><a href="https://wiki.lifeisgg.online/archives/Java-%E5%AE%B9%E5%99%A8" target="_blank" rel="noopener noreferrer">Java-容器</a></p>
-</li>
-<li>
-<p><a href="https://wiki.lifeisgg.online/archives/Java-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%B9%B6%E5%8F%91/" target="_blank" rel="noopener noreferrer">Java-多线程并发</a></p>
-</li>
-<li>
-<p><a href="https://wiki.lifeisgg.online/archives/Java-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" target="_blank" rel="noopener noreferrer">Java-设计模式</a></p>
-</li>
-<li>
-<p><a href="https://wiki.lifeisgg.online/archives/Java-%E6%96%B9%E6%B3%95%E6%B1%87%E6%80%BB/" target="_blank" rel="noopener noreferrer">Java-方法汇总</a></p>
-</li>
-<li>
-<p><a href="https://wiki.lifeisgg.online/archives/Java-%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/" target="_blank" rel="noopener noreferrer">Java-基础面试题</a></p>
-</li>
-<li>
-<p><a href="https://wiki.lifeisgg.online/archives/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0/" target="_blank" rel="noopener noreferrer">Java-基础知识笔记</a></p>
-</li>
-</ul>
-</blockquote>
-<h2 id="数据结构算法"> 数据结构算法</h2>
-<blockquote>
-<ul>
-<li><a href="https://wiki.lifeisgg.online/archives/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84&amp;%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/" target="_blank" rel="noopener noreferrer">数据结构&amp;算法笔记</a></li>
-<li><a href="https://wiki.lifeisgg.online/archives/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84&amp;%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE%E5%90%88%E9%9B%86/" target="_blank" rel="noopener noreferrer">数据结构&amp;算法题目合集</a></li>
-</ul>
-</blockquote>
-<h2 id="mysql"> Mysql</h2>
-<blockquote>
-<ul>
-<li><a href="https://wiki.lifeisgg.online/archives/Mysql%E9%9D%A2%E8%AF%95%E9%A2%98/" target="_blank" rel="noopener noreferrer">Mysql面试题</a></li>
-</ul>
-</blockquote>
-<h2 id="spring"> Spring</h2>
-<blockquote>
-<ul>
-<li><a href="https://wiki.lifeisgg.online/archives/Spring%E9%9D%A2%E8%AF%95%E9%A2%98/" target="_blank" rel="noopener noreferrer">Spring面试题</a></li>
-<li><a href="https://wiki.lifeisgg.online/archives/SpringMVC%E9%9D%A2%E8%AF%95%E9%A2%98/" target="_blank" rel="noopener noreferrer">SpringMVC面试题</a></li>
-</ul>
-</blockquote>
-<h2 id="其它面试题"> 其它面试题</h2>
-<blockquote>
-<ul>
-<li><a href="https://wiki.lifeisgg.online/archives/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%85%B6%E5%AE%83%E9%9D%A2%E8%AF%95%E9%A2%98/" target="_blank" rel="noopener noreferrer">计算机其它面试题</a></li>
-</ul>
-</blockquote>
 ]]></content:encoded>
     </item>
     <item>
@@ -9130,6 +9085,68 @@ A custom details container
 <h3 id="服务器错误5××-表示服务器在处理请求时发生内部错误。这些错误可能是服务器本身的错误-而不是请求出错。"> 服务器错误5××：表示服务器在处理请求时发生内部错误。这些错误可能是服务器本身的错误，而不是请求出错。</h3>
 <p>500              服务器遇到错误，无法完成请求。
 503              服务器目前无法使用（由于超载或停机维护）。通常，这只是暂时状态。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Java面试整理</title>
+      <link>https://vuepress-theme-hope-demo.mrhope.site/interview/Java-Interview/</link>
+      <guid>https://vuepress-theme-hope-demo.mrhope.site/interview/Java-Interview/</guid>
+      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Java面试整理</source>
+      <pubDate>Wed, 16 Sep 2020 18:12:23 GMT</pubDate>
+      <content:encoded><![CDATA[<h1 id="学习路线"> 学习路线</h1>
+<p><img src="./images/Java_learning_roadmap.png" alt="Java学习路线图" /></p>
+<h2 id="java"> Java</h2>
+<blockquote>
+<ul>
+<li>
+<p><a href="https://wiki.lifeisgg.online/archives/Java-JVM/" target="_blank" rel="noopener noreferrer">Java-JVM</a></p>
+</li>
+<li>
+<p><a href="https://wiki.lifeisgg.online/archives/Java-%E5%AE%B9%E5%99%A8" target="_blank" rel="noopener noreferrer">Java-容器</a></p>
+</li>
+<li>
+<p><a href="https://wiki.lifeisgg.online/archives/Java-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%B9%B6%E5%8F%91/" target="_blank" rel="noopener noreferrer">Java-多线程并发</a></p>
+</li>
+<li>
+<p><a href="https://wiki.lifeisgg.online/archives/Java-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" target="_blank" rel="noopener noreferrer">Java-设计模式</a></p>
+</li>
+<li>
+<p><a href="https://wiki.lifeisgg.online/archives/Java-%E6%96%B9%E6%B3%95%E6%B1%87%E6%80%BB/" target="_blank" rel="noopener noreferrer">Java-方法汇总</a></p>
+</li>
+<li>
+<p><a href="https://wiki.lifeisgg.online/archives/Java-%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/" target="_blank" rel="noopener noreferrer">Java-基础面试题</a></p>
+</li>
+<li>
+<p><a href="https://wiki.lifeisgg.online/archives/Java-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0/" target="_blank" rel="noopener noreferrer">Java-基础知识笔记</a></p>
+</li>
+</ul>
+</blockquote>
+<h2 id="数据结构算法"> 数据结构算法</h2>
+<blockquote>
+<ul>
+<li><a href="https://wiki.lifeisgg.online/archives/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84&amp;%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/" target="_blank" rel="noopener noreferrer">数据结构&amp;算法笔记</a></li>
+<li><a href="https://wiki.lifeisgg.online/archives/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84&amp;%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE%E5%90%88%E9%9B%86/" target="_blank" rel="noopener noreferrer">数据结构&amp;算法题目合集</a></li>
+</ul>
+</blockquote>
+<h2 id="mysql"> Mysql</h2>
+<blockquote>
+<ul>
+<li><a href="https://wiki.lifeisgg.online/archives/Mysql%E9%9D%A2%E8%AF%95%E9%A2%98/" target="_blank" rel="noopener noreferrer">Mysql面试题</a></li>
+</ul>
+</blockquote>
+<h2 id="spring"> Spring</h2>
+<blockquote>
+<ul>
+<li><a href="https://wiki.lifeisgg.online/archives/Spring%E9%9D%A2%E8%AF%95%E9%A2%98/" target="_blank" rel="noopener noreferrer">Spring面试题</a></li>
+<li><a href="https://wiki.lifeisgg.online/archives/SpringMVC%E9%9D%A2%E8%AF%95%E9%A2%98/" target="_blank" rel="noopener noreferrer">SpringMVC面试题</a></li>
+</ul>
+</blockquote>
+<h2 id="其它面试题"> 其它面试题</h2>
+<blockquote>
+<ul>
+<li><a href="https://wiki.lifeisgg.online/archives/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%85%B6%E5%AE%83%E9%9D%A2%E8%AF%95%E9%A2%98/" target="_blank" rel="noopener noreferrer">计算机其它面试题</a></li>
+</ul>
+</blockquote>
 ]]></content:encoded>
     </item>
     <item>
@@ -10141,6 +10158,523 @@ A custom details container
 <li><a href="https://wiki.lifeisgg.online/archives/%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_blank" rel="noopener noreferrer">腾讯云学习笔记 - LifeAlsoIsGG-Wiki (lifeisgg.online)</a></li>
 </ul>
 </blockquote>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Java-基础知识笔记</title>
+      <link>https://vuepress-theme-hope-demo.mrhope.site/java/Java-BasicNotes/</link>
+      <guid>https://vuepress-theme-hope-demo.mrhope.site/java/Java-BasicNotes/</guid>
+      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Java-基础知识笔记</source>
+      <description>Java-基础知识笔记</description>
+      <pubDate>Sat, 08 Aug 2020 12:39:22 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="参考"> 参考</h2>
+<blockquote>
+<ul>
+<li><a href="http://www.51gjie.com/" target="_blank" rel="noopener noreferrer">JavaSchool</a></li>
+<li><a href="https://www.liaoxuefeng.com/wiki/1252599548343744" target="_blank" rel="noopener noreferrer">廖雪峰Java教程</a></li>
+</ul>
+</blockquote>
+<h2 id="_1-数据类型"> 1 数据类型</h2>
+<p>Java的数据类型分为两大类：</p>
+<ul>
+<li>
+<p><strong>基本数据类型</strong>：包括 整数 、 浮点数 、 字符 、 布尔 。</p>
+</li>
+<li>
+<p><strong>引用数据类型</strong>：包括 类 、 数组 、 接口 。</p>
+</li>
+</ul>
+<p><img src="./images/Java-BasicNotes/dataType.jpg" alt="" /></p>
+<p><img src="./images/Java-BasicNotes/data_type_exercise.jpg" alt="" /></p>
+<h3 id="_1-1-整型"> 1.1 整型</h3>
+<p>整型用于表示没有小数部分的数值， 它允许是负数。Java 提供了 4 种整型，具体内容如下</p>
+<p><img src="./images/Java-BasicNotes/Java_Integer.jpg" alt="xx" /></p>
+<h4 id="注意"> 注意</h4>
+<p>int类型声明为L时会报错，需要向下转型。long类型声明时可以加或不加<code>L或l</code></p>
+<div><pre><code><span>int</span> a <span>=</span> <span>10L</span><span>;</span><span>//报错</span>
+<span>int</span> b <span>=</span> <span>(</span><span>int</span><span>)</span><span>10L</span><span>;</span><span>//正确</span>
+<span>long</span> c <span>=</span> <span>10L</span><span>;</span><span>//正确</span>
+<span>long</span> d <span>=</span> <span>10</span><span>;</span><span>//正确,相当于向上转型</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h3 id="_1-2-浮点类型"> 1.2 浮点类型</h3>
+<p>浮点类型用于表示有小数部分的数值。在 Java 中有两种浮点类型</p>
+<p><img src="./images/Java-BasicNotes/float.jpg" alt="" /></p>
+<p>​		double 表示这种类型的数值精度是 float 类型的两倍（有人称之为双精度数值)。<strong>绝大部分应用程序都采用 double 类型</strong>。在很多情况下，<strong>float 类型的精度很难满足需求</strong>。实际上，只有很少的情况适合使用 float 类型，例如，需要单精度数据的库， 或者需要存储大量数据。 float 类型的数值有一个后缀 F 或 f (例如，3.14F。) 没有后缀 F 的浮点数值（如 3.14 ) 默 认为 double 类型。当然，也可以在浮点数值后面添加后缀 D 或 d (例如，3.14D) 。</p>
+<h4 id="注意-2"> 注意</h4>
+<p>声明<code>float</code>时必须要加<code>F或f</code>，但是如果是整数则不用</p>
+<div><pre><code><span>float</span> a <span>=</span> <span>10</span><span>;</span><span>//正确</span>
+<span>float</span> b <span>=</span> <span>10.5F</span><span>;</span><span>//正确</span>
+<span>float</span> c <span>=</span> <span>10.5</span><span>;</span><span>//报错</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p><code>double</code>类型可加可不加D或d，因为声明为小数时，小数默认是double类型</p>
+<div><pre><code><span>double</span> a <span>=</span> <span>10</span><span>;</span><span>//正确</span>
+<span>double</span> b <span>=</span> <span>10.5</span><span>;</span><span>//正确</span>
+<span>double</span> c <span>=</span> <span>10.5D</span><span>;</span><span>//正确,D可加可不加</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><h3 id="_1-3-char类型"> 1.3 char类型</h3>
+<p>​		char 类型原本用于表示单个字符。不过，现在情况已经有所变化。 如今，有些 Unicode 字符可以用一个 chai•值描述，另外一些 Unicode 字符则需要两个 char 值。有关的详细信息请 阅读下一节。 char 类型的字面量值要用单引号括起来。例如：W 是编码值为 65 所对应的字符常量。 它与 &quot;A&quot; 不同，&quot;A&quot; 是包含一个字符 A 的字符串, char 类型的值可以表示为十六进制值，其 范围从 \u0000 到 \Uffff。例如：W2122 表示注册符号 ( ), \u03C0 表示希腊字母 it。 除了转义序列 \u 之外， 还有一些用于表示特殊字符的转义序列， 请参看表 3-3。所有这 些转义序列都可以出现在加引号的字符字面量或字符串中。例如，’ \02丨22' 或 &quot;1 110\11”。转 义序列 \u还可以出现在加引号的字符常量或字符串之外（而其他所有转义序列不可以）。例 如： public static void main(String\u005B\ u00SD args) 就完全符合语法规则， \u005B 和 \u005D 是 [ 和 ] 的编码</p>
+<p><img src="./images/Java-BasicNotes/escape_sequence_for_special_characters.jpg" alt="特殊字符的转义序列" /></p>
+<h3 id="_1-4-boolean类型"> 1.4 boolean类型</h3>
+<p>boolean (布尔）类型有两个值：false 和 true, 用来判定逻辑条件 整型值和布尔值之间 不能进行相互转换。</p>
+<h2 id="_2-访问修饰符"> 2. 访问修饰符</h2>
+<p><img src="https://img-blog.csdn.net/2018031609431326?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L2d4MTc4NjQzNzM4MjI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="" /></p>
+<ul>
+<li><strong>private</strong>
+被private修饰的属性和方法，不能被其他类访问，子类不能继承也不能访问。只能在所在类内部访问。</li>
+<li><strong>default</strong>
+变量或者方法前没有访问修饰符时，可以被所在类访问，可以被同一包内的其他类访问 或者继承。但是不能被其他包访问。</li>
+<li><strong>protected</strong>
+被protected修饰的方法和属性，在同一包内可被访问和继承。不同包内，子类可继承，非子类不能访问。</li>
+<li><strong>public</strong>
+方法和属性前有public修饰，可以被任意包内的类访问。
+另外，类要想被其他包导入，必须声明为public。被public修饰的类，类名必须与文件名相同。</li>
+</ul>
+<h2 id="_2-运算符"> 2 运算符</h2>
+<h3 id="_2-1-算术运算符"> 2.1 算术运算符</h3>
+<p><img src="./images/Java-BasicNotes/arithmetic_operator_1.jpg" alt="" /></p>
+<p>Java中，整数使用以上运算符，无论怎么计算，也不会得到小数。</p>
+<p><img src="./images/Java-BasicNotes/arithmetic_operator_2.jpg" alt="" /></p>
+<p>++ 运算，变量自己增长1。反之， -- 运算，变量自己减少1，用法与 ++ 一致。</p>
+<ul>
+<li>
+<p>独立运算：</p>
+<ul>
+<li>变量在独立运算时， 前++ 和 后++ 没有区别 。</li>
+<li>变量 前++ ：例如 ++i 。</li>
+<li>变量 后++ ：例如 i++ 。</li>
+</ul>
+</li>
+<li>
+<p>混合运算：</p>
+<ul>
+<li>
+<p>和其他变量放在一起， 前++ 和 后++ 就产生了不同。</p>
+<p><img src="./images/Java-BasicNotes/++Calculation_1.jpg" alt="" /></p>
+</li>
+<li>
+<p>变量 前++ ：变量a自己加1，将加1后的结果赋值给b，也就是说a先计算。a和b的结果都是2。</p>
+<p><img src="./images/Java-BasicNotes/++Calculation_2.jpg" alt="" /></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>在 Java 中，使用算术运算符 + 、-、 * 、/ 表示加、减、 乘、除运算。 <strong>当参与 / 运算的两个 操作数都是整数时， 表示整数除法；否则， 表示浮点除法</strong>。 整数的求余操作（有时称为取模) 用 ％ 表示。例如，15/2 等于 ，7 15%2 等于 1 , 15.0/2 等于 7.50 需要注意， 整数被 0 除将会产生一个异常， 而浮点数被 0 除将会得到无穷大或 NaN 结果。</p>
+<h3 id="_2-2-赋值运算符"> 2.2 赋值运算符</h3>
+<p><img src="./images/Java-BasicNotes/assignment_operator_1.jpg" alt="" /></p>
+<p><img src="./images/Java-BasicNotes/assignment_operator_2.jpg" alt="" /></p>
+<h3 id="_2-3-比较运算符"> 2.3 比较运算符</h3>
+<p><img src="./images/Java-BasicNotes/Comparison_operator_1.jpg" alt="" /></p>
+<p><img src="./images/Java-BasicNotes/Comparison_operator_2.jpg" alt="" /></p>
+<h4 id="instanceof-比较一个对象是否为一个类的实例-或某个接口的实现类"> instanceof：比较一个对象是否为一个类的实例/或某个接口的实现类</h4>
+<p>参考</p>
+<blockquote>
+<ul>
+<li>https://www.cnblogs.com/ysocean/p/8486500.html</li>
+</ul>
+</blockquote>
+<p>基础用法</p>
+<div><pre><code><span>boolean</span> result <span>=</span> obj <span>instanceof</span> <span>Class</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>其中 <code>obj</code> 为一个对象，<code>Class</code> 表示一个类或者一个接口，当 <code>obj</code> 为 <code>Class</code> 的对象，或者是其直接或间接子类，或者是其接口的实现类，结果result 都返回 true，否则返回false。</p>
+<p>原理：</p>
+<blockquote>
+<p><strong>编译器会检查 <code>obj</code> 是否能转换成右边的<code>class</code>类型，如果不能转换则直接报错，如果不能确定类型，则通过编译，具体看运行时定。</strong></p>
+</blockquote>
+<h5 id="其他情况"> 其他情况</h5>
+<ul>
+<li>
+<p>obj 必须为引用类型，不能是基本类型</p>
+<div><pre><code><span>int</span> i <span>=</span> <span>0</span><span>;</span>
+<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>i <span>instanceof</span> <span>Integer</span><span>)</span><span>;</span><span>//编译不通过</span>
+<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>i <span>instanceof</span> <span>Object</span><span>)</span><span>;</span><span>//编译不通过</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div></li>
+<li>
+<p>obj 为 null</p>
+<div><pre><code><span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>null</span> <span>instanceof</span> <span>Object</span><span>)</span><span>;</span><span>//false</span>
+</code></pre>
+<div><span>1</span><br></div></div></li>
+<li>
+<p>obj 为 class 接口的实现类</p>
+<div><pre><code>
+</code></pre>
+<div><span>1</span><br></div></div></li>
+<li>
+<p>我们可以用 <code>instanceof</code> 运算符判断 某个对象是否是 <code>List</code> 接口的实现类，如果是返回 true，否则返回 false</p>
+<div><pre><code><span>ArrayList</span> arrayList <span>=</span> <span>new</span> <span>ArrayList</span><span>(</span><span>)</span><span>;</span>
+<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>arrayList <span>instanceof</span> <span>List</span><span>)</span><span>;</span><span>//true</span>
+
+<span>List</span> list <span>=</span> <span>new</span> <span>ArrayList</span><span>(</span><span>)</span><span>;</span>
+<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>list <span>instanceof</span> <span>ArrayList</span><span>)</span><span>;</span><span>//true</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div></li>
+<li>
+<p>obj 为 class 类的直接或间接子类</p>
+<div><pre><code><span>public</span> <span>class</span> <span>Person</span> <span>{</span>
+ 
+<span>}</span>
+
+<span>public</span> <span>class</span> <span>Man</span> <span>extends</span> <span>Person</span><span>{</span>
+     
+<span>}</span>
+
+<span>Person</span> p1 <span>=</span> <span>new</span> <span>Person</span><span>(</span><span>)</span><span>;</span>
+<span>Person</span> p2 <span>=</span> <span>new</span> <span>Man</span><span>(</span><span>)</span><span>;</span>
+<span>Man</span> m1 <span>=</span> <span>new</span> <span>Man</span><span>(</span><span>)</span><span>;</span>
+<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>p1 <span>instanceof</span> <span>Man</span><span>)</span><span>;</span><span>//false</span>
+<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>p2 <span>instanceof</span> <span>Man</span><span>)</span><span>;</span><span>//true</span>
+<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>m1 <span>instanceof</span> <span>Man</span><span>)</span><span>;</span><span>//true</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br></div></div></li>
+</ul>
+<h5 id="原理"> 原理</h5>
+<p>参考</p>
+<blockquote>
+<ul>
+<li>https://docs.oracle.com/javase/specs/jls/se8/html/jls-15.html#jls-15.20.2</li>
+</ul>
+</blockquote>
+<p>伪代码描述</p>
+<div><pre><code><span>boolean</span> result<span>;</span>
+<span>if</span> <span>(</span>obj <span>==</span> <span>null</span><span>)</span> <span>{</span>
+  result <span>=</span> <span>false</span><span>;</span>
+<span>}</span> <span>else</span> <span>{</span>
+  <span>try</span> <span>{</span>
+      <span>T</span> temp <span>=</span> <span>(</span><span>T</span><span>)</span> obj<span>;</span> <span>// checkcast</span>
+      result <span>=</span> <span>true</span><span>;</span>
+  <span>}</span> <span>catch</span> <span>(</span><span>ClassCastException</span> e<span>)</span> <span>{</span>
+      result <span>=</span> <span>false</span><span>;</span>
+  <span>}</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><p>所以</p>
+<div><pre><code><span>Person</span> p1 <span>=</span> <span>new</span> <span>Person</span><span>(</span><span>)</span><span>;</span>
+ 
+<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>p1 <span>instanceof</span> <span>String</span><span>)</span><span>;</span><span>//编译报错</span>
+<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>p1 <span>instanceof</span> <span>List</span><span>)</span><span>;</span><span>//false</span>
+<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>p1 <span>instanceof</span> <span>List</span><span><span>&lt;</span><span>?</span><span>></span></span><span>)</span><span>;</span><span>//false</span>
+<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>p1 <span>instanceof</span> <span>List</span><span><span>&lt;</span><span>Person</span><span>></span></span><span>)</span><span>;</span><span>//编译报错</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>也就是说有表达式 obj instanceof T，instanceof 运算符的 obj 操作数的类型必须是引用类型或空类型; 否则，会发生编译时错误。</p>
+<p>如果 obj 强制转换为 T 时发生编译错误，则关系表达式的 instanceof 同样会产生编译时错误。 在这种情况下，表达式实例的结果永远为false。</p>
+<p>在运行时，如果 T 的值不为null，并且 obj 可以转换为 T 而不引发ClassCastException，则instanceof运算符的结果为true。 否则结果是错误的</p>
+<p>简单来说就是：<strong>如果 obj 不为 null 并且 (T) obj 不抛 ClassCastException 异常则该表达式值为 true ，否则值为 false 。</strong></p>
+<p>总结</p>
+<blockquote>
+<ul>
+<li>https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.instanceof</li>
+</ul>
+</blockquote>
+<h3 id="_2-4-逻辑运算符"> 2.4 逻辑运算符</h3>
+<p><img src="./images/Java-BasicNotes/logical_operators_1.jpg" alt="" /></p>
+<p><img src="./images/Java-BasicNotes/logical_operators_2.jpg" alt="" /></p>
+<h3 id="_2-5-三元运算符"> 2.5 三元运算符</h3>
+<p><strong>三元运算符格式：</strong></p>
+<div><pre><code>数据类型 变量名 = 布尔类型表达式？结果1：结果2
+</code></pre>
+<div><span>1</span><br></div></div><p><strong>三元运算符计算方式：</strong></p>
+<ul>
+<li>布尔类型表达式结果是true，三元运算符整体结果为结果1，赋值给变量。</li>
+<li>布尔类型表达式结果是false，三元运算符整体结果为结果2，赋值给变量。</li>
+</ul>
+<p><img src="./images/Java-BasicNotes/ternary_operator.jpg" alt="" /></p>
+<h3 id="_2-6-位运算符"> 2.6 位运算符</h3>
+<ul>
+<li>&amp;：按位与。当两位同时为1时才返回1。</li>
+<li>|：按位或。只要有一位为1即可返回1。</li>
+<li>~：按位非。单目运算符，将操作数的每个位（包括符号位）全部取反。</li>
+<li>^：按位异或。当两位相同时返回0，不同时返回1。</li>
+<li>&lt;&lt;：左移运算符。</li>
+<li>&gt;&gt;：右移运算符。</li>
+<li>&gt;&gt;&gt;：无符号右移运算符。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">符号</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">&amp;：按位与</td>
+<td>当两位同时为1时才返回1，否则返回0</td>
+</tr>
+<tr>
+<td style="text-align:center">|：按位或</td>
+<td>只要有一位为1即可返回1</td>
+</tr>
+<tr>
+<td style="text-align:center">~：按位非</td>
+<td>单目运算符，将操作数的每个位（包括符号位）全部取反</td>
+</tr>
+<tr>
+<td style="text-align:center">^：按位异或</td>
+<td>当两位相同时返回0，不同时返回1</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;&lt;：左移运算符</td>
+<td>左移运算符</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;&gt;：右移运算符</td>
+<td>右移运算符，例如 &gt;&gt; 2则代表除于2</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;&gt;&gt;：无符号右移运算符</td>
+<td>无符号右移运算符</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_2-7-数学函数与常量math"> 2.7 数学函数与常量Math</h3>
+<p>在 Math类中，包含了各种各样的数学函数。在编写不同类别的程序时，可能需要的函数也不同。</p>
+<p><img src="./images/Java-BasicNotes/math_methods_1.jpg" alt="" /></p>
+<p><img src="./images/Java-BasicNotes/math_methods_2.jpg" alt="" /></p>
+<div><pre><code><span>/**
+         *Math.sqrt()//计算平方根
+         *Math.cbrt()//计算立方根
+         *Math.pow(a, b)//计算a的b次方
+         *Math.max( , );//计算最大值
+         *Math.min( , );//计算最小值
+         */</span>
+ 
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>sqrt</span><span>(</span><span>16</span><span>)</span><span>)</span><span>;</span>   <span>//4.0</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>cbrt</span><span>(</span><span>8</span><span>)</span><span>)</span><span>;</span>    <span>//2.0</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>pow</span><span>(</span><span>3</span><span>,</span><span>2</span><span>)</span><span>)</span><span>;</span>     <span>//9.0</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>max</span><span>(</span><span>2.3</span><span>,</span><span>4.5</span><span>)</span><span>)</span><span>;</span><span>//4.5</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>min</span><span>(</span><span>2.3</span><span>,</span><span>4.5</span><span>)</span><span>)</span><span>;</span><span>//2.3</span>
+ 
+        <span>/**
+         * abs求绝对值
+         */</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>abs</span><span>(</span><span>-</span><span>10.4</span><span>)</span><span>)</span><span>;</span>    <span>//10.4</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>abs</span><span>(</span><span>10.1</span><span>)</span><span>)</span><span>;</span>     <span>//10.1</span>
+ 
+        <span>/**
+         * ceil天花板的意思，就是返回大的值
+         */</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>ceil</span><span>(</span><span>-</span><span>10.1</span><span>)</span><span>)</span><span>;</span>   <span>//-10.0</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>ceil</span><span>(</span><span>10.7</span><span>)</span><span>)</span><span>;</span>    <span>//11.0</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>ceil</span><span>(</span><span>-</span><span>0.7</span><span>)</span><span>)</span><span>;</span>    <span>//-0.0</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>ceil</span><span>(</span><span>0.0</span><span>)</span><span>)</span><span>;</span>     <span>//0.0</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>ceil</span><span>(</span><span>-</span><span>0.0</span><span>)</span><span>)</span><span>;</span>    <span>//-0.0</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>ceil</span><span>(</span><span>-</span><span>1.7</span><span>)</span><span>)</span><span>;</span>    <span>//-1.0</span>
+ 
+        <span>/**
+         * floor地板的意思，就是返回小的值
+         */</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>floor</span><span>(</span><span>-</span><span>10.1</span><span>)</span><span>)</span><span>;</span>  <span>//-11.0</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>floor</span><span>(</span><span>10.7</span><span>)</span><span>)</span><span>;</span>   <span>//10.0</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>floor</span><span>(</span><span>-</span><span>0.7</span><span>)</span><span>)</span><span>;</span>   <span>//-1.0</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>floor</span><span>(</span><span>0.0</span><span>)</span><span>)</span><span>;</span>    <span>//0.0</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>floor</span><span>(</span><span>-</span><span>0.0</span><span>)</span><span>)</span><span>;</span>   <span>//-0.0</span>
+ 
+        <span>/**
+         * random 取得一个大于或者等于0.0小于不等于1.0的随机数
+         */</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>random</span><span>(</span><span>)</span><span>)</span><span>;</span>  <span>//小于1大于0的double类型的数</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>random</span><span>(</span><span>)</span><span>*</span><span>2</span><span>)</span><span>;</span><span>//大于0小于1的double类型的数</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>random</span><span>(</span><span>)</span><span>*</span><span>2</span><span>+</span><span>1</span><span>)</span><span>;</span><span>//大于1小于2的double类型的数</span>
+ 
+        <span>/**
+         * rint 四舍五入，返回double值
+         * 注意.5的时候会取偶数    异常的尴尬=。=
+         */</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>rint</span><span>(</span><span>10.1</span><span>)</span><span>)</span><span>;</span>    <span>//10.0</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>rint</span><span>(</span><span>10.7</span><span>)</span><span>)</span><span>;</span>    <span>//11.0</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>rint</span><span>(</span><span>11.5</span><span>)</span><span>)</span><span>;</span>    <span>//12.0</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>rint</span><span>(</span><span>10.5</span><span>)</span><span>)</span><span>;</span>    <span>//10.0</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>rint</span><span>(</span><span>10.51</span><span>)</span><span>)</span><span>;</span>   <span>//11.0</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>rint</span><span>(</span><span>-</span><span>10.5</span><span>)</span><span>)</span><span>;</span>   <span>//-10.0</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>rint</span><span>(</span><span>-</span><span>11.5</span><span>)</span><span>)</span><span>;</span>   <span>//-12.0</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>rint</span><span>(</span><span>-</span><span>10.51</span><span>)</span><span>)</span><span>;</span>  <span>//-11.0</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>rint</span><span>(</span><span>-</span><span>10.6</span><span>)</span><span>)</span><span>;</span>   <span>//-11.0</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>rint</span><span>(</span><span>-</span><span>10.2</span><span>)</span><span>)</span><span>;</span>   <span>//-10.0</span>
+ 
+        <span>/**
+         * round 四舍五入，float时返回int值，double时返回long值
+         */</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>round</span><span>(</span><span>10.1</span><span>)</span><span>)</span><span>;</span>   <span>//10</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>round</span><span>(</span><span>10.7</span><span>)</span><span>)</span><span>;</span>   <span>//11</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>round</span><span>(</span><span>10.5</span><span>)</span><span>)</span><span>;</span>   <span>//11</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>round</span><span>(</span><span>10.51</span><span>)</span><span>)</span><span>;</span>  <span>//11</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>round</span><span>(</span><span>-</span><span>10.5</span><span>)</span><span>)</span><span>;</span>  <span>//-10</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>round</span><span>(</span><span>-</span><span>10.51</span><span>)</span><span>)</span><span>;</span> <span>//-11</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>round</span><span>(</span><span>-</span><span>10.6</span><span>)</span><span>)</span><span>;</span>  <span>//-11</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>round</span><span>(</span><span>-</span><span>10.2</span><span>)</span><span>)</span><span>;</span>  <span>//-10</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br><span>68</span><br><span>69</span><br><span>70</span><br><span>71</span><br><span>72</span><br></div></div><h2 id="_3-数据类型转换"> 3 数据类型转换</h2>
+<p>Java程序中要求参与的计算的数据，必须要保证数据类型的一致性，如果数据类型不一致将发生类型的转换。</p>
+<ul>
+<li>自动（隐式）类型转换：从小类型到大类型，不需要强制转换符</li>
+<li>强制类型转换：从大类型到小类型，需要强制转换符实现强制转换，强制转换符：（需要转换成的类型）变量</li>
+</ul>
+<h3 id="_3-1-自动-隐式-转换"> 3.1 自动（隐式）转换</h3>
+<p><strong>从小类型到大类型，不需要强制转换符</strong></p>
+<p><img src="./images/Java-BasicNotes/automatic_conversion.jpg" alt="自动转换" /></p>
+<p><strong>转换原理图解</strong></p>
+<p>​	byte 类型内存占有1个字节，在和 int 类型运算时会提升为 int 类型 ，自动补充3个字节，因此计算后的结果还是 int 类 型。</p>
+<p><img src="./images/Java-BasicNotes/principle_of_automatic_conversion.jpg" alt="自动转换原理" /></p>
+<p><strong>转换规则</strong></p>
+<p>​		范围小的类型向范围大的类型提升， byte、short、char 运算时直接提升为 int 。</p>
+<p><img src="./images/Java-BasicNotes/rule_of_automatic_conversion.jpg" alt="自动转换规则" /></p>
+<h3 id="_3-2-强制-显示-转换"> 3.2 强制（显示）转换</h3>
+<p><img src="./images/Java-BasicNotes/forced_conversion.jpg" alt="强制转换" /></p>
+<p><strong>转换原理图解</strong></p>
+<p><img src="./images/Java-BasicNotes/forced_conversion_principle.jpg" alt="强制转换原理" /></p>
+<p><strong>强烈注意</strong></p>
+<p><img src="./images/Java-BasicNotes/forced_conversion_notice.jpg" alt="强制转换注意" /></p>
+<p><strong>关于+=运算</strong></p>
+<div><pre><code><span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span><span>{</span>
+	<span>short</span> s <span>=</span> <span>1</span><span>;</span>
+	s<span>+=</span><span>1</span><span>;</span>
+	<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>s<span>)</span><span>;</span>
+<span>}</span>
+
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>分析： <strong>s += 1</strong> 逻辑上看作是 <strong>s = s + 1</strong> 计算结果被提升为int类型，再向short类型赋值时发生错误，因为不能将取值范围大的类型赋值到取值范围小的类型。但是， <strong>s=s+1进行两次运算 ， += 是一个运算符，只运算一次，并带有强制转换的特点</strong>， 也就是说 <strong>s += 1 就是 s = (short)(s + 1)</strong> ，因此程序没有问题编译通过，运行结果是2.</p>
+<h4 id="关于常量变量的计算"> 关于常量变量的计算</h4>
+<div><pre><code><span>public</span> classMain <span>{</span>
+     <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
+     <span>byte</span> a <span>=</span><span>4</span><span>;</span>
+     <span>byte</span> b <span>=</span><span>6</span><span>;</span>
+     <span>byte</span> c <span>=</span> a <span>+</span> b<span>;</span>
+	<span>}</span>
+<span>}</span>
+
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><ul>
+<li>
+<p><strong>为什么byte a = 4；就不会报错？</strong></p>
+<blockquote>
+<p>因为byte是一个字节，八个二进制位，此时其范围为-128 ~ +127，所以4在其范围内，所以可以被赋值。一旦这个数值超过了127，那么编译就会报错了。</p>
+</blockquote>
+</li>
+<li>
+<p><strong>为什么byte c = a + b;就报错呢？</strong></p>
+<blockquote>
+<p>这是java的机制导致的，java在对byte这种类型进行“运算”时，会将其转换为int类型，两个int类型相加，赋值给byte类型肯定会报错的。</p>
+</blockquote>
+</li>
+<li>
+<p><strong>为什么byte = 3 + 4；又不会报错呢？</strong></p>
+<blockquote>
+<p>跟<strong>byte a = 4</strong>一样，3+4是常量的计算，会优先执行，执行结果再赋值给byte，此时判断数值是否满足该类型范围，满足就直接赋值了。</p>
+</blockquote>
+</li>
+</ul>
+<p>总结</p>
+<blockquote>
+<ul>
+<li>**两个变量相加，先对类型进行提升，然后运算，再将运算结果赋值。**b1和b2是两个变量，变量存储的值是变化的，在编译的时候无法判断里面具体的值，相加有可能会超出byte的取值范围。</li>
+<li><strong>两个常量相加，先计算常量数值，然后判断是否满足类型范围，再赋值</strong>。Java编译器有常量优化机制，在编译的时候就将常量的运算值计算出来了，而且常量运算的结果值在小数据类型的取值范围内，所以通过，如果不在小数据类型的取值范围内，编译就无法通过。</li>
+</ul>
+</blockquote>
+<h3 id="_3-3-ascii编码表"> 3.3 ASCII编码表</h3>
+<div><pre><code><span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
+	<span>//字符类型变量</span>
+	<span>char</span> c <span>=</span> <span>'a'</span><span>;</span>
+	<span>int</span> i <span>=</span> <span>1</span><span>;</span>
+	<span>//字符类型和int类型计算</span>
+	<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>c<span>+</span>i<span>)</span><span>;</span><span>//输出结果是98</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p><img src="./images/Java-BasicNotes/ASCII.jpg" alt="ASCII" /></p>
+<h2 id="_4-方法"> 4 方法</h2>
+<h3 id="jshell工具"> JShell工具</h3>
+<p>​		什么时候会用到 JShell 工具呢，当我们编写的代码非常少的时候，而又不愿意编写类，main方法，也不愿意去编译和运 行，这个时候可以使用JShell工具。 启动JShell工具，在DOS命令行直接输入JShell命令。</p>
+<p>接下来可以编写Java代码，无需写类和方法，直接写方法中的代码即可，同时无需编译和运行，直接回车即可</p>
+<p><img src="./images/Java-BasicNotes/JShell.jpg" alt="JShell" /></p>
+<h2 id="_5-流程控制语句"> 5 流程控制语句</h2>
+<h3 id="_5-1-判断语句"> 5.1 判断语句</h3>
+<p><img src="./images/Java-BasicNotes/multiple_if-else.jpg" alt="多重if-else" /></p>
+<h3 id="_5-2-循环语句"> 5.2 循环语句</h3>
+<h4 id="_5-2-1-for循环"> 5.2.1 for循环</h4>
+<div><pre><code><span>for</span><span>(</span>初始化表达式①<span>;</span> 布尔表达式②<span>;</span> 步进表达式④<span>)</span><span>{</span>
+	循环体③
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p><strong>执行流程</strong></p>
+<p>执行顺序①②③④&gt;②③④&gt;②③④…②不满足为止。</p>
+<blockquote>
+<ul>
+<li>①负责完成循环变量初始化</li>
+<li>②负责判断是否满足循环条件，不满足则跳出循环</li>
+<li>③具体执行的语句</li>
+<li>④循环后，循环条件所涉及变量的变化情况</li>
+</ul>
+</blockquote>
+<h4 id="_5-2-2-while循环"> 5.2.2 while循环</h4>
+<div><pre><code>初始化表达式①
+<span>while</span><span>(</span>布尔表达式②<span>)</span><span>{</span>
+循环体③
+步进表达式④
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>执行流程 执行顺序：①②③④&gt;②③④&gt;②③④…②不满足为止。</p>
+<blockquote>
+<ul>
+<li>①负责完成循环变量初始化。</li>
+<li>②负责判断是否满足循环条件，不满足则跳出循环。</li>
+<li>③具体执行的语句。</li>
+<li>④循环后，循环变量的变化情况。</li>
+</ul>
+</blockquote>
+<h4 id="_5-2-3-其它循环"> 5.2.3 其它循环</h4>
+<div><pre><code><span>for</span><span>(</span><span>Object</span> x <span>:</span> <span>ArrayList</span><span>)</span><span>{</span>
+	循环体
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><h3 id="_5-3-选择语句"> 5.3 选择语句</h3>
+<h4 id="switch语句"> switch语句</h4>
+<div><pre><code><span>switch</span><span>(</span>表达式<span>)</span> <span>{</span>
+<span>case</span> 常量值<span>1</span><span>:</span>
+语句体<span>1</span><span>;</span>
+<span>break</span><span>;</span>
+<span>case</span> 常量值<span>2</span><span>:</span>
+语句体<span>2</span><span>;</span>
+<span>break</span><span>;</span>
+<span>.</span><span>.</span><span>.</span>
+<span>default</span><span>:</span>
+语句体n<span>+</span><span>1</span><span>;</span>
+<span>break</span><span>;</span>
+<span>}</span>
+
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div><p>执行流程</p>
+<blockquote>
+<ol>
+<li>首先计算出表达式的值</li>
+<li>其次，和case依次比较，一旦有对应的值，就会执行相应的语句，在执行的过程中，遇到break就会结 束。</li>
+<li>最后，如果所有的case都和表达式的值不匹配，就会执行default语句体部分，然后程序结束掉。</li>
+</ol>
+</blockquote>
+<p>在switch语句中，如果case的后面不写break，将出现<code>穿透</code>现象，也就是不会在判断下一个case的值，直接向后运 行，直到遇到break，或者整体switch结束。</p>
+<div><pre><code><span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
+<span>int</span> i <span>=</span> <span>5</span><span>;</span>
+<span>switch</span> <span>(</span>i<span>)</span><span>{</span>
+<span>case</span> <span>0</span><span>:</span>
+<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"执行case0"</span><span>)</span><span>;</span>
+<span>break</span><span>;</span>
+<span>case</span> <span>5</span><span>:</span>
+<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"执行case5"</span><span>)</span><span>;</span>
+<span>case</span> <span>10</span><span>:</span>
+<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"执行case10"</span><span>)</span><span>;</span>
+<span>default</span><span>:</span>
+<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"执行default"</span><span>)</span><span>;</span>
+<span>}</span>
+<span>}</span>
+
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br></div></div><p>上述程序中，执行case5后，由于没有break语句，程序会一直向后走，不会在判断case，也不会理会break，直接 运行完整体switch。</p>
+<h3 id="_5-4-跳出语句"> 5.4 跳出语句</h3>
+<h4 id="break-终止switch或者循环"> break：终止switch或者循环</h4>
+<ul>
+<li>在选择结构switch语句中</li>
+<li>在循环语句中</li>
+<li>离开使用场景的存在是没有意义的</li>
+</ul>
+<h4 id="continue-结束本次循环-继续下一次的循环"> continue：结束本次循环，继续下一次的循环</h4>
 ]]></content:encoded>
     </item>
     <item>
@@ -11415,523 +11949,6 @@ A custom details container
 <li>实现线程安全的⽅式（重要）： ① 在JDK1.7的时候，ConcurrentHashMap（分段锁） 对整个桶 数组进⾏了分割分段(Segment)，每⼀把锁只锁容器其中⼀部分数据，多线程访问容器⾥不同数 据段的数据，就不会存在锁竞争，提⾼并发访问率。 到了 JDK1.8 的时候已经摒弃了Segment的 概念，⽽是直接⽤ Node 数组+链表+红⿊树的数据结构来实现，并发控制使⽤ synchronized 和 CAS 来操作。（JDK1.6以后 对 synchronized锁做了很多优化） 整个看起来就像是优化过且线 程安全的 HashMap，虽然在JDK1.8中还能看到 Segment 的数据结构，但是已经简化了属性，只 是为了兼容旧版本；② Hashtable(同⼀把锁) :使⽤ synchronized 来保证线程安全，效率⾮常 低下。当⼀个线程访问同步⽅法时，其他线程也访问同步⽅法，可能会进⼊阻塞或轮询状态，如 使⽤ put 添加元素，另⼀个线程不能使⽤ put 添加元素，也不能使⽤ get，竞争会越来越激烈 效率越低。</li>
 </ul>
 </blockquote>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Java-基础知识笔记</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/java/Java-BasicNotes/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/java/Java-BasicNotes/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Java-基础知识笔记</source>
-      <description>Java-基础知识笔记</description>
-      <pubDate>Sat, 08 Aug 2020 12:39:22 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="参考"> 参考</h2>
-<blockquote>
-<ul>
-<li><a href="http://www.51gjie.com/" target="_blank" rel="noopener noreferrer">JavaSchool</a></li>
-<li><a href="https://www.liaoxuefeng.com/wiki/1252599548343744" target="_blank" rel="noopener noreferrer">廖雪峰Java教程</a></li>
-</ul>
-</blockquote>
-<h2 id="_1-数据类型"> 1 数据类型</h2>
-<p>Java的数据类型分为两大类：</p>
-<ul>
-<li>
-<p><strong>基本数据类型</strong>：包括 整数 、 浮点数 、 字符 、 布尔 。</p>
-</li>
-<li>
-<p><strong>引用数据类型</strong>：包括 类 、 数组 、 接口 。</p>
-</li>
-</ul>
-<p><img src="./images/Java-BasicNotes/dataType.jpg" alt="" /></p>
-<p><img src="./images/Java-BasicNotes/data_type_exercise.jpg" alt="" /></p>
-<h3 id="_1-1-整型"> 1.1 整型</h3>
-<p>整型用于表示没有小数部分的数值， 它允许是负数。Java 提供了 4 种整型，具体内容如下</p>
-<p><img src="./images/Java-BasicNotes/Java_Integer.jpg" alt="xx" /></p>
-<h4 id="注意"> 注意</h4>
-<p>int类型声明为L时会报错，需要向下转型。long类型声明时可以加或不加<code>L或l</code></p>
-<div><pre><code><span>int</span> a <span>=</span> <span>10L</span><span>;</span><span>//报错</span>
-<span>int</span> b <span>=</span> <span>(</span><span>int</span><span>)</span><span>10L</span><span>;</span><span>//正确</span>
-<span>long</span> c <span>=</span> <span>10L</span><span>;</span><span>//正确</span>
-<span>long</span> d <span>=</span> <span>10</span><span>;</span><span>//正确,相当于向上转型</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h3 id="_1-2-浮点类型"> 1.2 浮点类型</h3>
-<p>浮点类型用于表示有小数部分的数值。在 Java 中有两种浮点类型</p>
-<p><img src="./images/Java-BasicNotes/float.jpg" alt="" /></p>
-<p>​		double 表示这种类型的数值精度是 float 类型的两倍（有人称之为双精度数值)。<strong>绝大部分应用程序都采用 double 类型</strong>。在很多情况下，<strong>float 类型的精度很难满足需求</strong>。实际上，只有很少的情况适合使用 float 类型，例如，需要单精度数据的库， 或者需要存储大量数据。 float 类型的数值有一个后缀 F 或 f (例如，3.14F。) 没有后缀 F 的浮点数值（如 3.14 ) 默 认为 double 类型。当然，也可以在浮点数值后面添加后缀 D 或 d (例如，3.14D) 。</p>
-<h4 id="注意-2"> 注意</h4>
-<p>声明<code>float</code>时必须要加<code>F或f</code>，但是如果是整数则不用</p>
-<div><pre><code><span>float</span> a <span>=</span> <span>10</span><span>;</span><span>//正确</span>
-<span>float</span> b <span>=</span> <span>10.5F</span><span>;</span><span>//正确</span>
-<span>float</span> c <span>=</span> <span>10.5</span><span>;</span><span>//报错</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p><code>double</code>类型可加可不加D或d，因为声明为小数时，小数默认是double类型</p>
-<div><pre><code><span>double</span> a <span>=</span> <span>10</span><span>;</span><span>//正确</span>
-<span>double</span> b <span>=</span> <span>10.5</span><span>;</span><span>//正确</span>
-<span>double</span> c <span>=</span> <span>10.5D</span><span>;</span><span>//正确,D可加可不加</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><h3 id="_1-3-char类型"> 1.3 char类型</h3>
-<p>​		char 类型原本用于表示单个字符。不过，现在情况已经有所变化。 如今，有些 Unicode 字符可以用一个 chai•值描述，另外一些 Unicode 字符则需要两个 char 值。有关的详细信息请 阅读下一节。 char 类型的字面量值要用单引号括起来。例如：W 是编码值为 65 所对应的字符常量。 它与 &quot;A&quot; 不同，&quot;A&quot; 是包含一个字符 A 的字符串, char 类型的值可以表示为十六进制值，其 范围从 \u0000 到 \Uffff。例如：W2122 表示注册符号 ( ), \u03C0 表示希腊字母 it。 除了转义序列 \u 之外， 还有一些用于表示特殊字符的转义序列， 请参看表 3-3。所有这 些转义序列都可以出现在加引号的字符字面量或字符串中。例如，’ \02丨22' 或 &quot;1 110\11”。转 义序列 \u还可以出现在加引号的字符常量或字符串之外（而其他所有转义序列不可以）。例 如： public static void main(String\u005B\ u00SD args) 就完全符合语法规则， \u005B 和 \u005D 是 [ 和 ] 的编码</p>
-<p><img src="./images/Java-BasicNotes/escape_sequence_for_special_characters.jpg" alt="特殊字符的转义序列" /></p>
-<h3 id="_1-4-boolean类型"> 1.4 boolean类型</h3>
-<p>boolean (布尔）类型有两个值：false 和 true, 用来判定逻辑条件 整型值和布尔值之间 不能进行相互转换。</p>
-<h2 id="_2-访问修饰符"> 2. 访问修饰符</h2>
-<p><img src="https://img-blog.csdn.net/2018031609431326?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L2d4MTc4NjQzNzM4MjI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="" /></p>
-<ul>
-<li><strong>private</strong>
-被private修饰的属性和方法，不能被其他类访问，子类不能继承也不能访问。只能在所在类内部访问。</li>
-<li><strong>default</strong>
-变量或者方法前没有访问修饰符时，可以被所在类访问，可以被同一包内的其他类访问 或者继承。但是不能被其他包访问。</li>
-<li><strong>protected</strong>
-被protected修饰的方法和属性，在同一包内可被访问和继承。不同包内，子类可继承，非子类不能访问。</li>
-<li><strong>public</strong>
-方法和属性前有public修饰，可以被任意包内的类访问。
-另外，类要想被其他包导入，必须声明为public。被public修饰的类，类名必须与文件名相同。</li>
-</ul>
-<h2 id="_2-运算符"> 2 运算符</h2>
-<h3 id="_2-1-算术运算符"> 2.1 算术运算符</h3>
-<p><img src="./images/Java-BasicNotes/arithmetic_operator_1.jpg" alt="" /></p>
-<p>Java中，整数使用以上运算符，无论怎么计算，也不会得到小数。</p>
-<p><img src="./images/Java-BasicNotes/arithmetic_operator_2.jpg" alt="" /></p>
-<p>++ 运算，变量自己增长1。反之， -- 运算，变量自己减少1，用法与 ++ 一致。</p>
-<ul>
-<li>
-<p>独立运算：</p>
-<ul>
-<li>变量在独立运算时， 前++ 和 后++ 没有区别 。</li>
-<li>变量 前++ ：例如 ++i 。</li>
-<li>变量 后++ ：例如 i++ 。</li>
-</ul>
-</li>
-<li>
-<p>混合运算：</p>
-<ul>
-<li>
-<p>和其他变量放在一起， 前++ 和 后++ 就产生了不同。</p>
-<p><img src="./images/Java-BasicNotes/++Calculation_1.jpg" alt="" /></p>
-</li>
-<li>
-<p>变量 前++ ：变量a自己加1，将加1后的结果赋值给b，也就是说a先计算。a和b的结果都是2。</p>
-<p><img src="./images/Java-BasicNotes/++Calculation_2.jpg" alt="" /></p>
-</li>
-</ul>
-</li>
-</ul>
-<p>在 Java 中，使用算术运算符 + 、-、 * 、/ 表示加、减、 乘、除运算。 <strong>当参与 / 运算的两个 操作数都是整数时， 表示整数除法；否则， 表示浮点除法</strong>。 整数的求余操作（有时称为取模) 用 ％ 表示。例如，15/2 等于 ，7 15%2 等于 1 , 15.0/2 等于 7.50 需要注意， 整数被 0 除将会产生一个异常， 而浮点数被 0 除将会得到无穷大或 NaN 结果。</p>
-<h3 id="_2-2-赋值运算符"> 2.2 赋值运算符</h3>
-<p><img src="./images/Java-BasicNotes/assignment_operator_1.jpg" alt="" /></p>
-<p><img src="./images/Java-BasicNotes/assignment_operator_2.jpg" alt="" /></p>
-<h3 id="_2-3-比较运算符"> 2.3 比较运算符</h3>
-<p><img src="./images/Java-BasicNotes/Comparison_operator_1.jpg" alt="" /></p>
-<p><img src="./images/Java-BasicNotes/Comparison_operator_2.jpg" alt="" /></p>
-<h4 id="instanceof-比较一个对象是否为一个类的实例-或某个接口的实现类"> instanceof：比较一个对象是否为一个类的实例/或某个接口的实现类</h4>
-<p>参考</p>
-<blockquote>
-<ul>
-<li>https://www.cnblogs.com/ysocean/p/8486500.html</li>
-</ul>
-</blockquote>
-<p>基础用法</p>
-<div><pre><code><span>boolean</span> result <span>=</span> obj <span>instanceof</span> <span>Class</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>其中 <code>obj</code> 为一个对象，<code>Class</code> 表示一个类或者一个接口，当 <code>obj</code> 为 <code>Class</code> 的对象，或者是其直接或间接子类，或者是其接口的实现类，结果result 都返回 true，否则返回false。</p>
-<p>原理：</p>
-<blockquote>
-<p><strong>编译器会检查 <code>obj</code> 是否能转换成右边的<code>class</code>类型，如果不能转换则直接报错，如果不能确定类型，则通过编译，具体看运行时定。</strong></p>
-</blockquote>
-<h5 id="其他情况"> 其他情况</h5>
-<ul>
-<li>
-<p>obj 必须为引用类型，不能是基本类型</p>
-<div><pre><code><span>int</span> i <span>=</span> <span>0</span><span>;</span>
-<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>i <span>instanceof</span> <span>Integer</span><span>)</span><span>;</span><span>//编译不通过</span>
-<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>i <span>instanceof</span> <span>Object</span><span>)</span><span>;</span><span>//编译不通过</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div></li>
-<li>
-<p>obj 为 null</p>
-<div><pre><code><span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>null</span> <span>instanceof</span> <span>Object</span><span>)</span><span>;</span><span>//false</span>
-</code></pre>
-<div><span>1</span><br></div></div></li>
-<li>
-<p>obj 为 class 接口的实现类</p>
-<div><pre><code>
-</code></pre>
-<div><span>1</span><br></div></div></li>
-<li>
-<p>我们可以用 <code>instanceof</code> 运算符判断 某个对象是否是 <code>List</code> 接口的实现类，如果是返回 true，否则返回 false</p>
-<div><pre><code><span>ArrayList</span> arrayList <span>=</span> <span>new</span> <span>ArrayList</span><span>(</span><span>)</span><span>;</span>
-<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>arrayList <span>instanceof</span> <span>List</span><span>)</span><span>;</span><span>//true</span>
-
-<span>List</span> list <span>=</span> <span>new</span> <span>ArrayList</span><span>(</span><span>)</span><span>;</span>
-<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>list <span>instanceof</span> <span>ArrayList</span><span>)</span><span>;</span><span>//true</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div></li>
-<li>
-<p>obj 为 class 类的直接或间接子类</p>
-<div><pre><code><span>public</span> <span>class</span> <span>Person</span> <span>{</span>
- 
-<span>}</span>
-
-<span>public</span> <span>class</span> <span>Man</span> <span>extends</span> <span>Person</span><span>{</span>
-     
-<span>}</span>
-
-<span>Person</span> p1 <span>=</span> <span>new</span> <span>Person</span><span>(</span><span>)</span><span>;</span>
-<span>Person</span> p2 <span>=</span> <span>new</span> <span>Man</span><span>(</span><span>)</span><span>;</span>
-<span>Man</span> m1 <span>=</span> <span>new</span> <span>Man</span><span>(</span><span>)</span><span>;</span>
-<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>p1 <span>instanceof</span> <span>Man</span><span>)</span><span>;</span><span>//false</span>
-<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>p2 <span>instanceof</span> <span>Man</span><span>)</span><span>;</span><span>//true</span>
-<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>m1 <span>instanceof</span> <span>Man</span><span>)</span><span>;</span><span>//true</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br></div></div></li>
-</ul>
-<h5 id="原理"> 原理</h5>
-<p>参考</p>
-<blockquote>
-<ul>
-<li>https://docs.oracle.com/javase/specs/jls/se8/html/jls-15.html#jls-15.20.2</li>
-</ul>
-</blockquote>
-<p>伪代码描述</p>
-<div><pre><code><span>boolean</span> result<span>;</span>
-<span>if</span> <span>(</span>obj <span>==</span> <span>null</span><span>)</span> <span>{</span>
-  result <span>=</span> <span>false</span><span>;</span>
-<span>}</span> <span>else</span> <span>{</span>
-  <span>try</span> <span>{</span>
-      <span>T</span> temp <span>=</span> <span>(</span><span>T</span><span>)</span> obj<span>;</span> <span>// checkcast</span>
-      result <span>=</span> <span>true</span><span>;</span>
-  <span>}</span> <span>catch</span> <span>(</span><span>ClassCastException</span> e<span>)</span> <span>{</span>
-      result <span>=</span> <span>false</span><span>;</span>
-  <span>}</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><p>所以</p>
-<div><pre><code><span>Person</span> p1 <span>=</span> <span>new</span> <span>Person</span><span>(</span><span>)</span><span>;</span>
- 
-<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>p1 <span>instanceof</span> <span>String</span><span>)</span><span>;</span><span>//编译报错</span>
-<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>p1 <span>instanceof</span> <span>List</span><span>)</span><span>;</span><span>//false</span>
-<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>p1 <span>instanceof</span> <span>List</span><span><span>&lt;</span><span>?</span><span>></span></span><span>)</span><span>;</span><span>//false</span>
-<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>p1 <span>instanceof</span> <span>List</span><span><span>&lt;</span><span>Person</span><span>></span></span><span>)</span><span>;</span><span>//编译报错</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>也就是说有表达式 obj instanceof T，instanceof 运算符的 obj 操作数的类型必须是引用类型或空类型; 否则，会发生编译时错误。</p>
-<p>如果 obj 强制转换为 T 时发生编译错误，则关系表达式的 instanceof 同样会产生编译时错误。 在这种情况下，表达式实例的结果永远为false。</p>
-<p>在运行时，如果 T 的值不为null，并且 obj 可以转换为 T 而不引发ClassCastException，则instanceof运算符的结果为true。 否则结果是错误的</p>
-<p>简单来说就是：<strong>如果 obj 不为 null 并且 (T) obj 不抛 ClassCastException 异常则该表达式值为 true ，否则值为 false 。</strong></p>
-<p>总结</p>
-<blockquote>
-<ul>
-<li>https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.instanceof</li>
-</ul>
-</blockquote>
-<h3 id="_2-4-逻辑运算符"> 2.4 逻辑运算符</h3>
-<p><img src="./images/Java-BasicNotes/logical_operators_1.jpg" alt="" /></p>
-<p><img src="./images/Java-BasicNotes/logical_operators_2.jpg" alt="" /></p>
-<h3 id="_2-5-三元运算符"> 2.5 三元运算符</h3>
-<p><strong>三元运算符格式：</strong></p>
-<div><pre><code>数据类型 变量名 = 布尔类型表达式？结果1：结果2
-</code></pre>
-<div><span>1</span><br></div></div><p><strong>三元运算符计算方式：</strong></p>
-<ul>
-<li>布尔类型表达式结果是true，三元运算符整体结果为结果1，赋值给变量。</li>
-<li>布尔类型表达式结果是false，三元运算符整体结果为结果2，赋值给变量。</li>
-</ul>
-<p><img src="./images/Java-BasicNotes/ternary_operator.jpg" alt="" /></p>
-<h3 id="_2-6-位运算符"> 2.6 位运算符</h3>
-<ul>
-<li>&amp;：按位与。当两位同时为1时才返回1。</li>
-<li>|：按位或。只要有一位为1即可返回1。</li>
-<li>~：按位非。单目运算符，将操作数的每个位（包括符号位）全部取反。</li>
-<li>^：按位异或。当两位相同时返回0，不同时返回1。</li>
-<li>&lt;&lt;：左移运算符。</li>
-<li>&gt;&gt;：右移运算符。</li>
-<li>&gt;&gt;&gt;：无符号右移运算符。</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">符号</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">&amp;：按位与</td>
-<td>当两位同时为1时才返回1，否则返回0</td>
-</tr>
-<tr>
-<td style="text-align:center">|：按位或</td>
-<td>只要有一位为1即可返回1</td>
-</tr>
-<tr>
-<td style="text-align:center">~：按位非</td>
-<td>单目运算符，将操作数的每个位（包括符号位）全部取反</td>
-</tr>
-<tr>
-<td style="text-align:center">^：按位异或</td>
-<td>当两位相同时返回0，不同时返回1</td>
-</tr>
-<tr>
-<td style="text-align:center">&lt;&lt;：左移运算符</td>
-<td>左移运算符</td>
-</tr>
-<tr>
-<td style="text-align:center">&gt;&gt;：右移运算符</td>
-<td>右移运算符，例如 &gt;&gt; 2则代表除于2</td>
-</tr>
-<tr>
-<td style="text-align:center">&gt;&gt;&gt;：无符号右移运算符</td>
-<td>无符号右移运算符</td>
-</tr>
-</tbody>
-</table>
-<h3 id="_2-7-数学函数与常量math"> 2.7 数学函数与常量Math</h3>
-<p>在 Math类中，包含了各种各样的数学函数。在编写不同类别的程序时，可能需要的函数也不同。</p>
-<p><img src="./images/Java-BasicNotes/math_methods_1.jpg" alt="" /></p>
-<p><img src="./images/Java-BasicNotes/math_methods_2.jpg" alt="" /></p>
-<div><pre><code><span>/**
-         *Math.sqrt()//计算平方根
-         *Math.cbrt()//计算立方根
-         *Math.pow(a, b)//计算a的b次方
-         *Math.max( , );//计算最大值
-         *Math.min( , );//计算最小值
-         */</span>
- 
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>sqrt</span><span>(</span><span>16</span><span>)</span><span>)</span><span>;</span>   <span>//4.0</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>cbrt</span><span>(</span><span>8</span><span>)</span><span>)</span><span>;</span>    <span>//2.0</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>pow</span><span>(</span><span>3</span><span>,</span><span>2</span><span>)</span><span>)</span><span>;</span>     <span>//9.0</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>max</span><span>(</span><span>2.3</span><span>,</span><span>4.5</span><span>)</span><span>)</span><span>;</span><span>//4.5</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>min</span><span>(</span><span>2.3</span><span>,</span><span>4.5</span><span>)</span><span>)</span><span>;</span><span>//2.3</span>
- 
-        <span>/**
-         * abs求绝对值
-         */</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>abs</span><span>(</span><span>-</span><span>10.4</span><span>)</span><span>)</span><span>;</span>    <span>//10.4</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>abs</span><span>(</span><span>10.1</span><span>)</span><span>)</span><span>;</span>     <span>//10.1</span>
- 
-        <span>/**
-         * ceil天花板的意思，就是返回大的值
-         */</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>ceil</span><span>(</span><span>-</span><span>10.1</span><span>)</span><span>)</span><span>;</span>   <span>//-10.0</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>ceil</span><span>(</span><span>10.7</span><span>)</span><span>)</span><span>;</span>    <span>//11.0</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>ceil</span><span>(</span><span>-</span><span>0.7</span><span>)</span><span>)</span><span>;</span>    <span>//-0.0</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>ceil</span><span>(</span><span>0.0</span><span>)</span><span>)</span><span>;</span>     <span>//0.0</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>ceil</span><span>(</span><span>-</span><span>0.0</span><span>)</span><span>)</span><span>;</span>    <span>//-0.0</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>ceil</span><span>(</span><span>-</span><span>1.7</span><span>)</span><span>)</span><span>;</span>    <span>//-1.0</span>
- 
-        <span>/**
-         * floor地板的意思，就是返回小的值
-         */</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>floor</span><span>(</span><span>-</span><span>10.1</span><span>)</span><span>)</span><span>;</span>  <span>//-11.0</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>floor</span><span>(</span><span>10.7</span><span>)</span><span>)</span><span>;</span>   <span>//10.0</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>floor</span><span>(</span><span>-</span><span>0.7</span><span>)</span><span>)</span><span>;</span>   <span>//-1.0</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>floor</span><span>(</span><span>0.0</span><span>)</span><span>)</span><span>;</span>    <span>//0.0</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>floor</span><span>(</span><span>-</span><span>0.0</span><span>)</span><span>)</span><span>;</span>   <span>//-0.0</span>
- 
-        <span>/**
-         * random 取得一个大于或者等于0.0小于不等于1.0的随机数
-         */</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>random</span><span>(</span><span>)</span><span>)</span><span>;</span>  <span>//小于1大于0的double类型的数</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>random</span><span>(</span><span>)</span><span>*</span><span>2</span><span>)</span><span>;</span><span>//大于0小于1的double类型的数</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>random</span><span>(</span><span>)</span><span>*</span><span>2</span><span>+</span><span>1</span><span>)</span><span>;</span><span>//大于1小于2的double类型的数</span>
- 
-        <span>/**
-         * rint 四舍五入，返回double值
-         * 注意.5的时候会取偶数    异常的尴尬=。=
-         */</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>rint</span><span>(</span><span>10.1</span><span>)</span><span>)</span><span>;</span>    <span>//10.0</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>rint</span><span>(</span><span>10.7</span><span>)</span><span>)</span><span>;</span>    <span>//11.0</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>rint</span><span>(</span><span>11.5</span><span>)</span><span>)</span><span>;</span>    <span>//12.0</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>rint</span><span>(</span><span>10.5</span><span>)</span><span>)</span><span>;</span>    <span>//10.0</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>rint</span><span>(</span><span>10.51</span><span>)</span><span>)</span><span>;</span>   <span>//11.0</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>rint</span><span>(</span><span>-</span><span>10.5</span><span>)</span><span>)</span><span>;</span>   <span>//-10.0</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>rint</span><span>(</span><span>-</span><span>11.5</span><span>)</span><span>)</span><span>;</span>   <span>//-12.0</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>rint</span><span>(</span><span>-</span><span>10.51</span><span>)</span><span>)</span><span>;</span>  <span>//-11.0</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>rint</span><span>(</span><span>-</span><span>10.6</span><span>)</span><span>)</span><span>;</span>   <span>//-11.0</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>rint</span><span>(</span><span>-</span><span>10.2</span><span>)</span><span>)</span><span>;</span>   <span>//-10.0</span>
- 
-        <span>/**
-         * round 四舍五入，float时返回int值，double时返回long值
-         */</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>round</span><span>(</span><span>10.1</span><span>)</span><span>)</span><span>;</span>   <span>//10</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>round</span><span>(</span><span>10.7</span><span>)</span><span>)</span><span>;</span>   <span>//11</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>round</span><span>(</span><span>10.5</span><span>)</span><span>)</span><span>;</span>   <span>//11</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>round</span><span>(</span><span>10.51</span><span>)</span><span>)</span><span>;</span>  <span>//11</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>round</span><span>(</span><span>-</span><span>10.5</span><span>)</span><span>)</span><span>;</span>  <span>//-10</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>round</span><span>(</span><span>-</span><span>10.51</span><span>)</span><span>)</span><span>;</span> <span>//-11</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>round</span><span>(</span><span>-</span><span>10.6</span><span>)</span><span>)</span><span>;</span>  <span>//-11</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>Math</span><span>.</span><span>round</span><span>(</span><span>-</span><span>10.2</span><span>)</span><span>)</span><span>;</span>  <span>//-10</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br><span>68</span><br><span>69</span><br><span>70</span><br><span>71</span><br><span>72</span><br></div></div><h2 id="_3-数据类型转换"> 3 数据类型转换</h2>
-<p>Java程序中要求参与的计算的数据，必须要保证数据类型的一致性，如果数据类型不一致将发生类型的转换。</p>
-<ul>
-<li>自动（隐式）类型转换：从小类型到大类型，不需要强制转换符</li>
-<li>强制类型转换：从大类型到小类型，需要强制转换符实现强制转换，强制转换符：（需要转换成的类型）变量</li>
-</ul>
-<h3 id="_3-1-自动-隐式-转换"> 3.1 自动（隐式）转换</h3>
-<p><strong>从小类型到大类型，不需要强制转换符</strong></p>
-<p><img src="./images/Java-BasicNotes/automatic_conversion.jpg" alt="自动转换" /></p>
-<p><strong>转换原理图解</strong></p>
-<p>​	byte 类型内存占有1个字节，在和 int 类型运算时会提升为 int 类型 ，自动补充3个字节，因此计算后的结果还是 int 类 型。</p>
-<p><img src="./images/Java-BasicNotes/principle_of_automatic_conversion.jpg" alt="自动转换原理" /></p>
-<p><strong>转换规则</strong></p>
-<p>​		范围小的类型向范围大的类型提升， byte、short、char 运算时直接提升为 int 。</p>
-<p><img src="./images/Java-BasicNotes/rule_of_automatic_conversion.jpg" alt="自动转换规则" /></p>
-<h3 id="_3-2-强制-显示-转换"> 3.2 强制（显示）转换</h3>
-<p><img src="./images/Java-BasicNotes/forced_conversion.jpg" alt="强制转换" /></p>
-<p><strong>转换原理图解</strong></p>
-<p><img src="./images/Java-BasicNotes/forced_conversion_principle.jpg" alt="强制转换原理" /></p>
-<p><strong>强烈注意</strong></p>
-<p><img src="./images/Java-BasicNotes/forced_conversion_notice.jpg" alt="强制转换注意" /></p>
-<p><strong>关于+=运算</strong></p>
-<div><pre><code><span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span><span>{</span>
-	<span>short</span> s <span>=</span> <span>1</span><span>;</span>
-	s<span>+=</span><span>1</span><span>;</span>
-	<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>s<span>)</span><span>;</span>
-<span>}</span>
-
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>分析： <strong>s += 1</strong> 逻辑上看作是 <strong>s = s + 1</strong> 计算结果被提升为int类型，再向short类型赋值时发生错误，因为不能将取值范围大的类型赋值到取值范围小的类型。但是， <strong>s=s+1进行两次运算 ， += 是一个运算符，只运算一次，并带有强制转换的特点</strong>， 也就是说 <strong>s += 1 就是 s = (short)(s + 1)</strong> ，因此程序没有问题编译通过，运行结果是2.</p>
-<h4 id="关于常量变量的计算"> 关于常量变量的计算</h4>
-<div><pre><code><span>public</span> classMain <span>{</span>
-     <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-     <span>byte</span> a <span>=</span><span>4</span><span>;</span>
-     <span>byte</span> b <span>=</span><span>6</span><span>;</span>
-     <span>byte</span> c <span>=</span> a <span>+</span> b<span>;</span>
-	<span>}</span>
-<span>}</span>
-
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><ul>
-<li>
-<p><strong>为什么byte a = 4；就不会报错？</strong></p>
-<blockquote>
-<p>因为byte是一个字节，八个二进制位，此时其范围为-128 ~ +127，所以4在其范围内，所以可以被赋值。一旦这个数值超过了127，那么编译就会报错了。</p>
-</blockquote>
-</li>
-<li>
-<p><strong>为什么byte c = a + b;就报错呢？</strong></p>
-<blockquote>
-<p>这是java的机制导致的，java在对byte这种类型进行“运算”时，会将其转换为int类型，两个int类型相加，赋值给byte类型肯定会报错的。</p>
-</blockquote>
-</li>
-<li>
-<p><strong>为什么byte = 3 + 4；又不会报错呢？</strong></p>
-<blockquote>
-<p>跟<strong>byte a = 4</strong>一样，3+4是常量的计算，会优先执行，执行结果再赋值给byte，此时判断数值是否满足该类型范围，满足就直接赋值了。</p>
-</blockquote>
-</li>
-</ul>
-<p>总结</p>
-<blockquote>
-<ul>
-<li>**两个变量相加，先对类型进行提升，然后运算，再将运算结果赋值。**b1和b2是两个变量，变量存储的值是变化的，在编译的时候无法判断里面具体的值，相加有可能会超出byte的取值范围。</li>
-<li><strong>两个常量相加，先计算常量数值，然后判断是否满足类型范围，再赋值</strong>。Java编译器有常量优化机制，在编译的时候就将常量的运算值计算出来了，而且常量运算的结果值在小数据类型的取值范围内，所以通过，如果不在小数据类型的取值范围内，编译就无法通过。</li>
-</ul>
-</blockquote>
-<h3 id="_3-3-ascii编码表"> 3.3 ASCII编码表</h3>
-<div><pre><code><span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-	<span>//字符类型变量</span>
-	<span>char</span> c <span>=</span> <span>'a'</span><span>;</span>
-	<span>int</span> i <span>=</span> <span>1</span><span>;</span>
-	<span>//字符类型和int类型计算</span>
-	<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>c<span>+</span>i<span>)</span><span>;</span><span>//输出结果是98</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p><img src="./images/Java-BasicNotes/ASCII.jpg" alt="ASCII" /></p>
-<h2 id="_4-方法"> 4 方法</h2>
-<h3 id="jshell工具"> JShell工具</h3>
-<p>​		什么时候会用到 JShell 工具呢，当我们编写的代码非常少的时候，而又不愿意编写类，main方法，也不愿意去编译和运 行，这个时候可以使用JShell工具。 启动JShell工具，在DOS命令行直接输入JShell命令。</p>
-<p>接下来可以编写Java代码，无需写类和方法，直接写方法中的代码即可，同时无需编译和运行，直接回车即可</p>
-<p><img src="./images/Java-BasicNotes/JShell.jpg" alt="JShell" /></p>
-<h2 id="_5-流程控制语句"> 5 流程控制语句</h2>
-<h3 id="_5-1-判断语句"> 5.1 判断语句</h3>
-<p><img src="./images/Java-BasicNotes/multiple_if-else.jpg" alt="多重if-else" /></p>
-<h3 id="_5-2-循环语句"> 5.2 循环语句</h3>
-<h4 id="_5-2-1-for循环"> 5.2.1 for循环</h4>
-<div><pre><code><span>for</span><span>(</span>初始化表达式①<span>;</span> 布尔表达式②<span>;</span> 步进表达式④<span>)</span><span>{</span>
-	循环体③
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p><strong>执行流程</strong></p>
-<p>执行顺序①②③④&gt;②③④&gt;②③④…②不满足为止。</p>
-<blockquote>
-<ul>
-<li>①负责完成循环变量初始化</li>
-<li>②负责判断是否满足循环条件，不满足则跳出循环</li>
-<li>③具体执行的语句</li>
-<li>④循环后，循环条件所涉及变量的变化情况</li>
-</ul>
-</blockquote>
-<h4 id="_5-2-2-while循环"> 5.2.2 while循环</h4>
-<div><pre><code>初始化表达式①
-<span>while</span><span>(</span>布尔表达式②<span>)</span><span>{</span>
-循环体③
-步进表达式④
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>执行流程 执行顺序：①②③④&gt;②③④&gt;②③④…②不满足为止。</p>
-<blockquote>
-<ul>
-<li>①负责完成循环变量初始化。</li>
-<li>②负责判断是否满足循环条件，不满足则跳出循环。</li>
-<li>③具体执行的语句。</li>
-<li>④循环后，循环变量的变化情况。</li>
-</ul>
-</blockquote>
-<h4 id="_5-2-3-其它循环"> 5.2.3 其它循环</h4>
-<div><pre><code><span>for</span><span>(</span><span>Object</span> x <span>:</span> <span>ArrayList</span><span>)</span><span>{</span>
-	循环体
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><h3 id="_5-3-选择语句"> 5.3 选择语句</h3>
-<h4 id="switch语句"> switch语句</h4>
-<div><pre><code><span>switch</span><span>(</span>表达式<span>)</span> <span>{</span>
-<span>case</span> 常量值<span>1</span><span>:</span>
-语句体<span>1</span><span>;</span>
-<span>break</span><span>;</span>
-<span>case</span> 常量值<span>2</span><span>:</span>
-语句体<span>2</span><span>;</span>
-<span>break</span><span>;</span>
-<span>.</span><span>.</span><span>.</span>
-<span>default</span><span>:</span>
-语句体n<span>+</span><span>1</span><span>;</span>
-<span>break</span><span>;</span>
-<span>}</span>
-
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div><p>执行流程</p>
-<blockquote>
-<ol>
-<li>首先计算出表达式的值</li>
-<li>其次，和case依次比较，一旦有对应的值，就会执行相应的语句，在执行的过程中，遇到break就会结 束。</li>
-<li>最后，如果所有的case都和表达式的值不匹配，就会执行default语句体部分，然后程序结束掉。</li>
-</ol>
-</blockquote>
-<p>在switch语句中，如果case的后面不写break，将出现<code>穿透</code>现象，也就是不会在判断下一个case的值，直接向后运 行，直到遇到break，或者整体switch结束。</p>
-<div><pre><code><span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-<span>int</span> i <span>=</span> <span>5</span><span>;</span>
-<span>switch</span> <span>(</span>i<span>)</span><span>{</span>
-<span>case</span> <span>0</span><span>:</span>
-<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"执行case0"</span><span>)</span><span>;</span>
-<span>break</span><span>;</span>
-<span>case</span> <span>5</span><span>:</span>
-<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"执行case5"</span><span>)</span><span>;</span>
-<span>case</span> <span>10</span><span>:</span>
-<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"执行case10"</span><span>)</span><span>;</span>
-<span>default</span><span>:</span>
-<span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"执行default"</span><span>)</span><span>;</span>
-<span>}</span>
-<span>}</span>
-
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br></div></div><p>上述程序中，执行case5后，由于没有break语句，程序会一直向后走，不会在判断case，也不会理会break，直接 运行完整体switch。</p>
-<h3 id="_5-4-跳出语句"> 5.4 跳出语句</h3>
-<h4 id="break-终止switch或者循环"> break：终止switch或者循环</h4>
-<ul>
-<li>在选择结构switch语句中</li>
-<li>在循环语句中</li>
-<li>离开使用场景的存在是没有意义的</li>
-</ul>
-<h4 id="continue-结束本次循环-继续下一次的循环"> continue：结束本次循环，继续下一次的循环</h4>
 ]]></content:encoded>
     </item>
     <item>
@@ -16979,38 +16996,6 @@ java.lang.invoke.MethodHandle实例的解析结果REF_getStatic、REF_putStatic�
       <enclosure url="https://user-gold-cdn.xitu.io/2020/3/18/170ecae266df65ba?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" type="image/"/>
     </item>
     <item>
-      <title>概述/参考</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/java/java-JVM/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/java/java-JVM/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">概述/参考</source>
-      <pubDate>Mon, 10 May 2021 00:20:01 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="参考"> 参考</h2>
-<div><p>参考</p>
-<ul>
-<li>https://blog.csdn.net/qq_41701956/article/details/81664921</li>
-<li><a href="https://www.bilibili.com/video/BV1PJ411n7xZ" target="_blank" rel="noopener noreferrer">尚硅谷</a></li>
-<li><a href="https://blog.csdn.net/TZ845195485/article/details/93238857" target="_blank" rel="noopener noreferrer">笔记参考</a></li>
-<li><a href="https://juejin.cn/post/6844904095937986567" target="_blank" rel="noopener noreferrer">笔记参考2</a></li>
-<li><a href="https://juejin.cn/post/6844904095937986567" target="_blank" rel="noopener noreferrer">笔记参考3</a></li>
-</ul>
-</div>
-<h3 id="官方规范参考"> 官方规范参考</h3>
-<div><p>官方规范参考</p>
-<ul>
-<li>https://docs.oracle.com/javase/specs/index.html</li>
-</ul>
-</div>
-<h2 id="学习思维导图"> 学习思维导图</h2>
-<p>参考</p>
-<ul>
-<li><a href="https://blog.csdn.net/CSDN_WHS/article/details/102728250?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-2.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-2.control" target="_blank" rel="noopener noreferrer">jvm学习路线</a></li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/20191024174120206.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NTRE5fV0hT,size_16,color_FFFFFF,t_70" alt="" /></p>
-<p><img src="https://img-blog.csdnimg.cn/2020052921054496.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNDMxMTcx,size_16,color_FFFFFF,t_70" alt="" /></p>
-]]></content:encoded>
-      <enclosure url="https://img-blog.csdnimg.cn/20191024174120206.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NTRE5fV0hT,size_16,color_FFFFFF,t_70" type="image/"/>
-    </item>
-    <item>
       <title>JVM</title>
       <link>https://vuepress-theme-hope-demo.mrhope.site/java/java-JVM/Java-JVM/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/java/java-JVM/Java-JVM/</guid>
@@ -17652,6 +17637,38 @@ java.lang.invoke.MethodHandle实例的解析结果REF_getStatic、REF_putStatic�
 </ul>
 <p>:::</p>
 ]]></content:encoded>
+    </item>
+    <item>
+      <title>概述/参考</title>
+      <link>https://vuepress-theme-hope-demo.mrhope.site/java/java-JVM/</link>
+      <guid>https://vuepress-theme-hope-demo.mrhope.site/java/java-JVM/</guid>
+      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">概述/参考</source>
+      <pubDate>Mon, 10 May 2021 00:20:01 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="参考"> 参考</h2>
+<div><p>参考</p>
+<ul>
+<li>https://blog.csdn.net/qq_41701956/article/details/81664921</li>
+<li><a href="https://www.bilibili.com/video/BV1PJ411n7xZ" target="_blank" rel="noopener noreferrer">尚硅谷</a></li>
+<li><a href="https://blog.csdn.net/TZ845195485/article/details/93238857" target="_blank" rel="noopener noreferrer">笔记参考</a></li>
+<li><a href="https://juejin.cn/post/6844904095937986567" target="_blank" rel="noopener noreferrer">笔记参考2</a></li>
+<li><a href="https://juejin.cn/post/6844904095937986567" target="_blank" rel="noopener noreferrer">笔记参考3</a></li>
+</ul>
+</div>
+<h3 id="官方规范参考"> 官方规范参考</h3>
+<div><p>官方规范参考</p>
+<ul>
+<li>https://docs.oracle.com/javase/specs/index.html</li>
+</ul>
+</div>
+<h2 id="学习思维导图"> 学习思维导图</h2>
+<p>参考</p>
+<ul>
+<li><a href="https://blog.csdn.net/CSDN_WHS/article/details/102728250?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-2.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-2.control" target="_blank" rel="noopener noreferrer">jvm学习路线</a></li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20191024174120206.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NTRE5fV0hT,size_16,color_FFFFFF,t_70" alt="" /></p>
+<p><img src="https://img-blog.csdnimg.cn/2020052921054496.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNDMxMTcx,size_16,color_FFFFFF,t_70" alt="" /></p>
+]]></content:encoded>
+      <enclosure url="https://img-blog.csdnimg.cn/20191024174120206.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NTRE5fV0hT,size_16,color_FFFFFF,t_70" type="image/"/>
     </item>
     <item>
       <title>Java多线程-1</title>
@@ -22289,7 +22306,7 @@ pipe.execute<span>(</span><span>)</span>
       <link>https://vuepress-theme-hope-demo.mrhope.site/mybatis/Mybatis-reverse-project&amp;Example-use/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/mybatis/Mybatis-reverse-project&amp;Example-use/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Mybatis逆向工程&amp;Example类使用</source>
-      <pubDate>Tue, 25 Jan 2022 07:41:56 GMT</pubDate>
+      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="_1-参考"> 1. 参考</h2>
 <blockquote>
 <ul>
@@ -24744,21 +24761,21 @@ server <span>{</span>
       <link>https://vuepress-theme-hope-demo.mrhope.site/project/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/project/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">My Project</source>
-      <pubDate>Tue, 25 Jan 2022 07:41:56 GMT</pubDate>
+      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
     </item>
     <item>
       <title>Blog Home</title>
       <link>https://vuepress-theme-hope-demo.mrhope.site/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Blog Home</source>
-      <pubDate>Tue, 25 Jan 2022 07:41:56 GMT</pubDate>
+      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
     </item>
     <item>
       <title>Slide page</title>
       <link>https://vuepress-theme-hope-demo.mrhope.site/slides/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/slides/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Slide page</source>
-      <pubDate>Tue, 25 Jan 2022 07:41:56 GMT</pubDate>
+      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://vuepress-theme-hope-demo.mrhope.site/logo.svg" type="image/svg+xml"/>
@@ -25541,7 +25558,7 @@ server <span>{</span>
       <link>https://vuepress-theme-hope-demo.mrhope.site/spring/Spring/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/spring/Spring/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Spring基础笔记</source>
-      <pubDate>Tue, 25 Jan 2022 07:41:56 GMT</pubDate>
+      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>Tips</p>
 <ul>
@@ -26219,6 +26236,149 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
 ]]></content:encoded>
     </item>
     <item>
+      <title>EasyExcel导入导出Excel</title>
+      <link>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/EasyExcel-use/</link>
+      <guid>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/EasyExcel-use/</guid>
+      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">EasyExcel导入导出Excel</source>
+      <pubDate>Thu, 01 Oct 2020 22:35:50 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="参考"> 参考</h2>
+<blockquote>
+<ul>
+<li>官方文档：https://www.yuque.com/easyexcel/doc/easyexcel</li>
+<li>封装类：https://www.cnblogs.com/proper128/p/12827495.html</li>
+</ul>
+</blockquote>
+<h2 id="实体类"> 实体类</h2>
+<h3 id="demodata"> DemoData</h3>
+<div><pre><code><span>@Data</span>
+<span>public</span> <span>class</span> <span>DemoData</span> <span>{</span>
+    <span>@ExcelProperty</span><span>(</span>value <span>=</span> <span>"id"</span><span>)</span>
+    <span>private</span> <span>Integer</span> id<span>;</span>
+
+    <span>@ExcelProperty</span><span>(</span>value <span>=</span> <span>"title"</span><span>)</span>
+    <span>private</span> <span>String</span> title<span>;</span>
+
+    <span>@ExcelProperty</span><span>(</span>value <span>=</span> <span>"date"</span><span>)</span>
+    <span>private</span> <span>Date</span> date<span>;</span>
+
+    <span>@ExcelProperty</span><span>(</span>value <span>=</span> <span>"doubleData"</span><span>)</span>
+    <span>private</span> <span>Double</span> doubleData<span>;</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br></div></div><h2 id="简单写"> 简单写</h2>
+<div><pre><code><span>//要写出来的路径</span>
+<span>private</span> <span>final</span> <span>static</span> <span>String</span> PATH <span>=</span> <span>"C:\\Users\\a1138\\OneDrive\\桌面\\simpleWrite.xlsx"</span><span>;</span>
+<span>//从数据库查询出来的List</span>
+<span>List</span><span><span>&lt;</span><span>DemoData</span><span>></span></span> list <span>=</span> demoDataMapper<span>.</span><span>selectByExample</span><span>(</span><span>null</span><span>)</span><span>;</span>
+<span>//调用方法</span>
+<span>EasyExcel</span><span>.</span><span>write</span><span>(</span>PATH<span>,</span> <span>DemoData</span><span>.</span><span>class</span><span>)</span><span>.</span><span>sheet</span><span>(</span><span>"sheet名字"</span><span>)</span><span>.</span><span>doWrite</span><span>(</span>list<span>)</span><span>;</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><h2 id="简单读"> 简单读</h2>
+<p>监听类，用于分析读出来的每条数据和批量插入。Dao方法可以作为参数接收进来</p>
+<h3 id="demodatalistener"> DemoDataListener</h3>
+<div><pre><code><span>// 有个很重要的点 DemoDataListener 不能被spring管理，要每次读取excel都要new,然后里面用到spring可以构造方法传进去</span>
+<span>public</span> <span>class</span> <span>DemoDataListener</span> <span>extends</span> <span>AnalysisEventListener</span><span><span>&lt;</span><span>DemoData</span><span>></span></span> <span>{</span>
+    <span>private</span> <span>static</span> <span>final</span> <span>Logger</span> LOGGER <span>=</span> <span>LoggerFactory</span><span>.</span><span>getLogger</span><span>(</span><span>DemoDataListener</span><span>.</span><span>class</span><span>)</span><span>;</span>
+    <span>/**
+     * 每隔5条存储数据库，实际使用中可以3000条，然后清理list ，方便内存回收
+     */</span>
+    <span>private</span> <span>static</span> <span>final</span> <span>int</span> BATCH_COUNT <span>=</span> <span>5</span><span>;</span>
+    <span>List</span><span><span>&lt;</span><span>DemoData</span><span>></span></span> list <span>=</span> <span>new</span> <span>ArrayList</span><span><span>&lt;</span><span>DemoData</span><span>></span></span><span>(</span><span>)</span><span>;</span>
+    <span>/**
+     * 假设这个是一个DAO，当然有业务逻辑这个也可以是一个service。当然如果不用存储这个对象没用。
+     */</span>
+    <span>private</span> <span>DemoDataMapper</span> demoDataMapper<span>;</span>
+
+    <span>/**
+     * 如果使用了spring,请使用这个构造方法。每次创建Listener的时候需要把spring管理的类传进来
+     *
+     * @param demoDataMapper
+     */</span>
+    <span>public</span> <span>DemoDataListener</span><span>(</span><span>DemoDataMapper</span> demoDataMapper<span>)</span> <span>{</span>
+        <span>this</span><span>.</span>demoDataMapper <span>=</span> demoDataMapper<span>;</span>
+    <span>}</span>
+    <span>/**
+     * 这个每一条数据解析都会来调用
+     *
+     * @param data
+     *            one row value. Is is same as {@link AnalysisContext#readRowHolder()}
+     * @param context
+     */</span>
+    <span>@Override</span>
+    <span>public</span> <span>void</span> <span>invoke</span><span>(</span><span>DemoData</span> data<span>,</span> <span>AnalysisContext</span> context<span>)</span> <span>{</span>
+        LOGGER<span>.</span><span>info</span><span>(</span><span>"解析到一条数据:{}"</span><span>,</span> JSON<span>.</span><span>toJSONString</span><span>(</span>data<span>)</span><span>)</span><span>;</span>
+        list<span>.</span><span>add</span><span>(</span>data<span>)</span><span>;</span>
+        <span>// 达到BATCH_COUNT了，需要去存储一次数据库，防止数据几万条数据在内存，容易OOM</span>
+        <span>if</span> <span>(</span>list<span>.</span><span>size</span><span>(</span><span>)</span> <span>>=</span> BATCH_COUNT<span>)</span> <span>{</span>
+            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"插入一次数据库"</span><span>)</span><span>;</span>
+            <span>saveData</span><span>(</span><span>)</span><span>;</span>
+            <span>// 存储完成清理 list</span>
+            list<span>.</span><span>clear</span><span>(</span><span>)</span><span>;</span>
+        <span>}</span>
+    <span>}</span>
+    <span>/**
+     * 所有数据解析完成了 都会来调用
+     *
+     * @param context
+     */</span>
+    <span>@Override</span>
+    <span>public</span> <span>void</span> <span>doAfterAllAnalysed</span><span>(</span><span>AnalysisContext</span> context<span>)</span> <span>{</span>
+        <span>// 这里也要保存数据，确保最后遗留的数据也存储到数据库</span>
+        <span>saveData</span><span>(</span><span>)</span><span>;</span>
+        LOGGER<span>.</span><span>info</span><span>(</span><span>"所有数据解析完成！"</span><span>)</span><span>;</span>
+    <span>}</span>
+    <span>/**
+     * 加上存储数据库
+     */</span>
+    <span>private</span> <span>void</span> <span>saveData</span><span>(</span><span>)</span> <span>{</span>
+        LOGGER<span>.</span><span>info</span><span>(</span><span>"{}条数据，开始存储数据库！"</span><span>,</span> list<span>.</span><span>size</span><span>(</span><span>)</span><span>)</span><span>;</span>
+        demoDataMapper<span>.</span><span>batchInsert</span><span>(</span>list<span>)</span><span>;</span>
+        LOGGER<span>.</span><span>info</span><span>(</span><span>"存储数据库成功！"</span><span>)</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br></div></div><p>之后调用方法</p>
+<div><pre><code><span>// 要读的文件。映射方式是标题</span>
+<span>private</span> <span>final</span> <span>static</span> <span>String</span> PATH <span>=</span> <span>"C:\\Users\\a1138\\OneDrive\\桌面\\simpleWrite.xlsx"</span><span>;</span>
+<span>// 这里 需要指定读用哪个class去读，然后读取第一个sheet 文件流会自动关闭。将Dao方法作为构造参数传入</span>
+<span>EasyExcel</span><span>.</span><span>read</span><span>(</span>PATH<span>,</span> <span>DemoData</span><span>.</span><span>class</span><span>,</span> <span>new</span> <span>DemoDataListener</span><span>(</span>demoDataMapper<span>)</span><span>)</span><span>.</span><span>sheet</span><span>(</span><span>)</span><span>.</span><span>doRead</span><span>(</span><span>)</span><span>;</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h2 id="web导出下载"> Web导出下载</h2>
+<h3 id="controller"> controller</h3>
+<div><pre><code>    <span>@GetMapping</span><span>(</span><span>"/exportExcel"</span><span>)</span>
+    <span>public</span> <span>void</span> <span>exportExcel</span><span>(</span><span>HttpServletResponse</span> response<span>)</span> <span>throws</span> <span>IOException</span> <span>{</span>
+        demoDataService<span>.</span><span>exportExcel</span><span>(</span>response<span>)</span><span>;</span>
+    <span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h3 id="serviceimpl"> serviceImpl</h3>
+<div><pre><code>    <span>@Override</span>
+    <span>public</span> <span>void</span> <span>exportExcel</span><span>(</span><span>HttpServletResponse</span> response<span>)</span> <span>throws</span> <span>IOException</span> <span>{</span>
+        <span>// 这里注意 有同学反应使用swagger 会导致各种问题，请直接用浏览器或者用postman</span>
+        response<span>.</span><span>setContentType</span><span>(</span><span>"application/vnd.ms-excel"</span><span>)</span><span>;</span>
+        response<span>.</span><span>setCharacterEncoding</span><span>(</span><span>"utf-8"</span><span>)</span><span>;</span>
+        <span>// 这里URLEncoder.encode可以防止中文乱码 当然和easyexcel没有关系</span>
+        <span>String</span> fileName <span>=</span> <span>"导出demoData"</span><span>;</span>
+        response<span>.</span><span>setHeader</span><span>(</span><span>"Content-disposition"</span><span>,</span> <span>"attachment;filename="</span> <span>+</span> fileName <span>+</span> <span>".xlsx"</span><span>)</span><span>;</span>
+        <span>List</span><span><span>&lt;</span><span>DemoData</span><span>></span></span> list <span>=</span> demoDataMapper<span>.</span><span>selectByExample</span><span>(</span><span>null</span><span>)</span>
+        <span>EasyExcel</span><span>.</span><span>write</span><span>(</span>response<span>.</span><span>getOutputStream</span><span>(</span><span>)</span><span>,</span> <span>DemoData</span><span>.</span><span>class</span><span>)</span><span>.</span><span>sheet</span><span>(</span><span>"模板"</span><span>)</span><span>.</span><span>doWrite</span><span>(</span>list<span>)</span><span>;</span>
+    <span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><h2 id="web导入"> Web导入</h2>
+<h3 id="controller-2"> controller</h3>
+<div><pre><code>    <span>@PostMapping</span><span>(</span><span>"/importExcel"</span><span>)</span>
+    <span>public</span> <span>void</span> <span>importExcel</span><span>(</span><span>MultipartFile</span> file<span>)</span> <span>throws</span> <span>IOException</span> <span>{</span>
+        demoDataService<span>.</span><span>importExcel</span><span>(</span>file<span>)</span><span>;</span>
+    <span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h3 id="serviceimpl-2"> serviceImpl</h3>
+<div><pre><code>    <span>@Override</span>
+    <span>public</span> <span>void</span> <span>importExcel</span><span>(</span><span>MultipartFile</span> file<span>)</span> <span>throws</span> <span>IOException</span> <span>{</span>
+        <span>EasyExcel</span><span>.</span><span>read</span><span>(</span>file<span>.</span><span>getInputStream</span><span>(</span><span>)</span><span>,</span> <span>DemoData</span><span>.</span><span>class</span><span>,</span> <span>new</span> <span>DemoDataListener</span><span>(</span>demoDataMapper<span>)</span><span>)</span><span>.</span><span>sheet</span><span>(</span><span>0</span><span>)</span><span>.</span><span>doRead</span><span>(</span><span>)</span><span>;</span>
+    <span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div>]]></content:encoded>
+    </item>
+    <item>
       <title>IDEA初始化SpringBoot项目+逆向工程+配置</title>
       <link>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/IDEA-Initial-Springboot+reverse-project+Configuration/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/IDEA-Initial-Springboot+reverse-project+Configuration/</guid>
@@ -26807,241 +26967,6 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
       <enclosure url="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/IDEA-Initial-Springboot/%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F.jpg" type="image/jpeg"/>
     </item>
     <item>
-      <title>EasyExcel导入导出Excel</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/EasyExcel-use/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/EasyExcel-use/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">EasyExcel导入导出Excel</source>
-      <pubDate>Thu, 01 Oct 2020 22:35:50 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="参考"> 参考</h2>
-<blockquote>
-<ul>
-<li>官方文档：https://www.yuque.com/easyexcel/doc/easyexcel</li>
-<li>封装类：https://www.cnblogs.com/proper128/p/12827495.html</li>
-</ul>
-</blockquote>
-<h2 id="实体类"> 实体类</h2>
-<h3 id="demodata"> DemoData</h3>
-<div><pre><code><span>@Data</span>
-<span>public</span> <span>class</span> <span>DemoData</span> <span>{</span>
-    <span>@ExcelProperty</span><span>(</span>value <span>=</span> <span>"id"</span><span>)</span>
-    <span>private</span> <span>Integer</span> id<span>;</span>
-
-    <span>@ExcelProperty</span><span>(</span>value <span>=</span> <span>"title"</span><span>)</span>
-    <span>private</span> <span>String</span> title<span>;</span>
-
-    <span>@ExcelProperty</span><span>(</span>value <span>=</span> <span>"date"</span><span>)</span>
-    <span>private</span> <span>Date</span> date<span>;</span>
-
-    <span>@ExcelProperty</span><span>(</span>value <span>=</span> <span>"doubleData"</span><span>)</span>
-    <span>private</span> <span>Double</span> doubleData<span>;</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br></div></div><h2 id="简单写"> 简单写</h2>
-<div><pre><code><span>//要写出来的路径</span>
-<span>private</span> <span>final</span> <span>static</span> <span>String</span> PATH <span>=</span> <span>"C:\\Users\\a1138\\OneDrive\\桌面\\simpleWrite.xlsx"</span><span>;</span>
-<span>//从数据库查询出来的List</span>
-<span>List</span><span><span>&lt;</span><span>DemoData</span><span>></span></span> list <span>=</span> demoDataMapper<span>.</span><span>selectByExample</span><span>(</span><span>null</span><span>)</span><span>;</span>
-<span>//调用方法</span>
-<span>EasyExcel</span><span>.</span><span>write</span><span>(</span>PATH<span>,</span> <span>DemoData</span><span>.</span><span>class</span><span>)</span><span>.</span><span>sheet</span><span>(</span><span>"sheet名字"</span><span>)</span><span>.</span><span>doWrite</span><span>(</span>list<span>)</span><span>;</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><h2 id="简单读"> 简单读</h2>
-<p>监听类，用于分析读出来的每条数据和批量插入。Dao方法可以作为参数接收进来</p>
-<h3 id="demodatalistener"> DemoDataListener</h3>
-<div><pre><code><span>// 有个很重要的点 DemoDataListener 不能被spring管理，要每次读取excel都要new,然后里面用到spring可以构造方法传进去</span>
-<span>public</span> <span>class</span> <span>DemoDataListener</span> <span>extends</span> <span>AnalysisEventListener</span><span><span>&lt;</span><span>DemoData</span><span>></span></span> <span>{</span>
-    <span>private</span> <span>static</span> <span>final</span> <span>Logger</span> LOGGER <span>=</span> <span>LoggerFactory</span><span>.</span><span>getLogger</span><span>(</span><span>DemoDataListener</span><span>.</span><span>class</span><span>)</span><span>;</span>
-    <span>/**
-     * 每隔5条存储数据库，实际使用中可以3000条，然后清理list ，方便内存回收
-     */</span>
-    <span>private</span> <span>static</span> <span>final</span> <span>int</span> BATCH_COUNT <span>=</span> <span>5</span><span>;</span>
-    <span>List</span><span><span>&lt;</span><span>DemoData</span><span>></span></span> list <span>=</span> <span>new</span> <span>ArrayList</span><span><span>&lt;</span><span>DemoData</span><span>></span></span><span>(</span><span>)</span><span>;</span>
-    <span>/**
-     * 假设这个是一个DAO，当然有业务逻辑这个也可以是一个service。当然如果不用存储这个对象没用。
-     */</span>
-    <span>private</span> <span>DemoDataMapper</span> demoDataMapper<span>;</span>
-
-    <span>/**
-     * 如果使用了spring,请使用这个构造方法。每次创建Listener的时候需要把spring管理的类传进来
-     *
-     * @param demoDataMapper
-     */</span>
-    <span>public</span> <span>DemoDataListener</span><span>(</span><span>DemoDataMapper</span> demoDataMapper<span>)</span> <span>{</span>
-        <span>this</span><span>.</span>demoDataMapper <span>=</span> demoDataMapper<span>;</span>
-    <span>}</span>
-    <span>/**
-     * 这个每一条数据解析都会来调用
-     *
-     * @param data
-     *            one row value. Is is same as {@link AnalysisContext#readRowHolder()}
-     * @param context
-     */</span>
-    <span>@Override</span>
-    <span>public</span> <span>void</span> <span>invoke</span><span>(</span><span>DemoData</span> data<span>,</span> <span>AnalysisContext</span> context<span>)</span> <span>{</span>
-        LOGGER<span>.</span><span>info</span><span>(</span><span>"解析到一条数据:{}"</span><span>,</span> JSON<span>.</span><span>toJSONString</span><span>(</span>data<span>)</span><span>)</span><span>;</span>
-        list<span>.</span><span>add</span><span>(</span>data<span>)</span><span>;</span>
-        <span>// 达到BATCH_COUNT了，需要去存储一次数据库，防止数据几万条数据在内存，容易OOM</span>
-        <span>if</span> <span>(</span>list<span>.</span><span>size</span><span>(</span><span>)</span> <span>>=</span> BATCH_COUNT<span>)</span> <span>{</span>
-            <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"插入一次数据库"</span><span>)</span><span>;</span>
-            <span>saveData</span><span>(</span><span>)</span><span>;</span>
-            <span>// 存储完成清理 list</span>
-            list<span>.</span><span>clear</span><span>(</span><span>)</span><span>;</span>
-        <span>}</span>
-    <span>}</span>
-    <span>/**
-     * 所有数据解析完成了 都会来调用
-     *
-     * @param context
-     */</span>
-    <span>@Override</span>
-    <span>public</span> <span>void</span> <span>doAfterAllAnalysed</span><span>(</span><span>AnalysisContext</span> context<span>)</span> <span>{</span>
-        <span>// 这里也要保存数据，确保最后遗留的数据也存储到数据库</span>
-        <span>saveData</span><span>(</span><span>)</span><span>;</span>
-        LOGGER<span>.</span><span>info</span><span>(</span><span>"所有数据解析完成！"</span><span>)</span><span>;</span>
-    <span>}</span>
-    <span>/**
-     * 加上存储数据库
-     */</span>
-    <span>private</span> <span>void</span> <span>saveData</span><span>(</span><span>)</span> <span>{</span>
-        LOGGER<span>.</span><span>info</span><span>(</span><span>"{}条数据，开始存储数据库！"</span><span>,</span> list<span>.</span><span>size</span><span>(</span><span>)</span><span>)</span><span>;</span>
-        demoDataMapper<span>.</span><span>batchInsert</span><span>(</span>list<span>)</span><span>;</span>
-        LOGGER<span>.</span><span>info</span><span>(</span><span>"存储数据库成功！"</span><span>)</span><span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br></div></div><p>之后调用方法</p>
-<div><pre><code><span>// 要读的文件。映射方式是标题</span>
-<span>private</span> <span>final</span> <span>static</span> <span>String</span> PATH <span>=</span> <span>"C:\\Users\\a1138\\OneDrive\\桌面\\simpleWrite.xlsx"</span><span>;</span>
-<span>// 这里 需要指定读用哪个class去读，然后读取第一个sheet 文件流会自动关闭。将Dao方法作为构造参数传入</span>
-<span>EasyExcel</span><span>.</span><span>read</span><span>(</span>PATH<span>,</span> <span>DemoData</span><span>.</span><span>class</span><span>,</span> <span>new</span> <span>DemoDataListener</span><span>(</span>demoDataMapper<span>)</span><span>)</span><span>.</span><span>sheet</span><span>(</span><span>)</span><span>.</span><span>doRead</span><span>(</span><span>)</span><span>;</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h2 id="web导出下载"> Web导出下载</h2>
-<h3 id="controller"> controller</h3>
-<div><pre><code>    <span>@GetMapping</span><span>(</span><span>"/exportExcel"</span><span>)</span>
-    <span>public</span> <span>void</span> <span>exportExcel</span><span>(</span><span>HttpServletResponse</span> response<span>)</span> <span>throws</span> <span>IOException</span> <span>{</span>
-        demoDataService<span>.</span><span>exportExcel</span><span>(</span>response<span>)</span><span>;</span>
-    <span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h3 id="serviceimpl"> serviceImpl</h3>
-<div><pre><code>    <span>@Override</span>
-    <span>public</span> <span>void</span> <span>exportExcel</span><span>(</span><span>HttpServletResponse</span> response<span>)</span> <span>throws</span> <span>IOException</span> <span>{</span>
-        <span>// 这里注意 有同学反应使用swagger 会导致各种问题，请直接用浏览器或者用postman</span>
-        response<span>.</span><span>setContentType</span><span>(</span><span>"application/vnd.ms-excel"</span><span>)</span><span>;</span>
-        response<span>.</span><span>setCharacterEncoding</span><span>(</span><span>"utf-8"</span><span>)</span><span>;</span>
-        <span>// 这里URLEncoder.encode可以防止中文乱码 当然和easyexcel没有关系</span>
-        <span>String</span> fileName <span>=</span> <span>"导出demoData"</span><span>;</span>
-        response<span>.</span><span>setHeader</span><span>(</span><span>"Content-disposition"</span><span>,</span> <span>"attachment;filename="</span> <span>+</span> fileName <span>+</span> <span>".xlsx"</span><span>)</span><span>;</span>
-        <span>List</span><span><span>&lt;</span><span>DemoData</span><span>></span></span> list <span>=</span> demoDataMapper<span>.</span><span>selectByExample</span><span>(</span><span>null</span><span>)</span>
-        <span>EasyExcel</span><span>.</span><span>write</span><span>(</span>response<span>.</span><span>getOutputStream</span><span>(</span><span>)</span><span>,</span> <span>DemoData</span><span>.</span><span>class</span><span>)</span><span>.</span><span>sheet</span><span>(</span><span>"模板"</span><span>)</span><span>.</span><span>doWrite</span><span>(</span>list<span>)</span><span>;</span>
-    <span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><h2 id="web导入"> Web导入</h2>
-<h3 id="controller-2"> controller</h3>
-<div><pre><code>    <span>@PostMapping</span><span>(</span><span>"/importExcel"</span><span>)</span>
-    <span>public</span> <span>void</span> <span>importExcel</span><span>(</span><span>MultipartFile</span> file<span>)</span> <span>throws</span> <span>IOException</span> <span>{</span>
-        demoDataService<span>.</span><span>importExcel</span><span>(</span>file<span>)</span><span>;</span>
-    <span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h3 id="serviceimpl-2"> serviceImpl</h3>
-<div><pre><code>    <span>@Override</span>
-    <span>public</span> <span>void</span> <span>importExcel</span><span>(</span><span>MultipartFile</span> file<span>)</span> <span>throws</span> <span>IOException</span> <span>{</span>
-        <span>EasyExcel</span><span>.</span><span>read</span><span>(</span>file<span>.</span><span>getInputStream</span><span>(</span><span>)</span><span>,</span> <span>DemoData</span><span>.</span><span>class</span><span>,</span> <span>new</span> <span>DemoDataListener</span><span>(</span>demoDataMapper<span>)</span><span>)</span><span>.</span><span>sheet</span><span>(</span><span>0</span><span>)</span><span>.</span><span>doRead</span><span>(</span><span>)</span><span>;</span>
-    <span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div>]]></content:encoded>
-    </item>
-    <item>
-      <title>服务器上部署SpringBoot</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/Server-deployment-SpringBoot/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/Server-deployment-SpringBoot/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">服务器上部署SpringBoot</source>
-      <pubDate>Sun, 05 Jul 2020 13:33:29 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="_1-第一种-打包为jar包"> 1. 第一种:打包为jar包</h2>
-<h3 id="_1-1-pom-xml配置"> 1.1 pom.xml配置</h3>
-<p>在<strong>pom.xml</strong>里面配置如下</p>
-<div><pre><code><span><span><span>&lt;</span>package</span><span>></span></span>jar<span><span><span>&lt;/</span>package</span><span>></span></span>
-</code></pre>
-<div><span>1</span><br></div></div><h3 id="_1-2-打包为jar包"> 1.2 打包为jar包</h3>
-<p>点击右边的<strong>Maven</strong>的<strong>clean</strong>，<strong>package</strong>后并运行会打包成<strong>jar</strong>包在<strong>target</strong>下</p>
-<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Server-deployment-SpringBoot/jar_start_pack.jpg" alt="har开始打包" /></p>
-<p>打包成功后的路径如下</p>
-<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Server-deployment-SpringBoot/jar_pack_succes.jpg" alt="jar打包成功" /></p>
-<h3 id="_1-3-查看要使用的服务器端口是否被占用"> 1.3 查看要使用的服务器端口是否被占用</h3>
-<div><pre><code><span>lsof</span> -i tcp:8885
-</code></pre>
-<div><span>1</span><br></div></div><p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Server-deployment-SpringBoot/view_port.jpg" alt="查看端口" /></p>
-<p>上方是已经运行的springboot项目在8885端口</p>
-<p>如果端口被占用，就需要杀死进程(也可用于关闭spirngboot项目)，但建议一开始就寻找空端口并在springboot项目配置</p>
-<div><pre><code><span>kill</span> -9 <span>18689</span> <span>#进程PID</span>
-</code></pre>
-<div><span>1</span><br></div></div><h3 id="_1-4-将jar包上传到服务器并运行下面linux命令永久启动"> 1.4 将jar包上传到服务器并运行下面Linux命令永久启动</h3>
-<div><pre><code><span>nohup</span> java -jar XXX.jar <span>></span>/dev/null <span><span>2</span>></span><span>&amp;1</span> <span>&amp;</span>
-</code></pre>
-<div><span>1</span><br></div></div><blockquote>
-<p>如果仅仅是用java命令运行jar包，在退出远程连接时项目会关闭</p>
-</blockquote>
-<h3 id="_1-5-将域名指向端口号"> 1.5 将域名指向端口号</h3>
-<p>可以配置在<strong>80</strong>端口这样默认域名访问，不需要通过后面加端口号</p>
-<blockquote>
-<p>TODO:指定在其它端口使用域名指向</p>
-</blockquote>
-<h2 id="_2-第二种-打包为war包"> 2. 第二种:打包为war包</h2>
-<h3 id="_2-1-pom-xml配置"> 2.1 pom.xml配置</h3>
-<div><pre><code><span><span><span>&lt;</span>package</span><span>></span></span>war<span><span><span>&lt;/</span>package</span><span>></span></span>
-
-<span>&lt;!-- 找到spring-boot-starter-web依赖节点 --></span>
-<span><span><span>&lt;</span>dependency</span><span>></span></span>
-    <span><span><span>&lt;</span>groupId</span><span>></span></span>org.springframework.boot<span><span><span>&lt;/</span>groupId</span><span>></span></span>
-    <span><span><span>&lt;</span>artifactId</span><span>></span></span>spring-boot-starter-web<span><span><span>&lt;/</span>artifactId</span><span>></span></span>
-    <span>&lt;!-- 移除嵌入式tomcat插件 --></span>
-    <span><span><span>&lt;</span>exclusions</span><span>></span></span>
-        <span><span><span>&lt;</span>exclusion</span><span>></span></span>
-            <span><span><span>&lt;</span>groupId</span><span>></span></span>org.springframework.boot<span><span><span>&lt;/</span>groupId</span><span>></span></span>
-            <span><span><span>&lt;</span>artifactId</span><span>></span></span>spring-boot-starter-tomcat<span><span><span>&lt;/</span>artifactId</span><span>></span></span>
-        <span><span><span>&lt;/</span>exclusion</span><span>></span></span>
-    <span><span><span>&lt;/</span>exclusions</span><span>></span></span>
-<span><span><span>&lt;/</span>dependency</span><span>></span></span>
-
-<span>&lt;!-- 添加tomcat依赖 --></span>
-<span><span><span>&lt;</span>dependency</span><span>></span></span>
- <span><span><span>&lt;</span>groupId</span><span>></span></span>org.springframework.boot<span><span><span>&lt;/</span>groupId</span><span>></span></span>
- <span><span><span>&lt;</span>artifactId</span><span>></span></span>spring-boot-starter-tomcat<span><span><span>&lt;/</span>artifactId</span><span>></span></span>
- <span><span><span>&lt;</span>scope</span><span>></span></span>provided<span><span><span>&lt;/</span>scope</span><span>></span></span>
-<span><span><span>&lt;/</span>dependency</span><span>></span></span>
-
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br></div></div><h3 id="_2-2-修改启动类-并重写初始化方法"> 2.2 修改启动类，并重写初始化方法</h3>
-<div><pre><code><span>@SpringBootApplication</span>
-<span>public</span> <span>class</span> <span>Application</span> <span>extends</span> <span>SpringBootServletInitializer</span> <span>{</span>
-
-    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
-        <span>SpringApplication</span><span>.</span><span>run</span><span>(</span><span>Application</span><span>.</span><span>class</span><span>,</span> args<span>)</span><span>;</span>
-        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"ヾ(◍°∇°◍)ﾉﾞ    bootdo启动成功      ヾ(◍°∇°◍)ﾉﾞ\n"</span> <span>+</span>
-                <span>" ______                    _   ______            \n"</span> <span>+</span>
-                <span>"|_   _ \\                  / |_|_   _ `.          \n"</span> <span>+</span>
-                <span>"  | |_) |   .--.    .--. `| |-' | | `. \\  .--.   \n"</span> <span>+</span>
-                <span>"  |  __'. / .'`\\ \\/ .'`\\ \\| |   | |  | |/ .'`\\ \\ \n"</span> <span>+</span>
-                <span>" _| |__) || \\__. || \\__. || |, _| |_.' /| \\__. | \n"</span> <span>+</span>
-                <span>"|_______/  '.__.'  '.__.' \\__/|______.'  '.__.'  "</span><span>)</span><span>;</span>
-    <span>}</span>
-
-    <span>@Override</span>
-    <span>protected</span> <span>SpringApplicationBuilder</span> <span>configure</span><span>(</span><span>SpringApplicationBuilder</span> builder<span>)</span> <span>{</span>
-        <span>// 注意这里要指向原先用main方法执行的Application启动类</span>
-        <span>return</span> builder<span>.</span><span>sources</span><span>(</span><span>Application</span><span>.</span><span>class</span><span>)</span><span>;</span>
-    <span>}</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br></div></div><h3 id="_2-3-打包为war包"> 2.3 打包为war包</h3>
-<p>与上面相同</p>
-<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Server-deployment-SpringBoot/jar_start_pack.jpg" alt="jar开始打包" /></p>
-<p>打包成功后的路径如下</p>
-<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Server-deployment-SpringBoot/war_pack_success.jpg" alt="war打包成功" /></p>
-<h3 id="_2-4-上传到服务器上的tomcat里的webapps即可"> 2.4 上传到服务器上的Tomcat里的webapps即可</h3>
-<p>这时候可以用域名指向项目而无需指定端口</p>
-]]></content:encoded>
-      <enclosure url="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Server-deployment-SpringBoot/jar_start_pack.jpg" type="image/jpeg"/>
-    </item>
-    <item>
       <title>JWT认证原理(更新中)</title>
       <link>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/JWT-Authorization/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/JWT-Authorization/</guid>
@@ -27165,6 +27090,98 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
 <h2 id="springboot整合jwt"> SpringBoot整合JWT</h2>
 ]]></content:encoded>
       <enclosure url="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/JWT-Authorization/signature.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>服务器上部署SpringBoot</title>
+      <link>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/Server-deployment-SpringBoot/</link>
+      <guid>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/Server-deployment-SpringBoot/</guid>
+      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">服务器上部署SpringBoot</source>
+      <pubDate>Sun, 05 Jul 2020 13:33:29 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="_1-第一种-打包为jar包"> 1. 第一种:打包为jar包</h2>
+<h3 id="_1-1-pom-xml配置"> 1.1 pom.xml配置</h3>
+<p>在<strong>pom.xml</strong>里面配置如下</p>
+<div><pre><code><span><span><span>&lt;</span>package</span><span>></span></span>jar<span><span><span>&lt;/</span>package</span><span>></span></span>
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="_1-2-打包为jar包"> 1.2 打包为jar包</h3>
+<p>点击右边的<strong>Maven</strong>的<strong>clean</strong>，<strong>package</strong>后并运行会打包成<strong>jar</strong>包在<strong>target</strong>下</p>
+<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Server-deployment-SpringBoot/jar_start_pack.jpg" alt="har开始打包" /></p>
+<p>打包成功后的路径如下</p>
+<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Server-deployment-SpringBoot/jar_pack_succes.jpg" alt="jar打包成功" /></p>
+<h3 id="_1-3-查看要使用的服务器端口是否被占用"> 1.3 查看要使用的服务器端口是否被占用</h3>
+<div><pre><code><span>lsof</span> -i tcp:8885
+</code></pre>
+<div><span>1</span><br></div></div><p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Server-deployment-SpringBoot/view_port.jpg" alt="查看端口" /></p>
+<p>上方是已经运行的springboot项目在8885端口</p>
+<p>如果端口被占用，就需要杀死进程(也可用于关闭spirngboot项目)，但建议一开始就寻找空端口并在springboot项目配置</p>
+<div><pre><code><span>kill</span> -9 <span>18689</span> <span>#进程PID</span>
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="_1-4-将jar包上传到服务器并运行下面linux命令永久启动"> 1.4 将jar包上传到服务器并运行下面Linux命令永久启动</h3>
+<div><pre><code><span>nohup</span> java -jar XXX.jar <span>></span>/dev/null <span><span>2</span>></span><span>&amp;1</span> <span>&amp;</span>
+</code></pre>
+<div><span>1</span><br></div></div><blockquote>
+<p>如果仅仅是用java命令运行jar包，在退出远程连接时项目会关闭</p>
+</blockquote>
+<h3 id="_1-5-将域名指向端口号"> 1.5 将域名指向端口号</h3>
+<p>可以配置在<strong>80</strong>端口这样默认域名访问，不需要通过后面加端口号</p>
+<blockquote>
+<p>TODO:指定在其它端口使用域名指向</p>
+</blockquote>
+<h2 id="_2-第二种-打包为war包"> 2. 第二种:打包为war包</h2>
+<h3 id="_2-1-pom-xml配置"> 2.1 pom.xml配置</h3>
+<div><pre><code><span><span><span>&lt;</span>package</span><span>></span></span>war<span><span><span>&lt;/</span>package</span><span>></span></span>
+
+<span>&lt;!-- 找到spring-boot-starter-web依赖节点 --></span>
+<span><span><span>&lt;</span>dependency</span><span>></span></span>
+    <span><span><span>&lt;</span>groupId</span><span>></span></span>org.springframework.boot<span><span><span>&lt;/</span>groupId</span><span>></span></span>
+    <span><span><span>&lt;</span>artifactId</span><span>></span></span>spring-boot-starter-web<span><span><span>&lt;/</span>artifactId</span><span>></span></span>
+    <span>&lt;!-- 移除嵌入式tomcat插件 --></span>
+    <span><span><span>&lt;</span>exclusions</span><span>></span></span>
+        <span><span><span>&lt;</span>exclusion</span><span>></span></span>
+            <span><span><span>&lt;</span>groupId</span><span>></span></span>org.springframework.boot<span><span><span>&lt;/</span>groupId</span><span>></span></span>
+            <span><span><span>&lt;</span>artifactId</span><span>></span></span>spring-boot-starter-tomcat<span><span><span>&lt;/</span>artifactId</span><span>></span></span>
+        <span><span><span>&lt;/</span>exclusion</span><span>></span></span>
+    <span><span><span>&lt;/</span>exclusions</span><span>></span></span>
+<span><span><span>&lt;/</span>dependency</span><span>></span></span>
+
+<span>&lt;!-- 添加tomcat依赖 --></span>
+<span><span><span>&lt;</span>dependency</span><span>></span></span>
+ <span><span><span>&lt;</span>groupId</span><span>></span></span>org.springframework.boot<span><span><span>&lt;/</span>groupId</span><span>></span></span>
+ <span><span><span>&lt;</span>artifactId</span><span>></span></span>spring-boot-starter-tomcat<span><span><span>&lt;/</span>artifactId</span><span>></span></span>
+ <span><span><span>&lt;</span>scope</span><span>></span></span>provided<span><span><span>&lt;/</span>scope</span><span>></span></span>
+<span><span><span>&lt;/</span>dependency</span><span>></span></span>
+
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br></div></div><h3 id="_2-2-修改启动类-并重写初始化方法"> 2.2 修改启动类，并重写初始化方法</h3>
+<div><pre><code><span>@SpringBootApplication</span>
+<span>public</span> <span>class</span> <span>Application</span> <span>extends</span> <span>SpringBootServletInitializer</span> <span>{</span>
+
+    <span>public</span> <span>static</span> <span>void</span> <span>main</span><span>(</span><span>String</span><span>[</span><span>]</span> args<span>)</span> <span>{</span>
+        <span>SpringApplication</span><span>.</span><span>run</span><span>(</span><span>Application</span><span>.</span><span>class</span><span>,</span> args<span>)</span><span>;</span>
+        <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span><span>"ヾ(◍°∇°◍)ﾉﾞ    bootdo启动成功      ヾ(◍°∇°◍)ﾉﾞ\n"</span> <span>+</span>
+                <span>" ______                    _   ______            \n"</span> <span>+</span>
+                <span>"|_   _ \\                  / |_|_   _ `.          \n"</span> <span>+</span>
+                <span>"  | |_) |   .--.    .--. `| |-' | | `. \\  .--.   \n"</span> <span>+</span>
+                <span>"  |  __'. / .'`\\ \\/ .'`\\ \\| |   | |  | |/ .'`\\ \\ \n"</span> <span>+</span>
+                <span>" _| |__) || \\__. || \\__. || |, _| |_.' /| \\__. | \n"</span> <span>+</span>
+                <span>"|_______/  '.__.'  '.__.' \\__/|______.'  '.__.'  "</span><span>)</span><span>;</span>
+    <span>}</span>
+
+    <span>@Override</span>
+    <span>protected</span> <span>SpringApplicationBuilder</span> <span>configure</span><span>(</span><span>SpringApplicationBuilder</span> builder<span>)</span> <span>{</span>
+        <span>// 注意这里要指向原先用main方法执行的Application启动类</span>
+        <span>return</span> builder<span>.</span><span>sources</span><span>(</span><span>Application</span><span>.</span><span>class</span><span>)</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br></div></div><h3 id="_2-3-打包为war包"> 2.3 打包为war包</h3>
+<p>与上面相同</p>
+<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Server-deployment-SpringBoot/jar_start_pack.jpg" alt="jar开始打包" /></p>
+<p>打包成功后的路径如下</p>
+<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Server-deployment-SpringBoot/war_pack_success.jpg" alt="war打包成功" /></p>
+<h3 id="_2-4-上传到服务器上的tomcat里的webapps即可"> 2.4 上传到服务器上的Tomcat里的webapps即可</h3>
+<p>这时候可以用域名指向项目而无需指定端口</p>
+]]></content:encoded>
+      <enclosure url="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Server-deployment-SpringBoot/jar_start_pack.jpg" type="image/jpeg"/>
     </item>
     <item>
       <title>SpringBoot&amp;Vue项目搭建(持续更新)</title>
@@ -28260,7 +28277,7 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
       <link>https://vuepress-theme-hope-demo.mrhope.site/study-line/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/study-line/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">学习路线</source>
-      <pubDate>Tue, 25 Jan 2022 07:41:56 GMT</pubDate>
+      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="计算机基础"> 计算机基础</h2>
 <p>《王道》</p>
 <ul>
@@ -28381,7 +28398,7 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
       <description>&amp;lt;p&amp;gt;你可以通过设置页面的 Frontmatter，在页面禁用一些功能。&amp;lt;/p&amp;gt;
 </description>
       <category>使用指南</category>
-      <pubDate>Tue, 25 Jan 2022 07:41:56 GMT</pubDate>
+      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
       <content:encoded><![CDATA[<p>你可以通过设置页面的 Frontmatter，在页面禁用一些功能。</p>
 
 <p>本页面应当禁用了:</p>
@@ -28406,7 +28423,7 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
       <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/guide/encrypt/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">密码加密的文章</source>
       <category>使用指南</category>
-      <pubDate>Tue, 25 Jan 2022 07:41:56 GMT</pubDate>
+      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="密码加密的文章"> 密码加密的文章</h1>
 <p>实际的文章内容。</p>
 <p>段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字。</p>
@@ -28421,7 +28438,7 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
       <description>&amp;lt;p&amp;gt;&amp;lt;code&amp;gt;vuepress-theme-hope&amp;lt;/code&amp;gt; 通过内置 &amp;lt;a href=&amp;quot;https://vuepress-theme-hope.github.io/md-enhance&amp;quot; target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot;&amp;gt;md-enhance&amp;lt;/a&amp;gt;，在 Markdown 中启用了更多的语法与新功能。&amp;lt;/p&amp;gt;
 </description>
       <category>使用指南</category>
-      <pubDate>Tue, 25 Jan 2022 07:41:56 GMT</pubDate>
+      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
       <content:encoded><![CDATA[<p><code>vuepress-theme-hope</code> 通过内置 <a href="https://vuepress-theme-hope.github.io/md-enhance" target="_blank" rel="noopener noreferrer">md-enhance</a>，在 Markdown 中启用了更多的语法与新功能。</p>
 
 <h2 id="一键启用"> 一键启用</h2>
@@ -28926,7 +28943,7 @@ $$
       <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/guide/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">主要功能与配置演示</source>
       <category>使用指南</category>
-      <pubDate>Tue, 25 Jan 2022 07:41:56 GMT</pubDate>
+      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="主要功能与配置演示"> 主要功能与配置演示</h1>
 <ul>
 <li>
@@ -28945,39 +28962,46 @@ $$
 ]]></content:encoded>
     </item>
     <item>
-      <title>Blog Home</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/zh/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Blog Home</source>
-      <pubDate>Tue, 25 Jan 2022 07:41:56 GMT</pubDate>
-    </item>
-    <item>
-      <title>幻灯片页</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/zh/slides/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/slides/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">幻灯片页</source>
-      <pubDate>Tue, 25 Jan 2022 07:41:56 GMT</pubDate>
-      <content:encoded><![CDATA[
-<i>Not supported content</i>]]></content:encoded>
-      <enclosure url="https://vuepress-theme-hope-demo.mrhope.site/logo.svg" type="image/svg+xml"/>
-    </item>
-    <item>
       <title>项目主页</title>
       <link>https://vuepress-theme-hope-demo.mrhope.site/zh/home/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/home/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">项目主页</source>
-      <pubDate>Tue, 25 Jan 2022 07:41:56 GMT</pubDate>
+      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
       <content:encoded><![CDATA[<p>这是普通主页的案例。你可以在这里放置你的主体内容。</p>
 <p>想要使用此布局，你需要在页面 front matter 中设置 <code>home: true</code>。</p>
 <p>配置项的相关说明详见 <a href="https://vuepress-theme-hope.github.io/zh/guide/layout/home/" target="_blank" rel="noopener noreferrer">项目主页配置</a>。</p>
 ]]></content:encoded>
     </item>
     <item>
+      <title>Blog Home</title>
+      <link>https://vuepress-theme-hope-demo.mrhope.site/zh/</link>
+      <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/</guid>
+      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Blog Home</source>
+      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
+    </item>
+    <item>
+      <title>幻灯片页</title>
+      <link>https://vuepress-theme-hope-demo.mrhope.site/zh/slides/</link>
+      <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/slides/</guid>
+      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">幻灯片页</source>
+      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
+      <content:encoded><![CDATA[
+<i>Not supported content</i>]]></content:encoded>
+      <enclosure url="https://vuepress-theme-hope-demo.mrhope.site/logo.svg" type="image/svg+xml"/>
+    </item>
+    <item>
+      <title>My Project</title>
+      <link>https://vuepress-theme-hope-demo.mrhope.site/zh/project/</link>
+      <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/project/</guid>
+      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">My Project</source>
+      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
+    </item>
+    <item>
       <title>自定义布局</title>
       <link>https://vuepress-theme-hope-demo.mrhope.site/zh/layout/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/layout/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">自定义布局</source>
-      <pubDate>Tue, 25 Jan 2022 07:41:56 GMT</pubDate>
+      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
       <content:encoded><![CDATA[<p>您可以使用带有 Markdown 支持的插槽来自定义页面布局。</p>
 <div><p>Note</p>
 <p>此处仅仅是一个演示，你应该自行根据需求添加样式。</p>
@@ -28996,13 +29020,6 @@ $$
 </template><template #sidebar-bottom><p>侧边栏底部内容</p>
 </template><p>更多详情，详见 <a href="https://vuepress-theme-hope.github.io/zh/guide/layout/custom/" target="_blank" rel="noopener noreferrer">自定义布局</a>.</p>
 ]]></content:encoded>
-    </item>
-    <item>
-      <title>My Project</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/zh/project/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/project/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">My Project</source>
-      <pubDate>Tue, 25 Jan 2022 07:41:56 GMT</pubDate>
     </item>
   </channel>
 </rss>
