@@ -290,5 +290,26 @@ git push -u origin main
 
 :::
 
+## 奇技
+
+### 将修改加入到某次commit中
+
+```shell
+#保存改动
+git stash
+
+#进入要插入的commit的之前一个commit,在编辑页面将修改的commit的pick修改为edit
+git rebase -i <commit>
+
+#拿出改动
+git stash pop
+
+#添加到缓存区
+git add .
+
+#加入到commit
+git commit --amend --no-edit
+```
+
 
 
