@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
   <id>https://vuepress-theme-hope-demo.mrhope.site/</id>
   <title>Draco's Blog</title>
-  <subtitle>美好的肉体即正义本身</subtitle>
+  <subtitle>美丽新世界</subtitle>
   <author>
     <name>Draco</name>
   </author>
-  <updated>2022-02-18T07:46:36.961Z</updated>
+  <updated>2022-03-06T10:18:36.228Z</updated>
   <generator>@mr-hope/vuepress-plugin-feed</generator>
   <link rel="self" href="https://vuepress-theme-hope-demo.mrhope.site/atom.xml"/>
   <link rel="alternate" href="https://vuepress-theme-hope-demo.mrhope.site/"/>
@@ -23,7 +23,7 @@
     <title type="html">About</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/about/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/about/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="about"> About</h2>
 <p>这里是我的博客和笔记Wiki，通过<code>Vuepress</code>搭建在<code>Github Pages</code>上</p>
 <p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/about/about.jpg" alt="about" /></p>
@@ -34,14 +34,43 @@
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-02-18T07:45:42.000Z</published>
+    <published>2022-03-06T10:17:18.000Z</published>
+    <rights>Copyright by Draco</rights>
+  </entry>
+  <entry>
+    <title type="html">算法</title>
+    <id>https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/Algorithm/</id>
+    <link href="https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/Algorithm/"/>
+    <updated>2022-03-06T10:17:18.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="动态规划和贪心算法的区别"> 动态规划和贪心算法的区别</h2>
+<p>相同点</p>
+<ul>
+<li>动态规划和贪心算法都是一种递推算法</li>
+<li>均有局部最优解来推导全局最优解</li>
+</ul>
+<p>不同点</p>
+<ul>
+<li>贪心算法中，作出的每步贪心决策都无法改变，因为贪心策略是由上一步的最优解推导下一步的最优解，而上一部之前的最优解则不作保留。</li>
+<li>可以知道贪心法正确的条件是：每一步的最优解一定包含上一步的最优解。</li>
+<li>全局最优解中一定包含某个局部最优解，但不一定包含前一个局部最优解，因此需要记录之前的所有最优解</li>
+<li>动态规划的关键是状态转移方程，即如何由以求出的局部最优解来推导全局最优解</li>
+<li>边界条件：即最简单的，可以直接得出的局部最优解</li>
+</ul>
+]]></content>
+    <author>
+      <name>Draco</name>
+    </author>
+    <contributor>
+      <name>Draco</name>
+    </contributor>
+    <published>2020-08-30T18:04:39.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">数据结构&amp;算法题目合集</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/DataStructure&amp;algorithm_question/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/DataStructure&amp;algorithm_question/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h1 id="_1-通用操作"> 1. 通用操作</h1>
 <h2 id="_1-1-输入类"> 1.1 输入类</h2>
 <h3 id="_1-1-1-利用字符串输入不定长int数组-逗号隔开"> 1.1.1 利用字符串输入不定长int数组，逗号隔开</h3>
@@ -688,39 +717,10 @@
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
-    <title type="html">算法</title>
-    <id>https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/Algorithm/</id>
-    <link href="https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/Algorithm/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="动态规划和贪心算法的区别"> 动态规划和贪心算法的区别</h2>
-<p>相同点</p>
-<ul>
-<li>动态规划和贪心算法都是一种递推算法</li>
-<li>均有局部最优解来推导全局最优解</li>
-</ul>
-<p>不同点</p>
-<ul>
-<li>贪心算法中，作出的每步贪心决策都无法改变，因为贪心策略是由上一步的最优解推导下一步的最优解，而上一部之前的最优解则不作保留。</li>
-<li>可以知道贪心法正确的条件是：每一步的最优解一定包含上一步的最优解。</li>
-<li>全局最优解中一定包含某个局部最优解，但不一定包含前一个局部最优解，因此需要记录之前的所有最优解</li>
-<li>动态规划的关键是状态转移方程，即如何由以求出的局部最优解来推导全局最优解</li>
-<li>边界条件：即最简单的，可以直接得出的局部最优解</li>
-</ul>
-]]></content>
-    <author>
-      <name>Draco</name>
-    </author>
-    <contributor>
-      <name>Draco</name>
-    </contributor>
-    <published>2020-08-30T18:04:39.000Z</published>
-    <rights>Copyright by Draco</rights>
-  </entry>
-  <entry>
     <title type="html">数据结构</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/DataStructure/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/DataStructure/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -2013,7 +2013,7 @@
     <title type="html">数据结构&amp;算法学习目录</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <author>
       <name>Draco</name>
     </author>
@@ -2027,7 +2027,7 @@
     <title type="html">Hadoop伪分布式配置</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/database/hadoop/Hadoop_pseudo-distributed_configuration/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/database/hadoop/Hadoop_pseudo-distributed_configuration/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="_1-准备"> 1. 准备</h2>
 <blockquote>
 <ol>
@@ -2162,7 +2162,7 @@ hadoop version
     <title type="html">Mysql理论学习笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/database/mysql/Mysql_theory_note/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/database/mysql/Mysql_theory_note/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="_1-参考"> 1. 参考</h2>
 <h2 id="_2-存储引擎"> 2. 存储引擎</h2>
 <h3 id="_2-1-查看mysql提供的所有存储引擎"> 2.1 查看MySQL提供的所有存储引擎</h3>
@@ -2595,7 +2595,7 @@ hadoop version
     <title type="html">SQL学习笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/database/mysql/SQL_note/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/database/mysql/SQL_note/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h1 id="参考"> 参考</h1>
 <blockquote>
 <ul>
@@ -2678,7 +2678,7 @@ hadoop version
     <title type="html">数据库学习目录</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/database/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/database/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <author>
       <name>Draco</name>
     </author>
@@ -2692,7 +2692,7 @@ hadoop version
     <title type="html">Redis集群和哨兵</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/database/redis/Redis-cluster&amp;sentinel/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/database/redis/Redis-cluster&amp;sentinel/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<p>Redis集群和哨兵</p>
 ]]></content>
     <author>
@@ -2708,7 +2708,7 @@ hadoop version
     <title type="html">Redis部署与基本使用</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/database/redis/Redis_deployment&amp;use/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/database/redis/Redis_deployment&amp;use/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>Tips</p>
 <ul>
@@ -5363,7 +5363,7 @@ OK              <span>#可以删除其它的master节点</span>
     <title type="html">Redis应用场景</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/database/redis/Redis_scene/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/database/redis/Redis_scene/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="单点登录-sso"> 单点登录（SSO）</h2>
 <h3 id="参考"> 参考</h3>
 <div><p>参考</p>
@@ -5399,7 +5399,7 @@ OK              <span>#可以删除其它的master节点</span>
     <title type="html">Redis理论学习笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/database/redis/Redis_theory_note/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/database/redis/Redis_theory_note/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="_1-参考"> 1. 参考</h2>
 <blockquote>
 <ul>
@@ -6164,7 +6164,7 @@ appendfsync no #让操作系统决定何时进⾏同步
     <title type="html">Docker:Install software</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/docker/Docker-Install-software/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/docker/Docker-Install-software/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <summary type="html"><![CDATA[Docker:Install software]]></summary>
     <content type="html"><![CDATA[<h2 id="_1-概念"> 1. 概念</h2>
 <blockquote>
@@ -6268,7 +6268,7 @@ appendfsync no #让操作系统决定何时进⾏同步
     <title type="html">Docker学习笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/docker/Docker-Note/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/docker/Docker-Note/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <summary type="html"><![CDATA[Docker学习笔记]]></summary>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <p>参考</p>
@@ -7020,7 +7020,7 @@ Options:
     <title type="html">Docker deployment</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/docker/Docker-deployment/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/docker/Docker-deployment/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <summary type="html"><![CDATA[Docker deployment]]></summary>
     <content type="html"><![CDATA[<p>环境</p>
 <p>CentOs 7</p>
@@ -7150,7 +7150,7 @@ https://download.docker.com/linux/centos/docker-ce.repo
     <title type="html">Dubbo笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/dubbo/Dubbo/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/dubbo/Dubbo/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>Tips</p>
 <ul>
@@ -7171,7 +7171,7 @@ https://download.docker.com/linux/centos/docker-ce.repo
     <title type="html">ElasticSearch面试</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/elasticSearch/ElasticSearch-Interview/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/elasticSearch/ElasticSearch-Interview/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -7327,7 +7327,7 @@ https://download.docker.com/linux/centos/docker-ce.repo
     <title type="html">ElasticSearch笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/elasticSearch/ElasticSearch/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/elasticSearch/ElasticSearch/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -7542,7 +7542,7 @@ https://download.docker.com/linux/centos/docker-ce.repo
     <title type="html">Spring错误笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/error/Springboot-Error/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/error/Springboot-Error/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="解决springboot无法注入service的原因之一testcontroller-required-a-bean-of-type-com-yifeng-study-service-userservice-that-could-not-be-found-报错"> 解决SpringBoot无法注入service的原因之一TestController required a bean of type ‘com.yifeng.study.service.UserService’ that could not be found.报错</h2>
 <p>参考</p>
 <div><p>Tips</p>
@@ -7581,7 +7581,7 @@ https://download.docker.com/linux/centos/docker-ce.repo
     <title type="html">JavaScript面试题</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/front-end/JavaScript-Interview/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/front-end/JavaScript-Interview/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <summary type="html"><![CDATA[JavaScript面试题]]></summary>
     <content type="html"><![CDATA[<h2 id="js作用域"> JS作用域</h2>
 <p>参考</p>
@@ -7609,7 +7609,7 @@ https://download.docker.com/linux/centos/docker-ce.repo
     <title type="html">Promise异步调用</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/front-end/Promise_Asynchronous_call/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/front-end/Promise_Asynchronous_call/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <summary type="html"><![CDATA[Promise异步调用]]></summary>
     <content type="html"><![CDATA[<p>官方文档</p>
 <blockquote>
@@ -7736,7 +7736,7 @@ https://download.docker.com/linux/centos/docker-ce.repo
     <title type="html">前端学习目录</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/front-end/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/front-end/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <author>
       <name>Draco</name>
     </author>
@@ -7747,10 +7747,325 @@ https://download.docker.com/linux/centos/docker-ce.repo
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
+    <title type="html">Golang-介绍和使用</title>
+    <id>https://vuepress-theme-hope-demo.mrhope.site/golang/Golang-description&amp;use/</id>
+    <link href="https://vuepress-theme-hope-demo.mrhope.site/golang/Golang-description&amp;use/"/>
+    <updated>2022-03-06T10:17:18.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
+<div><p>Tips</p>
+<ul>
+<li><a href="http://golang.iswbm.com/en/latest/index.html" target="_blank" rel="noopener noreferrer">Go编程时光</a></li>
+<li><a href="http://c.biancheng.net/golang/" target="_blank" rel="noopener noreferrer">Go语言入门教程</a></li>
+<li><a href="https://www.runoob.com/go/go-tutorial.html" target="_blank" rel="noopener noreferrer">菜鸟教程</a></li>
+</ul>
+</div>
+<h2 id="介绍"> 介绍</h2>
+<blockquote>
+<p>Go语言为并发而生。</p>
+</blockquote>
+<h3 id="简介"> 简介</h3>
+<p>Go语言（或 Golang）起源于 2007 年，并在 2009 年正式对外发布。Go 是非常年轻的一门语言，它的主要目标是“兼具 <a href="http://c.biancheng.net/python/" target="_blank" rel="noopener noreferrer">Python</a> 等动态语言的开发速度和 C/<a href="http://c.biancheng.net/cplus/" target="_blank" rel="noopener noreferrer">C++</a> 等编译型语言的性能与安全性”。</p>
+<p>Go语言是编程语言设计的又一次尝试，是对类C语言的重大改进，它不但能让你访问底层操作系统，还提供了强大的网络编程和并发编程支持。Go语言的用途众多，可以进行网络编程、系统编程、并发编程、分布式编程。</p>
+<p>Go语言的推出，旨在不损失应用程序性能的情况下降低代码的复杂性，具有“部署简单、并发性好、语言设计良好、执行性能好”等优势，目前国内诸多 IT 公司均已采用Go语言开发项目。</p>
+<p>Go语言有时候被描述为“C 类似语言”，或者是“21 世纪的C语言”。Go 从C语言继承了相似的表达式语法、控制流结构、基础数据类型、调用参数传值、指针等很多思想，还有C语言一直所看中的编译后机器码的运行效率以及和现有操作系统的无缝适配。</p>
+<p>因为Go语言没有类和继承的概念，所以它和 <a href="http://c.biancheng.net/java/" target="_blank" rel="noopener noreferrer">Java</a> 或 C++ 看起来并不相同。但是它通过接口（interface）的概念来实现多态性。Go语言有一个清晰易懂的轻量级类型系统，在类型之间也没有层级之说。因此可以说Go语言是一门混合型的语言。</p>
+<p>此外，很多重要的开源项目都是使用Go语言开发的，其中包括 <a href="http://c.biancheng.net/docker/" target="_blank" rel="noopener noreferrer">Docker</a>、Go-Ethereum、Thrraform 和 Kubernetes。</p>
+<h3 id="用途"> 用途</h3>
+<p>Go 语言被设计成一门应用于搭载 Web 服务器，存储集群或类似用途的巨型中央服务器的系统编程语言。</p>
+<p>对于高性能分布式系统领域而言，Go 语言无疑比大多数其它语言有着更高的开发效率。它提供了海量并行的支持，这对于游戏服务端的开发而言是再好不过了。</p>
+<h3 id="特性"> 特性</h3>
+<ul>
+<li>自动垃圾回收</li>
+<li>更丰富的内置类型</li>
+<li>函数多返回值</li>
+<li>错误处理</li>
+<li>匿名函数和闭包</li>
+<li>类型和接口</li>
+<li>并发编程</li>
+<li>反射</li>
+<li>语言交互性</li>
+</ul>
+<h2 id="安装与使用"> 安装与使用</h2>
+<div><p>参考</p>
+<p><a href="http://golang.iswbm.com/en/latest/c01/c01_01.html" target="_blank" rel="noopener noreferrer">一文搞定开发环境的搭建</a></p>
+</div>
+<h2 id="go命令"> Go命令</h2>
+<div><p>参考</p>
+<p><a href="https://www.cnblogs.com/itogo/p/8645441.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/itogo/p/8645441.html</a></p>
+</div>
+<h2 id="目录结构"> 目录结构</h2>
+<p>一个Go语言项目的目录一般包含以下三个子目录：</p>
+<table>
+<thead>
+<tr>
+<th>目录</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src</td>
+<td>放置项目和库的源文件</td>
+</tr>
+<tr>
+<td>pkg</td>
+<td>放置编译后生成的包/库的归档文件</td>
+</tr>
+<tr>
+<td>bin</td>
+<td>放置编译后生成的可执行文件</td>
+</tr>
+</tbody>
+</table>
+<h3 id="src"> src</h3>
+<p>用于以包（package）的形式组织并存放 Go 源文件，这里的包与 src 下的每个子目录是一一对应。例如，若一个源文件被声明属于 log 包，那么它就应当保存在 src/log 目录中。</p>
+<p>并不是说 src 目录下不能存放 Go 源文件，一般在测试或演示的时候也可以把 Go 源文件直接放在 src 目录下，但是这么做的话就只能声明该源文件属于 main 包了。正常开发中还是建议大家把 Go 源文件放入特定的目录中。</p>
+<p>包是Go语言管理代码的重要机制，其作用类似于<a href="http://c.biancheng.net/java/" target="_blank" rel="noopener noreferrer">Java</a>中的 package 和 C/<a href="http://c.biancheng.net/cplus/" target="_blank" rel="noopener noreferrer">C++</a> 的头文件。Go 源文件中第一段有效代码必须是<code>package &lt;包名&gt;</code>的形式，如 package hello。</p>
+<p>另外需要注意的是，Go语言会把通过<code>go get</code>命令获取到的库源文件下载到 src 目录下对应的文件夹当中。</p>
+<h3 id="pkg"> pkg</h3>
+<p>用于存放通过<code>go install</code>命令安装某个包后的归档文件。归档文件是指那些名称以“.a”结尾的文件。</p>
+<p>该目录与 GOROOT 目录（也就是Go语言的安装目录）下的 pkg 目录功能类似，区别在于这里的 pkg 目录专门用来存放项目代码的归档文件。</p>
+<p>编译和安装项目代码的过程一般会以代码包为单位进行，比如 log 包被编译安装后，将生成一个名为 log.a 的归档文件，并存放在当前项目的 pkg 目录下。</p>
+<h3 id="bin"> bin</h3>
+<p>与 pkg 目录类似，在通过<code>go install</code>命令完成安装后，保存由 Go 命令源文件生成的可执行文件。在类 Unix 操作系统下，这个可执行文件的名称与命令源文件的文件名相同。而在 Windows 操作系统下，这个可执行文件的名称则是命令源文件的文件名加 .exe 后缀。</p>
+]]></content>
+    <author>
+      <name>Draco</name>
+    </author>
+    <contributor>
+      <name>Draco</name>
+    </contributor>
+    <published>2021-06-08T20:14:56.000Z</published>
+    <rights>Copyright by Draco</rights>
+  </entry>
+  <entry>
+    <title type="html">Golang-语法基础</title>
+    <id>https://vuepress-theme-hope-demo.mrhope.site/golang/Golang/</id>
+    <link href="https://vuepress-theme-hope-demo.mrhope.site/golang/Golang/"/>
+    <updated>2022-03-06T10:17:18.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
+<div><p>Tips</p>
+<ul>
+<li><a href="http://golang.iswbm.com/" target="_blank" rel="noopener noreferrer">Go编程时光</a></li>
+<li><a href="http://c.biancheng.net/golang/" target="_blank" rel="noopener noreferrer">Go语言入门教程</a></li>
+<li><a href="https://www.runoob.com/go/go-tutorial.html" target="_blank" rel="noopener noreferrer">菜鸟教程</a></li>
+</ul>
+</div>
+<h2 id="变量创建"> 变量创建</h2>
+<p>Go 语言是静态类型语言，由于编译时，编译器会检查变量的类型，所以要求所有的变量都要有明确的类型。</p>
+<p><strong>变量在使用前，需要先声明</strong>。声明类型，就约定了你这个变量只能赋该类型的值。</p>
+<p>声明一般有以下四种方法</p>
+<blockquote>
+<p>其中前面两种同样也可用于定义常量，只需把关键字 <code>var</code> 变成 <code>const</code> 即可。</p>
+</blockquote>
+<h3 id="第一种-使用var"> 第一种：使用var</h3>
+<div><pre><code><span>var</span> <span>&lt;</span>name<span>></span> <span>&lt;</span><span>type</span><span>></span>
+</code></pre>
+<div><span>1</span><br></div></div><p>其中 var 是关键字（固定不变），name 是变量名，type 是类型。</p>
+<p>使用 var ，虽然只指定了类型，但是 Go 会对其进行<code>隐式初始化</code>，比如</p>
+<ul>
+<li>string 类型就初始化为空字符串</li>
+<li>int 类型就初始化为0</li>
+<li>float 就初始化为 0.0</li>
+<li>bool类型就初始化为false</li>
+<li>指针类型就初始化为 nil</li>
+</ul>
+<p>若想在声明过程，顺便也初始化，可以这样写</p>
+<div><pre><code><span>var</span> name <span>string</span> <span>=</span> <span>"字符串"</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>可以简化为</p>
+<div><pre><code>vat name <span>=</span> <span>"字符串"</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>若你的右值带有小数点，在不指定类型的情况下，编译器会将你的这个变量声明为 float64，但是很多情况下，我们并不需要这么高的精度（占用的内存空间更大）</p>
+<p>这种情况下，推荐指定类型，不要偷懒</p>
+<div><pre><code><span>var</span> rate <span>float32</span> <span>=</span> <span>0.89</span>
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="第二种-使用var多个变量声明"> 第二种：使用var多个变量声明</h3>
+<div><pre><code><span>var</span> <span>(</span>
+    name <span>string</span>
+    age <span>int</span>
+    gender <span>string</span>
+<span>)</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h3 id="第三种-使用-声明"> 第三种：使用 := 声明</h3>
+<p>使用 <code>:=</code> （推导声明写法或者短类型声明法：编译器会自动根据右值类型推断出左值的对应类型。），可以声明一个变量，并对其进行（显式）初始化。</p>
+<div><pre><code>name <span>:=</span> <span>"Go"</span>
+
+<span>// 等价于</span>
+
+<span>var</span> name <span>string</span> <span>=</span> <span>"Go"</span>
+
+<span>// 等价于</span>
+
+<span>var</span> name <span>=</span> <span>"Go"</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><div><p>注意</p>
+<p>只能用于函数内部</p>
+</div>
+<h3 id="第四种-使用-声明多个"> 第四种：使用 := 声明多个</h3>
+<div><pre><code>name<span>,</span> age <span>:=</span> <span>"wangbm"</span><span>,</span> <span>28</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>这种方法，也经常用于变量的交换</p>
+<div><pre><code><span>var</span> a <span>int</span> <span>=</span> <span>100</span>
+<span>var</span> b <span>int</span> <span>=</span> <span>200</span>
+b<span>,</span> a <span>=</span> a<span>,</span> b
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><blockquote>
+<p>两个变量要同一个类型</p>
+</blockquote>
+<h3 id="第五种-new-函数声明一个指针变量"> 第五种：new 函数声明一个指针变量</h3>
+<p>变量分为两种 <code>普通变量</code> 和 <code>指针变量</code></p>
+<div><p>Info</p>
+<ul>
+<li>普通变量：存放的是数据本身</li>
+<li>指针变量：存放的是数据的地址。</li>
+</ul>
+</div>
+<p>如下代码，age 是一个普通变量，存放的内容是 28，而 ptr 是 存放变量age值的内存地址：0xc000010098</p>
+<div><pre><code><span>package</span> main
+
+<span>import</span> <span>"fmt"</span>
+
+<span>func</span> <span>main</span><span>(</span><span>)</span>  <span>{</span>
+    <span>var</span> age <span>int</span> <span>=</span> <span>28</span>
+    <span>var</span> ptr <span>=</span> <span>&amp;</span>age  <span>// &amp;后面接变量名，表示取出该变量的内存地址</span>
+    fmt<span>.</span><span>Println</span><span>(</span><span>"age: "</span><span>,</span> age<span>)</span>
+    fmt<span>.</span><span>Println</span><span>(</span><span>"ptr: "</span><span>,</span> ptr<span>)</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><p>输出</p>
+<div><pre><code>age:  28
+ptr:  0xc000010098
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>而这里要说的 new 函数，是 Go 里的一个内建函数。</p>
+<p>使用表达式 <code>new(Type)</code> 将创建一个Type类型的匿名变量，初始化为Type类型的零值，然后返回<code>变量地址</code>，返回的指针类型为<code>*Type</code>。</p>
+<p>用new创建变量和普通变量声明语句方式创建变量没有什么区别，除了不需要声明一个临时变量的名字外，我们还可以在表达式中使用new(Type)。换言之，new函数类似是一种语法糖，而不是一个新的基础概念。</p>
+<p>如下两种写法，可以说是等价的</p>
+<div><pre><code><span>// 使用 new</span>
+<span>func</span> <span>newInt</span><span>(</span><span>)</span> <span>*</span><span>int</span> <span>{</span>
+    <span>return</span> <span>new</span><span>(</span><span>int</span><span>)</span>
+<span>}</span>
+
+<span>// 使用传统的方式</span>
+<span>func</span> <span>newInt</span><span>(</span><span>)</span> <span>*</span><span>int</span> <span>{</span>
+    <span>var</span> dummy <span>int</span>
+    <span>return</span> <span>&amp;</span>dummy
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><p>以上不管哪种方法，变量/常量都只能声明一次，声明多次，编译就会报错。</p>
+<p>但也有例外，这就要说到一个特殊变量：<strong>匿名变量</strong>，也称作占位符，或者空白标识符，用下划线表示。</p>
+<p>匿名变量，优点有三：</p>
+<ul>
+<li>不分配内存，不占用内存空间</li>
+<li>不需要你为命名无用的变量名而纠结</li>
+<li>多次声明不会有任何问题</li>
+</ul>
+<p>通常我们用匿名接收必须接收，但是又不会用到的值。</p>
+<div><pre><code><span>func</span> <span>GetData</span><span>(</span><span>)</span> <span>(</span><span>int</span><span>,</span> <span>int</span><span>)</span> <span>{</span>
+    <span>return</span> <span>100</span><span>,</span> <span>200</span>
+<span>}</span>
+<span>func</span> <span>main</span><span>(</span><span>)</span><span>{</span>
+    a<span>,</span> <span>_</span> <span>:=</span> <span>GetData</span><span>(</span><span>)</span>
+    <span>_</span><span>,</span> b <span>:=</span> <span>GetData</span><span>(</span><span>)</span>
+    fmt<span>.</span><span>Println</span><span>(</span>a<span>,</span> b<span>)</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><h2 id="数据类型"> 数据类型</h2>
+<h3 id="整型"> 整型</h3>
+<p>Go 语言中，整数类型可以再细分成10个类型，为了方便大家学习，我将这些类型整理成一张表格。</p>
+<p><img src="http://image.iswbm.com/20200120204329.png" alt="image1" /></p>
+<blockquote>
+<p>int 和 uint 的区别就在于一个 <code>u</code>，有 <code>u</code> 说明是无符号，没有 <code>u</code> 代表有符号。</p>
+</blockquote>
+<h4 id="解释这个符号的区别"> 解释这个符号的区别</h4>
+<p>以 <code>int8</code> 和 <code>uint8</code> 举例，8 代表 8个bit，能表示的数值个数有 <code>2^8 = 256</code>。</p>
+<p>uint8 是无符号，能表示的都是正数，<code>0-255</code>，刚好256个数。</p>
+<p>int8 是有符号，既可以正数，也可以负数，那怎么办？对半分呗，<code>-128-127</code>，也刚好 256个数。</p>
+<p>int8 int16 int32 int64 这几个类型的最后都有一个数值，这表明了它们能表示的数值个数是固定的。</p>
+<p>而 int 并没有指定它的位数，说明它的大小，是可以变化的，那根据什么变化呢？</p>
+<ul>
+<li>当你在32位的系统下，int 和 uint 都占用 4个字节，也就是32位。</li>
+<li>若你在64位的系统下，int 和 uint 都占用 8个字节，也就是64位。</li>
+</ul>
+<p>出于这个原因，在某些场景下，你应当避免使用 int 和 uint ，而使用更加精确的 int32 和 int64，比如在二进制传输、读写文件的结构描述（为了保持文件的结构不会受到不同编译目标平台字节长度的影响）</p>
+<h4 id="不同进制的表示方法"> 不同进制的表示方法</h4>
+<p>出于习惯，在初始化数据类型为整型的变量时，我们会使用10进制的表示法，因为它最直观，比如这样，表示整数10.</p>
+<div><pre><code><span>var</span> num <span>int</span> <span>=</span> <span>10</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>不过，你要清楚，你一样可以使用其他进制来表示一个整数，这里以比较常用的2进制、8进制和16进制举例。</p>
+<p>2进制：以<code>0b</code>或<code>0B</code>为前缀</p>
+<div><pre><code><span>var</span> num01 <span>int</span> <span>=</span> <span>0b1100</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>8进制：以<code>0o</code>或者 <code>0O</code>为前缀</p>
+<div><pre><code><span>var</span> num02 <span>int</span> <span>=</span> <span>0o14</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>16进制：以<code>0x</code> 为前缀</p>
+<div><pre><code><span>var</span> num03 <span>int</span> <span>=</span> <span>0xC</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>下面用一段代码分别使用二进制、8进制、16进制来表示 10 进制的数值：12</p>
+<div><pre><code><span>package</span> main
+
+<span>import</span> <span>(</span>
+    <span>"fmt"</span>
+<span>)</span>
+
+<span>func</span> <span>main</span><span>(</span><span>)</span> <span>{</span>
+    <span>var</span> num01 <span>int</span> <span>=</span> <span>0b1100</span>
+    <span>var</span> num02 <span>int</span> <span>=</span> <span>0o14</span>
+    <span>var</span> num03 <span>int</span> <span>=</span> <span>0xC</span>
+
+    fmt<span>.</span><span>Printf</span><span>(</span><span>"2进制数 %b 表示的是: %d \n"</span><span>,</span> num01<span>,</span> num01<span>)</span>
+    fmt<span>.</span><span>Printf</span><span>(</span><span>"8进制数 %o 表示的是: %d \n"</span><span>,</span> num02<span>,</span> num02<span>)</span>
+    fmt<span>.</span><span>Printf</span><span>(</span><span>"16进制数 %X 表示的是: %d \n"</span><span>,</span> num03<span>,</span> num03<span>)</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br></div></div><p>输出如下</p>
+<div><pre><code>2进制数 1100 表示的是: 12
+8进制数 14 表示的是: 12
+16进制数 C 表示的是: 12
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>以上代码用过了 fmt 包的格式化功能，你可以参考这里去看上面的代码</p>
+<div><pre><code>%b    表示为二进制
+%c    该值对应的unicode码值
+%d    表示为十进制
+%o    表示为八进制
+%q    该值对应的单引号括起来的go语法字符字面值，必要时会采用安全的转义表示
+%x    表示为十六进制，使用a-f
+%X    表示为十六进制，使用A-F
+%U    表示为Unicode格式：U+1234，等价于&quot;U+%04X&quot;
+%E    用科学计数法表示
+%f    用浮点数表示
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><h3 id="浮点型"> 浮点型</h3>
+<p>浮点数类型的值一般由整数部分、小数点“<code>.</code>”和小数部分组成。</p>
+<p>其中，整数部分和小数部分均由10进制表示法表示。不过还有另一种表示方法。那就是在其中加入指数部分。指数部分由“E”或“e”以及一个带正负号的10进制数组成。比如，<code>3.7E-2</code>表示浮点数<code>0.037</code>。又比如，<code>3.7E+1</code>表示浮点数<code>37</code>。</p>
+<p>有时候，浮点数类型值的表示也可以被简化。比如，<code>37.0</code>可以被简化为<code>37</code>。又比如，<code>0.037</code>可以被简化为<code>.037</code>。</p>
+<blockquote>
+<p>有一点需要注意，在Go语言里，浮点数的相关部分只能由10进制表示法表示，而不能由8进制表示法或16进制表示法表示。比如，<code>03.7</code>表示的一定是浮点数<code>3.7</code>。</p>
+</blockquote>
+<h4 id="float32-和-float64"> float32 和 float64</h4>
+<p>Go语言中提供了两种精度的浮点数 float32 和 float64。</p>
+<p><strong>float32</strong>，也即我们常说的单精度，存储占用4个字节，也即4*8=32位，其中1位用来符号，8位用来指数，剩下的23位表示尾数</p>
+<p><img src="https://pic4.zhimg.com/80/v2-749cc641eb4d5dafd085e8c23f8826aa_hd.jpg" alt="img" /></p>
+<p>img</p>
+<p><strong>float64</strong>，也即我们熟悉的双精度，存储占用8个字节，也即8*8=64位，其中1位用来符号，11位用来指数，剩下的52位表示尾数</p>
+<p><img src="https://pic2.zhimg.com/80/v2-48240f0e1e0dd33ec89100cbe2d30707_hd.jpg" alt="img" /></p>
+<h3 id="byte、rune与字符串"> byte、rune与字符串</h3>
+]]></content>
+    <author>
+      <name>Draco</name>
+    </author>
+    <contributor>
+      <name>Draco</name>
+    </contributor>
+    <published>2021-06-08T20:15:56.000Z</published>
+    <rights>Copyright by Draco</rights>
+  </entry>
+  <entry>
     <title type="html">Git笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/git/Git/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/git/Git/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <blockquote>
 <ul>
@@ -7996,325 +8311,10 @@ https://download.docker.com/linux/centos/docker-ce.repo
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
-    <title type="html">Golang-介绍和使用</title>
-    <id>https://vuepress-theme-hope-demo.mrhope.site/golang/Golang-description&amp;use/</id>
-    <link href="https://vuepress-theme-hope-demo.mrhope.site/golang/Golang-description&amp;use/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
-<div><p>Tips</p>
-<ul>
-<li><a href="http://golang.iswbm.com/en/latest/index.html" target="_blank" rel="noopener noreferrer">Go编程时光</a></li>
-<li><a href="http://c.biancheng.net/golang/" target="_blank" rel="noopener noreferrer">Go语言入门教程</a></li>
-<li><a href="https://www.runoob.com/go/go-tutorial.html" target="_blank" rel="noopener noreferrer">菜鸟教程</a></li>
-</ul>
-</div>
-<h2 id="介绍"> 介绍</h2>
-<blockquote>
-<p>Go语言为并发而生。</p>
-</blockquote>
-<h3 id="简介"> 简介</h3>
-<p>Go语言（或 Golang）起源于 2007 年，并在 2009 年正式对外发布。Go 是非常年轻的一门语言，它的主要目标是“兼具 <a href="http://c.biancheng.net/python/" target="_blank" rel="noopener noreferrer">Python</a> 等动态语言的开发速度和 C/<a href="http://c.biancheng.net/cplus/" target="_blank" rel="noopener noreferrer">C++</a> 等编译型语言的性能与安全性”。</p>
-<p>Go语言是编程语言设计的又一次尝试，是对类C语言的重大改进，它不但能让你访问底层操作系统，还提供了强大的网络编程和并发编程支持。Go语言的用途众多，可以进行网络编程、系统编程、并发编程、分布式编程。</p>
-<p>Go语言的推出，旨在不损失应用程序性能的情况下降低代码的复杂性，具有“部署简单、并发性好、语言设计良好、执行性能好”等优势，目前国内诸多 IT 公司均已采用Go语言开发项目。</p>
-<p>Go语言有时候被描述为“C 类似语言”，或者是“21 世纪的C语言”。Go 从C语言继承了相似的表达式语法、控制流结构、基础数据类型、调用参数传值、指针等很多思想，还有C语言一直所看中的编译后机器码的运行效率以及和现有操作系统的无缝适配。</p>
-<p>因为Go语言没有类和继承的概念，所以它和 <a href="http://c.biancheng.net/java/" target="_blank" rel="noopener noreferrer">Java</a> 或 C++ 看起来并不相同。但是它通过接口（interface）的概念来实现多态性。Go语言有一个清晰易懂的轻量级类型系统，在类型之间也没有层级之说。因此可以说Go语言是一门混合型的语言。</p>
-<p>此外，很多重要的开源项目都是使用Go语言开发的，其中包括 <a href="http://c.biancheng.net/docker/" target="_blank" rel="noopener noreferrer">Docker</a>、Go-Ethereum、Thrraform 和 Kubernetes。</p>
-<h3 id="用途"> 用途</h3>
-<p>Go 语言被设计成一门应用于搭载 Web 服务器，存储集群或类似用途的巨型中央服务器的系统编程语言。</p>
-<p>对于高性能分布式系统领域而言，Go 语言无疑比大多数其它语言有着更高的开发效率。它提供了海量并行的支持，这对于游戏服务端的开发而言是再好不过了。</p>
-<h3 id="特性"> 特性</h3>
-<ul>
-<li>自动垃圾回收</li>
-<li>更丰富的内置类型</li>
-<li>函数多返回值</li>
-<li>错误处理</li>
-<li>匿名函数和闭包</li>
-<li>类型和接口</li>
-<li>并发编程</li>
-<li>反射</li>
-<li>语言交互性</li>
-</ul>
-<h2 id="安装与使用"> 安装与使用</h2>
-<div><p>参考</p>
-<p><a href="http://golang.iswbm.com/en/latest/c01/c01_01.html" target="_blank" rel="noopener noreferrer">一文搞定开发环境的搭建</a></p>
-</div>
-<h2 id="go命令"> Go命令</h2>
-<div><p>参考</p>
-<p><a href="https://www.cnblogs.com/itogo/p/8645441.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/itogo/p/8645441.html</a></p>
-</div>
-<h2 id="目录结构"> 目录结构</h2>
-<p>一个Go语言项目的目录一般包含以下三个子目录：</p>
-<table>
-<thead>
-<tr>
-<th>目录</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>src</td>
-<td>放置项目和库的源文件</td>
-</tr>
-<tr>
-<td>pkg</td>
-<td>放置编译后生成的包/库的归档文件</td>
-</tr>
-<tr>
-<td>bin</td>
-<td>放置编译后生成的可执行文件</td>
-</tr>
-</tbody>
-</table>
-<h3 id="src"> src</h3>
-<p>用于以包（package）的形式组织并存放 Go 源文件，这里的包与 src 下的每个子目录是一一对应。例如，若一个源文件被声明属于 log 包，那么它就应当保存在 src/log 目录中。</p>
-<p>并不是说 src 目录下不能存放 Go 源文件，一般在测试或演示的时候也可以把 Go 源文件直接放在 src 目录下，但是这么做的话就只能声明该源文件属于 main 包了。正常开发中还是建议大家把 Go 源文件放入特定的目录中。</p>
-<p>包是Go语言管理代码的重要机制，其作用类似于<a href="http://c.biancheng.net/java/" target="_blank" rel="noopener noreferrer">Java</a>中的 package 和 C/<a href="http://c.biancheng.net/cplus/" target="_blank" rel="noopener noreferrer">C++</a> 的头文件。Go 源文件中第一段有效代码必须是<code>package &lt;包名&gt;</code>的形式，如 package hello。</p>
-<p>另外需要注意的是，Go语言会把通过<code>go get</code>命令获取到的库源文件下载到 src 目录下对应的文件夹当中。</p>
-<h3 id="pkg"> pkg</h3>
-<p>用于存放通过<code>go install</code>命令安装某个包后的归档文件。归档文件是指那些名称以“.a”结尾的文件。</p>
-<p>该目录与 GOROOT 目录（也就是Go语言的安装目录）下的 pkg 目录功能类似，区别在于这里的 pkg 目录专门用来存放项目代码的归档文件。</p>
-<p>编译和安装项目代码的过程一般会以代码包为单位进行，比如 log 包被编译安装后，将生成一个名为 log.a 的归档文件，并存放在当前项目的 pkg 目录下。</p>
-<h3 id="bin"> bin</h3>
-<p>与 pkg 目录类似，在通过<code>go install</code>命令完成安装后，保存由 Go 命令源文件生成的可执行文件。在类 Unix 操作系统下，这个可执行文件的名称与命令源文件的文件名相同。而在 Windows 操作系统下，这个可执行文件的名称则是命令源文件的文件名加 .exe 后缀。</p>
-]]></content>
-    <author>
-      <name>Draco</name>
-    </author>
-    <contributor>
-      <name>Draco</name>
-    </contributor>
-    <published>2021-06-08T20:14:56.000Z</published>
-    <rights>Copyright by Draco</rights>
-  </entry>
-  <entry>
-    <title type="html">Golang-语法基础</title>
-    <id>https://vuepress-theme-hope-demo.mrhope.site/golang/Golang/</id>
-    <link href="https://vuepress-theme-hope-demo.mrhope.site/golang/Golang/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
-<div><p>Tips</p>
-<ul>
-<li><a href="http://golang.iswbm.com/" target="_blank" rel="noopener noreferrer">Go编程时光</a></li>
-<li><a href="http://c.biancheng.net/golang/" target="_blank" rel="noopener noreferrer">Go语言入门教程</a></li>
-<li><a href="https://www.runoob.com/go/go-tutorial.html" target="_blank" rel="noopener noreferrer">菜鸟教程</a></li>
-</ul>
-</div>
-<h2 id="变量创建"> 变量创建</h2>
-<p>Go 语言是静态类型语言，由于编译时，编译器会检查变量的类型，所以要求所有的变量都要有明确的类型。</p>
-<p><strong>变量在使用前，需要先声明</strong>。声明类型，就约定了你这个变量只能赋该类型的值。</p>
-<p>声明一般有以下四种方法</p>
-<blockquote>
-<p>其中前面两种同样也可用于定义常量，只需把关键字 <code>var</code> 变成 <code>const</code> 即可。</p>
-</blockquote>
-<h3 id="第一种-使用var"> 第一种：使用var</h3>
-<div><pre><code><span>var</span> <span>&lt;</span>name<span>></span> <span>&lt;</span><span>type</span><span>></span>
-</code></pre>
-<div><span>1</span><br></div></div><p>其中 var 是关键字（固定不变），name 是变量名，type 是类型。</p>
-<p>使用 var ，虽然只指定了类型，但是 Go 会对其进行<code>隐式初始化</code>，比如</p>
-<ul>
-<li>string 类型就初始化为空字符串</li>
-<li>int 类型就初始化为0</li>
-<li>float 就初始化为 0.0</li>
-<li>bool类型就初始化为false</li>
-<li>指针类型就初始化为 nil</li>
-</ul>
-<p>若想在声明过程，顺便也初始化，可以这样写</p>
-<div><pre><code><span>var</span> name <span>string</span> <span>=</span> <span>"字符串"</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>可以简化为</p>
-<div><pre><code>vat name <span>=</span> <span>"字符串"</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>若你的右值带有小数点，在不指定类型的情况下，编译器会将你的这个变量声明为 float64，但是很多情况下，我们并不需要这么高的精度（占用的内存空间更大）</p>
-<p>这种情况下，推荐指定类型，不要偷懒</p>
-<div><pre><code><span>var</span> rate <span>float32</span> <span>=</span> <span>0.89</span>
-</code></pre>
-<div><span>1</span><br></div></div><h3 id="第二种-使用var多个变量声明"> 第二种：使用var多个变量声明</h3>
-<div><pre><code><span>var</span> <span>(</span>
-    name <span>string</span>
-    age <span>int</span>
-    gender <span>string</span>
-<span>)</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h3 id="第三种-使用-声明"> 第三种：使用 := 声明</h3>
-<p>使用 <code>:=</code> （推导声明写法或者短类型声明法：编译器会自动根据右值类型推断出左值的对应类型。），可以声明一个变量，并对其进行（显式）初始化。</p>
-<div><pre><code>name <span>:=</span> <span>"Go"</span>
-
-<span>// 等价于</span>
-
-<span>var</span> name <span>string</span> <span>=</span> <span>"Go"</span>
-
-<span>// 等价于</span>
-
-<span>var</span> name <span>=</span> <span>"Go"</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><div><p>注意</p>
-<p>只能用于函数内部</p>
-</div>
-<h3 id="第四种-使用-声明多个"> 第四种：使用 := 声明多个</h3>
-<div><pre><code>name<span>,</span> age <span>:=</span> <span>"wangbm"</span><span>,</span> <span>28</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>这种方法，也经常用于变量的交换</p>
-<div><pre><code><span>var</span> a <span>int</span> <span>=</span> <span>100</span>
-<span>var</span> b <span>int</span> <span>=</span> <span>200</span>
-b<span>,</span> a <span>=</span> a<span>,</span> b
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><blockquote>
-<p>两个变量要同一个类型</p>
-</blockquote>
-<h3 id="第五种-new-函数声明一个指针变量"> 第五种：new 函数声明一个指针变量</h3>
-<p>变量分为两种 <code>普通变量</code> 和 <code>指针变量</code></p>
-<div><p>Info</p>
-<ul>
-<li>普通变量：存放的是数据本身</li>
-<li>指针变量：存放的是数据的地址。</li>
-</ul>
-</div>
-<p>如下代码，age 是一个普通变量，存放的内容是 28，而 ptr 是 存放变量age值的内存地址：0xc000010098</p>
-<div><pre><code><span>package</span> main
-
-<span>import</span> <span>"fmt"</span>
-
-<span>func</span> <span>main</span><span>(</span><span>)</span>  <span>{</span>
-    <span>var</span> age <span>int</span> <span>=</span> <span>28</span>
-    <span>var</span> ptr <span>=</span> <span>&amp;</span>age  <span>// &amp;后面接变量名，表示取出该变量的内存地址</span>
-    fmt<span>.</span><span>Println</span><span>(</span><span>"age: "</span><span>,</span> age<span>)</span>
-    fmt<span>.</span><span>Println</span><span>(</span><span>"ptr: "</span><span>,</span> ptr<span>)</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><p>输出</p>
-<div><pre><code>age:  28
-ptr:  0xc000010098
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>而这里要说的 new 函数，是 Go 里的一个内建函数。</p>
-<p>使用表达式 <code>new(Type)</code> 将创建一个Type类型的匿名变量，初始化为Type类型的零值，然后返回<code>变量地址</code>，返回的指针类型为<code>*Type</code>。</p>
-<p>用new创建变量和普通变量声明语句方式创建变量没有什么区别，除了不需要声明一个临时变量的名字外，我们还可以在表达式中使用new(Type)。换言之，new函数类似是一种语法糖，而不是一个新的基础概念。</p>
-<p>如下两种写法，可以说是等价的</p>
-<div><pre><code><span>// 使用 new</span>
-<span>func</span> <span>newInt</span><span>(</span><span>)</span> <span>*</span><span>int</span> <span>{</span>
-    <span>return</span> <span>new</span><span>(</span><span>int</span><span>)</span>
-<span>}</span>
-
-<span>// 使用传统的方式</span>
-<span>func</span> <span>newInt</span><span>(</span><span>)</span> <span>*</span><span>int</span> <span>{</span>
-    <span>var</span> dummy <span>int</span>
-    <span>return</span> <span>&amp;</span>dummy
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><p>以上不管哪种方法，变量/常量都只能声明一次，声明多次，编译就会报错。</p>
-<p>但也有例外，这就要说到一个特殊变量：<strong>匿名变量</strong>，也称作占位符，或者空白标识符，用下划线表示。</p>
-<p>匿名变量，优点有三：</p>
-<ul>
-<li>不分配内存，不占用内存空间</li>
-<li>不需要你为命名无用的变量名而纠结</li>
-<li>多次声明不会有任何问题</li>
-</ul>
-<p>通常我们用匿名接收必须接收，但是又不会用到的值。</p>
-<div><pre><code><span>func</span> <span>GetData</span><span>(</span><span>)</span> <span>(</span><span>int</span><span>,</span> <span>int</span><span>)</span> <span>{</span>
-    <span>return</span> <span>100</span><span>,</span> <span>200</span>
-<span>}</span>
-<span>func</span> <span>main</span><span>(</span><span>)</span><span>{</span>
-    a<span>,</span> <span>_</span> <span>:=</span> <span>GetData</span><span>(</span><span>)</span>
-    <span>_</span><span>,</span> b <span>:=</span> <span>GetData</span><span>(</span><span>)</span>
-    fmt<span>.</span><span>Println</span><span>(</span>a<span>,</span> b<span>)</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><h2 id="数据类型"> 数据类型</h2>
-<h3 id="整型"> 整型</h3>
-<p>Go 语言中，整数类型可以再细分成10个类型，为了方便大家学习，我将这些类型整理成一张表格。</p>
-<p><img src="http://image.iswbm.com/20200120204329.png" alt="image1" /></p>
-<blockquote>
-<p>int 和 uint 的区别就在于一个 <code>u</code>，有 <code>u</code> 说明是无符号，没有 <code>u</code> 代表有符号。</p>
-</blockquote>
-<h4 id="解释这个符号的区别"> 解释这个符号的区别</h4>
-<p>以 <code>int8</code> 和 <code>uint8</code> 举例，8 代表 8个bit，能表示的数值个数有 <code>2^8 = 256</code>。</p>
-<p>uint8 是无符号，能表示的都是正数，<code>0-255</code>，刚好256个数。</p>
-<p>int8 是有符号，既可以正数，也可以负数，那怎么办？对半分呗，<code>-128-127</code>，也刚好 256个数。</p>
-<p>int8 int16 int32 int64 这几个类型的最后都有一个数值，这表明了它们能表示的数值个数是固定的。</p>
-<p>而 int 并没有指定它的位数，说明它的大小，是可以变化的，那根据什么变化呢？</p>
-<ul>
-<li>当你在32位的系统下，int 和 uint 都占用 4个字节，也就是32位。</li>
-<li>若你在64位的系统下，int 和 uint 都占用 8个字节，也就是64位。</li>
-</ul>
-<p>出于这个原因，在某些场景下，你应当避免使用 int 和 uint ，而使用更加精确的 int32 和 int64，比如在二进制传输、读写文件的结构描述（为了保持文件的结构不会受到不同编译目标平台字节长度的影响）</p>
-<h4 id="不同进制的表示方法"> 不同进制的表示方法</h4>
-<p>出于习惯，在初始化数据类型为整型的变量时，我们会使用10进制的表示法，因为它最直观，比如这样，表示整数10.</p>
-<div><pre><code><span>var</span> num <span>int</span> <span>=</span> <span>10</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>不过，你要清楚，你一样可以使用其他进制来表示一个整数，这里以比较常用的2进制、8进制和16进制举例。</p>
-<p>2进制：以<code>0b</code>或<code>0B</code>为前缀</p>
-<div><pre><code><span>var</span> num01 <span>int</span> <span>=</span> <span>0b1100</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>8进制：以<code>0o</code>或者 <code>0O</code>为前缀</p>
-<div><pre><code><span>var</span> num02 <span>int</span> <span>=</span> <span>0o14</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>16进制：以<code>0x</code> 为前缀</p>
-<div><pre><code><span>var</span> num03 <span>int</span> <span>=</span> <span>0xC</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>下面用一段代码分别使用二进制、8进制、16进制来表示 10 进制的数值：12</p>
-<div><pre><code><span>package</span> main
-
-<span>import</span> <span>(</span>
-    <span>"fmt"</span>
-<span>)</span>
-
-<span>func</span> <span>main</span><span>(</span><span>)</span> <span>{</span>
-    <span>var</span> num01 <span>int</span> <span>=</span> <span>0b1100</span>
-    <span>var</span> num02 <span>int</span> <span>=</span> <span>0o14</span>
-    <span>var</span> num03 <span>int</span> <span>=</span> <span>0xC</span>
-
-    fmt<span>.</span><span>Printf</span><span>(</span><span>"2进制数 %b 表示的是: %d \n"</span><span>,</span> num01<span>,</span> num01<span>)</span>
-    fmt<span>.</span><span>Printf</span><span>(</span><span>"8进制数 %o 表示的是: %d \n"</span><span>,</span> num02<span>,</span> num02<span>)</span>
-    fmt<span>.</span><span>Printf</span><span>(</span><span>"16进制数 %X 表示的是: %d \n"</span><span>,</span> num03<span>,</span> num03<span>)</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br></div></div><p>输出如下</p>
-<div><pre><code>2进制数 1100 表示的是: 12
-8进制数 14 表示的是: 12
-16进制数 C 表示的是: 12
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>以上代码用过了 fmt 包的格式化功能，你可以参考这里去看上面的代码</p>
-<div><pre><code>%b    表示为二进制
-%c    该值对应的unicode码值
-%d    表示为十进制
-%o    表示为八进制
-%q    该值对应的单引号括起来的go语法字符字面值，必要时会采用安全的转义表示
-%x    表示为十六进制，使用a-f
-%X    表示为十六进制，使用A-F
-%U    表示为Unicode格式：U+1234，等价于&quot;U+%04X&quot;
-%E    用科学计数法表示
-%f    用浮点数表示
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><h3 id="浮点型"> 浮点型</h3>
-<p>浮点数类型的值一般由整数部分、小数点“<code>.</code>”和小数部分组成。</p>
-<p>其中，整数部分和小数部分均由10进制表示法表示。不过还有另一种表示方法。那就是在其中加入指数部分。指数部分由“E”或“e”以及一个带正负号的10进制数组成。比如，<code>3.7E-2</code>表示浮点数<code>0.037</code>。又比如，<code>3.7E+1</code>表示浮点数<code>37</code>。</p>
-<p>有时候，浮点数类型值的表示也可以被简化。比如，<code>37.0</code>可以被简化为<code>37</code>。又比如，<code>0.037</code>可以被简化为<code>.037</code>。</p>
-<blockquote>
-<p>有一点需要注意，在Go语言里，浮点数的相关部分只能由10进制表示法表示，而不能由8进制表示法或16进制表示法表示。比如，<code>03.7</code>表示的一定是浮点数<code>3.7</code>。</p>
-</blockquote>
-<h4 id="float32-和-float64"> float32 和 float64</h4>
-<p>Go语言中提供了两种精度的浮点数 float32 和 float64。</p>
-<p><strong>float32</strong>，也即我们常说的单精度，存储占用4个字节，也即4*8=32位，其中1位用来符号，8位用来指数，剩下的23位表示尾数</p>
-<p><img src="https://pic4.zhimg.com/80/v2-749cc641eb4d5dafd085e8c23f8826aa_hd.jpg" alt="img" /></p>
-<p>img</p>
-<p><strong>float64</strong>，也即我们熟悉的双精度，存储占用8个字节，也即8*8=64位，其中1位用来符号，11位用来指数，剩下的52位表示尾数</p>
-<p><img src="https://pic2.zhimg.com/80/v2-48240f0e1e0dd33ec89100cbe2d30707_hd.jpg" alt="img" /></p>
-<h3 id="byte、rune与字符串"> byte、rune与字符串</h3>
-]]></content>
-    <author>
-      <name>Draco</name>
-    </author>
-    <contributor>
-      <name>Draco</name>
-    </contributor>
-    <published>2021-06-08T20:15:56.000Z</published>
-    <rights>Copyright by Draco</rights>
-  </entry>
-  <entry>
     <title type="html">Component disabled</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/guide/disable/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/guide/disable/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <summary type="html"><![CDATA[<p>You can disable some functions on the page by setting the Frontmatter of the page.</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>You can disable some functions on the page by setting the Frontmatter of the page.</p>
@@ -8341,14 +8341,14 @@ ptr:  0xc000010098
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-02-18T07:45:42.000Z</published>
+    <published>2022-03-06T10:17:18.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">Encryption article</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/guide/encrypt/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/guide/encrypt/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h1 id="encryption-article"> Encryption article</h1>
 <p>The actual article content.</p>
 <p>Paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text.</p>
@@ -8361,14 +8361,14 @@ ptr:  0xc000010098
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-02-18T07:45:42.000Z</published>
+    <published>2022-03-06T10:17:18.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">Markdown Enhance</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/guide/markdown/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/guide/markdown/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <summary type="html"><![CDATA[<p><code>vuepress-theme-hope</code> enables more syntax in Markdown via the built-in <a href="https://vuepress-theme-hope.github.io/md-enhance" target="_blank" rel="noopener noreferrer">md-enhance</a> plugin.</p>
 ]]></summary>
     <content type="html"><![CDATA[<p><code>vuepress-theme-hope</code> enables more syntax in Markdown via the built-in <a href="https://vuepress-theme-hope.github.io/md-enhance" target="_blank" rel="noopener noreferrer">md-enhance</a> plugin.</p>
@@ -8826,14 +8826,14 @@ A custom details container
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-02-18T07:45:42.000Z</published>
+    <published>2022-03-06T10:17:18.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">page config</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/guide/page/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/guide/page/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="page-information"> Page information</h2>
 <p>You can set page information in Markdown’s Frontmatter.</p>
 <ul>
@@ -8889,7 +8889,7 @@ A custom details container
     <title type="html">Guides</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/guide/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/guide/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h1 id="guides"> Guides</h1>
 <ul>
 <li>
@@ -8913,14 +8913,14 @@ A custom details container
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-02-18T07:45:42.000Z</published>
+    <published>2022-03-06T10:17:18.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">计算机网络</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/interview/Computer-network/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/interview/Computer-network/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="osi与tcp-ip各层的结构与功能-都有哪些协议"> OSI与TCP/IP各层的结构与功能,都有哪些协议?</h2>
 <h2 id="http-https"> Http | Https</h2>
 <p>参考</p>
@@ -9316,7 +9316,7 @@ A custom details container
     <title type="html">Java面试整理</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/interview/Java-Interview/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/interview/Java-Interview/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h1 id="学习路线"> 学习路线</h1>
 <p><img src="./images/Java_learning_roadmap.png" alt="Java学习路线图" /></p>
 <h2 id="java"> Java</h2>
@@ -9385,7 +9385,7 @@ A custom details container
     <title type="html">操作系统</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/interview/OperatingSystem/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/interview/OperatingSystem/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <blockquote>
 <ul>
@@ -9525,7 +9525,7 @@ A custom details container
     <title type="html">字节测开面经</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/interview/cekai/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/interview/cekai/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="算法"> 算法</h2>
 <h3 id="最长回文子串"> 最长回文子串</h3>
 <p><code>中心扩展</code></p>
@@ -10364,7 +10364,7 @@ A custom details container
     <title type="html">面试大纲</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/interview/interview/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/interview/interview/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="java"> Java</h2>
 <ul>
 <li>集合</li>
@@ -10401,7 +10401,7 @@ A custom details container
     <title type="html">腾讯云学习笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/interview/tencent-cloud-note/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/interview/tencent-cloud-note/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<p>参考</p>
 <blockquote>
 <ul>
@@ -10422,7 +10422,7 @@ A custom details container
     <title type="html">Java-基础知识笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/Java-BasicNotes/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/Java-BasicNotes/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <summary type="html"><![CDATA[Java-基础知识笔记]]></summary>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <blockquote>
@@ -10946,7 +10946,7 @@ A custom details container
     <title type="html">Java-集合容器</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/Java-Collections/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/Java-Collections/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="容器总览"> 容器总览</h2>
 <p>注</p>
 <blockquote>
@@ -12227,7 +12227,7 @@ A custom details container
     <title type="html">Java-IO</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/Java-IO/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/Java-IO/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <summary type="html"><![CDATA[Java-IO]]></summary>
     <content type="html"><![CDATA[<h1 id="_10"> 10</h1>
 <p>Java-你好</p>
@@ -12245,7 +12245,7 @@ A custom details container
     <title type="html">Java-基础面试题</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/Java-Interview/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/Java-Interview/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <summary type="html"><![CDATA[Java-基础面试题]]></summary>
     <content type="html"><![CDATA[<h2 id="学习路线"> 学习路线</h2>
 <p><img src="./images/Java-Interview/Java_learning_roadmap.png" alt="Java学习路线图" /></p>
@@ -13021,7 +13021,7 @@ c1<span>.</span><span>eat</span><span>(</span><span>)</span><span>;</span>
     <title type="html">Java-常用方法汇总</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/Java-Methods/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/Java-Methods/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h1 id="_1-java集合"> 1. Java集合</h1>
 <h2 id="_1-1-collection"> 1.1 Collection</h2>
 <h3 id="_1-1-1-排序操作"> 1.1.1 排序操作</h3>
@@ -13548,7 +13548,7 @@ int最小值是：-2147483648
     <title type="html">Java-新特性</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/Java-NewFeature/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/Java-NewFeature/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <ul>
 <li><a href="https://blog.csdn.net/PorkBird/article/details/113727704" target="_blank" rel="noopener noreferrer">Java8新特性</a></li>
@@ -13843,7 +13843,7 @@ int最小值是：-2147483648
     <title type="html">Java-String</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/Java-String/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/Java-String/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <summary type="html"><![CDATA[Java-IO]]></summary>
     <content type="html"><![CDATA[<h2 id="_1-string常用方法"> 1. String常用方法</h2>
 <blockquote>
@@ -14030,7 +14030,7 @@ str2<span>.</span><span>intern</span><span>(</span><span>)</span><span>;</span>
     <title type="html">Java-UML类图</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/Java-UML-ClassDiagram/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/Java-UML-ClassDiagram/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -14171,7 +14171,7 @@ str2<span>.</span><span>intern</span><span>(</span><span>)</span><span>;</span>
     <title type="html">Java-注解和反射</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/Java-annotation&amp;reflection/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/Java-annotation&amp;reflection/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <blockquote>
 <ul>
@@ -14663,7 +14663,7 @@ str2<span>.</span><span>intern</span><span>(</span><span>)</span><span>;</span>
     <title type="html">设计模式之行为型设计模式</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/Java-DesignPatterns-BehavioralPatterns/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/Java-DesignPatterns-BehavioralPatterns/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -14727,7 +14727,7 @@ str2<span>.</span><span>intern</span><span>(</span><span>)</span><span>;</span>
     <title type="html">设计模式之创建型设计模式</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/Java-DesignPatterns-CreationalPatterns/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/Java-DesignPatterns-CreationalPatterns/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -15516,7 +15516,7 @@ str2<span>.</span><span>intern</span><span>(</span><span>)</span><span>;</span>
     <title type="html">设计模式之J2EE设计模式</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/Java-DesignPatterns-J2eePattern/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/Java-DesignPatterns-J2eePattern/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -15540,7 +15540,7 @@ str2<span>.</span><span>intern</span><span>(</span><span>)</span><span>;</span>
     <title type="html">设计模式七大原则</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/Java-DesignPatterns-SevenPrinciple/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/Java-DesignPatterns-SevenPrinciple/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -15752,7 +15752,7 @@ str2<span>.</span><span>intern</span><span>(</span><span>)</span><span>;</span>
     <title type="html">设计模式七大原则</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/Java-DesignPatterns-SixPrinciple/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/Java-DesignPatterns-SixPrinciple/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -16000,7 +16000,7 @@ str2<span>.</span><span>intern</span><span>(</span><span>)</span><span>;</span>
     <title type="html">设计模式之结构型设计模式</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/Java-DesignPatterns-StructuralPatterns/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/Java-DesignPatterns-StructuralPatterns/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -16614,7 +16614,7 @@ str2<span>.</span><span>intern</span><span>(</span><span>)</span><span>;</span>
     <title type="html">Java-设计模式</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-DesignPatterns/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -16732,7 +16732,7 @@ str2<span>.</span><span>intern</span><span>(</span><span>)</span><span>;</span>
     <title type="html">JVM-类加载子系统</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-JVM/Java-JVM-Classloader/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-JVM/Java-JVM-Classloader/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="jvm概述"> JVM概述</h2>
 <h3 id="jvm跨平台原理"> JVM跨平台原理</h3>
 <ol>
@@ -17068,7 +17068,7 @@ java.lang.invoke.MethodHandle实例的解析结果REF_getStatic、REF_putStatic�
     <title type="html">JVM-运行时数据区</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-JVM/Java-JVM-Run/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-JVM/Java-JVM-Run/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>Tips</p>
 <ul>
@@ -17376,7 +17376,7 @@ java.lang.invoke.MethodHandle实例的解析结果REF_getStatic、REF_putStatic�
     <title type="html">JVM</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-JVM/Java-JVM/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-JVM/Java-JVM/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="jvm组成"> JVM组成</h2>
 <p>总共分为三大区域</p>
 <ul>
@@ -18026,7 +18026,7 @@ java.lang.invoke.MethodHandle实例的解析结果REF_getStatic、REF_putStatic�
     <title type="html">概述/参考</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-JVM/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-JVM/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -18064,7 +18064,7 @@ java.lang.invoke.MethodHandle实例的解析结果REF_getStatic、REF_putStatic�
     <title type="html">Java多线程-1</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-MultiThread/Java-MultiThread-1/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-MultiThread/Java-MultiThread-1/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="进程-线程-多线程多进程"> 进程 | 线程 | 多线程多进程</h2>
 <h3 id="线程和进程区别"> 线程和进程区别</h3>
 <p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Java-MultiThread-1/线程和进程区别.png" alt="线程、程序、进程" /></p>
@@ -19098,7 +19098,7 @@ myThread2<span>.</span><span>start</span><span>(</span><span>)</span><span>;</sp
     <title type="html">Java多线程-2</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-MultiThread/Java-MultiThread-2/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-MultiThread/Java-MultiThread-2/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="java线程同步机制"> Java线程同步机制</h2>
 <h3 id="同步机制简介"> 同步机制简介</h3>
 <p>对于同一个个许可证所保护的共享数据而言，任何线程访问这些共享数据前必须先持有该许可证。</p>
@@ -19713,7 +19713,7 @@ aRray<span>[</span><span>1</span><span>]</span><span>=</span><span>1</span><span
     <title type="html">Java多线程-JUC使用</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-MultiThread/Java-MultiThread-JUC/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-MultiThread/Java-MultiThread-JUC/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<p>TODO</p>
 <p>https://www.bilibili.com/video/BV1Kw411Z7dF</p>
 ]]></content>
@@ -19730,7 +19730,7 @@ aRray<span>[</span><span>1</span><span>]</span><span>=</span><span>1</span><span
     <title type="html">Java多线程-关键字&amp;锁</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-MultiThread/Java-MultiThread-keyword/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-MultiThread/Java-MultiThread-keyword/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="sychronized-内部锁"> Sychronized(内部锁)</h2>
 <p><a href="https://www.pdai.tech/md/java/thread/java-thread-x-key-synchronized.html" target="_blank" rel="noopener noreferrer">关键字: synchronized详解</a></p>
 <h3 id="底层原理-objectmonitor"> 底层原理：ObjectMonitor</h3>
@@ -19752,7 +19752,7 @@ aRray<span>[</span><span>1</span><span>]</span><span>=</span><span>1</span><span
     <title type="html">Java-多线程并发</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-MultiThread/Java-MultiThread/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-MultiThread/Java-MultiThread/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="_1-线程、程序、进程的基本概念"> 1. 线程、程序、进程的基本概念</h2>
 <p><img src="./images/Java-MultiThread-1/Thread_program_process.png" alt="线程、程序、进程" /></p>
 <h2 id="_2-使用多线程可能带来什么问题"> 2. 使用多线程可能带来什么问题?</h2>
@@ -20881,7 +20881,7 @@ sThreadLocal<span>.</span><span>get</span><span>(</span><span>)</span>
     <title type="html">概述/参考</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/java-MultiThread/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/java-MultiThread/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <blockquote>
 <ul>
@@ -20908,7 +20908,7 @@ sThreadLocal<span>.</span><span>get</span><span>(</span><span>)</span>
     <title type="html">Java学习目录</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/java/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/java/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<ul>
 <li>
 <p><a href="./Java-BasicNotes.html">Java-基础知识笔记</a></p>
@@ -20969,7 +20969,7 @@ sThreadLocal<span>.</span><span>get</span><span>(</span><span>)</span>
     <title type="html">Linux常用命令</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/linux/Linux-commands/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/linux/Linux-commands/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <summary type="html"><![CDATA[Linux常用命令]]></summary>
     <content type="html"><![CDATA[<h1 id="菜鸟教程linux命令大全"> 菜鸟教程Linux命令大全</h1>
 <blockquote>
@@ -21006,7 +21006,7 @@ sThreadLocal<span>.</span><span>get</span><span>(</span><span>)</span>
     <title type="html">Linux技巧</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/linux/Linux-skill/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/linux/Linux-skill/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <summary type="html"><![CDATA[Linux技巧]]></summary>
     <content type="html"><![CDATA[<h2 id="环境"> 环境</h2>
 <p><code>Centos7</code></p>
@@ -21093,7 +21093,7 @@ tree -L <span>1</span> /var/lib/docker/
     <title type="html">SSH</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/linux/SSH/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/linux/SSH/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <summary type="html"><![CDATA[SSH]]></summary>
     <content type="html"><![CDATA[<h2 id="环境"> 环境</h2>
 <p><code>Centos7</code></p>
@@ -21180,7 +21180,7 @@ tree -L <span>1</span> /var/lib/docker/
     <title type="html">RabbitMQ面试题</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/mq/rabbitmq/RabbitMQ-Interview/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/mq/rabbitmq/RabbitMQ-Interview/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<p>面试</p>
 ]]></content>
     <author>
@@ -21196,7 +21196,7 @@ tree -L <span>1</span> /var/lib/docker/
     <title type="html">RabbitMQ</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/mq/rabbitmq/RabbitMQ/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/mq/rabbitmq/RabbitMQ/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="大纲"> 大纲</h2>
 <p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/RabbitMQ/RabbitMQ.png" alt="RabbitMQ大纲" /></p>
 <h2 id="参考"> 参考</h2>
@@ -22231,7 +22231,7 @@ rabbitmqctl list_queues [-p vhost] [queueInfoItem]
     <title type="html">音频批量识别平台</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/my-project/Music-Recognition/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/my-project/Music-Recognition/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <summary type="html"><![CDATA[音频批量识别平台]]></summary>
     <content type="html"><![CDATA[<h2 id="需求评审-拆分"> 需求评审/拆分</h2>
 <p>入职后了解到招我是因为目前有许多其他部门需要批量调用我们的<code>识曲服务SDK</code>，有着采用脚本或者临时调用的方式繁琐，不可控，沟通成本高，无法持久化日志等等痛点，所以一直想做一个开放平台中台，通过中台去调用服务。对于需求方来说，可视化，方便，实时查看批量识曲结果，可增量；而对于我们服务提供者兼管理者而言，可以动态查看各个识曲任务调用的SDK的QPS可视化并做到随时动态控制和预警，还能根据需求方那边具体的业务分配QPS并提前扩容(申请机器)等等，最重要的是让我们和需求方的对接规范化，流程化，可监控是最重要的。甚至以后还有可能开放出去面向<code>toB</code>，将听歌识曲开放平台推广(可参考其他开放平台<a href="https://www.acrcloud.com/music-recognition/" target="_blank" rel="noopener noreferrer">ACRCloud</a>)</p>
@@ -22368,7 +22368,7 @@ pipe.execute<span>(</span><span>)</span>
     <title type="html">实验室出入管理小程序</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/my-project/MyProject-AttendanceMiniprogram/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/my-project/MyProject-AttendanceMiniprogram/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <summary type="html"><![CDATA[实验室出入管理小程序]]></summary>
     <content type="html"><![CDATA[<div align=center><img src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-AttendanceMiniprogram-2.0/images/readme/logo.png"/></div>
 <p>原文链接</p>
@@ -22558,7 +22558,7 @@ pipe.execute<span>(</span><span>)</span>
     <title type="html">Javaweb大学活动管理系统</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/my-project/MyProject-JavaWeb-ActivitySystem/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/my-project/MyProject-JavaWeb-ActivitySystem/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <summary type="html"><![CDATA[Javaweb大学活动管理系统]]></summary>
     <content type="html"><![CDATA[<p><a href="./MyProject-JavaWeb-ActivitySystem.html"><img src="./images/My-Project/activity_system.png" alt="" /></a></p>
 <blockquote>
@@ -22583,7 +22583,7 @@ pipe.execute<span>(</span><span>)</span>
     <title type="html">JavaSwing-超市系统</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/my-project/MyProject-SupermarketSystem/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/my-project/MyProject-SupermarketSystem/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <summary type="html"><![CDATA[JavaSwing-超市系统]]></summary>
     <content type="html"><![CDATA[<div align=center><img src="https://cdn.jsdelivr.net/gh/lifealsoisgg/MyProject-SupermarketSystem/images/logo.png"/></div>
 <h2 id="_1-链接"> 1. 链接</h2>
@@ -22722,7 +22722,7 @@ pipe.execute<span>(</span><span>)</span>
     <title type="html">My Project</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/my-project/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/my-project/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="attendance-miniprogram"> Attendance Miniprogram <MyBadge text="2020中国微信官方小程序大赛华南赛区二等奖" type="tip"  vertical="top"/></h2>
 <p><a href="./MyProject-AttendanceMiniprogram.html"><img src="./images/My-Project/attendance_miniprogram.png" alt="" /></a></p>
 <div><p>Attendance Miniprogram</p>
@@ -22788,7 +22788,7 @@ pipe.execute<span>(</span><span>)</span>
     <title type="html">Mybatis基础笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/mybatis/Mybatis-basic-notes/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/mybatis/Mybatis-basic-notes/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<p>基础面试</p>
 ]]></content>
     <author>
@@ -22804,7 +22804,7 @@ pipe.execute<span>(</span><span>)</span>
     <title type="html">Mybatis语法笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/mybatis/Mybatis-grammar-notes/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/mybatis/Mybatis-grammar-notes/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="select"> SELECT</h2>
 <h2 id="insert"> INSERT</h2>
 <p>插入后获取主键，<a href="https://blog.csdn.net/qq_36614559/article/details/80257228?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param" target="_blank" rel="noopener noreferrer">参考</a></p>
@@ -22824,7 +22824,7 @@ pipe.execute<span>(</span><span>)</span>
     <title type="html">Mybatis逆向工程&amp;Example类使用</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/mybatis/Mybatis-reverse-project&amp;Example-use/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/mybatis/Mybatis-reverse-project&amp;Example-use/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="_1-参考"> 1. 参考</h2>
 <blockquote>
 <ul>
@@ -23141,14 +23141,14 @@ pipe.execute<span>(</span><span>)</span>
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-02-18T07:45:42.000Z</published>
+    <published>2022-03-06T10:17:18.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">Mybatis-Plus基础笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/mybatis/MybatisPlus-notes/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/mybatis/MybatisPlus-notes/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -24088,7 +24088,7 @@ sysUserMapper<span>.</span><span>insert</span><span>(</span>sysUser<span>)</span
     <title type="html">Nginx-动静分离</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/nginx/Nginx-Dynamic&amp;static/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/nginx/Nginx-Dynamic&amp;static/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <h2 id="介绍"> 介绍</h2>
 <p><img src="./images/Nginx-Dynamic&static/dynamic&static.jpg" alt="什么是动静分离" /></p>
@@ -24170,7 +24170,7 @@ location /img <span>{</span>
     <title type="html">Nginx-负载均衡</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/nginx/Nginx-LoadBalance/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/nginx/Nginx-LoadBalance/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -24309,7 +24309,7 @@ location / <span>{</span>
     <title type="html">Nginx-反向代理</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/nginx/Nginx-ReverseProxy/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/nginx/Nginx-ReverseProxy/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -24445,7 +24445,7 @@ location ~* \.(gif/jpg/png)$ <span>{</span>
     <title type="html">Nginx基础笔记和安装配置</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/nginx/Nginx-basicNote&amp;deployment/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/nginx/Nginx-basicNote&amp;deployment/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -25258,7 +25258,7 @@ server <span>{</span>
     <title type="html">Nginx学习目录</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/nginx/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/nginx/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -25301,7 +25301,7 @@ server <span>{</span>
     <title type="html">修改Host以访问Github</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/other/Modify-Host-to-access-Github/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/other/Modify-Host-to-access-Github/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <summary type="html"><![CDATA[修改Host以访问Github]]></summary>
     <content type="html"><![CDATA[<p>修改文件：C:\Windows\System32\drivers\etc\HOST</p>
 <div><pre><code># Github
@@ -25335,35 +25335,35 @@ server <span>{</span>
     <title type="html">My Project</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/project/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/project/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <author>
       <name>Draco</name>
     </author>
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-02-18T07:45:42.000Z</published>
+    <published>2022-03-06T10:17:18.000Z</published>
     <rights>true</rights>
   </entry>
   <entry>
     <title type="html">Blog Home</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <author>
       <name>Draco</name>
     </author>
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-02-18T07:45:42.000Z</published>
+    <published>2022-03-06T10:17:18.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">Slide page</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/slides/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/slides/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[
 <i>Not supported content</i>]]></content>
     <author>
@@ -25372,14 +25372,14 @@ server <span>{</span>
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-02-18T07:45:42.000Z</published>
+    <published>2022-03-06T10:17:18.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">HttpServletrequest与HttpServletResponse</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/HttpServletrequest&amp;HttpServletResponse/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/HttpServletrequest&amp;HttpServletResponse/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <blockquote>
 <ul>
@@ -25561,7 +25561,7 @@ server <span>{</span>
     <title type="html">Spring面试题</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/Spring-Interview/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/Spring-Interview/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="bean"> bean</h2>
 <h3 id="bean生命周期"> bean生命周期</h3>
 <h3 id="bean作用域"> bean作用域</h3>
@@ -25687,7 +25687,7 @@ server <span>{</span>
     <title type="html">Spring-RestTemplate</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/Spring-RestTemplate/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/Spring-RestTemplate/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="spring-resttemplate"> Spring-RestTemplate</h2>
 <div><pre><code><span>@Configuration</span>
 <span>public</span> <span>class</span> <span>ApplicationContextConfig</span> <span>{</span>
@@ -25714,7 +25714,7 @@ server <span>{</span>
     <title type="html">Spring注解</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/Spring-annotation/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/Spring-annotation/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="spring注解"> Spring注解</h2>
 <p>注解本质是一个继承了 Annotation的特殊接口,其具体实现类是Java运行时生成的动态代理类。我们通过反射获取注解时,返回的是Java运行时生成的动态代理对象。通过代理对象调用自定义注解的方法,会最终调用AnnotationInvocationHandler的 invoke方法。该方法会从 membervalues这个Map中索引出对应的值。而 membervalues的来源是Java常量池</p>
 <p>Controller类使用继承@Component注解的方法，将其以单例的形式放入spring容器，如果仔细看的话会发现每个注解里面都有一个默认的value()方法，它的作用是为当前的注解声明一个名字，一般默认为类名，然后spring会通过配置文件中的context:component-scan的配置，进行如下操作：</p>
@@ -26121,7 +26121,7 @@ server <span>{</span>
     <title type="html">Spring错误&amp;坑记录</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/Spring-error&amp;hole/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/Spring-error&amp;hole/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="springboot相关"> SpringBoot相关</h2>
 <h3 id="解决springboot无法注入service的原因之一testcontroller-required-a-bean-of-type-com-yifeng-study-service-userservice-that-could-not-be-found-报错"> 解决SpringBoot无法注入service的原因之一TestController required a bean of type ‘com.yifeng.study.service.UserService’ that could not be found.报错</h3>
 <p>参考</p>
@@ -26185,7 +26185,7 @@ server <span>{</span>
     <title type="html">Spring基础笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/Spring/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/Spring/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>Tips</p>
 <ul>
@@ -26740,14 +26740,14 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-02-18T07:45:42.000Z</published>
+    <published>2022-03-06T10:17:18.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">Maven笔记</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/maven/Maven/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/maven/Maven/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>Tips</p>
 <ul>
@@ -26881,7 +26881,7 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
     <title type="html">EasyExcel导入导出Excel</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/EasyExcel-use/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/EasyExcel-use/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <blockquote>
 <ul>
@@ -27031,7 +27031,7 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
     <title type="html">IDEA初始化SpringBoot项目+逆向工程+配置</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/IDEA-Initial-Springboot+reverse-project+Configuration/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/IDEA-Initial-Springboot+reverse-project+Configuration/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="_1-使用阿里云镜像作为初始源创建"> 1. 使用阿里云镜像作为初始源创建</h2>
 <ol>
 <li>选择Spring initializr</li>
@@ -27625,7 +27625,7 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
     <title type="html">JWT认证原理(更新中)</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/JWT-Authorization/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/JWT-Authorization/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <ul>
@@ -27756,7 +27756,7 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
     <title type="html">服务器上部署SpringBoot</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/Server-deployment-SpringBoot/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/Server-deployment-SpringBoot/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="_1-第一种-打包为jar包"> 1. 第一种:打包为jar包</h2>
 <h3 id="_1-1-pom-xml配置"> 1.1 pom.xml配置</h3>
 <p>在<strong>pom.xml</strong>里面配置如下</p>
@@ -27854,7 +27854,7 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
     <title type="html">SpringBoot&amp;Vue项目搭建(持续更新)</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/SpringBoot&amp;Vue/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/SpringBoot&amp;Vue/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>参考</p>
 <p>https://www.bilibili.com/video/BV1dp4y1v7K2</p>
@@ -27889,7 +27889,7 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
     <title type="html">Swagger使用</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/Swagger-use/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/Swagger-use/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="参考"> 参考</h2>
 <blockquote>
 <ul>
@@ -28383,7 +28383,7 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
     <title type="html">认识SpringCloud</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/springcloud/Know-SpringCloud/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/springcloud/Know-SpringCloud/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h1 id="springcloud课程"> SpringCloud课程</h1>
 <h2 id="一、微服务和微服务架构"> 一、微服务和微服务架构</h2>
 <h3 id="_1-什么是微服务"> 1.什么是微服务</h3>
@@ -28954,7 +28954,7 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
     <title type="html">SpringSecurity</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/spring/springsecurity/SpringSecurity/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/spring/springsecurity/SpringSecurity/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<p>SpringBoot整合SpringSecurity</p>
 ]]></content>
     <author>
@@ -28970,7 +28970,7 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
     <title type="html">学习路线</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/study-line/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/study-line/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="计算机基础"> 计算机基础</h2>
 <p>《王道》</p>
 <ul>
@@ -29088,14 +29088,14 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-02-18T07:45:42.000Z</published>
+    <published>2022-03-06T10:17:18.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">组件禁用</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/zh/guide/disable/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/zh/guide/disable/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <summary type="html"><![CDATA[<p>你可以通过设置页面的 Frontmatter，在页面禁用一些功能。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>你可以通过设置页面的 Frontmatter，在页面禁用一些功能。</p>
@@ -29122,14 +29122,14 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-02-18T07:45:42.000Z</published>
+    <published>2022-03-06T10:17:18.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">密码加密的文章</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/zh/guide/encrypt/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/zh/guide/encrypt/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h1 id="密码加密的文章"> 密码加密的文章</h1>
 <p>实际的文章内容。</p>
 <p>段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字。</p>
@@ -29142,14 +29142,14 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-02-18T07:45:42.000Z</published>
+    <published>2022-03-06T10:17:18.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">Markdown 增强</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/zh/guide/markdown/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/zh/guide/markdown/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <summary type="html"><![CDATA[<p><code>vuepress-theme-hope</code> 通过内置 <a href="https://vuepress-theme-hope.github.io/md-enhance" target="_blank" rel="noopener noreferrer">md-enhance</a>，在 Markdown 中启用了更多的语法与新功能。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p><code>vuepress-theme-hope</code> 通过内置 <a href="https://vuepress-theme-hope.github.io/md-enhance" target="_blank" rel="noopener noreferrer">md-enhance</a>，在 Markdown 中启用了更多的语法与新功能。</p>
@@ -29607,14 +29607,14 @@ $$
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-02-18T07:45:42.000Z</published>
+    <published>2022-03-06T10:17:18.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">页面配置</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/zh/guide/page/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/zh/guide/page/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="页面信息"> 页面信息</h2>
 <p>你可以在 Markdown 的 Frontmatter 中设置页面信息。</p>
 <ul>
@@ -29670,7 +29670,7 @@ $$
     <title type="html">主要功能与配置演示</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/zh/guide/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/zh/guide/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<h1 id="主要功能与配置演示"> 主要功能与配置演示</h1>
 <ul>
 <li>
@@ -29694,14 +29694,14 @@ $$
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-02-18T07:45:42.000Z</published>
+    <published>2022-03-06T10:17:18.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">项目主页</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/zh/home/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/zh/home/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<p>这是普通主页的案例。你可以在这里放置你的主体内容。</p>
 <p>想要使用此布局，你需要在页面 front matter 中设置 <code>home: true</code>。</p>
 <p>配置项的相关说明详见 <a href="https://vuepress-theme-hope.github.io/zh/guide/layout/home/" target="_blank" rel="noopener noreferrer">项目主页配置</a>。</p>
@@ -29712,28 +29712,14 @@ $$
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-02-18T07:45:42.000Z</published>
-    <rights>Copyright by Draco</rights>
-  </entry>
-  <entry>
-    <title type="html">Blog Home</title>
-    <id>https://vuepress-theme-hope-demo.mrhope.site/zh/</id>
-    <link href="https://vuepress-theme-hope-demo.mrhope.site/zh/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
-    <author>
-      <name>Draco</name>
-    </author>
-    <contributor>
-      <name>Draco</name>
-    </contributor>
-    <published>2022-02-18T07:45:42.000Z</published>
+    <published>2022-03-06T10:17:18.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
     <title type="html">幻灯片页</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/zh/slides/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/zh/slides/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[
 <i>Not supported content</i>]]></content>
     <author>
@@ -29742,28 +29728,42 @@ $$
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-02-18T07:45:42.000Z</published>
+    <published>2022-03-06T10:17:18.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
   <entry>
-    <title type="html">My Project</title>
-    <id>https://vuepress-theme-hope-demo.mrhope.site/zh/project/</id>
-    <link href="https://vuepress-theme-hope-demo.mrhope.site/zh/project/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <title type="html">Blog Home</title>
+    <id>https://vuepress-theme-hope-demo.mrhope.site/zh/</id>
+    <link href="https://vuepress-theme-hope-demo.mrhope.site/zh/"/>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <author>
       <name>Draco</name>
     </author>
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-02-18T07:45:42.000Z</published>
+    <published>2022-03-06T10:17:18.000Z</published>
+    <rights>Copyright by Draco</rights>
+  </entry>
+  <entry>
+    <title type="html">My Project</title>
+    <id>https://vuepress-theme-hope-demo.mrhope.site/zh/project/</id>
+    <link href="https://vuepress-theme-hope-demo.mrhope.site/zh/project/"/>
+    <updated>2022-03-06T10:17:18.000Z</updated>
+    <author>
+      <name>Draco</name>
+    </author>
+    <contributor>
+      <name>Draco</name>
+    </contributor>
+    <published>2022-03-06T10:17:18.000Z</published>
     <rights>true</rights>
   </entry>
   <entry>
     <title type="html">自定义布局</title>
     <id>https://vuepress-theme-hope-demo.mrhope.site/zh/layout/</id>
     <link href="https://vuepress-theme-hope-demo.mrhope.site/zh/layout/"/>
-    <updated>2022-02-18T07:45:42.000Z</updated>
+    <updated>2022-03-06T10:17:18.000Z</updated>
     <content type="html"><![CDATA[<p>您可以使用带有 Markdown 支持的插槽来自定义页面布局。</p>
 <div><p>Note</p>
 <p>此处仅仅是一个演示，你应该自行根据需求添加样式。</p>
@@ -29788,7 +29788,7 @@ $$
     <contributor>
       <name>Draco</name>
     </contributor>
-    <published>2022-02-18T07:45:42.000Z</published>
+    <published>2022-03-06T10:17:18.000Z</published>
     <rights>Copyright by Draco</rights>
   </entry>
 </feed>

@@ -4,10 +4,10 @@
     <atom:link href="https://vuepress-theme-hope-demo.mrhope.site/rss.xml" rel="self" type="application/rss+xml"/>
     <title>Draco's Blog</title>
     <link>https://vuepress-theme-hope-demo.mrhope.site/</link>
-    <description>美好的肉体即正义本身</description>
+    <description>美丽新世界</description>
     <language>en-US</language>
-    <pubDate>Fri, 18 Feb 2022 07:46:36 GMT</pubDate>
-    <lastBuildDate>Fri, 18 Feb 2022 07:46:36 GMT</lastBuildDate>
+    <pubDate>Sun, 06 Mar 2022 10:18:36 GMT</pubDate>
+    <lastBuildDate>Sun, 06 Mar 2022 10:18:36 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright by Draco</copyright>
@@ -18,12 +18,34 @@
       <link>https://vuepress-theme-hope-demo.mrhope.site/about/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/about/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">About</source>
-      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
+      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="about"> About</h2>
 <p>这里是我的博客和笔记Wiki，通过<code>Vuepress</code>搭建在<code>Github Pages</code>上</p>
 <p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/about/about.jpg" alt="about" /></p>
 ]]></content:encoded>
       <enclosure url="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/about/about.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>算法</title>
+      <link>https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/Algorithm/</link>
+      <guid>https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/Algorithm/</guid>
+      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">算法</source>
+      <pubDate>Sun, 30 Aug 2020 18:04:39 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="动态规划和贪心算法的区别"> 动态规划和贪心算法的区别</h2>
+<p>相同点</p>
+<ul>
+<li>动态规划和贪心算法都是一种递推算法</li>
+<li>均有局部最优解来推导全局最优解</li>
+</ul>
+<p>不同点</p>
+<ul>
+<li>贪心算法中，作出的每步贪心决策都无法改变，因为贪心策略是由上一步的最优解推导下一步的最优解，而上一部之前的最优解则不作保留。</li>
+<li>可以知道贪心法正确的条件是：每一步的最优解一定包含上一步的最优解。</li>
+<li>全局最优解中一定包含某个局部最优解，但不一定包含前一个局部最优解，因此需要记录之前的所有最优解</li>
+<li>动态规划的关键是状态转移方程，即如何由以求出的局部最优解来推导全局最优解</li>
+<li>边界条件：即最简单的，可以直接得出的局部最优解</li>
+</ul>
+]]></content:encoded>
     </item>
     <item>
       <title>数据结构&amp;算法题目合集</title>
@@ -667,28 +689,6 @@
 <span>System</span><span>.</span>out<span>.</span><span>println</span><span>(</span>words<span>)</span><span>;</span>
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br></div></div>]]></content:encoded>
-    </item>
-    <item>
-      <title>算法</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/Algorithm/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/dataStructure&amp;algorithm/Algorithm/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">算法</source>
-      <pubDate>Sun, 30 Aug 2020 18:04:39 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="动态规划和贪心算法的区别"> 动态规划和贪心算法的区别</h2>
-<p>相同点</p>
-<ul>
-<li>动态规划和贪心算法都是一种递推算法</li>
-<li>均有局部最优解来推导全局最优解</li>
-</ul>
-<p>不同点</p>
-<ul>
-<li>贪心算法中，作出的每步贪心决策都无法改变，因为贪心策略是由上一步的最优解推导下一步的最优解，而上一部之前的最优解则不作保留。</li>
-<li>可以知道贪心法正确的条件是：每一步的最优解一定包含上一步的最优解。</li>
-<li>全局最优解中一定包含某个局部最优解，但不一定包含前一个局部最优解，因此需要记录之前的所有最优解</li>
-<li>动态规划的关键是状态转移方程，即如何由以求出的局部最优解来推导全局最优解</li>
-<li>边界条件：即最简单的，可以直接得出的局部最优解</li>
-</ul>
-]]></content:encoded>
     </item>
     <item>
       <title>数据结构</title>
@@ -7583,249 +7583,6 @@ https://download.docker.com/linux/centos/docker-ce.repo
       <pubDate>Tue, 24 Nov 2020 17:10:27 GMT</pubDate>
     </item>
     <item>
-      <title>Git笔记</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/git/Git/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/git/Git/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Git笔记</source>
-      <pubDate>Wed, 21 Jul 2021 22:39:56 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="参考"> 参考</h2>
-<blockquote>
-<ul>
-<li><a href="https://www.runoob.com/manual/git-guide/" target="_blank" rel="noopener noreferrer">git - 简明指南</a></li>
-<li><a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener noreferrer">廖雪峰git教程</a></li>
-<li><a href="https://blog.csdn.net/liuxiaoheng1992/article/details/79108233" target="_blank" rel="noopener noreferrer">git merge 与 git rebase的区别</a></li>
-<li><a href="https://blog.csdn.net/u010312474/article/details/89566787?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0.base&amp;spm=1001.2101.3001.4242" target="_blank" rel="noopener noreferrer">git merge 与 git rebase的区别</a></li>
-</ul>
-</blockquote>
-<h2 id="git工作机制"> Git工作机制</h2>
-<p>实体如下</p>
-<ul>
-<li><code>工作目录</code>：它持有实际文件</li>
-<li><code>暂存区（Index）</code>：它像个缓存区域，临时保存你的改动</li>
-<li><code>本地仓库（HEAD）</code>：它指向你最后一次提交的结果</li>
-<li><code>远程仓库（Remote）</code></li>
-</ul>
-<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Git/Git工作流.png" alt="img" /></p>
-<p>总览</p>
-<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Git/工作流2.png" alt="img" /></p>
-<h2 id="git常用命令"> Git常用命令</h2>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>git config</td>
-<td>配置签名等</td>
-</tr>
-<tr>
-<td>git init</td>
-<td>初始化一个本地仓库</td>
-</tr>
-<tr>
-<td>git status</td>
-<td>查看当前仓库状态</td>
-</tr>
-<tr>
-<td>git add</td>
-<td>将新的文件或文件上的改动提交到暂存区</td>
-</tr>
-<tr>
-<td>git rm --cache</td>
-<td>将add的文件从暂存区移除</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="配置签名"> 配置签名</h2>
-<blockquote>
-<p>仅作为签名使用，区分不同开发人员的身份，不验证，与登录远程的代码托管中心无关</p>
-</blockquote>
-<div><pre><code>//当前仓库
-<span>git</span> config user.name【username】
-<span>git</span> config user.email【email】
-
-//系统级别
-<span>git</span> config --global user.name【username】
-<span>git</span> config --global user.email【email】
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><blockquote>
-<p>可以在仓库目录``.git/config<code>查看，全局则在根目录下</code>~/.gitconfig`文件中查看</p>
-</blockquote>
-<h2 id="初始化"> 初始化</h2>
-<div><pre><code><span>git</span> init
-</code></pre>
-<div><span>1</span><br></div></div><h2 id="查看状态-当前分支"> 查看状态（当前分支）</h2>
-<div><pre><code><span>git</span> status
-</code></pre>
-<div><span>1</span><br></div></div><p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Git/查看状态.png" alt="image-20210724195553706" /></p>
-<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Git/查看状态2.png" alt="查看状态2" /></p>
-<h2 id="工作流"> 工作流</h2>
-<h3 id="提交改动到暂存区"> 提交改动到暂存区</h3>
-<div><pre><code><span>git</span> <span>add</span> <span>[</span>filename<span>]</span>
-
-//提交所有
-<span>git</span> <span>add</span> *
-
-//从暂存区中移除
-<span>git</span> <span>rm</span> --cache <span>[</span>filename<span>]</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><h3 id="暂存区提交到本地仓库"> 暂存区提交到本地仓库</h3>
-<div><pre><code><span>git</span> commit -m <span>"提交信息"</span>
-</code></pre>
-<div><span>1</span><br></div></div><blockquote>
-<p>提交信息存储在当前仓库``./git/COMMIT_EDITMSG`中</p>
-</blockquote>
-<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Git/git commit.png" alt="image-20210724201352971" /></p>
-<p>缩略版的版本号为<code>2b82d69</code></p>
-<h2 id="查看日志-当前分支"> 查看日志（当前分支）</h2>
-<div><pre><code>//可以查看所有分支的所有操作记录（包括commit和reset的操作），包括已经被删除的commit记录
-<span>git</span> reflog
-
-//查看commit记录
-<span>git</span> log
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Git/查看日志.png" alt="image-20210724203407199" /></p>
-<h2 id="版本穿梭-当前分支"> 版本穿梭（当前分支）</h2>
-<div><pre><code>//穿梭到某个版本，使HEAD指向该commit
-<span>git</span> reset <span>[</span>version id<span>]</span>
-
-//无视更改，强行穿梭到某个版本
-<span>git</span> reset --hard <span>[</span>version id<span>]</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>例如</p>
-<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Git/版本穿梭.png" alt="版本穿梭" /></p>
-<p>底层原理是将HEAD指针移动</p>
-<h2 id="分支"> 分支</h2>
-<h3 id="常用命令"> 常用命令</h3>
-<table>
-<thead>
-<tr>
-<th>常用命令</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>git branch [branch name]</td>
-<td>创建分支</td>
-</tr>
-<tr>
-<td>git branch -v</td>
-<td>查看分支</td>
-</tr>
-<tr>
-<td>git checkout [branch name]</td>
-<td>切换分支</td>
-</tr>
-<tr>
-<td>git merge [branch name]</td>
-<td>把指定分支合并到当前分支上</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id="冲突"> 冲突</h3>
-<p>当合并分支时，两个分支在同一个文件的同一个位置修改，Git无法决定使用哪个修改</p>
-<h2 id="分支合并"> 分支合并</h2>
-<p>参考</p>
-<ul>
-<li><a href="https://www.liaoxuefeng.com/wiki/896043488029600/900003767775424" target="_blank" rel="noopener noreferrer">创建与合并分支</a></li>
-<li></li>
-</ul>
-<h2 id="代码托管协作"> 代码托管协作</h2>
-<p>生成配置本地SSH到Github上后，在Github创建仓库，然后复制仓库地址用于与本地仓库相关联</p>
-<p>…or create a new repository on the command line</p>
-<div><pre><code><span>git</span> init
-<span>git</span> <span>add</span> README.md
-<span>git</span> commit -m <span>"first commit"</span>
-<span>git</span> branch -M main
-<span>git</span> remote <span>add</span> origin git@github.com:LifeAlsoIsGG/git-learn2.git
-<span>git</span> push -u origin main
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>…or push an existing repository from the command line</p>
-<div><pre><code><span>git</span> remote <span>add</span> origin git@github.com:LifeAlsoIsGG/git-learn2.git
-<span>git</span> branch -M main
-<span>git</span> push -u origin main
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><h2 id="idea集成git使用"> IDEA集成Git使用</h2>
-<h3 id="配置忽略文件"> 配置忽略文件</h3>
-<p>创建<code>xxx.ignore</code>文件，以.gnore为后缀</p>
-<h3 id="文件颜色"> 文件颜色</h3>
-<p>红色，未加入版本控制</p>
-<p>绿色，已经加入暂缓区但未提交</p>
-<p>蓝色/黄色，加入，已提交，有改动</p>
-<p>白色，加入，已提交，无改动</p>
-<p>灰色：版本控制已忽略文件。</p>
-<h2 id="ssh原理"> SSH原理</h2>
-<div><p>参考</p>
-<ul>
-<li><a href="https://www.cnblogs.com/diffx/p/9553587.html" target="_blank" rel="noopener noreferrer">图解SSH原理</a></li>
-<li>https://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html</li>
-</ul>
-</div>
-<h2 id="奇技"> 奇技</h2>
-<h3 id="将修改加入到某次commit中"> 将修改加入到某次commit中</h3>
-<div><pre><code><span>#保存改动</span>
-<span>git</span> stash
-
-<span>#进入要插入的commit的之前一个commit,在编辑页面将修改的commit的pick修改为edit</span>
-<span>git</span> rebase -i <span>&lt;</span>commit<span>></span>
-
-<span>#拿出改动</span>
-<span>git</span> stash pop
-
-<span>#添加到缓存区</span>
-<span>git</span> <span>add</span> <span>.</span>
-
-<span>#加入到commit</span>
-<span>git</span> commit --amend --no-edit
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br></div></div>]]></content:encoded>
-      <enclosure url="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Git/Git%E5%B7%A5%E4%BD%9C%E6%B5%81.png" type="image/png"/>
-    </item>
-    <item>
       <title>Golang-介绍和使用</title>
       <link>https://vuepress-theme-hope-demo.mrhope.site/golang/Golang-description&amp;use/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/golang/Golang-description&amp;use/</guid>
@@ -8128,6 +7885,249 @@ ptr:  0xc000010098
       <enclosure url="http://image.iswbm.com/20200120204329.png" type="image/png"/>
     </item>
     <item>
+      <title>Git笔记</title>
+      <link>https://vuepress-theme-hope-demo.mrhope.site/git/Git/</link>
+      <guid>https://vuepress-theme-hope-demo.mrhope.site/git/Git/</guid>
+      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Git笔记</source>
+      <pubDate>Wed, 21 Jul 2021 22:39:56 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="参考"> 参考</h2>
+<blockquote>
+<ul>
+<li><a href="https://www.runoob.com/manual/git-guide/" target="_blank" rel="noopener noreferrer">git - 简明指南</a></li>
+<li><a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener noreferrer">廖雪峰git教程</a></li>
+<li><a href="https://blog.csdn.net/liuxiaoheng1992/article/details/79108233" target="_blank" rel="noopener noreferrer">git merge 与 git rebase的区别</a></li>
+<li><a href="https://blog.csdn.net/u010312474/article/details/89566787?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0.base&amp;spm=1001.2101.3001.4242" target="_blank" rel="noopener noreferrer">git merge 与 git rebase的区别</a></li>
+</ul>
+</blockquote>
+<h2 id="git工作机制"> Git工作机制</h2>
+<p>实体如下</p>
+<ul>
+<li><code>工作目录</code>：它持有实际文件</li>
+<li><code>暂存区（Index）</code>：它像个缓存区域，临时保存你的改动</li>
+<li><code>本地仓库（HEAD）</code>：它指向你最后一次提交的结果</li>
+<li><code>远程仓库（Remote）</code></li>
+</ul>
+<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Git/Git工作流.png" alt="img" /></p>
+<p>总览</p>
+<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Git/工作流2.png" alt="img" /></p>
+<h2 id="git常用命令"> Git常用命令</h2>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git config</td>
+<td>配置签名等</td>
+</tr>
+<tr>
+<td>git init</td>
+<td>初始化一个本地仓库</td>
+</tr>
+<tr>
+<td>git status</td>
+<td>查看当前仓库状态</td>
+</tr>
+<tr>
+<td>git add</td>
+<td>将新的文件或文件上的改动提交到暂存区</td>
+</tr>
+<tr>
+<td>git rm --cache</td>
+<td>将add的文件从暂存区移除</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="配置签名"> 配置签名</h2>
+<blockquote>
+<p>仅作为签名使用，区分不同开发人员的身份，不验证，与登录远程的代码托管中心无关</p>
+</blockquote>
+<div><pre><code>//当前仓库
+<span>git</span> config user.name【username】
+<span>git</span> config user.email【email】
+
+//系统级别
+<span>git</span> config --global user.name【username】
+<span>git</span> config --global user.email【email】
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><blockquote>
+<p>可以在仓库目录``.git/config<code>查看，全局则在根目录下</code>~/.gitconfig`文件中查看</p>
+</blockquote>
+<h2 id="初始化"> 初始化</h2>
+<div><pre><code><span>git</span> init
+</code></pre>
+<div><span>1</span><br></div></div><h2 id="查看状态-当前分支"> 查看状态（当前分支）</h2>
+<div><pre><code><span>git</span> status
+</code></pre>
+<div><span>1</span><br></div></div><p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Git/查看状态.png" alt="image-20210724195553706" /></p>
+<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Git/查看状态2.png" alt="查看状态2" /></p>
+<h2 id="工作流"> 工作流</h2>
+<h3 id="提交改动到暂存区"> 提交改动到暂存区</h3>
+<div><pre><code><span>git</span> <span>add</span> <span>[</span>filename<span>]</span>
+
+//提交所有
+<span>git</span> <span>add</span> *
+
+//从暂存区中移除
+<span>git</span> <span>rm</span> --cache <span>[</span>filename<span>]</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><h3 id="暂存区提交到本地仓库"> 暂存区提交到本地仓库</h3>
+<div><pre><code><span>git</span> commit -m <span>"提交信息"</span>
+</code></pre>
+<div><span>1</span><br></div></div><blockquote>
+<p>提交信息存储在当前仓库``./git/COMMIT_EDITMSG`中</p>
+</blockquote>
+<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Git/git commit.png" alt="image-20210724201352971" /></p>
+<p>缩略版的版本号为<code>2b82d69</code></p>
+<h2 id="查看日志-当前分支"> 查看日志（当前分支）</h2>
+<div><pre><code>//可以查看所有分支的所有操作记录（包括commit和reset的操作），包括已经被删除的commit记录
+<span>git</span> reflog
+
+//查看commit记录
+<span>git</span> log
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Git/查看日志.png" alt="image-20210724203407199" /></p>
+<h2 id="版本穿梭-当前分支"> 版本穿梭（当前分支）</h2>
+<div><pre><code>//穿梭到某个版本，使HEAD指向该commit
+<span>git</span> reset <span>[</span>version id<span>]</span>
+
+//无视更改，强行穿梭到某个版本
+<span>git</span> reset --hard <span>[</span>version id<span>]</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>例如</p>
+<p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Git/版本穿梭.png" alt="版本穿梭" /></p>
+<p>底层原理是将HEAD指针移动</p>
+<h2 id="分支"> 分支</h2>
+<h3 id="常用命令"> 常用命令</h3>
+<table>
+<thead>
+<tr>
+<th>常用命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git branch [branch name]</td>
+<td>创建分支</td>
+</tr>
+<tr>
+<td>git branch -v</td>
+<td>查看分支</td>
+</tr>
+<tr>
+<td>git checkout [branch name]</td>
+<td>切换分支</td>
+</tr>
+<tr>
+<td>git merge [branch name]</td>
+<td>把指定分支合并到当前分支上</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="冲突"> 冲突</h3>
+<p>当合并分支时，两个分支在同一个文件的同一个位置修改，Git无法决定使用哪个修改</p>
+<h2 id="分支合并"> 分支合并</h2>
+<p>参考</p>
+<ul>
+<li><a href="https://www.liaoxuefeng.com/wiki/896043488029600/900003767775424" target="_blank" rel="noopener noreferrer">创建与合并分支</a></li>
+<li></li>
+</ul>
+<h2 id="代码托管协作"> 代码托管协作</h2>
+<p>生成配置本地SSH到Github上后，在Github创建仓库，然后复制仓库地址用于与本地仓库相关联</p>
+<p>…or create a new repository on the command line</p>
+<div><pre><code><span>git</span> init
+<span>git</span> <span>add</span> README.md
+<span>git</span> commit -m <span>"first commit"</span>
+<span>git</span> branch -M main
+<span>git</span> remote <span>add</span> origin git@github.com:LifeAlsoIsGG/git-learn2.git
+<span>git</span> push -u origin main
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>…or push an existing repository from the command line</p>
+<div><pre><code><span>git</span> remote <span>add</span> origin git@github.com:LifeAlsoIsGG/git-learn2.git
+<span>git</span> branch -M main
+<span>git</span> push -u origin main
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><h2 id="idea集成git使用"> IDEA集成Git使用</h2>
+<h3 id="配置忽略文件"> 配置忽略文件</h3>
+<p>创建<code>xxx.ignore</code>文件，以.gnore为后缀</p>
+<h3 id="文件颜色"> 文件颜色</h3>
+<p>红色，未加入版本控制</p>
+<p>绿色，已经加入暂缓区但未提交</p>
+<p>蓝色/黄色，加入，已提交，有改动</p>
+<p>白色，加入，已提交，无改动</p>
+<p>灰色：版本控制已忽略文件。</p>
+<h2 id="ssh原理"> SSH原理</h2>
+<div><p>参考</p>
+<ul>
+<li><a href="https://www.cnblogs.com/diffx/p/9553587.html" target="_blank" rel="noopener noreferrer">图解SSH原理</a></li>
+<li>https://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html</li>
+</ul>
+</div>
+<h2 id="奇技"> 奇技</h2>
+<h3 id="将修改加入到某次commit中"> 将修改加入到某次commit中</h3>
+<div><pre><code><span>#保存改动</span>
+<span>git</span> stash
+
+<span>#进入要插入的commit的之前一个commit,在编辑页面将修改的commit的pick修改为edit</span>
+<span>git</span> rebase -i <span>&lt;</span>commit<span>></span>
+
+<span>#拿出改动</span>
+<span>git</span> stash pop
+
+<span>#添加到缓存区</span>
+<span>git</span> <span>add</span> <span>.</span>
+
+<span>#加入到commit</span>
+<span>git</span> commit --amend --no-edit
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br></div></div>]]></content:encoded>
+      <enclosure url="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Git/Git%E5%B7%A5%E4%BD%9C%E6%B5%81.png" type="image/png"/>
+    </item>
+    <item>
       <title>Component disabled</title>
       <link>https://vuepress-theme-hope-demo.mrhope.site/guide/disable/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/guide/disable/</guid>
@@ -8135,7 +8135,7 @@ ptr:  0xc000010098
       <description>&amp;lt;p&amp;gt;You can disable some functions on the page by setting the Frontmatter of the page.&amp;lt;/p&amp;gt;
 </description>
       <category>Guide</category>
-      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
+      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
       <content:encoded><![CDATA[<p>You can disable some functions on the page by setting the Frontmatter of the page.</p>
 
 <p>These should be disabled on this page:</p>
@@ -8160,7 +8160,7 @@ ptr:  0xc000010098
       <guid>https://vuepress-theme-hope-demo.mrhope.site/guide/encrypt/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Encryption article</source>
       <category>Guide</category>
-      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
+      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="encryption-article"> Encryption article</h1>
 <p>The actual article content.</p>
 <p>Paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text.</p>
@@ -8175,7 +8175,7 @@ ptr:  0xc000010098
       <description>&amp;lt;p&amp;gt;&amp;lt;code&amp;gt;vuepress-theme-hope&amp;lt;/code&amp;gt; enables more syntax in Markdown via the built-in &amp;lt;a href=&amp;quot;https://vuepress-theme-hope.github.io/md-enhance&amp;quot; target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot;&amp;gt;md-enhance&amp;lt;/a&amp;gt; plugin.&amp;lt;/p&amp;gt;
 </description>
       <category>Guide</category>
-      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
+      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
       <content:encoded><![CDATA[<p><code>vuepress-theme-hope</code> enables more syntax in Markdown via the built-in <a href="https://vuepress-theme-hope.github.io/md-enhance" target="_blank" rel="noopener noreferrer">md-enhance</a> plugin.</p>
 
 <h2 id="enable-all"> Enable all</h2>
@@ -8680,7 +8680,7 @@ A custom details container
       <guid>https://vuepress-theme-hope-demo.mrhope.site/guide/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Guides</source>
       <category>Guide</category>
-      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
+      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="guides"> Guides</h1>
 <ul>
 <li>
@@ -22306,7 +22306,7 @@ pipe.execute<span>(</span><span>)</span>
       <link>https://vuepress-theme-hope-demo.mrhope.site/mybatis/Mybatis-reverse-project&amp;Example-use/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/mybatis/Mybatis-reverse-project&amp;Example-use/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Mybatis逆向工程&amp;Example类使用</source>
-      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
+      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="_1-参考"> 1. 参考</h2>
 <blockquote>
 <ul>
@@ -24761,21 +24761,21 @@ server <span>{</span>
       <link>https://vuepress-theme-hope-demo.mrhope.site/project/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/project/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">My Project</source>
-      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
+      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
     </item>
     <item>
       <title>Blog Home</title>
       <link>https://vuepress-theme-hope-demo.mrhope.site/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Blog Home</source>
-      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
+      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
     </item>
     <item>
       <title>Slide page</title>
       <link>https://vuepress-theme-hope-demo.mrhope.site/slides/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/slides/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Slide page</source>
-      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
+      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://vuepress-theme-hope-demo.mrhope.site/logo.svg" type="image/svg+xml"/>
@@ -25558,7 +25558,7 @@ server <span>{</span>
       <link>https://vuepress-theme-hope-demo.mrhope.site/spring/Spring/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/spring/Spring/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Spring基础笔记</source>
-      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
+      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>Tips</p>
 <ul>
@@ -28277,7 +28277,7 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
       <link>https://vuepress-theme-hope-demo.mrhope.site/study-line/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/study-line/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">学习路线</source>
-      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
+      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="计算机基础"> 计算机基础</h2>
 <p>《王道》</p>
 <ul>
@@ -28398,7 +28398,7 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
       <description>&amp;lt;p&amp;gt;你可以通过设置页面的 Frontmatter，在页面禁用一些功能。&amp;lt;/p&amp;gt;
 </description>
       <category>使用指南</category>
-      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
+      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
       <content:encoded><![CDATA[<p>你可以通过设置页面的 Frontmatter，在页面禁用一些功能。</p>
 
 <p>本页面应当禁用了:</p>
@@ -28423,7 +28423,7 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
       <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/guide/encrypt/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">密码加密的文章</source>
       <category>使用指南</category>
-      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
+      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="密码加密的文章"> 密码加密的文章</h1>
 <p>实际的文章内容。</p>
 <p>段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字。</p>
@@ -28438,7 +28438,7 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
       <description>&amp;lt;p&amp;gt;&amp;lt;code&amp;gt;vuepress-theme-hope&amp;lt;/code&amp;gt; 通过内置 &amp;lt;a href=&amp;quot;https://vuepress-theme-hope.github.io/md-enhance&amp;quot; target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot;&amp;gt;md-enhance&amp;lt;/a&amp;gt;，在 Markdown 中启用了更多的语法与新功能。&amp;lt;/p&amp;gt;
 </description>
       <category>使用指南</category>
-      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
+      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
       <content:encoded><![CDATA[<p><code>vuepress-theme-hope</code> 通过内置 <a href="https://vuepress-theme-hope.github.io/md-enhance" target="_blank" rel="noopener noreferrer">md-enhance</a>，在 Markdown 中启用了更多的语法与新功能。</p>
 
 <h2 id="一键启用"> 一键启用</h2>
@@ -28943,7 +28943,7 @@ $$
       <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/guide/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">主要功能与配置演示</source>
       <category>使用指南</category>
-      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
+      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="主要功能与配置演示"> 主要功能与配置演示</h1>
 <ul>
 <li>
@@ -28966,42 +28966,42 @@ $$
       <link>https://vuepress-theme-hope-demo.mrhope.site/zh/home/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/home/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">项目主页</source>
-      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
+      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
       <content:encoded><![CDATA[<p>这是普通主页的案例。你可以在这里放置你的主体内容。</p>
 <p>想要使用此布局，你需要在页面 front matter 中设置 <code>home: true</code>。</p>
 <p>配置项的相关说明详见 <a href="https://vuepress-theme-hope.github.io/zh/guide/layout/home/" target="_blank" rel="noopener noreferrer">项目主页配置</a>。</p>
 ]]></content:encoded>
     </item>
     <item>
-      <title>Blog Home</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/zh/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Blog Home</source>
-      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
-    </item>
-    <item>
       <title>幻灯片页</title>
       <link>https://vuepress-theme-hope-demo.mrhope.site/zh/slides/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/slides/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">幻灯片页</source>
-      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
+      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://vuepress-theme-hope-demo.mrhope.site/logo.svg" type="image/svg+xml"/>
+    </item>
+    <item>
+      <title>Blog Home</title>
+      <link>https://vuepress-theme-hope-demo.mrhope.site/zh/</link>
+      <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/</guid>
+      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Blog Home</source>
+      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
     </item>
     <item>
       <title>My Project</title>
       <link>https://vuepress-theme-hope-demo.mrhope.site/zh/project/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/project/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">My Project</source>
-      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
+      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
     </item>
     <item>
       <title>自定义布局</title>
       <link>https://vuepress-theme-hope-demo.mrhope.site/zh/layout/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/layout/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">自定义布局</source>
-      <pubDate>Fri, 18 Feb 2022 07:45:42 GMT</pubDate>
+      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
       <content:encoded><![CDATA[<p>您可以使用带有 Markdown 支持的插槽来自定义页面布局。</p>
 <div><p>Note</p>
 <p>此处仅仅是一个演示，你应该自行根据需求添加样式。</p>
