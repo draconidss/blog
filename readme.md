@@ -5,7 +5,7 @@ icon: home
 title: Blog Home
 heroImage: https://blog-1300186248.cos.ap-shanghai.myqcloud.com/avatar.png
 heroText: Draco's Blog
-tagline: 美好的肉体即正义本身
+tagline: 美丽新世界
 bgImage: https://blog-1300186248.cos.ap-shanghai.myqcloud.com/bgImage.jpg
 heroFullScreen: true
 project:

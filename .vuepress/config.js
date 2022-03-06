@@ -2,7 +2,7 @@ const { config } = require("vuepress-theme-hope");
 
 module.exports = config({
   title: "Draco's Blog",
-  description: "美好的肉体即正义本身",
+  description: "美丽新世界",
   dest: "./dist",
 
   head: [
@@ -29,7 +29,7 @@ module.exports = config({
     },
     "/zh/": {
       title: "Draco's Blog",
-      description: "美好的肉体即正义本身"
+      description: "美丽新世界"
     },
   },
 
