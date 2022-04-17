@@ -239,6 +239,12 @@ module.exports = config({
             }
           ]
         },
+        {
+          title: "Computer Knowledge",
+          icon: "",
+          prefix: "computer-knowledge/",
+          children: ["computer-knowledge"]
+        },
 
         {
           title: "ErrorNote",
