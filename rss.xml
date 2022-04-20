@@ -6,8 +6,8 @@
     <link>https://vuepress-theme-hope-demo.mrhope.site/</link>
     <description>美丽新世界</description>
     <language>en-US</language>
-    <pubDate>Sun, 06 Mar 2022 10:18:36 GMT</pubDate>
-    <lastBuildDate>Sun, 06 Mar 2022 10:18:36 GMT</lastBuildDate>
+    <pubDate>Wed, 20 Apr 2022 15:34:27 GMT</pubDate>
+    <lastBuildDate>Wed, 20 Apr 2022 15:34:27 GMT</lastBuildDate>
     <generator>@mr-hope/vuepress-plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright by Draco</copyright>
@@ -18,12 +18,42 @@
       <link>https://vuepress-theme-hope-demo.mrhope.site/about/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/about/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">About</source>
-      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
+      <pubDate>Sun, 17 Apr 2022 16:39:40 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="about"> About</h2>
 <p>这里是我的博客和笔记Wiki，通过<code>Vuepress</code>搭建在<code>Github Pages</code>上</p>
 <p><img src="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/about/about.jpg" alt="about" /></p>
 ]]></content:encoded>
       <enclosure url="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/about/about.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>计算机知识</title>
+      <link>https://vuepress-theme-hope-demo.mrhope.site/computer-knowledge/computer-knowledge/</link>
+      <guid>https://vuepress-theme-hope-demo.mrhope.site/computer-knowledge/computer-knowledge/</guid>
+      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">计算机知识</source>
+      <pubDate>Sun, 17 Apr 2022 18:34:56 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="静态语言与动态语言"> 静态语言与动态语言</h2>
+<h3 id="静态语言-强类型语言"> 静态语言（强类型语言）</h3>
+<p>静态语言是在编译时确定变量的数据类型，运行期间不可以改变其结构，即运行前可确定的语言，多数静态类型语言要求在使用变量之前必须声明数据类型。
+例如：C++、Java、Delphi、C#等。</p>
+<h3 id="动态语言-弱类型语言"> 动态语言（弱类型语言）</h3>
+<p>动态语言是在运行时确定数据类型与结构的语言。变量使用之前不需要类型声明，通常变量的类型是被赋值的那个值的类型。</p>
+<p>例如PHP/ASP/Ruby/Python/Perl/ABAP/SQL/JavaScript/Unix Shell等等。</p>
+<h3 id="优点"> 优点</h3>
+<p>静态类型语言的一些优点：</p>
+<ul>
+<li>性能高于动态类型语言。</li>
+<li>Bug通常会被编译器发现。</li>
+<li>代码编辑器可提供代码补全和其他功能。</li>
+<li>数据完整性更好。</li>
+</ul>
+<p>动态类型语言的一些优点：</p>
+<ul>
+<li>使用动态类型语言编写软件的速度通常更快。</li>
+<li>无须为执行代码而等待编译器完成编译。</li>
+<li>动态类型语言通常不那么死板，因此有些人认为变更代码更容易。</li>
+<li>有些人认为动态类型语言学习门槛更低。</li>
+</ul>
+]]></content:encoded>
     </item>
     <item>
       <title>算法</title>
@@ -5278,35 +5308,6 @@ OK              <span>#可以删除其它的master节点</span>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br></div></div>]]></content:encoded>
     </item>
     <item>
-      <title>Redis应用场景</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/database/redis/Redis_scene/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/database/redis/Redis_scene/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Redis应用场景</source>
-      <pubDate>Thu, 20 May 2021 11:19:16 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="单点登录-sso"> 单点登录（SSO）</h2>
-<h3 id="参考"> 参考</h3>
-<div><p>参考</p>
-<ul>
-<li>https://blog.csdn.net/qq_32534441/article/details/90264485</li>
-</ul>
-</div>
-<h2 id="redis监听过期队列"> Redis监听过期队列</h2>
-<p>适用于订单支付超时等场景</p>
-<h3 id="参考-2"> 参考</h3>
-<div><p>参考</p>
-<ul>
-<li><a href="https://www.cnblogs.com/fkxuexi/p/10674038.html" target="_blank" rel="noopener noreferrer">redis 高级功能，过期事件监听</a></li>
-<li><a href="https://blog.csdn.net/weixin_37703281/article/details/93358734" target="_blank" rel="noopener noreferrer">springboot+redisTemplate实现消息队列(pub/sub,list,监听键过期)</a></li>
-<li><a href="https://www.cnblogs.com/yuluoxingkong/p/10475355.html" target="_blank" rel="noopener noreferrer">如何利用redis key过期事件实现过期提醒</a></li>
-</ul>
-</div>
-<h2 id="redis实现高并发秒杀系统"> Redis实现高并发秒杀系统</h2>
-<h3 id="参考-3"> 参考</h3>
-<div><p>参考</p>
-</div>
-]]></content:encoded>
-    </item>
-    <item>
       <title>Redis理论学习笔记</title>
       <link>https://vuepress-theme-hope-demo.mrhope.site/database/redis/Redis_theory_note/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/database/redis/Redis_theory_note/</guid>
@@ -6062,6 +6063,45 @@ appendfsync no #让操作系统决定何时进⾏同步
 <li>https://blog.csdn.net/u013521220/article/details/107640977</li>
 </ul>
 <p>::</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Redis应用场景</title>
+      <link>https://vuepress-theme-hope-demo.mrhope.site/database/redis/Redis_scene/</link>
+      <guid>https://vuepress-theme-hope-demo.mrhope.site/database/redis/Redis_scene/</guid>
+      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Redis应用场景</source>
+      <pubDate>Thu, 20 May 2021 11:19:16 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="单点登录-sso"> 单点登录（SSO）</h2>
+<h3 id="参考"> 参考</h3>
+<div><p>参考</p>
+<ul>
+<li>https://blog.csdn.net/qq_32534441/article/details/90264485</li>
+</ul>
+</div>
+<h2 id="redis监听过期队列"> Redis监听过期队列</h2>
+<p>适用于订单支付超时等场景</p>
+<h3 id="参考-2"> 参考</h3>
+<div><p>参考</p>
+<ul>
+<li><a href="https://www.cnblogs.com/fkxuexi/p/10674038.html" target="_blank" rel="noopener noreferrer">redis 高级功能，过期事件监听</a></li>
+<li><a href="https://blog.csdn.net/weixin_37703281/article/details/93358734" target="_blank" rel="noopener noreferrer">springboot+redisTemplate实现消息队列(pub/sub,list,监听键过期)</a></li>
+<li><a href="https://www.cnblogs.com/yuluoxingkong/p/10475355.html" target="_blank" rel="noopener noreferrer">如何利用redis key过期事件实现过期提醒</a></li>
+</ul>
+</div>
+<h2 id="redis实现高并发秒杀系统"> Redis实现高并发秒杀系统</h2>
+<h3 id="参考-3"> 参考</h3>
+<div><p>参考</p>
+</div>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Google Cloud Spanner</title>
+      <link>https://vuepress-theme-hope-demo.mrhope.site/database/spanner/spanner/</link>
+      <guid>https://vuepress-theme-hope-demo.mrhope.site/database/spanner/spanner/</guid>
+      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Google Cloud Spanner</source>
+      <pubDate>Mon, 28 Mar 2022 00:37:32 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="介绍"> 介绍</h2>
+<p>Spanner 是Google的全球级的分布式数据库(Globally-Distributed Database)，它是<a href="https://zh.wikipedia.org/wiki/BigTable" target="_blank" rel="noopener noreferrer">BigTable</a>的继任者。Spanner的扩展性达到了令人咋舌的全球级，可以扩展到数百万的机器，数已百计的数据中心，上万亿的行。更给力的是，除了夸张的扩展性之外，他还能同时通过同步复制和多版本来满足外部一致性，可用性也是很好的。冲破CAP的枷锁，在三者之间完美平衡。</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -7583,308 +7623,6 @@ https://download.docker.com/linux/centos/docker-ce.repo
       <pubDate>Tue, 24 Nov 2020 17:10:27 GMT</pubDate>
     </item>
     <item>
-      <title>Golang-介绍和使用</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/golang/Golang-description&amp;use/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/golang/Golang-description&amp;use/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Golang-介绍和使用</source>
-      <pubDate>Tue, 08 Jun 2021 20:14:56 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="参考"> 参考</h2>
-<div><p>Tips</p>
-<ul>
-<li><a href="http://golang.iswbm.com/en/latest/index.html" target="_blank" rel="noopener noreferrer">Go编程时光</a></li>
-<li><a href="http://c.biancheng.net/golang/" target="_blank" rel="noopener noreferrer">Go语言入门教程</a></li>
-<li><a href="https://www.runoob.com/go/go-tutorial.html" target="_blank" rel="noopener noreferrer">菜鸟教程</a></li>
-</ul>
-</div>
-<h2 id="介绍"> 介绍</h2>
-<blockquote>
-<p>Go语言为并发而生。</p>
-</blockquote>
-<h3 id="简介"> 简介</h3>
-<p>Go语言（或 Golang）起源于 2007 年，并在 2009 年正式对外发布。Go 是非常年轻的一门语言，它的主要目标是“兼具 <a href="http://c.biancheng.net/python/" target="_blank" rel="noopener noreferrer">Python</a> 等动态语言的开发速度和 C/<a href="http://c.biancheng.net/cplus/" target="_blank" rel="noopener noreferrer">C++</a> 等编译型语言的性能与安全性”。</p>
-<p>Go语言是编程语言设计的又一次尝试，是对类C语言的重大改进，它不但能让你访问底层操作系统，还提供了强大的网络编程和并发编程支持。Go语言的用途众多，可以进行网络编程、系统编程、并发编程、分布式编程。</p>
-<p>Go语言的推出，旨在不损失应用程序性能的情况下降低代码的复杂性，具有“部署简单、并发性好、语言设计良好、执行性能好”等优势，目前国内诸多 IT 公司均已采用Go语言开发项目。</p>
-<p>Go语言有时候被描述为“C 类似语言”，或者是“21 世纪的C语言”。Go 从C语言继承了相似的表达式语法、控制流结构、基础数据类型、调用参数传值、指针等很多思想，还有C语言一直所看中的编译后机器码的运行效率以及和现有操作系统的无缝适配。</p>
-<p>因为Go语言没有类和继承的概念，所以它和 <a href="http://c.biancheng.net/java/" target="_blank" rel="noopener noreferrer">Java</a> 或 C++ 看起来并不相同。但是它通过接口（interface）的概念来实现多态性。Go语言有一个清晰易懂的轻量级类型系统，在类型之间也没有层级之说。因此可以说Go语言是一门混合型的语言。</p>
-<p>此外，很多重要的开源项目都是使用Go语言开发的，其中包括 <a href="http://c.biancheng.net/docker/" target="_blank" rel="noopener noreferrer">Docker</a>、Go-Ethereum、Thrraform 和 Kubernetes。</p>
-<h3 id="用途"> 用途</h3>
-<p>Go 语言被设计成一门应用于搭载 Web 服务器，存储集群或类似用途的巨型中央服务器的系统编程语言。</p>
-<p>对于高性能分布式系统领域而言，Go 语言无疑比大多数其它语言有着更高的开发效率。它提供了海量并行的支持，这对于游戏服务端的开发而言是再好不过了。</p>
-<h3 id="特性"> 特性</h3>
-<ul>
-<li>自动垃圾回收</li>
-<li>更丰富的内置类型</li>
-<li>函数多返回值</li>
-<li>错误处理</li>
-<li>匿名函数和闭包</li>
-<li>类型和接口</li>
-<li>并发编程</li>
-<li>反射</li>
-<li>语言交互性</li>
-</ul>
-<h2 id="安装与使用"> 安装与使用</h2>
-<div><p>参考</p>
-<p><a href="http://golang.iswbm.com/en/latest/c01/c01_01.html" target="_blank" rel="noopener noreferrer">一文搞定开发环境的搭建</a></p>
-</div>
-<h2 id="go命令"> Go命令</h2>
-<div><p>参考</p>
-<p><a href="https://www.cnblogs.com/itogo/p/8645441.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/itogo/p/8645441.html</a></p>
-</div>
-<h2 id="目录结构"> 目录结构</h2>
-<p>一个Go语言项目的目录一般包含以下三个子目录：</p>
-<table>
-<thead>
-<tr>
-<th>目录</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>src</td>
-<td>放置项目和库的源文件</td>
-</tr>
-<tr>
-<td>pkg</td>
-<td>放置编译后生成的包/库的归档文件</td>
-</tr>
-<tr>
-<td>bin</td>
-<td>放置编译后生成的可执行文件</td>
-</tr>
-</tbody>
-</table>
-<h3 id="src"> src</h3>
-<p>用于以包（package）的形式组织并存放 Go 源文件，这里的包与 src 下的每个子目录是一一对应。例如，若一个源文件被声明属于 log 包，那么它就应当保存在 src/log 目录中。</p>
-<p>并不是说 src 目录下不能存放 Go 源文件，一般在测试或演示的时候也可以把 Go 源文件直接放在 src 目录下，但是这么做的话就只能声明该源文件属于 main 包了。正常开发中还是建议大家把 Go 源文件放入特定的目录中。</p>
-<p>包是Go语言管理代码的重要机制，其作用类似于<a href="http://c.biancheng.net/java/" target="_blank" rel="noopener noreferrer">Java</a>中的 package 和 C/<a href="http://c.biancheng.net/cplus/" target="_blank" rel="noopener noreferrer">C++</a> 的头文件。Go 源文件中第一段有效代码必须是<code>package &lt;包名&gt;</code>的形式，如 package hello。</p>
-<p>另外需要注意的是，Go语言会把通过<code>go get</code>命令获取到的库源文件下载到 src 目录下对应的文件夹当中。</p>
-<h3 id="pkg"> pkg</h3>
-<p>用于存放通过<code>go install</code>命令安装某个包后的归档文件。归档文件是指那些名称以“.a”结尾的文件。</p>
-<p>该目录与 GOROOT 目录（也就是Go语言的安装目录）下的 pkg 目录功能类似，区别在于这里的 pkg 目录专门用来存放项目代码的归档文件。</p>
-<p>编译和安装项目代码的过程一般会以代码包为单位进行，比如 log 包被编译安装后，将生成一个名为 log.a 的归档文件，并存放在当前项目的 pkg 目录下。</p>
-<h3 id="bin"> bin</h3>
-<p>与 pkg 目录类似，在通过<code>go install</code>命令完成安装后，保存由 Go 命令源文件生成的可执行文件。在类 Unix 操作系统下，这个可执行文件的名称与命令源文件的文件名相同。而在 Windows 操作系统下，这个可执行文件的名称则是命令源文件的文件名加 .exe 后缀。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Golang-语法基础</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/golang/Golang/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/golang/Golang/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Golang-语法基础</source>
-      <pubDate>Tue, 08 Jun 2021 20:15:56 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="参考"> 参考</h2>
-<div><p>Tips</p>
-<ul>
-<li><a href="http://golang.iswbm.com/" target="_blank" rel="noopener noreferrer">Go编程时光</a></li>
-<li><a href="http://c.biancheng.net/golang/" target="_blank" rel="noopener noreferrer">Go语言入门教程</a></li>
-<li><a href="https://www.runoob.com/go/go-tutorial.html" target="_blank" rel="noopener noreferrer">菜鸟教程</a></li>
-</ul>
-</div>
-<h2 id="变量创建"> 变量创建</h2>
-<p>Go 语言是静态类型语言，由于编译时，编译器会检查变量的类型，所以要求所有的变量都要有明确的类型。</p>
-<p><strong>变量在使用前，需要先声明</strong>。声明类型，就约定了你这个变量只能赋该类型的值。</p>
-<p>声明一般有以下四种方法</p>
-<blockquote>
-<p>其中前面两种同样也可用于定义常量，只需把关键字 <code>var</code> 变成 <code>const</code> 即可。</p>
-</blockquote>
-<h3 id="第一种-使用var"> 第一种：使用var</h3>
-<div><pre><code><span>var</span> <span>&lt;</span>name<span>></span> <span>&lt;</span><span>type</span><span>></span>
-</code></pre>
-<div><span>1</span><br></div></div><p>其中 var 是关键字（固定不变），name 是变量名，type 是类型。</p>
-<p>使用 var ，虽然只指定了类型，但是 Go 会对其进行<code>隐式初始化</code>，比如</p>
-<ul>
-<li>string 类型就初始化为空字符串</li>
-<li>int 类型就初始化为0</li>
-<li>float 就初始化为 0.0</li>
-<li>bool类型就初始化为false</li>
-<li>指针类型就初始化为 nil</li>
-</ul>
-<p>若想在声明过程，顺便也初始化，可以这样写</p>
-<div><pre><code><span>var</span> name <span>string</span> <span>=</span> <span>"字符串"</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>可以简化为</p>
-<div><pre><code>vat name <span>=</span> <span>"字符串"</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>若你的右值带有小数点，在不指定类型的情况下，编译器会将你的这个变量声明为 float64，但是很多情况下，我们并不需要这么高的精度（占用的内存空间更大）</p>
-<p>这种情况下，推荐指定类型，不要偷懒</p>
-<div><pre><code><span>var</span> rate <span>float32</span> <span>=</span> <span>0.89</span>
-</code></pre>
-<div><span>1</span><br></div></div><h3 id="第二种-使用var多个变量声明"> 第二种：使用var多个变量声明</h3>
-<div><pre><code><span>var</span> <span>(</span>
-    name <span>string</span>
-    age <span>int</span>
-    gender <span>string</span>
-<span>)</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h3 id="第三种-使用-声明"> 第三种：使用 := 声明</h3>
-<p>使用 <code>:=</code> （推导声明写法或者短类型声明法：编译器会自动根据右值类型推断出左值的对应类型。），可以声明一个变量，并对其进行（显式）初始化。</p>
-<div><pre><code>name <span>:=</span> <span>"Go"</span>
-
-<span>// 等价于</span>
-
-<span>var</span> name <span>string</span> <span>=</span> <span>"Go"</span>
-
-<span>// 等价于</span>
-
-<span>var</span> name <span>=</span> <span>"Go"</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><div><p>注意</p>
-<p>只能用于函数内部</p>
-</div>
-<h3 id="第四种-使用-声明多个"> 第四种：使用 := 声明多个</h3>
-<div><pre><code>name<span>,</span> age <span>:=</span> <span>"wangbm"</span><span>,</span> <span>28</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>这种方法，也经常用于变量的交换</p>
-<div><pre><code><span>var</span> a <span>int</span> <span>=</span> <span>100</span>
-<span>var</span> b <span>int</span> <span>=</span> <span>200</span>
-b<span>,</span> a <span>=</span> a<span>,</span> b
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><blockquote>
-<p>两个变量要同一个类型</p>
-</blockquote>
-<h3 id="第五种-new-函数声明一个指针变量"> 第五种：new 函数声明一个指针变量</h3>
-<p>变量分为两种 <code>普通变量</code> 和 <code>指针变量</code></p>
-<div><p>Info</p>
-<ul>
-<li>普通变量：存放的是数据本身</li>
-<li>指针变量：存放的是数据的地址。</li>
-</ul>
-</div>
-<p>如下代码，age 是一个普通变量，存放的内容是 28，而 ptr 是 存放变量age值的内存地址：0xc000010098</p>
-<div><pre><code><span>package</span> main
-
-<span>import</span> <span>"fmt"</span>
-
-<span>func</span> <span>main</span><span>(</span><span>)</span>  <span>{</span>
-    <span>var</span> age <span>int</span> <span>=</span> <span>28</span>
-    <span>var</span> ptr <span>=</span> <span>&amp;</span>age  <span>// &amp;后面接变量名，表示取出该变量的内存地址</span>
-    fmt<span>.</span><span>Println</span><span>(</span><span>"age: "</span><span>,</span> age<span>)</span>
-    fmt<span>.</span><span>Println</span><span>(</span><span>"ptr: "</span><span>,</span> ptr<span>)</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><p>输出</p>
-<div><pre><code>age:  28
-ptr:  0xc000010098
-</code></pre>
-<div><span>1</span><br><span>2</span><br></div></div><p>而这里要说的 new 函数，是 Go 里的一个内建函数。</p>
-<p>使用表达式 <code>new(Type)</code> 将创建一个Type类型的匿名变量，初始化为Type类型的零值，然后返回<code>变量地址</code>，返回的指针类型为<code>*Type</code>。</p>
-<p>用new创建变量和普通变量声明语句方式创建变量没有什么区别，除了不需要声明一个临时变量的名字外，我们还可以在表达式中使用new(Type)。换言之，new函数类似是一种语法糖，而不是一个新的基础概念。</p>
-<p>如下两种写法，可以说是等价的</p>
-<div><pre><code><span>// 使用 new</span>
-<span>func</span> <span>newInt</span><span>(</span><span>)</span> <span>*</span><span>int</span> <span>{</span>
-    <span>return</span> <span>new</span><span>(</span><span>int</span><span>)</span>
-<span>}</span>
-
-<span>// 使用传统的方式</span>
-<span>func</span> <span>newInt</span><span>(</span><span>)</span> <span>*</span><span>int</span> <span>{</span>
-    <span>var</span> dummy <span>int</span>
-    <span>return</span> <span>&amp;</span>dummy
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><p>以上不管哪种方法，变量/常量都只能声明一次，声明多次，编译就会报错。</p>
-<p>但也有例外，这就要说到一个特殊变量：<strong>匿名变量</strong>，也称作占位符，或者空白标识符，用下划线表示。</p>
-<p>匿名变量，优点有三：</p>
-<ul>
-<li>不分配内存，不占用内存空间</li>
-<li>不需要你为命名无用的变量名而纠结</li>
-<li>多次声明不会有任何问题</li>
-</ul>
-<p>通常我们用匿名接收必须接收，但是又不会用到的值。</p>
-<div><pre><code><span>func</span> <span>GetData</span><span>(</span><span>)</span> <span>(</span><span>int</span><span>,</span> <span>int</span><span>)</span> <span>{</span>
-    <span>return</span> <span>100</span><span>,</span> <span>200</span>
-<span>}</span>
-<span>func</span> <span>main</span><span>(</span><span>)</span><span>{</span>
-    a<span>,</span> <span>_</span> <span>:=</span> <span>GetData</span><span>(</span><span>)</span>
-    <span>_</span><span>,</span> b <span>:=</span> <span>GetData</span><span>(</span><span>)</span>
-    fmt<span>.</span><span>Println</span><span>(</span>a<span>,</span> b<span>)</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><h2 id="数据类型"> 数据类型</h2>
-<h3 id="整型"> 整型</h3>
-<p>Go 语言中，整数类型可以再细分成10个类型，为了方便大家学习，我将这些类型整理成一张表格。</p>
-<p><img src="http://image.iswbm.com/20200120204329.png" alt="image1" /></p>
-<blockquote>
-<p>int 和 uint 的区别就在于一个 <code>u</code>，有 <code>u</code> 说明是无符号，没有 <code>u</code> 代表有符号。</p>
-</blockquote>
-<h4 id="解释这个符号的区别"> 解释这个符号的区别</h4>
-<p>以 <code>int8</code> 和 <code>uint8</code> 举例，8 代表 8个bit，能表示的数值个数有 <code>2^8 = 256</code>。</p>
-<p>uint8 是无符号，能表示的都是正数，<code>0-255</code>，刚好256个数。</p>
-<p>int8 是有符号，既可以正数，也可以负数，那怎么办？对半分呗，<code>-128-127</code>，也刚好 256个数。</p>
-<p>int8 int16 int32 int64 这几个类型的最后都有一个数值，这表明了它们能表示的数值个数是固定的。</p>
-<p>而 int 并没有指定它的位数，说明它的大小，是可以变化的，那根据什么变化呢？</p>
-<ul>
-<li>当你在32位的系统下，int 和 uint 都占用 4个字节，也就是32位。</li>
-<li>若你在64位的系统下，int 和 uint 都占用 8个字节，也就是64位。</li>
-</ul>
-<p>出于这个原因，在某些场景下，你应当避免使用 int 和 uint ，而使用更加精确的 int32 和 int64，比如在二进制传输、读写文件的结构描述（为了保持文件的结构不会受到不同编译目标平台字节长度的影响）</p>
-<h4 id="不同进制的表示方法"> 不同进制的表示方法</h4>
-<p>出于习惯，在初始化数据类型为整型的变量时，我们会使用10进制的表示法，因为它最直观，比如这样，表示整数10.</p>
-<div><pre><code><span>var</span> num <span>int</span> <span>=</span> <span>10</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>不过，你要清楚，你一样可以使用其他进制来表示一个整数，这里以比较常用的2进制、8进制和16进制举例。</p>
-<p>2进制：以<code>0b</code>或<code>0B</code>为前缀</p>
-<div><pre><code><span>var</span> num01 <span>int</span> <span>=</span> <span>0b1100</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>8进制：以<code>0o</code>或者 <code>0O</code>为前缀</p>
-<div><pre><code><span>var</span> num02 <span>int</span> <span>=</span> <span>0o14</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>16进制：以<code>0x</code> 为前缀</p>
-<div><pre><code><span>var</span> num03 <span>int</span> <span>=</span> <span>0xC</span>
-</code></pre>
-<div><span>1</span><br></div></div><p>下面用一段代码分别使用二进制、8进制、16进制来表示 10 进制的数值：12</p>
-<div><pre><code><span>package</span> main
-
-<span>import</span> <span>(</span>
-    <span>"fmt"</span>
-<span>)</span>
-
-<span>func</span> <span>main</span><span>(</span><span>)</span> <span>{</span>
-    <span>var</span> num01 <span>int</span> <span>=</span> <span>0b1100</span>
-    <span>var</span> num02 <span>int</span> <span>=</span> <span>0o14</span>
-    <span>var</span> num03 <span>int</span> <span>=</span> <span>0xC</span>
-
-    fmt<span>.</span><span>Printf</span><span>(</span><span>"2进制数 %b 表示的是: %d \n"</span><span>,</span> num01<span>,</span> num01<span>)</span>
-    fmt<span>.</span><span>Printf</span><span>(</span><span>"8进制数 %o 表示的是: %d \n"</span><span>,</span> num02<span>,</span> num02<span>)</span>
-    fmt<span>.</span><span>Printf</span><span>(</span><span>"16进制数 %X 表示的是: %d \n"</span><span>,</span> num03<span>,</span> num03<span>)</span>
-<span>}</span>
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br></div></div><p>输出如下</p>
-<div><pre><code>2进制数 1100 表示的是: 12
-8进制数 14 表示的是: 12
-16进制数 C 表示的是: 12
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>以上代码用过了 fmt 包的格式化功能，你可以参考这里去看上面的代码</p>
-<div><pre><code>%b    表示为二进制
-%c    该值对应的unicode码值
-%d    表示为十进制
-%o    表示为八进制
-%q    该值对应的单引号括起来的go语法字符字面值，必要时会采用安全的转义表示
-%x    表示为十六进制，使用a-f
-%X    表示为十六进制，使用A-F
-%U    表示为Unicode格式：U+1234，等价于&quot;U+%04X&quot;
-%E    用科学计数法表示
-%f    用浮点数表示
-</code></pre>
-<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><h3 id="浮点型"> 浮点型</h3>
-<p>浮点数类型的值一般由整数部分、小数点“<code>.</code>”和小数部分组成。</p>
-<p>其中，整数部分和小数部分均由10进制表示法表示。不过还有另一种表示方法。那就是在其中加入指数部分。指数部分由“E”或“e”以及一个带正负号的10进制数组成。比如，<code>3.7E-2</code>表示浮点数<code>0.037</code>。又比如，<code>3.7E+1</code>表示浮点数<code>37</code>。</p>
-<p>有时候，浮点数类型值的表示也可以被简化。比如，<code>37.0</code>可以被简化为<code>37</code>。又比如，<code>0.037</code>可以被简化为<code>.037</code>。</p>
-<blockquote>
-<p>有一点需要注意，在Go语言里，浮点数的相关部分只能由10进制表示法表示，而不能由8进制表示法或16进制表示法表示。比如，<code>03.7</code>表示的一定是浮点数<code>3.7</code>。</p>
-</blockquote>
-<h4 id="float32-和-float64"> float32 和 float64</h4>
-<p>Go语言中提供了两种精度的浮点数 float32 和 float64。</p>
-<p><strong>float32</strong>，也即我们常说的单精度，存储占用4个字节，也即4*8=32位，其中1位用来符号，8位用来指数，剩下的23位表示尾数</p>
-<p><img src="https://pic4.zhimg.com/80/v2-749cc641eb4d5dafd085e8c23f8826aa_hd.jpg" alt="img" /></p>
-<p>img</p>
-<p><strong>float64</strong>，也即我们熟悉的双精度，存储占用8个字节，也即8*8=64位，其中1位用来符号，11位用来指数，剩下的52位表示尾数</p>
-<p><img src="https://pic2.zhimg.com/80/v2-48240f0e1e0dd33ec89100cbe2d30707_hd.jpg" alt="img" /></p>
-<h3 id="byte、rune与字符串"> byte、rune与字符串</h3>
-]]></content:encoded>
-      <enclosure url="http://image.iswbm.com/20200120204329.png" type="image/png"/>
-    </item>
-    <item>
       <title>Git笔记</title>
       <link>https://vuepress-theme-hope-demo.mrhope.site/git/Git/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/git/Git/</guid>
@@ -8128,6 +7866,332 @@ ptr:  0xc000010098
       <enclosure url="https://blog-1300186248.cos.ap-shanghai.myqcloud.com/Git/Git%E5%B7%A5%E4%BD%9C%E6%B5%81.png" type="image/png"/>
     </item>
     <item>
+      <title>Golang-介绍和使用</title>
+      <link>https://vuepress-theme-hope-demo.mrhope.site/golang/Golang-description&amp;use/</link>
+      <guid>https://vuepress-theme-hope-demo.mrhope.site/golang/Golang-description&amp;use/</guid>
+      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Golang-介绍和使用</source>
+      <pubDate>Tue, 08 Jun 2021 20:14:56 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="参考"> 参考</h2>
+<div><p>Tips</p>
+<ul>
+<li><a href="http://golang.iswbm.com/en/latest/index.html" target="_blank" rel="noopener noreferrer">Go编程时光</a></li>
+<li><a href="http://c.biancheng.net/golang/" target="_blank" rel="noopener noreferrer">Go语言入门教程</a></li>
+<li><a href="https://www.runoob.com/go/go-tutorial.html" target="_blank" rel="noopener noreferrer">菜鸟教程</a></li>
+</ul>
+</div>
+<h2 id="介绍"> 介绍</h2>
+<blockquote>
+<p>Go是一门编译型语言，Go语言的工具链将源代码及其依赖转换成计算机的机器指令（译注：静态编译）。</p>
+<p>Go语言为并发而生。</p>
+<p><em>“Go是一个开源的编程语言，它很容易用于构建简单、可靠和高效的软件。”（摘自Go语言官方网站：<a href="http://golang.org/" target="_blank" rel="noopener noreferrer">http://golang.org</a> ）</em></p>
+</blockquote>
+<h3 id="简介"> 简介</h3>
+<p>Go语言（或 Golang）起源于 2007 年，并在 2009 年正式对外发布。Go 是非常年轻的一门语言，它的主要目标是“兼具 <a href="http://c.biancheng.net/python/" target="_blank" rel="noopener noreferrer">Python</a> 等动态语言的开发速度和 C/<a href="http://c.biancheng.net/cplus/" target="_blank" rel="noopener noreferrer">C++</a> 等编译型语言的性能与安全性”。</p>
+<p>Go语言是编程语言设计的又一次尝试，是对类C语言的重大改进，它不但能让你访问底层操作系统，还提供了强大的网络编程和并发编程支持。Go语言的用途众多，可以进行网络编程、系统编程、并发编程、分布式编程。</p>
+<p>Go语言的推出，旨在不损失应用程序性能的情况下降低代码的复杂性，具有“部署简单、并发性好、语言设计良好、执行性能好”等优势，目前国内诸多 IT 公司均已采用Go语言开发项目。</p>
+<p>Go语言有时候被描述为“C 类似语言”，或者是“21 世纪的C语言”。Go 从C语言继承了相似的表达式语法、控制流结构、基础数据类型、调用参数传值、指针等很多思想，还有C语言一直所看中的编译后机器码的运行效率以及和现有操作系统的无缝适配。</p>
+<p>因为Go语言没有类和继承的概念，所以它和 <a href="http://c.biancheng.net/java/" target="_blank" rel="noopener noreferrer">Java</a> 或 C++ 看起来并不相同。但是它通过接口（interface）的概念来实现多态性。Go语言有一个清晰易懂的轻量级类型系统，在类型之间也没有层级之说。因此可以说Go语言是一门混合型的语言。</p>
+<p>此外，很多重要的开源项目都是使用Go语言开发的，其中包括 <a href="http://c.biancheng.net/docker/" target="_blank" rel="noopener noreferrer">Docker</a>、Go-Ethereum、Thrraform 和 Kubernetes。</p>
+<h3 id="用途"> 用途</h3>
+<p>Go 语言被设计成一门应用于搭载 Web 服务器，存储集群或类似用途的巨型中央服务器的系统编程语言。</p>
+<p>对于高性能分布式系统领域而言，Go 语言无疑比大多数其它语言有着更高的开发效率。它提供了海量并行的支持，这对于游戏服务端的开发而言是再好不过了。</p>
+<h3 id="特性"> 特性</h3>
+<ul>
+<li>自动垃圾回收</li>
+<li>更丰富的内置类型</li>
+<li>函数多返回值</li>
+<li>错误处理</li>
+<li>匿名函数和闭包</li>
+<li>类型和接口</li>
+<li>并发编程</li>
+<li>反射</li>
+<li>语言交互性</li>
+</ul>
+<h2 id="安装与使用"> 安装与使用</h2>
+<div><p>参考</p>
+<p><a href="http://golang.iswbm.com/en/latest/c01/c01_01.html" target="_blank" rel="noopener noreferrer">一文搞定开发环境的搭建</a></p>
+</div>
+<h2 id="go命令"> Go命令</h2>
+<div><p>参考</p>
+<p><a href="https://www.cnblogs.com/itogo/p/8645441.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/itogo/p/8645441.html</a></p>
+</div>
+<h2 id="目录结构"> 目录结构</h2>
+<p>一个Go语言项目的目录一般包含以下三个子目录：</p>
+<table>
+<thead>
+<tr>
+<th>目录</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src</td>
+<td>放置项目和库的源文件</td>
+</tr>
+<tr>
+<td>pkg</td>
+<td>放置编译后生成的包/库的归档文件</td>
+</tr>
+<tr>
+<td>bin</td>
+<td>放置编译后生成的可执行文件</td>
+</tr>
+</tbody>
+</table>
+<h3 id="src"> src</h3>
+<p>用于以包（package）的形式组织并存放 Go 源文件，这里的包与 src 下的每个子目录是一一对应。例如，若一个源文件被声明属于 log 包，那么它就应当保存在 src/log 目录中。</p>
+<p>并不是说 src 目录下不能存放 Go 源文件，一般在测试或演示的时候也可以把 Go 源文件直接放在 src 目录下，但是这么做的话就只能声明该源文件属于 main 包了。正常开发中还是建议大家把 Go 源文件放入特定的目录中。</p>
+<p>包是Go语言管理代码的重要机制，其作用类似于<a href="http://c.biancheng.net/java/" target="_blank" rel="noopener noreferrer">Java</a>中的 package 和 C/<a href="http://c.biancheng.net/cplus/" target="_blank" rel="noopener noreferrer">C++</a> 的头文件。Go 源文件中第一段有效代码必须是<code>package &lt;包名&gt;</code>的形式，如 package hello。</p>
+<p>另外需要注意的是，Go语言会把通过<code>go get</code>命令获取到的库源文件下载到 src 目录下对应的文件夹当中。</p>
+<h3 id="pkg"> pkg</h3>
+<p>用于存放通过<code>go install</code>命令安装某个包后的归档文件。归档文件是指那些名称以“.a”结尾的文件。</p>
+<p>该目录与 GOROOT 目录（也就是Go语言的安装目录）下的 pkg 目录功能类似，区别在于这里的 pkg 目录专门用来存放项目代码的归档文件。</p>
+<p>编译和安装项目代码的过程一般会以代码包为单位进行，比如 log 包被编译安装后，将生成一个名为 log.a 的归档文件，并存放在当前项目的 pkg 目录下。</p>
+<h3 id="bin"> bin</h3>
+<p>与 pkg 目录类似，在通过<code>go install</code>命令完成安装后，保存由 Go 命令源文件生成的可执行文件。在类 Unix 操作系统下，这个可执行文件的名称与命令源文件的文件名相同。而在 Windows 操作系统下，这个可执行文件的名称则是命令源文件的文件名加 .exe 后缀。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Golang-语法基础</title>
+      <link>https://vuepress-theme-hope-demo.mrhope.site/golang/Golang/</link>
+      <guid>https://vuepress-theme-hope-demo.mrhope.site/golang/Golang/</guid>
+      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Golang-语法基础</source>
+      <pubDate>Tue, 08 Jun 2021 20:15:56 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="参考"> 参考</h2>
+<div><p>Tips</p>
+<ul>
+<li><a href="http://golang.iswbm.com/" target="_blank" rel="noopener noreferrer">Go编程时光</a></li>
+<li><a href="http://c.biancheng.net/golang/" target="_blank" rel="noopener noreferrer">Go语言入门教程</a></li>
+<li><a href="https://books.studygolang.com/gopl-zh/" target="_blank" rel="noopener noreferrer">Go 圣经</a></li>
+<li><a href="https://weread.qq.com/web/reader/12132c407193f24a121a46b" target="_blank" rel="noopener noreferrer">《Go 语言入门经典》</a></li>
+</ul>
+</div>
+<h2 id="变量和常量的声明"> 变量和常量的声明</h2>
+<p>Go 语言是静态类型语言，由于编译时，编译器会检查变量的类型，所以要求所有的变量都要有明确的类型。</p>
+<p><strong>变量在使用前，需要先声明</strong>。声明类型，就约定了你这个变量只能赋该类型的值。</p>
+<p>声明一般有以下几种方法</p>
+<blockquote>
+<p>其中前面两种同样也可用于定义常量，只需把关键字 <code>var</code> 变成 <code>const</code> 即可。</p>
+</blockquote>
+<p>Go 标准库风格建议在函数外使用 var 或 const 声明且省略类型，在函数内部使用 <code>:=</code> 的简短声明</p>
+<h3 id="第一种-使用-var"> 第一种：使用 var</h3>
+<div><pre><code><span>var</span> <span>&lt;</span>name<span>></span> <span>&lt;</span><span>type</span><span>></span>
+</code></pre>
+<div><span>1</span><br></div></div><p>其中 var 是关键字（固定不变），name 是变量名，type 是类型。</p>
+<p>使用 var ，虽然只指定了类型，但是 Go 会对其进行<code>隐式初始化</code>，比如</p>
+<ul>
+<li>string 类型就初始化为空字符串</li>
+<li>int 类型就初始化为0</li>
+<li>float 就初始化为 0.0</li>
+<li>bool类型就初始化为false</li>
+<li>指针类型就初始化为 nil</li>
+</ul>
+<p>若想在声明过程，顺便也初始化，可以这样写</p>
+<div><pre><code><span>var</span> name <span>string</span> <span>=</span> <span>"字符串"</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>可以简化为</p>
+<div><pre><code>vat name <span>=</span> <span>"字符串"</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>若你的右值带有小数点，<strong>在不指定类型的情况下，编译器会将你的这个变量声明为 float64</strong>，但是很多情况下，我们并不需要这么高的精度（占用的内存空间更大）</p>
+<p>这种情况下，推荐指定类型，不要偷懒</p>
+<div><pre><code><span>var</span> rate <span>float32</span> <span>=</span> <span>0.89</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>声明多个：</p>
+<div><pre><code><span>var</span> s<span>,</span> t <span>string</span> <span>=</span> <span>"foo"</span><span>,</span> <span>"bar"</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>或</p>
+<div><pre><code><span>var</span> <span>(</span>
+    name <span>string</span>
+    age <span>int</span>
+    gender <span>string</span>
+<span>)</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h3 id="第二种-使用-短变量声明"> 第二种：使用 := 短变量声明</h3>
+<p>使用 <code>:=</code> （推导声明写法或者短类型声明法：编译器会自动根据右值类型推断出左值的对应类型。），可以声明一个变量，并对其进行（显式）初始化。</p>
+<blockquote>
+<p>只能用于函数内部</p>
+</blockquote>
+<div><pre><code>name <span>:=</span> <span>"Go"</span>
+
+<span>// 等价于</span>
+
+<span>var</span> name <span>string</span> <span>=</span> <span>"Go"</span>
+
+<span>// 等价于</span>
+
+<span>var</span> name <span>=</span> <span>"Go"</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>声明多个：</p>
+<div><pre><code>name<span>,</span> age <span>:=</span> <span>"wangbm"</span><span>,</span> <span>28</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>这种方法，也经常用于变量的交换</p>
+<div><pre><code><span>var</span> a <span>int</span> <span>=</span> <span>100</span>
+<span>var</span> b <span>int</span> <span>=</span> <span>200</span>
+b<span>,</span> a <span>=</span> a<span>,</span> b
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><blockquote>
+<p>两个变量要同一个类型</p>
+</blockquote>
+<h3 id="第三种-new-函数声明一个指针变量"> 第三种：new 函数声明一个指针变量</h3>
+<p>变量分为两种 <code>普通变量</code> 和 <code>指针变量</code></p>
+<div><p>Info</p>
+<ul>
+<li>普通变量：存放的是数据本身</li>
+<li>指针变量：存放的是数据的地址。</li>
+</ul>
+</div>
+<p>如下代码，age 是一个普通变量，存放的内容是 28，而 ptr 是 存放变量age值的内存地址：0xc000010098</p>
+<div><pre><code><span>package</span> main
+
+<span>import</span> <span>"fmt"</span>
+
+<span>func</span> <span>main</span><span>(</span><span>)</span>  <span>{</span>
+    <span>var</span> age <span>int</span> <span>=</span> <span>28</span>
+    <span>var</span> ptr <span>=</span> <span>&amp;</span>age  <span>// &amp;后面接变量名，表示取出该变量的内存地址</span>
+    fmt<span>.</span><span>Println</span><span>(</span><span>"age: "</span><span>,</span> age<span>)</span>
+    fmt<span>.</span><span>Println</span><span>(</span><span>"ptr: "</span><span>,</span> ptr<span>)</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><p>输出</p>
+<div><pre><code>age:  28
+ptr:  0xc000010098
+</code></pre>
+<div><span>1</span><br><span>2</span><br></div></div><p>而这里要说的 new 函数，是 Go 里的一个内建函数。</p>
+<p>使用表达式 <code>new(Type)</code> 将创建一个Type类型的匿名变量，初始化为Type类型的零值，然后返回<code>变量地址</code>，返回的指针类型为<code>*Type</code>。</p>
+<p>用new创建变量和普通变量声明语句方式创建变量没有什么区别，除了不需要声明一个临时变量的名字外，我们还可以在表达式中使用new(Type)。换言之，new函数类似是一种语法糖，而不是一个新的基础概念。</p>
+<p>如下两种写法，可以说是等价的</p>
+<div><pre><code><span>// 使用 new</span>
+<span>func</span> <span>newInt</span><span>(</span><span>)</span> <span>*</span><span>int</span> <span>{</span>
+    <span>return</span> <span>new</span><span>(</span><span>int</span><span>)</span>
+<span>}</span>
+
+<span>// 使用传统的方式</span>
+<span>func</span> <span>newInt</span><span>(</span><span>)</span> <span>*</span><span>int</span> <span>{</span>
+    <span>var</span> dummy <span>int</span>
+    <span>return</span> <span>&amp;</span>dummy
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><p>以上不管哪种方法，变量/常量都只能声明一次，声明多次，编译就会报错。</p>
+<p>但也有例外，这就要说到一个特殊变量：<strong>匿名变量</strong>，也称作占位符，或者空白标识符，用下划线表示。</p>
+<p>匿名变量，优点有三：</p>
+<ul>
+<li>不分配内存，不占用内存空间</li>
+<li>不需要你为命名无用的变量名而纠结</li>
+<li>多次声明不会有任何问题</li>
+</ul>
+<p>通常我们用匿名接收必须接收，但是又不会用到的值。</p>
+<div><pre><code><span>func</span> <span>GetData</span><span>(</span><span>)</span> <span>(</span><span>int</span><span>,</span> <span>int</span><span>)</span> <span>{</span>
+    <span>return</span> <span>100</span><span>,</span> <span>200</span>
+<span>}</span>
+<span>func</span> <span>main</span><span>(</span><span>)</span><span>{</span>
+    a<span>,</span> <span>_</span> <span>:=</span> <span>GetData</span><span>(</span><span>)</span>
+    <span>_</span><span>,</span> b <span>:=</span> <span>GetData</span><span>(</span><span>)</span>
+    fmt<span>.</span><span>Println</span><span>(</span>a<span>,</span> b<span>)</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><h3 id="常量声明"> 常量声明</h3>
+<div><pre><code><span>const</span> s <span>string</span> <span>=</span> <span>"Hello World"</span>
+</code></pre>
+<div><span>1</span><br></div></div><h3 id="变量的零值"> 变量的零值</h3>
+<p>如果声明变量没有给指定值，则变量降为默认值，这种默认值被称为零值，不同于其他语言的  null &amp; nil &amp; undefined。</p>
+<div><pre><code><span>func</span> <span>TestDefaultValue</span><span>(</span>t <span>*</span>testing<span>.</span>T<span>)</span> <span>{</span>
+	<span>var</span> <span>(</span>
+		i <span>int</span>
+		f <span>float32</span>
+		b <span>bool</span>
+		s <span>string</span>
+	<span>)</span>
+	fmt<span>.</span><span>Printf</span><span>(</span><span>"%v %v %v %q\n"</span><span>,</span> i<span>,</span> f<span>,</span> b<span>,</span> s<span>)</span>
+<span>}</span>
+
+<span>//0 0 false ""</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><h2 id="数据类型"> 数据类型</h2>
+<h3 id="整型"> 整型</h3>
+<p>Go 语言中，整数类型可以再细分成10个类型，为了方便大家学习，我将这些类型整理成一张表格。</p>
+<p><img src="http://image.iswbm.com/20200120204329.png" alt="image1" /></p>
+<blockquote>
+<p>int 和 uint 的区别就在于一个 <code>u</code>，有 <code>u</code> 说明是无符号，没有 <code>u</code> 代表有符号。</p>
+</blockquote>
+<h4 id="解释这个符号的区别"> 解释这个符号的区别</h4>
+<p>以 <code>int8</code> 和 <code>uint8</code> 举例，8 代表 8个bit，能表示的数值个数有 <code>2^8 = 256</code>。</p>
+<p>uint8 是无符号，能表示的都是正数，<code>0-255</code>，刚好256个数。</p>
+<p>int8 是有符号，既可以正数，也可以负数，那怎么办？对半分呗，<code>-128-127</code>，也刚好 256个数。</p>
+<p>int8 int16 int32 int64 这几个类型的最后都有一个数值，这表明了它们能表示的数值个数是固定的。</p>
+<p>而 int 并没有指定它的位数，说明它的大小，是可以变化的，那根据什么变化呢？</p>
+<ul>
+<li>当你在32位的系统下，int 和 uint 都占用 4个字节，也就是32位。</li>
+<li>若你在64位的系统下，int 和 uint 都占用 8个字节，也就是64位。</li>
+</ul>
+<p>出于这个原因，在某些场景下，你应当避免使用 int 和 uint ，而使用更加精确的 int32 和 int64，比如在二进制传输、读写文件的结构描述（为了保持文件的结构不会受到不同编译目标平台字节长度的影响）</p>
+<h4 id="不同进制的表示方法"> 不同进制的表示方法</h4>
+<p>出于习惯，在初始化数据类型为整型的变量时，我们会使用10进制的表示法，因为它最直观，比如这样，表示整数10.</p>
+<div><pre><code><span>var</span> num <span>int</span> <span>=</span> <span>10</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>不过，你要清楚，你一样可以使用其他进制来表示一个整数，这里以比较常用的2进制、8进制和16进制举例。</p>
+<p>2进制：以<code>0b</code>或<code>0B</code>为前缀</p>
+<div><pre><code><span>var</span> num01 <span>int</span> <span>=</span> <span>0b1100</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>8进制：以<code>0o</code>或者 <code>0O</code>为前缀</p>
+<div><pre><code><span>var</span> num02 <span>int</span> <span>=</span> <span>0o14</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>16进制：以<code>0x</code> 为前缀</p>
+<div><pre><code><span>var</span> num03 <span>int</span> <span>=</span> <span>0xC</span>
+</code></pre>
+<div><span>1</span><br></div></div><p>下面用一段代码分别使用二进制、8进制、16进制来表示 10 进制的数值：12</p>
+<div><pre><code><span>package</span> main
+
+<span>import</span> <span>(</span>
+    <span>"fmt"</span>
+<span>)</span>
+
+<span>func</span> <span>main</span><span>(</span><span>)</span> <span>{</span>
+    <span>var</span> num01 <span>int</span> <span>=</span> <span>0b1100</span>
+    <span>var</span> num02 <span>int</span> <span>=</span> <span>0o14</span>
+    <span>var</span> num03 <span>int</span> <span>=</span> <span>0xC</span>
+
+    fmt<span>.</span><span>Printf</span><span>(</span><span>"2进制数 %b 表示的是: %d \n"</span><span>,</span> num01<span>,</span> num01<span>)</span>
+    fmt<span>.</span><span>Printf</span><span>(</span><span>"8进制数 %o 表示的是: %d \n"</span><span>,</span> num02<span>,</span> num02<span>)</span>
+    fmt<span>.</span><span>Printf</span><span>(</span><span>"16进制数 %X 表示的是: %d \n"</span><span>,</span> num03<span>,</span> num03<span>)</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br></div></div><p>输出如下</p>
+<div><pre><code>2进制数 1100 表示的是: 12
+8进制数 14 表示的是: 12
+16进制数 C 表示的是: 12
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>以上代码用过了 fmt 包的格式化功能，你可以参考这里去看上面的代码</p>
+<div><pre><code>%b    表示为二进制
+%c    该值对应的unicode码值
+%d    表示为十进制
+%o    表示为八进制
+%q    该值对应的单引号括起来的go语法字符字面值，必要时会采用安全的转义表示
+%x    表示为十六进制，使用a-f
+%X    表示为十六进制，使用A-F
+%U    表示为Unicode格式：U+1234，等价于&quot;U+%04X&quot;
+%E    用科学计数法表示
+%f    用浮点数表示
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><h3 id="浮点型"> 浮点型</h3>
+<p>浮点数类型的值一般由整数部分、小数点“<code>.</code>”和小数部分组成。</p>
+<p>其中，整数部分和小数部分均由10进制表示法表示。不过还有另一种表示方法。那就是在其中加入指数部分。指数部分由“E”或“e”以及一个带正负号的10进制数组成。比如，<code>3.7E-2</code>表示浮点数<code>0.037</code>。又比如，<code>3.7E+1</code>表示浮点数<code>37</code>。</p>
+<p>有时候，浮点数类型值的表示也可以被简化。比如，<code>37.0</code>可以被简化为<code>37</code>。又比如，<code>0.037</code>可以被简化为<code>.037</code>。</p>
+<blockquote>
+<p>有一点需要注意，在Go语言里，浮点数的相关部分只能由10进制表示法表示，而不能由8进制表示法或16进制表示法表示。比如，<code>03.7</code>表示的一定是浮点数<code>3.7</code>。</p>
+</blockquote>
+<h4 id="float32-和-float64"> float32 和 float64</h4>
+<p>Go语言中提供了两种精度的浮点数 float32 和 float64。</p>
+<p><strong>float32</strong>，也即我们常说的单精度，存储占用4个字节，也即4*8=32位，其中1位用来符号，8位用来指数，剩下的23位表示尾数</p>
+<p><img src="https://pic4.zhimg.com/80/v2-749cc641eb4d5dafd085e8c23f8826aa_hd.jpg" alt="img" /></p>
+<p>img</p>
+<p><strong>float64</strong>，也即我们熟悉的双精度，存储占用8个字节，也即8*8=64位，其中1位用来符号，11位用来指数，剩下的52位表示尾数</p>
+<p><img src="https://pic2.zhimg.com/80/v2-48240f0e1e0dd33ec89100cbe2d30707_hd.jpg" alt="img" /></p>
+<h3 id="byte、rune与字符串"> byte、rune与字符串</h3>
+]]></content:encoded>
+      <enclosure url="http://image.iswbm.com/20200120204329.png" type="image/png"/>
+    </item>
+    <item>
       <title>Component disabled</title>
       <link>https://vuepress-theme-hope-demo.mrhope.site/guide/disable/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/guide/disable/</guid>
@@ -8135,7 +8199,7 @@ ptr:  0xc000010098
       <description>&amp;lt;p&amp;gt;You can disable some functions on the page by setting the Frontmatter of the page.&amp;lt;/p&amp;gt;
 </description>
       <category>Guide</category>
-      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
+      <pubDate>Sun, 17 Apr 2022 16:39:40 GMT</pubDate>
       <content:encoded><![CDATA[<p>You can disable some functions on the page by setting the Frontmatter of the page.</p>
 
 <p>These should be disabled on this page:</p>
@@ -8160,7 +8224,7 @@ ptr:  0xc000010098
       <guid>https://vuepress-theme-hope-demo.mrhope.site/guide/encrypt/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Encryption article</source>
       <category>Guide</category>
-      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
+      <pubDate>Sun, 17 Apr 2022 16:39:40 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="encryption-article"> Encryption article</h1>
 <p>The actual article content.</p>
 <p>Paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text paragraph 1 text.</p>
@@ -8175,7 +8239,7 @@ ptr:  0xc000010098
       <description>&amp;lt;p&amp;gt;&amp;lt;code&amp;gt;vuepress-theme-hope&amp;lt;/code&amp;gt; enables more syntax in Markdown via the built-in &amp;lt;a href=&amp;quot;https://vuepress-theme-hope.github.io/md-enhance&amp;quot; target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot;&amp;gt;md-enhance&amp;lt;/a&amp;gt; plugin.&amp;lt;/p&amp;gt;
 </description>
       <category>Guide</category>
-      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
+      <pubDate>Sun, 17 Apr 2022 16:39:40 GMT</pubDate>
       <content:encoded><![CDATA[<p><code>vuepress-theme-hope</code> enables more syntax in Markdown via the built-in <a href="https://vuepress-theme-hope.github.io/md-enhance" target="_blank" rel="noopener noreferrer">md-enhance</a> plugin.</p>
 
 <h2 id="enable-all"> Enable all</h2>
@@ -8680,7 +8744,7 @@ A custom details container
       <guid>https://vuepress-theme-hope-demo.mrhope.site/guide/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Guides</source>
       <category>Guide</category>
-      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
+      <pubDate>Sun, 17 Apr 2022 16:39:40 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="guides"> Guides</h1>
 <ul>
 <li>
@@ -10117,6 +10181,20 @@ A custom details container
       <enclosure url="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019/7/%E4%B8%83%E5%B1%82%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%9B%BE.png" type="image/png"/>
     </item>
     <item>
+      <title>腾讯云学习笔记</title>
+      <link>https://vuepress-theme-hope-demo.mrhope.site/interview/tencent-cloud-note/</link>
+      <guid>https://vuepress-theme-hope-demo.mrhope.site/interview/tencent-cloud-note/</guid>
+      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">腾讯云学习笔记</source>
+      <pubDate>Tue, 20 Oct 2020 16:12:14 GMT</pubDate>
+      <content:encoded><![CDATA[<p>参考</p>
+<blockquote>
+<ul>
+<li><a href="https://wiki.lifeisgg.online/archives/%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_blank" rel="noopener noreferrer">腾讯云学习笔记 - LifeAlsoIsGG-Wiki (lifeisgg.online)</a></li>
+</ul>
+</blockquote>
+]]></content:encoded>
+    </item>
+    <item>
       <title>面试大纲</title>
       <link>https://vuepress-theme-hope-demo.mrhope.site/interview/interview/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/interview/interview/</guid>
@@ -10144,20 +10222,6 @@ A custom details container
 <h2 id="redis"> Redis</h2>
 <h2 id="rabbitmq"> RabbitMQ</h2>
 <h2 id="elasticsearch"> ElasticSearch</h2>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>腾讯云学习笔记</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/interview/tencent-cloud-note/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/interview/tencent-cloud-note/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">腾讯云学习笔记</source>
-      <pubDate>Tue, 20 Oct 2020 16:12:14 GMT</pubDate>
-      <content:encoded><![CDATA[<p>参考</p>
-<blockquote>
-<ul>
-<li><a href="https://wiki.lifeisgg.online/archives/%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_blank" rel="noopener noreferrer">腾讯云学习笔记 - LifeAlsoIsGG-Wiki (lifeisgg.online)</a></li>
-</ul>
-</blockquote>
 ]]></content:encoded>
     </item>
     <item>
@@ -22306,7 +22370,7 @@ pipe.execute<span>(</span><span>)</span>
       <link>https://vuepress-theme-hope-demo.mrhope.site/mybatis/Mybatis-reverse-project&amp;Example-use/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/mybatis/Mybatis-reverse-project&amp;Example-use/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Mybatis逆向工程&amp;Example类使用</source>
-      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
+      <pubDate>Sun, 17 Apr 2022 16:39:40 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="_1-参考"> 1. 参考</h2>
 <blockquote>
 <ul>
@@ -24761,21 +24825,21 @@ server <span>{</span>
       <link>https://vuepress-theme-hope-demo.mrhope.site/project/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/project/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">My Project</source>
-      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
+      <pubDate>Sun, 17 Apr 2022 16:39:40 GMT</pubDate>
     </item>
     <item>
       <title>Blog Home</title>
       <link>https://vuepress-theme-hope-demo.mrhope.site/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Blog Home</source>
-      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
+      <pubDate>Sun, 17 Apr 2022 16:39:40 GMT</pubDate>
     </item>
     <item>
       <title>Slide page</title>
       <link>https://vuepress-theme-hope-demo.mrhope.site/slides/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/slides/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Slide page</source>
-      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
+      <pubDate>Sun, 17 Apr 2022 16:39:40 GMT</pubDate>
       <content:encoded><![CDATA[
 <i>Not supported content</i>]]></content:encoded>
       <enclosure url="https://vuepress-theme-hope-demo.mrhope.site/logo.svg" type="image/svg+xml"/>
@@ -25558,7 +25622,7 @@ server <span>{</span>
       <link>https://vuepress-theme-hope-demo.mrhope.site/spring/Spring/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/spring/Spring/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Spring基础笔记</source>
-      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
+      <pubDate>Sun, 17 Apr 2022 16:39:40 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="参考"> 参考</h2>
 <div><p>Tips</p>
 <ul>
@@ -26109,133 +26173,6 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
 ]]></content:encoded>
     </item>
     <item>
-      <title>Maven笔记</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/spring/maven/Maven/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/spring/maven/Maven/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Maven笔记</source>
-      <pubDate>Sat, 22 May 2021 22:37:47 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="参考"> 参考</h2>
-<div><p>Tips</p>
-<ul>
-<li><a href="https://www.cnblogs.com/baizihua/p/11519509.html" target="_blank" rel="noopener noreferrer">maven学习笔记(超详细总结)</a></li>
-<li>https://blog.csdn.net/qq_44839652/article/details/107709822</li>
-</ul>
-</div>
-<h2 id="概述"> 概述</h2>
-<h3 id="两大核心"> 两大核心</h3>
-<ol>
-<li>依赖管理：也就是对jar包的统一管理</li>
-<li>项目构建：在项目编码完成后，原先通过IDE对项目进行编译、测试、打包、部署等一些列操作，都可以通过Maven的命令去完成</li>
-</ol>
-<h2 id="标准目录结构"> 标准目录结构</h2>
-<ul>
-<li><strong>src</strong>：用于存放项目源码
-<ul>
-<li><strong>main</strong>：用于存放运行主要代码
-<ul>
-<li><strong>java</strong>：用于存放主体程序源码</li>
-<li><strong>resources</strong>：用于存放xml等配置文件的</li>
-<li><strong>webapps</strong>：相当于webContent，用于存放WEB-INF、网页页面的素材（html、css、js等）</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>test</strong>：用于存放单元测试代码
-<ul>
-<li><strong>java</strong>：用于存放测试代码，单元测试类</li>
-<li><strong>resources</strong>：用于存放测试用的配置文件(一般少用)</li>
-</ul>
-</li>
-<li><strong>target</strong>：用于存放编译好的字节码文件
-<ul>
-<li><strong>classes</strong>：用于存放编译好的字节码文件</li>
-</ul>
-</li>
-<li><strong>pom.xml</strong>：Project Object Module，Maven核心配置文件</li>
-</ul>
-<h2 id="pom-xml文件详解"> pom.xml文件详解</h2>
-<div><p>Tips</p>
-<p><a href="https://blog.csdn.net/weixin_38569499/article/details/91456988?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control" target="_blank" rel="noopener noreferrer">pom.xml文件详解</a></p>
-</div>
-<h2 id="常用命令"> 常用命令</h2>
-<p>格式：<code>mvn [plugin]:[command]</code></p>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>mvn -v</td>
-<td>查看maven版本</td>
-</tr>
-<tr>
-<td>mvn compile</td>
-<td>用来将src/main/java下的文件编译为class文件，并输出到target中。</td>
-</tr>
-<tr>
-<td>mvn package</td>
-<td>打包,将项目进行打包，如果是jar打包为jar，war打包为war。</td>
-</tr>
-<tr>
-<td>mvn install</td>
-<td>将打包jar/war包到本地仓库中，供其他模块使用</td>
-</tr>
-<tr>
-<td>mvn deploy</td>
-<td>将打包jar/war发布到远程仓库</td>
-</tr>
-<tr>
-<td>mvn test</td>
-<td>用来将src/main/test下的测试用例进行编译，同时执行一次</td>
-</tr>
-<tr>
-<td>mvn clean</td>
-<td>删除编译产生的target文件夹</td>
-</tr>
-<tr>
-<td>mvn site</td>
-<td>生成项目相关的网站</td>
-</tr>
-<tr>
-<td>mvn verify</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="参考-2"> 参考</h2>
-<blockquote>
-<ul>
-<li><a href="https://blog.csdn.net/cnweike/article/details/52221410?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param" target="_blank" rel="noopener noreferrer">Maven POM中的各种scope的行为总结</a></li>
-</ul>
-</blockquote>
-<h2 id="maven依赖范围"> Maven依赖范围</h2>
-<ul>
-<li>**compile，**默认值，适用于所有阶段（开发、测试、部署、运行），本jar会一直存在所有阶段。</li>
-<li>**provided，**只在开发、测试阶段使用，目的是不让Servlet容器和你本地仓库的jar包冲突 。如servlet.jar。</li>
-<li>**runtime，**只在运行时使用，如JDBC驱动，适用运行和测试阶段。</li>
-<li>**test，**只在测试时使用，用于编译和运行测试代码。不会随项目发布。</li>
-<li>**system，**类似provided，需要显式提供包含依赖的jar，Maven不会在Repository中查找它。</li>
-</ul>
-<h3 id="compile"> compile</h3>
-<p>默认的scope。任何定义在compile scope下的依赖将会在所有的class paths下可用。maven工程会将其打包到最终的artifact中。如果你构建一个WAR类型的artifact，那么在compile scope下引用的JAR文件将会被集成到WAR文件内。</p>
-<h3 id="provided"> provided</h3>
-<p>这个scope假定对应的依赖会由运行这个应用的JDK或者容器来提供。最好的例子就是servlet API。任何在provided scope下定义的依赖在构建时的类路径里是可用的，但是不会被打包到最终的artifact中。如果是一个WAR的文件，servlet API在构建时的类路径里是可用的，但是并不会被打包到WAR文件中。</p>
-<h3 id="runtime"> runtime</h3>
-<p>在runtime scope下定义的依赖只会在运行期可用，而在构建期的类路径下不可用。这些依赖将会被打包到最终的artifact中。比如你有一个基于web的应用需要在运行时访问MySQL数据库。你的代码没有任何MySQL数据库驱动的硬依赖。你的代码仅仅是基于JDBC API来编写，在构建期并不需要MySQL数据库驱动。然而，在运行期，就需要相应的驱动来操作MySQL数据库了。因此，这个驱动应该被打包到最终的artifact中。</p>
-<h3 id="test"> test</h3>
-<p>只用于测试变异的依赖（比如JUnit），execution必须定义在test scope下。这些依赖不会被打包到最终的artifact中。</p>
-<h3 id="system"> system</h3>
-<p>于provided scope很像。唯一的区别在于，在system scope中，你需要告诉Maven如何去找到这个依赖。如果你要引用的依赖在Maven仓库中不存在时，就可以用这个scope。不推荐使用system依赖。</p>
-<h3 id="import"> import</h3>
-<p>从其它的pom文件中导入依赖设置。</p>
-<h2 id="maven构建多模块项目"> Maven构建多模块项目</h2>
-<h3 id="maven多环境打包"> Maven多环境打包</h3>
-]]></content:encoded>
-    </item>
-    <item>
       <title>EasyExcel导入导出Excel</title>
       <link>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/EasyExcel-use/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/spring/springboot/springboot-tool/EasyExcel-use/</guid>
@@ -26377,6 +26314,133 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
     <span>}</span>
 </code></pre>
 <div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Maven笔记</title>
+      <link>https://vuepress-theme-hope-demo.mrhope.site/spring/maven/Maven/</link>
+      <guid>https://vuepress-theme-hope-demo.mrhope.site/spring/maven/Maven/</guid>
+      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Maven笔记</source>
+      <pubDate>Sat, 22 May 2021 22:37:47 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="参考"> 参考</h2>
+<div><p>Tips</p>
+<ul>
+<li><a href="https://www.cnblogs.com/baizihua/p/11519509.html" target="_blank" rel="noopener noreferrer">maven学习笔记(超详细总结)</a></li>
+<li>https://blog.csdn.net/qq_44839652/article/details/107709822</li>
+</ul>
+</div>
+<h2 id="概述"> 概述</h2>
+<h3 id="两大核心"> 两大核心</h3>
+<ol>
+<li>依赖管理：也就是对jar包的统一管理</li>
+<li>项目构建：在项目编码完成后，原先通过IDE对项目进行编译、测试、打包、部署等一些列操作，都可以通过Maven的命令去完成</li>
+</ol>
+<h2 id="标准目录结构"> 标准目录结构</h2>
+<ul>
+<li><strong>src</strong>：用于存放项目源码
+<ul>
+<li><strong>main</strong>：用于存放运行主要代码
+<ul>
+<li><strong>java</strong>：用于存放主体程序源码</li>
+<li><strong>resources</strong>：用于存放xml等配置文件的</li>
+<li><strong>webapps</strong>：相当于webContent，用于存放WEB-INF、网页页面的素材（html、css、js等）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>test</strong>：用于存放单元测试代码
+<ul>
+<li><strong>java</strong>：用于存放测试代码，单元测试类</li>
+<li><strong>resources</strong>：用于存放测试用的配置文件(一般少用)</li>
+</ul>
+</li>
+<li><strong>target</strong>：用于存放编译好的字节码文件
+<ul>
+<li><strong>classes</strong>：用于存放编译好的字节码文件</li>
+</ul>
+</li>
+<li><strong>pom.xml</strong>：Project Object Module，Maven核心配置文件</li>
+</ul>
+<h2 id="pom-xml文件详解"> pom.xml文件详解</h2>
+<div><p>Tips</p>
+<p><a href="https://blog.csdn.net/weixin_38569499/article/details/91456988?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control" target="_blank" rel="noopener noreferrer">pom.xml文件详解</a></p>
+</div>
+<h2 id="常用命令"> 常用命令</h2>
+<p>格式：<code>mvn [plugin]:[command]</code></p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mvn -v</td>
+<td>查看maven版本</td>
+</tr>
+<tr>
+<td>mvn compile</td>
+<td>用来将src/main/java下的文件编译为class文件，并输出到target中。</td>
+</tr>
+<tr>
+<td>mvn package</td>
+<td>打包,将项目进行打包，如果是jar打包为jar，war打包为war。</td>
+</tr>
+<tr>
+<td>mvn install</td>
+<td>将打包jar/war包到本地仓库中，供其他模块使用</td>
+</tr>
+<tr>
+<td>mvn deploy</td>
+<td>将打包jar/war发布到远程仓库</td>
+</tr>
+<tr>
+<td>mvn test</td>
+<td>用来将src/main/test下的测试用例进行编译，同时执行一次</td>
+</tr>
+<tr>
+<td>mvn clean</td>
+<td>删除编译产生的target文件夹</td>
+</tr>
+<tr>
+<td>mvn site</td>
+<td>生成项目相关的网站</td>
+</tr>
+<tr>
+<td>mvn verify</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="参考-2"> 参考</h2>
+<blockquote>
+<ul>
+<li><a href="https://blog.csdn.net/cnweike/article/details/52221410?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param" target="_blank" rel="noopener noreferrer">Maven POM中的各种scope的行为总结</a></li>
+</ul>
+</blockquote>
+<h2 id="maven依赖范围"> Maven依赖范围</h2>
+<ul>
+<li>**compile，**默认值，适用于所有阶段（开发、测试、部署、运行），本jar会一直存在所有阶段。</li>
+<li>**provided，**只在开发、测试阶段使用，目的是不让Servlet容器和你本地仓库的jar包冲突 。如servlet.jar。</li>
+<li>**runtime，**只在运行时使用，如JDBC驱动，适用运行和测试阶段。</li>
+<li>**test，**只在测试时使用，用于编译和运行测试代码。不会随项目发布。</li>
+<li>**system，**类似provided，需要显式提供包含依赖的jar，Maven不会在Repository中查找它。</li>
+</ul>
+<h3 id="compile"> compile</h3>
+<p>默认的scope。任何定义在compile scope下的依赖将会在所有的class paths下可用。maven工程会将其打包到最终的artifact中。如果你构建一个WAR类型的artifact，那么在compile scope下引用的JAR文件将会被集成到WAR文件内。</p>
+<h3 id="provided"> provided</h3>
+<p>这个scope假定对应的依赖会由运行这个应用的JDK或者容器来提供。最好的例子就是servlet API。任何在provided scope下定义的依赖在构建时的类路径里是可用的，但是不会被打包到最终的artifact中。如果是一个WAR的文件，servlet API在构建时的类路径里是可用的，但是并不会被打包到WAR文件中。</p>
+<h3 id="runtime"> runtime</h3>
+<p>在runtime scope下定义的依赖只会在运行期可用，而在构建期的类路径下不可用。这些依赖将会被打包到最终的artifact中。比如你有一个基于web的应用需要在运行时访问MySQL数据库。你的代码没有任何MySQL数据库驱动的硬依赖。你的代码仅仅是基于JDBC API来编写，在构建期并不需要MySQL数据库驱动。然而，在运行期，就需要相应的驱动来操作MySQL数据库了。因此，这个驱动应该被打包到最终的artifact中。</p>
+<h3 id="test"> test</h3>
+<p>只用于测试变异的依赖（比如JUnit），execution必须定义在test scope下。这些依赖不会被打包到最终的artifact中。</p>
+<h3 id="system"> system</h3>
+<p>于provided scope很像。唯一的区别在于，在system scope中，你需要告诉Maven如何去找到这个依赖。如果你要引用的依赖在Maven仓库中不存在时，就可以用这个scope。不推荐使用system依赖。</p>
+<h3 id="import"> import</h3>
+<p>从其它的pom文件中导入依赖设置。</p>
+<h2 id="maven构建多模块项目"> Maven构建多模块项目</h2>
+<h3 id="maven多环境打包"> Maven多环境打包</h3>
+]]></content:encoded>
     </item>
     <item>
       <title>IDEA初始化SpringBoot项目+逆向工程+配置</title>
@@ -28264,20 +28328,11 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
 ]]></content:encoded>
     </item>
     <item>
-      <title>SpringSecurity</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/spring/springsecurity/SpringSecurity/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/spring/springsecurity/SpringSecurity/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">SpringSecurity</source>
-      <pubDate>Wed, 06 Jan 2021 22:55:19 GMT</pubDate>
-      <content:encoded><![CDATA[<p>SpringBoot整合SpringSecurity</p>
-]]></content:encoded>
-    </item>
-    <item>
       <title>学习路线</title>
       <link>https://vuepress-theme-hope-demo.mrhope.site/study-line/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/study-line/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">学习路线</source>
-      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
+      <pubDate>Sun, 17 Apr 2022 16:39:40 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="计算机基础"> 计算机基础</h2>
 <p>《王道》</p>
 <ul>
@@ -28391,6 +28446,15 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
 ]]></content:encoded>
     </item>
     <item>
+      <title>SpringSecurity</title>
+      <link>https://vuepress-theme-hope-demo.mrhope.site/spring/springsecurity/SpringSecurity/</link>
+      <guid>https://vuepress-theme-hope-demo.mrhope.site/spring/springsecurity/SpringSecurity/</guid>
+      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">SpringSecurity</source>
+      <pubDate>Wed, 06 Jan 2021 22:55:19 GMT</pubDate>
+      <content:encoded><![CDATA[<p>SpringBoot整合SpringSecurity</p>
+]]></content:encoded>
+    </item>
+    <item>
       <title>组件禁用</title>
       <link>https://vuepress-theme-hope-demo.mrhope.site/zh/guide/disable/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/guide/disable/</guid>
@@ -28398,7 +28462,7 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
       <description>&amp;lt;p&amp;gt;你可以通过设置页面的 Frontmatter，在页面禁用一些功能。&amp;lt;/p&amp;gt;
 </description>
       <category>使用指南</category>
-      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
+      <pubDate>Sun, 17 Apr 2022 16:39:40 GMT</pubDate>
       <content:encoded><![CDATA[<p>你可以通过设置页面的 Frontmatter，在页面禁用一些功能。</p>
 
 <p>本页面应当禁用了:</p>
@@ -28423,7 +28487,7 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
       <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/guide/encrypt/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">密码加密的文章</source>
       <category>使用指南</category>
-      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
+      <pubDate>Sun, 17 Apr 2022 16:39:40 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="密码加密的文章"> 密码加密的文章</h1>
 <p>实际的文章内容。</p>
 <p>段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字段落 1 文字。</p>
@@ -28438,7 +28502,7 @@ Spring的动态代理有两种：一是<code>JDK的动态代理</code>；另一�
       <description>&amp;lt;p&amp;gt;&amp;lt;code&amp;gt;vuepress-theme-hope&amp;lt;/code&amp;gt; 通过内置 &amp;lt;a href=&amp;quot;https://vuepress-theme-hope.github.io/md-enhance&amp;quot; target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot;&amp;gt;md-enhance&amp;lt;/a&amp;gt;，在 Markdown 中启用了更多的语法与新功能。&amp;lt;/p&amp;gt;
 </description>
       <category>使用指南</category>
-      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
+      <pubDate>Sun, 17 Apr 2022 16:39:40 GMT</pubDate>
       <content:encoded><![CDATA[<p><code>vuepress-theme-hope</code> 通过内置 <a href="https://vuepress-theme-hope.github.io/md-enhance" target="_blank" rel="noopener noreferrer">md-enhance</a>，在 Markdown 中启用了更多的语法与新功能。</p>
 
 <h2 id="一键启用"> 一键启用</h2>
@@ -28938,12 +29002,61 @@ $$
 ]]></content:encoded>
     </item>
     <item>
+      <title>My Project</title>
+      <link>https://vuepress-theme-hope-demo.mrhope.site/zh/project/</link>
+      <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/project/</guid>
+      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">My Project</source>
+      <pubDate>Sun, 17 Apr 2022 16:39:40 GMT</pubDate>
+    </item>
+    <item>
+      <title>Blog Home</title>
+      <link>https://vuepress-theme-hope-demo.mrhope.site/zh/</link>
+      <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/</guid>
+      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Blog Home</source>
+      <pubDate>Sun, 17 Apr 2022 16:39:40 GMT</pubDate>
+    </item>
+    <item>
+      <title>幻灯片页</title>
+      <link>https://vuepress-theme-hope-demo.mrhope.site/zh/slides/</link>
+      <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/slides/</guid>
+      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">幻灯片页</source>
+      <pubDate>Sun, 17 Apr 2022 16:39:40 GMT</pubDate>
+      <content:encoded><![CDATA[
+<i>Not supported content</i>]]></content:encoded>
+      <enclosure url="https://vuepress-theme-hope-demo.mrhope.site/logo.svg" type="image/svg+xml"/>
+    </item>
+    <item>
+      <title>自定义布局</title>
+      <link>https://vuepress-theme-hope-demo.mrhope.site/zh/layout/</link>
+      <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/layout/</guid>
+      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">自定义布局</source>
+      <pubDate>Sun, 17 Apr 2022 16:39:40 GMT</pubDate>
+      <content:encoded><![CDATA[<p>您可以使用带有 Markdown 支持的插槽来自定义页面布局。</p>
+<div><p>Note</p>
+<p>此处仅仅是一个演示，你应该自行根据需求添加样式。</p>
+
+
+</div>
+<template #page-top><p>页面顶部内容</p>
+</template><template #page-bottom><p>页面底部内容</p>
+</template><template #content-top><p>内容顶部内容</p>
+</template><template #content-bottom><p>内容底部内容</p>
+</template><template #navbar-start><p>导航栏起始内容</p>
+</template><template #navbar-center><p>导航栏中部内容</p>
+</template><template #navbar-end><p>导航栏末尾内容</p>
+</template><template #sidebar-top><p>侧边栏顶部内容</p>
+</template><template #sidebar-center><p>侧边栏中部内容</p>
+</template><template #sidebar-bottom><p>侧边栏底部内容</p>
+</template><p>更多详情，详见 <a href="https://vuepress-theme-hope.github.io/zh/guide/layout/custom/" target="_blank" rel="noopener noreferrer">自定义布局</a>.</p>
+]]></content:encoded>
+    </item>
+    <item>
       <title>主要功能与配置演示</title>
       <link>https://vuepress-theme-hope-demo.mrhope.site/zh/guide/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/guide/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">主要功能与配置演示</source>
       <category>使用指南</category>
-      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
+      <pubDate>Sun, 17 Apr 2022 16:39:40 GMT</pubDate>
       <content:encoded><![CDATA[<h1 id="主要功能与配置演示"> 主要功能与配置演示</h1>
 <ul>
 <li>
@@ -28966,59 +29079,10 @@ $$
       <link>https://vuepress-theme-hope-demo.mrhope.site/zh/home/</link>
       <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/home/</guid>
       <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">项目主页</source>
-      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
+      <pubDate>Sun, 17 Apr 2022 16:39:40 GMT</pubDate>
       <content:encoded><![CDATA[<p>这是普通主页的案例。你可以在这里放置你的主体内容。</p>
 <p>想要使用此布局，你需要在页面 front matter 中设置 <code>home: true</code>。</p>
 <p>配置项的相关说明详见 <a href="https://vuepress-theme-hope.github.io/zh/guide/layout/home/" target="_blank" rel="noopener noreferrer">项目主页配置</a>。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>幻灯片页</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/zh/slides/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/slides/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">幻灯片页</source>
-      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
-      <content:encoded><![CDATA[
-<i>Not supported content</i>]]></content:encoded>
-      <enclosure url="https://vuepress-theme-hope-demo.mrhope.site/logo.svg" type="image/svg+xml"/>
-    </item>
-    <item>
-      <title>Blog Home</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/zh/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">Blog Home</source>
-      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
-    </item>
-    <item>
-      <title>My Project</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/zh/project/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/project/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">My Project</source>
-      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
-    </item>
-    <item>
-      <title>自定义布局</title>
-      <link>https://vuepress-theme-hope-demo.mrhope.site/zh/layout/</link>
-      <guid>https://vuepress-theme-hope-demo.mrhope.site/zh/layout/</guid>
-      <source url="https://vuepress-theme-hope-demo.mrhope.site/rss.xml">自定义布局</source>
-      <pubDate>Sun, 06 Mar 2022 10:17:18 GMT</pubDate>
-      <content:encoded><![CDATA[<p>您可以使用带有 Markdown 支持的插槽来自定义页面布局。</p>
-<div><p>Note</p>
-<p>此处仅仅是一个演示，你应该自行根据需求添加样式。</p>
-
-
-</div>
-<template #page-top><p>页面顶部内容</p>
-</template><template #page-bottom><p>页面底部内容</p>
-</template><template #content-top><p>内容顶部内容</p>
-</template><template #content-bottom><p>内容底部内容</p>
-</template><template #navbar-start><p>导航栏起始内容</p>
-</template><template #navbar-center><p>导航栏中部内容</p>
-</template><template #navbar-end><p>导航栏末尾内容</p>
-</template><template #sidebar-top><p>侧边栏顶部内容</p>
-</template><template #sidebar-center><p>侧边栏中部内容</p>
-</template><template #sidebar-bottom><p>侧边栏底部内容</p>
-</template><p>更多详情，详见 <a href="https://vuepress-theme-hope.github.io/zh/guide/layout/custom/" target="_blank" rel="noopener noreferrer">自定义布局</a>.</p>
 ]]></content:encoded>
     </item>
   </channel>
