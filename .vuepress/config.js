@@ -240,6 +240,12 @@ module.exports = config({
           ]
         },
         {
+          title: "Development",
+          icon: "",
+          prefix: "development/",
+          children: ["restful"]
+        },
+        {
           title: "Computer Knowledge",
           icon: "",
           prefix: "computer-knowledge/",
