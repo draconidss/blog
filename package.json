@@ -10,7 +10,7 @@
     "docs:eject-theme": "vuepress eject-hope"
   },
   "devDependencies": {
-    "vuepress": "^1.9.7",
+    "vuepress": "^1.9.9",
     "vuepress-theme-hope": "^1.30.0"
   }
 }
